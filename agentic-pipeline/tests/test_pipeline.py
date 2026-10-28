@@ -18,6 +18,7 @@ from agentic_pipeline.client import ModelClient, ModelError
 from agentic_pipeline.consultation import Consultation
 from agentic_pipeline.dataset import Encounter, load_encounters
 from agentic_pipeline.outputs import CaseOutput, create_run
+from agentic_pipeline.resume import finished_case, generation_lock, resume_run
 from agentic_pipeline.prompts import doctor_prompt, patient_prompt
 from agentic_pipeline.schemas import AggregatorHistoryOutput, CaseFeatures, FEATURE_FIELDS
 
@@ -181,6 +182,92 @@ class ConsultationTests(unittest.IsolatedAsyncioTestCase):
         self.assertFalse(note["case_features"]["complete"])
         self.assertEqual(note["stop_reason"], "max_turns")
 
+    async def test_resume_reuses_saved_patient_answer_after_specialist_failure(self):
+        self.endpoint.fail_specialist = True
+        with patch("agentic_pipeline.client.asyncio.sleep", new=AsyncMock()):
+            with self.assertRaises(RuntimeError):
+                await Consultation(self.client, self.output).run(self.encounter, max_turns=2)
+        self.endpoint.fail_specialist = False
+        resumed = CaseOutput(self.run, "train", "TEST001", resume=True)
+        await Consultation(self.client, resumed).run(self.encounter, max_turns=2, resume=True)
+        records = [json.loads(line) for line in (resumed.details / "consultation.jsonl").read_text().splitlines()]
+        self.assertEqual(self.endpoint.turns, 2)
+        self.assertEqual([r["role"] for r in records], ["doctor", "patient", "doctor", "patient"])
+        messages = [json.loads(line) for line in (resumed.details / "agent_messages.jsonl").read_text().splitlines()]
+        self.assertEqual([m["sequence"] for m in messages], list(range(1, len(messages) + 1)))
+        trace = [json.loads(line) for line in (resumed.details / "agent_trace.jsonl").read_text().splitlines()]
+        self.assertEqual(len({r["event_id"] for r in trace}), len(trace))
+
+    async def test_legacy_resume_without_checkpoint_reuses_answers(self):
+        self.endpoint.fail_specialist = True
+        with patch("agentic_pipeline.client.asyncio.sleep", new=AsyncMock()):
+            with self.assertRaises(RuntimeError):
+                await Consultation(self.client, self.output).run(self.encounter, max_turns=2)
+        (self.output.details / "checkpoint.json").unlink()
+        self.endpoint.fail_specialist = False
+        resumed = CaseOutput(self.run, "train", "TEST001", resume=True)
+        await Consultation(self.client, resumed).run(self.encounter, max_turns=2, resume=True)
+        self.assertEqual(self.endpoint.turns, 2)
+        self.assertTrue(finished_case(resumed.directory))
+
+    async def test_resume_after_question_does_not_append_question_again(self):
+        self.output.conversation("doctor", "A saved opening question?", 1)
+        resumed = CaseOutput(self.run, "train", "TEST001", resume=True)
+        await Consultation(self.client, resumed).run(self.encounter, max_turns=2, resume=True)
+        records = [json.loads(line) for line in (resumed.details / "consultation.jsonl").read_text().splitlines()]
+        self.assertEqual([r["role"] for r in records], ["doctor", "patient", "doctor", "patient"])
+        self.assertEqual(records[0]["content"], "A saved opening question?")
+        first_patient = next(r for r in self.endpoint.requests if r["role"] == "patient")
+        self.assertEqual(first_patient["payload"]["simulated_consultation"][-1]["content"], "A saved opening question?")
+
+    async def test_resume_retries_diagnosis_without_restarting_history(self):
+        original = self.endpoint.__call__
+        async def fail_diagnosis(request):
+            if request.url.path.endswith("chat/completions"):
+                body = json.loads(request.content)
+                if "Current phase: diagnosis_and_plan\n" in body["messages"][0]["content"]:
+                    return httpx.Response(503, text="Diagnosis interrupted")
+            return await original(request)
+        broken_client = self.make_client(fail_diagnosis)
+        try:
+            with patch("agentic_pipeline.client.asyncio.sleep", new=AsyncMock()):
+                with self.assertRaises(RuntimeError):
+                    await Consultation(broken_client, self.output).run(self.encounter, max_turns=2)
+        finally:
+            await broken_client.close()
+        history_before = (self.output.details / "consultation.jsonl").read_bytes()
+        resumed = CaseOutput(self.run, "train", "TEST001", resume=True)
+        await Consultation(self.client, resumed).run(self.encounter, max_turns=2, resume=True)
+        self.assertEqual(self.endpoint.turns, 2)
+        self.assertEqual(history_before, (self.output.details / "consultation.jsonl").read_bytes())
+        self.assertEqual(json.loads((resumed.directory / "soap_note.json").read_text())["turns"], 2)
+
+    async def test_logs_newer_than_checkpoint_preserve_latest_answer(self):
+        self.endpoint.fail_specialist = True
+        with patch("agentic_pipeline.client.asyncio.sleep", new=AsyncMock()):
+            with self.assertRaises(RuntimeError):
+                await Consultation(self.client, self.output).run(self.encounter, max_turns=2)
+        checkpoint = self.output.details / "checkpoint.json"
+        saved = json.loads(checkpoint.read_text())
+        saved["state"]["history"] = saved["state"]["history"][:1]
+        saved["message_sequence"] = 1
+        checkpoint.write_text(json.dumps(saved))
+        self.endpoint.fail_specialist = False
+        resumed = CaseOutput(self.run, "train", "TEST001", resume=True)
+        await Consultation(self.client, resumed).run(self.encounter, max_turns=2, resume=True)
+        self.assertEqual(self.endpoint.turns, 2)
+
+    async def test_resume_recreates_note_from_accepted_diagnosis_without_model_calls(self):
+        await Consultation(self.client, self.output).run(self.encounter, max_turns=2)
+        (self.output.directory / "soap_note.md").unlink()
+        (self.output.details / "checkpoint.json").unlink()
+        self.assertFalse(finished_case(self.output.directory))
+        requests_before = len(self.endpoint.requests)
+        resumed = CaseOutput(self.run, "train", "TEST001", resume=True)
+        await Consultation(self.client, resumed).run(self.encounter, max_turns=2, resume=True)
+        self.assertEqual(len(self.endpoint.requests), requests_before)
+        self.assertTrue(finished_case(resumed.directory))
+
     async def test_agent_exchanges_have_order_identity_and_trace_links(self):
         await Consultation(self.client, self.output).run(self.encounter, max_turns=2)
         messages = [json.loads(line) for line in (self.output.details / "agent_messages.jsonl").read_text().splitlines()]
@@ -287,6 +374,90 @@ class ConsultationTests(unittest.IsolatedAsyncioTestCase):
                 text = path.read_text()
                 self.assertNotIn("GOLD_NOTE_SECRET", text)
                 self.assertNotIn("PRIVATE_TEST_API_KEY", text)
+
+
+class ResumeBatchTests(unittest.IsolatedAsyncioTestCase):
+    async def asyncSetUp(self):
+        self.temporary = tempfile.TemporaryDirectory()
+        self.root = Path(self.temporary.name)
+        self.dataset = self.root / "dataset"
+        (self.dataset / "challenge_data").mkdir(parents=True)
+        for name in ("train.csv", "valid.csv", "clinicalnlp_taskB_test1.csv", "clinicalnlp_taskC_test2.csv", "clef_taskC_test3.csv"):
+            with (self.dataset / "challenge_data" / name).open("w", newline="") as handle:
+                writer = csv.DictWriter(handle, fieldnames=["dataset", "encounter_id", "dialogue", "note"])
+                writer.writeheader()
+                if name == "train.csv":
+                    writer.writerow({"dataset": "test", "encounter_id": "T001", "dialogue": "HIDDEN_SOURCE_TOKEN", "note": "GOLD_SECRET"})
+        self.args = parser().parse_args(["--dataset-dir", str(self.dataset), "--output-dir", str(self.root / "outputs"), "--max-turns", "2"])
+        self.endpoint = ControlledEndpoint()
+
+    async def asyncTearDown(self):
+        self.temporary.cleanup()
+
+    async def execute(self):
+        client = ModelClient("http://test/v1", "Qwen3-14B", "TEST_KEY", retries=1,
+                             transport=httpx.MockTransport(self.endpoint))
+        with patch("agentic_pipeline.cli.ModelClient", return_value=client):
+            return await execute(self.args)
+
+    async def test_resume_cli_skips_completed_notes_without_creating_another_run(self):
+        self.assertEqual(await self.execute(), 0)
+        run = next(self.args.output_dir.iterdir())
+        note = run / "train/T001/soap_note.json"
+        before = (note.read_bytes(), note.stat().st_mtime_ns, self.endpoint.turns)
+        self.args.resume = "latest"
+        self.assertEqual(await self.execute(), 0)
+        self.assertEqual((note.read_bytes(), note.stat().st_mtime_ns, self.endpoint.turns), before)
+        self.assertEqual(list(self.args.output_dir.iterdir()), [run])
+        manifest = json.loads((run / "run_manifest.json").read_text())
+        self.assertEqual(len(manifest["resume_attempts"]), 1)
+        self.assertEqual(manifest["status"], "completed")
+
+    async def test_resume_retries_failed_case_in_same_run_and_reuses_patient_answer(self):
+        self.endpoint.fail_specialist = True
+        self.assertEqual(await self.execute(), 1)
+        self.endpoint.fail_specialist = False
+        self.args.resume = "latest"
+        self.assertEqual(await self.execute(), 0)
+        self.assertEqual(self.endpoint.turns, 2)
+        self.assertEqual(len(list(self.args.output_dir.iterdir())), 1)
+        run = next(self.args.output_dir.iterdir())
+        self.assertTrue(finished_case(run / "train/T001"))
+
+    async def test_resume_refuses_changed_source_before_touching_manifest(self):
+        self.assertEqual(await self.execute(), 0)
+        self.args.resume = "latest"
+        run, _ = resume_run(self.args)
+        before = (run / "run_manifest.json").read_bytes()
+        path = self.dataset / "challenge_data/train.csv"
+        path.write_text(path.read_text().replace("HIDDEN_SOURCE_TOKEN", "CHANGED_SOURCE"))
+        with self.assertRaisesRegex(ValueError, "Source conversation changed"):
+            resume_run(self.args)
+        self.assertEqual((run / "run_manifest.json").read_bytes(), before)
+
+    async def test_resume_refuses_changed_prompts_or_settings(self):
+        self.assertEqual(await self.execute(), 0)
+        self.args.resume = "latest"
+        run, _ = resume_run(self.args)
+        self.args.max_turns = 3
+        with self.assertRaisesRegex(ValueError, "original --model and --max-turns"):
+            resume_run(self.args)
+        self.args.max_turns = 2
+        path = run / "run_manifest.json"
+        manifest = json.loads(path.read_text())
+        manifest["prompt_sha256"]["adaptations/doctor.prompt"] = "changed"
+        path.write_text(json.dumps(manifest))
+        with self.assertRaisesRegex(ValueError, "Prompts changed"):
+            resume_run(self.args)
+
+    def test_generation_lock_blocks_a_second_writer_and_releases_after_exit(self):
+        with generation_lock(self.args.output_dir):
+            with self.assertRaisesRegex(ValueError, "Another generation process"):
+                with generation_lock(self.args.output_dir):
+                    self.fail("Second writer acquired the lock")
+        with generation_lock(self.args.output_dir):
+            pass
+        self.assertEqual(list(self.args.output_dir.iterdir()), [])
 
 
 class LauncherTests(unittest.TestCase):

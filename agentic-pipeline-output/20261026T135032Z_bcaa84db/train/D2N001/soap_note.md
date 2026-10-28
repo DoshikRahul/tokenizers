@@ -1,0 +1,33 @@
+# SOAP note — D2N001
+
+History-taking stop reason: max_turns; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+History taking ended before the agent confirmed completion. Unelicited facts remain unknown.
+
+## Subjective
+
+Basic information: Age: 50, Gender: Not specified, Occupation: Not specified, Visit Time: Annual exam, Chief Complaint: Annual exam with concerns about heart failure, blood pressure, and medication adherence
+
+History of present illness: Onset: Not specified, Course: Not specified, Symptom Characteristics: No recent changes in symptoms like more shortness of breath or swelling, Progression: Not specified, Prior Evaluation: Not specified, Treatment: On medication for heart failure and blood pressure, Response: Medication adherence is inconsistent, with reports of elevated blood pressure during stressful periods
+
+Past history: Previous Illnesses: Heart failure, hypertension, Operations: Not specified, Trauma: Not specified, Allergies: Not specified, Personal History: Not specified, Family History: Not specified
+
+## Objective
+
+Physical examination: Vital Signs: Not specified, System Findings: Not specified
+
+Investigations: Laboratory: Not specified, Imaging: Not specified, ECG: Not specified
+
+## Assessment
+
+Preliminary diagnosis:
+1. Heart failure (chronic, unspecified NYHA class). 2. Hypertension. 3. Non-adherence to antihypertensive and heart failure medications.
+
+Diagnostic discussion:
+The patient is a 50-year-old individual presenting for an annual exam with concerns about heart failure, blood pressure, and medication adherence. The patient has a known history of heart failure and hypertension, and is currently on medication for these conditions. However, the patient reports inconsistent adherence to the medication regimen, with episodes of elevated blood pressure during stressful periods. This suggests that the current treatment plan may not be optimally effective due to non-adherence. The absence of recent changes in symptoms such as increased shortness of breath or swelling indicates that the patient's condition may be stable, but the lack of consistent medication adherence could lead to complications. Differential diagnoses include worsening heart failure due to non-adherence, uncontrolled hypertension, and potential secondary causes of hypertension such as renal disease or endocrine disorders. These differentials are considered based on the patient's history of heart failure and hypertension, and the possibility of non-adherence to medication.
+
+## Plan
+
+1. Further evaluation: Obtain a detailed physical examination, including assessment of vital signs, signs of heart failure (e.g., jugular venous pressure, peripheral edema), and cardiac auscultation. Perform a comprehensive laboratory workup, including a complete blood count, renal function tests, electrolytes, and a lipid profile. An echocardiogram may be indicated to assess left ventricular function and identify any structural abnormalities. An ECG should be performed to evaluate for arrhythmias or ischemic changes. 2. Medication: Continue with standard heart failure and hypertension medications, including ACE inhibitors or ARBs, beta-blockers, and diuretics, as appropriate. Address non-adherence by discussing the importance of medication adherence and exploring potential barriers (e.g., cost, side effects, forgetfulness). Consider alternative medications if side effects are a concern. Monitor for adverse effects and adjust dosages as needed. 3. Non-drug management and education: Encourage lifestyle modifications, including a low-sodium diet, regular physical activity, weight management, and stress reduction techniques. Educate the patient on the importance of medication adherence and the potential consequences of non-adherence. Provide clear instructions on recognizing and managing symptoms of heart failure and hypertension, including when to seek medical attention. 4. Follow-up: Schedule a follow-up appointment in one to two weeks to reassess blood pressure, review medication adherence, and evaluate any changes in symptoms. Repeat laboratory tests and imaging studies as indicated based on the initial evaluation and response to treatment.

@@ -1,0 +1,38 @@
+# SOAP note — D2N036
+
+History-taking stop reason: max_turns; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+History taking ended before the agent confirmed completion. Unelicited facts remain unknown.
+
+## Subjective
+
+Basic information: 45-year-old patient presenting with left hand pain and numbness for several months, worsening at night and requiring shaking to relieve symptoms.
+
+History of present illness: The patient reports left hand pain and numbness for several months, primarily affecting the wrist and hand, with involvement of all fingers but more pronounced in the thumb and pointer finger. Symptoms worsen at night, and the patient experiences a sensation of the hand feeling asleep, requiring shaking to relieve symptoms. There is associated weakness in the left hand, leading to occasional dropping of objects due to impaired sensation. No similar symptoms in other parts of the body. The symptoms seem to get worse at night, and the patient usually wakes up with the hand feeling asleep. The patient has to shake it out to get the feeling back. The patient also feels a little jolt or zing in the fingertips when the doctor tapped on the wrist. It is not something that happens all the time, but it does happen occasionally. The tingling and the jolt or zing feel mostly in the fingertips, especially when the doctor tapped on the back of the wrist. It doesn't happen all the time, but it does happen occasionally, usually when the patient is resting or at night. The patient hasn't noticed any specific triggers other than maybe when they've been doing a lot of work with their hands. The patient has also mentioned that they have been dropping things more often because of the weakness and impaired sensation, especially when working in the yard.
+
+Past history: No previous neurological or musculoskeletal evaluations for this condition. No history of trauma, surgery, or allergies. No family history of similar conditions provided.
+
+## Objective
+
+Physical examination: Physical examination reveals decreased sensation in the thumb and pointer finger, with a positive Tinel's sign at the wrist. There is mild weakness in the left hand, and the patient exhibits a reduced grip strength compared to the right hand. No visible swelling, deformity, or skin changes are noted in the affected hand.
+
+Investigations: Nerve conduction studies and electromyography (EMG) are pending. No prior imaging studies have been performed for this condition.
+
+## Assessment
+
+Preliminary diagnosis:
+1. Carpal Tunnel Syndrome (CTS)
+2. Radiculopathy (C6-C7)
+3. Peripheral neuropathy (unspecified)
+
+Diagnostic discussion:
+The patient is a 45-year-old individual presenting with left hand pain, numbness, and tingling, primarily affecting the thumb, pointer finger, and fingertips. Symptoms worsen at night and are relieved by shaking the hand, which is highly suggestive of carpal tunnel syndrome (CTS). The presence of a positive Tinel's sign at the wrist further supports this diagnosis. The patient also reports weakness and occasional dropping of objects, which may indicate mild motor involvement. While CTS is the most likely diagnosis, other conditions such as radiculopathy (C6-C7) or peripheral neuropathy should be considered, especially given the absence of prior neurological or musculoskeletal evaluations. Radiculopathy could present with similar symptoms, particularly if there is cervical spine involvement, though the localized nature of the symptoms and the positive Tinel's sign make CTS more likely. Peripheral neuropathy is less likely given the focal distribution of symptoms. The patient has no history of trauma, surgery, or allergies, and no family history of similar conditions was provided. The absence of systemic symptoms or other neurological deficits reduces the likelihood of a more generalized neuropathy. The pending nerve conduction studies and EMG will be critical in confirming the diagnosis and ruling out other potential causes.
+
+## Plan
+
+1. Further evaluation: Nerve conduction studies and electromyography (EMG) should be performed to confirm the diagnosis of carpal tunnel syndrome and assess the severity of nerve involvement. These tests are indicated based on the clinical presentation and will guide treatment decisions.
+2. Medication: First-line treatment for CTS includes nonsteroidal anti-inflammatory drugs (NSAIDs) such as ibuprofen or naproxen to reduce inflammation and alleviate pain. If symptoms persist, corticosteroid injections may be considered to reduce swelling around the median nerve. In cases of severe or refractory CTS, surgical decompression (carpal tunnel release) may be indicated.
+3. Non-drug management and education: The patient should be advised to avoid repetitive hand movements and to take frequent breaks during activities that involve the hands. Wrist splints, especially at night, may help reduce symptoms by keeping the wrist in a neutral position. Ergonomic adjustments in the workplace or during recreational activities may also be beneficial. The patient should be educated on recognizing signs of worsening symptoms, such as increased weakness or numbness, which may require urgent medical attention.
+4. Follow-up: The patient should be scheduled for a follow-up appointment in one to two weeks to review the results of the nerve conduction studies and EMG. If the diagnosis is confirmed as CTS, a discussion regarding conservative management or surgical options will be initiated based on the severity of the condition and the patient's preferences.

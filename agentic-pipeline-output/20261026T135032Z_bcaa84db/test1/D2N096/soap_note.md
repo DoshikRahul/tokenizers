@@ -1,0 +1,33 @@
+# SOAP note — D2N096
+
+History-taking stop reason: max_turns; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+History taking ended before the agent confirmed completion. Unelicited facts remain unknown.
+
+## Subjective
+
+Basic information: 44 years old, female, presenting with left shoulder pain for about a week following a gymnastics class incident.
+
+History of present illness: Left shoulder pain started approximately one week ago after a gymnastics class, likely due to a fall into an awkward position. The pain is present with any movement of the shoulder. The patient has taken Tylenol for a couple of days without relief. No clicking, locking, or weakness reported. The patient describes a movement where they toppled over into a weird position, possibly overboard, which likely caused the injury. No weakness, clicking, or locking has been reported since the incident. The pain is localized to the shoulder and worsens with movement. The patient has difficulty lifting the arm or performing activities with the left hand due to pain. The patient has difficulty sleeping on the left side due to pain and has noticed limitations in daily activities with the left hand.
+
+Past history: No prior history of shoulder injuries or surgeries reported. No prior imaging or evaluation of the shoulder.
+
+## Objective
+
+Physical examination: No swelling, bruising, numbness, or tingling noted in the left arm or hand. Pain with shoulder movement. Full range of motion not assessed due to pain. No signs of nerve involvement or referred pain. No weakness reported.
+
+Investigations: No imaging or lab results available at this time.
+
+## Assessment
+
+Preliminary diagnosis:
+Acute shoulder strain or sprain; Possible rotator cuff injury; Shoulder dislocation or subluxation
+
+Diagnostic discussion:
+A 44-year-old female presented with left shoulder pain following a gymnastics class incident, likely due to a fall into an awkward position. The pain is localized to the shoulder and worsens with movement, with difficulty lifting the arm and performing activities with the left hand. The patient has no history of shoulder injuries or surgeries, and no swelling, bruising, numbness, or tingling is noted on physical examination. The absence of neurological symptoms and the presence of pain with movement suggest a musculoskeletal injury. The differential diagnoses include acute shoulder strain or sprain, which is common after trauma and presents with localized pain and limited range of motion. A possible rotator cuff injury is also considered, as it can cause pain with shoulder movement and difficulty lifting the arm. Shoulder dislocation or subluxation is another consideration, although the absence of reported clicking, locking, or significant weakness makes it less likely. The patient should be evaluated for any signs of nerve involvement or referred pain, which would suggest a more complex injury. The lack of imaging or lab results limits further assessment, but the clinical presentation is consistent with a musculoskeletal injury. Risk factors such as age, activity level, and the mechanism of injury support this diagnosis. The patient has no known metabolic or occupational risk factors that would predispose to other conditions. The treatment plan should focus on pain management, rest, and physical therapy. Further evaluation with imaging, such as an X-ray or MRI, would be necessary to confirm the diagnosis and rule out more severe injuries.
+
+## Plan
+
+Further evaluation: Imaging (X-ray or MRI) of the left shoulder to assess for fractures, dislocations, or soft tissue injuries. This should be performed as soon as possible to guide treatment decisions. Medication: Nonsteroidal anti-inflammatory drugs (NSAIDs) for pain and inflammation, such as ibuprofen, if tolerated. Acetaminophen can be used as an alternative if NSAIDs are contraindicated. Topical analgesics may also be considered for localized pain relief. Non-drug management and education: Rest and activity modification to avoid exacerbating the injury. Application of ice to the affected area for 15-20 minutes several times a day. Physical therapy may be initiated to improve range of motion and strength once the acute pain is controlled. The patient should be educated on proper posture and techniques to prevent further injury. Pain self-management strategies, such as using a shoulder sling for support, should be discussed. The patient should be advised to seek immediate medical attention if there is increased pain, swelling, or signs of nerve involvement. Follow-up: Follow-up with an orthopedic specialist within one to two weeks for further evaluation and treatment planning. Repeat imaging may be necessary if symptoms persist or worsen. The patient should be monitored for any changes in symptoms or functional limitations.

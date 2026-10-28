@@ -1,0 +1,33 @@
+# SOAP note — D2N027
+
+History-taking stop reason: max_turns; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+History taking ended before the agent confirmed completion. Unelicited facts remain unknown.
+
+## Subjective
+
+Basic information: 61-year-old male presenting for routine follow-up due to chronic medical conditions, including a history of aortic valve replacement and ascending aortic aneurysm repair in 2013.
+
+History of present illness: The patient reports increased fatigue, especially after physical exertion, with a decrease in exercise tolerance (previously able to bike 40 miles, now only 20-30 miles). He also mentions pursing his lips during breathing, though he denies wheezing or shortness of breath.
+
+Past history: Aortic valve replacement and ascending aortic aneurysm repair in 2013.
+
+## Objective
+
+Physical examination: Physical examination findings are pending. Vital signs and cardiac examination details have not been reported yet.
+
+Investigations: Echocardiogram performed in September 2019 (results pending).
+
+## Assessment
+
+Preliminary diagnosis:
+1. Aortic valve dysfunction (prosthetic valve degeneration or stenosis). 2. Possible ascending aortic aneurysm recurrence or dilation. 3. Heart failure with preserved ejection fraction (HFpEF) or reduced ejection fraction (HFrEF).
+
+Diagnostic discussion:
+The patient is a 61-year-old male with a history of aortic valve replacement and ascending aortic aneurysm repair in 2013. He now presents with increased fatigue and decreased exercise tolerance, which may indicate a decline in cardiac function or aortic valve performance. The pursing of lips during breathing could suggest respiratory effort or early signs of heart failure. Given his prior surgical history, the possibility of prosthetic valve dysfunction, such as stenosis or regurgitation, is a key concern. Additionally, the risk of ascending aortic aneurysm recurrence or dilation must be evaluated, as this could lead to complications such as aortic dissection. Heart failure, either with preserved or reduced ejection fraction, is also a plausible differential, especially given the symptoms of fatigue and reduced exercise capacity. The pending echocardiogram results from September 2019 will be critical in assessing the current status of the aortic valve and left ventricular function.
+
+## Plan
+
+1. Further evaluation: Obtain the pending echocardiogram results to assess aortic valve function, left ventricular ejection fraction, and aortic root dimensions. Consider a cardiac MRI or CT angiography if the echocardiogram is inconclusive or if there is suspicion of aortic dilation. 2. Medication: If heart failure is confirmed, initiate appropriate therapy based on ejection fraction. For HFrEF, consider beta-blockers, ACE inhibitors, and aldosterone antagonists. For HFpEF, focus on diuretics, beta-blockers, and lifestyle modifications. Avoid medications that may exacerbate aortic valve dysfunction. 3. Non-drug management and education: Advise the patient to monitor for symptoms of heart failure, such as dyspnea, edema, or fatigue, and to seek immediate medical attention if these worsen. Encourage a low-sodium diet, regular but moderate physical activity as tolerated, and weight management. 4. Follow-up: Schedule a follow-up appointment within two weeks to review the echocardiogram results and adjust the treatment plan accordingly. Repeat echocardiography may be necessary in 6-12 months to monitor for aortic dilation or valve dysfunction.

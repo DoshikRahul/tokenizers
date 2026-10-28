@@ -1,0 +1,33 @@
+# SOAP note — D2N094
+
+History-taking stop reason: max_turns; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+History taking ended before the agent confirmed completion. Unelicited facts remain unknown.
+
+## Subjective
+
+Basic information: 42-year-old female. Chief complaint: Pain in the right index finger following a skiing injury on Saturday.
+
+History of present illness: The patient injured her right index finger while skiing on Saturday. The pain has persisted for about five days and is rated as seven out of 10. There is no swelling, bruising, or discoloration, but there is aching pain, and the finger hurts when moved or touched. The pain is localized to the tip of the finger and is exacerbated by movement or touch. The patient reports difficulty in fully bending the finger without pain. No deformity, numbness, tingling, or weakness has been reported. The patient has started taking ibuprofen, but it has not provided significant pain relief. An X-ray of the right index finger was performed and showed no fractures or dislocations. The stiffness is mainly when I try to bend the finger, and it's hard to make a fist or grip things. The pain gets worse when I move it or touch it, especially when someone presses on it or when I try to flex it. It doesn't really hurt when it's just sitting still, though.
+
+Past history: No prior fractures or injuries to the right index finger. No history of deformity, numbness, tingling, or weakness in the finger. No prior medical evaluation for this injury. No history of rheumatoid arthritis or lupus. No previous episodes of similar pain or swelling in the same finger or other fingers. No history of systemic symptoms such as fatigue, fever, or weight loss. No family history of rheumatological conditions reported.
+
+## Objective
+
+Physical examination: Physical examination: Vital signs are stable. Inspection of the right index finger reveals no deformity, swelling, bruising, or discoloration. Palpation elicits localized tenderness at the tip of the finger. Range of motion is limited due to pain, with difficulty in fully bending the finger. No numbness, tingling, or weakness is noted in the finger. Neurovascular examination is intact.
+
+Investigations: X-ray of the right index finger was performed and showed no fractures or dislocations. No other imaging or laboratory tests have been performed yet.
+
+## Assessment
+
+Preliminary diagnosis:
+1. Digital tendinitis or flexor tendonitis of the right index finger. 2. Soft tissue injury or sprain of the right index finger. 3. Possible early-stage osteoarthritis (uncommon in this age without prior injury).
+
+Diagnostic discussion:
+The patient is a 42-year-old female with a recent skiing injury to her right index finger, presenting with localized pain, tenderness, and limited range of motion without swelling, bruising, or deformity. The X-ray ruled out fractures or dislocations, pointing toward a soft tissue or tendon-related issue. Digital tendinitis or flexor tendonitis is a likely diagnosis given the pain with movement and localized tenderness. A soft tissue injury or sprain is also plausible, as the injury mechanism (skiing) could have caused ligamentous or soft tissue damage. Early-stage osteoarthritis is less likely but considered as a differential due to the pain with movement and localized tenderness, though this is uncommon in the absence of prior joint issues or degenerative conditions. No systemic symptoms, family history of rheumatological conditions, or prior injuries to the finger were reported, which reduces the likelihood of rheumatological or chronic degenerative conditions.
+
+## Plan
+
+1. Further evaluation: Consider an MRI or ultrasound of the right index finger to assess for soft tissue or tendon abnormalities, especially if symptoms persist or worsen. 2. Medication: Continue with nonsteroidal anti-inflammatory drugs (NSAIDs) such as ibuprofen for pain and inflammation, but consider alternative options if there is no improvement, such as acetaminophen for pain relief. If there is no response to NSAIDs, a short course of corticosteroid injections may be considered for localized inflammation. 3. Non-drug management and education: Advise the patient to avoid activities that exacerbate the pain, such as gripping or bending the finger. Recommend applying ice to the affected area for 15-20 minutes several times a day to reduce inflammation. Encourage gentle range-of-motion exercises as tolerated to prevent stiffness. Educate the patient on recognizing signs of infection (e.g., redness, warmth, swelling, fever) or worsening pain, which would require further evaluation. 4. Follow-up: Schedule a follow-up appointment in one week to reassess symptoms and consider further imaging if needed. If there is no improvement or if symptoms worsen, a referral to a hand specialist may be warranted.

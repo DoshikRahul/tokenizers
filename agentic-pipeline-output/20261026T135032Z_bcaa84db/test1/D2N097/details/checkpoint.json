@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "completed_turns": 6,
+  "trace_sequence": 85,
+  "message_sequence": 38,
+  "state": {
+    "phase": "diagnosis_and_plan",
+    "history": [
+      {
+        "role": "doctor",
+        "content": "Hello. Could you tell me your age and gender, and what brings you in today?"
+      },
+      {
+        "role": "patient",
+        "content": "I'm 66 years old, and I'm here for my annual exam. I've been doing well overall, but I wanted to check in on my blood pressure and make sure everything is still under control."
+      },
+      {
+        "role": "doctor",
+        "content": "Could you please confirm your gender and any specific concerns or symptoms you'd like to discuss during your annual exam?"
+      },
+      {
+        "role": "patient",
+        "content": "I'm a female, and my main concerns are just making sure my blood pressure is still under control and that everything else is okay. I've been feeling good, but I do want to check in on my depression as well."
+      },
+      {
+        "role": "doctor",
+        "content": "Could you please provide details about your past medical history, including any previous illnesses, surgeries, or allergies?"
+      },
+      {
+        "role": "patient",
+        "content": "I don't have any allergies, and my past medical history includes depression and hypertension. I've been managing both with therapy and medication, and I've been doing well overall."
+      },
+      {
+        "role": "doctor",
+        "content": "Could you please provide details about your current medications for hypertension and depression, including dosages and any recent changes? Additionally, could you describe any recent symptoms related to your depression, such as changes in mood, sleep, or energy levels?"
+      },
+      {
+        "role": "patient",
+        "content": "I'm not on any medication for depression, but I've been going to therapy once a week, mostly virtually, though I'm starting to do some in-person sessions now. I feel like being in person helps me more. My mood has been pretty stable, and I haven't had any big changes in sleep or energy levels lately. I've been feeling good overall."
+      },
+      {
+        "role": "doctor",
+        "content": "Could you share your current blood pressure readings and how frequently you monitor it? Additionally, have there been any recent changes in your hypertension management or treatment plan?"
+      },
+      {
+        "role": "patient",
+        "content": "I've been using the blood pressure cuff once a day, and my readings have been pretty normal. There haven't been any changes in my hypertension management or treatment plan recently. I'm still on the lisinopril that was prescribed."
+      },
+      {
+        "role": "doctor",
+        "content": "Thank you for the update. Could you please tell me if you've noticed any changes in your mood or energy levels over the past few weeks, or if there are any specific concerns you have about your depression management?"
+      },
+      {
+        "role": "patient",
+        "content": "No, I haven't noticed any changes in my mood or energy levels over the past few weeks. I feel pretty stable, and I'm really glad that I've been able to get back to in-person therapy because it's been helping me a lot. I don't have any specific concerns about my depression management right now."
+      }
+    ],
+    "features": {
+      "basic_info": "66-year-old female here for annual exam; no current symptoms reported, but wants to check blood pressure and ensure everything is under control. Also concerned about depression.",
+      "present_illness": "No current symptoms reported. Patient is undergoing regular monitoring for hypertension and depression, with stable mood and no recent changes in sleep or energy levels. Patient uses a blood pressure cuff once daily and reports normal readings. No recent changes in hypertension management or treatment plan.",
+      "past_history": "Previous illnesses include depression and hypertension; managed with therapy and medication. No allergies. Patient is currently undergoing weekly in-person and virtual therapy sessions for depression and is not on any antidepressant medication.",
+      "physical_exam": "Vital signs: Blood pressure 128/82 mmHg, heart rate 72 bpm, respiratory rate 16 bpm, temperature 36.8°C, oxygen saturation 98% on room air. Cardiac examination: Regular rate and rhythm, no murmurs, rubs, or gallops. No peripheral edema. Neurological examination: Alert and oriented, no focal deficits. Mental status: Cooperative, no acute distress.",
+      "aux_exam": "Recent laboratory results: Hemoglobin A1c 6.2%, LDL cholesterol 2.6 mmol/L, creatinine 82 µmol/L. ECG: Normal sinus rhythm, no ST-T changes or bundle branch block.",
+      "complete": true
+    },
+    "activated": [
+      "cardiology",
+      "psychiatry"
+    ],
+    "active": [
+      "cardiology",
+      "psychiatry"
+    ],
+    "instructions": "Evidence is frozen. Provide preliminary diagnosis, diagnostic discussion and a treatment plan without asking further questions.",
+    "suggested_question": null,
+    "specialist_outputs": [
+      {
+        "specialist_id": "cardiology",
+        "next_question": "N/A",
+        "draft_modifications": "preliminary_diagnosis: Hypertension (controlled), Depression (stable)\ndiagnosis_discussion: The 66-year-old female presents for an annual check-up with no current symptoms. She is being monitored for hypertension and depression, both of which are stable. Her blood pressure is within the normal range (128/82 mmHg), and she reports using a home blood pressure cuff with normal readings. Her recent lab results show an HbA1c of 6.2%, which is slightly elevated but not diagnostic of diabetes, and an LDL cholesterol of 2.6 mmol/L, which is within the acceptable range. Creatinine is normal at 82 µmol/L, indicating no renal impairment. The ECG is normal, and the physical examination shows no cardiac abnormalities. The patient is undergoing weekly in-person and virtual therapy sessions for depression and is not on any antidepressant medication, suggesting that her depression is being managed through psychotherapy alone. The differential diagnoses include uncontrolled hypertension, new-onset diabetes, and possible depression relapse. However, her current stable condition and normal examination findings make these less likely. Treatment plan: Further evaluation: Continue monitoring blood pressure and HbA1c at regular intervals. Consider a fasting glucose test to rule out diabetes. Treatment plan: Medication: Continue current hypertension management; no changes needed. Non-drug management and education: Encourage continued adherence to lifestyle modifications, including a heart-healthy diet, regular physical activity, and stress management. Continue weekly therapy sessions for depression. Follow-up: Schedule a follow-up in 6 months or earlier if symptoms change or if new concerns arise."
+      },
+      {
+        "specialist_id": "psychiatry",
+        "next_question": "N/A",
+        "draft_modifications": "preliminary_diagnosis: \n- Hypertension, well-controlled\n- Major depressive disorder, in remission\n\n diagnosis_discussion: \nThis 66-year-old female presents for an annual check-up with no current symptoms but concerns about depression and blood pressure control. Her vital signs are within normal limits, and her recent laboratory results show well-controlled hypertension (HbA1c 6.2%, LDL 2.6 mmol/L, creatinine 82 µmol/L). She has a history of depression and hypertension, managed with therapy and lifestyle modifications, with no current antidepressant medication. She is undergoing weekly in-person and virtual therapy sessions, and her mood is stable with no recent changes in sleep or energy levels. The absence of acute distress or focal neurological deficits on examination supports the stability of her condition. \n\nDifferential diagnoses considered include: \n1. Hypertension, well-controlled: Supported by her normal blood pressure readings and stable management. \n2. Major depressive disorder, in remission: Supported by her ongoing therapy and stable mood without recent changes. \n3. Anxiety disorder: Although not explicitly reported, her concern about depression and routine check-ups may suggest underlying anxiety, which is common in patients with a history of depression. \n\n treatment_plan: \n1. Further evaluation: Continue routine monitoring for hypertension and depression. No additional investigations are indicated at this time, as her current status is stable. \n2. Medication: No changes to current medication plan. Continue monitoring for hypertension with regular blood pressure checks. \n3. Non-drug management and education: Continue weekly therapy sessions for depression. Encourage healthy lifestyle habits, including a balanced diet, regular physical activity, and stress management. Educate on recognizing warning signs of depression relapse, such as changes in mood, sleep, or energy levels. \n4. Follow-up: Schedule a follow-up in 6 months for routine check-up and reassessment of hypertension and depression status. If symptoms change or concerns arise, reassess earlier."
+      }
+    ],
+    "next_question": "Is there anything else you'd like to discuss today, or any other concerns you have about your health?",
+    "history_complete": true,
+    "diagnosis": {
+      "preliminary_diagnosis": "Hypertension, well-controlled\nMajor depressive disorder, in remission",
+      "diagnosis_discussion": "The 66-year-old female presents for an annual check-up with no current symptoms but concerns about depression and blood pressure control. Her vital signs are within normal limits, and her recent laboratory results show well-controlled hypertension (HbA1c 6.2%, LDL 2.6 mmol/L, creatinine 82 µmol/L). She has a history of depression and hypertension, managed with therapy and lifestyle modifications, with no current antidepressant medication. She is undergoing weekly in-person and virtual therapy sessions, and her mood is stable with no recent changes in sleep or energy levels. The absence of acute distress or focal neurological deficits on examination supports the stability of her condition. Differential diagnoses considered include: 1. Hypertension, well-controlled: Supported by her normal blood pressure readings and stable management. 2. Major depressive disorder, in remission: Supported by her ongoing therapy and stable mood without recent changes. 3. Anxiety disorder: Although not explicitly reported, her concern about depression and routine check-ups may suggest underlying anxiety, which is common in patients with a history of depression.",
+      "treatment_plan": "1. Further evaluation: Continue routine monitoring for hypertension and depression. No additional investigations are indicated at this time, as her current status is stable. 2. Medication: No changes to current medication plan. Continue monitoring for hypertension with regular blood pressure checks. 3. Non-drug management and education: Continue weekly therapy sessions for depression. Encourage healthy lifestyle habits, including a balanced diet, regular physical activity, and stress management. Educate on recognizing warning signs of depression relapse, such as changes in mood, sleep, or energy levels. 4. Follow-up: Schedule a follow-up in 6 months for routine check-up and reassessment of hypertension and depression status. If symptoms change or concerns arise, reassess earlier.",
+      "complete": true
+    }
+  }
+}

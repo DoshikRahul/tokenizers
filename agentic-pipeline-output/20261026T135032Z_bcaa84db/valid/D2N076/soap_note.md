@@ -1,0 +1,33 @@
+# SOAP note — D2N076
+
+History-taking stop reason: max_turns; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+History taking ended before the agent confirmed completion. Unelicited facts remain unknown.
+
+## Subjective
+
+Basic information: Katherine, 22 months old, female, presented for kidney ultrasound due to geneticist's concerns related to her Smith-Magenis syndrome.
+
+History of present illness: No specific symptoms reported yet; evaluation for potential kidney issues based on genetic concerns. Katherine has been noted to pee a lot and drink a lot. She goes through a lot of wet diapers in a day, maybe around 8 to 10. She seems to pee a lot, and I think she drinks a lot too. She used to only drink milk, but we switched to pea protein milk and now she also drinks water sometimes with a little juice. I don’t think she has any discomfort or urgency when she pees.
+
+Past history: Smith-Magenis syndrome diagnosed due to developmental delay (not walking or sitting by herself at a year old). Family history of kidney issues or genetic disorders: none. Chromosomal deletion associated with Smith-Magenis syndrome, which can be linked to leg and kidney issues.
+
+## Objective
+
+Physical examination: Not yet performed.
+
+Investigations: No prior kidney function tests (blood work or urinalysis) reported. No previous imaging studies of her kidneys or urinary tract before today.
+
+## Assessment
+
+Preliminary diagnosis:
+Evaluation for potential renal anomalies in the context of Smith-Magenis syndrome; Polyuria secondary to possible renal tubular dysfunction or diabetes insipidus
+
+Diagnostic discussion:
+Katherine is a 22-month-old female with Smith-Magenis syndrome, a genetic disorder associated with chromosomal deletions and potential renal and musculoskeletal abnormalities. She presents with polyuria and polydipsia, with frequent wet diapers (8-10 per day), and no reported discomfort or urgency. The geneticist has raised concerns about potential kidney issues, and a kidney ultrasound is being performed as part of the evaluation. Smith-Magenis syndrome is known to be associated with renal anomalies, including renal dysplasia, hydronephrosis, and renal tubular dysfunction. The absence of prior kidney function tests, urinalysis, or imaging makes further evaluation critical. Differential diagnoses include: 1) Renal tubular dysfunction (e.g., nephrogenic diabetes insipidus), which can present with polyuria and polydipsia and is associated with genetic syndromes. 2) Congenital anomalies of the kidney and urinary tract (CAKUT), which are common in genetic syndromes and may be linked to her chromosomal deletion. 3) Primary polydipsia, though this is less likely given the absence of behavioral or psychiatric factors. The family history is unremarkable for kidney issues, but the genetic syndrome itself is a risk factor. The absence of physical examination findings and prior investigations limits the ability to fully assess for complications such as obstruction or infection. Family and care resources appear adequate, but further investigations are needed to guide management.
+
+## Plan
+
+Further evaluation: Kidney ultrasound (already scheduled), which will assess for structural abnormalities such as hydronephrosis, renal dysplasia, or other congenital anomalies. Urinalysis and urine specific gravity to assess for nephrogenic diabetes insipidus or other renal tubular dysfunction. Blood tests including serum creatinine, electrolytes, and antidiuretic hormone (ADH) levels to evaluate kidney function and rule out diabetes insipidus. Medication: If nephrogenic diabetes insipidus is confirmed, thiazide diuretics (e.g., hydrochlorothiazide) may be considered to reduce polyuria. If renal tubular dysfunction is identified, management may include electrolyte supplementation and monitoring. Non-drug management and education: Ensure adequate hydration to prevent dehydration, especially given the polyuria. Monitor for signs of dehydration, such as dry mucous membranes, decreased urine output, or lethargy. Dietary considerations: No specific restrictions are indicated at this time, but monitoring for excessive sodium intake may be considered if renal function is impaired. Follow-up: Reassessment in 1-2 weeks after receiving the results of the kidney ultrasound, urinalysis, and blood tests. If no abnormalities are found, follow-up in 3-6 months for routine monitoring.

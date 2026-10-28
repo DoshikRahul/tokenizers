@@ -20,6 +20,17 @@ processes all 207 encounters. Notes and agent conversations are saved in
 
 Detach: **Ctrl+a**, then **d**. Return: `screen -r soap-generation`.
 
+To continue after stopping (stop the previous process first):
+
+```bash
+bash generate_soap.sh --resume
+```
+
+This resumes the latest run in the same folder, skips completed notes, retries
+failed encounters, and reuses saved questions and patient answers. An unfinished
+doctor-team turn may run again. To select an older run, add its folder after `--resume`.
+Running without `--resume` starts a new run.
+
 Optional connection check or single-encounter run:
 
 ```bash

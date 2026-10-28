@@ -1,0 +1,33 @@
+# SOAP note — D2N061
+
+History-taking stop reason: max_turns; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+History taking ended before the agent confirmed completion. Unelicited facts remain unknown.
+
+## Subjective
+
+Basic information: Virginia, female, age unspecified, visit time unspecified, chief complaint: knee pain and swelling following a basketball injury
+
+History of present illness: Onset of knee pain and swelling following a basketball injury when colliding with Jerry, resulting in a fall. Pain is localized to the inner knee, and swelling has persisted. Patient applied ice and an ace wrap but cannot bear weight on the affected knee. The pain is on the inside of the knee, right where it's swollen. It doesn't radiate anywhere else. There is no locking or clicking, but it does feel unstable sometimes, like it might give way if the patient tries to put too much weight on it. The patient was playing basketball, and Jerry ran into her. She thinks she twisted her knee a little before falling to the ground on her side. She didn't land directly on her knee, but it still hurt a lot, and she couldn't get back up right away.
+
+Past history: No prior knee injuries or surgeries.
+
+## Objective
+
+Physical examination: Physical examination findings are pending. The patient reports localized pain on the inner knee, swelling, and a sensation of instability without locking or clicking. The patient is unable to bear weight on the affected knee.
+
+Investigations: X-ray was performed, showing swelling and fluid in the knee without fractures. MRI not performed yet.
+
+## Assessment
+
+Preliminary diagnosis:
+Medial collateral ligament (MCL) sprain; Possible medial meniscus tear; Effusion with synovitis
+
+Diagnostic discussion:
+The patient is a female with knee pain and swelling following a basketball injury involving a collision and fall. The pain is localized to the inner knee, with swelling and a sensation of instability, but no locking or clicking. The absence of fractures on X-ray suggests a soft tissue injury. The mechanism of injury (twisting and collision) is consistent with an MCL sprain or meniscal tear. The presence of effusion and synovitis supports an inflammatory response. Differential diagnoses include MCL sprain, meniscal tear, and effusion with synovitis. MCL sprain is likely due to the valgus force from the collision. Meniscal tear is considered due to the twisting mechanism. Effusion with synovitis is supported by the swelling and fluid seen on X-ray. The patient has no prior knee injuries or surgeries, which supports an acute injury rather than a chronic condition. The inability to bear weight and sensation of instability further support a ligamentous or meniscal injury. The patient’s age and activity level (basketball) increase the risk of ligamentous and meniscal injuries. The next steps should include an MRI to confirm the diagnosis and guide treatment.
+
+## Plan
+
+1. Further evaluation: An MRI of the knee is indicated to evaluate for meniscal tears, ligamentous injuries, and the extent of synovitis. This should be performed as soon as possible to guide definitive management. 2. Medication: NSAIDs (e.g., ibuprofen) for pain and inflammation, with caution in patients with renal impairment or gastrointestinal risk factors. Acetaminophen may be used as an alternative if contraindications exist. Monitor for side effects such as gastrointestinal upset or renal function changes. 3. Non-drug management and education: RICE (rest, ice, compression, elevation) protocol should be continued. Avoid weight-bearing on the affected knee until cleared by a healthcare provider. Use crutches if needed. Physical therapy may be initiated once the acute phase has passed to restore strength and stability. Educate the patient on recognizing signs of infection (e.g., fever, increasing redness, warmth) or worsening symptoms that may require urgent evaluation. 4. Follow-up: Reassessment in 1-2 weeks or sooner if symptoms worsen or if there is no improvement. Repeat imaging (MRI) should be reviewed to determine the need for surgical intervention or continued conservative management. Follow-up should be in-person to assess progress and adjust the treatment plan as needed.

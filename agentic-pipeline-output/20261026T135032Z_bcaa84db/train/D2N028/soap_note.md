@@ -1,0 +1,33 @@
+# SOAP note — D2N028
+
+History-taking stop reason: max_turns; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+History taking ended before the agent confirmed completion. Unelicited facts remain unknown.
+
+## Subjective
+
+Basic information: 46-year-old male presenting with chronic abdominal pain, constipation, and occasional diarrhea for approximately two years.
+
+History of present illness: The patient is a 46-year-old male with chronic abdominal pain localized to the mid-abdomen, just below the belly button. The pain is described as nagging and intermittent, with fluctuating severity. It is noted to improve with bowel movements. He also experiences constipation and occasional diarrhea over the past two years. Certain foods, like pasta with creamy sauce, seem to trigger his diarrhea. He has not experienced weight loss, night sweats, or significant changes in bowel habits, though he notes a stable weight and could stand to lose about 25 pounds. He has had changes in his bowel habits over the past two years, with constipation being more common lately, and he usually goes three to four times a week, but it can be hard to pass stool. He does not eat pasta with creamy sauce very often, maybe once every couple of weeks, but when he does, he usually has a small portion, which still seems to trigger the diarrhea. Other than that, he eats pretty regular portions of healthy foods throughout the day.
+
+Past history: No relevant past medical history, no prior surgeries, no known allergies. Family history is unremarkable for gastrointestinal disorders. No endoscopic evaluations (colonoscopy or upper endoscopy) have been performed to date. No stool tests, such as fecal calprotectin or occult blood tests, have been performed.
+
+## Objective
+
+Physical examination: Vital signs: temperature 36.8°C, heart rate 72 bpm, blood pressure 128/82 mmHg, respiratory rate 16 bpm, oxygen saturation 98% on room air. Abdominal examination: soft, non-tender, no palpable masses, normal bowel sounds. No rectal bleeding noted on digital examination.
+
+Investigations: Abdominal CT scan (recent): unremarkable findings. No fecal calprotectin or occult blood tests have been performed. No endoscopic evaluations (colonoscopy or upper endoscopy) have been performed. No abdominal ultrasound or MRI performed in the past.
+
+## Assessment
+
+Preliminary diagnosis:
+Irritable Bowel Syndrome (IBS)
+
+Diagnostic discussion:
+The patient is a 46-year-old male with a two-year history of chronic abdominal pain localized to the mid-abdomen, which improves with bowel movements, along with alternating constipation and diarrhea. The presence of food triggers, such as pasta with creamy sauce, supports a diagnosis of Irritable Bowel Syndrome (IBS). The absence of weight loss, night sweats, or significant changes in bowel habits, along with normal physical examination findings and unremarkable abdominal CT scan, makes inflammatory bowel disease less likely. Functional constipation and small intestinal bacterial overgrowth are also considered differentials, though the presence of alternating bowel habits and pain relief with defecation is more consistent with IBS. The lack of endoscopic or stool tests limits the ability to definitively exclude IBD or other organic causes.
+
+## Plan
+
+1. Further evaluation: Perform fecal calprotectin and occult blood tests to rule out inflammatory bowel disease. Consider upper endoscopy and colonoscopy if symptoms persist or worsen. 2. Medication: Consider first-line treatment with a low-FODMAP diet, fiber supplements, and antispasmodics (e.g., dicyclomine). If symptoms persist, consider serotonin receptor modulators (e.g., alosetron for diarrhea-predominant IBS). 3. Non-drug management and education: Encourage hydration, regular physical activity, and weight management. Advise avoiding trigger foods, such as high-FODMAP items. Educate on recognizing warning signs such as persistent weight loss, rectal bleeding, or worsening abdominal pain. 4. Follow-up: Schedule a follow-up in 4-6 weeks to reassess symptoms and review test results. If symptoms remain unchanged or worsen, consider referral for endoscopic evaluation.

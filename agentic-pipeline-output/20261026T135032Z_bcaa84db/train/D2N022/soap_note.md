@@ -1,0 +1,33 @@
+# SOAP note — D2N022
+
+History-taking stop reason: max_turns; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+History taking ended before the agent confirmed completion. Unelicited facts remain unknown.
+
+## Subjective
+
+Basic information: 50-year-old male presenting with persistent pain, swelling, and inability to make a fist in the right index finger following a car accident in March.
+
+History of present illness: Injury occurred during a car accident in March; symptoms include pain, swelling, and functional limitation (inability to make a fist). Symptoms have not improved. MRI on April 24th, 2021, showed soft tissue swelling, partial tear in the flexor digitorum superficialis tendon, and fluid around the tendons. The patient declined steroid injection due to prior dexamethasone reaction and underwent physical therapy without surgical intervention. The pain is about a 7 or 8 on a scale of 1 to 10, and it's pretty constant. The physical therapy helped a little with the stiffness, but it still hurts a lot when I try to make a fist or bend the finger. It's hard to do anything with my hand because of the pain and swelling. The patient reports transient numbness during examination, which is not constant, and no new symptoms since the last checkup. The pain has stayed about the same, maybe a 7 or 8 most of the time, and the swelling hasn't really gone down either. I haven't noticed any new symptoms, just the same pain and stiffness. It still hurts a lot when I try to use my hand, like when I'm driving or doing my job. The transient numbness was localized to the tip of the finger during examination and did not recur afterward. The patient has not experienced any tingling, burning, or pins-and-needles sensations beyond the brief numbness observed during the examination. The color and temperature of the finger haven't changed since the injury. I do have trouble making a fist, and it's hard to do things that require fine motor skills, like buttoning a shirt or typing.
+
+Past history: Allergy to dexamethasone. No relevant past medical history, no prior surgeries, no known allergies. Family history is unremarkable.
+
+## Objective
+
+Physical examination: Vital signs: temperature 36.8°C, pulse 78 bpm, BP 128/82 mmHg. Physical examination of the right index finger reveals swelling, tenderness over the proximal interphalangeal joint, and limited range of motion. No erythema, warmth, or drainage noted. Neurological examination shows intact sensation and no signs of nerve involvement. Transient numbness was noted during the examination, and the patient reported experiencing intermittent numbness during the examination, though it is not constant. No weakness or sensory deficits in other fingers were noted. No changes in color or temperature of the right index finger. Grip strength appears intact, but fine motor function is impaired.
+
+Investigations: MRI of the right index finger (April 24th, 2021) showed soft tissue swelling, partial tear of the flexor digitorum superficialis tendon, and peritendinous fluid. No evidence of infection or fractures. No recent lab results available.
+
+## Assessment
+
+Preliminary diagnosis:
+1. Partial tear of the flexor digitorum superficialis tendon with peritendinous fluid. 2. Chronic soft tissue swelling of the right index finger. 3. Functional limitation due to pain and stiffness. 4. Possible transient nerve irritation or neuropraxia.
+
+Diagnostic discussion:
+The patient is a 50-year-old male with a history of a car accident in March, resulting in persistent pain, swelling, and functional limitation in the right index finger. MRI findings from April 24th, 2021, show a partial tear of the flexor digitorum superficialis tendon and peritendinous fluid, which align with the clinical presentation of pain, swelling, and inability to make a fist. The patient has undergone physical therapy, which provided some relief for stiffness but not for the pain. The transient numbness during examination may be due to localized pressure or mild nerve irritation, though no significant neurological deficits are present. The absence of erythema, warmth, or drainage suggests no acute infection. The chronic nature of the symptoms and limited improvement with conservative management raise the possibility of adhesive capsulitis or neuropraxia, though these require further evaluation to confirm. Differential diagnoses include chronic tendinopathy, nerve entrapment, and persistent post-traumatic swelling.
+
+## Plan
+
+1. Further evaluation: Consider referral to a hand surgeon for assessment of surgical options, such as tendon repair or release, if conservative management fails. An electromyography (EMG) and nerve conduction study may be warranted to evaluate the transient numbness and rule out nerve entrapment. 2. Medication: Nonsteroidal anti-inflammatory drugs (NSAIDs) may be considered for pain and inflammation, though caution is needed due to the patient's prior dexamethasone reaction. Topical analgesics or corticosteroid alternatives may be explored if systemic NSAIDs are contraindicated. 3. Non-drug management and education: Continue physical therapy with a focus on range of motion and strengthening exercises. Recommend activity modification to avoid exacerbating symptoms. Educate the patient on pain self-management techniques and the importance of follow-up. 4. Follow-up: Reassessment in 2-4 weeks with a focus on symptom progression and response to conservative management. If no improvement is noted, referral for surgical evaluation should be considered.

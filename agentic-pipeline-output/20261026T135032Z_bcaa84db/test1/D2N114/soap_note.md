@@ -1,0 +1,41 @@
+# SOAP note — D2N114
+
+History-taking stop reason: max_turns; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+History taking ended before the agent confirmed completion. Unelicited facts remain unknown.
+
+## Subjective
+
+Basic information: Woman, late 30s, chief complaint: worsening headaches on the right side behind the eye, pulsing pain, associated with ringing in ears and occasional blurred vision
+
+History of present illness: Onset of headaches, progression to worsening, description of pain as pulsing on the right side behind the eye, associated symptoms of tinnitus and occasional blurred vision on the same side as the headache. The ringing in ears has been going on for a few months now, and the blurred vision is more recent—it comes and goes, usually on the same side as the headache. It doesn’t happen with every headache, but it’s been getting more frequent lately. It’s really worrying me. No nausea or vomiting with the headaches, and no photophobia. The only vision changes are the occasional blurred vision on the same side as the headache. The patient reports that the headaches worsen with stress and exercise. She has not experienced nausea, vomiting, or photophobia. She has not noticed any visual aura such as flashing lights or zigzag patterns prior to the headaches. She has not experienced any changes in her menstrual cycle or hormonal fluctuations that might be associated with the onset or worsening of her headaches. She has a history of headaches since her teenage years, which used to be around the time of her menstrual cycle, but have become more frequent and severe over time, and recently worsen with stress and exercise.
+
+Past history: No history of migraines, trauma, or other neurological conditions reported.
+
+## Objective
+
+Physical examination: Vital signs: BP 120/80 mmHg, HR 72 bpm, Temp 36.8°C. Neurological examination: no focal deficits, cranial nerves II-XII intact, no nystagmus, normal fundoscopy.
+
+Investigations: MRI brain (recent): no acute intracranial pathology. Visual field testing: no significant deficits. Audiogram: mild sensorineural hearing loss in the right ear. Lumbar puncture (if performed): normal opening pressure, CSF analysis unremarkable.
+
+## Assessment
+
+Preliminary diagnosis:
+1. Cluster headache
+2. Migraine without aura
+3. Tension-type headache
+4. Secondary headache due to intracranial pathology (excluded by MRI)
+5. Vestibular migraine
+6. Tension-type headache with associated tinnitus and mild sensorineural hearing loss
+
+Diagnostic discussion:
+The patient is a woman in her late 30s presenting with worsening right-sided pulsating headaches behind the eye, associated with tinnitus and occasional blurred vision on the same side. The headaches are exacerbated by stress and exercise, and the patient has a history of headaches since her teenage years, which have become more frequent and severe over time. The absence of nausea, vomiting, or photophobia makes migraine with aura less likely, but migraine without aura remains a consideration. The presence of tinnitus and occasional blurred vision raises concern for cluster headache, which can present with unilateral orbital pain, though autonomic symptoms such as lacrimation or nasal congestion are not reported. The patient also has mild sensorineural hearing loss in the right ear, which may be unrelated but could contribute to the tinnitus. The MRI brain was unremarkable, and lumbar puncture (if performed) showed normal findings, which helps exclude secondary causes such as increased intracranial pressure or infectious/inflammatory conditions. Tension-type headache is also a consideration given the chronic nature of her headaches and the absence of typical migraine features. Vestibular migraine is another possibility given the presence of tinnitus and the absence of classical migraine features. The differential includes migraine without aura, cluster headache, tension-type headache, and vestibular migraine, with the former two being more likely given the unilateral, pulsating nature of the pain and associated symptoms.
+
+## Plan
+
+1. Further evaluation: Consider referral to a neurologist for detailed assessment of headache pattern and possible provocation testing. Consider a repeat MRI if symptoms change or worsen. Consider vestibular testing if vestibular migraine is suspected.
+2. Medication: For acute treatment, triptans (e.g., sumatriptan) may be considered for migraine without aura or cluster headache. For preventive treatment, calcium channel blockers (e.g., verapamil) are first-line for cluster headaches, while beta-blockers (e.g., propranolol) or anticonvulsants (e.g., topiramate) may be considered for migraine or tension-type headaches. NSAIDs (e.g., ibuprofen) may be used for tension-type headaches. Monitor for contraindications such as cardiovascular disease.
+3. Non-drug management and education: Stress management techniques, regular sleep patterns, and avoiding known triggers (e.g., alcohol, stress, exercise) may help reduce frequency. The patient should be advised to monitor for new or worsening symptoms, such as persistent visual changes, worsening headaches, or neurological deficits, which would require urgent evaluation.
+4. Follow-up: Reassessment in 2-4 weeks with a neurologist, or sooner if symptoms change or worsen. Repeat visual field testing and audiogram if symptoms persist or progress.

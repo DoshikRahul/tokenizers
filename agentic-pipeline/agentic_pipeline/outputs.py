@@ -15,6 +15,12 @@ def write_json(path: Path, value) -> None:
     temporary.replace(path)
 
 
+def read_jsonl(path: Path) -> list[dict]:
+    if not path.exists():
+        return []
+    return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+
+
 def create_run(root: Path, config: dict, encounters: list) -> Path:
     run_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ") + "_" + uuid.uuid4().hex[:8]
     directory = root / run_id
@@ -32,23 +38,31 @@ def create_run(root: Path, config: dict, encounters: list) -> Path:
 
 
 class CaseOutput:
-    def __init__(self, run: Path, split: str, encounter_id: str):
+    def __init__(self, run: Path, split: str, encounter_id: str, *, resume: bool = False):
         if Path(encounter_id).name != encounter_id or encounter_id in {".", ".."}:
             raise ValueError("Unsafe encounter ID for output directory.")
         self.directory = run / split / encounter_id
-        self.directory.mkdir(parents=True, exist_ok=False)
+        self.directory.mkdir(parents=True, exist_ok=resume)
         self.details = self.directory / "details"
-        self.details.mkdir()
+        self.details.mkdir(exist_ok=resume)
         self.turn = 0
         self.sequence = 0
         self.trace_sequence = 0
         self.identity = {"run_id": run.name, "split": split, "encounter_id": encounter_id}
-        (self.directory / "consultation.md").write_text(
-            f"# Patient–doctor conversation — {encounter_id}\n\n", encoding="utf-8")
-        (self.directory / "agent_conversation.md").write_text(
-            f"# Agent exchanges — {encounter_id}\n\n"
-            "Questions, patient answers, routing instructions, specialist proposals, and aggregator updates in order.\n\n",
-            encoding="utf-8")
+        if resume:
+            messages = read_jsonl(self.details / "agent_messages.jsonl")
+            events = read_jsonl(self.details / "agent_trace.jsonl")
+            self.sequence = max((entry["sequence"] for entry in messages), default=0)
+            self.trace_sequence = max((int(entry["event_id"].rsplit("-", 1)[1]) for entry in events), default=0)
+            self.turn = max((entry.get("turn", 0) for entry in events + messages), default=0)
+        if not (self.directory / "consultation.md").exists():
+            (self.directory / "consultation.md").write_text(
+                f"# Patient–doctor conversation — {encounter_id}\n\n", encoding="utf-8")
+        if not (self.directory / "agent_conversation.md").exists():
+            (self.directory / "agent_conversation.md").write_text(
+                f"# Agent exchanges — {encounter_id}\n\n"
+                "Questions, patient answers, routing instructions, specialist proposals, and aggregator updates in order.\n\n",
+                encoding="utf-8")
 
     def message(self, *, sender: str, recipient: str, phase: str, kind: str,
                 content: str, data=None, source_event_id: str | None = None) -> None:

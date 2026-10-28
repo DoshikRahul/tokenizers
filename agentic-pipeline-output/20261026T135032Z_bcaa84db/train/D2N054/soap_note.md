@@ -1,0 +1,39 @@
+# SOAP note — D2N054
+
+History-taking stop reason: max_turns; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+History taking ended before the agent confirmed completion. Unelicited facts remain unknown.
+
+## Subjective
+
+Basic information: 45-year-old male (gender confirmed) presenting with soreness, swelling, and numbness following a brick injury to the foot during yard work.
+
+History of present illness: The patient dropped a landscape brick on their foot during yard work, resulting in soreness, swelling, and numbness. The injury occurred yesterday, and the patient has noticed changes in sensation and mobility since then. The patient is unable to put weight on the foot. The pain is on the bottom and top of the foot, and there's some bruising there. The patient is unable to feel their whole foot, and the numbness does not radiate to other parts of the leg. No tingling or burning sensations reported. The numbness is all over the foot, both the top and the bottom. It's not worse in one area than another, just the whole foot feels numb. I don't remember having any nerve issues or injuries in this foot before. The patient denies any weakness or difficulty moving their toes or foot since the injury, though they report an inability to feel anything on their foot. The numbness has been pretty constant since the injury, but sometimes it feels like it gets a little worse when I move my foot or put pressure on it. It's been like that all day, really.
+
+Past history: No prior injuries or conditions affecting the foot, including diabetes or neuropathy. History of ankle issues, including a broken ankle twenty years ago and surgery on the other ankle. No previous episodes of numbness or tingling in the foot, even if unrelated to trauma.
+
+## Objective
+
+Physical examination: Vital signs: BP 120/80 mmHg, HR 78 bpm, Temp 36.8°C. Physical examination of the foot reveals swelling and tenderness over the midfoot region, with decreased sensation to light touch over the dorsum of the foot and toes. Bruising noted on the bottom and top of the foot. No visible deformity or bruising noted. No signs of compartment syndrome, such as pain with passive stretching or tightness of the fascia. No changes in color, temperature, or pulse noted in the affected foot. No weakness or difficulty moving toes or foot noted on examination.
+
+Investigations: X-ray of the foot (taken today) shows no evidence of fracture or dislocation. MRI (scheduled for tomorrow) to evaluate for soft tissue injury or nerve involvement.
+
+## Assessment
+
+Preliminary diagnosis:
+1. Soft tissue contusion with possible nerve involvement
+2. Midfoot sprain
+3. Rule out tarsal tunnel syndrome
+4. Rule out plantar fasciitis with secondary nerve irritation
+
+Diagnostic discussion:
+The patient is a 45-year-old male with acute onset of soreness, swelling, and numbness following a brick injury to the foot. The injury occurred yesterday, and the patient has been unable to bear weight on the foot. The numbness is diffuse across the entire foot, with no radiation to the leg, and is constant, though it may worsen with movement or pressure. Physical examination reveals swelling and tenderness over the midfoot, decreased sensation to light touch on the dorsum of the foot and toes, and bruising on the bottom and top of the foot. No deformity, compartment syndrome signs, or motor deficits are present. The X-ray is negative for fractures or dislocations, but an MRI is scheduled to evaluate for soft tissue or nerve injury. The differential diagnoses include soft tissue contusion with possible nerve involvement, midfoot sprain, tarsal tunnel syndrome, and plantar fasciitis with secondary nerve irritation. The patient's history of ankle surgery and the mechanism of injury support the possibility of soft tissue or nerve trauma. Tarsal tunnel syndrome is considered due to the presence of numbness and the location of the injury. Plantar fasciitis is included as a differential due to the location of the pain and swelling, though the presence of numbness suggests possible nerve involvement.
+
+## Plan
+
+1. Further evaluation: MRI of the foot (scheduled for tomorrow) to assess for soft tissue injury, nerve damage, or other structural abnormalities.
+2. Medication: NSAIDs (e.g., ibuprofen) for pain and inflammation, with caution for renal impairment if present. Consider a short course of oral corticosteroids if there is significant inflammation.
+3. Non-drug management and education: Rest, elevation, and ice application to the affected foot. Avoid weight-bearing as much as possible. Monitor for signs of compartment syndrome or worsening neurologic symptoms. Educate the patient on the importance of following up with the scheduled MRI and subsequent evaluation.
+4. Follow-up: Reassessment in 3-5 days after the MRI results are available. If the MRI shows significant nerve involvement or soft tissue injury, referral to a podiatrist, orthopedic surgeon, or neurologist for further evaluation and possible intervention may be warranted.

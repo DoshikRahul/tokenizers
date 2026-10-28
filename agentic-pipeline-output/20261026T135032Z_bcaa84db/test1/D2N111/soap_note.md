@@ -1,0 +1,33 @@
+# SOAP note — D2N111
+
+History-taking stop reason: max_turns; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+History taking ended before the agent confirmed completion. Unelicited facts remain unknown.
+
+## Subjective
+
+Basic information: 58 years old, male. Presented with right knee pain and difficulty walking following an injury at a trampoline park a week ago.
+
+History of present illness: The patient sustained a right knee injury at a trampoline park a week ago. He reports pain localized to the lateral aspect of the knee, described as sharp, with onset following the injury. The pain has progressively worsened, and he now experiences bruising, instability, and limping. He has not noticed significant swelling initially but now has some bruising. The symptoms have impacted his mobility. The patient was jumping on the trampoline and heard a snap and felt a sudden sharp pain in his right knee. He thinks he twisted it or landed wrong, but he is not exactly sure how it happened. It hurt right away, and he couldn't put much weight on it after that. He can bend his knee a little, but it's not much. He can straighten it, but it's uncomfortable. He hasn't had any locking or clicking, but his knee does feel a bit unstable, like it might give way sometimes, especially when he walks. The patient also mentioned that there has been no locking or clicking since the injury. The pain gets worse when he tries to bend his knee or put weight on it, especially when he walks. It doesn't really get better with rest, just a little less sharp sometimes. He hasn't noticed any numbness, tingling, or weakness in his leg.
+
+Past history: No prior knee injuries, surgeries, or conditions such as arthritis.
+
+## Objective
+
+Physical examination: Physical examination reveals tenderness over the lateral aspect of the right knee. There is mild bruising and swelling noted. Range of motion is limited due to pain, and there is a mild effusion. Lachman test and anterior drawer test are pending. Stability tests are pending.
+
+Investigations: Imaging studies: X-ray results show no evidence of fracture or bony abnormality. MRI ordered but not yet performed.
+
+## Assessment
+
+Preliminary diagnosis:
+1. Lateral collateral ligament (LCL) injury. 2. Possible meniscal tear. 3. Contusion with mild effusion.
+
+Diagnostic discussion:
+The patient is a 58-year-old male with a history of a traumatic right knee injury at a trampoline park, presenting with localized lateral knee pain, bruising, instability, and limping. The injury mechanism suggests a twisting or landing injury, which is commonly associated with ligamentous or meniscal damage. The absence of fractures on X-ray and the presence of tenderness, swelling, and instability support a soft tissue injury. The LCL is a likely candidate given the lateral localization of symptoms. A meniscal tear is also plausible due to the twisting mechanism and the presence of pain with knee movement. Contusion with mild effusion is consistent with the bruising and swelling described. The pending Lachman and anterior drawer tests will help assess ligament integrity, while the MRI will provide further insight into meniscal and ligamentous injuries.
+
+## Plan
+
+1. Further evaluation: Perform Lachman and anterior drawer tests to assess ligament stability. Order MRI of the right knee to evaluate for meniscal tears, ligamentous injuries, and soft tissue damage. 2. Medication: Prescribe nonsteroidal anti-inflammatory drugs (NSAIDs) for pain and inflammation, with caution in patients with renal impairment or gastrointestinal risk factors. Consider acetaminophen as an alternative if contraindications exist. 3. Non-drug management and education: Advise the patient to avoid weight-bearing activities and use crutches as needed. Recommend ice application to the knee for 15-20 minutes every 2-3 hours to reduce swelling. Encourage gentle range-of-motion exercises as tolerated. Educate on recognizing signs of worsening symptoms, such as increased swelling, locking, or inability to bear weight, which would require urgent evaluation. 4. Follow-up: Schedule a follow-up appointment in one week to reassess symptoms and review MRI results. If symptoms worsen or if there is instability, consider earlier follow-up or referral to an orthopedic specialist for potential surgical evaluation.

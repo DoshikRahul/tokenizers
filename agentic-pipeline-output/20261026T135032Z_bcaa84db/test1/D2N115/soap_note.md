@@ -1,0 +1,33 @@
+# SOAP note — D2N115
+
+History-taking stop reason: max_turns; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+History taking ended before the agent confirmed completion. Unelicited facts remain unknown.
+
+## Subjective
+
+Basic information: 28-year-old male presenting with neck pain following a car accident one week ago
+
+History of present illness: Neck pain in the posterior region, rated 7/10, exacerbated by head movement, with associated headaches but no neurological symptoms such as numbness, tingling, or weakness. The patient has tried ibuprofen for pain relief with some improvement. No prior imaging or specialist consultations have been conducted. The pain is localized to the neck and does not radiate. It is difficult to move the head around, and turning the neck from side to side or bending it back causes pain. The patient can still manage most daily activities. Mechanism of injury: The patient was wearing a seatbelt, and his head and neck were jerked forward really quickly when the car hit him from behind. He did not lose consciousness, but he did feel a lot of sudden pain right after it happened. The pain has stayed about the same, just getting worse when I move my neck. I haven't had any numbness, tingling, or weakness in my arms or legs. I don't have any history of neck injuries or surgeries other than the car accident. I haven't had any balance issues, dizziness, or changes in vision since the accident.
+
+Past history: No relevant past history reported
+
+## Objective
+
+Physical examination: Physical examination findings not yet available
+
+Investigations: MRI ordered by the doctor, but results not yet available
+
+## Assessment
+
+Preliminary diagnosis:
+Cervical strain; Cervical sprain; Rule out cervical disc herniation
+
+Diagnostic discussion:
+A 28-year-old male presented with neck pain following a rear-end car accident, with a mechanism of injury involving rapid forward jerking of the head and neck. The pain is localized to the posterior neck, rated 7/10, and exacerbated by head movement, with associated headaches but no neurological symptoms such as numbness, tingling, or weakness. The patient has tried ibuprofen with some improvement. The absence of neurological symptoms and the presence of mechanical pain suggest a musculoskeletal etiology, such as cervical strain or sprain. However, the lack of prior imaging and the potential for occult spinal injury necessitate further evaluation. Differential diagnoses include cervical strain, cervical sprain, and cervical disc herniation. Cervical strain is likely given the mechanism of injury and the absence of neurological symptoms. Cervical sprain is also possible, as it involves ligamentous injury. Cervical disc herniation is a consideration due to the potential for spinal cord or nerve root compression, though the absence of neurological symptoms makes it less likely. The MRI results will be critical in confirming or excluding disc herniation or other structural abnormalities. The patient has no relevant past medical history, and no complications such as infection or renal impairment are reported. The patient is adherent to prior treatment with ibuprofen. Family, financial, transport, and care resources are not specified but should be considered for long-term management.
+
+## Plan
+
+Further evaluation: MRI of the cervical spine is pending and will be crucial for assessing for disc herniation, spinal cord compression, or other structural abnormalities. If MRI results are inconclusive or if symptoms progress, a CT scan may be considered. Neurological consultation may be warranted if neurological symptoms develop or if there is concern for spinal instability. Medication: Continue with nonsteroidal anti-inflammatory drugs (NSAIDs) such as ibuprofen for pain and inflammation. If NSAIDs are contraindicated or ineffective, consider acetaminophen or a muscle relaxant such as cyclobenzaprine. Monitor for gastrointestinal side effects with NSAIDs and renal function if the patient has a history of renal impairment. Non-drug management and education: Advise the patient to avoid activities that exacerbate the pain, such as heavy lifting or sudden head movements. Recommend physical therapy for strengthening and range-of-motion exercises. Educate on the importance of proper posture and ergonomic adjustments. Encourage gradual return to activities as tolerated. Monitor for any new or worsening neurological symptoms, such as numbness, tingling, or weakness, which would require immediate medical attention. Follow-up: Reassess in one week if the MRI results are normal and the patient is stable. If the MRI reveals a significant abnormality or if symptoms worsen, follow-up should be sooner, possibly within 2-3 days. Repeat imaging or neurological evaluation may be necessary based on clinical findings.

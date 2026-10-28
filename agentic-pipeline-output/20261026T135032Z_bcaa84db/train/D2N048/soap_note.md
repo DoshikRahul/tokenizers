@@ -1,0 +1,31 @@
+# SOAP note — D2N048
+
+History-taking stop reason: history_complete; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+## Subjective
+
+Basic information: Brittany, 22 years old, female, presented with pain in the right foot following an injury during tennis play a couple of days ago.
+
+History of present illness: The injury occurred a couple of days ago during tennis play when Brittany fell on her foot while attempting to volley the ball. She twisted herself to catch herself, resulting in immediate pain and an inability to put weight on the foot. She had to be helped off the field. There is bruising on the top and bottom of the foot, and swelling around the midfoot area. The pain is localized and does not radiate to other areas. The pain is more of a throbbing and aching feeling, maybe a little sharp sometimes, and is around a 7 or 8 on the pain scale. Brittany is unable to bear any weight on the foot at all.
+
+Past history: No prior injuries to the right foot specifically, though there have been prior injuries to the left foot. No history of fractures, surgeries, or allergies. No family history of foot-related conditions.
+
+## Objective
+
+Physical examination: Vital signs: BP 120/80 mmHg, HR 78 bpm, Temp 36.8°C. Inspection: bruising on the top and bottom of the right foot, swelling around the midfoot area. Palpation: tenderness localized to the midfoot, no deformity noted. Neurological: intact sensation, no numbness or tingling. Motor: inability to bear weight on the right foot. Range of motion: limited due to pain.
+
+Investigations: X-ray findings show bruising on the top and bottom of the right foot, swelling around the midfoot, a suspected fracture near the base of the second metatarsal, and a bony fragment in the Lisfranc joint space. The patient has no signs of nerve involvement or circulation issues.
+
+## Assessment
+
+Preliminary diagnosis:
+1. Suspected fracture of the second metatarsal base with possible Lisfranc joint involvement. 2. Soft tissue contusion and swelling of the midfoot.
+
+Diagnostic discussion:
+Brittany, a 22-year-old female, presented with acute pain in her right foot following a twisting injury during tennis. The injury resulted in immediate pain, inability to bear weight, bruising on the top and bottom of the foot, and swelling around the midfoot. Physical examination confirmed localized tenderness in the midfoot, intact neurological function, and no deformity. X-ray findings suggest a suspected fracture near the base of the second metatarsal and a bony fragment in the Lisfranc joint space. The absence of neurological or circulatory compromise reduces the likelihood of more severe complications. Differential diagnoses include: 1. Fracture of the second metatarsal base with Lisfranc joint involvement (supported by X-ray findings). 2. Sprain or ligamentous injury (less likely due to the presence of a bony fragment and the inability to bear weight). 3. Stress fracture (less likely given the acute onset and mechanism of injury). The patient's age, activity level, and absence of prior fractures or surgeries make a stress fracture less likely. The presence of a bony fragment in the Lisfranc joint space raises concern for a more complex injury, though no deformity or instability was noted on physical examination.
+
+## Plan
+
+1. Further evaluation: Obtain a CT scan or MRI of the foot to better assess the extent of the fracture and involvement of the Lisfranc joint. This will guide the need for surgical intervention. 2. Medication: Prescribe analgesics such as acetaminophen or NSAIDs (e.g., ibuprofen) for pain management, with caution for NSAID use if there is any concern for renal impairment or gastrointestinal risk. 3. Non-drug management and education: Advise strict non-weight-bearing on the affected foot using crutches or a walking boot. Recommend ice application to reduce swelling and elevation of the foot. Educate on signs of infection or worsening pain, which would require urgent medical attention. 4. Follow-up: Schedule a follow-up appointment in one week to reassess the injury and review imaging results. If the CT/MRI indicates the need for surgical fixation, arrange for orthopedic consultation and surgery as indicated.

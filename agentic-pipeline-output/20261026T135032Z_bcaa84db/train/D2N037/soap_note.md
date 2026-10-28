@@ -1,0 +1,33 @@
+# SOAP note — D2N037
+
+History-taking stop reason: max_turns; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+History taking ended before the agent confirmed completion. Unelicited facts remain unknown.
+
+## Subjective
+
+Basic information: 32-year-old male with chief complaint of bilateral elbow pain, predominantly in the right elbow, for approximately 1.5 years. Pain worsens with arm or hand use. Ibuprofen has been ineffective.
+
+History of present illness: The patient reports a dull ache in both elbows, predominantly on the inside of the right elbow, which flares up with arm or hand use, such as lifting weights. The pain has been present for approximately 1.5 years and is not relieved by ibuprofen. There is no associated swelling, numbness, or prior injury to the elbows. The pain does not seem to be related to any specific activity other than arm or hand use. No stiffness, clicking, or locking in the elbows. Tenderness on the inside of the right elbow, especially after workouts. The patient has not experienced any numbness, tingling, or weakness in the hands or fingers. The patient has not had any imaging studies of the elbows before, but the doctor mentioned taking X-rays, which did not show any fractures or bone issues, and an MRI is planned.
+
+Past history: No prior injuries to the elbows. Occupational factors: Weightlifting (bench presses, deadlifts, overhead presses) performed a few times a week with heavy weights. No history of repetitive strain or occupational factors reported yet. No family history of joint or autoimmune conditions reported yet. No history of rheumatologic evaluation or testing for inflammatory/autoimmune conditions.
+
+## Objective
+
+Physical examination: Vital signs: temperature, blood pressure, heart rate, and respiratory rate not yet recorded. Physical examination of the elbows: no visible swelling, redness, or warmth. No joint effusion or deformity. Range of motion and strength assessment not yet performed.
+
+Investigations: No prior imaging or laboratory tests related to the elbows. No rheumatologic or inflammatory markers tested yet.
+
+## Assessment
+
+Preliminary diagnosis:
+Medial epicondylitis (golfer's elbow) of the right elbow; Bilateral tendinopathy of the elbow
+
+Diagnostic discussion:
+The patient is a 32-year-old male with a 1.5-year history of bilateral elbow pain, predominantly on the inside of the right elbow, which worsens with arm or hand use, such as lifting weights. The pain is not relieved by ibuprofen and is not associated with swelling, numbness, or prior injury. The absence of swelling, redness, or warmth on physical examination, along with the lack of fractures or bone issues on X-rays, supports a diagnosis of soft tissue pathology. The patient’s occupational history of weightlifting with heavy weights is a significant risk factor for medial epicondylitis and tendinopathy. The differential diagnoses include lateral epicondylitis (tennis elbow), which typically presents with pain on the lateral side of the elbow, and osteoarthritis, which is less likely given the absence of swelling, stiffness, or radiographic evidence of degenerative changes. The planned MRI will help confirm the diagnosis and rule out other structural abnormalities. The patient has no history of rheumatologic conditions, and no inflammatory markers have been tested yet, which may be considered if the clinical picture remains unclear or if there is no response to conservative management.
+
+## Plan
+
+1. Further evaluation: MRI of the right elbow to confirm the diagnosis of medial epicondylitis and assess for other soft tissue abnormalities. 2. Medication: Nonsteroidal anti-inflammatory drugs (NSAIDs) such as naproxen or celecoxib may be considered for pain relief, though the patient has not responded to ibuprofen. If NSAIDs are ineffective, consider corticosteroid injections or physical therapy. Avoid long-term NSAID use due to potential gastrointestinal and renal side effects. Monitor for adverse effects such as gastrointestinal discomfort or renal function changes. 3. Non-drug management and education: Recommend activity modification, including reducing heavy weightlifting or using proper form during exercises. Physical therapy focusing on eccentric strengthening and stretching of the forearm muscles may be beneficial. Education on proper warm-up and cool-down routines, as well as ergonomic adjustments during weightlifting, should be provided. Advise the patient to avoid activities that exacerbate the pain and to monitor for signs of worsening symptoms, such as increased pain, swelling, or neurological symptoms. 4. Follow-up: Reassess in 2-4 weeks after initiating treatment. If the patient does not show improvement, consider further imaging or referral to a specialist. Repeat imaging or evaluation may be necessary if symptoms persist or worsen.
