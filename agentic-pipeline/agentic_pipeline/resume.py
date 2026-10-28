@@ -35,8 +35,9 @@ def resume_run(args):
         if not run.is_dir():
             run = args.output_dir / args.resume
     run = run.resolve()
-    if run.parent != args.output_dir.resolve():
-        raise ValueError("Resume directory must be directly inside --output-dir.")
+    allowed_roots = {args.output_dir.resolve(), (args.output_dir.parent / "agentic-pipeline-output-backups").resolve()}
+    if run.parent not in allowed_roots:
+        raise ValueError("Resume directory must be directly inside the output or backup folder.")
     manifest = json.loads((run / "run_manifest.json").read_text())
     config = manifest["config"]
     if config["model"] != args.model or config["max_turns"] != args.max_turns:
