@@ -1,0 +1,498 @@
+
+
+=== PAGE 1 ===
+
+Team Tokenizers — One Encounter, Two Readers: Verified Clinical Notes
+for Doctors and Faithful Summaries for Patients
+Jyothika Goparaju
+2025701007
+jyothika.goparaju@research.iiit.ac.in
+Namrata Mokshagundam
+2025701011
+namrata.mokshagundam@research.iiit.ac.in
+Repaka Doshik Rahul
+2026701035
+doshikrahul.repaka@research.iiit.ac.in
+Surya Teja Thodupunuri
+2025701054
+suryateja.t@research.iiit.ac.in
+Abstract
+A clinical intake system produces one record
+that two people read: the doctor signs a SOAP
+note, and the patient receives a plain-language
+summary. Current LLM systems collect the
+evidence first and verify the record afterwards.
+We argue that this separation causes two fail-
+ures. Unrecoverable gaps: verification finds
+a missing or unsupported fact only after the
+patient, the one source who could supply it,
+has left the conversation, so the fact can only
+be deleted or guessed. A fact–inference cate-
+gory error: faithfulness filters test every sen-
+tence for entailment, but diagnoses and plans
+are inferences that no dialogue turn entails, so
+correct reasoning is deleted. We make both fail-
+ures measurable with known answers (withheld
+facts, planted errors, valid assessments) and a
+checkpoint-branching protocol in which every
+compared strategy continues from the identi-
+cal intake dialogue. We then test two minimal
+fixes, verify-then-ask and section-aware verifi-
+cation; all other components are held fixed and
+evaluated only as supporting parts.
+1 Problem and Motivation
+Problem statement. LLM agents can take a pa-
+tient history and write a clinical note, but the note
+may contain facts the patient never stated and omit
+facts the patient would have reported if asked. In-
+teractive intake systems such as Aegle (Chen et al.,
+2026) reduce omissions by asking better questions,
+but do not check individual statements in the note.
+Post-hoc filters such as uMedSum (Nagar et al.,
+2025) check atomic facts, but only after the source
+is fixed, and with one entailment test for every sen-
+tence. Chaining the two leaves a structural gap:
+when the filter finds that a mandatory fact, such
+as an allergy, is missing or unsupported, it can
+only delete the statement or paste in similar text,
+because the patient can no longer be asked. The
+filter also cannot tell a reported fact (“chest pain
+for two hours”) from a clinical inference (“likely
+stable angina”); the inference is never entailed by
+the dialogue, so a correct diagnosis is removed.
+Both errors reach both readers: the doctor signs an
+incomplete or over-pruned note, and the patient’s
+summary inherits it.
+Why it matters. The first-visit note anchors later
+decisions, so a dropped allergy or a deleted correct
+assessment propagates through care. The doctor’s
+review effort depends on how much of the note
+must be re-checked, and the patient’s summary
+carries the clinic’s authority even when it is wrong.
+Domain and target users. Healthcare, restricted
+to adult outpatient first-visit intake and the SOAP
+Initial Progress Note. The patient answers plain-
+language questions and, after sign-off, receives a
+lay summary; red-flag symptoms trigger an imme-
+diate alert. The doctor reviews flagged items and
+signs a note in which every statement links to its
+evidence.
+What is missing in existing approaches. Intake
+agents (Chen et al., 2026) are evaluated mainly with
+rubric scores, not statement-level checks. Atomic-
+fact and NLI-based checking (Min et al., 2023;
+Laban et al., 2022; Nagar et al., 2025) and self-
+refinement (Madaan et al., 2023) assume the source
+is complete and fixed, and treat every sentence as
+extractive. Clarifying-question research (Alianne-
+jadi et al., 2019) shows that asking resolves uncer-
+tainty, but it is not triggered by claim-level verifica-
+tion. No prior work (i) uses a verification result to
+ask the source while it is still available, or (ii) sep-
+arates facts from inferences when deciding what
+counts as supported.
+2 Research Questions and Hypotheses
+RQ1 (unrecoverable gaps). At a matched budget
+of patient turns, does asking a targeted question
+when verification finds a gap recover more missing
+1
+
+=== PAGE 2 ===
+
+facts, without lowering faithfulness, than deleting,
+guessing, or asking more untargeted questions?
+RQ2 (category error). With the same verifier
+model, does checking Assessment/Plan (A/P) state-
+ments by their evidence chain instead of by en-
+tailment keep more correct reasoning while still
+rejecting unsupported diagnoses and plans?
+• H1a: Verify-then-ask recovers more withheld
+facts than delete-only and than post-hoc filtering.
+• H1b: It recovers more than the same number
+of untargeted extra turns, so targeting drives the
+gain.
+• H1c: Its grounding rate is at least that of post-hoc
+filtering, while guessing lowers grounding.
+• H2: Uniform entailment rejects many valid A/P
+statements even with our verifier; the evidence-
+chain rule rejects fewer while keeping recall on
+planted unsupported A/P statements within 5
+points.
+• H3 (secondary): Patient summaries built from
+the verified record contain fewer unsupported
+statements at similar reading level.
+3 Capabilities: Core vs. Supporting
+Two capabilities answer the research questions.
+The others are implementation choices; each has
+exactly one check, and we claim nothing beyond it
+(Table 1). Multi-agent intake does not test either re-
+search question—it only produces the dialogue that
+verification acts on—so it is held fixed for every
+comparison and varied once only, to test whether
+the RQ1 gain depends on intake quality.
+4 Proposed Approach
+Figure 1 shows one encounter. Notation: dialogue
+turns D = (d1, . . . , dT ); SOAP features F = {fi},
+each linked to its source; atomic claims C = {cj}
+from the draft note.
+Fixed intake. We reuse Aegle’s design: an or-
+chestrator activates up to three specialists, who
+propose questions in parallel without seeing each
+other, and an aggregator writes the state before ask-
+ing. Intake stops when mandatory fields are filled,
+or three turns before the cap. This point is the
+checkpoint.
+Verify-then-ask (RQ1). The draft is split into
+atomic claims, and each claim is checked against
+evidence from its own section: Subjective claims
+against the top-k retrieved patient turns, Objective
+claims against the encounter’s measurement record
+(vitals and exam values, which a patient cannot
+report). A verifier labels each claim supported,
+contradicted or unsupported, and fixed controller
+rules act: supported → keep; contradicted with the
+correct value in a cited turn → correct from that
+turn and re-verify; an unsupported or missing Sub-
+jective fact about a symptom, medication, allergy,
+duration or mandatory field → ask one targeted
+question; an Objective gap → flag for the doctor;
+anything else → delete. The answer is re-verified,
+and the claim is kept with the new turn as evidence,
+deleted if denied, or marked “patient unsure”. At
+most three questions are asked. Rules, not the LLM,
+choose the action, so every action is reproducible
+and logged with its reason.
+Section-aware verification (RQ2). After the
+freeze, specialists write the Assessment and Plan,
+and each statement must cite the features it rests
+on. Because A/P statements are inferences, the
+verifier does not test entailment; it judges whether
+the cited features, together with a retrieved refer-
+ence passage when one is found, justify the state-
+ment (chain_ok / chain_broken). A broken chain
+is flagged for the doctor rather than deleted, since
+removing a diagnosis is a clinical decision.
+Two readers. The doctor receives the note with
+each statement linked to its evidence, plus the flags.
+After sign-off (simulated in experiments), a patient
+summary is generated from the signed note, exclud-
+ing any item still flagged; each summary sentence
+is verified against the signed note before release.
+Supporting components. Verifier: one model
+for every check, Qwen2.5-3B-Instruct with QLoRA
+(Dettmers et al., 2023) (rank 16), trained on
+∼6k claim–evidence pairs from MTS-Dialog
+(Ben Abacha et al., 2023) and ACI-Bench train
+with six perturbation types; S/O and A/P use differ-
+ent prompts and label sets. Retrieval: BM25 and
+dense embeddings fused by reciprocal rank (Cor-
+mack et al., 2009); k ∈ {1, 3, 5} is tuned on dev for
+evidence recall. Reference passages: MedlinePlus
+topic pages (public domain) for the test complaints,
+chunked by section; these are consumer-level ref-
+erences, not clinical practice guidelines. Tools:
+guards block writes after the freeze, diagnosis or
+treatment wording to the patient before sign-off, fi-
+nalising with an unresolved red flag, and release be-
+fore sign-off. All agents use Qwen2.5-7B-Instruct.
+2
+
+=== PAGE 3 ===
+
+Capability Role Baseline / ablation that isolates it Metric
+Agentic control Core, RQ1 Decides keep, correct, ask, or mark unsure per claim.
+Compared with delete-only, guess-only, extra
+untargeted turns and post-hoc filtering, all from the
+same checkpoint; question-cap sweep
+Withheld-fact recovery, critical-fact
+recall, grounding rate, patient turns
+Reasoning Core, RQ2 Claim decomposition and section-aware checking.
+Compared with uniform entailment using DeBERTa
+and using our own verifier; intermediate verdicts
+scored
+Valid-claim retention, unsupported-
+A/P rejection precision/recall, per-
+step accuracy
+Tool calling Supporting Typed tools and safety guards; blocked attempts are
+logged, so guards-off is measured without an extra
+run
+Argument validity, unsafe-action
+rate, missed red flags
+RAG Supporting Top- k turn retrieval vs. whole dialogue; A/P check
+with vs. without reference passages
+Evidence recall@k, citation preci-
+sion
+Fine-tuning Supporting QLoRA 3B verifier vs. DeBERTa NLI vs. prompted
+7B on planted-error claims
+Macro-F1 per error type, seconds
+per claim
+Multi-agent in-
+take
+Held fixed Single-agent intake, robustness of RQ1 only RQ1 metrics; no separate claim
+Table 1: Core capabilities answer the research questions; each supporting capability has one check; multi-agent
+intake is a fixed substrate.
+Patient
+answers
+Intake (fixed)
+SOAP state,
+turn links
+S/O verification
+atomic claims
+vs. evidence
+Gap?
+Freeze
+then A/P
+synthesis
+A/P verification
+evidence chain
++ reference
+Reader 1: doctor
+cited note,
+flags, sign-off
+Reader 2: patient
+lay summary
+after sign-off
+no
+signed
+yes: one targeted question (RQ1)
+RQ2
+Figure 1: One encounter. Shaded parts are tested. A gap found before the freeze becomes a question to the patient
+(RQ1); after the freeze, A/P statements are checked by their evidence chain (RQ2). Both readers’ outputs come
+from the same verified record.
+5 Evaluation Plan
+Data and known answers. All data are public
+or synthetic; no real patient takes part. E1 (40 en-
+counters + 10 dev): ACI-Bench (Yim et al., 2023)
+test1 (dev: valid). An LLM simulated patient an-
+swers only from a hidden case file of atomic facts,
+checked by two team members. In each case two
+mandatory Subjective facts are withheld: revealed
+only to a direct question. Objective facts form the
+measurement record; eight cases contain a planted
+red flag. E2 (120 notes): drafts from E1 reference
+notes, 90 with one planted error (fabricated symp-
+tom, negation flip, medication or dose, laterality or
+duration, unsupported diagnosis, plan without evi-
+dence; 15 each) and 30 unchanged; the reference
+A/P statements form the valid set.
+Checkpoint branching and baselines. Intake
+runs once per case and seed and is saved at the
+checkpoint. Every RQ1 condition continues from
+that saved state with the same note writer and at
+most three more patient turns, so comparisons are
+paired on identical dialogues. Every RQ2 condition
+receives the same frozen A/P statements and is
+scored on its reject decision (flag or delete), so our
+rule cannot win simply by never deleting. Table 2
+lists all conditions.
+Metrics. RQ1: withheld-fact recovery (withheld
+facts present and supported in the final note);
+atomic and critical fact recall (allergies, medica-
+tions, red-flag symptoms); S/O grounding rate; hal-
+lucination on gaps; patient turns. Diagnostics to
+explain outcomes: gap-detection precision/recall,
+gaps resolved per question, redundant-question
+rate. RQ2: valid-claim retention (valid A/P state-
+ments not rejected) and unsupported-A/P rejec-
+tion precision/recall; per-step verdict accuracy. Pa-
+tient reader: unsupported statements per summary,
+recall of next steps and warning signs, Flesch–
+Kincaid grade. Supporting: verifier macro-F1 per
+error type, evidence recall@k, citation precision,
+3
+
+=== PAGE 4 ===
+
+ID Condition What it isolates Tests
+Baselines: existing approaches (same backbone, budgets, simulated patients)
+B1 Single-agent intake → note, no verification Plain LLM, own intake context
+B2 Aegle-style intake → note, no verification (from the check-
+point)
+Intake alone RQ1
+B3 B2 → uMedSum filter: NLI deletion, coverage-based inser-
+tion, published thresholds
+Main baseline: verify after intake RQ1,
+RQ2
+B4 B2 → one round of self-refine, no tools Unstructured self-critique RQ1
+RQ1 controls: each removes one ingredient of verify-then-ask, from the same checkpoint
+C1 In-loop verification; unsupported claims deleted, gaps left
+empty
+Is asking needed? H1a
+C2 In-loop verification; gaps filled by the LLM without asking Asking vs. guessing H1c
+C3 Same number of extra turns as ours, questions chosen by
+the intake policy
+Targeted vs. untargeted H1b
+C4 Ours with question cap 1, 2, 3, 5 Completeness vs. turns H1
+RQ2 conditions: same frozen A/P statements
+U1 Uniform entailment with DeBERTa NLI (uMedSum thresh-
+olds)
+Published approach H2
+U2 Uniform entailment with our verifier The rule, with the model fixed H2
+U3 Evidence chain without reference passages Contribution of retrieval support
+Supporting checks
+S1–
+S4
+Verifier swap (fine-tuning); whole dialogue instead of top-k
+(RAG); single-agent intake (robustness); summary from
+unverified record (H3)
+One check each support
+Table 2: All compared conditions. RQ1 conditions share the intake checkpoint; RQ2 conditions share the frozen
+A/P statements.
+tool argument validity. Safety: unsafe-action rate
+(advice to the patient before sign-off, release be-
+fore sign-off, write after freeze, finalising with an
+unresolved red flag) and missed red flags. Pri-
+mary metrics come from known answers or rules;
+an LLM judge is used only for fact presence and
+claim support on E1 notes and is validated on 30
+double-annotated notes (Cohen’s κ ≥ 0.6), other-
+wise those metrics become secondary.
+Experiments and statistics. Exp. 1 (the prob-
+lem): on B2 and B3, the share of withheld facts
+missing at the checkpoint and still missing after
+post-hoc repair, and the valid-claim retention of
+U1. Exp. 2 (RQ1): ours vs. B3 and C1–C4 on E1,
+2 seeds. Exp. 3 (RQ2): U1–U3 vs. ours on E2 and
+E1 A/P statements. Exp. 4: supporting and safety
+checks. Seeds are averaged per case; 95% intervals
+come from a paired bootstrap over cases (Berg-
+Kirkpatrick et al., 2012); exact McNemar tests are
+used for per-fact recovery, with Holm correction
+across primary metrics. For each comparison we
+fix in advance the diagnostic that explains the out-
+come either way: for example, if ours does not beat
+C3, gap-detection recall and question yield show
+whether the verifier missed the gaps or the ques-
+tions failed to fill them. A failure analysis assigns
+30 errors to the first stage that went wrong.
+6 Expected Novelty
+1. A named, measured failure of the intake-then-
+verify design: verification that comes too late
+to fix a gap, and entailment as the wrong test for
+clinical inferences, shown with known answers
+rather than rubric scores.
+2. A reusable evaluation protocol: checkpoint
+branching with withheld facts compares any ver-
+ification strategy on identical dialogues.
+3. Evidence that minimal fixes suffice:two small,
+explainable changes, each tested against a con-
+trol that removes only that change.
+7 Compute Plan
+GTX 1080 Ti GPUs (compute capability 6.1)
+are not supported by vLLM’s standard builds, so
+the 7B backbone and the simulated patient run
+through OpenRouter (Qwen2.5-7B-Instruct, listed
+at US$0.10/$0.20 per million input/output tokens);
+ACI-Bench is public, so this is permitted. The clus-
+ter runs verifier training and inference, DeBERTa
+NLI and retrieval. Kaggle and Colab are backups.
+8 Expected Risks and Fallback Plan
+Safety and limitations. No real patients take part.
+The patient-facing agent cannot state a diagnosis or
+treatment before sign-off, red flags trigger imme-
+diate escalation, and every action is logged. Sim-
+4
+
+=== PAGE 5 ===
+
+Item Estimate
+Verifier QLoRA (3B, 4-bit, fp16), 2 runs 8 GPU-h
+Verifier, NLI and retrieval in all runs 12 GPU-h
+Development and debugging 8 GPU-h
+GPU total (1080 Ti) 28 GPU-h
+Backbone, ∼40M tokens (intake reused by all
+branches)
+US$5
+LLM judge and validation US$15
+API total, hard cap US$25–50
+Table 3: Compute budget.
+Risk (likelihood) Fallback
+Verifier misses gaps
+(M)
+Report gap-detection recall; rerun
+with oracle gaps to separate
+detection from asking
+Withheld facts leak to
+general questions (M)
+Audit dev dialogues; score only
+facts still missing at the checkpoint
+Simulated patient in-
+vents facts (M)
+Case-file-only prompt, temperature
+0.1, audit; drop failing cases
+Tuned verifier not bet-
+ter (M)
+Use the best on dev; RQ1 and RQ2
+are unaffected
+Reference passages
+miss topics (H)
+Evidence chain alone (U3) becomes
+the main condition
+Limited annotation
+time (H)
+30 double-labelled notes; primary
+claims rest on known answers
+Table 4: Risks and fallbacks (H/M = high/medium).
+ulated patients are more consistent than real ones,
+withheld facts approximate real omissions, data are
+English role-played encounters, and sign-off is sim-
+ulated. A negative result on either question is still
+informative, and the fixed diagnostics are designed
+to explain it.
+References
+Mohammad Aliannejadi, Hamed Zamani, Fabio
+Crestani, and W. Bruce Croft. 2019. Asking clar-
+ifying questions in open-domain information-seeking
+conversations. In Proceedings of SIGIR 2019, pages
+475–484.
+Asma Ben Abacha, Wen-wai Yim, Yadan Fan, and
+Thomas Lin. 2023. An empirical study of clinical
+note generation from doctor-patient encounters. In
+Proceedings of EACL 2023, pages 2291–2302.
+Taylor Berg-Kirkpatrick, David Burkett, and Dan Klein.
+2012. An empirical investigation of statistical signif-
+icance in NLP. In Proceedings of EMNLP-CoNLL
+2012, pages 995–1005.
+Huangwei Chen, Wu Li, Junhao Jia, Yining Chen, Xi-
+aotao Pang, YaLong Chen, Gonghui Li, Haishuai
+Wang, Jiajun Bu, and Lei Wu. 2026. Beyond the
+individual: Virtualizing multi-disciplinary reasoning
+for clinical intake via collaborative agents. arXiv
+preprint arXiv:2604.08927.
+Gordon V . Cormack, Charles L. A. Clarke, and Stefan
+Buettcher. 2009. Reciprocal rank fusion outperforms
+condorcet and individual rank learning methods. In
+Proceedings of SIGIR 2009, pages 758–759.
+Tim Dettmers, Artidoro Pagnoni, Ari Holtzman, and
+Luke Zettlemoyer. 2023. QLoRA: Efficient finetun-
+ing of quantized LLMs. In Advances in Neural Infor-
+mation Processing Systems.
+Philippe Laban, Tobias Schnabel, Paul N. Bennett, and
+Marti A. Hearst. 2022. SummaC: Re-visiting NLI-
+based models for inconsistency detection in summa-
+rization. Transactions of the ACL, 10:163–177.
+Aman Madaan, Niket Tandon, Prakhar Gupta, Skyler
+Hallinan, Luyu Gao, Sarah Wiegreffe, Uri Alon,
+Nouha Dziri, Shrimai Prabhumoye, Yiming Yang,
+et al. 2023. Self-refine: Iterative refinement with
+self-feedback. In Advances in Neural Information
+Processing Systems.
+Sewon Min, Kalpesh Krishna, Xinxi Lyu, Mike
+Lewis, Wen-tau Yih, Pang Wei Koh, Mohit Iyyer,
+Luke Zettlemoyer, and Hannaneh Hajishirzi. 2023.
+FActScore: Fine-grained atomic evaluation of factual
+precision in long form text generation. In Proceed-
+ings of EMNLP 2023, pages 12076–12100.
+Aishik Nagar, Yutong Liu, Andy T. Liu, Viktor
+Schlegel, Vijay Prakash Dwivedi, Arun-Kumar
+Kaliya-Perumal, Guna Pratheep Kalanchiam, Yili
+Tang, and Robby T. Tan. 2025. uMedSum: A unified
+framework for clinical abstractive summarization. In
+Proceedings of ACL 2025 (Volume 1: Long Papers),
+pages 2653–2672.
+Wen-wai Yim, Yujuan Fu, Asma Ben Abacha, Neal
+Snider, Thomas Lin, and Meliha Yetisgen. 2023.
+ACI-Bench: a novel ambient clinical intelligence
+dataset for benchmarking automatic visit note gener-
+ation. Scientific Data, 10:586.
+5
