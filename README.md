@@ -1,4 +1,4 @@
-# Team Tokenizers — Clinical SOAP Note Generation, Multi-Agent Intake & Verify-and-Ask Pipeline
+# Clinical SOAP Note Generation, Multi-Agent Intake & Verify-and-Ask Pipeline
 
 ## 1. Brief Overview
 
