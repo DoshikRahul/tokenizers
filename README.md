@@ -4,11 +4,6 @@
 
 This repository contains the datasets, baseline implementation, multi-agent clinical consultation simulator, and proposed **Verify-and-Ask** framework for **Team Tokenizers** (*"One Encounter, Two Readers: Verified Clinical Notes for Doctors and Faithful Summaries for Patients"*).
 
-- **Full Technical Report:** See [`PROJECT_REPORT.md`](./PROJECT_REPORT.md) for the complete dataset specifications, system architectures, model hyperparameters, exact prompts, evaluation metrics, experimental results, and future roadmap.
-- **Reference Papers:**
-  - [`Tokenziers_modified.pdf`](./Tokenziers_modified.pdf) — Team Tokenizers project proposal and experimental design.
-  - [`2025.acl-long.134 (1).pdf`](./2025.acl-long.134%20(1).pdf) — *uMedSum: A Unified Framework for Clinical Abstractive Summarization* (Nagar et al., ACL 2025).
-
 ---
 
 ## 2. Repository Structure
