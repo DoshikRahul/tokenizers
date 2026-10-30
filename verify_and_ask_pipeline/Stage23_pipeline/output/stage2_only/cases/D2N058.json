@@ -1,0 +1,155 @@
+{
+  "case_id": "D2N058",
+  "split": "dev",
+  "stage1_so": {
+    "subjective": "* Patient is a 45-year-old male who had a heart attack and received a stent recently.\n* He is concerned about his recovery and wants to ensure he is on the right track with his treatment plan.\n* He reports feeling tired occasionally, but does not attribute it to any specific time of day or activity.\n* He has not been tracking his blood sugar levels regularly, but has not had any major issues with it.\n* He has not been following up with his primary care physician or endocrinologist for diabetes management.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient is a 45-year-old male who had a heart attack and received a stent recently.\n* He is concerned about his recovery and wants to ensure he is on the right track with his treatment plan.\n* He reports feeling tired occasionally, but does not attribute it to any specific time of day or activity.\n* He has not been tracking his blood sugar levels regularly, but has not had any major issues with it.\n* He has not been following up with his primary care physician or endocrinologist for diabetes management.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has a history of heart attack and is currently taking medications as prescribed since his hospital discharge.\n* He reports occasional fatigue, but it does not seem to be worsening or affecting his daily activities.\n* He has not been tracking his blood sugar levels regularly, and his current medication regimen is unknown.",
+    "plan": "* The patient will try to recall or look up the names, dosages, and frequency of his medications for diabetes, hypertension, and cardiac conditions.\n* He will be encouraged to follow up with his primary care physician or endocrinologist for diabetes management.\n* Further evaluation and management will be discussed once the patient's medication regimen is known."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient is a 45-year-old male who had a heart attack and received a stent recently.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0003,
+        "contradiction": 0.0035
+      },
+      "support_evidence": "Patient: I'm 45 years old, and I'm a male. I'm here for a follow-up after having a heart attack and getting a stent recently. I had one before in 2018, and I've been managing my diabetes and high blood pressure. I just want to make sure I'm on the right track with my recovery.",
+      "contradiction_evidence": "Patient: I'm on medication for my diabetes and high blood pressure, and I've been taking them as prescribed since I left the hospital. I haven't had any big changes in how I feel, but I do feel a little tired sometimes. My blood sugar has been okay, I think.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient is a 45-year-old male who had a heart attack and received a stent recently.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 45-year-old male who had a heart attack and received a stent recently.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He is concerned about his recovery and wants to ensure he is on the right track with his treatment plan.",
+      "scores": {
+        "entailment": 0.9989,
+        "neutral": 0.0009,
+        "contradiction": 0.0012
+      },
+      "support_evidence": "Patient: I'm 45 years old, and I'm a male. I'm here for a follow-up after having a heart attack and getting a stent recently. I had one before in 2018, and I've been managing my diabetes and high blood pressure. I just want to make sure I'm on the right track with my recovery.",
+      "contradiction_evidence": "Doctor: Could you please try to recall or check the names of your diabetes and hypertension medications? It's okay if you're not sure about the dosages or frequency, but knowing the names will help us ensure you're on the correct treatment. Also, could you let us know if you've had any recent blood sugar readings, even if they're not tracked regularly?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He is concerned about his recovery and wants to ensure he is on the right track with his treatment plan.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "He is concerned about his recovery and wants to ensure he is on the right track with his treatment plan.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He reports feeling tired occasionally, but does not attribute it to any specific time of day or activity.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0003,
+        "contradiction": 0.0044
+      },
+      "support_evidence": "Patient: I don't know the exact names of my medications off the top of my head, but I've been taking them as the doctor prescribed since I left the hospital. As for feeling tired, it's just occasional, and I don't really notice it being tied to any specific time of day or activity. I just feel it now and then, but I think it's normal after everything.",
+      "contradiction_evidence": "Doctor: Could you please provide the specific names, dosages, and frequency of your diabetes and hypertension medications? Additionally, could you share your most recent blood sugar readings and any patterns you've noticed, such as fluctuations or consistency?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He reports feeling tired occasionally, but does not attribute it to any specific time of day or activity.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "He reports feeling tired occasionally, but does not attribute it to any specific time of day or activity.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has not been tracking his blood sugar levels regularly, but has not had any major issues with it.",
+      "scores": {
+        "entailment": 0.9989,
+        "neutral": 0.0006,
+        "contradiction": 0.0062
+      },
+      "support_evidence": "Patient: I don't know the specific names or dosages of my medications off the top of my head, but I've been taking them as prescribed since I got out of the hospital. As for my blood sugar, I haven't been tracking it closely, but I haven't had any major issues with it. I just feel a little tired sometimes, but I think that's normal after everything.",
+      "contradiction_evidence": "Patient: I'm on medication for my diabetes and high blood pressure, and I've been taking them as prescribed since I left the hospital. I haven't had any big changes in how I feel, but I do feel a little tired sometimes. My blood sugar has been okay, I think.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has not been tracking his blood sugar levels regularly, but has not had any major issues with it.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "He has not been tracking his blood sugar levels regularly, but has not had any major issues with it.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has not been following up with his primary care physician or endocrinologist for diabetes management.",
+      "scores": {
+        "entailment": 0.9939,
+        "neutral": 0.0049,
+        "contradiction": 0.1325
+      },
+      "support_evidence": "Patient: I don't know the exact names or dosages of my medications off the top of my head, but I've been taking them as the doctor prescribed since I left the hospital. I just haven't been checking my blood sugar regularly, and I haven't had any big problems with it. I haven't been following up with my primary care physician or endocrinologist specifically for diabetes management.",
+      "contradiction_evidence": "Patient: I'm 45 years old, and I'm a male. I'm here for a follow-up after having a heart attack and getting a stent recently. I had one before in 2018, and I've been managing my diabetes and high blood pressure. I just want to make sure I'm on the right track with my recovery.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has not been following up with his primary care physician or endocrinologist for diabetes management.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "He has not been following up with his primary care physician or endocrinologist for diabetes management.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 5,
+      "exempt": 1
+    },
+    "num_claims": 5,
+    "num_kept": 5,
+    "claim_retention_rate": 1.0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": []
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 2.5,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 45 years old, and I'm a male. I'm here for a follow-up after having a heart attack and getting a stent recently. I had one before in 2018, and I've been managing my diabetes and high blood pressure. I just want to make sure I'm on the right track with my recovery.\nDoctor: Could you please provide your age, gender, and the reason for your visit today?\nPatient: I'm 45 years old, male, and I'm here for a follow-up after having a heart attack and getting a stent recently. I had one before in 2018, and I've been managing my diabetes and high blood pressure. I just want to make sure I'm on the right track with my recovery.\nDoctor: Could you please provide more details about your current medications for diabetes and high blood pressure, as well as any recent changes in your symptoms or blood sugar levels?\nPatient: I'm on medication for my diabetes and high blood pressure, and I've been taking them as prescribed since I left the hospital. I haven't had any big changes in how I feel, but I do feel a little tired sometimes. My blood sugar has been okay, I think.\nDoctor: Could you please provide the specific names, dosages, and frequency of your diabetes and hypertension medications? Additionally, could you share your most recent blood sugar readings and any patterns you've noticed?\nPatient: I'm on medication for my diabetes and high blood pressure, and I've been taking them as prescribed since I left the hospital. I haven't had any big changes in how I feel, but I do feel a little tired sometimes. My blood sugar has been okay, I think.\nDoctor: Could you please provide the specific names, dosages, and frequency of your diabetes and hypertension medications? Additionally, could you share your most recent blood sugar readings and any patterns you've noticed, such as fluctuations or consistency?\nPatient: I don't know the specific names or dosages of my medications off the top of my head, but I've been taking them as prescribed since I got out of the hospital. As for my blood sugar, I haven't been tracking it closely, but I haven't had any major issues with it. I just feel a little tired sometimes, but I think that's normal after everything.\nDoctor: Could you please try to recall or check the names of your diabetes and hypertension medications? It's okay if you're not sure about the dosages or frequency, but knowing the names will help us ensure you're on the correct treatment. Also, could you let us know if you've had any recent blood sugar readings, even if they're not tracked regularly?\nPatient: I don't know the exact names of my medications off the top of my head, but I've been taking them as the doctor prescribed since I left the hospital. As for my blood sugar, I haven't been checking it regularly, but I haven't had any big problems with it. I just feel a little tired sometimes, but I think that's normal after everything.\nDoctor: Could you please try to recall or check the names of your diabetes and hypertension medications, along with how often you take them? Also, could you share any recent blood sugar readings you might have, even if they are not frequent?\nPatient: I don't know the exact names of my medications off the top of my head, but I've been taking them as the doctor prescribed since I left the hospital. As for my blood sugar, I haven't been checking it regularly, but I haven't had any big problems with it. I just feel a little tired sometimes, but I think that's normal after everything.\nDoctor: Could you please try to recall or write down the names of the medications you are currently taking for diabetes and hypertension, along with how often you take them? This will help us better understand your treatment plan and ensure it is properly managed.\nPatient: I don't know the exact names of my medications off the top of my head, but I've been taking them as the doctor prescribed since I left the hospital. I haven't been checking my blood sugar regularly, but I haven't had any big problems with it. I just feel a little tired sometimes, but I think that's normal after everything.\nDoctor: Could you please try to recall or list the names of your medications, including any diabetes medications, antihypertensives, or cardiac medications you are currently taking? Additionally, could you describe when you typically feel fatigued and whether it is related to any specific activities or times of day?\nPatient: I don't know the exact names of my medications off the top of my head, but I've been taking them as the doctor prescribed since I left the hospital. As for feeling tired, it's just occasional, and I don't really notice it being tied to any specific time of day or activity. I just feel it now and then, but I think it's normal after everything.\nDoctor: Could you please provide the names and dosages of the medications you are currently taking for your diabetes, hypertension, and cardiac condition?\nPatient: I don't know the exact names or dosages of my medications off the top of my head, but I've been taking them as the doctor prescribed since I left the hospital. I just feel a little tired sometimes, but I think that's normal after everything.\nDoctor: Could you please provide the names, dosages, and frequency of your medications for diabetes, hypertension, and cardiac conditions? Additionally, could you clarify if you have had any recent blood sugar readings or patterns, and if the fatigue is worsening or affecting your daily activities?\nPatient: I don't know the exact names or dosages of my medications off the top of my head, but I've been taking them as the doctor prescribed since I left the hospital. As for my blood sugar, I haven't been checking it regularly, and I haven't had any big problems with it. The fatigue is just occasional and doesn't seem to be getting worse or really affecting my daily activities.\nDoctor: Could you please try to recall or check the names, dosages, and frequency of your medications for diabetes, hypertension, and cardiac conditions? Additionally, could you clarify if you have been following up with your primary care physician or endocrinologist for diabetes management?\nPatient: I don't know the exact names or dosages of my medications off the top of my head, but I've been taking them as the doctor prescribed since I left the hospital. As for my diabetes management, I haven't been checking my blood sugar regularly, and I haven't had any big problems with it. I just haven't been following up with my primary care physician or endocrinologist specifically for diabetes management.\nDoctor: Could you please try to recall or provide any details you might have about the names, dosages, and how often you take your medications for diabetes, hypertension, and cardiac conditions? This will help us ensure you're on the right treatment plan.\nPatient: I don't know the exact names or dosages of my medications off the top of my head, but I've been taking them as the doctor prescribed since I left the hospital. I just haven't been checking my blood sugar regularly, and I haven't had any big problems with it. I haven't been following up with my primary care physician or endocrinologist specifically for diabetes management.\nDoctor: Could you please try to recall or look up the names, dosages, and frequency of your medications for diabetes, hypertension, and cardiac conditions? Additionally, could you share any recent changes in your symptoms, such as increased fatigue, chest discomfort, or shortness of breath?\nPatient: I don't know the exact names or dosages of my medications off the top of my head, but I've been taking them as the doctor prescribed since I left the hospital. I haven't had any recent changes in my symptoms—no increased fatigue, chest discomfort, or shortness of breath. I feel pretty much the same as before.\nDoctor: Could you please provide the names, dosages, and frequency of your medications for diabetes, hypertension, and cardiac conditions? Additionally, have you had any recent blood sugar readings, and if so, what were they?\nPatient: I don't know the exact names or dosages of my medications off the top of my head, but I've been taking them as the doctor prescribed since I left the hospital. As for my blood sugar, I haven't been checking it regularly, and I don't have any recent readings to share.",
+  "reference_so": {
+    "subjective": "Basic information: 45-year-old male presenting for follow-up after recent heart attack and stent placement; history of prior myocardial infarction in 2018; managing diabetes and hypertension.\n\nHistory of present illness: Recent heart attack with stent placement; seeking reassurance about recovery progress. Reports occasional fatigue. Blood sugar levels described as \"okay\" but no specific readings or patterns provided. Fatigue is occasional and not clearly tied to specific time of day or activity.\n\nPast history: Prior myocardial infarction in 2018; diabetes; hypertension.",
+    "objective": "Physical examination: Physical examination: Vital signs not yet provided. No specific findings reported.\n\nInvestigations: Auxiliary examination: No recent laboratory or imaging results provided."
+  }
+}

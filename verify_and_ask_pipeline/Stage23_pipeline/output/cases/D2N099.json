@@ -1,0 +1,435 @@
+{
+  "case_id": "D2N099",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient is a baby, born in 2020, with symptoms of runny nose, cough, and low-grade fever for 2 days\n* Patient has been pulling on ears and rubbing nose frequently\n* Patient's older sister was sick, and patient was exposed to her and their nephew with a sinus infection\n* Patient's appetite has decreased, and they have trouble sleeping\n* Patient is irritable and has not had difficulty breathing, vomiting, or diarrhea",
+    "objective": "* Temperature: 100.3°F (rectal)\n* No objective clinical measurements, examination findings, or investigation results were documented in the conversation"
+  },
+  "stage2_so": {
+    "subjective": "* Patient is a baby, born in 2020, with symptoms of runny nose, cough, and low-grade fever for 2 days\n* Patient has been pulling on ears and rubbing nose frequently\n* Patient's older sister was sick, and patient was exposed to her and their nephew with a sinus infection\n* Patient's appetite has decreased, and they have trouble sleeping\n* Patient is irritable and has not had difficulty breathing, vomiting, or diarrhea",
+    "objective": "* Temperature: 100.3°F (rectal)\n* No objective clinical measurements, examination findings, or investigation results were documented in the conversation"
+  },
+  "stage3_so": {
+    "subjective": "* The patient reports that symptoms started around supper time last night and have been present since then.\n* Patient is a baby, born in 2020, with symptoms of runny nose, cough, and low-grade fever for 2 days\n* Patient has been pulling on ears and rubbing nose frequently\n* Patient's older sister was sick, and patient was exposed to her and their nephew with a sinus infection\n* Patient's appetite has decreased, and they have trouble sleeping\n* Patient is irritable and has not had difficulty breathing, vomiting, or diarrhea\n* The patient denies having had any recent vaccinations.\n* The patient reports his name is Randy Gutierrez and he is a baby.",
+    "objective": "* Temperature: 100.3°F (rectal)\n* The child did not have any other issues during the physical examination."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient is experiencing symptoms consistent with a viral upper respiratory tract infection, possibly related to exposure to a sick family member.",
+    "plan": "* No explicit management or follow-up plan was documented in the conversation."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient is a baby, born in 2020, with symptoms of runny nose, cough, and low-grade fever for 2 days",
+      "scores": {
+        "entailment": 0.9477,
+        "neutral": 0.0071,
+        "contradiction": 0.9813
+      },
+      "support_evidence": "Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her.",
+      "contradiction_evidence": "Doctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient is a baby, born in 2020, with symptoms of runny nose, cough, and low-grade fever for 2 days",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a baby, born in 2020, with symptoms of runny nose, cough, and low-grade fever for 2 days",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient has been pulling on ears and rubbing nose frequently",
+      "scores": {
+        "entailment": 0.998,
+        "neutral": 0.0004,
+        "contradiction": 0.029
+      },
+      "support_evidence": "Patient: My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus.",
+      "contradiction_evidence": "Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient has been pulling on ears and rubbing nose frequently",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "Patient has been pulling on ears and rubbing nose frequently",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient's older sister was sick, and patient was exposed to her and their nephew with a sinus infection",
+      "scores": {
+        "entailment": 0.9983,
+        "neutral": 0.0004,
+        "contradiction": 0.0033
+      },
+      "support_evidence": "Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations.",
+      "contradiction_evidence": "Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient's older sister was sick, and patient was exposed to her and their nephew with a sinus infection",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Patient's older sister was sick, and patient was exposed to her and their nephew with a sinus infection",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient's appetite has decreased, and they have trouble sleeping",
+      "scores": {
+        "entailment": 0.9973,
+        "neutral": 0.0021,
+        "contradiction": 0.0269
+      },
+      "support_evidence": "Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears?",
+      "contradiction_evidence": "Patient: Yes, he has been more irritable than usual and seems to have trouble sleeping. He’s not his normal self, but I haven’t noticed any changes in how he interacts with others or his ability to concentrate.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient's appetite has decreased, and they have trouble sleeping",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Patient's appetite has decreased, and they have trouble sleeping",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient is irritable and has not had difficulty breathing, vomiting, or diarrhea",
+      "scores": {
+        "entailment": 0.9986,
+        "neutral": 0.0004,
+        "contradiction": 0.0369
+      },
+      "support_evidence": "Patient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been mostly irritable and having trouble sleeping, but I haven't had any of those other issues.",
+      "contradiction_evidence": "Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient is irritable and has not had difficulty breathing, vomiting, or diarrhea",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Patient is irritable and has not had difficulty breathing, vomiting, or diarrhea",
+      "level": "sentence"
+    },
+    {
+      "claim": "Temperature: 100.3°F (rectal)",
+      "scores": {
+        "entailment": 0.9901,
+        "neutral": 0.0056,
+        "contradiction": 0.0902
+      },
+      "support_evidence": "Patient: I don't have the exact numbers for his vital signs, but his temperature was 100.3 when I checked it rectally. The doctor examined him and said his ears looked okay, and he was breathing well. He didn't seem to have any other issues during the exam.",
+      "contradiction_evidence": "Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Temperature: 100.3°F (rectal)",
+      "reason": "Entailed by the conversation.",
+      "section": "objective",
+      "line": 0,
+      "sentence": "Temperature: 100.3°F (rectal)",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 1,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 6,
+      "exempt": 1
+    },
+    "num_claims": 6,
+    "num_kept": 6,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient denies having had any recent vaccinations.",
+      "evidence": "Doctor: Has the patient had any recent vaccinations, and if so, which ones?",
+      "section": "subjective",
+      "candidate": "I don't think we've had any recent ones."
+    },
+    {
+      "statement": "The patient reports his name is Randy Gutierrez and he is a baby.",
+      "evidence": "Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her.",
+      "section": "subjective",
+      "candidate": "My name is Randy Gutierrez, and I'm a baby."
+    },
+    {
+      "statement": "The child did not have any other issues during the physical examination.",
+      "evidence": "Patient: I don't have the exact numbers for his vital signs, but his temperature was 100.3 when I checked it rectally. The doctor examined him and said his ears looked okay, and he was breathing well. He didn't seem to have any other issues during the exam.",
+      "section": "objective",
+      "candidate": "He didn't seem to have any other issues during the exam."
+    },
+    {
+      "statement": "The patient reports that symptoms started around supper time last night and have been present since then.",
+      "evidence": "Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations.",
+      "section": "subjective",
+      "candidate": "My symptoms started around supper time last night, and I've been feeling sick since then."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I don't think we've had any recent ones.",
+      "speaker": "Patient",
+      "coverage": 0.1106,
+      "nearest_so_sentence": "Patient is a baby, born in 2020, with symptoms of runny nose, cough, and low-grade fever for 2 days",
+      "statement": "The patient denies having had any recent vaccinations.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Doctor: Has the patient had any recent vaccinations, and if so, which ones?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9986,
+        "contradiction": 0.0109
+      },
+      "duplicate_entailment": 0.0005,
+      "duplicate_similarity": 0.4292,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 5,
+        "perplexity": 29.5,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "My name is Randy Gutierrez, and I'm a baby.",
+      "speaker": "Patient",
+      "coverage": 0.1278,
+      "nearest_so_sentence": "Patient is a baby, born in 2020, with symptoms of runny nose, cough, and low-grade fever for 2 days",
+      "statement": "The patient reports his name is Randy Gutierrez and he is a baby.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9886,
+        "contradiction": 0.0196
+      },
+      "duplicate_entailment": 0.0003,
+      "duplicate_similarity": 0.4821,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 6,
+        "perplexity": 29.96,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I'm a baby, so I don't know my exact age, but I was born in 2020.",
+      "speaker": "Patient",
+      "coverage": 0.2263,
+      "nearest_so_sentence": "Patient is a baby, born in 2020, with symptoms of runny nose, cough, and low-grade fever for 2 days",
+      "statement": "The patient reports being born in 2020 and unable to confirm exact age due to being a baby.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.9807
+      }
+    },
+    {
+      "candidate": "He’s not his normal self, but I haven’t noticed any changes in how he interacts with others or his ability to concentrate.",
+      "speaker": "Patient",
+      "coverage": 0.236,
+      "nearest_so_sentence": "Patient is irritable and has not had difficulty breathing, vomiting, or diarrhea",
+      "statement": "The patient reports that he is not his normal self, but has not noticed any changes in his ability to interact with others or concentrate.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: Yes, he has been more irritable than usual and seems to have trouble sleeping. He’s not his normal self, but I haven’t noticed any changes in how he interacts with others or his ability to concentrate.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9958,
+        "contradiction": 0.338
+      }
+    },
+    {
+      "candidate": "He didn't seem to have any other issues during the exam.",
+      "speaker": "Patient",
+      "coverage": 0.2734,
+      "nearest_so_sentence": "Patient is irritable and has not had difficulty breathing, vomiting, or diarrhea",
+      "statement": "The child did not have any other issues during the physical examination.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't have the exact numbers for his vital signs, but his temperature was 100.3 when I checked it rectally. The doctor examined him and said his ears looked okay, and he was breathing well. He didn't seem to have any other issues during the exam.",
+      "scores_vs_dialogue": {
+        "entailment": 0.8024,
+        "contradiction": 0.0252
+      },
+      "duplicate_entailment": 0.0039,
+      "duplicate_similarity": 0.3221,
+      "insertion": {
+        "section": "objective",
+        "line_index": 1,
+        "perplexity": 81.29,
+        "removed_placeholder": [
+          "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation"
+        ]
+      }
+    },
+    {
+      "candidate": "I don't know about any vaccinations.",
+      "speaker": "Patient",
+      "coverage": 0.2797,
+      "nearest_so_sentence": "Patient is a baby, born in 2020, with symptoms of runny nose, cough, and low-grade fever for 2 days",
+      "statement": "The patient reports not knowing about any recent vaccinations.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0515
+      },
+      "duplicate_entailment": 0.0015,
+      "duplicate_similarity": 0.3931
+    },
+    {
+      "candidate": "I don't know about any vaccinations.",
+      "speaker": "Patient",
+      "coverage": 0.2797,
+      "nearest_so_sentence": "Patient is a baby, born in 2020, with symptoms of runny nose, cough, and low-grade fever for 2 days",
+      "statement": "The patient reports not knowing about any recent vaccinations.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0515
+      },
+      "duplicate_entailment": 0.0015,
+      "duplicate_similarity": 0.3931
+    },
+    {
+      "candidate": "I'm here because I've been feeling sick for a couple of days now.",
+      "speaker": "Patient",
+      "coverage": 0.2934,
+      "nearest_so_sentence": "Patient is irritable and has not had difficulty breathing, vomiting, or diarrhea",
+      "statement": "The patient reports being sick for a couple of days.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.0971
+      },
+      "duplicate_entailment": 0.9983,
+      "duplicate_similarity": 0.7189
+    },
+    {
+      "candidate": "My symptoms started around supper time last night, and I've been feeling sick since then.",
+      "speaker": "Patient",
+      "coverage": 0.3667,
+      "nearest_so_sentence": "Patient is a baby, born in 2020, with symptoms of runny nose, cough, and low-grade fever for 2 days",
+      "statement": "The patient reports that symptoms started around supper time last night and have been present since then.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9985,
+        "contradiction": 0.0043
+      },
+      "duplicate_entailment": 0.0022,
+      "duplicate_similarity": 0.4778,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 28.42,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I've been mostly irritable and having trouble sleeping, but I haven't had any of those other issues.",
+      "speaker": "Patient",
+      "coverage": 0.3786,
+      "nearest_so_sentence": "Patient's appetite has decreased, and they have trouble sleeping",
+      "statement": "The patient reports experiencing irritability and difficulty sleeping, but denies experiencing difficulty breathing, vomiting, or diarrhea.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been mostly irritable and having trouble sleeping, but I haven't had any of those other issues.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.4603
+      }
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 38,
+    "num_covered": 28,
+    "num_flagged": 10,
+    "num_not_checked_cap": 0,
+    "num_added": 4
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "I'm a baby, so I don't know my exact age, but I was born in 2020.",
+        "statement": "The patient reports being born in 2020 and unable to confirm exact age due to being a baby.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.9807
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "He’s not his normal self, but I haven’t noticed any changes in how he interacts with others or his ability to concentrate.",
+        "statement": "The patient reports that he is not his normal self, but has not noticed any changes in his ability to interact with others or concentrate.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9958,
+          "contradiction": 0.338
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I've been mostly irritable and having trouble sleeping, but I haven't had any of those other issues.",
+        "statement": "The patient reports experiencing irritability and difficulty sleeping, but denies experiencing difficulty breathing, vomiting, or diarrhea.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9992,
+          "contradiction": 0.4603
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 22.4,
+  "ap_unchanged": true,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her.\nDoctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister?\nPatient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations.\nDoctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears?\nPatient: My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus.\nDoctor: Has the patient had any recent vaccinations, and if so, which ones?\nPatient: I don't know about any vaccinations. I don't think we've had any recent ones.\nDoctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms?\nPatient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been mostly irritable and having trouble sleeping, but I haven't had any of those other issues.\nDoctor: Has the patient had any recent ear infections or a history of recurrent otitis media?\nPatient: No, I don't think he's had any recent ear infections or a history of recurrent ear infections. He's been pulling on his ears, but I don't know if that means he has an infection right now.\nDoctor: Has the patient experienced any ear pain or changes in hearing during this illness?\nPatient: No, I don't think he's had any ear pain or changes in hearing during this illness. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing.\nDoctor: Has the patient had any recent ear infections or a history of recurrent ear infections?\nPatient: No, I don't think he's had any recent ear infections or a history of recurrent ear infections. He's been pulling on his ears, but I don't know if that means he has an infection right now.\nDoctor: Has the patient had any changes in behavior, such as irritability, difficulty concentrating, or decreased interaction with others during this illness?\nPatient: Yes, he has been more irritable than usual and seems to have trouble sleeping. He’s not his normal self, but I haven’t noticed any changes in how he interacts with others or his ability to concentrate.\nDoctor: Has the patient had any recent changes in hearing or ear pain that could suggest an ear infection?\nPatient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing.\nDoctor: Has the patient had any recent changes in hearing or ear pain that would suggest an ear infection?\nPatient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing.\nDoctor: Could you please provide details about the child's physical examination findings, including vital signs such as temperature, heart rate, respiratory rate, and oxygen saturation, as well as any findings from a head-to-toe examination?\nPatient: I don't have the exact numbers for his vital signs, but his temperature was 100.3 when I checked it rectally. The doctor examined him and said his ears looked okay, and he was breathing well. He didn't seem to have any other issues during the exam.\nDoctor: Has the child had any recent changes in hearing or ear pain that would suggest an ear infection?\nPatient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing.\nDoctor: Has the child had any recent changes in hearing or ear pain that would suggest an ear infection?\nPatient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing.\nDoctor: Has the child experienced any difficulty breathing, such as rapid breathing, wheezing, or nasal congestion that makes it hard for him to breathe?\nPatient: Yes, he has had nasal congestion, and it's been making it a little harder for him to breathe through his nose, but he's been able to breathe okay overall. He hasn't had any wheezing or rapid breathing that I noticed.",
+  "reference_so": {
+    "subjective": "Basic information: Patient name: Randy Gutierrez; Age: 3 years old; Gender: Male; Chief complaint: Feeling sick for a couple of days with runny nose, cough, low-grade fever, pulling on ears, and rubbing nose; Possible source of illness: Older sister and nephew.\n\nHistory of present illness: Onset: Around supper time last night; Symptoms: Runny nose, cough, low-grade fever, pulling on ears, and rubbing nose; Course: Ongoing; Prior diagnosis and treatment: Not specified; Response: Not specified. No prior ear infections or history of recurrent ear infections. Behavior: More irritable than usual and trouble sleeping. Not his normal self, but no changes in interaction or concentration noted. No recent changes in hearing or ear pain reported. Nasal congestion is present and has been making it a little harder for him to breathe through his nose, but he has been able to breathe okay overall. No wheezing or rapid breathing noted.\n\nPast history: No prior ear infections or history of recurrent ear infections.",
+    "objective": "Physical examination: Temperature: 100.3°F; Nasal discharge: Clear mucus; Appetite: Reduced; Sleep patterns: Troubled sleep; Behavior: Irritable and not his normal self.\n\nInvestigations: Temperature: 100.3°F; Nasal discharge: Clear mucus; Appetite: Reduced; Sleep patterns: Troubled sleep; Behavior: Irritable and not his normal self."
+  }
+}

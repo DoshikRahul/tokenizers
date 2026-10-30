@@ -1,0 +1,620 @@
+{
+  "case_id": "D2N023",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient is a 59-year-old male with a history of hypogonadism and currently on testosterone replacement therapy (1 mL every 10 days) for several months.\n* Patient reports noticing changes in breast tissue size, specifically an increase in size, over the past few months.\n* Patient has not experienced any pain or tenderness in the breast tissue.\n* Patient is concerned that the changes in breast tissue size may be related to his hormone levels or testosterone therapy.\n* Patient has not noticed any nipple discharge, skin changes, or weight gain.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient is a 59-year-old male with a history of hypogonadism and currently on testosterone replacement therapy (1 mL every 10 days) for several months.\n* The patient reports noticing changes in breast tissue size. The patient reports noticing an increase in breast tissue size. The patient reports changes in breast tissue size over the past few months.\n* Patient has not experienced any pain or tenderness in the breast tissue.\n* Patient is concerned that the changes in breast tissue size may be related to his hormone levels or testosterone therapy.\n* Patient has not noticed any nipple discharge, skin changes, or weight gain.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* The patient reports no changes to the dosage or formulation of testosterone replacement therapy.\n* The patient reports noticing changes in breast tissue size, but is unsure if they are unilateral or bilateral.\n* Patient is a 59-year-old male with a history of hypogonadism and currently on testosterone replacement therapy (1 mL every 10 days) for several months.\n* The patient reports noticing changes in breast tissue size. The patient reports noticing an increase in breast tissue size. The patient reports changes in breast tissue size over the past few months.\n* Patient has not experienced any pain or tenderness in the breast tissue.\n* The patient requests further discussion.\n* Patient is concerned that the changes in breast tissue size may be related to his hormone levels or testosterone therapy.\n* Patient has not noticed any nipple discharge, skin changes, or weight gain.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient is experiencing gynecomastia, which is a concern related to his testosterone replacement therapy.\n* The patient's symptoms are subjective and have not been objectively confirmed through physical examination or investigation.",
+    "plan": "* The patient will need to have a physical examination to assess the breast tissue size, consistency, and tenderness.\n* The patient will need to discuss the possibility of adjusting his testosterone replacement therapy with his doctor.\n* The patient will need to be monitored for any changes in his symptoms or breast tissue size."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient is a 59-year-old male with a history of hypogonadism and currently on testosterone replacement therapy (1 mL every 10 days) for several months.",
+      "scores": {
+        "entailment": 0.966,
+        "neutral": 0.0314,
+        "contradiction": 0.0086
+      },
+      "support_evidence": "Patient: I've been on testosterone replacement therapy for a while now, and I've been taking 1 milliliter every 10 days. I haven't had any changes to the dosage or formulation, just sticking with what we've been using.",
+      "contradiction_evidence": "Patient: I first noticed the changes in my breast tissue size a few months back, maybe around the same time I started noticing improvements in my energy and sleep. I haven't had any nipple discharge or skin changes, and my weight has stayed pretty stable. I just want to make sure it's not something to be concerned about with the therapy.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient is a 59-year-old male with a history of hypogonadism and currently on testosterone replacement therapy (1 mL every 10 days) for several months.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 59-year-old male with a history of hypogonadism and currently on testosterone replacement therapy (1 mL every 10 days) for several months.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient reports noticing changes in breast tissue size.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.0003
+      },
+      "support_evidence": "Patient: I haven't had a physical exam for the breast tissue yet, but I've noticed some changes in size. I'm concerned it might be related to my hormone levels or the testosterone therapy. I was hoping we could discuss it further.",
+      "contradiction_evidence": "Patient: I first noticed the changes in my breast tissue size a few months back, maybe around the same time I started noticing improvements in my energy and sleep. I haven't had any nipple discharge or skin changes, and my weight has stayed pretty stable. I just want to make sure it's not something to be concerned about with the therapy.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient reports noticing changes in breast tissue size.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "Patient reports noticing changes in breast tissue size, specifically an increase in size, over the past few months."
+    },
+    {
+      "claim": "The patient reports noticing an increase in breast tissue size.",
+      "scores": {
+        "entailment": 0.527,
+        "neutral": 0.465,
+        "contradiction": 0.008
+      },
+      "support_evidence": "Patient: I haven't noticed any pain or tenderness, but I have seen some changes in the size of the breast tissue. It's been a while since I started the testosterone therapy, and I'm just now really paying attention to it. I wanted to bring it up because I've heard it can be related to hormone levels.",
+      "contradiction_evidence": "Patient: I haven't noticed any pain or tenderness, but I have seen some changes in the size of the breast tissue. It's been a while since I started the testosterone therapy, and I'm just now really paying attention to it. I wanted to bring it up because I've heard it can be related to hormone levels.",
+      "corrected_text": null,
+      "flagged": true,
+      "decision": "uncertain",
+      "keep": true,
+      "output": "The patient reports noticing an increase in breast tissue size.",
+      "reason": "Partially supported; kept and flagged for review (neutral is not proof of falsehood).",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "Patient reports noticing changes in breast tissue size, specifically an increase in size, over the past few months."
+    },
+    {
+      "claim": "The patient reports changes in breast tissue size over the past few months.",
+      "scores": {
+        "entailment": 0.998,
+        "neutral": 0.0012,
+        "contradiction": 0.0027
+      },
+      "support_evidence": "Patient: I first noticed the changes in my breast tissue size a few months back, maybe around the same time I started noticing improvements in my energy and sleep. I haven't had any nipple discharge or skin changes, and my weight has stayed pretty stable. I just want to make sure it's not something to be concerned about with the therapy.",
+      "contradiction_evidence": "Patient: I haven't noticed any pain or tenderness, but I have seen some changes in the size of the breast tissue. It's been a while since I started the testosterone therapy, and I'm just now really paying attention to it. I wanted to bring it up because I've heard it can be related to hormone levels.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient reports changes in breast tissue size over the past few months.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "Patient reports noticing changes in breast tissue size, specifically an increase in size, over the past few months."
+    },
+    {
+      "claim": "The patient reports an increase in breast tissue size over the past few months.",
+      "scores": {
+        "entailment": 0.0044,
+        "neutral": 0.9945,
+        "contradiction": 0.0024
+      },
+      "support_evidence": "Patient: I haven't noticed any pain or tenderness, but I have seen some changes in the size of the breast tissue. It's been a while since I started the testosterone therapy, and I'm just now really paying attention to it. I wanted to bring it up because I've heard it can be related to hormone levels.",
+      "contradiction_evidence": "Patient: I first noticed the changes in my breast tissue size a few months back, maybe around the same time I started noticing improvements in my energy and sleep. I haven't had any nipple discharge or skin changes, and my weight has stayed pretty stable. I just want to make sure it's not something to be concerned about with the therapy.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "removed_unsupported",
+      "keep": false,
+      "output": "",
+      "reason": "No supporting evidence in the conversation (not asserted to be false).",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "Patient reports noticing changes in breast tissue size, specifically an increase in size, over the past few months."
+    },
+    {
+      "claim": "Patient has not experienced any pain or tenderness in the breast tissue.",
+      "scores": {
+        "entailment": 0.9986,
+        "neutral": 0.0003,
+        "contradiction": 0.4374
+      },
+      "support_evidence": "Patient: I haven't noticed any pain or tenderness, but I have seen some changes in the size of the breast tissue. It's been a while since I started the testosterone therapy, and I'm just now really paying attention to it. I wanted to bring it up because I've heard it can be related to hormone levels.",
+      "contradiction_evidence": "Doctor: Could you please describe the changes in size you've noticed in your breast tissue? Are there any specific areas where you feel the changes more prominently? Also, have you experienced any tenderness or discomfort in the area?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient has not experienced any pain or tenderness in the breast tissue.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Patient has not experienced any pain or tenderness in the breast tissue.",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient is concerned that the changes in breast tissue size may be related to his hormone levels or testosterone therapy.",
+      "scores": {
+        "entailment": 0.9989,
+        "neutral": 0.0008,
+        "contradiction": 0.1446
+      },
+      "support_evidence": "Patient: I haven't noticed any pain or tenderness, but I have seen some changes in the size of the breast tissue. It's been a while since I started the testosterone therapy, and I'm just now really paying attention to it. I wanted to bring it up because I've heard it can be related to hormone levels.",
+      "contradiction_evidence": "Patient: I haven't had a physical exam for the breast tissue yet, but I wanted to bring it up because I've noticed some changes in size. I'm concerned it might be related to my hormone levels or the testosterone therapy. I was hoping we could discuss it further.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient is concerned that the changes in breast tissue size may be related to his hormone levels or testosterone therapy.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Patient is concerned that the changes in breast tissue size may be related to his hormone levels or testosterone therapy.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient has not noticed nipple discharge.",
+      "scores": {
+        "entailment": 0.9988,
+        "neutral": 0.0005,
+        "contradiction": 0.0019
+      },
+      "support_evidence": "Patient: I first noticed the changes in my breast tissue size a few months back, maybe around the same time I started noticing improvements in my energy and sleep. I haven't had any nipple discharge or skin changes, and my weight has stayed pretty stable. I just want to make sure it's not something to be concerned about with the therapy.",
+      "contradiction_evidence": "Doctor: Could you please describe the size, consistency, and tenderness of the breast tissue changes you've noticed? Also, have you observed any skin changes or nipple discharge?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has not noticed nipple discharge.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Patient has not noticed any nipple discharge, skin changes, or weight gain."
+    },
+    {
+      "claim": "The patient has not noticed skin changes.",
+      "scores": {
+        "entailment": 0.9939,
+        "neutral": 0.0046,
+        "contradiction": 0.9979
+      },
+      "support_evidence": "Patient: I first noticed the changes in my breast tissue size a few months back, maybe around the same time I started noticing improvements in my energy and sleep. I haven't had any nipple discharge or skin changes, and my weight has stayed pretty stable. I just want to make sure it's not something to be concerned about with the therapy.",
+      "contradiction_evidence": "Patient: I haven't noticed any pain or tenderness, but I have seen some changes in the size of the breast tissue. It's been a while since I started the testosterone therapy, and I'm just now really paying attention to it. I wanted to bring it up because I've heard it can be related to hormone levels.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has not noticed skin changes.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Patient has not noticed any nipple discharge, skin changes, or weight gain."
+    },
+    {
+      "claim": "The patient has not noticed weight gain.",
+      "scores": {
+        "entailment": 0.9965,
+        "neutral": 0.0027,
+        "contradiction": 0.0011
+      },
+      "support_evidence": "Patient: I first noticed the changes in my breast tissue size a few months back, maybe around the same time I started noticing improvements in my energy and sleep. I haven't had any nipple discharge or skin changes, and my weight has stayed pretty stable. I just want to make sure it's not something to be concerned about with the therapy.",
+      "contradiction_evidence": "Doctor: Could you please describe the timeline of when you first noticed the changes in breast tissue size and appearance, and whether there have been any other symptoms such as nipple discharge, skin changes, or weight gain?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has not noticed weight gain.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Patient has not noticed any nipple discharge, skin changes, or weight gain."
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 8,
+      "uncertain": 1,
+      "removed_unsupported": 1,
+      "exempt": 1
+    },
+    "num_claims": 10,
+    "num_kept": 9,
+    "claim_retention_rate": 0.9
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient requests further discussion.",
+      "evidence": "Patient: I haven't had a physical exam for the breast tissue yet, but I wanted to bring it up because I've noticed some changes in size. I'm concerned it might be related to my hormone levels or the testosterone therapy. I was hoping we could discuss it further.",
+      "section": "subjective",
+      "candidate": "I was hoping we could discuss it further."
+    },
+    {
+      "statement": "The patient reports no changes to the dosage or formulation of testosterone replacement therapy.",
+      "evidence": "Patient: I've been on testosterone replacement therapy for a while now, and I've been taking 1 milliliter every 10 days. I haven't had any changes to the dosage or formulation, just sticking with what we've been using.",
+      "section": "subjective",
+      "candidate": "I haven't had any changes to the dosage or formulation, just sticking with what we've been using."
+    },
+    {
+      "statement": "The patient reports noticing changes in breast tissue size, but is unsure if they are unilateral or bilateral.",
+      "evidence": "Patient: I don't know if it's unilateral or bilateral, but I've noticed some changes in size. I'm concerned it might be related to my hormone levels or the testosterone therapy. I was hoping we could discuss it further.",
+      "section": "subjective",
+      "candidate": "I don't know if it's unilateral or bilateral, but I've noticed some changes in size."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I was hoping we could discuss it further.",
+      "speaker": "Patient",
+      "coverage": 0.0914,
+      "nearest_so_sentence": "The patient reports noticing an increase in breast tissue size.",
+      "statement": "The patient requests further discussion.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I haven't had a physical exam for the breast tissue yet, but I wanted to bring it up because I've noticed some changes in size. I'm concerned it might be related to my hormone levels or the testosterone therapy. I was hoping we could discuss it further.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.0007
+      },
+      "duplicate_entailment": 0.0017,
+      "duplicate_similarity": 0.368,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 3,
+        "perplexity": 12.92,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I was hoping we could discuss it further.",
+      "speaker": "Patient",
+      "coverage": 0.0915,
+      "nearest_so_sentence": "The patient reports noticing an increase in breast tissue size.",
+      "statement": "",
+      "status": "rejected_not_clinical",
+      "reason": "No standalone clinical statement (filler/fragment)."
+    },
+    {
+      "candidate": "I was hoping we could discuss it further.",
+      "speaker": "Patient",
+      "coverage": 0.0915,
+      "nearest_so_sentence": "The patient reports noticing an increase in breast tissue size.",
+      "statement": "",
+      "status": "rejected_not_clinical",
+      "reason": "No standalone clinical statement (filler/fragment)."
+    },
+    {
+      "candidate": "I was hoping we could discuss it further.",
+      "speaker": "Patient",
+      "coverage": 0.0915,
+      "nearest_so_sentence": "The patient reports noticing an increase in breast tissue size.",
+      "statement": "",
+      "status": "rejected_not_clinical",
+      "reason": "No standalone clinical statement (filler/fragment)."
+    },
+    {
+      "candidate": "I was hoping we could discuss it further.",
+      "speaker": "Patient",
+      "coverage": 0.0915,
+      "nearest_so_sentence": "The patient reports noticing an increase in breast tissue size.",
+      "statement": "",
+      "status": "rejected_not_clinical",
+      "reason": "No standalone clinical statement (filler/fragment)."
+    },
+    {
+      "candidate": "I was hoping we could discuss it further.",
+      "speaker": "Patient",
+      "coverage": 0.0915,
+      "nearest_so_sentence": "The patient reports noticing an increase in breast tissue size.",
+      "statement": "",
+      "status": "rejected_not_clinical",
+      "reason": "No standalone clinical statement (filler/fragment)."
+    },
+    {
+      "candidate": "I was hoping we could discuss it further.",
+      "speaker": "Patient",
+      "coverage": 0.0915,
+      "nearest_so_sentence": "The patient reports noticing an increase in breast tissue size.",
+      "statement": "",
+      "status": "rejected_not_clinical",
+      "reason": "No standalone clinical statement (filler/fragment)."
+    },
+    {
+      "candidate": "I was hoping we could discuss it further.",
+      "speaker": "Patient",
+      "coverage": 0.0925,
+      "nearest_so_sentence": "The patient reports noticing an increase in breast tissue size.",
+      "statement": "",
+      "status": "rejected_not_clinical",
+      "reason": "No standalone clinical statement (filler/fragment)."
+    },
+    {
+      "candidate": "I was hoping we could discuss it further.",
+      "speaker": "Patient",
+      "coverage": 0.0925,
+      "nearest_so_sentence": "The patient reports noticing an increase in breast tissue size.",
+      "statement": "The patient requests further discussion.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I haven't had a physical exam for the breast tissue yet, but I wanted to bring it up because I've noticed some changes in size. I'm concerned it might be related to my hormone levels or the testosterone therapy. I was hoping we could discuss it further.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.0007
+      },
+      "duplicate_entailment": 0.0017,
+      "duplicate_similarity": 0.3698
+    },
+    {
+      "candidate": "I was hoping we could discuss it further.",
+      "speaker": "Patient",
+      "coverage": 0.0929,
+      "nearest_so_sentence": "The patient reports noticing an increase in breast tissue size.",
+      "statement": "The patient requests further discussion.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I haven't had a physical exam for the breast tissue yet, but I wanted to bring it up because I've noticed some changes in size. I'm concerned it might be related to my hormone levels or the testosterone therapy. I was hoping we could discuss it further.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.0007
+      },
+      "duplicate_entailment": 0.0017,
+      "duplicate_similarity": 0.3698
+    },
+    {
+      "candidate": "I was hoping we could discuss it further.",
+      "speaker": "Patient",
+      "coverage": 0.0929,
+      "nearest_so_sentence": "The patient reports noticing an increase in breast tissue size.",
+      "statement": "",
+      "status": "rejected_not_clinical",
+      "reason": "No standalone clinical statement (filler/fragment)."
+    },
+    {
+      "candidate": "I'm 59 years old, and I'm male.",
+      "speaker": "Patient",
+      "coverage": 0.2815,
+      "nearest_so_sentence": "Patient is a 59-year-old male with a history of hypogonadism and currently on testosterone replacement therapy (1 mL every 10 days) for several months.",
+      "statement": "The patient reports being 59 years old and male.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I'm 59 years old, and I'm male. I'm here for hypogonadism, and I've been on testosterone replacement therapy. I also wanted to talk about some concerns I have with gynecomastia.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.8502
+      }
+    },
+    {
+      "candidate": "I haven't had any changes to the dosage or formulation, just sticking with what we've been using.",
+      "speaker": "Patient",
+      "coverage": 0.3291,
+      "nearest_so_sentence": "Patient is a 59-year-old male with a history of hypogonadism and currently on testosterone replacement therapy (1 mL every 10 days) for several months.",
+      "statement": "The patient reports no changes to the dosage or formulation of testosterone replacement therapy.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I've been on testosterone replacement therapy for a while now, and I've been taking 1 milliliter every 10 days. I haven't had any changes to the dosage or formulation, just sticking with what we've been using.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0006
+      },
+      "duplicate_entailment": 0.0857,
+      "duplicate_similarity": 0.7067,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 11.82,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I just want to make sure it's not something to be concerned about with the therapy.",
+      "speaker": "Patient",
+      "coverage": 0.3398,
+      "nearest_so_sentence": "Patient is a 59-year-old male with a history of hypogonadism and currently on testosterone replacement therapy (1 mL every 10 days) for several months.",
+      "statement": "The patient wants to ensure that any changes in breast tissue size and appearance are not related to the therapy.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I first noticed the changes in my breast tissue size a few months back, maybe around the same time I started noticing improvements in my energy and sleep. I haven't had any nipple discharge or skin changes, and my weight has stayed pretty stable. I just want to make sure it's not something to be concerned about with the therapy.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9976,
+        "contradiction": 0.0054
+      },
+      "duplicate_entailment": 0.989,
+      "duplicate_similarity": 0.7571
+    },
+    {
+      "candidate": "I don't know if it's unilateral or bilateral, but I've noticed some changes in size.",
+      "speaker": "Patient",
+      "coverage": 0.3433,
+      "nearest_so_sentence": "Patient has not noticed any nipple discharge, skin changes, or weight gain.",
+      "statement": "The patient reports noticing changes in breast tissue size, but is unsure if they are unilateral or bilateral.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't know if it's unilateral or bilateral, but I've noticed some changes in size. I'm concerned it might be related to my hormone levels or the testosterone therapy. I was hoping we could discuss it further.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.0212
+      },
+      "duplicate_entailment": 0.3848,
+      "duplicate_similarity": 0.7434,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 1,
+        "perplexity": 10.53,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don't know if it's unilateral or bilateral, but I've noticed some changes in size.",
+      "speaker": "Patient",
+      "coverage": 0.3443,
+      "nearest_so_sentence": "Patient has not noticed any nipple discharge, skin changes, or weight gain.",
+      "statement": "The patient reports noticing changes in breast size, but is unsure if they are unilateral or bilateral.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I don't know if it's unilateral or bilateral, but I've noticed some changes in size. I'm concerned it might be related to my hormone levels or the testosterone therapy. I was hoping we could discuss it further.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.0246
+      },
+      "duplicate_entailment": 0.3946,
+      "duplicate_similarity": 0.7093
+    },
+    {
+      "candidate": "I don't know if it's unilateral or bilateral, but I've noticed some changes in size.",
+      "speaker": "Patient",
+      "coverage": 0.3451,
+      "nearest_so_sentence": "Patient has not noticed any nipple discharge, skin changes, or weight gain.",
+      "statement": "The patient reports not knowing if the gynecomastia is unilateral or bilateral, but has noticed changes in size.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't know if it's unilateral or bilateral, but I've noticed some changes in size. I'm concerned it might be related to my hormone levels or the testosterone therapy. I was hoping we could discuss it further.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0038
+      },
+      "first_rewrite_rejected": "The patient reports noticing changes in size of the breast tissue, but is unable to specify whether the gynecomastia is unilateral or bilateral.",
+      "duplicate_entailment": 0.9863,
+      "duplicate_similarity": 0.5962
+    },
+    {
+      "candidate": "I also wanted to talk about some concerns I have with gynecomastia.",
+      "speaker": "Patient",
+      "coverage": 0.3926,
+      "nearest_so_sentence": "The patient reports noticing an increase in breast tissue size.",
+      "statement": "The patient reports having concerns about gynecomastia.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 59 years old, and I'm male. I'm here for hypogonadism, and I've been on testosterone replacement therapy. I also wanted to talk about some concerns I have with gynecomastia.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9998,
+        "contradiction": 0.0017
+      },
+      "duplicate_entailment": 0.9962,
+      "duplicate_similarity": 0.4975
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 44,
+    "num_covered": 26,
+    "num_flagged": 18,
+    "num_not_checked_cap": 0,
+    "num_added": 3
+  },
+  "gaps": {
+    "gaps": [
+      {
+        "id": "q1",
+        "gap": "Duration of gynecomastia",
+        "question": "How long have you been experiencing gynecomastia?",
+        "category": "subjective",
+        "status": "unresolved",
+        "answer": null
+      },
+      {
+        "id": "q2",
+        "gap": "Size and consistency of breast tissue",
+        "question": "Can you describe the size and consistency of the breast tissue changes you've noticed?",
+        "category": "objective",
+        "status": "unresolved",
+        "answer": null
+      },
+      {
+        "id": "q3",
+        "gap": "Asymmetry of breast tissue changes",
+        "question": "Are the breast tissue changes symmetrical or asymmetrical?",
+        "category": "subjective",
+        "status": "unresolved",
+        "answer": null
+      },
+      {
+        "id": "q4",
+        "gap": "Tenderness or discomfort in the breast tissue",
+        "question": "Have you experienced any tenderness or discomfort in the breast tissue?",
+        "category": "subjective",
+        "status": "unresolved",
+        "answer": null
+      },
+      {
+        "id": "q5",
+        "gap": "Physical examination findings",
+        "question": "Can you describe the physical examination findings of the breast tissue, including size, consistency, tenderness, and any visible changes?",
+        "category": "objective",
+        "status": "unresolved",
+        "answer": null
+      }
+    ],
+    "dropped": [],
+    "num_generated": 5
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "stage": "stage2",
+        "section": "subjective",
+        "claim": "The patient reports an increase in breast tissue size over the past few months.",
+        "source_sentence": "Patient reports noticing changes in breast tissue size, specifically an increase in size, over the past few months.",
+        "decision": "removed_unsupported",
+        "scores": {
+          "entailment": 0.0044,
+          "neutral": 0.9945,
+          "contradiction": 0.0024
+        },
+        "reason": "No supporting evidence in the conversation (not asserted to be false).",
+        "nearest_evidence": "Patient: I haven't noticed any pain or tenderness, but I have seen some changes in the size of the breast tissue. It's been a while since I started the testosterone therapy, and I'm just now really paying attention to it. I wanted to bring it up because I've heard it can be related to hormone levels."
+      }
+    ],
+    "flagged_kept_stage2": [
+      {
+        "stage": "stage2",
+        "section": "subjective",
+        "claim": "The patient reports noticing an increase in breast tissue size.",
+        "decision": "uncertain",
+        "scores": {
+          "entailment": 0.527,
+          "neutral": 0.465,
+          "contradiction": 0.008
+        },
+        "reason": "Partially supported; kept and flagged for review (neutral is not proof of falsehood)."
+      }
+    ],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "I'm 59 years old, and I'm male.",
+        "statement": "The patient reports being 59 years old and male.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.8502
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 27.8,
+  "ap_unchanged": true,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 59 years old, and I'm male. I'm here for hypogonadism, and I've been on testosterone replacement therapy. I also wanted to talk about some concerns I have with gynecomastia.\nDoctor: Could you please describe the duration of your gynecomastia, any associated symptoms such as breast tenderness or pain, and whether you have noticed any changes in the size or appearance of the breast tissue?\nPatient: I haven't noticed any pain or tenderness, but I have seen some changes in the size of the breast tissue. It's been a while since I started the testosterone therapy, and I'm just now really paying attention to it. I wanted to bring it up because I've heard it can be related to hormone levels.\nDoctor: Could you please specify the duration of your testosterone replacement therapy and whether there have been any adjustments to the dosage or formulation over time?\nPatient: I've been on testosterone replacement therapy for a while now, and I've been taking 1 milliliter every 10 days. I haven't had any changes to the dosage or formulation, just sticking with what we've been using.\nDoctor: Could you describe the physical examination findings related to the breast tissue, including size, consistency, and any other abnormalities?\nPatient: I haven't had a physical exam for the breast tissue yet, but I wanted to bring it up because I've noticed some changes in size. I'm concerned it might be related to my hormone levels or the testosterone therapy. I was hoping we could discuss it further.\nDoctor: Could you please describe the timeline of when you first noticed the changes in breast tissue size and appearance, and whether there have been any other symptoms such as nipple discharge, skin changes, or weight gain?\nPatient: I first noticed the changes in my breast tissue size a few months back, maybe around the same time I started noticing improvements in my energy and sleep. I haven't had any nipple discharge or skin changes, and my weight has stayed pretty stable. I just want to make sure it's not something to be concerned about with the therapy.\nDoctor: Could you please describe the physical examination findings of the breast tissue, including size, consistency, tenderness, and any visible changes?\nPatient: I haven't had a physical exam for the breast tissue yet, but I wanted to bring it up because I've noticed some changes in size. I'm concerned it might be related to my hormone levels or the testosterone therapy. I was hoping we could discuss it further.\nDoctor: Could you please describe the size, consistency, and any tenderness of the breast tissue you have noticed? Have you noticed any visible changes such as redness, swelling, or dimpling of the skin?\nPatient: I haven't had a physical exam for the breast tissue yet, but I've noticed some changes in size. I'm concerned it might be related to my hormone levels or the testosterone therapy. I was hoping we could discuss it further.\nDoctor: Could you please describe the size, consistency, and any tenderness of the breast tissue during a physical examination?\nPatient: I haven't had a physical exam for the breast tissue yet, but I've noticed some changes in size. I'm concerned it might be related to my hormone levels or the testosterone therapy. I was hoping we could discuss it further.\nDoctor: Could you please describe the size, consistency, and any tenderness or visible changes in your breast tissue that you have noticed?\nPatient: I haven't had a physical exam for the breast tissue yet, but I've noticed some changes in size. I'm concerned it might be related to my hormone levels or the testosterone therapy. I was hoping we could discuss it further.\nDoctor: Could you please describe the size and consistency of the breast tissue changes you've noticed, and have you observed any asymmetry between the two sides?\nPatient: I haven't had a physical exam for the breast tissue yet, but I've noticed some changes in size. I'm concerned it might be related to my hormone levels or the testosterone therapy. I was hoping we could discuss it further.\nDoctor: Could you please describe the specific changes in breast tissue size you have noticed, including whether it is unilateral or bilateral, and whether there is any associated tenderness or skin changes?\nPatient: I haven't had a physical exam for the breast tissue yet, but I've noticed some changes in size. I'm concerned it might be related to my hormone levels or the testosterone therapy. I was hoping we could discuss it further.\nDoctor: Could you please describe the size, consistency, and any tenderness of the breast tissue changes you've noticed? Additionally, is the gynecomastia unilateral or bilateral?\nPatient: I haven't had a physical exam for the breast tissue yet, but I've noticed some changes in size. I'm concerned it might be related to my hormone levels or the testosterone therapy. I was hoping we could discuss it further.\nDoctor: Could you please specify whether the gynecomastia is unilateral or bilateral, and describe the size, consistency, and tenderness of the breast tissue?\nPatient: I don't know if it's unilateral or bilateral, but I've noticed some changes in size. I'm concerned it might be related to my hormone levels or the testosterone therapy. I was hoping we could discuss it further.\nDoctor: Could you please describe the changes in size you've noticed in your breast tissue? Are there any specific areas where you feel the changes more prominently? Also, have you experienced any tenderness or discomfort in the area?\nPatient: I don't know if it's unilateral or bilateral, but I've noticed some changes in size. I'm concerned it might be related to my hormone levels or the testosterone therapy. I was hoping we could discuss it further.\nDoctor: Could you please describe the size, consistency, and tenderness of the breast tissue changes you've noticed? Also, have you observed any skin changes or nipple discharge?\nPatient: I don't know if it's unilateral or bilateral, but I've noticed some changes in size. I'm concerned it might be related to my hormone levels or the testosterone therapy. I was hoping we could discuss it further.",
+  "reference_so": {
+    "subjective": "Basic information: 59-year-old male presenting with hypogonadism on testosterone replacement therapy, concerned about gynecomastia\n\nHistory of present illness: Onset of gynecomastia noted a few months ago, coinciding with improvements in energy and sleep; no pain or tenderness, no nipple discharge or skin changes, stable weight. Testosterone replacement therapy has been ongoing for an unspecified duration, with a dosage of 1 milliliter every 10 days and no changes to the regimen.\n\nPast history: Hypogonadism, testosterone replacement therapy",
+    "objective": "Physical examination: Physical examination findings related to breast tissue: Unilateral or bilateral gynecomastia, size (to be specified), consistency (to be specified), tenderness (to be specified), and any visible changes (to be specified).\n\nInvestigations: Auxiliary tests performed or planned to be collected"
+  }
+}

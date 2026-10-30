@@ -1,0 +1,434 @@
+{
+  "case_id": "D2N004",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient is a 57-year-old male who presents with a 3-day history of back pain after injuring his back while golfing.\n* The pain is sharp and immediate, and has not resolved completely.\n* The patient reports difficulty with his right leg and foot, including weakness and heaviness, but no numbness or tingling.\n* He has tried self-care measures such as ice and heat, but has not found relief.\n* The patient has a history of lower back surgery 10 years ago, but has not experienced any previous episodes of back pain or neurological symptoms in his legs.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* The patient is a 57-year-old male. The patient injured his back while golfing.\n* The pain is sharp and immediate, and has not resolved completely.\n* The patient reports difficulty with his right leg and foot, including weakness and heaviness, but no numbness or tingling.\n* He has tried self-care measures such as ice and heat, but has not found relief.\n* The patient has a history of lower back surgery 10 years ago, but has not experienced any previous episodes of back pain or neurological symptoms in his legs.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* The patient reports that the injury occurred during the golf swing and that they had to drop to the ground immediately after the incident.\n* The patient is a 57-year-old male. The patient injured his back while golfing.\n* The pain is sharp and immediate, and has not resolved completely.\n* The patient reports dropping to the ground immediately after the injury.\n* The patient reports difficulty with his right leg and foot, including weakness and heaviness, but no numbness or tingling.\n* He has tried self-care measures such as ice and heat, but has not found relief.\n* The patient reports that everything seems normal with regard to bowel and bladder function.\n* The patient reports that the weakness in their right leg makes it difficult to walk fast or perform strenuous activities.\n* The patient has a history of lower back surgery 10 years ago, but has not experienced any previous episodes of back pain or neurological symptoms in his legs.\n* The patient reports not knowing the exact specifics of the back pain location beyond the lumbar spine.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient presents with acute lower back pain at the level of L5, with radiation to the right leg and foot.\n* The patient reports weakness and heaviness in the right leg and foot, but no numbness or tingling.\n* The patient has a history of lower back surgery 10 years ago, but has not experienced any previous episodes of back pain or neurological symptoms in his legs.",
+    "plan": "* The patient will undergo imaging studies, including an X-ray of the lumbar spine, to further evaluate the extent of the injury.\n* The patient will continue to take Tylenol and ibuprofen as needed for pain management.\n* The patient will be referred to physical therapy to address any weakness or stiffness in the right leg and foot.\n* The patient will be followed up in 1-2 weeks to assess the progress of the injury and to discuss any further treatment options."
+  },
+  "stage2_audit": [
+    {
+      "claim": "The patient is a 57-year-old male.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0001,
+        "contradiction": 0.0004
+      },
+      "support_evidence": "Patient: I'm 57 years old, male, and I'm here because I hurt my back while golfing a few days ago. It's still pretty sore, and I've had some trouble with my right leg and foot too.",
+      "contradiction_evidence": "Patient: I was swinging my club, and I felt a pop in my back. It happened right then, and I had to drop to the ground. I actually had surgery about 10 years ago on my lower back, but I haven't had any other episodes of back pain or neurological symptoms in my legs before this.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient is a 57-year-old male.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 57-year-old male who presents with a 3-day history of back pain after injuring his back while golfing."
+    },
+    {
+      "claim": "The patient presents with a 3-day history of back pain.",
+      "scores": {
+        "entailment": 0.4471,
+        "neutral": 0.5387,
+        "contradiction": 0.9683
+      },
+      "support_evidence": "Patient: I was swinging my club, and I felt a pop in my back. It happened right then, and I had to drop to the ground. The pain was sharp and immediate, and it hasn't gone away completely. It's still sore, and I've had some trouble with my right leg and foot, like my foot feels heavy and I had some weakness there, but it's gotten a little better. I haven't had any numbness or tingling, just the weakness.",
+      "contradiction_evidence": "Patient: The pain is in my lower back, around the area of my lumbar spine, and it hasn't radiated anywhere else. I haven't had any imaging studies done yet, but I did take some Tylenol and ibuprofen, and I tried both ice and heat, but nothing really worked. I did have some trouble with my right foot, like a dropped foot, and some weakness in my right leg, but it's gotten a little better.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "removed_contradicted",
+      "keep": false,
+      "output": "",
+      "reason": "Contradicted by the conversation and no evidence-based correction was possible.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 57-year-old male who presents with a 3-day history of back pain after injuring his back while golfing."
+    },
+    {
+      "claim": "The patient injured his back while golfing.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.0006
+      },
+      "support_evidence": "Patient: I'm 57 years old, male, and I'm here because I hurt my back while golfing a few days ago. It's still pretty sore, and I've had some trouble with my right leg and foot too.",
+      "contradiction_evidence": "Patient: I was swinging my club, and I felt a pop in my back. It happened right then, and I had to drop to the ground. I actually had surgery about 10 years ago on my lower back, but I haven't had any other episodes of back pain or neurological symptoms in my legs before this.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient injured his back while golfing.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 57-year-old male who presents with a 3-day history of back pain after injuring his back while golfing."
+    },
+    {
+      "claim": "The pain is sharp and immediate, and has not resolved completely.",
+      "scores": {
+        "entailment": 0.9976,
+        "neutral": 0.0006,
+        "contradiction": 0.8017
+      },
+      "support_evidence": "Patient: I was swinging my club, and I felt a pop in my back. It happened right then, and I had to drop to the ground. The pain was sharp and immediate, and it hasn't gone away completely. It's still sore, and I've had some trouble with my right leg and foot, like my foot feels heavy and I had some weakness there, but it's gotten a little better. I haven't had any numbness or tingling, just the weakness.",
+      "contradiction_evidence": "Doctor: Could you please describe the exact location of the back pain and whether it is constant or intermittent? Also, have you noticed any changes in your ability to move or any other symptoms in your right leg or foot?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain is sharp and immediate, and has not resolved completely.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The pain is sharp and immediate, and has not resolved completely.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient reports difficulty with his right leg and foot, including weakness and heaviness, but no numbness or tingling.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.0149
+      },
+      "support_evidence": "Patient: I was swinging my club, and I felt a pop in my back. It happened right then, and I had to drop to the ground. The pain was sharp and immediate, and it hasn't gone away completely. It's still sore, and I've had some trouble with my right leg and foot, like my foot feels heavy and I had some weakness there, but it's gotten a little better. I haven't had any numbness or tingling, just the weakness.",
+      "contradiction_evidence": "Patient: I was swinging my club, and I felt a pop in my back. It happened right then, and I had to drop to the ground. I actually had surgery about 10 years ago on my lower back, but I haven't had any other episodes of back pain or neurological symptoms in my legs before this.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient reports difficulty with his right leg and foot, including weakness and heaviness, but no numbness or tingling.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "The patient reports difficulty with his right leg and foot, including weakness and heaviness, but no numbness or tingling.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has tried self-care measures such as ice and heat, but has not found relief.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0003,
+        "contradiction": 0.0004
+      },
+      "support_evidence": "Patient: The pain is in my lower back, around the area of my lumbar spine, and it hasn't radiated anywhere else. I haven't had any imaging studies done yet, but I did take some Tylenol and ibuprofen, and I tried both ice and heat, but nothing really worked.",
+      "contradiction_evidence": "Patient: The pain is in my lower back, around the area of my lumbar spine, and it hasn't radiated anywhere else. I haven't had any imaging studies done yet, but I did take some Tylenol and ibuprofen, and I tried both ice and heat, but nothing really worked.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has tried self-care measures such as ice and heat, but has not found relief.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "He has tried self-care measures such as ice and heat, but has not found relief.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient has a history of lower back surgery 10 years ago, but has not experienced any previous episodes of back pain or neurological symptoms in his legs.",
+      "scores": {
+        "entailment": 0.9987,
+        "neutral": 0.0003,
+        "contradiction": 0.0609
+      },
+      "support_evidence": "Patient: I was swinging my club, and I felt a pop in my back. It happened right then, and I had to drop to the ground. I actually had surgery about 10 years ago on my lower back, but I haven't had any other episodes of back pain or neurological symptoms in my legs before this.",
+      "contradiction_evidence": "Doctor: Have you experienced any previous complications or issues related to your lower back surgery from 10 years ago?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has a history of lower back surgery 10 years ago, but has not experienced any previous episodes of back pain or neurological symptoms in his legs.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "The patient has a history of lower back surgery 10 years ago, but has not experienced any previous episodes of back pain or neurological symptoms in his legs.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 6,
+      "removed_contradicted": 1,
+      "exempt": 1
+    },
+    "num_claims": 7,
+    "num_kept": 6,
+    "claim_retention_rate": 0.8571
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient reports not knowing the exact specifics of the back pain location beyond the lumbar spine.",
+      "evidence": "Patient: The pain is in my lower back, around the area of my lumbar spine, and the doctor mentioned it was at the level of L5. I don't know the exact specifics beyond that.",
+      "section": "subjective",
+      "candidate": "I don't know the exact specifics beyond that."
+    },
+    {
+      "statement": "The patient reports dropping to the ground immediately after the injury.",
+      "evidence": "Patient: I was swinging my club, and I felt a pop in my back. It happened right then, and I had to drop to the ground. The pain was sharp and immediate, and it hasn't gone away completely. It's still sore, and I've had some trouble with my right leg and foot, like my foot feels heavy and I had some weakness there, but it's gotten a little better. I haven't had any numbness or tingling, just the weakness.",
+      "section": "subjective",
+      "candidate": "It happened right then, and I had to drop to the ground."
+    },
+    {
+      "statement": "The patient reports that the injury occurred during the golf swing and that they had to drop to the ground immediately after the incident.",
+      "evidence": "Patient: I was swinging my club, and I felt a pop in my back. It happened right then, and I had to drop to the ground. The pain was sharp and immediate, and it hasn't gone away completely. It's still sore, and I've had some trouble with my right leg and foot, like my foot feels heavy and I had some weakness there, but it's gotten a little better. I haven't had any numbness or tingling, just the weakness.",
+      "section": "subjective",
+      "candidate": "It happened right then, and I had to drop to the ground."
+    },
+    {
+      "statement": "The patient reports that everything seems normal with regard to bowel and bladder function.",
+      "evidence": "Patient: No, I haven't noticed any changes in my bowel or bladder function since the injury. Everything seems normal there.",
+      "section": "subjective",
+      "candidate": "Everything seems normal there."
+    },
+    {
+      "statement": "The patient reports that the weakness in their right leg makes it difficult to walk fast or perform strenuous activities.",
+      "evidence": "Patient: The pain is in my lower back, around the area of my lumbar spine, and it hasn't radiated anywhere else. The weakness in my right leg is more like struggling to lift my foot or walk normally, like a dropped foot, but it's gotten a little better this morning. It doesn't affect specific movements as much as just making it hard to walk fast or do anything strenuous.",
+      "section": "subjective",
+      "candidate": "It doesn't affect specific movements as much as just making it hard to walk fast or do anything strenuous."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I don't know the exact specifics beyond that.",
+      "speaker": "Patient",
+      "coverage": 0.1053,
+      "nearest_so_sentence": "He has tried self-care measures such as ice and heat, but has not found relief.",
+      "statement": "The patient reports not knowing the exact specifics of the back pain location beyond the lumbar spine.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: The pain is in my lower back, around the area of my lumbar spine, and the doctor mentioned it was at the level of L5. I don't know the exact specifics beyond that.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0294
+      },
+      "duplicate_entailment": 0.073,
+      "duplicate_similarity": 0.5998,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 5,
+        "perplexity": 19.1,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "It happened right then, and I had to drop to the ground.",
+      "speaker": "Patient",
+      "coverage": 0.1282,
+      "nearest_so_sentence": "The patient injured his back while golfing.",
+      "statement": "The patient reports dropping to the ground immediately after the injury.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I was swinging my club, and I felt a pop in my back. It happened right then, and I had to drop to the ground. The pain was sharp and immediate, and it hasn't gone away completely. It's still sore, and I've had some trouble with my right leg and foot, like my foot feels heavy and I had some weakness there, but it's gotten a little better. I haven't had any numbness or tingling, just the weakness.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.0097
+      },
+      "duplicate_entailment": 0.0053,
+      "duplicate_similarity": 0.4356,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 2,
+        "perplexity": 17.57,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "It happened right then, and I had to drop to the ground.",
+      "speaker": "Patient",
+      "coverage": 0.1282,
+      "nearest_so_sentence": "The patient injured his back while golfing.",
+      "statement": "The patient reports that the injury occurred during the golf swing and that they had to drop to the ground immediately after the incident.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I was swinging my club, and I felt a pop in my back. It happened right then, and I had to drop to the ground. The pain was sharp and immediate, and it hasn't gone away completely. It's still sore, and I've had some trouble with my right leg and foot, like my foot feels heavy and I had some weakness there, but it's gotten a little better. I haven't had any numbness or tingling, just the weakness.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0021
+      },
+      "duplicate_entailment": 0.1008,
+      "duplicate_similarity": 0.717,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 15.33,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "Everything seems normal there.",
+      "speaker": "Patient",
+      "coverage": 0.1999,
+      "nearest_so_sentence": "The patient reports difficulty with his right leg and foot, including weakness and heaviness, but no numbness or tingling.",
+      "statement": "The patient reports that everything seems normal with regard to bowel and bladder function.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: No, I haven't noticed any changes in my bowel or bladder function since the injury. Everything seems normal there.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.071
+      },
+      "duplicate_entailment": 0.3456,
+      "duplicate_similarity": 0.3629,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 6,
+        "perplexity": 14.86,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "It doesn't affect specific movements as much as just making it hard to walk fast or do anything strenuous.",
+      "speaker": "Patient",
+      "coverage": 0.3264,
+      "nearest_so_sentence": "The patient reports difficulty with his right leg and foot, including weakness and heaviness, but no numbness or tingling.",
+      "statement": "The patient reports that the weakness in their right leg makes it difficult to walk fast or perform strenuous activities.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: The pain is in my lower back, around the area of my lumbar spine, and it hasn't radiated anywhere else. The weakness in my right leg is more like struggling to lift my foot or walk normally, like a dropped foot, but it's gotten a little better this morning. It doesn't affect specific movements as much as just making it hard to walk fast or do anything strenuous.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0027
+      },
+      "duplicate_entailment": 0.0325,
+      "duplicate_similarity": 0.6549,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 7,
+        "perplexity": 14.14,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "No, I haven't noticed any changes in my bowel or bladder function since the injury.",
+      "speaker": "Patient",
+      "coverage": 0.3432,
+      "nearest_so_sentence": "The pain is sharp and immediate, and has not resolved completely.",
+      "statement": "The patient denies noticing any changes in bowel or bladder function since the injury.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I haven't noticed any changes in my bowel or bladder function since the injury.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0192
+      },
+      "duplicate_entailment": 0.7516,
+      "duplicate_similarity": 0.4365
+    },
+    {
+      "candidate": "No, I haven't noticed any changes in my bowel or bladder function since the injury.",
+      "speaker": "Patient",
+      "coverage": 0.3442,
+      "nearest_so_sentence": "The pain is sharp and immediate, and has not resolved completely.",
+      "statement": "The patient denies noticing any changes in bowel or bladder function since the injury.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I haven't noticed any changes in my bowel or bladder function since the injury.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0192
+      },
+      "duplicate_entailment": 0.7516,
+      "duplicate_similarity": 0.4365
+    },
+    {
+      "candidate": "I haven't noticed any changes in my bowel or bladder function since the injury.",
+      "speaker": "Patient",
+      "coverage": 0.3758,
+      "nearest_so_sentence": "The pain is sharp and immediate, and has not resolved completely.",
+      "statement": "The patient denies any changes in bowel or bladder function since the injury.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I haven't noticed any changes in my bowel or bladder function since the injury.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0095
+      },
+      "duplicate_entailment": 0.5865,
+      "duplicate_similarity": 0.443
+    },
+    {
+      "candidate": "It's been a while, and I haven't had any problems since then.",
+      "speaker": "Patient",
+      "coverage": 0.3804,
+      "nearest_so_sentence": "The pain is sharp and immediate, and has not resolved completely.",
+      "statement": "The patient reports no complications or issues related to their lower back surgery from 10 years ago.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I don't recall having any complications or issues related to my lower back surgery from 10 years ago. It's been a while, and I haven't had any problems since then.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9983,
+        "contradiction": 0.1808
+      },
+      "duplicate_entailment": 0.9869,
+      "duplicate_similarity": 0.6977
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 35,
+    "num_covered": 26,
+    "num_flagged": 9,
+    "num_not_checked_cap": 0,
+    "num_added": 5
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "stage": "stage2",
+        "section": "subjective",
+        "claim": "The patient presents with a 3-day history of back pain.",
+        "source_sentence": "Patient is a 57-year-old male who presents with a 3-day history of back pain after injuring his back while golfing.",
+        "decision": "removed_contradicted",
+        "scores": {
+          "entailment": 0.4471,
+          "neutral": 0.5387,
+          "contradiction": 0.9683
+        },
+        "reason": "Contradicted by the conversation and no evidence-based correction was possible.",
+        "nearest_evidence": "Patient: The pain is in my lower back, around the area of my lumbar spine, and it hasn't radiated anywhere else. I haven't had any imaging studies done yet, but I did take some Tylenol and ibuprofen, and I tried both ice and heat, but nothing really worked. I did have some trouble with my right foot, like a dropped foot, and some weakness in my right leg, but it's gotten a little better."
+      }
+    ],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": []
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 27.0,
+  "ap_unchanged": true,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 57 years old, male, and I'm here because I hurt my back while golfing a few days ago. It's still pretty sore, and I've had some trouble with my right leg and foot too.\nDoctor: Can you describe the mechanism of injury in more detail, such as whether you twisted, fell, or lifted something heavy while golfing? Also, please specify the duration and nature of the back pain (e.g., sharp, dull, constant, intermittent), whether the pain radiates down your leg, and if you have experienced any numbness, tingling, or weakness in your right leg or foot?\nPatient: I was swinging my club, and I felt a pop in my back. It happened right then, and I had to drop to the ground. The pain was sharp and immediate, and it hasn't gone away completely. It's still sore, and I've had some trouble with my right leg and foot, like my foot feels heavy and I had some weakness there, but it's gotten a little better. I haven't had any numbness or tingling, just the weakness.\nDoctor: Can you describe the exact location of the back pain and whether it radiates to any other areas? Have you noticed any changes in your bowel or bladder function since the injury?\nPatient: The pain is in my lower back, around the area of my lumbar spine, and it hasn't radiated anywhere else. I haven't noticed any changes in my bowel or bladder function since the injury.\nDoctor: Could you describe the specific movements or actions during the golf swing that led to the injury, and have you experienced any previous episodes of back pain or neurological symptoms in the lower extremities?\nPatient: I was swinging my club, and I felt a pop in my back. It happened right then, and I had to drop to the ground. I actually had surgery about 10 years ago on my lower back, but I haven't had any other episodes of back pain or neurological symptoms in my legs before this.\nDoctor: Could you describe the exact location of the pain in your lower back and whether it radiates to any other areas? Additionally, have you undergone any imaging studies or received any treatment for your back pain since the injury?\nPatient: The pain is in my lower back, around the area of my lumbar spine, and it hasn't radiated anywhere else. I haven't had any imaging studies done yet, but I did take some Tylenol and ibuprofen, and I tried both ice and heat, but nothing really worked.\nDoctor: Have you undergone any imaging studies such as X-rays, MRI, or CT scans for your current back pain? If so, please provide the results or details of the imaging performed.\nPatient: No, I haven't undergone any imaging studies yet for my current back pain. The doctor mentioned looking at my back x-ray, but I don't have any results or details of imaging performed on me personally.\nDoctor: Have you noticed any changes in your bowel or bladder function since the injury?\nPatient: No, I haven't noticed any changes in my bowel or bladder function since the injury.\nDoctor: Have you undergone any imaging studies for your current back pain, and if so, what were the findings?\nPatient: No, I haven't undergone any imaging studies yet for my current back pain. The doctor mentioned looking at my back x-ray, but I don't have any results or details of imaging performed on me personally.\nDoctor: Have you experienced any previous complications or issues related to your lower back surgery from 10 years ago?\nPatient: No, I don't recall having any complications or issues related to my lower back surgery from 10 years ago. It's been a while, and I haven't had any problems since then.\nDoctor: Could you please describe the exact location of the back pain and whether it is constant or intermittent? Also, have you noticed any changes in your ability to move or any other symptoms in your right leg or foot?\nPatient: The pain is in my lower back, around the area of my lumbar spine, and it hasn't radiated anywhere else. I haven't had any imaging studies done yet, but I did take some Tylenol and ibuprofen, and I tried both ice and heat, but nothing really worked. I did have some trouble with my right foot, like a dropped foot, and some weakness in my right leg, but it's gotten a little better.\nDoctor: Could you describe the exact location of the lower back pain and specify which part of the lumbar spine is affected (e.g., L4, L5, or S1)? Additionally, could you clarify the nature of the weakness in your right leg and whether it affects specific movements or activities?\nPatient: The pain is in my lower back, around the area of my lumbar spine, and it hasn't radiated anywhere else. The weakness in my right leg is more like struggling to lift my foot or walk normally, like a dropped foot, but it's gotten a little better this morning. It doesn't affect specific movements as much as just making it hard to walk fast or do anything strenuous.\nDoctor: Could you specify the exact location of the back pain in your lumbar spine (e.g., L4, L5, or S1)?\nPatient: The pain is in my lower back, around the area of my lumbar spine, and the doctor mentioned it was at the level of L5. I don't know the exact specifics beyond that.\nDoctor: Have you undergone any imaging studies such as an MRI or X-ray of the lumbar spine since the injury? If so, what were the findings?\nPatient: No, I haven't undergone any imaging studies yet for my current back pain. The doctor mentioned looking at my back x-ray, but I don't have any results or details of imaging performed on me personally.\nDoctor: Have you noticed any changes in your bowel or bladder function since the injury?\nPatient: No, I haven't noticed any changes in my bowel or bladder function since the injury. Everything seems normal there.\nDoctor: Have you had any prior imaging studies or surgical reports related to your lumbar spine, particularly involving the L5 level?\nPatient: Yes, I had surgery on my lower back about 10 years ago, but I don't have any specific imaging or surgical reports with me now. I just know I had some kind of surgery in the lower back area.",
+  "reference_so": {
+    "subjective": "Basic information: 57-year-old male presenting with back pain following a golfing injury; reports associated right leg and foot symptoms.\n\nHistory of present illness: Onset of back pain 3 days ago following a golfing injury; reports associated right leg and foot symptoms. The pain was sharp and immediate, and it hasn't gone away completely. It's still sore, and the patient has had some trouble with his right leg and foot, like his foot feels heavy and he had some weakness there, but it's gotten a little better. He hasn't had any numbness or tingling, just the weakness. The pain is in my lower back, around the area of my lumbar spine, and it hasn't radiated anywhere else. I haven't noticed any changes in my bowel or bladder function since the injury. I was swinging my club, and I felt a pop in my back. It happened right then, and I had to drop to the ground. I actually had surgery about 10 years ago on my lower back, but I haven't had any other episodes of back pain or neurological symptoms in my legs before this. The pain is in my lower back, around the area of my lumbar spine, and it hasn't radiated anywhere else. I haven't had any imaging studies done yet, but I did take some Tylenol and ibuprofen, and I tried both ice and heat, but nothing really worked. The doctor mentioned it was at the level of L5.\n\nPast history: The patient had surgery about 10 years ago on his lower back, but no prior episodes of back pain or neurological symptoms in the lower extremities; no history of spinal conditions, surgeries, or injuries prior to this incident.",
+    "objective": "Physical examination: Physical examination findings are pending.\n\nInvestigations: Auxiliary examination results are pending."
+  }
+}

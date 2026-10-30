@@ -1,0 +1,437 @@
+{
+  "case_id": "D2N092",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* The patient is a 43-year-old female who presents with a 2-week history of wrist pain and swelling after hitting a pole while playing tennis.\n* The pain is located near the wrist, and the patient reports tenderness on the part of the arm near the wrist, especially when pressing on the area.\n* The patient describes the pain as worsening with wrist movement, particularly bending or flexing the thumb.\n* The patient reports no numbness, tingling, or weakness in the hand or fingers.\n* The patient has no prior history of wrist injuries or conditions affecting the wrist or arm.\n* The patient has not undergone any imaging studies for this injury or any prior wrist-related issues.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* The patient is a 43-year-old female. The patient presents with swelling of the wrist. The patient hit a pole while playing tennis. The patient presents with wrist pain after hitting a pole while playing tennis. The patient presents with swelling of the wrist after hitting a pole while playing tennis.\n* The pain is located near the wrist, and the patient reports tenderness on the part of the arm near the wrist, especially when pressing on the area.\n* The patient describes the pain as worsening with wrist movement, particularly bending or flexing the thumb.\n* The patient reports no numbness, tingling, or weakness in the hand or fingers.\n* The patient has no prior history of wrist injuries or conditions affecting the wrist or arm.\n* The patient has not undergone any imaging studies for this injury or any prior wrist-related issues.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* The patient is a 43-year-old female. The patient presents with swelling of the wrist. The patient hit a pole while playing tennis. The patient presents with wrist pain after hitting a pole while playing tennis. The patient presents with swelling of the wrist after hitting a pole while playing tennis.\n* The pain is located near the wrist, and the patient reports tenderness on the part of the arm near the wrist, especially when pressing on the area.\n* The patient describes the pain as worsening with wrist movement, particularly bending or flexing the thumb.\n* The patient reports no numbness, tingling, or weakness in the hand or fingers.\n* The patient reports the swelling is \"just a little puffy, nothing too bad\".\n* The patient reports that daily activities, such as opening jars and typing, are made slightly more difficult due to wrist tenderness.\n* The patient has no prior history of wrist injuries or conditions affecting the wrist or arm.\n* The patient has not undergone any imaging studies for this injury or any prior wrist-related issues.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient presents with a wrist injury, likely due to a recent trauma, with symptoms of pain, swelling, and tenderness.",
+    "plan": "* The doctor will review the X-ray results, which were normal.\n* The patient will be advised to follow up with the doctor in 1 week to reassess the injury.\n* The patient will be instructed to apply ice to the affected area and take over-the-counter pain medication as needed.\n* The patient will be advised to avoid heavy lifting or bending and to modify her activities to avoid exacerbating the injury."
+  },
+  "stage2_audit": [
+    {
+      "claim": "The patient is a 43-year-old female.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0001,
+        "contradiction": 0.0002
+      },
+      "support_evidence": "Patient: Hello. I'm 43 years old, female. I came in because my arm has been hurting near my wrist. It started after I hit the pole of the net while playing tennis, and it jarred my arm. It's been swollen a little and hurts when I move my wrist.",
+      "contradiction_evidence": "Patient: The tenderness is on the part of my arm near my wrist, right around where I hit it on the pole. It's pretty sore when they press there, and it's stiff sometimes, especially when I try to move my wrist or flex my thumb. It makes some daily activities a bit harder, like opening jars or typing, but nothing too bad.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient is a 43-year-old female.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 43-year-old female who presents with a 2-week history of wrist pain and swelling after hitting a pole while playing tennis."
+    },
+    {
+      "claim": "The patient presents with a 2-week history of wrist pain.",
+      "scores": {
+        "entailment": 0.0018,
+        "neutral": 0.0055,
+        "contradiction": 0.9985
+      },
+      "support_evidence": "Patient: No, I haven't noticed any redness, warmth, or increased swelling in the wrist over the past few days. The swelling was just a little bit right after it happened, but it hasn't gotten worse since.",
+      "contradiction_evidence": "Doctor: Have you experienced any previous episodes of wrist pain or injury that might suggest a history of repetitive strain or overuse, such as carpal tunnel syndrome or tendinitis?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "removed_contradicted",
+      "keep": false,
+      "output": "",
+      "reason": "Contradicted by the conversation and no evidence-based correction was possible.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 43-year-old female who presents with a 2-week history of wrist pain and swelling after hitting a pole while playing tennis."
+    },
+    {
+      "claim": "The patient presents with swelling of the wrist.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0002,
+        "contradiction": 0.0012
+      },
+      "support_evidence": "Patient: The swelling is on the part of my arm near my wrist, and there's no bruising or deformity that I can see. It's just a little puffy, nothing too bad.",
+      "contradiction_evidence": "Patient: The tenderness is on the part of my arm near my wrist, right around where I hit it on the pole. It's pretty sore when they press there, and it's stiff sometimes, especially when I try to move my wrist or flex my thumb. It makes some daily activities a bit harder, like opening jars or typing, but nothing too bad.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient presents with swelling of the wrist.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 43-year-old female who presents with a 2-week history of wrist pain and swelling after hitting a pole while playing tennis."
+    },
+    {
+      "claim": "The patient hit a pole while playing tennis.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0001,
+        "contradiction": 0.001
+      },
+      "support_evidence": "Patient: Hello. I'm 43 years old, female. I came in because my arm has been hurting near my wrist. It started after I hit the pole of the net while playing tennis, and it jarred my arm. It's been swollen a little and hurts when I move my wrist.",
+      "contradiction_evidence": "Patient: The tenderness is on the part of my arm near my wrist, right around where I hit it on the pole. It's pretty sore when they press there, and it's stiff sometimes, especially when I try to move my wrist or flex my thumb. It makes some daily activities a bit harder, like opening jars or typing, but nothing too bad.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient hit a pole while playing tennis.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 43-year-old female who presents with a 2-week history of wrist pain and swelling after hitting a pole while playing tennis."
+    },
+    {
+      "claim": "The patient presents with wrist pain after hitting a pole while playing tennis.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.0022
+      },
+      "support_evidence": "Patient: Hello. I'm 43 years old, female. I came in because my arm has been hurting near my wrist. It started after I hit the pole of the net while playing tennis, and it jarred my arm. It's been swollen a little and hurts when I move my wrist.",
+      "contradiction_evidence": "Patient: The tenderness is on the part of my arm near my wrist, right around where I hit it on the pole. It's pretty sore when they press there, and it's stiff sometimes, especially when I try to move my wrist or flex my thumb. It makes some daily activities a bit harder, like opening jars or typing, but nothing too bad.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient presents with wrist pain after hitting a pole while playing tennis.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 43-year-old female who presents with a 2-week history of wrist pain and swelling after hitting a pole while playing tennis."
+    },
+    {
+      "claim": "The patient presents with swelling of the wrist after hitting a pole while playing tennis.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.0018
+      },
+      "support_evidence": "Patient: Hello. I'm 43 years old, female. I came in because my arm has been hurting near my wrist. It started after I hit the pole of the net while playing tennis, and it jarred my arm. It's been swollen a little and hurts when I move my wrist.",
+      "contradiction_evidence": "Patient: The tenderness is on the part of my arm near my wrist, right around where I hit it on the pole. It's pretty sore when they press there, and it's stiff sometimes, especially when I try to move my wrist or flex my thumb. It makes some daily activities a bit harder, like opening jars or typing, but nothing too bad.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient presents with swelling of the wrist after hitting a pole while playing tennis.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 43-year-old female who presents with a 2-week history of wrist pain and swelling after hitting a pole while playing tennis."
+    },
+    {
+      "claim": "The pain is located near the wrist, and the patient reports tenderness on the part of the arm near the wrist, especially when pressing on the area.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0004,
+        "contradiction": 0.0497
+      },
+      "support_evidence": "Patient: The tenderness is on the part of my arm near my wrist, right around where I hit it on the pole. It's pretty sore when they press there, and it's stiff sometimes, especially when I try to move my wrist or flex my thumb. It makes some daily activities a bit harder, like opening jars or typing, but nothing too bad.",
+      "contradiction_evidence": "Patient: No, I haven't experienced any locking, clicking, or snapping sensations in the wrist during movement. It just hurts when I move it certain ways, especially bending or flexing my thumb.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain is located near the wrist, and the patient reports tenderness on the part of the arm near the wrist, especially when pressing on the area.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The pain is located near the wrist, and the patient reports tenderness on the part of the arm near the wrist, especially when pressing on the area.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient describes the pain as worsening with wrist movement, particularly bending or flexing the thumb.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0003,
+        "contradiction": 0.0096
+      },
+      "support_evidence": "Patient: The movements that cause pain are when I bend my wrist or flex my thumb. I don’t feel any clicking or locking in my wrist, and I haven’t had any trouble gripping objects, but it does hurt when I move it a certain way.",
+      "contradiction_evidence": "Patient: No, I haven't experienced any stiffness or difficulty moving my fingers, and the pain hasn't really radiated up my forearm. It's mostly localized to my wrist and the area around my thumb.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient describes the pain as worsening with wrist movement, particularly bending or flexing the thumb.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "The patient describes the pain as worsening with wrist movement, particularly bending or flexing the thumb.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient reports no numbness, tingling, or weakness in the hand or fingers.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.0241
+      },
+      "support_evidence": "Patient: No, I haven't experienced any numbness, tingling, or weakness in my hand or fingers since the injury. It's just been pain, mostly when I move my wrist or flex my thumb.",
+      "contradiction_evidence": "Patient: No, I haven't experienced any locking, clicking, or snapping sensations in the wrist during movement. It just hurts when I move it certain ways, especially bending or flexing my thumb.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient reports no numbness, tingling, or weakness in the hand or fingers.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "The patient reports no numbness, tingling, or weakness in the hand or fingers.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient has no prior history of wrist injuries or conditions affecting the wrist or arm.",
+      "scores": {
+        "entailment": 0.9552,
+        "neutral": 0.0438,
+        "contradiction": 0.9927
+      },
+      "support_evidence": "Patient: No, I don't think I've had any previous imaging studies for the wrist or hand, like an MRI or ultrasound. I don't have a history of ligament or tendon injuries in the wrist or hand. This is the first time I've had pain like this.",
+      "contradiction_evidence": "Patient: The tenderness is on the part of my arm near my wrist, right around where I hit it on the pole. It's pretty sore when they press there, and it's stiff sometimes, especially when I try to move my wrist or flex my thumb. It makes some daily activities a bit harder, like opening jars or typing, but nothing too bad.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has no prior history of wrist injuries or conditions affecting the wrist or arm.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "The patient has no prior history of wrist injuries or conditions affecting the wrist or arm.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient has not undergone any imaging studies for this injury or any prior wrist-related issues.",
+      "scores": {
+        "entailment": 0.9992,
+        "neutral": 0.0003,
+        "contradiction": 0.0205
+      },
+      "support_evidence": "Doctor: Have you undergone any imaging studies, such as X-rays or MRI, for this wrist injury or any prior wrist-related issues?",
+      "contradiction_evidence": "Patient: No, I don't think so. I don't remember having any previous wrist injuries or undergoing any imaging or treatment for wrist-related issues. This is the first time I've had pain like this in my wrist.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has not undergone any imaging studies for this injury or any prior wrist-related issues.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "The patient has not undergone any imaging studies for this injury or any prior wrist-related issues.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 10,
+      "removed_contradicted": 1,
+      "exempt": 1
+    },
+    "num_claims": 11,
+    "num_kept": 10,
+    "claim_retention_rate": 0.9091
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient reports the swelling is \"just a little puffy, nothing too bad\".",
+      "evidence": "Patient: The swelling is on the part of my arm near my wrist, and there's no bruising or deformity that I can see. It's just a little puffy, nothing too bad.",
+      "section": "subjective",
+      "candidate": "It's just a little puffy, nothing too bad."
+    },
+    {
+      "statement": "The patient reports that daily activities, such as opening jars and typing, are made slightly more difficult due to wrist tenderness.",
+      "evidence": "Patient: The tenderness is on the part of my arm near my wrist, right around where I hit it on the pole. It's pretty sore when they press there, and it's stiff sometimes, especially when I try to move my wrist or flex my thumb. It makes some daily activities a bit harder, like opening jars or typing, but nothing too bad.",
+      "section": "subjective",
+      "candidate": "It makes some daily activities a bit harder, like opening jars or typing, but nothing too bad."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "It's just a little puffy, nothing too bad.",
+      "speaker": "Patient",
+      "coverage": 0.144,
+      "nearest_so_sentence": "The patient reports no numbness, tingling, or weakness in the hand or fingers.",
+      "statement": "The patient reports the swelling is \"just a little puffy, nothing too bad\".",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: The swelling is on the part of my arm near my wrist, and there's no bruising or deformity that I can see. It's just a little puffy, nothing too bad.",
+      "scores_vs_dialogue": {
+        "entailment": 0.999,
+        "contradiction": 0.0114
+      },
+      "duplicate_entailment": 0.2711,
+      "duplicate_similarity": 0.5879,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 4,
+        "perplexity": 12.03,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "No, I don't think so.",
+      "speaker": "Patient",
+      "coverage": 0.1462,
+      "nearest_so_sentence": "The patient has not undergone any imaging studies for this injury or any prior wrist-related issues.",
+      "statement": "The patient denies having experienced any previous episodes of wrist pain or injury that might suggest a history of repetitive strain or overuse.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Have you experienced any previous episodes of wrist pain or injury that might suggest a history of repetitive strain or overuse, such as carpal tunnel syndrome or tendinitis?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9988,
+        "contradiction": 0.0117
+      },
+      "duplicate_entailment": 0.9976,
+      "duplicate_similarity": 0.6905
+    },
+    {
+      "candidate": "No, I don't think so.",
+      "speaker": "Patient",
+      "coverage": 0.1466,
+      "nearest_so_sentence": "The patient has not undergone any imaging studies for this injury or any prior wrist-related issues.",
+      "statement": "The patient denies having experienced any previous wrist injuries or undergone any prior imaging or treatment for wrist-related issues.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Have you experienced any previous wrist injuries or undergone any prior imaging or treatment for wrist-related issues?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9989,
+        "contradiction": 0.0188
+      },
+      "duplicate_entailment": 0.9978,
+      "duplicate_similarity": 0.8023
+    },
+    {
+      "candidate": "It makes some daily activities a bit harder, like opening jars or typing, but nothing too bad.",
+      "speaker": "Patient",
+      "coverage": 0.2017,
+      "nearest_so_sentence": "The patient describes the pain as worsening with wrist movement, particularly bending or flexing the thumb.",
+      "statement": "The patient reports that daily activities, such as opening jars and typing, are made slightly more difficult due to wrist tenderness.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: The tenderness is on the part of my arm near my wrist, right around where I hit it on the pole. It's pretty sore when they press there, and it's stiff sometimes, especially when I try to move my wrist or flex my thumb. It makes some daily activities a bit harder, like opening jars or typing, but nothing too bad.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0394
+      },
+      "duplicate_entailment": 0.6476,
+      "duplicate_similarity": 0.6463,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 5,
+        "perplexity": 12.76,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "As for prior injuries, I had a trauma from falling on a rake while doing lawn work.",
+      "speaker": "Patient",
+      "coverage": 0.2939,
+      "nearest_so_sentence": "The patient presents with swelling of the wrist after hitting a pole while playing tennis.",
+      "statement": "The patient reports a prior injury from falling on a rake while doing lawn work.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: No numbness in my hand, but there's a little pain when I move my wrist. As for prior injuries, I had a trauma from falling on a rake while doing lawn work. I don’t remember any other issues with my wrist or arm before this.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.7887
+      }
+    },
+    {
+      "candidate": "I'm 43 years old, female.",
+      "speaker": "Patient",
+      "coverage": 0.3598,
+      "nearest_so_sentence": "The patient is a 43-year-old female.",
+      "statement": "The patient reports being 43 years old and female.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: Hello. I'm 43 years old, female. I came in because my arm has been hurting near my wrist. It started after I hit the pole of the net while playing tennis, and it jarred my arm. It's been swollen a little and hurts when I move my wrist.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0004
+      },
+      "duplicate_entailment": 0.9995,
+      "duplicate_similarity": 0.855
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 37,
+    "num_covered": 31,
+    "num_flagged": 6,
+    "num_not_checked_cap": 0,
+    "num_added": 2
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "stage": "stage2",
+        "section": "subjective",
+        "claim": "The patient presents with a 2-week history of wrist pain.",
+        "source_sentence": "The patient is a 43-year-old female who presents with a 2-week history of wrist pain and swelling after hitting a pole while playing tennis.",
+        "decision": "removed_contradicted",
+        "scores": {
+          "entailment": 0.0018,
+          "neutral": 0.0055,
+          "contradiction": 0.9985
+        },
+        "reason": "Contradicted by the conversation and no evidence-based correction was possible.",
+        "nearest_evidence": "Doctor: Have you experienced any previous episodes of wrist pain or injury that might suggest a history of repetitive strain or overuse, such as carpal tunnel syndrome or tendinitis?"
+      }
+    ],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "As for prior injuries, I had a trauma from falling on a rake while doing lawn work.",
+        "statement": "The patient reports a prior injury from falling on a rake while doing lawn work.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9994,
+          "contradiction": 0.7887
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 19.2,
+  "ap_unchanged": true,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: Hello. I'm 43 years old, female. I came in because my arm has been hurting near my wrist. It started after I hit the pole of the net while playing tennis, and it jarred my arm. It's been swollen a little and hurts when I move my wrist.\nDoctor: Have you experienced any numbness, tingling, or weakness in your hand or fingers? Have you had any prior injuries or conditions affecting your wrist or arm?\nPatient: No numbness in my hand, but there's a little pain when I move my wrist. As for prior injuries, I had a trauma from falling on a rake while doing lawn work. I don’t remember any other issues with my wrist or arm before this.\nDoctor: Could you describe the specific movements that cause pain, the presence of any clicking or locking in the wrist, and whether you have experienced any weakness or difficulty gripping objects?\nPatient: The movements that cause pain are when I bend my wrist or flex my thumb. I don’t feel any clicking or locking in my wrist, and I haven’t had any trouble gripping objects, but it does hurt when I move it a certain way.\nDoctor: Could you please describe the location of the swelling and whether there is any bruising or deformity visible on your wrist?\nPatient: The swelling is on the part of my arm near my wrist, and there's no bruising or deformity that I can see. It's just a little puffy, nothing too bad.\nDoctor: Could you please describe the specific location of the tenderness on your wrist and whether there is any associated stiffness or difficulty in performing daily activities?\nPatient: The tenderness is on the part of my arm near my wrist, right around where I hit it on the pole. It's pretty sore when they press there, and it's stiff sometimes, especially when I try to move my wrist or flex my thumb. It makes some daily activities a bit harder, like opening jars or typing, but nothing too bad.\nDoctor: Have you undergone any imaging studies, such as X-rays or MRI, for this wrist injury or any prior wrist-related issues?\nPatient: No, I haven't had any imaging studies for this injury or any prior wrist issues. The doctor took an X-ray today, and it came back normal, but I wasn't told about any other imaging done before.\nDoctor: Have you experienced any locking, clicking, or snapping sensations in the wrist during movement?\nPatient: No, I haven't experienced any locking, clicking, or snapping sensations in the wrist during movement. It just hurts when I move it certain ways, especially bending or flexing my thumb.\nDoctor: Have you experienced any previous episodes of wrist pain or injury that might suggest a history of repetitive strain or overuse, such as carpal tunnel syndrome or tendinitis?\nPatient: No, I don't think so. I don't remember having any previous wrist pain or injuries like that. This is the first time I've had pain like this in my wrist.\nDoctor: Have you experienced any locking, clicking, or snapping sensations in the wrist during movement?\nPatient: No, I haven't experienced any locking, clicking, or snapping sensations in the wrist during movement. It just hurts when I move it certain ways, especially bending or flexing my thumb.\nDoctor: Have you noticed any redness, warmth, or increased swelling in the wrist over the past few days?\nPatient: No, I haven't noticed any redness, warmth, or increased swelling in the wrist over the past few days. The swelling was just a little bit right after it happened, but it hasn't gotten worse since.\nDoctor: Have you experienced any stiffness or difficulty moving your fingers, or any pain radiating up your forearm?\nPatient: No, I haven't experienced any stiffness or difficulty moving my fingers, and the pain hasn't really radiated up my forearm. It's mostly localized to my wrist and the area around my thumb.\nDoctor: Have you experienced any stiffness or difficulty moving your fingers, and has the pain radiated up your forearm?\nPatient: No, I haven't experienced any stiffness or difficulty moving my fingers, and the pain hasn't really radiated up my forearm. It's mostly localized to my wrist and the area around my thumb.\nDoctor: Have you experienced any previous wrist injuries or undergone any prior imaging or treatment for wrist-related issues?\nPatient: No, I don't think so. I don't remember having any previous wrist injuries or undergoing any imaging or treatment for wrist-related issues. This is the first time I've had pain like this in my wrist.\nDoctor: Have you experienced any numbness, tingling, or weakness in your hand or fingers since the injury?\nPatient: No, I haven't experienced any numbness, tingling, or weakness in my hand or fingers since the injury. It's just been pain, mostly when I move my wrist or flex my thumb.\nDoctor: Have you undergone any previous imaging studies for the wrist or hand, such as an MRI or ultrasound, or do you have a history of ligament or tendon injuries in the wrist or hand?\nPatient: No, I don't think I've had any previous imaging studies for the wrist or hand, like an MRI or ultrasound. I don't have a history of ligament or tendon injuries in the wrist or hand. This is the first time I've had pain like this.",
+  "reference_so": {
+    "subjective": "Basic information: 43-year-old female presenting with wrist pain following a tennis-related injury\n\nHistory of present illness: Wrist pain began after hitting the net pole during tennis, with swelling and pain on movement. The patient reports no numbness in the hand but notes pain with wrist movement. She also mentions a prior trauma from falling on a rake while doing lawn work. The patient reports no locking, clicking, or snapping sensations in the wrist during movement. It just hurts when I move it certain ways, especially bending or flexing my thumb. The swelling was just a little bit right after it happened, but it hasn't gotten worse since. The patient reports no stiffness or difficulty moving her fingers, and the pain hasn't really radiated up her forearm. It's mostly localized to her wrist and the area around her thumb.\n\nPast history: Prior trauma from falling on a rake while doing lawn work. No prior episodes of wrist pain or inflammation reported. No previous wrist injuries or imaging/treatment for wrist-related issues.",
+    "objective": "Physical examination: Tenderness localized to the wrist, with swelling noted on the volar aspect near the wrist. No deformity, bruising, or crepitus. Range of motion is limited due to pain, particularly with flexion and extension. No numbness or tingling in the hand. No signs of ligamentous or bony instability observed. Patient reports tenderness around the area of impact on the arm near the wrist, with stiffness during wrist movement and thumb flexion. Daily activities such as opening jars or typing are affected but not severely. No locking, clicking, or snapping sensations in the wrist during movement. No redness, warmth, or increased swelling in the wrist over the past few days.\n\nInvestigations: X-ray performed today showed no fractures, dislocations, or other abnormalities. No prior imaging or lab results reported. Patient has not undergone any imaging studies for this injury or prior wrist-related issues."
+  }
+}

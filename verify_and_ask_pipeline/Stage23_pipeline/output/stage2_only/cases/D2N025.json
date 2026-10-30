@@ -1,0 +1,155 @@
+{
+  "case_id": "D2N025",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient is a 74-year-old female who is here for a pre-operative evaluation for a right knee replacement surgery.\n* She has chronic congestive heart failure with diastolic dysfunction and is currently taking torsemide 20mg daily and lisinopril 10mg daily.\n* She reports manageable knee pain, but it worsens with walking longer distances or going up and down stairs, making it harder to keep up with her gardening.\n* She has not had any recent imaging for her knee, only discussions about the surgery plans.\n* She has not had any new symptoms related to her heart or knees since her last visit, and her breathing has been better with less swelling and pain in her legs.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient is a 74-year-old female who is here for a pre-operative evaluation for a right knee replacement surgery.\n* She has chronic congestive heart failure with diastolic dysfunction and is currently taking torsemide 20mg daily and lisinopril 10mg daily.\n* She reports manageable knee pain, but it worsens with walking longer distances or going up and down stairs, making it harder to keep up with her gardening.\n* She has not had any recent imaging for her knee, only discussions about the surgery plans.\n* She has not had any new symptoms related to her heart or knees since her last visit, and her breathing has been better with less swelling and pain in her legs.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has chronic congestive heart failure with diastolic dysfunction and is currently taking torsemide and lisinopril.\n* She has knee pain that worsens with activity, making it harder to perform daily activities.",
+    "plan": "* No explicit management or follow-up plan was documented in the conversation."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient is a 74-year-old female who is here for a pre-operative evaluation for a right knee replacement surgery.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0002,
+        "contradiction": 0.0116
+      },
+      "support_evidence": "Patient: I'm 74 years old, and I'm a female. I'm here because I need to have my right knee replaced this summer, and I need to make sure my heart condition is stable before the surgery.",
+      "contradiction_evidence": "Patient: I don't have the results of my most recent echocardiogram on hand, but I was told my heart function is stable enough for the surgery. I haven't had any recent imaging for my knee, just some discussions about the surgery plans.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient is a 74-year-old female who is here for a pre-operative evaluation for a right knee replacement surgery.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 74-year-old female who is here for a pre-operative evaluation for a right knee replacement surgery.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has chronic congestive heart failure with diastolic dysfunction and is currently taking torsemide 20mg daily and lisinopril 10mg daily.",
+      "scores": {
+        "entailment": 0.9987,
+        "neutral": 0.0004,
+        "contradiction": 0.0013
+      },
+      "support_evidence": "Patient: I have chronic congestive heart failure with diastolic dysfunction. I was on furosemide before, but they switched me to torsemide 20 milligrams by mouth daily. I also take lisinopril, which they increased to 10 milligrams daily. I haven't been on a potassium supplement, but I do have some leg cramps sometimes.",
+      "contradiction_evidence": "Patient: I don't have the results of my most recent echocardiogram on hand, but I was told my heart function is stable enough for the surgery. The doctor mentioned that my heart failure numbers are being monitored, and I'm currently on torsemide for my congestive heart failure.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has chronic congestive heart failure with diastolic dysfunction and is currently taking torsemide 20mg daily and lisinopril 10mg daily.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "She has chronic congestive heart failure with diastolic dysfunction and is currently taking torsemide 20mg daily and lisinopril 10mg daily.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She reports manageable knee pain, but it worsens with walking longer distances or going up and down stairs, making it harder to keep up with her gardening.",
+      "scores": {
+        "entailment": 0.9991,
+        "neutral": 0.0003,
+        "contradiction": 0.0081
+      },
+      "support_evidence": "Patient: My knee pain is manageable most of the time, but it does bother me when I try to walk longer distances or go up and down stairs. It's been making it harder to keep up with my gardening, which I really enjoy. I'm hoping the surgery will help me get back to doing more of the things I love.",
+      "contradiction_evidence": "Patient: I don't have the dates or specific results of my most recent echocardiogram, but I was told my heart function is stable enough for the surgery. The doctor mentioned that my heart failure numbers are being monitored, and I'm currently on torsemide for my congestive heart failure.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She reports manageable knee pain, but it worsens with walking longer distances or going up and down stairs, making it harder to keep up with her gardening.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "She reports manageable knee pain, but it worsens with walking longer distances or going up and down stairs, making it harder to keep up with her gardening.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has not had any recent imaging for her knee, only discussions about the surgery plans.",
+      "scores": {
+        "entailment": 0.9992,
+        "neutral": 0.0005,
+        "contradiction": 0.7344
+      },
+      "support_evidence": "Patient: I don't have the results of my most recent echocardiogram on hand, but I was told my heart function is stable enough for the surgery. My blood pressure has been okay, and my latest blood work showed my potassium is 3.9, which is steady. I haven't had any recent imaging for my knee, just some discussions about the surgery plans.",
+      "contradiction_evidence": "Patient: I don't have the dates or specific results of my most recent echocardiogram, but I was told my heart function is stable enough for the surgery. The doctor mentioned that my heart failure numbers are being monitored, and I'm currently on torsemide for my congestive heart failure.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has not had any recent imaging for her knee, only discussions about the surgery plans.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "She has not had any recent imaging for her knee, only discussions about the surgery plans.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has not had any new symptoms related to her heart or knees since her last visit, and her breathing has been better with less swelling and pain in her legs.",
+      "scores": {
+        "entailment": 0.9974,
+        "neutral": 0.0018,
+        "contradiction": 0.9896
+      },
+      "support_evidence": "Patient: I haven't had any new symptoms related to my heart or knees since my last visit. My breathing has been better, and I'm not having as much trouble with swelling or pain in my legs as before. The knee does bother me more when I walk longer or go up stairs, but I haven't had any sudden worsening of symptoms.",
+      "contradiction_evidence": "Doctor: Could you please describe any current symptoms related to your knee, such as pain, swelling, or difficulty with movement? Additionally, have you had any recent physical examination or imaging for your knee, such as an X-ray or MRI?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has not had any new symptoms related to her heart or knees since her last visit, and her breathing has been better with less swelling and pain in her legs.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "She has not had any new symptoms related to her heart or knees since her last visit, and her breathing has been better with less swelling and pain in her legs.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 5,
+      "exempt": 1
+    },
+    "num_claims": 5,
+    "num_kept": 5,
+    "claim_retention_rate": 1.0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": []
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 1.3,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 74 years old, and I'm a female. I'm here because I need to have my right knee replaced this summer, and I need to make sure my heart condition is stable before the surgery.\nDoctor: Could you please provide more details about your heart condition, including any diagnoses, medications, or previous treatments?\nPatient: I have chronic congestive heart failure with diastolic dysfunction. I was on furosemide before, but they switched me to torsemide 20 milligrams by mouth daily. I also take lisinopril, which they increased to 10 milligrams daily. I haven't been on a potassium supplement, but I do have some leg cramps sometimes.\nDoctor: Could you describe the current pain level in your right knee and how it affects your daily activities?\nPatient: My knee pain is manageable most of the time, but it does bother me when I try to walk longer distances or go up and down stairs. It's been making it harder to keep up with my gardening, which I really enjoy. I'm hoping the surgery will help me get back to doing more of the things I love.\nDoctor: Could you please provide the results of your most recent echocardiogram, blood pressure readings, and any recent laboratory tests such as BNP or electrolyte levels? Additionally, could you share the findings from your physical examination and any imaging or lab tests related to your knee condition?\nPatient: I don't have the results of my most recent echocardiogram on hand, but I was told my heart function is stable enough for the surgery. My blood pressure has been okay, and my latest blood work showed my potassium is 3.9, which is steady. I haven't had any recent imaging for my knee, just some discussions about the surgery plans.\nDoctor: Could you please describe any current symptoms related to your knee, such as pain, swelling, or difficulty with movement? Additionally, have you had any recent physical examination or imaging for your knee, such as an X-ray or MRI?\nPatient: My knee has been bothering me more when I walk longer or go up stairs, and it's been hard to keep up with my gardening. I haven't had any recent imaging for my knee, just some discussions about the surgery plans.\nDoctor: Could you please describe any swelling, pain, or stiffness in your knee, and have you noticed any changes in your ability to perform daily activities due to your knee condition?\nPatient: My knee has been bothering me more when I walk longer or go up stairs, and it's been hard to keep up with my gardening. I haven't had any recent imaging for my knee, just some discussions about the surgery plans.\nDoctor: Could you please provide the results of your most recent echocardiogram, including ejection fraction and any findings related to diastolic dysfunction?\nPatient: I don't have the results of my most recent echocardiogram on hand, but I was told my heart function is stable enough for the surgery. I haven't had any recent imaging for my knee, just some discussions about the surgery plans.\nDoctor: Could you please provide the results of your most recent echocardiogram, including ejection fraction and specific findings related to diastolic dysfunction?\nPatient: I don't have the results of my most recent echocardiogram on hand, but I was told my heart function is stable enough for the surgery. The doctor mentioned that my heart failure numbers are being monitored, and I'm currently on torsemide for my congestive heart failure.\nDoctor: Could you please provide the results of your most recent echocardiogram, including the ejection fraction and any specific findings related to diastolic dysfunction?\nPatient: I don't have the results of my most recent echocardiogram on hand, but I was told my heart function is stable enough for the surgery. The doctor mentioned that my heart failure numbers are being monitored, and I'm currently on torsemide for my congestive heart failure.\nDoctor: Could you please provide the dates of your most recent echocardiogram and knee imaging, if available? If not, when was the last time you had these tests done?\nPatient: I don't have the dates of my most recent echocardiogram or knee imaging, but I was told my heart function is stable enough for the surgery. I haven't had any recent imaging for my knee, just some discussions about the surgery plans.\nDoctor: Could you please describe any other symptoms you're experiencing related to your heart or knees, such as shortness of breath, swelling, or pain levels, so we can better assess your condition?\nPatient: I haven't had any new symptoms related to my heart or knees since my last visit. My breathing has been better, and I'm not having as much trouble with swelling or pain in my legs as before. The knee does bother me more when I walk longer or go up stairs, but I haven't had any sudden worsening of symptoms.\nDoctor: Could you please provide the dates of your most recent echocardiogram and knee imaging, if available?\nPatient: I don't have the dates of my most recent echocardiogram or knee imaging, but I was told my heart function is stable enough for the surgery. I haven't had any recent imaging for my knee, just some discussions about the surgery plans.\nDoctor: Could you please provide the dates and results of your most recent echocardiogram, including ejection fraction and diastolic dysfunction findings?\nPatient: I don't have the dates or results of my most recent echocardiogram, but I was told my heart function is stable enough for the surgery. The doctor mentioned that my heart failure numbers are being monitored, and I'm currently on torsemide for my congestive heart failure.\nDoctor: Could you please provide the most recent echocardiogram results, including ejection fraction and specific findings related to diastolic dysfunction?\nPatient: I don't have the dates or specific results of my most recent echocardiogram, but I was told my heart function is stable enough for the surgery. The doctor mentioned that my heart failure numbers are being monitored, and I'm currently on torsemide for my congestive heart failure.\nDoctor: Could you please provide the dates and results of your most recent echocardiogram, including ejection fraction and diastolic dysfunction findings?\nPatient: I don't have the dates or specific results of my most recent echocardiogram, but I was told my heart function is stable enough for the surgery. The doctor mentioned that my heart failure numbers are being monitored, and I'm currently on torsemide for my congestive heart failure.",
+  "reference_so": {
+    "subjective": "Basic information: 74-year-old female seeking knee replacement surgery; wants to ensure her heart condition is stable before the surgery.\n\nHistory of present illness: Chronic congestive heart failure with diastolic dysfunction; currently on torsemide 20 mg by mouth daily and lisinopril 10 mg daily; reports occasional leg cramps. Knee pain worsens with walking longer or going up stairs, and it has been difficult to keep up with gardening.\n\nPast history: Chronic congestive heart failure with diastolic dysfunction; previously on furosemide.",
+    "objective": "Physical examination: [Not yet collected]\n\nInvestigations: Latest potassium level is 3.9 mmol/L. Patient reports stable heart function but does not have recent echocardiogram results on hand. No recent knee imaging available."
+  }
+}

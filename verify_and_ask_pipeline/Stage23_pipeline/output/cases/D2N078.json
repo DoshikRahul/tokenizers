@@ -1,0 +1,352 @@
+{
+  "case_id": "D2N078",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* The patient is a 45-year-old male who has been experiencing right knee pain for about a week after slipping and falling on his property.\n* The pain is worse when moving the knee up and down and when putting pressure on it.\n* The patient felt something pop when he fell and has some swelling in the knee.\n* He has not experienced any deformity, instability, or locking in the knee since the injury.\n* He has not experienced any numbness, tingling, or weakness in his leg or foot since the injury.\n* He has not undergone any imaging studies other than an X-ray, which showed no fractures or bony abnormalities.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* The patient is a 45-year-old male who has been experiencing right knee pain for about a week after slipping and falling on his property.\n* The pain is worse when moving the knee up. The pain is worse when moving the knee down.\n* The patient felt something pop when he fell and has some swelling in the knee.\n* He has not experienced any deformity, instability, or locking in the knee since the injury.\n* He has not experienced any numbness, tingling, or weakness in his leg or foot since the injury.\n* He has not undergone any imaging studies other than an X-ray, which showed no fractures or bony abnormalities.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* The patient reports that the doctor stated they did not break anything following an imaging study.\n* The patient is a 45-year-old male who has been experiencing right knee pain for about a week after slipping and falling on his property.\n* The pain is worse when moving the knee up. The pain is worse when moving the knee down.\n* The patient felt something pop when he fell and has some swelling in the knee.\n* He has not experienced any deformity, instability, or locking in the knee since the injury.\n* He has not experienced any numbness, tingling, or weakness in his leg or foot since the injury.\n* He has not undergone any imaging studies other than an X-ray, which showed no fractures or bony abnormalities.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has a history of right knee pain and swelling after a fall, with no evidence of deformity, instability, or locking.\n* The patient has not undergone any imaging studies other than an X-ray, which showed no fractures or bony abnormalities.",
+    "plan": "* The doctor did not discuss any specific management or follow-up plan with the patient.\n* The patient has not undergone any imaging studies other than an X-ray, and the doctor did not recommend any further imaging studies.\n* The patient has not been prescribed any medication or physical therapy.\n* The patient was not referred to any specialists or for further evaluation.\n* The patient was not scheduled for any follow-up appointments."
+  },
+  "stage2_audit": [
+    {
+      "claim": "The patient is a 45-year-old male who has been experiencing right knee pain for about a week after slipping and falling on his property.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0003,
+        "contradiction": 0.0021
+      },
+      "support_evidence": "Patient: I'm 45 years old, male. I came in because I've been having some right knee pain for about a week after I slipped and fell on my property. It's been bothering me when I move it up and down, and I feel some pain when I put pressure on it. I also felt something pop when I fell, and it's a little swollen now.",
+      "contradiction_evidence": "Doctor: Has the patient undergone an MRI or ultrasound of the right knee to evaluate for ligamentous injuries, meniscal tears, or soft tissue abnormalities?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient is a 45-year-old male who has been experiencing right knee pain for about a week after slipping and falling on his property.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 45-year-old male who has been experiencing right knee pain for about a week after slipping and falling on his property.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The pain is worse when moving the knee up.",
+      "scores": {
+        "entailment": 0.714,
+        "neutral": 0.2804,
+        "contradiction": 0.0302
+      },
+      "support_evidence": "Patient: No, I haven't noticed any deformity, and the knee doesn't feel unstable. I can bear some weight on it, but it's uncomfortable when I try to move it up and down.",
+      "contradiction_evidence": "Patient: No, I haven't experienced any locking, clicking, or instability in my right knee since the injury. It just feels uncomfortable when I move it up and down, and there's some swelling, but it doesn't feel unstable.",
+      "corrected_text": null,
+      "flagged": true,
+      "decision": "uncertain",
+      "keep": true,
+      "output": "The pain is worse when moving the knee up.",
+      "reason": "Partially supported; kept and flagged for review (neutral is not proof of falsehood).",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The pain is worse when moving the knee up and down and when putting pressure on it."
+    },
+    {
+      "claim": "The pain is worse when moving the knee down.",
+      "scores": {
+        "entailment": 0.7925,
+        "neutral": 0.2033,
+        "contradiction": 0.0114
+      },
+      "support_evidence": "Patient: No, I haven't noticed any deformity, and the knee doesn't feel unstable. I can bear some weight on it, but it's uncomfortable when I try to move it up and down.",
+      "contradiction_evidence": "Patient: No, I haven't experienced any locking, clicking, or instability in my right knee since the injury. It just feels uncomfortable when I move it up and down, and there's some swelling, but it doesn't feel unstable.",
+      "corrected_text": null,
+      "flagged": true,
+      "decision": "uncertain",
+      "keep": true,
+      "output": "The pain is worse when moving the knee down.",
+      "reason": "Partially supported; kept and flagged for review (neutral is not proof of falsehood).",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The pain is worse when moving the knee up and down and when putting pressure on it."
+    },
+    {
+      "claim": "The pain is worse when putting pressure on the knee.",
+      "scores": {
+        "entailment": 0.352,
+        "neutral": 0.6399,
+        "contradiction": 0.0162
+      },
+      "support_evidence": "Patient: No, I haven't noticed any deformity, and the knee doesn't feel unstable. I can bear some weight on it, but it's uncomfortable when I try to move it up and down.",
+      "contradiction_evidence": "Patient: I'm 45 years old, male. I came in because I've been having some right knee pain for about a week after I slipped and fell on my property. It's been bothering me when I move it up and down, and I feel some pain when I put pressure on it. I also felt something pop when I fell, and it's a little swollen now.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "removed_unsupported",
+      "keep": false,
+      "output": "",
+      "reason": "No supporting evidence in the conversation (not asserted to be false).",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The pain is worse when moving the knee up and down and when putting pressure on it."
+    },
+    {
+      "claim": "The patient felt something pop when he fell and has some swelling in the knee.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.0049
+      },
+      "support_evidence": "Patient: I'm 45 years old, male. I came in because I've been having some right knee pain for about a week after I slipped and fell on my property. It's been bothering me when I move it up and down, and I feel some pain when I put pressure on it. I also felt something pop when I fell, and it's a little swollen now.",
+      "contradiction_evidence": "Patient: No, I haven't experienced any locking or clicking in my knee since the injury. It just feels uncomfortable when I move it up and down, and there's some swelling, but it doesn't feel unstable.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient felt something pop when he fell and has some swelling in the knee.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "The patient felt something pop when he fell and has some swelling in the knee.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has not experienced any deformity, instability, or locking in the knee since the injury.",
+      "scores": {
+        "entailment": 0.9934,
+        "neutral": 0.0059,
+        "contradiction": 0.0422
+      },
+      "support_evidence": "Doctor: Has the patient experienced any locking, clicking, or instability in the right knee since the injury?",
+      "contradiction_evidence": "Patient: No, I haven't experienced any locking or clicking in my knee since the injury. It just feels uncomfortable when I move it up and down, and there's some swelling, but it doesn't feel unstable.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has not experienced any deformity, instability, or locking in the knee since the injury.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "He has not experienced any deformity, instability, or locking in the knee since the injury.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has not experienced any numbness, tingling, or weakness in his leg or foot since the injury.",
+      "scores": {
+        "entailment": 0.9982,
+        "neutral": 0.0013,
+        "contradiction": 0.0363
+      },
+      "support_evidence": "Patient: No, I haven't experienced any numbness, tingling, or weakness in my leg or foot since the injury. Everything feels normal down there, just some discomfort in the knee when I move it.",
+      "contradiction_evidence": "Doctor: Have you experienced any numbness, tingling, or weakness in your leg or foot since the injury?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has not experienced any numbness, tingling, or weakness in his leg or foot since the injury.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "He has not experienced any numbness, tingling, or weakness in his leg or foot since the injury.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has not undergone any imaging studies other than an X-ray, which showed no fractures or bony abnormalities.",
+      "scores": {
+        "entailment": 0.9985,
+        "neutral": 0.001,
+        "contradiction": 0.0459
+      },
+      "support_evidence": "Patient: No, I haven't had an MRI or ultrasound of my right knee yet. The only imaging they did was an X-ray, and they said there were no fractures or bony issues, but they didn't mention anything about the ligaments or menisci. I don't know if there's anything else they saw on the X-ray.",
+      "contradiction_evidence": "Patient: No, I haven't had an MRI or ultrasound of my right knee yet. The only imaging they did was an X-ray, and they said there were no fractures or bony issues, but they didn't mention anything about the ligaments or menisci. I don't know if there's anything else they saw on the X-ray.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has not undergone any imaging studies other than an X-ray, which showed no fractures or bony abnormalities.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "He has not undergone any imaging studies other than an X-ray, which showed no fractures or bony abnormalities.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 5,
+      "uncertain": 2,
+      "removed_unsupported": 1,
+      "exempt": 1
+    },
+    "num_claims": 8,
+    "num_kept": 7,
+    "claim_retention_rate": 0.875
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient reports that the doctor stated they did not break anything following an imaging study.",
+      "evidence": "Patient: No, I haven't had an MRI or any other imaging studies done yet. The only thing they did was an X-ray, and they said there were no fractures or bony problems, but they didn't mention anything else. I don't know if there's anything else they saw on the X-ray.",
+      "section": "subjective",
+      "candidate": "I'm not sure about the exact results, but the doctor said I didn't break anything."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I'm 45 years old, male.",
+      "speaker": "Patient",
+      "coverage": 0.1709,
+      "nearest_so_sentence": "The patient is a 45-year-old male who has been experiencing right knee pain for about a week after slipping and falling on his property.",
+      "statement": "The patient reports being 45 years old and male.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 45 years old, male. I came in because I've been having some right knee pain for about a week after I slipped and fell on my property. It's been bothering me when I move it up and down, and I feel some pain when I put pressure on it. I also felt something pop when I fell, and it's a little swollen now.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0145
+      },
+      "duplicate_entailment": 0.9996,
+      "duplicate_similarity": 0.5464
+    },
+    {
+      "candidate": "I'm 45 years old, male.",
+      "speaker": "Patient",
+      "coverage": 0.1715,
+      "nearest_so_sentence": "The patient is a 45-year-old male who has been experiencing right knee pain for about a week after slipping and falling on his property.",
+      "statement": "The patient is 45 years old, male.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 45 years old, male. I came in because I've been having some right knee pain for about a week after I slipped and fell on my property. It's been bothering me when I move it up and down, and I feel some pain when I put pressure on it. I also felt something pop when I fell, and it's a little swollen now.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0029
+      },
+      "duplicate_entailment": 0.9988,
+      "duplicate_similarity": 0.5937
+    },
+    {
+      "candidate": "I'm not sure about the exact results, but the doctor said I didn't break anything.",
+      "speaker": "Patient",
+      "coverage": 0.3239,
+      "nearest_so_sentence": "He has not undergone any imaging studies other than an X-ray, which showed no fractures or bony abnormalities.",
+      "statement": "The patient reports that the doctor stated they did not break anything following an imaging study.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: No, I haven't had an MRI or any other imaging studies done yet. The only thing they did was an X-ray, and they said there were no fractures or bony problems, but they didn't mention anything else. I don't know if there's anything else they saw on the X-ray.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.0375
+      },
+      "duplicate_entailment": 0.6077,
+      "duplicate_similarity": 0.6826,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 15.42,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I can bear some weight on it, but it's uncomfortable when I try to move it up and down.",
+      "speaker": "Patient",
+      "coverage": 0.3653,
+      "nearest_so_sentence": "The pain is worse when moving the knee down.",
+      "statement": "The patient reports being able to bear some weight on the affected right knee, but experiences discomfort when attempting to move it up and down.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I haven't noticed any deformity, and the knee doesn't feel unstable. I can bear some weight on it, but it's uncomfortable when I try to move it up and down.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0063
+      },
+      "duplicate_entailment": 0.9982,
+      "duplicate_similarity": 0.7272
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 39,
+    "num_covered": 35,
+    "num_flagged": 4,
+    "num_not_checked_cap": 0,
+    "num_added": 1
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "stage": "stage2",
+        "section": "subjective",
+        "claim": "The pain is worse when putting pressure on the knee.",
+        "source_sentence": "The pain is worse when moving the knee up and down and when putting pressure on it.",
+        "decision": "removed_unsupported",
+        "scores": {
+          "entailment": 0.352,
+          "neutral": 0.6399,
+          "contradiction": 0.0162
+        },
+        "reason": "No supporting evidence in the conversation (not asserted to be false).",
+        "nearest_evidence": "Patient: No, I haven't noticed any deformity, and the knee doesn't feel unstable. I can bear some weight on it, but it's uncomfortable when I try to move it up and down."
+      }
+    ],
+    "flagged_kept_stage2": [
+      {
+        "stage": "stage2",
+        "section": "subjective",
+        "claim": "The pain is worse when moving the knee up.",
+        "decision": "uncertain",
+        "scores": {
+          "entailment": 0.714,
+          "neutral": 0.2804,
+          "contradiction": 0.0302
+        },
+        "reason": "Partially supported; kept and flagged for review (neutral is not proof of falsehood)."
+      },
+      {
+        "stage": "stage2",
+        "section": "subjective",
+        "claim": "The pain is worse when moving the knee down.",
+        "decision": "uncertain",
+        "scores": {
+          "entailment": 0.7925,
+          "neutral": 0.2033,
+          "contradiction": 0.0114
+        },
+        "reason": "Partially supported; kept and flagged for review (neutral is not proof of falsehood)."
+      }
+    ],
+    "rejected_stage3": []
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 13.6,
+  "ap_unchanged": true,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 45 years old, male. I came in because I've been having some right knee pain for about a week after I slipped and fell on my property. It's been bothering me when I move it up and down, and I feel some pain when I put pressure on it. I also felt something pop when I fell, and it's a little swollen now.\nDoctor: Could you please provide your height, weight, and any prior medical conditions or surgeries?\nPatient: I'm 45 years old, male. I came in because I've been having some right knee pain for about a week after I slipped and fell on my property. It's been bothering me when I move it up and down, and I feel some pain when I put pressure on it. I also felt something pop when I fell, and it's a little swollen now.\nDoctor: Have you experienced any deformity or instability in the right knee since the injury? Can you bear weight on the affected knee?\nPatient: No, I haven't noticed any deformity, and the knee doesn't feel unstable. I can bear some weight on it, but it's uncomfortable when I try to move it up and down.\nDoctor: Have you undergone any imaging studies such as X-rays or MRI for your knee injury? If so, please provide the results.\nPatient: I haven't had any imaging studies done yet, but I was told that there were no fractures or bony abnormalities on the X-ray they did before today. I'm not sure about the exact results, but the doctor said I didn't break anything.\nDoctor: Could you clarify if there were any soft tissue abnormalities noted on the prior X-ray, such as swelling, effusion, or ligamentous injuries?\nPatient: I don't know if there were any soft tissue abnormalities noted on the X-ray. The doctor just said there were no fractures or bony issues, but I wasn't told anything about the soft tissues.\nDoctor: Have you undergone an MRI or any other imaging studies to evaluate for ligamentous injuries, meniscal tears, or soft tissue abnormalities in the right knee?\nPatient: No, I haven't had an MRI or any other imaging studies done yet. The only thing they did was an X-ray, and they said there were no fractures or bony problems, but they didn't mention anything else. I don't know if there's anything else they saw on the X-ray.\nDoctor: Have you experienced any locking, clicking, or instability in your right knee since the injury?\nPatient: No, I haven't experienced any locking or clicking in my knee since the injury. It just feels uncomfortable when I move it up and down, and there's some swelling, but it doesn't feel unstable.\nDoctor: Has the patient undergone any other imaging studies, such as an MRI or ultrasound, to evaluate soft tissue structures like ligaments or menisci?\nPatient: No, I haven't had an MRI or ultrasound done yet. The only imaging they did was an X-ray, and they said there were no fractures or bony issues, but they didn't mention anything about the ligaments or menisci. I don't know if there's anything else they saw on the X-ray.\nDoctor: Have you experienced any numbness, tingling, or weakness in your leg or foot since the injury?\nPatient: No, I haven't experienced any numbness, tingling, or weakness in my leg or foot since the injury. Everything feels normal down there, just some discomfort in the knee when I move it.\nDoctor: Has the patient undergone an MRI or ultrasound of the right knee to evaluate for ligamentous injuries, meniscal tears, or soft tissue abnormalities?\nPatient: No, I haven't had an MRI or ultrasound of my right knee yet. The only imaging they did was an X-ray, and they said there were no fractures or bony issues, but they didn't mention anything about the ligaments or menisci. I don't know if there's anything else they saw on the X-ray.\nDoctor: Has the patient experienced any locking, clicking, or instability in the right knee since the injury?\nPatient: No, I haven't experienced any locking, clicking, or instability in my right knee since the injury. It just feels uncomfortable when I move it up and down, and there's some swelling, but it doesn't feel unstable.\nDoctor: Have you undergone any previous MRI or ultrasound of the right knee? If not, would you be willing to undergo an MRI to evaluate for possible ligamentous or meniscal injuries?\nPatient: No, I haven't had an MRI or ultrasound of my right knee yet. The only imaging they did was an X-ray, and they said there were no fractures or bony issues, but they didn't mention anything about the ligaments or menisci. I don't know if there's anything else they saw on the X-ray.\nDoctor: Have you experienced any numbness, tingling, or weakness in your right leg or foot since the injury?\nPatient: No, I haven't experienced any numbness, tingling, or weakness in my right leg or foot since the injury. Everything feels normal down there, just some discomfort in the knee when I move it.\nDoctor: Has the patient undergone any previous MRI or ultrasound of the right knee? If not, would you recommend an MRI to evaluate for ligamentous or meniscal injuries given the history of a popping sound during the fall and current swelling?\nPatient: No, I haven't had an MRI or ultrasound of my right knee yet. The only imaging they did was an X-ray, and they said there were no fractures or bony issues, but they didn't mention anything about the ligaments or menisci. I don't know if there's anything else they saw on the X-ray.\nDoctor: Have you experienced any numbness, tingling, or weakness in your right leg or foot since the injury? These symptoms could indicate nerve involvement and may help guide further evaluation.\nPatient: No, I haven't experienced any numbness, tingling, or weakness in my right leg or foot since the injury. Everything feels normal down there, just some discomfort in the knee when I move it.",
+  "reference_so": {
+    "subjective": "Basic information: 45 years old, male. Chief complaint: right knee pain for about a week following a slip and fall on property.\n\nHistory of present illness: Right knee pain for about a week following a slip and fall. Pain occurs with movement and pressure. Patient felt something pop during the fall. Current swelling is present. No locking, clicking, or instability reported.\n\nPast history: No history of knee issues or prior injuries reported.",
+    "objective": "Physical examination: No deformity or instability noted. Patient can bear weight but experiences discomfort with movement.\n\nInvestigations: Prior X-ray showed no fractures or bony abnormalities; soft tissue abnormalities (e.g., swelling, effusion, ligamentous injuries) not specified. MRI not performed yet."
+  }
+}

@@ -1,0 +1,524 @@
+{
+  "case_id": "D2N036",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* The patient is a 45-year-old male who has been experiencing numbness, tingling, and weakness in his left hand for a few months.\n* The symptoms are worse at night and wake him up, requiring him to shake his hand to regain feeling.\n* He reports a jolt or zing sensation in his fingertips when the doctor tapped on his wrist.\n* The patient has not noticed any similar symptoms in his right hand or other parts of his body.\n* He has not undergone any previous neurological or musculoskeletal evaluations for this condition.\n* He has not noticed any specific triggers for his symptoms, but mentions that they may be related to his work, which involves raking, digging, and landscaping.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* The patient is 45 years old. The patient has been experiencing numbness in his left hand for a few months. The patient has been experiencing tingling in his left hand for a few months. The patient has been experiencing weakness in his left hand for a few months.\n* The symptoms are worse at night and wake him up, requiring him to shake his hand to regain feeling.\n* He reports a jolt or zing sensation in his fingertips when the doctor tapped on his wrist.\n* The patient has not noticed any similar symptoms in his right hand or other parts of his body.\n* He has not undergone any previous neurological or musculoskeletal evaluations for this condition.\n* He has not noticed any specific triggers for his symptoms, but mentions that they may be related to his work, which involves raking, digging, and landscaping.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* The patient is 45 years old. The patient has been experiencing numbness in his left hand for a few months. The patient has been experiencing tingling in his left hand for a few months. The patient has been experiencing weakness in his left hand for a few months.\n* The symptoms are worse at night and wake him up, requiring him to shake his hand to regain feeling.\n* He reports a jolt or zing sensation in his fingertips when the doctor tapped on his wrist.\n* The patient has not noticed any similar symptoms in his right hand or other parts of his body.\n* He has not undergone any previous neurological or musculoskeletal evaluations for this condition.\n* He has not noticed any specific triggers for his symptoms, but mentions that they may be related to his work, which involves raking, digging, and landscaping.",
+    "objective": "* The patient is scheduled to return in two weeks for follow-up."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient presents with numbness, tingling, and weakness in his left hand, which is worse at night and may be related to his work.\n* The patient has not undergone any previous evaluations or testing for this condition.",
+    "plan": "* The doctor ordered nerve conduction studies or electromyography (EMG) for the patient's left hand symptoms.\n* The patient is scheduled to return in two weeks for follow-up."
+  },
+  "stage2_audit": [
+    {
+      "claim": "The patient is a 45-year-old male.",
+      "scores": {
+        "entailment": 0.0046,
+        "neutral": 0.4521,
+        "contradiction": 0.5432
+      },
+      "support_evidence": "Patient: I'm 45 years old, and I'm here because my left hand has been bothering me with pain and numbness for a few months now. It's been worse at night, and sometimes I wake up with my hand feeling asleep and have to shake it out to get the feeling back.",
+      "contradiction_evidence": "Patient: I'm 45 years old, and I'm here because my left hand has been bothering me with pain and numbness for a few months now. It's been worse at night, and sometimes I wake up with my hand feeling asleep and have to shake it out to get the feeling back.",
+      "corrected_text": "The patient is 45 years old.",
+      "flagged": false,
+      "decision": "corrected",
+      "keep": true,
+      "output": "The patient is 45 years old.",
+      "reason": "Contradicted by the conversation; rewritten from the cited evidence.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 45-year-old male who has been experiencing numbness, tingling, and weakness in his left hand for a few months."
+    },
+    {
+      "claim": "The patient has been experiencing numbness in his left hand for a few months.",
+      "scores": {
+        "entailment": 0.9988,
+        "neutral": 0.0006,
+        "contradiction": 0.072
+      },
+      "support_evidence": "Patient: The pain and numbness are mainly in my left wrist and hand, and it seems to affect all my fingers, but I notice it more in my thumb and pointer finger. I've had some weakness in my left hand, and I do drop things sometimes because I have a hard time feeling them. I haven't had any similar symptoms in other parts of my body.",
+      "contradiction_evidence": "Patient: I'm 45 years old, and I'm here because my left hand has been bothering me with pain and numbness for a few months now. It's been worse at night, and sometimes I wake up with my hand feeling asleep and have to shake it out to get the feeling back.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has been experiencing numbness in his left hand for a few months.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 45-year-old male who has been experiencing numbness, tingling, and weakness in his left hand for a few months."
+    },
+    {
+      "claim": "The patient has been experiencing tingling in his left hand for a few months.",
+      "scores": {
+        "entailment": 0.9975,
+        "neutral": 0.0012,
+        "contradiction": 0.9857
+      },
+      "support_evidence": "Patient: No, I don't have any similar symptoms in my right hand or any other part of my body. It's just been my left hand with the numbness, tingling, and weakness.",
+      "contradiction_evidence": "Patient: I'm 45 years old, and I'm here because my left hand has been bothering me with pain and numbness for a few months now. It's been worse at night, and sometimes I wake up with my hand feeling asleep and have to shake it out to get the feeling back.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has been experiencing tingling in his left hand for a few months.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 45-year-old male who has been experiencing numbness, tingling, and weakness in his left hand for a few months."
+    },
+    {
+      "claim": "The patient has been experiencing weakness in his left hand for a few months.",
+      "scores": {
+        "entailment": 0.9955,
+        "neutral": 0.0022,
+        "contradiction": 0.9584
+      },
+      "support_evidence": "Patient: The pain and numbness are mainly in my left wrist and hand, and it seems to affect all my fingers, but I notice it more in my thumb and pointer finger. I've had some weakness in my left hand, and I do drop things sometimes because I have a hard time feeling them. I haven't had any similar symptoms in other parts of my body.",
+      "contradiction_evidence": "Patient: I'm 45 years old, and I'm here because my left hand has been bothering me with pain and numbness for a few months now. It's been worse at night, and sometimes I wake up with my hand feeling asleep and have to shake it out to get the feeling back.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has been experiencing weakness in his left hand for a few months.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 45-year-old male who has been experiencing numbness, tingling, and weakness in his left hand for a few months."
+    },
+    {
+      "claim": "The symptoms are worse at night and wake him up, requiring him to shake his hand to regain feeling.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.0011
+      },
+      "support_evidence": "Patient: The symptoms seem to get worse at night, and I usually wake up with my hand feeling asleep. I have to shake it out to get the feeling back. I also feel a little jolt or zing in my fingertips when the doctor tapped on my wrist. It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night. I haven't really noticed any specific triggers other than maybe when I've been doing a lot of work with my hands.",
+      "contradiction_evidence": "Doctor: Could you describe any activities or positions that seem to make the symptoms better or worse? For example, does resting your hand in a certain way or using it for specific tasks affect the numbness or tingling?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The symptoms are worse at night and wake him up, requiring him to shake his hand to regain feeling.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The symptoms are worse at night and wake him up, requiring him to shake his hand to regain feeling.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He reports a jolt or zing sensation in his fingertips when the doctor tapped on his wrist.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.0007
+      },
+      "support_evidence": "Patient: The tingling and the jolt or zing feel mostly in my fingertips, especially when the doctor tapped on the back of my wrist. It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night. I haven't really noticed any specific triggers other than maybe when I've been doing a lot of work with my hands.",
+      "contradiction_evidence": "Doctor: Can you describe the exact location of the pain and numbness in your left hand? Have you noticed any weakness or difficulty with fine motor tasks, such as gripping objects or typing? Have you experienced similar symptoms in other parts of your body?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He reports a jolt or zing sensation in his fingertips when the doctor tapped on his wrist.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "He reports a jolt or zing sensation in his fingertips when the doctor tapped on his wrist.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient has not noticed any similar symptoms in his right hand or other parts of his body.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0002,
+        "contradiction": 0.002
+      },
+      "support_evidence": "Doctor: Has the patient experienced any similar symptoms in the other hand or any other part of the body?",
+      "contradiction_evidence": "Patient: The symptoms seem to get worse at night, and I usually wake up with my hand feeling asleep. I have to shake it out to get the feeling back. I also feel a little jolt or zing in my fingertips when the doctor tapped on my wrist. It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night. I haven't really noticed any specific triggers other than maybe when I've been doing a lot of work with my hands.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has not noticed any similar symptoms in his right hand or other parts of his body.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "The patient has not noticed any similar symptoms in his right hand or other parts of his body.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has not undergone any previous neurological or musculoskeletal evaluations for this condition.",
+      "scores": {
+        "entailment": 0.9991,
+        "neutral": 0.0003,
+        "contradiction": 0.2554
+      },
+      "support_evidence": "Doctor: Have you undergone any previous neurological or musculoskeletal evaluations for this condition? If so, what were the findings or diagnoses?",
+      "contradiction_evidence": "Doctor: Have you undergone any previous nerve conduction studies or imaging for this condition, and if so, what were the results?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has not undergone any previous neurological or musculoskeletal evaluations for this condition.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "He has not undergone any previous neurological or musculoskeletal evaluations for this condition.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has not noticed any specific triggers for his symptoms, but mentions that they may be related to his work, which involves raking, digging, and landscaping.",
+      "scores": {
+        "entailment": 0.9991,
+        "neutral": 0.0007,
+        "contradiction": 0.0519
+      },
+      "support_evidence": "Patient: No, I don't think I've had any recent trauma to my left hand or wrist. It's just been the same kind of work I've been doing for a while now—raking, digging, landscaping stuff. I guess that's been putting a lot of strain on my wrist over time.",
+      "contradiction_evidence": "Patient: The symptoms seem to get worse at night, and I usually wake up with my hand feeling asleep. I have to shake it out to get the feeling back. I also feel a little jolt or zing in my fingertips when the doctor tapped on my wrist. It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night. I haven't really noticed any specific triggers other than maybe when I've been doing a lot of work with my hands.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has not noticed any specific triggers for his symptoms, but mentions that they may be related to his work, which involves raking, digging, and landscaping.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "He has not noticed any specific triggers for his symptoms, but mentions that they may be related to his work, which involves raking, digging, and landscaping.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "corrected": 1,
+      "supported": 8,
+      "exempt": 1
+    },
+    "num_claims": 9,
+    "num_kept": 9,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient is scheduled to return in two weeks for follow-up.",
+      "evidence": "Patient: No, I haven't undergone any nerve conduction studies or EMG for my left hand symptoms yet. The doctor mentioned ordering one, but it hasn't been done yet. I'm supposed to come back in two weeks for follow-up.",
+      "section": "objective",
+      "candidate": "I'm supposed to come back in two weeks for follow-up."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I'm supposed to come back in two weeks for follow-up.",
+      "speaker": "Patient",
+      "coverage": 0.0363,
+      "nearest_so_sentence": "The patient has been experiencing weakness in his left hand for a few months.",
+      "statement": "The patient is scheduled to return in two weeks for follow-up.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: No, I haven't undergone any nerve conduction studies or EMG for my left hand symptoms yet. The doctor mentioned ordering one, but it hasn't been done yet. I'm supposed to come back in two weeks for follow-up.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0003
+      },
+      "duplicate_entailment": 0.0029,
+      "duplicate_similarity": 0.4301,
+      "insertion": {
+        "section": "objective",
+        "line_index": 0,
+        "perplexity": null,
+        "removed_placeholder": [
+          "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+        ]
+      }
+    },
+    {
+      "candidate": "It's not something that happens all the time, but it does happen occasionally.",
+      "speaker": "Patient",
+      "coverage": 0.2037,
+      "nearest_so_sentence": "He has not noticed any specific triggers for his symptoms, but mentions that they may be related to his work, which involves raking, digging, and landscaping.",
+      "statement": "The patient reports that the symptoms do not occur all the time, but occasionally.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The symptoms seem to get worse at night, and I usually wake up with my hand feeling asleep. I have to shake it out to get the feeling back. I also feel a little jolt or zing in my fingertips when the doctor tapped on my wrist. It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night. I haven't really noticed any specific triggers other than maybe when I've been doing a lot of work with my hands.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0026
+      },
+      "duplicate_entailment": 0.997,
+      "duplicate_similarity": 0.6434
+    },
+    {
+      "candidate": "I've been dropping things more often because I can't feel them as well.",
+      "speaker": "Patient",
+      "coverage": 0.2321,
+      "nearest_so_sentence": "The symptoms are worse at night and wake him up, requiring him to shake his hand to regain feeling.",
+      "statement": "The patient reports dropping objects more frequently due to decreased tactile sensation.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: Yeah, I've noticed that my left hand feels weaker, and I have a harder time gripping things. I've been dropping things more often because I can't feel them as well. It's been pretty frustrating, especially when I'm working in the yard.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.002
+      },
+      "duplicate_entailment": 0.9208,
+      "duplicate_similarity": 0.5088
+    },
+    {
+      "candidate": "It's been pretty frustrating, especially when I'm working in the yard.",
+      "speaker": "Patient",
+      "coverage": 0.2575,
+      "nearest_so_sentence": "He has not noticed any specific triggers for his symptoms, but mentions that they may be related to his work, which involves raking, digging, and landscaping.",
+      "statement": "The patient reports that activities in the yard have been frustrating.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: Yeah, I've noticed that my left hand feels weaker, and I have a harder time gripping things. I've been dropping things more often because I can't feel them as well. It's been pretty frustrating, especially when I'm working in the yard.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0007
+      },
+      "duplicate_entailment": 0.9936,
+      "duplicate_similarity": 0.4815
+    },
+    {
+      "candidate": "The doctor mentioned ordering one, but it hasn't been done yet.",
+      "speaker": "Patient",
+      "coverage": 0.3076,
+      "nearest_so_sentence": "The patient is 45 years old.",
+      "statement": "The patient reports that a nerve conduction study or electromyography (EMG) has not been performed for their left hand symptoms as it was ordered but not yet completed.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I haven't undergone any nerve conduction studies or EMG for my left hand symptoms yet. The doctor mentioned ordering one, but it hasn't been done yet. I'm supposed to come back in two weeks for follow-up.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.2629
+      },
+      "duplicate_entailment": 0.9544,
+      "duplicate_similarity": 0.6591
+    },
+    {
+      "candidate": "It's just been the same kind of work I've been doing for a while now—raking, digging, landscaping stuff.",
+      "speaker": "Patient",
+      "coverage": 0.3297,
+      "nearest_so_sentence": "He has not noticed any specific triggers for his symptoms, but mentions that they may be related to his work, which involves raking, digging, and landscaping.",
+      "statement": "The patient reports performing repetitive tasks such as raking, digging, and landscaping for an extended period.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I don't think I've had any recent trauma to my left hand or wrist. It's just been the same kind of work I've been doing for a while now—raking, digging, landscaping stuff. I guess that's been putting a lot of strain on my wrist over time.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.0573
+      },
+      "duplicate_entailment": 0.9984,
+      "duplicate_similarity": 0.5802
+    },
+    {
+      "candidate": "It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night.",
+      "speaker": "Patient",
+      "coverage": 0.3469,
+      "nearest_so_sentence": "The symptoms are worse at night and wake him up, requiring him to shake his hand to regain feeling.",
+      "statement": "The patient reports that symptoms occur occasionally, typically when resting or at night.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The symptoms seem to get worse at night, and I usually wake up with my hand feeling asleep. I have to shake it out to get the feeling back. I also feel a little jolt or zing in my fingertips when the doctor tapped on my wrist. It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night. I haven't really noticed any specific triggers other than maybe when I've been doing a lot of work with my hands.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0023
+      },
+      "duplicate_entailment": 0.9962,
+      "duplicate_similarity": 0.5803
+    },
+    {
+      "candidate": "It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night.",
+      "speaker": "Patient",
+      "coverage": 0.3476,
+      "nearest_so_sentence": "The symptoms are worse at night and wake him up, requiring him to shake his hand to regain feeling.",
+      "statement": "The patient reports that numbness or tingling occurs occasionally, typically when resting or at night.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The symptoms seem to get worse at night, and I usually wake up with my hand feeling asleep. I have to shake it out to get the feeling back. I also feel a little jolt or zing in my fingertips when the doctor tapped on my wrist. It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night. I haven't really noticed any specific triggers other than maybe when I've been doing a lot of work with my hands.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0078
+      },
+      "duplicate_entailment": 0.9718,
+      "duplicate_similarity": 0.6744
+    },
+    {
+      "candidate": "It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night.",
+      "speaker": "Patient",
+      "coverage": 0.348,
+      "nearest_so_sentence": "The symptoms are worse at night and wake him up, requiring him to shake his hand to regain feeling.",
+      "statement": "The patient reports that the tingling or electric shock-like sensations in their fingertips occur occasionally, usually when they are resting or at night.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The symptoms seem to get worse at night, and I usually wake up with my hand feeling asleep. I have to shake it out to get the feeling back. I also feel a little jolt or zing in my fingertips when the doctor tapped on my wrist. It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night. I haven't really noticed any specific triggers other than maybe when I've been doing a lot of work with my hands.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.0824
+      },
+      "duplicate_entailment": 0.9918,
+      "duplicate_similarity": 0.6577
+    },
+    {
+      "candidate": "It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night.",
+      "speaker": "Patient",
+      "coverage": 0.348,
+      "nearest_so_sentence": "The symptoms are worse at night and wake him up, requiring him to shake his hand to regain feeling.",
+      "statement": "The patient reports that numbness or tingling occurs occasionally, typically when resting or at night.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The symptoms seem to get worse at night, and I usually wake up with my hand feeling asleep. I have to shake it out to get the feeling back. I also feel a little jolt or zing in my fingertips when the doctor tapped on my wrist. It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night. I haven't really noticed any specific triggers other than maybe when I've been doing a lot of work with my hands.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0078
+      },
+      "duplicate_entailment": 0.9718,
+      "duplicate_similarity": 0.6744
+    },
+    {
+      "candidate": "It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night.",
+      "speaker": "Patient",
+      "coverage": 0.3484,
+      "nearest_so_sentence": "The symptoms are worse at night and wake him up, requiring him to shake his hand to regain feeling.",
+      "statement": "The patient reports that symptoms occur occasionally, typically when resting or at night.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The symptoms seem to get worse at night, and I usually wake up with my hand feeling asleep. I have to shake it out to get the feeling back. I also feel a little jolt or zing in my fingertips when the doctor tapped on my wrist. It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night. I haven't really noticed any specific triggers other than maybe when I've been doing a lot of work with my hands.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0023
+      },
+      "duplicate_entailment": 0.9962,
+      "duplicate_similarity": 0.5803
+    },
+    {
+      "candidate": "I have to shake it out to get the feeling back.",
+      "speaker": "Patient",
+      "coverage": 0.3588,
+      "nearest_so_sentence": "The symptoms are worse at night and wake him up, requiring him to shake his hand to regain feeling.",
+      "statement": "The patient reports that they have to shake their left hand to get the feeling back.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The symptoms seem to get worse at night, and I usually wake up with my hand feeling asleep. I have to shake it out to get the feeling back. I also feel a little jolt or zing in my fingertips when the doctor tapped on my wrist. It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night. I haven't really noticed any specific triggers other than maybe when I've been doing a lot of work with my hands.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0013
+      },
+      "duplicate_entailment": 0.9996,
+      "duplicate_similarity": 0.6909
+    },
+    {
+      "candidate": "I have to shake it out to get the feeling back.",
+      "speaker": "Patient",
+      "coverage": 0.359,
+      "nearest_so_sentence": "The symptoms are worse at night and wake him up, requiring him to shake his hand to regain feeling.",
+      "statement": "The patient reports that they need to shake their hand to regain sensation.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The symptoms seem to get worse at night, and I usually wake up with my hand feeling asleep. I have to shake it out to get the feeling back. I also feel a little jolt or zing in my fingertips when the doctor tapped on my wrist. It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night. I haven't really noticed any specific triggers other than maybe when I've been doing a lot of work with my hands.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.002
+      },
+      "duplicate_entailment": 0.9996,
+      "duplicate_similarity": 0.6406
+    },
+    {
+      "candidate": "I have to shake it out to get the feeling back.",
+      "speaker": "Patient",
+      "coverage": 0.3591,
+      "nearest_so_sentence": "The symptoms are worse at night and wake him up, requiring him to shake his hand to regain feeling.",
+      "statement": "The patient reports that they have to shake their hand to get the feeling back.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The symptoms seem to get worse at night, and I usually wake up with my hand feeling asleep. I have to shake it out to get the feeling back. I also feel a little jolt or zing in my fingertips when the doctor tapped on my wrist. It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night. I haven't really noticed any specific triggers other than maybe when I've been doing a lot of work with my hands.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0017
+      },
+      "duplicate_entailment": 0.9996,
+      "duplicate_similarity": 0.6172
+    },
+    {
+      "candidate": "I have to shake it out to get the feeling back.",
+      "speaker": "Patient",
+      "coverage": 0.3594,
+      "nearest_so_sentence": "The symptoms are worse at night and wake him up, requiring him to shake his hand to regain feeling.",
+      "statement": "The patient reports that they have to shake their hand to get the feeling back.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The symptoms seem to get worse at night, and I usually wake up with my hand feeling asleep. I have to shake it out to get the feeling back. I also feel a little jolt or zing in my fingertips when the doctor tapped on my wrist. It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night. I haven't really noticed any specific triggers other than maybe when I've been doing a lot of work with my hands.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0017
+      },
+      "duplicate_entailment": 0.9996,
+      "duplicate_similarity": 0.6172
+    },
+    {
+      "candidate": "I have to shake it out to get the feeling back.",
+      "speaker": "Patient",
+      "coverage": 0.3598,
+      "nearest_so_sentence": "The symptoms are worse at night and wake him up, requiring him to shake his hand to regain feeling.",
+      "statement": "The patient reports that they need to shake their hand to regain sensation.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The symptoms seem to get worse at night, and I usually wake up with my hand feeling asleep. I have to shake it out to get the feeling back. I also feel a little jolt or zing in my fingertips when the doctor tapped on my wrist. It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night. I haven't really noticed any specific triggers other than maybe when I've been doing a lot of work with my hands.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.002
+      },
+      "duplicate_entailment": 0.9996,
+      "duplicate_similarity": 0.6406
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 49,
+    "num_covered": 33,
+    "num_flagged": 16,
+    "num_not_checked_cap": 0,
+    "num_added": 1
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": []
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 27.3,
+  "ap_unchanged": true,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 45 years old, and I'm here because my left hand has been bothering me with pain and numbness for a few months now. It's been worse at night, and sometimes I wake up with my hand feeling asleep and have to shake it out to get the feeling back.\nDoctor: Can you describe the exact location of the pain and numbness in your left hand? Have you noticed any weakness or difficulty with fine motor tasks, such as gripping objects or typing? Have you experienced similar symptoms in other parts of your body?\nPatient: The pain and numbness are mainly in my left wrist and hand, and it seems to affect all my fingers, but I notice it more in my thumb and pointer finger. I've had some weakness in my left hand, and I do drop things sometimes because I have a hard time feeling them. I haven't had any similar symptoms in other parts of my body.\nDoctor: Have you undergone any previous neurological or musculoskeletal evaluations for this condition? If so, what were the findings or diagnoses?\nPatient: No, I haven't had any previous neurological or musculoskeletal evaluations for this condition. I just noticed the symptoms a few months ago and haven't seen a doctor about it before today.\nDoctor: Could you describe any activities or positions that seem to aggravate or relieve your symptoms? Additionally, have you noticed any tingling, burning, or electric shock-like sensations in your left hand?\nPatient: The symptoms seem to get worse at night, and I usually wake up with my hand feeling asleep. I have to shake it out to get the feeling back. I also feel a little jolt or zing in my fingertips when the doctor tapped on my wrist. It's not something that happens all the time, but it does happen occasionally.\nDoctor: Could you please describe the specific location of the tingling or electric shock-like sensations in your fingertips, and have you noticed any patterns or triggers for these sensations?\nPatient: The tingling and the jolt or zing feel mostly in my fingertips, especially when the doctor tapped on the back of my wrist. It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night. I haven't really noticed any specific triggers other than maybe when I've been doing a lot of work with my hands.\nDoctor: Could you please describe any activities or positions that seem to make the symptoms better or worse? Also, have you noticed any changes in your hand strength or any difficulty performing daily tasks?\nPatient: The symptoms seem to get worse at night, and I usually wake up with my hand feeling asleep. I have to shake it out to get the feeling back. I also feel a little jolt or zing in my fingertips when the doctor tapped on my wrist. It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night. I haven't really noticed any specific triggers other than maybe when I've been doing a lot of work with my hands.\nDoctor: Have you undergone any previous nerve conduction studies or imaging for this condition, and if so, what were the results?\nPatient: No, I haven't undergone any previous nerve conduction studies or imaging for this condition. I just noticed the symptoms a few months ago and haven't seen a doctor about it before today.\nDoctor: Has the patient experienced any similar symptoms in the other hand or any other part of the body?\nPatient: No, I don't have any similar symptoms in my right hand or any other part of my body. It's just been my left hand with the numbness, tingling, and weakness.\nDoctor: Could you describe any activities or positions that seem to make the symptoms better or worse? For example, does resting your hand in a certain way or using it for specific tasks affect the numbness or tingling?\nPatient: The symptoms seem to get worse at night, and I usually wake up with my hand feeling asleep. I have to shake it out to get the feeling back. I also feel a little jolt or zing in my fingertips when the doctor tapped on my wrist. It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night. I haven't really noticed any specific triggers other than maybe when I've been doing a lot of work with my hands.\nDoctor: Could you describe any activities or positions that seem to make the symptoms better or worse? Have you noticed any changes in your hand's ability to perform tasks like gripping objects or typing?\nPatient: Yeah, I've noticed that my left hand feels weaker, and I have a harder time gripping things. I've been dropping things more often because I can't feel them as well. It's been pretty frustrating, especially when I'm working in the yard.\nDoctor: Have you experienced any recent trauma or repetitive strain to your left hand or wrist that could be contributing to your symptoms?\nPatient: No, I don't think I've had any recent trauma to my left hand or wrist. It's just been the same kind of work I've been doing for a while now—raking, digging, landscaping stuff. I guess that's been putting a lot of strain on my wrist over time.\nDoctor: Have you experienced any similar symptoms in your right hand or other parts of your body?\nPatient: No, I don't have any similar symptoms in my right hand or any other part of my body. It's just been my left hand with the numbness, tingling, and weakness.\nDoctor: Could you describe any activities or positions that seem to make the symptoms better or worse? For example, does resting your hand in a certain way or using it for specific tasks affect the numbness or tingling?\nPatient: The symptoms seem to get worse at night, and I usually wake up with my hand feeling asleep. I have to shake it out to get the feeling back. I also feel a little jolt or zing in my fingertips when the doctor tapped on my wrist. It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night. I haven't really noticed any specific triggers other than maybe when I've been doing a lot of work with my hands.\nDoctor: Could you please describe any activities or positions that seem to make the symptoms better or worse? Have you noticed any changes in your hand strength or coordination over time?\nPatient: The symptoms seem to get worse at night, and I usually wake up with my hand feeling asleep. I have to shake it out to get the feeling back. I also feel a little jolt or zing in my fingertips when the doctor tapped on my wrist. It doesn't happen all the time, but it does happen occasionally, usually when I'm resting or at night. I haven't really noticed any specific triggers other than maybe when I've been doing a lot of work with my hands.\nDoctor: Have you undergone any nerve conduction studies or electromyography (EMG) for your left hand symptoms? If so, what were the results?\nPatient: No, I haven't undergone any nerve conduction studies or EMG for my left hand symptoms yet. The doctor mentioned ordering one, but it hasn't been done yet. I'm supposed to come back in two weeks for follow-up.",
+  "reference_so": {
+    "subjective": "Basic information: 45-year-old patient presenting with left hand pain and numbness for several months, worsening at night and requiring shaking to relieve symptoms.\n\nHistory of present illness: The patient reports left hand pain and numbness for several months, primarily affecting the wrist and hand, with involvement of all fingers but more pronounced in the thumb and pointer finger. Symptoms worsen at night, and the patient experiences a sensation of the hand feeling asleep, requiring shaking to relieve symptoms. There is associated weakness in the left hand, leading to occasional dropping of objects due to impaired sensation. No similar symptoms in other parts of the body. The symptoms seem to get worse at night, and the patient usually wakes up with the hand feeling asleep. The patient has to shake it out to get the feeling back. The patient also feels a little jolt or zing in the fingertips when the doctor tapped on the wrist. It is not something that happens all the time, but it does happen occasionally. The tingling and the jolt or zing feel mostly in the fingertips, especially when the doctor tapped on the back of the wrist. It doesn't happen all the time, but it does happen occasionally, usually when the patient is resting or at night. The patient hasn't noticed any specific triggers other than maybe when they've been doing a lot of work with their hands. The patient has also mentioned that they have been dropping things more often because of the weakness and impaired sensation, especially when working in the yard.\n\nPast history: No previous neurological or musculoskeletal evaluations for this condition. No history of trauma, surgery, or allergies. No family history of similar conditions provided.",
+    "objective": "Physical examination: Physical examination reveals decreased sensation in the thumb and pointer finger, with a positive Tinel's sign at the wrist. There is mild weakness in the left hand, and the patient exhibits a reduced grip strength compared to the right hand. No visible swelling, deformity, or skin changes are noted in the affected hand.\n\nInvestigations: Nerve conduction studies and electromyography (EMG) are pending. No prior imaging studies have been performed for this condition."
+  }
+}

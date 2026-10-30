@@ -1,0 +1,204 @@
+{
+  "case_id": "D2N013",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient is a 55-year-old male who was brought in due to a recent high blood sugar episode.\n* He reports not monitoring his sugar intake as much and experiencing stress due to recent events and visitors.\n* He was treated in the ER and started on metformin, 500 mg twice a day.\n* He does not have information about his family history or whether he has hypertension, hyperlipidemia, or a history of smoking.\n* He does not have any other medical conditions, medications, or allergies to report.",
+    "objective": "* Blood glucose level: 162 mg/dL (measured in the ER)\n* HbA1c level: 8% (measured in the ER)\n* No other objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient is a 55-year-old male who was brought in due to a recent high blood sugar episode.\n* He reports not monitoring his sugar intake as much and experiencing stress due to recent events and visitors.\n* He was treated in the ER and started on metformin, 500 mg twice a day.\n* He does not have information about his family history or whether he has hypertension, hyperlipidemia, or a history of smoking.\n* He does not have any other medical conditions, medications, or allergies to report.",
+    "objective": "* Blood glucose level: 162 mg/dL (measured in the ER)\n* HbA1c level: 8% (measured in the ER)\n* No other objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has a recent high blood sugar episode, which was treated in the ER.\n* He has been started on metformin, 500 mg twice a day.\n* The patient does not have information about his family history or cardiovascular risk factors.",
+    "plan": "* Continue metformin, 500 mg twice a day.\n* No explicit management or follow-up plan was documented in the conversation."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient is a 55-year-old male who was brought in due to a recent high blood sugar episode.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0003,
+        "contradiction": 0.0006
+      },
+      "support_evidence": "Patient: I'm 55 years old, male. I was brought in because I had a really high blood sugar and they had to treat me for that. I think it was because I wasn't monitoring my sugar intake as much and there's been a lot of stress lately.",
+      "contradiction_evidence": "Patient: I wasn't actually diagnosed with diabetes yet, but they did find a really high blood sugar level and treated me in the ER. They put me on metformin, which I think is a medication for diabetes. I'm still figuring out what's going on, but I'm here to talk about it.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient is a 55-year-old male who was brought in due to a recent high blood sugar episode.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 55-year-old male who was brought in due to a recent high blood sugar episode.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He reports not monitoring his sugar intake as much and experiencing stress due to recent events and visitors.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0003,
+        "contradiction": 0.0005
+      },
+      "support_evidence": "Patient: I'm 55, male. The high blood sugar was a few days ago, and I wasn't really watching what I ate much. I've been pretty stressed with all the events and visitors we've had, and I think that didn't help. I didn't have any symptoms other than feeling a bit off, but they had to treat me for it in the ER.",
+      "contradiction_evidence": "Patient: I don't have any other medical conditions to report, and I'm not on any other medications besides the metformin for my diabetes. I don't think I have any allergies either.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He reports not monitoring his sugar intake as much and experiencing stress due to recent events and visitors.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "He reports not monitoring his sugar intake as much and experiencing stress due to recent events and visitors.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He was treated in the ER and started on metformin, 500 mg twice a day.",
+      "scores": {
+        "entailment": 0.985,
+        "neutral": 0.0146,
+        "contradiction": 0.0008
+      },
+      "support_evidence": "Patient: I currently take metformin, 500 mg twice a day, which they started me on in the emergency room. That's the only medication I'm on for my blood sugar right now.",
+      "contradiction_evidence": "Patient: I wasn't actually diagnosed with diabetes yet, but they did find a really high blood sugar level and treated me in the ER. They put me on metformin, which I think is a medication for diabetes. I'm still figuring out what's going on, but I'm here to talk about it.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He was treated in the ER and started on metformin, 500 mg twice a day.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "He was treated in the ER and started on metformin, 500 mg twice a day.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He does not have information about his family history or whether he has hypertension, hyperlipidemia, or a history of smoking.",
+      "scores": {
+        "entailment": 0.9899,
+        "neutral": 0.0073,
+        "contradiction": 0.0228
+      },
+      "support_evidence": "Patient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. I'm not sure about those details.",
+      "contradiction_evidence": "Patient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. I'm not sure about those details.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He does not have information about his family history or whether he has hypertension, hyperlipidemia, or a history of smoking.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "He does not have information about his family history or whether he has hypertension, hyperlipidemia, or a history of smoking.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He does not have any other medical conditions, medications, or allergies to report.",
+      "scores": {
+        "entailment": 0.906,
+        "neutral": 0.092,
+        "contradiction": 0.9823
+      },
+      "support_evidence": "Patient: I don't have any other medical conditions to report, and I'm not on any other medications besides the metformin for my diabetes. I don't think I have any allergies either.",
+      "contradiction_evidence": "Doctor: Could you please confirm if you currently take any medications, including metformin, or receive any other treatments for your high blood sugar?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He does not have any other medical conditions, medications, or allergies to report.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "He does not have any other medical conditions, medications, or allergies to report.",
+      "level": "sentence"
+    },
+    {
+      "claim": "Blood glucose level: 162 mg/dL (measured in the ER)",
+      "scores": {
+        "entailment": 0.9623,
+        "neutral": 0.021,
+        "contradiction": 0.0221
+      },
+      "support_evidence": "Patient: I wasn't actually diagnosed with diabetes yet, but they did find a really high blood sugar level and treated me in the ER. They put me on metformin, which I think is a medication for diabetes. I'm still figuring out what's going on, but I'm here to talk about it.",
+      "contradiction_evidence": "Patient: I currently take metformin, 500 mg twice a day, which they started me on in the emergency room. That's the only medication I'm on for my blood sugar right now.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Blood glucose level: 162 mg/dL (measured in the ER)",
+      "reason": "Entailed by the conversation.",
+      "section": "objective",
+      "line": 0,
+      "sentence": "Blood glucose level: 162 mg/dL (measured in the ER)",
+      "level": "sentence"
+    },
+    {
+      "claim": "HbA1c level: 8% (measured in the ER)",
+      "scores": {
+        "entailment": 0.9949,
+        "neutral": 0.0028,
+        "contradiction": 0.0656
+      },
+      "support_evidence": "Patient: I wasn't actually diagnosed with diabetes yet, but they did find a really high blood sugar level and treated me in the ER. They put me on metformin, which I think is a medication for diabetes. I'm still figuring out what's going on, but I'm here to talk about it.",
+      "contradiction_evidence": "Patient: I wasn't actually diagnosed with diabetes yet, but they did find a really high blood sugar level and treated me in the ER. They put me on metformin, which I think is a medication for diabetes. I'm still figuring out what's going on, but I'm here to talk about it.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "HbA1c level: 8% (measured in the ER)",
+      "reason": "Entailed by the conversation.",
+      "section": "objective",
+      "line": 1,
+      "sentence": "HbA1c level: 8% (measured in the ER)",
+      "level": "sentence"
+    },
+    {
+      "claim": "No other objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "scores": {
+        "entailment": 0.9964,
+        "neutral": 0.0023,
+        "contradiction": 0.0226
+      },
+      "support_evidence": "Patient: I'm 55, male. The high blood sugar was a few days ago, and I wasn't really watching what I ate much. I've been pretty stressed with all the events and visitors we've had, and I think that didn't help. I didn't have any symptoms other than feeling a bit off, but they had to treat me for it in the ER.",
+      "contradiction_evidence": "Patient: I'm 55, male. The high blood sugar was a few days ago, and I wasn't really watching what I ate much. I've been pretty stressed with all the events and visitors we've had, and I think that didn't help. I didn't have any symptoms other than feeling a bit off, but they had to treat me for it in the ER.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "No other objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "reason": "Entailed by the conversation.",
+      "section": "objective",
+      "line": 2,
+      "sentence": "No other objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "level": "sentence"
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 8
+    },
+    "num_claims": 8,
+    "num_kept": 8,
+    "claim_retention_rate": 1.0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": []
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 1.5,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 55 years old, male. I was brought in because I had a really high blood sugar and they had to treat me for that. I think it was because I wasn't monitoring my sugar intake as much and there's been a lot of stress lately.\nDoctor: Could you please confirm your age, gender, and provide more details about your recent high blood sugar episode, including when it occurred and any symptoms you experienced?\nPatient: I'm 55, male. The high blood sugar was a few days ago, and I wasn't really watching what I ate much. I've been pretty stressed with all the events and visitors we've had, and I think that didn't help. I didn't have any symptoms other than feeling a bit off, but they had to treat me for it in the ER.\nDoctor: Could you provide details about your diabetes diagnosis, including when it was diagnosed, the type of diabetes (if known), and any medications or treatments you have been on?\nPatient: I wasn't actually diagnosed with diabetes yet, but they did find a really high blood sugar level and treated me in the ER. They put me on metformin, which I think is a medication for diabetes. I'm still figuring out what's going on, but I'm here to talk about it.\nDoctor: Could you share the specific blood glucose levels that were recorded during your recent episode, and have you had any follow-up tests such as HbA1c or fasting blood glucose tests since your ER visit?\nPatient: They actually did give me a lot of fluid in the emergency room, and my blood sugar was 162 when they checked it recently. I had eaten about two hours before that. They also did an HbA1c test, and it came back at 8, which they said is higher than it was before.\nDoctor: Could you provide more details about your family history of diabetes or cardiovascular disease, as well as whether you have hypertension, hyperlipidemia, or a history of smoking?\nPatient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. I'm not sure about those details.\nDoctor: Could you please confirm if you currently take any medications, including metformin, or receive any other treatments for your high blood sugar?\nPatient: I currently take metformin, 500 mg twice a day, which they started me on in the emergency room. That's the only medication I'm on for my blood sugar right now.\nDoctor: Could you please provide information about your family history of diabetes or cardiovascular disease, as well as whether you have hypertension, hyperlipidemia, or a history of smoking?\nPatient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. I'm not sure about those details.\nDoctor: Could you please provide information about your family history of diabetes or cardiovascular disease, and whether you have hypertension, hyperlipidemia, or a history of smoking?\nPatient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. I'm not sure about those details.\nDoctor: Could you please provide information about your family history of diabetes or cardiovascular disease, and clarify whether you have hypertension, hyperlipidemia, or a history of smoking?\nPatient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. I'm not sure about those details.\nDoctor: Could you please provide information about your family history of diabetes or cardiovascular disease, and whether you have hypertension, hyperlipidemia, or a history of smoking?\nPatient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. I'm not sure about those details.\nDoctor: Could you please provide information about your family history of diabetes or cardiovascular disease, and whether you have hypertension, hyperlipidemia, or a history of smoking?\nPatient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. I'm not sure about those details.\nDoctor: Could you please provide information regarding your family history of diabetes or cardiovascular disease, as well as whether you have hypertension, hyperlipidemia, or a history of smoking?\nPatient: I don't know about my family history or if I have hypertension, hyperlipidemia, or a history of smoking. That information isn't available to me.\nDoctor: Thank you for your response. Since you don't have access to your family history or information about hypertension, hyperlipidemia, or smoking, we will proceed with the information we have. Could you please let us know if you have any other medical conditions, medications, or allergies that you would like to share?\nPatient: I don't have any other medical conditions to report, and I'm not on any other medications besides the metformin for my diabetes. I don't think I have any allergies either.\nDoctor: Could you please provide information about your family history of diabetes or cardiovascular disease, and whether you have hypertension, hyperlipidemia, or a history of smoking?\nPatient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. That information isn't available to me.\nDoctor: Thank you for letting me know. Since we don't have information about your family history or cardiovascular risk factors, I would like to ask if you have had any previous medical evaluations or tests related to hypertension, hyperlipidemia, or smoking history? If not, we can note that as unavailable.\nPatient: No, I don't think I've had any previous evaluations or tests related to hypertension, hyperlipidemia, or smoking history. I just don't have that information available to me.",
+  "reference_so": {
+    "subjective": "Basic information: 55 years old, male. Chief complaint: high blood sugar requiring treatment.\n\nHistory of present illness: Recent episode of high blood sugar, possibly due to poor sugar intake monitoring and recent stress. Patient was treated for this. Blood sugar level was 162 mg/dL two hours after eating, and HbA1c was 8%. Patient is currently taking metformin, 500 mg twice a day, which was started in the emergency room.\n\nPast history: Diabetes history: Not diagnosed yet. Cardiovascular risk factors: Not specified yet. Family history: Not specified yet.",
+    "objective": "Physical examination: Not documented during the simulated consultation.\n\nInvestigations: HbA1c: 8%, Blood sugar level: 162 mg/dL (2 hours postprandial)."
+  }
+}

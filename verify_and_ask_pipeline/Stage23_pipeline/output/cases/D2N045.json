@@ -1,0 +1,711 @@
+{
+  "case_id": "D2N045",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient's name: Abigail\n* Age: Not specified\n* Gender: Not specified\n* Chief complaint: Right knee pain, specifically on the outside of the knee, which started a few months ago and worsens with running\n* Description of pain: Dull ache, especially towards the end of the day after being on feet\n* Associated symptoms: Fluid under the knee, which is persistent and linked to running and being active\n* Medication use: Ibuprofen helps alleviate pain\n* Lifestyle: Running, being on feet all day",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient's name: Abigail\n* Age: Not specified\n* Gender: Not specified\n* Chief complaint: Right knee pain, specifically on the outside of the knee, which started a few months ago and worsens with running\n* Description of pain: Dull ache, especially towards the end of the day after being on feet\n* Associated symptoms: Fluid under the knee, which is persistent and linked to running and being active\n* Medication use: Ibuprofen helps alleviate pain\n* Lifestyle: Running, being on feet all day",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* The patient was hoping to obtain the doctor's opinion on what might be going on.\n* The patient reports not having had an MRI or ultrasound of their right knee.\n* The patient reports that the X-rays were taken when they first came into the office this morning, but does not have the exact date.\n* The patient doesn't think any MRI or ultrasound was done yet.\n* The patient doesn't think they had any blood tests like ESR, CRP, RF, or ANA done yet.\n* The patient reports that the doctor did not mention any blood tests or inflammatory markers testing for conditions like rheumatoid arthritis or other autoimmune issues.\n* The patient doesn't think any other imaging studies were done, just the X-rays.\n* Patient's name: Abigail\n* Age: Not specified\n* Gender: Not specified\n* Chief complaint: Right knee pain, specifically on the outside of the knee, which started a few months ago and worsens with running\n* Description of pain: Dull ache, especially towards the end of the day after being on feet\n* Associated symptoms: Fluid under the knee, which is persistent and linked to running and being active\n* Medication use: Ibuprofen helps alleviate pain\n* Lifestyle: Running, being on feet all day",
+    "objective": "* He did not find any signs of instability or tenderness when he checked."
+  },
+  "stage1_ap": {
+    "assessment": "* Right knee pain, likely related to effusion, with no clear underlying cause established\n* No specific diagnosis or condition confirmed",
+    "plan": "* Further evaluation with imaging studies (MRI or ultrasound) to assess for meniscal tears or other soft tissue abnormalities\n* Blood tests (ESR, CRP, RF, or ANA) to evaluate for inflammatory or autoimmune conditions\n* No specific treatment or management plan discussed"
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient's name: Abigail",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0001,
+        "contradiction": 0.0023
+      },
+      "support_evidence": "Patient: Hello, I'm Abigail, and I'm here because I've been having some knee pain, specifically in my right knee. It started a while ago, and it's been affecting my running, which I really enjoy. I was hoping to get your opinion on what might be going on.",
+      "contradiction_evidence": "Patient: The pain is more of a dull ache, especially on the outside of my right knee, and it gets worse towards the end of the day after being on my feet. I don't have any numbness or tingling, but the fluid under the knee seems to be there consistently, and it's been linked to running and being active throughout the day.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient's name: Abigail",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient's name: Abigail",
+      "level": "sentence"
+    },
+    {
+      "section": "subjective",
+      "line": 1,
+      "sentence": "Age: Not specified",
+      "claim": "Age: Not specified",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    },
+    {
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Gender: Not specified",
+      "claim": "Gender: Not specified",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    },
+    {
+      "claim": "The patient has a chief complaint of Right knee pain.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.001
+      },
+      "support_evidence": "Patient: The doctor examined my right knee and found some fluid under the knee, which he called a small amount of effusion. There was no redness or swelling, and when he moved my leg, there wasn’t any pain. The pain is mainly on the outside of the knee and gets worse after being on my feet all day. He didn’t find any signs of instability or tenderness when he checked.",
+      "contradiction_evidence": "Patient: The pain is more of a dull ache, especially on the outside of my right knee, and it gets worse towards the end of the day after being on my feet. I don't have any numbness or tingling, but the fluid under the knee seems to be there consistently, and it's been linked to running and being active throughout the day.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has a chief complaint of Right knee pain.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Chief complaint: Right knee pain, specifically on the outside of the knee, which started a few months ago and worsens with running"
+    },
+    {
+      "claim": "The pain is specifically on the outside of the knee.",
+      "scores": {
+        "entailment": 0.9987,
+        "neutral": 0.0006,
+        "contradiction": 0.6525
+      },
+      "support_evidence": "Patient: The doctor examined my right knee and found some fluid under the knee, which he called a small amount of effusion. There was no redness or swelling, and when he moved my leg, there wasn’t any pain. The pain is mainly on the outside of the knee and gets worse after being on my feet all day. He didn’t find any signs of instability or tenderness when he checked.",
+      "contradiction_evidence": "Doctor: Could you describe the nature of the knee pain (e.g., sharp, dull, throbbing) and whether it is associated with any numbness, tingling, or weakness in the knee or leg? Additionally, could you clarify if the fluid under the knee is persistent or intermittent and if it is linked to specific activities?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain is specifically on the outside of the knee.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Chief complaint: Right knee pain, specifically on the outside of the knee, which started a few months ago and worsens with running"
+    },
+    {
+      "claim": "The pain started a few months ago.",
+      "scores": {
+        "entailment": 0.9906,
+        "neutral": 0.0064,
+        "contradiction": 0.003
+      },
+      "support_evidence": "Patient: The pain started a while back, maybe a few months ago, and it's been getting worse when I run. It usually aches towards the end of the day, especially after being on my feet all day. Putting ice on it and taking ibuprofen helps it feel better for a while.",
+      "contradiction_evidence": "Patient: The pain started a while back, maybe a few months ago, and it's been getting worse when I run. It usually aches towards the end of the day, especially after being on my feet all day. Putting ice on it and taking ibuprofen helps it feel better for a while.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain started a few months ago.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Chief complaint: Right knee pain, specifically on the outside of the knee, which started a few months ago and worsens with running"
+    },
+    {
+      "claim": "The pain worsens with running.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0003,
+        "contradiction": 0.0086
+      },
+      "support_evidence": "Patient: I haven't had any swelling or instability in my right knee, but I have noticed a little bit of fluid under the knee, which the doctor mentioned during the exam. As for prior injuries, I don't recall any specific ones, just the ongoing pain that's been affecting my running.",
+      "contradiction_evidence": "Doctor: Could you describe the nature of the knee pain (e.g., sharp, dull, throbbing) and whether it is associated with any numbness, tingling, or weakness in the knee or leg? Additionally, could you clarify if the fluid under the knee is persistent or intermittent and if it is linked to specific activities?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain worsens with running.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Chief complaint: Right knee pain, specifically on the outside of the knee, which started a few months ago and worsens with running"
+    },
+    {
+      "claim": "Description of pain: Dull ache, especially towards the end of the day after being on feet",
+      "scores": {
+        "entailment": 0.998,
+        "neutral": 0.0014,
+        "contradiction": 0.2959
+      },
+      "support_evidence": "Patient: The doctor examined my right knee and found some fluid under the knee, which he called a small amount of effusion. There was no redness or swelling, and when he moved my leg, there wasn’t any pain. The pain is mainly on the outside of the knee and gets worse after being on my feet all day. He didn’t find any signs of instability or tenderness when he checked.",
+      "contradiction_evidence": "Patient: The pain is more of a dull ache, especially on the outside of my right knee, and it gets worse towards the end of the day after being on my feet. I don't have any numbness or tingling, but the fluid under the knee seems to be there consistently, and it's been linked to running and being active throughout the day.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Description of pain: Dull ache, especially towards the end of the day after being on feet",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Description of pain: Dull ache, especially towards the end of the day after being on feet",
+      "level": "sentence"
+    },
+    {
+      "claim": "Associated symptoms: Fluid under the knee, which is persistent and linked to running and being active",
+      "scores": {
+        "entailment": 0.9962,
+        "neutral": 0.0021,
+        "contradiction": 0.0152
+      },
+      "support_evidence": "Patient: The pain is more of a dull ache, especially on the outside of my right knee, and it gets worse towards the end of the day after being on my feet. I don't have any numbness or tingling, but the fluid under the knee seems to be there consistently, and it's been linked to running and being active throughout the day.",
+      "contradiction_evidence": "Doctor: Have you undergone any blood tests, such as ESR, CRP, RF, or ANA, to evaluate for inflammatory or autoimmune conditions that could be contributing to the knee effusion and pain?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Associated symptoms: Fluid under the knee, which is persistent and linked to running and being active",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "Associated symptoms: Fluid under the knee, which is persistent and linked to running and being active",
+      "level": "sentence"
+    },
+    {
+      "claim": "Medication use: Ibuprofen helps alleviate pain",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0003,
+        "contradiction": 0.1199
+      },
+      "support_evidence": "Patient: The pain started a while back, maybe a few months ago, and it's been getting worse when I run. It usually aches towards the end of the day, especially after being on my feet all day. Putting ice on it and taking ibuprofen helps it feel better for a while.",
+      "contradiction_evidence": "Doctor: Have you undergone any blood tests, such as ESR, CRP, RF, or ANA, to evaluate for inflammatory or autoimmune conditions that could be contributing to the knee effusion and pain?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Medication use: Ibuprofen helps alleviate pain",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 6,
+      "sentence": "Medication use: Ibuprofen helps alleviate pain",
+      "level": "sentence"
+    },
+    {
+      "claim": "Lifestyle: Running, being on feet all day",
+      "scores": {
+        "entailment": 0.9964,
+        "neutral": 0.0029,
+        "contradiction": 0.0362
+      },
+      "support_evidence": "Patient: The pain started a while back, maybe a few months ago, and it's been getting worse when I run. It usually aches towards the end of the day, especially after being on my feet all day. Putting ice on it and taking ibuprofen helps it feel better for a while.",
+      "contradiction_evidence": "Patient: The pain is more of a dull ache, especially on the outside of my right knee, and it gets worse towards the end of the day after being on my feet. I don't have any numbness or tingling, but the fluid under the knee seems to be there consistently, and it's been linked to running and being active throughout the day.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Lifestyle: Running, being on feet all day",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 7,
+      "sentence": "Lifestyle: Running, being on feet all day",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 9,
+      "exempt": 3
+    },
+    "num_claims": 9,
+    "num_kept": 9,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient reports that the X-rays were taken when they first came into the office this morning, but does not have the exact date.",
+      "evidence": "Patient: I don't have the exact date when the X-rays were taken, but I was told they were done when I first came into the office this morning. As for other imaging studies, I don't think any were done yet, just the X-rays.",
+      "section": "subjective",
+      "candidate": "I don't have the exact date when the X-rays were taken, but I was told they were done when I first came into the office this morning."
+    },
+    {
+      "statement": "He did not find any signs of instability or tenderness when he checked.",
+      "evidence": "Patient: The doctor examined my right knee and found some fluid under the knee, which he called a small amount of effusion. There was no redness or swelling, and when he moved my leg, there wasn’t any pain. The pain is mainly on the outside of the knee and gets worse after being on my feet all day. He didn’t find any signs of instability or tenderness when he checked.",
+      "section": "objective",
+      "candidate": "He didn’t find any signs of instability or tenderness when he checked."
+    },
+    {
+      "statement": "The patient doesn't think any other imaging studies were done, just the X-rays.",
+      "evidence": "Patient: I don't have the exact date when the X-rays were taken, but I was told they were done when I first came into the office this morning. As for other imaging studies, I don't think any were done yet, just the X-rays.",
+      "section": "subjective",
+      "candidate": "As for other imaging studies, I don't think any were done yet, just the X-rays."
+    },
+    {
+      "statement": "The patient was hoping to obtain the doctor's opinion on what might be going on.",
+      "evidence": "Patient: Hello, I'm Abigail, and I'm here because I've been having some knee pain, specifically in my right knee. It started a while ago, and it's been affecting my running, which I really enjoy. I was hoping to get your opinion on what might be going on.",
+      "section": "subjective",
+      "candidate": "I was hoping to get your opinion on what might be going on."
+    },
+    {
+      "statement": "The patient doesn't think they had any blood tests like ESR, CRP, RF, or ANA done yet.",
+      "evidence": "Patient: I don't think I had any blood tests like ESR, CRP, RF, or ANA done yet. The doctor didn't mention anything about those tests, so I don't have that information.",
+      "section": "subjective",
+      "candidate": "I don't think I had any blood tests like ESR, CRP, RF, or ANA done yet."
+    },
+    {
+      "statement": "The patient doesn't think any MRI or ultrasound was done yet.",
+      "evidence": "Patient: I don't think any MRI or ultrasound was done yet, just the X-rays this morning. The doctor said the joint spaces were normal and there was no sign of a fracture or arthritis, but I don't have any details about other imaging studies.",
+      "section": "subjective",
+      "candidate": "I don't think any MRI or ultrasound was done yet, just the X-rays this morning."
+    },
+    {
+      "statement": "The patient reports not having had an MRI or ultrasound of their right knee.",
+      "evidence": "Doctor: Have you had an MRI or ultrasound of your right knee to check for meniscal tears or other soft tissue issues?",
+      "section": "subjective",
+      "candidate": "No, I don't think I had an MRI or ultrasound yet."
+    },
+    {
+      "statement": "The patient reports that the doctor did not mention any blood tests or inflammatory markers testing for conditions like rheumatoid arthritis or other autoimmune issues.",
+      "evidence": "Doctor: Have you had any blood tests or inflammatory markers testing to check for conditions like rheumatoid arthritis or other autoimmune issues that might be causing the fluid in your knee?",
+      "section": "subjective",
+      "candidate": "The doctor didn't mention anything about that, so I don't have that information."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I don't have the exact date when the X-rays were taken, but I was told they were done when I first came into the office this morning.",
+      "speaker": "Patient",
+      "coverage": 0.1435,
+      "nearest_so_sentence": "Patient's name: Abigail",
+      "statement": "The patient reports that the X-rays were taken when they first came into the office this morning, but does not have the exact date.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't have the exact date when the X-rays were taken, but I was told they were done when I first came into the office this morning. As for other imaging studies, I don't think any were done yet, just the X-rays.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9991,
+        "contradiction": 0.1477
+      },
+      "duplicate_entailment": 0.0097,
+      "duplicate_similarity": 0.2632,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 23.76,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don't recall having any imaging studies done yet, but I was told this morning that X-rays were taken when I first came into the office.",
+      "speaker": "Patient",
+      "coverage": 0.1735,
+      "nearest_so_sentence": "Chief complaint: Right knee pain, specifically on the outside of the knee, which started a few months ago and worsens with running",
+      "statement": "The patient reports being informed that X-rays were taken when they first came into the office, but does not recall undergoing any imaging studies prior to that.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I don't recall having any imaging studies done yet, but I was told this morning that X-rays were taken when I first came into the office. The doctor mentioned that the joint spaces looked normal and there was no sign of a fracture or arthritis, but I don't have the exact results or dates on hand.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.4964
+      }
+    },
+    {
+      "candidate": "He didn’t find any signs of instability or tenderness when he checked.",
+      "speaker": "Patient",
+      "coverage": 0.1787,
+      "nearest_so_sentence": "Associated symptoms: Fluid under the knee, which is persistent and linked to running and being active",
+      "statement": "He did not find any signs of instability or tenderness when he checked.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: The doctor examined my right knee and found some fluid under the knee, which he called a small amount of effusion. There was no redness or swelling, and when he moved my leg, there wasn’t any pain. The pain is mainly on the outside of the knee and gets worse after being on my feet all day. He didn’t find any signs of instability or tenderness when he checked.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.1199
+      },
+      "first_rewrite_rejected": "The physical examination revealed no signs of instability or tenderness in the right knee.",
+      "duplicate_entailment": 0.0393,
+      "duplicate_similarity": 0.1828,
+      "insertion": {
+        "section": "objective",
+        "line_index": 0,
+        "perplexity": null,
+        "removed_placeholder": [
+          "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+        ]
+      }
+    },
+    {
+      "candidate": "As for other imaging studies, I don't think any were done yet, just the X-rays.",
+      "speaker": "Patient",
+      "coverage": 0.1846,
+      "nearest_so_sentence": "Chief complaint: Right knee pain, specifically on the outside of the knee, which started a few months ago and worsens with running",
+      "statement": "The patient doesn't think any other imaging studies were done, just the X-rays.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't have the exact date when the X-rays were taken, but I was told they were done when I first came into the office this morning. As for other imaging studies, I don't think any were done yet, just the X-rays.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0148
+      },
+      "first_rewrite_rejected": "The patient reports that only X-rays were performed, with no other imaging studies done.",
+      "duplicate_entailment": 0.0029,
+      "duplicate_similarity": 0.1992,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 1,
+        "perplexity": 21.53,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I was hoping to get your opinion on what might be going on.",
+      "speaker": "Patient",
+      "coverage": 0.1867,
+      "nearest_so_sentence": "Chief complaint: Right knee pain, specifically on the outside of the knee, which started a few months ago and worsens with running",
+      "statement": "The patient was hoping to obtain the doctor's opinion on what might be going on.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: Hello, I'm Abigail, and I'm here because I've been having some knee pain, specifically in my right knee. It started a while ago, and it's been affecting my running, which I really enjoy. I was hoping to get your opinion on what might be going on.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0058
+      },
+      "duplicate_entailment": 0.0022,
+      "duplicate_similarity": 0.4068,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 20.4,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don't think I had any blood tests like ESR, CRP, RF, or ANA done yet.",
+      "speaker": "Patient",
+      "coverage": 0.2237,
+      "nearest_so_sentence": "Associated symptoms: Fluid under the knee, which is persistent and linked to running and being active",
+      "statement": "The patient doesn't think they had any blood tests like ESR, CRP, RF, or ANA done yet.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't think I had any blood tests like ESR, CRP, RF, or ANA done yet. The doctor didn't mention anything about those tests, so I don't have that information.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9982,
+        "contradiction": 0.2842
+      },
+      "first_rewrite_rejected": "The patient reports not having undergone any blood tests, including ESR, CRP, RF, or ANA.",
+      "duplicate_entailment": 0.0019,
+      "duplicate_similarity": 0.2926,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 2,
+        "perplexity": 20.77,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don't think I had any blood tests like ESR, CRP, RF, or ANA done yet.",
+      "speaker": "Patient",
+      "coverage": 0.2252,
+      "nearest_so_sentence": "Associated symptoms: Fluid under the knee, which is persistent and linked to running and being active",
+      "statement": "The patient doesn't think they had any blood tests like ESR, CRP, RF, or ANA done yet.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I don't think I had any blood tests like ESR, CRP, RF, or ANA done yet. The doctor didn't mention anything about those tests, so I don't have that information.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9982,
+        "contradiction": 0.2842
+      },
+      "first_rewrite_rejected": "The patient reports not having undergone blood tests such as ESR, CRP, RF, or ANA.",
+      "duplicate_entailment": 0.0019,
+      "duplicate_similarity": 0.2926
+    },
+    {
+      "candidate": "I don't think I had any blood tests like ESR, CRP, RF, or ANA done yet.",
+      "speaker": "Patient",
+      "coverage": 0.2252,
+      "nearest_so_sentence": "Associated symptoms: Fluid under the knee, which is persistent and linked to running and being active",
+      "statement": "The patient doesn't think they had any blood tests like ESR, CRP, RF, or ANA done yet.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I don't think I had any blood tests like ESR, CRP, RF, or ANA done yet. The doctor didn't mention anything about those tests, so I don't have that information.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9982,
+        "contradiction": 0.2842
+      },
+      "first_rewrite_rejected": "The patient reports not having undergone blood tests for inflammatory markers or autoimmune conditions, including ESR, CRP, RF, or ANA.",
+      "duplicate_entailment": 0.0019,
+      "duplicate_similarity": 0.2926
+    },
+    {
+      "candidate": "I don't think any MRI or ultrasound was done yet, just the X-rays this morning.",
+      "speaker": "Patient",
+      "coverage": 0.2416,
+      "nearest_so_sentence": "Chief complaint: Right knee pain, specifically on the outside of the knee, which started a few months ago and worsens with running",
+      "statement": "The patient doesn't think any MRI or ultrasound was done yet.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't think any MRI or ultrasound was done yet, just the X-rays this morning. The doctor said the joint spaces were normal and there was no sign of a fracture or arthritis, but I don't have any details about other imaging studies.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0068
+      },
+      "first_rewrite_rejected": "The patient reports that only X-rays were performed this morning, with no MRI or ultrasound imaging done yet.",
+      "duplicate_entailment": 0.0011,
+      "duplicate_similarity": 0.2492,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 2,
+        "perplexity": 18.61,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "The doctor didn't mention anything about those tests, so I don't have that information.",
+      "speaker": "Patient",
+      "coverage": 0.2445,
+      "nearest_so_sentence": "Associated symptoms: Fluid under the knee, which is persistent and linked to running and being active",
+      "statement": "The patient reports that the doctor did not mention any blood tests, such as ESR, CRP, RF, or ANA, to evaluate for inflammatory or autoimmune conditions.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Doctor: Have you undergone any blood tests, such as ESR, CRP, RF, or ANA, to evaluate for inflammatory or autoimmune conditions?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9988,
+        "contradiction": 0.7066
+      }
+    },
+    {
+      "candidate": "The doctor didn't mention anything about those tests, so I don't have that information.",
+      "speaker": "Patient",
+      "coverage": 0.2445,
+      "nearest_so_sentence": "Associated symptoms: Fluid under the knee, which is persistent and linked to running and being active",
+      "statement": "The patient reports that the doctor did not mention any blood tests for inflammatory markers or autoimmune conditions, such as ESR, CRP, RF, or ANA.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Doctor: Have you undergone any blood tests to check for inflammatory markers or autoimmune conditions, such as ESR, CRP, RF, or ANA?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9989,
+        "contradiction": 0.9105
+      }
+    },
+    {
+      "candidate": "The doctor didn't mention anything about those tests, so I don't have that information.",
+      "speaker": "Patient",
+      "coverage": 0.2455,
+      "nearest_so_sentence": "Associated symptoms: Fluid under the knee, which is persistent and linked to running and being active",
+      "statement": "The patient reports that the doctor did not mention any blood tests, including ESR, CRP, RF, or ANA, and therefore does not have that information.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I don't think I had any blood tests like ESR, CRP, RF, or ANA done yet. The doctor didn't mention anything about those tests, so I don't have that information.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9987,
+        "contradiction": 0.7577
+      }
+    },
+    {
+      "candidate": "No, I don't think I had an MRI or ultrasound yet.",
+      "speaker": "Patient",
+      "coverage": 0.2543,
+      "nearest_so_sentence": "Description of pain: Dull ache, especially towards the end of the day after being on feet",
+      "statement": "The patient reports not having had an MRI or ultrasound of their right knee.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Doctor: Have you had an MRI or ultrasound of your right knee to check for meniscal tears or other soft tissue issues?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0262
+      },
+      "duplicate_entailment": 0.0129,
+      "duplicate_similarity": 0.5454,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 1,
+        "perplexity": 16.69,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "No, I don't think I had an MRI or ultrasound yet.",
+      "speaker": "Patient",
+      "coverage": 0.2543,
+      "nearest_so_sentence": "Description of pain: Dull ache, especially towards the end of the day after being on feet",
+      "statement": "The patient reports not having had an MRI or ultrasound of their right knee.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Have you had an MRI or ultrasound of your right knee to check for meniscal tears or other soft tissue issues?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0262
+      },
+      "duplicate_entailment": 0.0129,
+      "duplicate_similarity": 0.5454
+    },
+    {
+      "candidate": "No, I don't think I had an MRI or ultrasound yet.",
+      "speaker": "Patient",
+      "coverage": 0.2543,
+      "nearest_so_sentence": "Description of pain: Dull ache, especially towards the end of the day after being on feet",
+      "statement": "The patient reports not having undergone an MRI or ultrasound of the right knee.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Have you undergone any MRI or ultrasound imaging of the right knee to further evaluate the effusion and assess for meniscal tears or other soft tissue abnormalities?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0084
+      },
+      "duplicate_entailment": 0.0366,
+      "duplicate_similarity": 0.5511
+    },
+    {
+      "candidate": "The doctor didn't mention anything about that, so I don't have that information.",
+      "speaker": "Patient",
+      "coverage": 0.2774,
+      "nearest_so_sentence": "Associated symptoms: Fluid under the knee, which is persistent and linked to running and being active",
+      "statement": "The patient reports that the doctor did not mention any blood tests or inflammatory markers testing for conditions like rheumatoid arthritis or other autoimmune issues.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Doctor: Have you had any blood tests or inflammatory markers testing to check for conditions like rheumatoid arthritis or other autoimmune issues that might be causing the fluid in your knee?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.2793
+      },
+      "duplicate_entailment": 0.0064,
+      "duplicate_similarity": 0.3657,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 5,
+        "perplexity": 15.8,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don't think I had any blood tests or inflammatory markers testing done yet.",
+      "speaker": "Patient",
+      "coverage": 0.3506,
+      "nearest_so_sentence": "Associated symptoms: Fluid under the knee, which is persistent and linked to running and being active",
+      "statement": "The patient reports not having had any blood tests or inflammatory markers testing done yet.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I don't think I had any blood tests or inflammatory markers testing done yet. The doctor didn't mention anything about that, so I don't have that information.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0747
+      },
+      "duplicate_entailment": 0.0063,
+      "duplicate_similarity": 0.3354
+    },
+    {
+      "candidate": "The doctor said the joint spaces were normal and there was no sign of a fracture or arthritis, but I don't have any details about other imaging studies.",
+      "speaker": "Patient",
+      "coverage": 0.3994,
+      "nearest_so_sentence": "Chief complaint: Right knee pain, specifically on the outside of the knee, which started a few months ago and worsens with running",
+      "statement": "The patient reports that the joint spaces were normal and there was no sign of a fracture or arthritis.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I don't think any MRI or ultrasound was done yet, just the X-rays this morning. The doctor said the joint spaces were normal and there was no sign of a fracture or arthritis, but I don't have any details about other imaging studies.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.9326
+      }
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 34,
+    "num_covered": 16,
+    "num_flagged": 18,
+    "num_not_checked_cap": 0,
+    "num_added": 8
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "I don't recall having any imaging studies done yet, but I was told this morning that X-rays were taken when I first came into the office.",
+        "statement": "The patient reports being informed that X-rays were taken when they first came into the office, but does not recall undergoing any imaging studies prior to that.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9995,
+          "contradiction": 0.4964
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "The doctor didn't mention anything about those tests, so I don't have that information.",
+        "statement": "The patient reports that the doctor did not mention any blood tests, such as ESR, CRP, RF, or ANA, to evaluate for inflammatory or autoimmune conditions.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9988,
+          "contradiction": 0.7066
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "The doctor didn't mention anything about those tests, so I don't have that information.",
+        "statement": "The patient reports that the doctor did not mention any blood tests for inflammatory markers or autoimmune conditions, such as ESR, CRP, RF, or ANA.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9989,
+          "contradiction": 0.9105
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "The doctor didn't mention anything about those tests, so I don't have that information.",
+        "statement": "The patient reports that the doctor did not mention any blood tests, including ESR, CRP, RF, or ANA, and therefore does not have that information.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9987,
+          "contradiction": 0.7577
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "The doctor said the joint spaces were normal and there was no sign of a fracture or arthritis, but I don't have any details about other imaging studies.",
+        "statement": "The patient reports that the joint spaces were normal and there was no sign of a fracture or arthritis.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9993,
+          "contradiction": 0.9326
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 55.8,
+  "ap_unchanged": true,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: Hello, I'm Abigail, and I'm here because I've been having some knee pain, specifically in my right knee. It started a while ago, and it's been affecting my running, which I really enjoy. I was hoping to get your opinion on what might be going on.\nDoctor: Could you please specify when the knee pain started, how long it has been present, and whether there are any specific activities or movements that worsen or alleviate the pain?\nPatient: The pain started a while back, maybe a few months ago, and it's been getting worse when I run. It usually aches towards the end of the day, especially after being on my feet all day. Putting ice on it and taking ibuprofen helps it feel better for a while.\nDoctor: Have you experienced any swelling, stiffness, or instability in your right knee? Have you had any prior injuries or treatments related to your knee?\nPatient: I haven't had any swelling or instability in my right knee, but I have noticed a little bit of fluid under the knee, which the doctor mentioned during the exam. As for prior injuries, I don't recall any specific ones, just the ongoing pain that's been affecting my running.\nDoctor: Have you undergone any imaging studies such as X-rays, MRI, or ultrasound for your right knee? If so, please provide the results and dates.\nPatient: I don't recall having any imaging studies done yet, but I was told this morning that X-rays were taken when I first came into the office. The doctor mentioned that the joint spaces looked normal and there was no sign of a fracture or arthritis, but I don't have the exact results or dates on hand.\nDoctor: Could you describe the nature of the knee pain (e.g., sharp, dull, throbbing) and whether it is associated with any numbness, tingling, or weakness in the knee or leg? Additionally, could you clarify if the fluid under the knee is persistent or intermittent and if it is linked to specific activities?\nPatient: The pain is more of a dull ache, especially on the outside of my right knee, and it gets worse towards the end of the day after being on my feet. I don't have any numbness or tingling, but the fluid under the knee seems to be there consistently, and it's been linked to running and being active throughout the day.\nDoctor: Could you provide details about the physical examination findings, such as range of motion, swelling, tenderness, and any signs of effusion or instability in the right knee?\nPatient: The doctor examined my right knee and found some fluid under the knee, which he called a small amount of effusion. There was no redness or swelling, and when he moved my leg, there wasn’t any pain. The pain is mainly on the outside of the knee and gets worse after being on my feet all day. He didn’t find any signs of instability or tenderness when he checked.\nDoctor: Could you provide the exact date when the X-rays were taken and whether there were any other imaging studies, such as an MRI or ultrasound, performed on the knee?\nPatient: I don't have the exact date when the X-rays were taken, but I was told they were done when I first came into the office this morning. As for other imaging studies, I don't think any were done yet, just the X-rays.\nDoctor: Have you undergone any MRI or ultrasound imaging of the right knee to further evaluate the effusion and assess for meniscal tears or other soft tissue abnormalities?\nPatient: I don't think any MRI or ultrasound was done yet, just the X-rays this morning. The doctor said the joint spaces were normal and there was no sign of a fracture or arthritis, but I don't have any details about other imaging studies.\nDoctor: Have you had any blood tests or inflammatory markers testing to check for conditions like rheumatoid arthritis or other autoimmune issues that might be causing the fluid in your knee?\nPatient: I don't think I had any blood tests or inflammatory markers testing done yet. The doctor didn't mention anything about that, so I don't have that information.\nDoctor: Have you had an MRI or ultrasound of your right knee to check for meniscal tears or other soft tissue issues?\nPatient: No, I don't think I had an MRI or ultrasound yet. The doctor only mentioned the X-rays this morning, and he said there was no sign of a fracture or arthritis, but he didn't talk about any other imaging tests.\nDoctor: Have you undergone any blood tests, such as ESR, CRP, RF, or ANA, to evaluate for inflammatory or autoimmune conditions that could be contributing to the knee effusion and pain?\nPatient: I don't think I had any blood tests like ESR, CRP, RF, or ANA done yet. The doctor didn't mention anything about those tests, so I don't have that information.\nDoctor: Have you had an MRI or ultrasound of your right knee to further evaluate the effusion and any potential meniscal or ligamentous injuries?\nPatient: No, I don't think I had an MRI or ultrasound yet. The doctor only mentioned the X-rays this morning, and he said there was no sign of a fracture or arthritis, but he didn't talk about any other imaging tests.\nDoctor: Have you undergone any blood tests to check for inflammatory markers or autoimmune conditions, such as ESR, CRP, RF, or ANA?\nPatient: I don't think I had any blood tests like ESR, CRP, RF, or ANA done yet. The doctor didn't mention anything about those tests, so I don't have that information.\nDoctor: Have you undergone any imaging studies, such as an MRI or ultrasound, of your right knee to further evaluate the fluid and pain?\nPatient: No, I don't think I had an MRI or ultrasound yet. The doctor only mentioned the X-rays this morning, and he said there was no sign of a fracture or arthritis, but he didn't talk about any other imaging tests.\nDoctor: Have you undergone any blood tests, such as ESR, CRP, RF, or ANA, to evaluate for inflammatory or autoimmune conditions?\nPatient: I don't think I had any blood tests like ESR, CRP, RF, or ANA done yet. The doctor didn't mention anything about those tests, so I don't have that information.",
+  "reference_so": {
+    "subjective": "Basic information: Patient is Abigail, presenting with right knee pain affecting her running. Visit time is unspecified. Major symptom is knee pain.\n\nHistory of present illness: The patient reports that the right knee pain began a few months ago and has progressively worsened with running. The pain typically aches towards the end of the day, especially after prolonged standing. The patient notes that applying ice and taking ibuprofen provides temporary relief. The patient mentions noticing a little bit of fluid under the knee, which was mentioned during a prior exam. The pain is more of a dull ache, especially on the outside of my right knee, and it gets worse towards the end of the day after being on my feet. I don't have any numbness or tingling, but the fluid under the knee seems to be there consistently, and it's been linked to running and being active throughout the day.\n\nPast history: No specific prior injuries reported. Family history of joint-related conditions is unknown.",
+    "objective": "Physical examination: The physical examination revealed a small amount of effusion in the right knee without redness or swelling. There was no tenderness or instability noted during the examination. Range of motion and movement of the leg were not painful.\n\nInvestigations: X-rays were taken, showing normal joint spaces with no sign of fracture or arthritis. MRI or ultrasound imaging of the right knee has not been performed yet. No blood tests, including inflammatory markers (e.g., ESR, CRP) or autoimmune panels (e.g., RF, ANA), have been performed yet."
+  }
+}

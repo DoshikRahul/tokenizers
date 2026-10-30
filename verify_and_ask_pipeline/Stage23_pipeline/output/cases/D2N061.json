@@ -1,0 +1,357 @@
+{
+  "case_id": "D2N061",
+  "split": "dev",
+  "stage1_so": {
+    "subjective": "* Patient's age and gender: Not specified\n* Reason for visit: Hurt knee playing basketball\n* Description of injury: Fell to the ground after being run into by Jerry, twisted knee before falling, and experienced pain on the inside of the knee\n* Current symptoms: Pain on the inside of the knee, swelling, and feeling of instability\n* Prior knee injuries or surgeries: None\n* Imaging studies: X-ray showed no fractures, but some swelling and fluid in the knee; no MRI or other imaging studies done yet",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient's age and gender: Not specified\n* Reason for visit: Hurt knee playing basketball\n* Description of injury: Fell to the ground after being run into by Jerry, twisted knee before falling, and experienced pain on the inside of the knee\n* Current symptoms: Pain on the inside of the knee, swelling, and feeling of instability\n* Prior knee injuries or surgeries: None\n* Imaging studies: X-ray showed no fractures, but some swelling and fluid in the knee; no MRI or other imaging studies done yet",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* The patient, Virginia, identifies herself.\n* Patient's age and gender: Not specified\n* Reason for visit: Hurt knee playing basketball\n* Description of injury: Fell to the ground after being run into by Jerry, twisted knee before falling, and experienced pain on the inside of the knee\n* Current symptoms: Pain on the inside of the knee, swelling, and feeling of instability\n* Prior knee injuries or surgeries: None\n* Imaging studies: X-ray showed no fractures, but some swelling and fluid in the knee; no MRI or other imaging studies done yet\n* The patient reports having used ice and an ACE wrap, but is unable to bear weight on the affected area.\n* The patient reports that the pain does not radiate to any other areas.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* Clinical problem: Knee injury with pain, swelling, and instability",
+    "plan": "* No explicit management or follow-up plan was documented in the conversation."
+  },
+  "stage2_audit": [
+    {
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient's age and gender: Not specified",
+      "claim": "Patient's age and gender: Not specified",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    },
+    {
+      "claim": "Reason for visit: Hurt knee playing basketball",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0002,
+        "contradiction": 0.0138
+      },
+      "support_evidence": "Patient: Hi, I'm Virginia. I'm here because I hurt my knee playing basketball. I was playing with Jerry, and he ran into me, and I fell to the ground. My knee has been hurting on the inside ever since, and it's still swollen. I had ice and an ace wrap, but I can't really put weight on it.",
+      "contradiction_evidence": "Patient: No, I haven't undergone any previous imaging studies, such as an MRI, to evaluate for ligamentous or meniscal injuries. The only thing they did was an X-ray when I first came in, and they said there were no fractures, just some swelling and fluid in the knee.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Reason for visit: Hurt knee playing basketball",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "Reason for visit: Hurt knee playing basketball",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient fell to the ground.",
+      "scores": {
+        "entailment": 0.9998,
+        "neutral": 0.0001,
+        "contradiction": 0.0708
+      },
+      "support_evidence": "Patient: I was playing basketball, and Jerry ran into me. I think I twisted my knee a little before I fell to the ground on my side. I didn't land directly on my knee, but it still hurt a lot, and I couldn't get back up right away.",
+      "contradiction_evidence": "Patient: No, I haven't undergone any previous imaging studies, such as an MRI, to evaluate for ligamentous or meniscal injuries. The only thing they did was an X-ray when I first came in, and they said there were no fractures, just some swelling and fluid in the knee.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient fell to the ground.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Description of injury: Fell to the ground after being run into by Jerry, twisted knee before falling, and experienced pain on the inside of the knee"
+    },
+    {
+      "claim": "The patient was run into by Jerry.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0001,
+        "contradiction": 0.0005
+      },
+      "support_evidence": "Patient: I was playing basketball, and Jerry ran into me. I think I twisted my knee a little before I fell to the ground on my side. I didn't land directly on my knee, but it still hurt a lot, and I couldn't get back up right away.",
+      "contradiction_evidence": "Patient: No, I haven't had an MRI or any other imaging studies to evaluate for ligamentous or meniscal injuries yet. The only thing they did was an X-ray when I first came in, and they said there were no fractures, just some swelling and fluid in the knee.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient was run into by Jerry.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Description of injury: Fell to the ground after being run into by Jerry, twisted knee before falling, and experienced pain on the inside of the knee"
+    },
+    {
+      "claim": "The patient twisted the knee before falling.",
+      "scores": {
+        "entailment": 0.8533,
+        "neutral": 0.1404,
+        "contradiction": 0.0063
+      },
+      "support_evidence": "Patient: I was playing basketball, and Jerry ran into me. I think I twisted my knee a little before I fell to the ground on my side. I didn't land directly on my knee, but it still hurt a lot, and I couldn't get back up right away.",
+      "contradiction_evidence": "Patient: I was playing basketball, and Jerry ran into me. I think I twisted my knee a little before I fell to the ground on my side. I didn't land directly on my knee, but it still hurt a lot, and I couldn't get back up right away.",
+      "corrected_text": null,
+      "flagged": true,
+      "decision": "uncertain",
+      "keep": true,
+      "output": "The patient twisted the knee before falling.",
+      "reason": "Partially supported; kept and flagged for review (neutral is not proof of falsehood).",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Description of injury: Fell to the ground after being run into by Jerry, twisted knee before falling, and experienced pain on the inside of the knee"
+    },
+    {
+      "claim": "The patient experienced pain on the inside of the knee.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0001,
+        "contradiction": 0.0016
+      },
+      "support_evidence": "Patient: The pain is on the inside of my knee, right where it's swollen. It doesn't radiate anywhere else. I haven't had any locking or clicking, but it does feel unstable sometimes, like it might give way if I try to put too much weight on it.",
+      "contradiction_evidence": "Patient: No, I haven't had any numbness, tingling, or weakness in my leg or foot since the injury. The pain is just in my knee, and it feels unstable sometimes, but I haven't noticed any issues with my leg or foot.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient experienced pain on the inside of the knee.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Description of injury: Fell to the ground after being run into by Jerry, twisted knee before falling, and experienced pain on the inside of the knee"
+    },
+    {
+      "claim": "Current symptoms: Pain on the inside of the knee, swelling, and feeling of instability",
+      "scores": {
+        "entailment": 0.999,
+        "neutral": 0.0004,
+        "contradiction": 0.1359
+      },
+      "support_evidence": "Doctor: Can you describe the exact location of the pain on your knee and whether it radiates to other areas? Have you experienced any locking, clicking, or giving way of the knee since the injury?",
+      "contradiction_evidence": "Patient: No, I haven't had any numbness, tingling, or weakness in my leg or foot since the injury. The pain is just in my knee, and it feels unstable sometimes, but I haven't noticed any issues with my leg or foot.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Current symptoms: Pain on the inside of the knee, swelling, and feeling of instability",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Current symptoms: Pain on the inside of the knee, swelling, and feeling of instability",
+      "level": "sentence"
+    },
+    {
+      "claim": "Prior knee injuries or surgeries: None",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.4433
+      },
+      "support_evidence": "Doctor: Have you had any prior knee injuries, surgeries, or episodes of instability in the same or opposite knee?",
+      "contradiction_evidence": "Patient: No, I haven't had an MRI or any other imaging studies to evaluate for ligamentous or meniscal injuries yet. The only thing they did was an X-ray when I first came in, and they said there were no fractures, just some swelling and fluid in the knee.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Prior knee injuries or surgeries: None",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Prior knee injuries or surgeries: None",
+      "level": "sentence"
+    },
+    {
+      "claim": "Imaging studies: X-ray showed no fractures, but some swelling and fluid in the knee; no MRI or other imaging studies done yet",
+      "scores": {
+        "entailment": 0.9991,
+        "neutral": 0.0006,
+        "contradiction": 0.0018
+      },
+      "support_evidence": "Patient: No, I haven't had an MRI or any other imaging studies to evaluate for ligamentous or meniscal injuries yet. The only thing they did was an X-ray when I first came in, and they said there were no fractures, just some swelling and fluid in the knee.",
+      "contradiction_evidence": "Patient: No, I haven't had any previous MRI or other imaging studies to evaluate for ligamentous or meniscal injuries. The only thing they did was an X-ray when I first came in, and they said there were no fractures, just some swelling and fluid in the knee.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Imaging studies: X-ray showed no fractures, but some swelling and fluid in the knee; no MRI or other imaging studies done yet",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "Imaging studies: X-ray showed no fractures, but some swelling and fluid in the knee; no MRI or other imaging studies done yet",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "exempt": 2,
+      "supported": 7,
+      "uncertain": 1
+    },
+    "num_claims": 8,
+    "num_kept": 8,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient, Virginia, identifies herself.",
+      "evidence": "Patient: Hi, I'm Virginia. I'm here because I hurt my knee playing basketball. I was playing with Jerry, and he ran into me, and I fell to the ground. My knee has been hurting on the inside ever since, and it's still swollen. I had ice and an ace wrap, but I can't really put weight on it.",
+      "section": "subjective",
+      "candidate": "Hi, I'm Virginia."
+    },
+    {
+      "statement": "The patient reports that the pain does not radiate to any other areas.",
+      "evidence": "Patient: The pain is on the inside of my knee, right where it's swollen. It doesn't radiate anywhere else. I haven't had any locking or clicking, but it does feel unstable sometimes, like it might give way if I try to put too much weight on it.",
+      "section": "subjective",
+      "candidate": "It doesn't radiate anywhere else."
+    },
+    {
+      "statement": "The patient reports having used ice and an ACE wrap, but is unable to bear weight on the affected area.",
+      "evidence": "Patient: Hi, I'm Virginia. I'm here because I hurt my knee playing basketball. I was playing with Jerry, and he ran into me, and I fell to the ground. My knee has been hurting on the inside ever since, and it's still swollen. I had ice and an ace wrap, but I can't really put weight on it.",
+      "section": "subjective",
+      "candidate": "I had ice and an ace wrap, but I can't really put weight on it."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "Hi, I'm Virginia.",
+      "speaker": "Patient",
+      "coverage": 0.0484,
+      "nearest_so_sentence": "Reason for visit: Hurt knee playing basketball",
+      "statement": "The patient, Virginia, identifies herself.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: Hi, I'm Virginia. I'm here because I hurt my knee playing basketball. I was playing with Jerry, and he ran into me, and I fell to the ground. My knee has been hurting on the inside ever since, and it's still swollen. I had ice and an ace wrap, but I can't really put weight on it.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9998,
+        "contradiction": 0.0571
+      },
+      "duplicate_entailment": 0.0002,
+      "duplicate_similarity": 0.108,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 34.33,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "It doesn't radiate anywhere else.",
+      "speaker": "Patient",
+      "coverage": 0.118,
+      "nearest_so_sentence": "Imaging studies: X-ray showed no fractures, but some swelling and fluid in the knee; no MRI or other imaging studies done yet",
+      "statement": "The patient reports that the pain does not radiate to any other areas.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: The pain is on the inside of my knee, right where it's swollen. It doesn't radiate anywhere else. I haven't had any locking or clicking, but it does feel unstable sometimes, like it might give way if I try to put too much weight on it.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.005
+      },
+      "duplicate_entailment": 0.0629,
+      "duplicate_similarity": 0.3407,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 7,
+        "perplexity": 30.75,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I haven't had any locking or clicking, but it does feel unstable sometimes, like it might give way if I try to put too much weight on it.",
+      "speaker": "Patient",
+      "coverage": 0.2005,
+      "nearest_so_sentence": "Current symptoms: Pain on the inside of the knee, swelling, and feeling of instability",
+      "statement": "The patient reports that the knee feels unstable at times, as if it might give way if excessive weight is applied.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The pain is on the inside of my knee, right where it's swollen. It doesn't radiate anywhere else. I haven't had any locking or clicking, but it does feel unstable sometimes, like it might give way if I try to put too much weight on it.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0363
+      },
+      "duplicate_entailment": 0.9804,
+      "duplicate_similarity": 0.7044
+    },
+    {
+      "candidate": "I had ice and an ace wrap, but I can't really put weight on it.",
+      "speaker": "Patient",
+      "coverage": 0.2306,
+      "nearest_so_sentence": "Imaging studies: X-ray showed no fractures, but some swelling and fluid in the knee; no MRI or other imaging studies done yet",
+      "statement": "The patient reports having used ice and an ACE wrap, but is unable to bear weight on the affected area.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: Hi, I'm Virginia. I'm here because I hurt my knee playing basketball. I was playing with Jerry, and he ran into me, and I fell to the ground. My knee has been hurting on the inside ever since, and it's still swollen. I had ice and an ace wrap, but I can't really put weight on it.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0091
+      },
+      "duplicate_entailment": 0.0178,
+      "duplicate_similarity": 0.3759,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 7,
+        "perplexity": 31.87,
+        "removed_placeholder": []
+      }
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 35,
+    "num_covered": 31,
+    "num_flagged": 4,
+    "num_not_checked_cap": 0,
+    "num_added": 3
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [
+      {
+        "stage": "stage2",
+        "section": "subjective",
+        "claim": "The patient twisted the knee before falling.",
+        "decision": "uncertain",
+        "scores": {
+          "entailment": 0.8533,
+          "neutral": 0.1404,
+          "contradiction": 0.0063
+        },
+        "reason": "Partially supported; kept and flagged for review (neutral is not proof of falsehood)."
+      }
+    ],
+    "rejected_stage3": []
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 18.1,
+  "ap_unchanged": true,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: Hi, I'm Virginia. I'm here because I hurt my knee playing basketball. I was playing with Jerry, and he ran into me, and I fell to the ground. My knee has been hurting on the inside ever since, and it's still swollen. I had ice and an ace wrap, but I can't really put weight on it.\nDoctor: Can you describe the exact location of the pain on your knee and whether it radiates to other areas? Have you experienced any locking, clicking, or giving way of the knee since the injury?\nPatient: The pain is on the inside of my knee, right where it's swollen. It doesn't radiate anywhere else. I haven't had any locking or clicking, but it does feel unstable sometimes, like it might give way if I try to put too much weight on it.\nDoctor: Have you had any prior knee injuries, surgeries, or episodes of instability in the same or opposite knee?\nPatient: No, I haven't had any prior knee injuries or surgeries. This is the first time I've had an issue with my knee like this.\nDoctor: Have you undergone any imaging studies or evaluations for this knee injury, such as X-rays, MRI, or a physical examination by a healthcare provider?\nPatient: I haven't had any imaging studies done for this injury yet, but I did have an X-ray when I first came in. The doctor mentioned that there was some swelling and fluid in the knee, but no fractures were seen. I haven't had an MRI or any other tests done so far.\nDoctor: Could you please describe the mechanism of the basketball injury in more detail, such as how the collision with Jerry occurred and whether you twisted your knee or landed awkwardly during the fall?\nPatient: I was playing basketball, and Jerry ran into me. I think I twisted my knee a little before I fell to the ground on my side. I didn't land directly on my knee, but it still hurt a lot, and I couldn't get back up right away.\nDoctor: Have you undergone an MRI or any other imaging studies to evaluate for ligamentous or meniscal injuries?\nPatient: No, I haven't had an MRI or any other imaging studies to evaluate for ligamentous or meniscal injuries yet. The only thing they did was an X-ray when I first came in, and they said there were no fractures, just some swelling and fluid in the knee.\nDoctor: Has the patient experienced any numbness, tingling, or weakness in the leg or foot associated with the knee injury?\nPatient: No, I haven't had any numbness, tingling, or weakness in my leg or foot since the injury. The pain is just in my knee, and it feels unstable sometimes, but I haven't noticed any issues with my leg or foot.\nDoctor: Has the patient undergone any previous MRI or other imaging studies to evaluate for ligamentous or meniscal injuries?\nPatient: No, I haven't had any previous MRI or other imaging studies to evaluate for ligamentous or meniscal injuries. The only thing they did was an X-ray when I first came in, and they said there were no fractures, just some swelling and fluid in the knee.\nDoctor: Has the patient experienced any numbness, tingling, or weakness in the leg or foot associated with the knee injury?\nPatient: No, I haven't had any numbness, tingling, or weakness in my leg or foot since the injury. The pain is just in my knee, and it feels unstable sometimes, but I haven't noticed any issues with my leg or foot.\nDoctor: Has the patient undergone an MRI or any other imaging studies to evaluate for ligamentous or meniscal injuries?\nPatient: No, I haven't had an MRI or any other imaging studies to evaluate for ligamentous or meniscal injuries yet. The only thing they did was an X-ray when I first came in, and they said there were no fractures, just some swelling and fluid in the knee.\nDoctor: Has the patient experienced any numbness, tingling, or weakness in the leg or foot since the injury?\nPatient: No, I haven't had any numbness, tingling, or weakness in my leg or foot since the injury. The pain is just in my knee, and it feels unstable sometimes, but I haven't noticed any issues with my leg or foot.\nDoctor: Have you undergone any previous imaging studies, such as an MRI, to evaluate for ligamentous or meniscal injuries?\nPatient: No, I haven't undergone any previous imaging studies, such as an MRI, to evaluate for ligamentous or meniscal injuries. The only thing they did was an X-ray when I first came in, and they said there were no fractures, just some swelling and fluid in the knee.\nDoctor: Have you experienced any numbness, tingling, or weakness in your leg or foot since the injury?\nPatient: No, I haven't experienced any numbness, tingling, or weakness in my leg or foot since the injury. The pain is just in my knee, and it feels unstable sometimes, but I haven't noticed any issues with my leg or foot.\nDoctor: Has the patient undergone an MRI or any other imaging studies to evaluate for ligamentous or meniscal injuries?\nPatient: No, I haven't had an MRI or any other imaging studies to evaluate for ligamentous or meniscal injuries yet. The only thing they did was an X-ray when I first came in, and they said there were no fractures, just some swelling and fluid in the knee.\nDoctor: Has the patient experienced any numbness, tingling, or weakness in the leg or foot associated with the knee injury?\nPatient: No, I haven't experienced any numbness, tingling, or weakness in my leg or foot associated with the knee injury. The pain is just in my knee, and it feels unstable sometimes, but I haven't noticed any issues with my leg or foot.",
+  "reference_so": {
+    "subjective": "Basic information: Virginia, female, age unspecified, visit time unspecified, chief complaint: knee pain and swelling following a basketball injury\n\nHistory of present illness: Onset of knee pain and swelling following a basketball injury when colliding with Jerry, resulting in a fall. Pain is localized to the inner knee, and swelling has persisted. Patient applied ice and an ace wrap but cannot bear weight on the affected knee. The pain is on the inside of the knee, right where it's swollen. It doesn't radiate anywhere else. There is no locking or clicking, but it does feel unstable sometimes, like it might give way if the patient tries to put too much weight on it. The patient was playing basketball, and Jerry ran into her. She thinks she twisted her knee a little before falling to the ground on her side. She didn't land directly on her knee, but it still hurt a lot, and she couldn't get back up right away.\n\nPast history: No prior knee injuries or surgeries.",
+    "objective": "Physical examination: Physical examination findings are pending. The patient reports localized pain on the inner knee, swelling, and a sensation of instability without locking or clicking. The patient is unable to bear weight on the affected knee.\n\nInvestigations: X-ray was performed, showing swelling and fluid in the knee without fractures. MRI not performed yet."
+  }
+}

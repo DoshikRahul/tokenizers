@@ -1,0 +1,175 @@
+{
+  "case_id": "D2N115",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient is a 28-year-old male who presents with neck pain since a car accident a week ago\n* Pain is in the back of the neck, worsens with movement, and is currently a 7/10 in severity\n* Patient has had some headaches early on, but no numbness, tingling, or weakness\n* Pain is affecting daily activities, but patient can still manage most tasks\n* Patient has not undergone any imaging studies or consultations with a specialist for the neck pain\n* Patient has tried ibuprofen, which provided some relief",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient is a 28-year-old male who presents with neck pain since a car accident a week ago\n* Pain is in the back of the neck, worsens with movement, and is currently a 7/10 in severity\n* Patient has had some headaches early on, but no numbness, tingling, or weakness\n* Pain is affecting daily activities, but patient can still manage most tasks\n* Patient has not undergone any imaging studies or consultations with a specialist for the neck pain\n* Patient has tried ibuprofen, which provided some relief",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient presents with neck pain since a car accident a week ago, which is worsening with movement and affecting daily activities.",
+    "plan": "* The patient is awaiting an MRI of the cervical spine to better understand the cause of the neck pain and determine the most appropriate next steps for care.\n* The doctor will review the MRI results once they are available to assess for signs of cervical spine injuries, spinal cord involvement, or nerve compression."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient is a 28-year-old male who presents with neck pain since a car accident a week ago",
+      "scores": {
+        "entailment": 0.9992,
+        "neutral": 0.0003,
+        "contradiction": 0.0483
+      },
+      "support_evidence": "Patient: I'm 28, and I'm a guy. I came in because I've been having neck pain since a car accident a week ago. It's been pretty bad, like a seven out of ten, and it hurts when I move my head around.",
+      "contradiction_evidence": "Patient: I was wearing a seatbelt, and my head and neck were jerked forward really quickly when the car hit me from behind. I didn’t lose consciousness, but I did feel a lot of sudden pain right after it happened.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient is a 28-year-old male who presents with neck pain since a car accident a week ago",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 28-year-old male who presents with neck pain since a car accident a week ago",
+      "level": "sentence"
+    },
+    {
+      "claim": "Pain is in the back of the neck, worsens with movement, and is currently a 7/10 in severity",
+      "scores": {
+        "entailment": 0.9774,
+        "neutral": 0.0209,
+        "contradiction": 0.0041
+      },
+      "support_evidence": "Patient: I'm 28, and I'm a guy. The pain is in the back of my neck, and it's not constant—it gets worse when I move my head. I've had some headaches early on, but nothing else like numbness or tingling.",
+      "contradiction_evidence": "Doctor: Could you please confirm if you have any history of neck injuries or surgeries, and if you have been experiencing any difficulty with balance, dizziness, or changes in vision?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Pain is in the back of the neck, worsens with movement, and is currently a 7/10 in severity",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "Pain is in the back of the neck, worsens with movement, and is currently a 7/10 in severity",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient has had some headaches early on, but no numbness, tingling, or weakness",
+      "scores": {
+        "entailment": 0.9983,
+        "neutral": 0.0005,
+        "contradiction": 0.0961
+      },
+      "support_evidence": "Patient: I'm 28, and I'm a guy. The pain is in the back of my neck, and it's not constant—it gets worse when I move my head. I've had some headaches early on, but nothing else like numbness or tingling.",
+      "contradiction_evidence": "Patient: No, I haven't had any imaging studies or gone to see a specialist for this yet. I tried some ibuprofen, and that helped a little, but I didn't go to the hospital because I didn't want the cost. The doctor just did an exam and ordered an MRI now.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient has had some headaches early on, but no numbness, tingling, or weakness",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Patient has had some headaches early on, but no numbness, tingling, or weakness",
+      "level": "sentence"
+    },
+    {
+      "claim": "Pain is affecting daily activities, but patient can still manage most tasks",
+      "scores": {
+        "entailment": 0.9938,
+        "neutral": 0.0011,
+        "contradiction": 0.0092
+      },
+      "support_evidence": "Patient: No, the pain just stays in my neck. It's been hard to move my head around, and it hurts when I try to turn my neck from side to side or bend it back. It's been making it tough to do some things normally, but I can still manage most of my daily activities.",
+      "contradiction_evidence": "Patient: I was wearing a seatbelt, and my head and neck were jerked forward really quickly when the car hit me from behind. I didn’t lose consciousness, but I did feel a lot of sudden pain right after it happened.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Pain is affecting daily activities, but patient can still manage most tasks",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Pain is affecting daily activities, but patient can still manage most tasks",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient has not undergone any imaging studies or consultations with a specialist for the neck pain",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0001,
+        "contradiction": 0.9895
+      },
+      "support_evidence": "Doctor: Have you undergone any imaging studies or consultations with a specialist for your neck pain since the car accident?",
+      "contradiction_evidence": "Patient: The pain has stayed about the same, just getting worse when I move my neck. I haven't had any numbness, tingling, or weakness in my arms or legs.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient has not undergone any imaging studies or consultations with a specialist for the neck pain",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Patient has not undergone any imaging studies or consultations with a specialist for the neck pain",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient has tried ibuprofen, which provided some relief",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0001,
+        "contradiction": 0.0011
+      },
+      "support_evidence": "Patient: No, I haven't had any imaging studies or gone to see a specialist for this yet. I tried some ibuprofen, and that helped a little, but I didn't go to the hospital because I didn't want the cost. The doctor just did an exam and ordered an MRI now.",
+      "contradiction_evidence": "Patient: No, I haven't had any imaging studies or gone to see a specialist for this yet. I tried some ibuprofen, and that helped a little, but I didn't go to the hospital because I didn't want the cost. The doctor just did an exam and ordered an MRI now.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient has tried ibuprofen, which provided some relief",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "Patient has tried ibuprofen, which provided some relief",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 6,
+      "exempt": 1
+    },
+    "num_claims": 6,
+    "num_kept": 6,
+    "claim_retention_rate": 1.0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": []
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 1.0,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 28, and I'm a guy. I came in because I've been having neck pain since a car accident a week ago. It's been pretty bad, like a seven out of ten, and it hurts when I move my head around.\nDoctor: Could you please confirm your age, gender, and describe the nature of your neck pain, including any associated symptoms such as numbness, tingling, or weakness?\nPatient: I'm 28, and I'm a guy. The pain is in the back of my neck, and it's not constant—it gets worse when I move my head. I've had some headaches early on, but nothing else like numbness or tingling.\nDoctor: Have you undergone any imaging studies or consultations with a specialist for your neck pain since the car accident?\nPatient: No, I haven't had any imaging studies or gone to see a specialist for this yet. I tried some ibuprofen, and that helped a little, but I didn't go to the hospital because I didn't want the cost. The doctor just did an exam and ordered an MRI now.\nDoctor: Have you experienced any radiation of pain to your arms, shoulders, or upper back? Have you noticed any changes in your range of motion or any difficulty with daily activities due to the neck pain?\nPatient: No, the pain just stays in my neck. It's been hard to move my head around, and it hurts when I try to turn my neck from side to side or bend it back. It's been making it tough to do some things normally, but I can still manage most of my daily activities.\nDoctor: Could you please provide the results of the MRI that was ordered by the doctor?\nPatient: I haven't had the MRI yet, so I don't have the results. The doctor mentioned they wanted to make sure there wasn't anything more serious, like a concussion or nerve issues, but I'm still waiting on that.\nDoctor: Could you please provide the results of the MRI that was ordered by the doctor?\nPatient: I haven't had the MRI yet, so I don't have the results. The doctor mentioned they wanted to make sure there wasn't anything more serious, like a concussion or nerve issues, but I'm still waiting on that.\nDoctor: Could you please provide the MRI results of the cervical spine once they are available? This will help us better understand the cause of your neck pain and determine the most appropriate next steps for your care.\nPatient: I haven't had the MRI yet, so I don't have the results. The doctor mentioned they wanted to make sure there wasn't anything more serious, like a concussion or nerve issues, but I'm still waiting on that.\nDoctor: Could you please provide more details about the car accident, such as whether you were wearing a seatbelt, if there was any impact to your head or neck, and if you lost consciousness at the time?\nPatient: I was wearing a seatbelt, and my head and neck were jerked forward really quickly when the car hit me from behind. I didn’t lose consciousness, but I did feel a lot of sudden pain right after it happened.\nDoctor: Could you please provide the results of the MRI once they are available?\nPatient: I was wearing a seatbelt, and my head and neck were jerked forward really quickly when the car hit me from behind. I didn’t lose consciousness, but I did feel a lot of sudden pain right after it happened.\nDoctor: Could you please describe any changes in the severity of your neck pain over the past week, and have you noticed any new neurological symptoms such as numbness, tingling, or weakness in your arms or legs?\nPatient: The pain has stayed about the same, just getting worse when I move my neck. I haven't had any numbness, tingling, or weakness in my arms or legs.\nDoctor: Could you please provide the results of the MRI of the cervical spine that was ordered?\nPatient: I haven't had the MRI yet, so I don't have the results. The doctor mentioned they wanted to make sure there wasn't anything more serious, like a concussion or nerve issues, but I'm still waiting on that.\nDoctor: Once the MRI is completed, could you please provide the results, particularly regarding the cervical spine, including any signs of spinal cord injury, nerve compression, or soft tissue damage?\nPatient: I haven't had the MRI yet, so I don't have the results. The doctor mentioned they wanted to make sure there wasn't anything more serious, like a concussion or nerve issues, but I'm still waiting on that.\nDoctor: Once the MRI is completed, could you please provide the results so we can review them for any signs of cervical spine injuries, spinal cord involvement, or nerve compression?\nPatient: I haven't had the MRI yet, so I don't have the results. The doctor mentioned they wanted to make sure there wasn't anything more serious, like a concussion or nerve issues, but I'm still waiting on that.\nDoctor: Could you please provide the results of the MRI of the cervical spine once they are available?\nPatient: I haven't had the MRI yet, so I don't have the results. The doctor mentioned they wanted to make sure there wasn't anything more serious, like a concussion or nerve issues, but I'm still waiting on that.\nDoctor: Could you please confirm if you have any history of neck injuries or surgeries, and if you have been experiencing any difficulty with balance, dizziness, or changes in vision?\nPatient: I don't have any history of neck injuries or surgeries other than the car accident. I haven't had any balance issues, dizziness, or changes in vision since the accident.",
+  "reference_so": {
+    "subjective": "Basic information: 28-year-old male presenting with neck pain following a car accident one week ago\n\nHistory of present illness: Neck pain in the posterior region, rated 7/10, exacerbated by head movement, with associated headaches but no neurological symptoms such as numbness, tingling, or weakness. The patient has tried ibuprofen for pain relief with some improvement. No prior imaging or specialist consultations have been conducted. The pain is localized to the neck and does not radiate. It is difficult to move the head around, and turning the neck from side to side or bending it back causes pain. The patient can still manage most daily activities. Mechanism of injury: The patient was wearing a seatbelt, and his head and neck were jerked forward really quickly when the car hit him from behind. He did not lose consciousness, but he did feel a lot of sudden pain right after it happened. The pain has stayed about the same, just getting worse when I move my neck. I haven't had any numbness, tingling, or weakness in my arms or legs. I don't have any history of neck injuries or surgeries other than the car accident. I haven't had any balance issues, dizziness, or changes in vision since the accident.\n\nPast history: No relevant past history reported",
+    "objective": "Physical examination: Physical examination findings not yet available\n\nInvestigations: MRI ordered by the doctor, but results not yet available"
+  }
+}

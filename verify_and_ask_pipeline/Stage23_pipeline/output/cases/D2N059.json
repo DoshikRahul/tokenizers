@@ -1,0 +1,738 @@
+{
+  "case_id": "D2N059",
+  "split": "dev",
+  "stage1_so": {
+    "subjective": "* The patient is a 16-year-old male who has been experiencing trouble with his asthma, especially during sports, and has been feeling down lately.\n* He reports using an albuterol inhaler to manage his symptoms, but it only provides temporary relief.\n* He describes his asthma symptoms as feeling like there's phlegm in his throat, chest tightness, wheezing, and needing to sit down to catch his breath.\n* He also reports feeling tired, unmotivated, and stressed about school, which he believes is contributing to his asthma symptoms.\n* He has not experienced any recent changes in his sleep or appetite, but does feel more tired than usual.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* The patient has been experiencing trouble with his asthma. The patient has been experiencing trouble with his asthma during sports. The patient has been feeling down lately.\n* He reports using an albuterol inhaler to manage his symptoms, but it only provides temporary relief.\n* He describes his asthma symptoms as feeling like there's phlegm in his throat, chest tightness, wheezing, and needing to sit down to catch his breath.\n* He also reports feeling tired, unmotivated, and stressed about school, which he believes is contributing to his asthma symptoms.\n* He has not experienced any recent changes in his sleep or appetite, but does feel more tired than usual.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* It feels like everything is kind of connected.\n* The patient has been experiencing trouble with his asthma. The patient has been experiencing trouble with his asthma during sports. The patient has been feeling down lately.\n* It has been pretty consistent with how it has been happening during sports.\n* The patient reports that asthma symptoms typically develop rapidly, requiring them to stop and sit down to catch their breath.\n* He reports using an albuterol inhaler to manage his symptoms, but it only provides temporary relief.\n* The patient denies having had any recent chest X-rays or pulmonary function tests.\n* He describes his asthma symptoms as feeling like there's phlegm in his throat, chest tightness, wheezing, and needing to sit down to catch his breath.\n* The patient reports that feelings of being down started around the time they began the current school year.\n* He also reports feeling tired, unmotivated, and stressed about school, which he believes is contributing to his asthma symptoms.\n* The patient reports wanting to stay home when friends go out.\n* He has not experienced any recent changes in his sleep or appetite, but does feel more tired than usual.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient is experiencing asthma symptoms during sports, which are not well-controlled with his current treatment.\n* He is also experiencing symptoms of depression, including feelings of sadness, hopelessness, and loss of interest in activities.",
+    "plan": "* Schedule pulmonary function tests and chest X-rays to better evaluate the patient's asthma symptoms.\n* Discuss the possibility of adjusting the patient's treatment plan to better manage his asthma symptoms.\n* Refer the patient to a mental health professional for further evaluation and treatment of his depression symptoms.\n* Encourage the patient to keep a symptom diary to track his asthma symptoms and identify any patterns or triggers."
+  },
+  "stage2_audit": [
+    {
+      "claim": "The patient is a 16-year-old male.",
+      "scores": {
+        "entailment": 0.0067,
+        "neutral": 0.9244,
+        "contradiction": 0.0689
+      },
+      "support_evidence": "Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it.",
+      "contradiction_evidence": "Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "removed_unsupported",
+      "keep": false,
+      "output": "",
+      "reason": "No supporting evidence in the conversation (not asserted to be false).",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 16-year-old male who has been experiencing trouble with his asthma, especially during sports, and has been feeling down lately."
+    },
+    {
+      "claim": "The patient has been experiencing trouble with his asthma.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0003,
+        "contradiction": 0.0008
+      },
+      "support_evidence": "Doctor: Has the patient experienced any recent exacerbations of asthma symptoms that required additional use of the albuterol inhaler or any other rescue medications?",
+      "contradiction_evidence": "Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has been experiencing trouble with his asthma.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 16-year-old male who has been experiencing trouble with his asthma, especially during sports, and has been feeling down lately."
+    },
+    {
+      "claim": "The patient has been experiencing trouble with his asthma during sports.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0002,
+        "contradiction": 0.0014
+      },
+      "support_evidence": "Patient: No, I haven't had any recent exacerbations that required more use of my inhaler than usual. I still use it when I have an attack, usually two puffs, and it helps me feel better after a while, but I still have to sit down and catch my breath. It's been pretty consistent with how it's been happening during sports.",
+      "contradiction_evidence": "Patient: No, I haven't had any pulmonary function tests or chest X-rays in the past. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. I'm willing to schedule these tests if it would help better understand what's going on with my asthma.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has been experiencing trouble with his asthma during sports.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 16-year-old male who has been experiencing trouble with his asthma, especially during sports, and has been feeling down lately."
+    },
+    {
+      "claim": "The patient has been feeling down lately.",
+      "scores": {
+        "entailment": 0.9998,
+        "neutral": 0.0001,
+        "contradiction": 0.0003
+      },
+      "support_evidence": "Patient: Yes, I have felt really down a lot lately, and I don't really feel like doing anything anymore. I used to enjoy hanging out with friends and playing water polo, but now I just feel really tired and don't have the motivation to do anything. It's been pretty tough.",
+      "contradiction_evidence": "Patient: Yes, I have felt really down a lot lately, and I don't really feel like doing anything anymore. I used to enjoy hanging out with friends and playing water polo, but now I just feel really tired and don't have the motivation to do anything. It's been pretty tough.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has been feeling down lately.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 16-year-old male who has been experiencing trouble with his asthma, especially during sports, and has been feeling down lately."
+    },
+    {
+      "claim": "He reports using an albuterol inhaler to manage his symptoms, but it only provides temporary relief.",
+      "scores": {
+        "entailment": 0.9992,
+        "neutral": 0.0006,
+        "contradiction": 0.0023
+      },
+      "support_evidence": "Patient: No, I haven't had any recent exacerbations that required more use of my inhaler than usual. I still use it when I have an attack, usually two puffs, and it helps me feel better after a while, but I still have to sit down and catch my breath. It's been pretty consistent with how it's been happening during sports.",
+      "contradiction_evidence": "Patient: No, I haven't had any recent episodes of acute respiratory distress or been hospitalized for asthma. I just use my inhaler when I have an attack, and I usually manage to get through it by sitting down and breathing slowly. It's not great, but it hasn't gotten to the point where I needed to go to the hospital.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He reports using an albuterol inhaler to manage his symptoms, but it only provides temporary relief.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "He reports using an albuterol inhaler to manage his symptoms, but it only provides temporary relief.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He describes his asthma symptoms as feeling like there's phlegm in his throat, chest tightness, wheezing, and needing to sit down to catch his breath.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.0096
+      },
+      "support_evidence": "Patient: Sure, during sports, especially when I'm doing something aerobic like running or playing water polo, I start to feel like there's phlegm building up in my throat, my chest gets tight, and I start wheezing. It usually happens pretty quickly, and I have to stop and sit down to catch my breath. I do notice that my symptoms seem to get worse when I'm stressed about school or when I'm feeling down, which makes it harder to keep up with sports and social stuff. It feels like everything is kind of connected.",
+      "contradiction_evidence": "Patient: No, I haven't had any episodes of severe shortness of breath, chest pain, or anything like that. The worst it gets is wheezing, chest tightness, and needing to sit down and catch my breath, but I don't feel like I'm in immediate danger or anything like that. It's more of a struggle during sports than something really severe.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He describes his asthma symptoms as feeling like there's phlegm in his throat, chest tightness, wheezing, and needing to sit down to catch his breath.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "He describes his asthma symptoms as feeling like there's phlegm in his throat, chest tightness, wheezing, and needing to sit down to catch his breath.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He also reports feeling tired, unmotivated, and stressed about school, which he believes is contributing to his asthma symptoms.",
+      "scores": {
+        "entailment": 0.9989,
+        "neutral": 0.0005,
+        "contradiction": 0.0064
+      },
+      "support_evidence": "Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me.",
+      "contradiction_evidence": "Patient: The feelings of being down have been going on for a few months now, especially since I started this school year. It seems like they've gotten worse over time, especially with all the stress from school and the asthma issues making it harder to keep up with sports and social stuff. It's been pretty tough to deal with.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He also reports feeling tired, unmotivated, and stressed about school, which he believes is contributing to his asthma symptoms.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "He also reports feeling tired, unmotivated, and stressed about school, which he believes is contributing to his asthma symptoms.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has not experienced any recent changes in his sleep or appetite, but does feel more tired than usual.",
+      "scores": {
+        "entailment": 0.9948,
+        "neutral": 0.0028,
+        "contradiction": 0.0051
+      },
+      "support_evidence": "Patient: No, I haven't really noticed any big changes in my sleep or appetite, but I do feel more tired than usual, especially after having an asthma attack during sports. I guess I just don't have as much energy as I used to, and I'm not as motivated to do the things I used to enjoy.",
+      "contradiction_evidence": "Patient: No, I haven't really noticed any big changes in my sleep or appetite, but I do feel more tired than usual, especially after having an asthma attack during sports. I guess I just don't have as much energy as I used to, and I'm not as motivated to do the things I used to enjoy.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has not experienced any recent changes in his sleep or appetite, but does feel more tired than usual.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "He has not experienced any recent changes in his sleep or appetite, but does feel more tired than usual.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "removed_unsupported": 1,
+      "supported": 7,
+      "exempt": 1
+    },
+    "num_claims": 8,
+    "num_kept": 7,
+    "claim_retention_rate": 0.875
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient reports wanting to stay home when friends go out.",
+      "evidence": "Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me.",
+      "section": "subjective",
+      "candidate": "My friends go out, but I just want to stay home."
+    },
+    {
+      "statement": "It feels like everything is kind of connected.",
+      "evidence": "Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me.",
+      "section": "subjective",
+      "candidate": "It feels like everything is kind of connected."
+    },
+    {
+      "statement": "It has been pretty consistent with how it has been happening during sports.",
+      "evidence": "Patient: No, I haven't had any recent exacerbations that required more use of my inhaler than usual. I still use it when I have an attack, usually two puffs, and it helps me feel better after a while, but I still have to sit down and catch my breath. It's been pretty consistent with how it's been happening during sports.",
+      "section": "subjective",
+      "candidate": "It's been pretty consistent with how it's been happening during sports."
+    },
+    {
+      "statement": "The patient denies having had any recent chest X-rays or pulmonary function tests.",
+      "evidence": "Patient: No, I haven't had any pulmonary function tests or chest X-rays in the past. I just use my inhaler when I have an attack, and I haven't been to the doctor for any other respiratory evaluations. I'm willing to schedule these tests if it would help better understand what's going on with my asthma.",
+      "section": "subjective",
+      "candidate": "No, I haven't had any recent chest X-rays or pulmonary function tests."
+    },
+    {
+      "statement": "The patient reports that asthma symptoms typically develop rapidly, requiring them to stop and sit down to catch their breath.",
+      "evidence": "Patient: Sure, during sports, especially when I'm doing something aerobic like running or playing water polo, I start to feel like there's phlegm building up in my throat, my chest gets tight, and I start wheezing. It usually happens pretty quickly, and I have to stop and sit down to catch my breath. I do notice that my symptoms seem to get worse when I'm stressed about school or when I'm feeling down, which makes it harder to keep up with sports and social stuff. It feels like everything is kind of connected.",
+      "section": "subjective",
+      "candidate": "It usually happens pretty quickly, and I have to stop and sit down to catch my breath."
+    },
+    {
+      "statement": "The patient reports that feelings of being down started around the time they began the current school year.",
+      "evidence": "Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me.",
+      "section": "subjective",
+      "candidate": "I think the feelings of being down started around when I began this school year."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "My friends go out, but I just want to stay home.",
+      "speaker": "Patient",
+      "coverage": 0.0354,
+      "nearest_so_sentence": "He also reports feeling tired, unmotivated, and stressed about school, which he believes is contributing to his asthma symptoms.",
+      "statement": "The patient reports wanting to stay home when friends go out.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.014
+      },
+      "duplicate_entailment": 0.1872,
+      "duplicate_similarity": 0.54,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 4,
+        "perplexity": 13.95,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I was hoping we could talk about it.",
+      "speaker": "Patient",
+      "coverage": 0.1012,
+      "nearest_so_sentence": "He describes his asthma symptoms as feeling like there's phlegm in his throat, chest tightness, wheezing, and needing to sit down to catch his breath.",
+      "statement": "The patient expresses a desire to discuss their concerns.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0012
+      },
+      "duplicate_entailment": 0.9937,
+      "duplicate_similarity": 0.5583
+    },
+    {
+      "candidate": "It's been pretty tough.",
+      "speaker": "Patient",
+      "coverage": 0.1311,
+      "nearest_so_sentence": "The patient has been feeling down lately.",
+      "statement": "The patient reports that it has been tough.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The feelings of being down have been going on for a few months now, especially since I started this school year. It seems like they've gotten worse over time, especially with all the stress from school and the asthma issues making it harder to keep up with sports and social stuff. It's been pretty tough to deal with.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9998,
+        "contradiction": 0.0033
+      },
+      "duplicate_entailment": 0.999,
+      "duplicate_similarity": 0.5527
+    },
+    {
+      "candidate": "No, I don't think so.",
+      "speaker": "Patient",
+      "coverage": 0.1571,
+      "nearest_so_sentence": "He also reports feeling tired, unmotivated, and stressed about school, which he believes is contributing to his asthma symptoms.",
+      "statement": "The patient denies experiencing any changes in mood or energy levels unrelated to academic stress or asthma symptoms.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Doctor: Have you experienced any changes in your mood or energy levels that are not related to your academic stress or asthma symptoms?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9991,
+        "contradiction": 0.9316
+      }
+    },
+    {
+      "candidate": "It's been pretty tough to deal with.",
+      "speaker": "Patient",
+      "coverage": 0.1924,
+      "nearest_so_sentence": "The patient has been experiencing trouble with his asthma.",
+      "statement": "The patient reports that it has been tough to deal with.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The feelings of being down have been going on for a few months now, especially since I started this school year. It seems like they've gotten worse over time, especially with all the stress from school and the asthma issues making it harder to keep up with sports and social stuff. It's been pretty tough to deal with.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0017
+      },
+      "duplicate_entailment": 0.9981,
+      "duplicate_similarity": 0.5664
+    },
+    {
+      "candidate": "It feels like everything is kind of connected.",
+      "speaker": "Patient",
+      "coverage": 0.2059,
+      "nearest_so_sentence": "The patient has been feeling down lately.",
+      "statement": "It feels like everything is kind of connected.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9939,
+        "contradiction": 0.0029
+      },
+      "first_rewrite_rejected": "The patient reports that everything feels connected.",
+      "duplicate_entailment": 0.0046,
+      "duplicate_similarity": 0.2071,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 14.19,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I used to enjoy hanging out with friends and playing water polo, but now I just feel really tired and don't have the motivation to do anything.",
+      "speaker": "Patient",
+      "coverage": 0.2077,
+      "nearest_so_sentence": "He has not experienced any recent changes in his sleep or appetite, but does feel more tired than usual.",
+      "statement": "The patient reports a loss of interest in activities they once enjoyed, specifically water polo, and feels tired and lacks motivation to engage in social activities such as hanging out with friends.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: Yes, I have felt really down a lot lately, and I don't really feel like doing anything anymore. I used to enjoy hanging out with friends and playing water polo, but now I just feel really tired and don't have the motivation to do anything. It's been pretty tough.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0043
+      },
+      "duplicate_entailment": 0.965,
+      "duplicate_similarity": 0.4338
+    },
+    {
+      "candidate": "It usually happens during any kind of aerobic workout, like when I'm playing water polo.",
+      "speaker": "Patient",
+      "coverage": 0.2697,
+      "nearest_so_sentence": "The patient has been experiencing trouble with his asthma during sports.",
+      "statement": "The patient reports that asthma symptoms typically occur during aerobic workouts, such as playing water polo.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: Sure, during sports, especially when I'm doing something aerobic like running or playing water polo, I start to feel like there's phlegm building up in my throat, my chest gets tight, and I start wheezing. It usually happens pretty quickly, and I have to stop and sit down to catch my breath. I do notice that my symptoms seem to get worse when I'm stressed about school or when I'm feeling down, which makes it harder to keep up with sports and social stuff. It feels like everything is kind of connected.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.008
+      },
+      "duplicate_entailment": 0.907,
+      "duplicate_similarity": 0.6848
+    },
+    {
+      "candidate": "It's been pretty consistent with how it's been happening during sports.",
+      "speaker": "Patient",
+      "coverage": 0.288,
+      "nearest_so_sentence": "The patient has been experiencing trouble with his asthma during sports.",
+      "statement": "It has been pretty consistent with how it has been happening during sports.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: No, I haven't had any recent exacerbations that required more use of my inhaler than usual. I still use it when I have an attack, usually two puffs, and it helps me feel better after a while, but I still have to sit down and catch my breath. It's been pretty consistent with how it's been happening during sports.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9967,
+        "contradiction": 0.1864
+      },
+      "first_rewrite_rejected": "The patient reports that asthma symptoms have been consistent during sports.",
+      "duplicate_entailment": 0.0074,
+      "duplicate_similarity": 0.2932,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 2,
+        "perplexity": 14.82,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I guess I just don't have as much energy as I used to, and I'm not as motivated to do the things I used to enjoy.",
+      "speaker": "Patient",
+      "coverage": 0.2997,
+      "nearest_so_sentence": "He has not experienced any recent changes in his sleep or appetite, but does feel more tired than usual.",
+      "statement": "The patient reports having decreased energy and motivation to engage in activities they previously enjoyed.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I haven't really noticed any big changes in my sleep or appetite, but I do feel more tired than usual, especially after having an asthma attack during sports. I guess I just don't have as much energy as I used to, and I'm not as motivated to do the things I used to enjoy.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0044
+      },
+      "duplicate_entailment": 0.9965,
+      "duplicate_similarity": 0.5158
+    },
+    {
+      "candidate": "No, I haven't had any recent chest X-rays or pulmonary function tests.",
+      "speaker": "Patient",
+      "coverage": 0.3112,
+      "nearest_so_sentence": "He reports using an albuterol inhaler to manage his symptoms, but it only provides temporary relief.",
+      "statement": "The patient denies having had any recent chest X-rays or pulmonary function tests.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: No, I haven't had any pulmonary function tests or chest X-rays in the past. I just use my inhaler when I have an attack, and I haven't been to the doctor for any other respiratory evaluations. I'm willing to schedule these tests if it would help better understand what's going on with my asthma.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0255
+      },
+      "duplicate_entailment": 0.466,
+      "duplicate_similarity": 0.3606,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 4,
+        "perplexity": 14.72,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "No, I haven't had any pulmonary function tests or chest X-rays in the past.",
+      "speaker": "Patient",
+      "coverage": 0.3123,
+      "nearest_so_sentence": "He reports using an albuterol inhaler to manage his symptoms, but it only provides temporary relief.",
+      "statement": "The patient reports having no prior pulmonary function tests or chest X-rays.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: No, I haven't had any pulmonary function tests or chest X-rays in the past. I just use my inhaler when I have an attack, and I haven't been to the doctor for any other respiratory evaluations. I'm willing to schedule these tests if it would help better understand what's going on with my asthma.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.4899
+      }
+    },
+    {
+      "candidate": "No, I haven't had any pulmonary function tests or chest X-rays in the past.",
+      "speaker": "Patient",
+      "coverage": 0.3133,
+      "nearest_so_sentence": "He reports using an albuterol inhaler to manage his symptoms, but it only provides temporary relief.",
+      "statement": "The patient reports having no prior pulmonary function tests or chest X-rays.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: No, I haven't had any pulmonary function tests or chest X-rays in the past. I just use my inhaler when I have an attack, and I haven't been to the doctor for any other respiratory evaluations. I'm willing to schedule these tests if it would help better understand what's going on with my asthma.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.4899
+      }
+    },
+    {
+      "candidate": "No, I haven't had any pulmonary function tests or chest X-rays in the past.",
+      "speaker": "Patient",
+      "coverage": 0.3139,
+      "nearest_so_sentence": "He reports using an albuterol inhaler to manage his symptoms, but it only provides temporary relief.",
+      "statement": "The patient reports having no prior pulmonary function tests or chest X-rays.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: No, I haven't had any pulmonary function tests or chest X-rays in the past. I just use my inhaler when I have an attack, and I haven't been to the doctor for any other respiratory evaluations. I'm willing to schedule these tests if it would help better understand what's going on with my asthma.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.4899
+      }
+    },
+    {
+      "candidate": "It usually happens pretty quickly, and I have to stop and sit down to catch my breath.",
+      "speaker": "Patient",
+      "coverage": 0.3284,
+      "nearest_so_sentence": "He describes his asthma symptoms as feeling like there's phlegm in his throat, chest tightness, wheezing, and needing to sit down to catch his breath.",
+      "statement": "The patient reports that asthma symptoms typically develop rapidly, requiring them to stop and sit down to catch their breath.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: Sure, during sports, especially when I'm doing something aerobic like running or playing water polo, I start to feel like there's phlegm building up in my throat, my chest gets tight, and I start wheezing. It usually happens pretty quickly, and I have to stop and sit down to catch my breath. I do notice that my symptoms seem to get worse when I'm stressed about school or when I'm feeling down, which makes it harder to keep up with sports and social stuff. It feels like everything is kind of connected.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0274
+      },
+      "duplicate_entailment": 0.1679,
+      "duplicate_similarity": 0.6907,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 3,
+        "perplexity": 14.56,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I think the feelings of being down started around when I began this school year.",
+      "speaker": "Patient",
+      "coverage": 0.3344,
+      "nearest_so_sentence": "The patient has been feeling down lately.",
+      "statement": "The patient reports that feelings of being down started around the time they began the current school year.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0005
+      },
+      "duplicate_entailment": 0.1185,
+      "duplicate_similarity": 0.5662,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 7,
+        "perplexity": 14.72,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I feel really tired a lot, and I don't really feel like doing anything anymore.",
+      "speaker": "Patient",
+      "coverage": 0.3659,
+      "nearest_so_sentence": "He has not experienced any recent changes in his sleep or appetite, but does feel more tired than usual.",
+      "statement": "The patient reports feeling tired a lot and lacking interest in activities.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0125
+      },
+      "duplicate_entailment": 0.9944,
+      "duplicate_similarity": 0.6533
+    },
+    {
+      "candidate": "It's not great, but it hasn't gotten to the point where I needed to go to the hospital.",
+      "speaker": "Patient",
+      "coverage": 0.3698,
+      "nearest_so_sentence": "The patient has been feeling down lately.",
+      "statement": "The patient reports not having required hospitalization for asthma.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I haven't had any recent episodes of acute respiratory distress or been hospitalized for asthma. I just use my inhaler when I have an attack, and I usually manage to get through it by sitting down and breathing slowly. It's not great, but it hasn't gotten to the point where I needed to go to the hospital.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0045
+      },
+      "duplicate_entailment": 0.929,
+      "duplicate_similarity": 0.6403
+    },
+    {
+      "candidate": "It's mostly because of the stress from my AP classes and SATs.",
+      "speaker": "Patient",
+      "coverage": 0.3856,
+      "nearest_so_sentence": "He also reports feeling tired, unmotivated, and stressed about school, which he believes is contributing to his asthma symptoms.",
+      "statement": "The patient reports feeling down primarily due to stress from AP classes and SATs.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.9925
+      }
+    },
+    {
+      "candidate": "I haven't noticed any other factors affecting how I feel.",
+      "speaker": "Patient",
+      "coverage": 0.3981,
+      "nearest_so_sentence": "He has not experienced any recent changes in his sleep or appetite, but does feel more tired than usual.",
+      "statement": "The patient reports not noticing any other factors affecting their mood or energy levels.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: No, I don't think so. Most of the time, I feel like my mood and energy levels are connected to either my asthma or the stress from school. I haven't noticed any other factors affecting how I feel.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.9984
+      }
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 46,
+    "num_covered": 26,
+    "num_flagged": 20,
+    "num_not_checked_cap": 0,
+    "num_added": 6
+  },
+  "gaps": {
+    "gaps": [
+      {
+        "id": "q1",
+        "gap": "Severity of asthma symptoms",
+        "question": "On a scale of 1-10, how would you rate the severity of your asthma symptoms during sports?",
+        "category": "subjective",
+        "status": "unresolved",
+        "answer": null
+      },
+      {
+        "id": "q2",
+        "gap": "Allergies or triggers",
+        "question": "Are there any specific allergens or triggers that you've noticed make your asthma symptoms worse?",
+        "category": "subjective",
+        "status": "unresolved",
+        "answer": null
+      },
+      {
+        "id": "q3",
+        "gap": "Pulmonary function test results",
+        "question": "Have you had any recent pulmonary function tests (PFTs) or spirometry results?",
+        "category": "objective",
+        "status": "unresolved",
+        "answer": null
+      },
+      {
+        "id": "q4",
+        "gap": "Physical examination findings",
+        "question": "What were the doctor's findings during the physical examination?",
+        "category": "objective",
+        "status": "unresolved",
+        "answer": null
+      }
+    ],
+    "dropped": [
+      {
+        "gap": "Duration of asthma symptoms",
+        "question": "How long have you been experiencing asthma symptoms during sports?",
+        "category": "subjective",
+        "status": "dropped_already_answered"
+      }
+    ],
+    "num_generated": 5
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "stage": "stage2",
+        "section": "subjective",
+        "claim": "The patient is a 16-year-old male.",
+        "source_sentence": "The patient is a 16-year-old male who has been experiencing trouble with his asthma, especially during sports, and has been feeling down lately.",
+        "decision": "removed_unsupported",
+        "scores": {
+          "entailment": 0.0067,
+          "neutral": 0.9244,
+          "contradiction": 0.0689
+        },
+        "reason": "No supporting evidence in the conversation (not asserted to be false).",
+        "nearest_evidence": "Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it."
+      }
+    ],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "No, I don't think so.",
+        "statement": "The patient denies experiencing any changes in mood or energy levels unrelated to academic stress or asthma symptoms.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9991,
+          "contradiction": 0.9316
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "No, I haven't had any pulmonary function tests or chest X-rays in the past.",
+        "statement": "The patient reports having no prior pulmonary function tests or chest X-rays.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9997,
+          "contradiction": 0.4899
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "No, I haven't had any pulmonary function tests or chest X-rays in the past.",
+        "statement": "The patient reports having no prior pulmonary function tests or chest X-rays.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9997,
+          "contradiction": 0.4899
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "No, I haven't had any pulmonary function tests or chest X-rays in the past.",
+        "statement": "The patient reports having no prior pulmonary function tests or chest X-rays.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9997,
+          "contradiction": 0.4899
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "It's mostly because of the stress from my AP classes and SATs.",
+        "statement": "The patient reports feeling down primarily due to stress from AP classes and SATs.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9993,
+          "contradiction": 0.9925
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I haven't noticed any other factors affecting how I feel.",
+        "statement": "The patient reports not noticing any other factors affecting their mood or energy levels.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9994,
+          "contradiction": 0.9984
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 53.8,
+  "ap_unchanged": true,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it.\nDoctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them?\nPatient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it.\nDoctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities?\nPatient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me.\nDoctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations?\nPatient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations.\nDoctor: Have you experienced any changes in your mood or energy levels that are not related to your academic stress or asthma symptoms?\nPatient: No, I don't think so. Most of the time, I feel like my mood and energy levels are connected to either my asthma or the stress from school. I haven't noticed any other factors affecting how I feel.\nDoctor: Have you undergone any pulmonary function tests or chest X-rays in the past? If not, would you be willing to schedule these tests to better evaluate your asthma symptoms?\nPatient: No, I haven't had any pulmonary function tests or chest X-rays in the past. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. I'm willing to schedule these tests if it would help better understand what's going on with my asthma.\nDoctor: Has the patient experienced any episodes of significant sadness, hopelessness, or loss of interest in activities they once enjoyed over the past few months?\nPatient: Yes, I have felt really down a lot lately, and I don't really feel like doing anything anymore. I used to enjoy hanging out with friends and playing water polo, but now I just feel really tired and don't have the motivation to do anything. It's been pretty tough.\nDoctor: Have you had any recent episodes of acute respiratory distress or been hospitalized for asthma in the past?\nPatient: No, I haven't had any recent episodes of acute respiratory distress or been hospitalized for asthma. I just use my inhaler when I have an attack, and I usually manage to get through it by sitting down and breathing slowly. It's not great, but it hasn't gotten to the point where I needed to go to the hospital.\nDoctor: How long has the patient been experiencing feelings of being down, and has there been any change in the frequency or intensity of these feelings over time?\nPatient: The feelings of being down have been going on for a few months now, especially since I started this school year. It seems like they've gotten worse over time, especially with all the stress from school and the asthma issues making it harder to keep up with sports and social stuff. It's been pretty tough to deal with.\nDoctor: Has the patient undergone any pulmonary function tests or chest X-rays in the past? If not, would they be willing to schedule these tests to better evaluate their asthma symptoms?\nPatient: No, I haven't had any pulmonary function tests or chest X-rays in the past. I just use my inhaler when I have an attack, and I haven't been to the doctor for any other respiratory evaluations. I'm willing to schedule these tests if it would help better understand what's going on with my asthma.\nDoctor: Can you describe the specific triggers for your asthma symptoms during sports, and have you noticed any patterns or worsening of symptoms in relation to your academic stress or social withdrawal?\nPatient: Sure, during sports, especially when I'm doing something aerobic like running or playing water polo, I start to feel like there's phlegm building up in my throat, my chest gets tight, and I start wheezing. It usually happens pretty quickly, and I have to stop and sit down to catch my breath. I do notice that my symptoms seem to get worse when I'm stressed about school or when I'm feeling down, which makes it harder to keep up with sports and social stuff. It feels like everything is kind of connected.\nDoctor: Has the patient experienced any recent exacerbations of asthma symptoms that required additional use of the albuterol inhaler or any other rescue medications?\nPatient: No, I haven't had any recent exacerbations that required more use of my inhaler than usual. I still use it when I have an attack, usually two puffs, and it helps me feel better after a while, but I still have to sit down and catch my breath. It's been pretty consistent with how it's been happening during sports.\nDoctor: Have you experienced any changes in your sleep patterns or appetite since the onset of your feelings of being down?\nPatient: No, I haven't really noticed any big changes in my sleep or appetite, but I do feel more tired than usual, especially after having an asthma attack during sports. I guess I just don't have as much energy as I used to, and I'm not as motivated to do the things I used to enjoy.\nDoctor: Have you undergone any pulmonary function tests or chest X-rays in the past? If not, would you be willing to schedule these tests to better evaluate your asthma?\nPatient: No, I haven't had any pulmonary function tests or chest X-rays in the past. I just use my inhaler when I have an attack, and I haven't been to the doctor for any other respiratory evaluations. I'm willing to schedule these tests if it would help better understand what's going on with my asthma.\nDoctor: Have you experienced any episodes of acute respiratory distress, such as severe shortness of breath, chest pain, or cyanosis, in the past?\nPatient: No, I haven't had any episodes of severe shortness of breath, chest pain, or anything like that. The worst it gets is wheezing, chest tightness, and needing to sit down and catch my breath, but I don't feel like I'm in immediate danger or anything like that. It's more of a struggle during sports than something really severe.",
+  "reference_so": {
+    "subjective": "Basic information: 16-year-old patient presenting with asthma symptoms during sports and recent feelings of being down\n\nHistory of present illness: Asthma symptoms during sports, characterized by phlegm in the throat, chest tightness, wheezing, and lightheadedness, with partial response to albuterol inhaler. Recent feelings of being down, starting around the beginning of the school year, attributed to stress from AP classes and SATs. Symptoms include fatigue, lack of motivation, and social withdrawal. No changes in sleep or appetite reported. No history of prior psychiatric evaluation or treatment. No recent episodes of acute respiratory distress or hospitalization related to asthma. The feelings of being down have been going on for a few months now, especially since I started this school year. It seems like they've gotten worse over time, especially with all the stress from school and the asthma issues making it harder to keep up with sports and social stuff. It's been pretty tough to deal with. Asthma symptoms are triggered during sports, especially aerobic activities like running or playing water polo, and seem to worsen with stress or feelings of being down\n\nPast history: No significant past medical history, no prior psychiatric diagnoses, no surgeries, no known allergies. Family history is unremarkable for psychiatric conditions. Personal history includes academic stress and recent feelings of being down",
+    "objective": "Physical examination: Vital signs: BP 110/70 mmHg, HR 72 bpm, RR 16 breaths/min, Temp 36.8°C, SpO2 98% on room air. General appearance: Alert and oriented, but appears fatigued. Mood: Depressed, with low energy. Speech: Slow and soft. Thought process: Linear. No suicidal ideation. No psychomotor retardation or agitation. No signs of physical illness. No abnormalities on cardiovascular, respiratory, or neurological examination\n\nInvestigations: No recent laboratory or imaging studies available. Patient has not undergone pulmonary function tests or chest X-rays"
+  }
+}

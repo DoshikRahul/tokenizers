@@ -1,0 +1,376 @@
+{
+  "case_id": "D2N082",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient's age: Late 20s or early 30s\n* Patient's gender: Not specified\n* Reason for visit: Primary care doctor referred patient due to abnormal lab work showing low immunoglobulin A (IgA) level\n* Patient's understanding of IgA: Patient believes IgA is one of the antibodies that helps fight infections\n* Symptoms: Patient experiences frequent colds that linger longer than usual, but no other frequent infections or gastrointestinal issues\n* Family history: Patient's family is generally healthy, with no known immune deficiencies or autoimmune disorders\n* Medical history: Patient has type 2 diabetes, diagnosed recently, and is taking metformin",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient's age: Late 20s or early 30s\n* Patient's gender: Not specified\n* Reason for visit: Primary care doctor referred patient due to abnormal lab work showing low immunoglobulin A (IgA) level\n* Patient's understanding of IgA: Patient believes IgA is one of the antibodies that helps fight infections\n* Symptoms: Patient experiences frequent colds that linger longer than usual, but no other frequent infections or gastrointestinal issues\n* Family history: Patient's family is generally healthy, with no known immune deficiencies or autoimmune disorders\n* Medical history: Patient has type 2 diabetes, diagnosed recently, and is taking metformin",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* The patient reports being unclear about the primary care doctor's request for further evaluation.\n* The patient states his name is Kyle.\n* Patient's age: Late 20s or early 30s\n* Patient's gender: Not specified\n* Reason for visit: Primary care doctor referred patient due to abnormal lab work showing low immunoglobulin A (IgA) level\n* Patient's understanding of IgA: Patient believes IgA is one of the antibodies that helps fight infections\n* Symptoms: Patient experiences frequent colds that linger longer than usual, but no other frequent infections or gastrointestinal issues\n* Family history: Patient's family is generally healthy, with no known immune deficiencies or autoimmune disorders\n* Medical history: Patient has type 2 diabetes, diagnosed recently, and is taking metformin",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* Low immunoglobulin A (IgA) level, as reported by primary care doctor\n* Patient's symptoms may be related to low IgA, but no specific diagnosis or clinical problems were established in the conversation.",
+    "plan": "* No explicit management or follow-up plan was documented in the conversation."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient's age: Late 20s or early 30s",
+      "scores": {
+        "entailment": 0.9989,
+        "neutral": 0.0005,
+        "contradiction": 0.1132
+      },
+      "support_evidence": "Patient: Hi, I'm Kyle. I'm not sure about my exact age, but I'm in my late 20s or early 30s. I'm here because my primary care doctor told me I had some abnormal lab work and referred me to see you today. It had to do with something called low immunoglobulin A, and I wanted to understand more about it.",
+      "contradiction_evidence": "Patient: I don't have the exact numbers for my IgA level or the reference range, but my primary care doctor said it was low. She didn't mention any other immunoglobulin levels like IgG or IgM. I just know that it has something to do with my body's ability to fight infections, and that's why she referred me to you.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient's age: Late 20s or early 30s",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient's age: Late 20s or early 30s",
+      "level": "sentence"
+    },
+    {
+      "section": "subjective",
+      "line": 1,
+      "sentence": "Patient's gender: Not specified",
+      "claim": "Patient's gender: Not specified",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    },
+    {
+      "claim": "Reason for visit: Primary care doctor referred patient due to abnormal lab work showing low immunoglobulin A (IgA) level",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.2116
+      },
+      "support_evidence": "Patient: Hi, I'm Kyle. I'm not sure about my exact age, but I'm in my late 20s or early 30s. I'm here because my primary care doctor told me I had some abnormal lab work and referred me to see you today. It had to do with something called low immunoglobulin A, and I wanted to understand more about it.",
+      "contradiction_evidence": "Patient: I don't have the exact numbers for my IgA level or the reference range, but my primary care doctor said it was low. She didn't mention any other immunoglobulin levels like IgG or IgM. I just know that it has something to do with my body's ability to fight infections, and that's why she referred me to you.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Reason for visit: Primary care doctor referred patient due to abnormal lab work showing low immunoglobulin A (IgA) level",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Reason for visit: Primary care doctor referred patient due to abnormal lab work showing low immunoglobulin A (IgA) level",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient's understanding of IgA: Patient believes IgA is one of the antibodies that helps fight infections",
+      "scores": {
+        "entailment": 0.9961,
+        "neutral": 0.0027,
+        "contradiction": 0.0549
+      },
+      "support_evidence": "Patient: I'm not sure about my exact age, but I'm in my late 20s or early 30s. As for the lab results, my primary care doctor mentioned that I have a low immunoglobulin A level, which is one of the antibodies in the body that helps fight infections. I don't really understand what that means, but she wanted me to see you for further evaluation.",
+      "contradiction_evidence": "Patient: I do tend to get colds often, and they linger for a long time, but I don't have any other frequent infections or gastrointestinal issues. I haven't noticed any fatigue or other symptoms that would make me think something else is going on with my immune system. My only other medical condition is type two diabetes, which I was recently diagnosed with, and I'm on metformin.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient's understanding of IgA: Patient believes IgA is one of the antibodies that helps fight infections",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Patient's understanding of IgA: Patient believes IgA is one of the antibodies that helps fight infections",
+      "level": "sentence"
+    },
+    {
+      "claim": "Symptoms: Patient experiences frequent colds that linger longer than usual, but no other frequent infections or gastrointestinal issues",
+      "scores": {
+        "entailment": 0.9983,
+        "neutral": 0.0007,
+        "contradiction": 0.8225
+      },
+      "support_evidence": "Patient: I do tend to get colds often, and they linger for a long time, but I don't have any other frequent infections or gastrointestinal issues. I haven't noticed any fatigue or other symptoms that would make me think something else is going on with my immune system. My only other medical condition is type two diabetes, which I was recently diagnosed with, and I'm on metformin.",
+      "contradiction_evidence": "Patient: I do tend to get infections, especially colds, and they kind of linger for a long time, but I don't know if it's more than usual. I don't have any abdominal issues like frequent diarrhea, and my family is pretty healthy—no one that I know of has immune deficiencies or autoimmune disorders.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Symptoms: Patient experiences frequent colds that linger longer than usual, but no other frequent infections or gastrointestinal issues",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Symptoms: Patient experiences frequent colds that linger longer than usual, but no other frequent infections or gastrointestinal issues",
+      "level": "sentence"
+    },
+    {
+      "claim": "Family history: Patient's family is generally healthy, with no known immune deficiencies or autoimmune disorders",
+      "scores": {
+        "entailment": 0.9603,
+        "neutral": 0.0366,
+        "contradiction": 0.7402
+      },
+      "support_evidence": "Patient: I do tend to get infections, especially colds, and they kind of linger for a long time, but I don't know if it's more than usual. I don't have any abdominal issues like frequent diarrhea, and my family is pretty healthy—no one that I know of has immune deficiencies or autoimmune disorders.",
+      "contradiction_evidence": "Doctor: Could you please describe any symptoms you've experienced that might be related to having low IgA, such as frequent infections, digestive issues, or skin problems? Also, do you have any family members who have been diagnosed with immunodeficiency or autoimmune disorders?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Family history: Patient's family is generally healthy, with no known immune deficiencies or autoimmune disorders",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "Family history: Patient's family is generally healthy, with no known immune deficiencies or autoimmune disorders",
+      "level": "sentence"
+    },
+    {
+      "claim": "Medical history: Patient has type 2 diabetes, diagnosed recently, and is taking metformin",
+      "scores": {
+        "entailment": 0.9985,
+        "neutral": 0.0005,
+        "contradiction": 0.975
+      },
+      "support_evidence": "Patient: I do tend to get colds often, and they linger for a long time, but I don't have any other frequent infections or gastrointestinal issues. I haven't noticed any fatigue or other symptoms that would make me think something else is going on with my immune system. My only other medical condition is type two diabetes, which I was recently diagnosed with, and I'm on metformin.",
+      "contradiction_evidence": "Patient: I do tend to get infections, especially colds, and they kind of linger for a long time, but I don't know if it's more than usual. I don't have any abdominal issues like frequent diarrhea, and my family is pretty healthy—no one that I know of has immune deficiencies or autoimmune disorders.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Medical history: Patient has type 2 diabetes, diagnosed recently, and is taking metformin",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 6,
+      "sentence": "Medical history: Patient has type 2 diabetes, diagnosed recently, and is taking metformin",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 6,
+      "exempt": 2
+    },
+    "num_claims": 6,
+    "num_kept": 6,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient states his name is Kyle.",
+      "evidence": "Patient: I'm not sure about my exact age, but I'm in my late 20s or early 30s. As for the lab results, my primary care doctor mentioned that I have a low immunoglobulin A level, which is one of the antibodies in the body that helps fight infections. I don't really understand what that means, but she wanted me to see you for further evaluation.",
+      "section": "subjective",
+      "candidate": "Hi, I'm Kyle."
+    },
+    {
+      "statement": "The patient reports being unclear about the primary care doctor's request for further evaluation.",
+      "evidence": "Patient: I'm not sure about my exact age, but I'm in my late 20s or early 30s. As for the lab results, my primary care doctor mentioned that I have a low immunoglobulin A level, which is one of the antibodies in the body that helps fight infections. I don't really understand what that means, but she wanted me to see you for further evaluation.",
+      "section": "subjective",
+      "candidate": "I don't really understand what that means, but she wanted me to see you for further evaluation."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "Hi, I'm Kyle.",
+      "speaker": "Patient",
+      "coverage": 0.0627,
+      "nearest_so_sentence": "Patient's age: Late 20s or early 30s",
+      "statement": "The patient states his name is Kyle.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I'm not sure about my exact age, but I'm in my late 20s or early 30s. As for the lab results, my primary care doctor mentioned that I have a low immunoglobulin A level, which is one of the antibodies in the body that helps fight infections. I don't really understand what that means, but she wanted me to see you for further evaluation.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0042
+      },
+      "first_rewrite_rejected": "The patient, Kyle, introduces himself.",
+      "duplicate_entailment": 0.0009,
+      "duplicate_similarity": 0.3247,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 20.12,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don't really understand what that means, but she wanted me to see you for further evaluation.",
+      "speaker": "Patient",
+      "coverage": 0.1339,
+      "nearest_so_sentence": "Reason for visit: Primary care doctor referred patient due to abnormal lab work showing low immunoglobulin A (IgA) level",
+      "statement": "The patient reports being unclear about the primary care doctor's request for further evaluation.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I'm not sure about my exact age, but I'm in my late 20s or early 30s. As for the lab results, my primary care doctor mentioned that I have a low immunoglobulin A level, which is one of the antibodies in the body that helps fight infections. I don't really understand what that means, but she wanted me to see you for further evaluation.",
+      "scores_vs_dialogue": {
+        "entailment": 0.999,
+        "contradiction": 0.017
+      },
+      "duplicate_entailment": 0.042,
+      "duplicate_similarity": 0.4475,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 19.3,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "My doctor just told me it was low, and I don't have any chronic diarrhea, skin rashes, or recurrent sinus infections that I can think of.",
+      "speaker": "Patient",
+      "coverage": 0.3528,
+      "nearest_so_sentence": "Symptoms: Patient experiences frequent colds that linger longer than usual, but no other frequent infections or gastrointestinal issues",
+      "statement": "The patient reports that their IgA level is low, and they deny experiencing chronic diarrhea, skin rashes, or recurrent sinus infections.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't have the specific IgA level or the reference range from my lab work. My doctor just told me it was low, and I don't have any chronic diarrhea, skin rashes, or recurrent sinus infections that I can think of. I do get colds often, but they just linger a bit longer than usual.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0965
+      },
+      "duplicate_entailment": 0.992,
+      "duplicate_similarity": 0.6277
+    },
+    {
+      "candidate": "I just know that it has something to do with my body's ability to fight infections, and that's why she referred me to you.",
+      "speaker": "Patient",
+      "coverage": 0.3865,
+      "nearest_so_sentence": "Patient's understanding of IgA: Patient believes IgA is one of the antibodies that helps fight infections",
+      "statement": "The patient reports that the referral to the specialist is related to their body's ability to fight infections.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm not sure about my exact age, but I'm in my late 20s or early 30s. As for the lab results, my primary care doctor mentioned that I have a low immunoglobulin A level, which is one of the antibodies in the body that helps fight infections. I don't really understand what that means, but she wanted me to see you for further evaluation.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0015
+      },
+      "duplicate_entailment": 0.9989,
+      "duplicate_similarity": 0.5098
+    },
+    {
+      "candidate": "I just know that it has something to do with my body's ability to fight infections, and that's why she referred me to you.",
+      "speaker": "Patient",
+      "coverage": 0.3877,
+      "nearest_so_sentence": "Patient's understanding of IgA: Patient believes IgA is one of the antibodies that helps fight infections",
+      "statement": "The patient reports that the referral to the doctor is related to their body's ability to fight infections.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't have the exact value of my IgA level or the reference range my doctor used. She didn't mention any other immunoglobulin levels like IgG or IgM. I just know that it has something to do with my body's ability to fight infections, and that's why she referred me to you.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.001
+      },
+      "duplicate_entailment": 0.9993,
+      "duplicate_similarity": 0.5138
+    },
+    {
+      "candidate": "My doctor just told me it was low, and I haven't had any other blood tests like a complete blood count or inflammatory markers.",
+      "speaker": "Patient",
+      "coverage": 0.3927,
+      "nearest_so_sentence": "Reason for visit: Primary care doctor referred patient due to abnormal lab work showing low immunoglobulin A (IgA) level",
+      "statement": "The patient reports that their doctor informed them that their IgA level is low, and they have not had any additional blood tests, including a complete blood count or inflammatory markers.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I don't have the specific IgA level or the reference range from my lab work. My doctor just told me it was low, and I haven't had any other blood tests like a complete blood count or inflammatory markers. She only mentioned the IgA level when she referred me to you.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.8296
+      }
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 41,
+    "num_covered": 35,
+    "num_flagged": 6,
+    "num_not_checked_cap": 0,
+    "num_added": 2
+  },
+  "gaps": {
+    "gaps": [
+      {
+        "id": "q1",
+        "gap": "Patient's exact age",
+        "question": "What is your exact age, Kyle?",
+        "category": "subjective",
+        "status": "unresolved",
+        "answer": null
+      },
+      {
+        "id": "q2",
+        "gap": "Specific IgA level and reference range",
+        "question": "Can you provide the exact value of your IgA level and the reference range used by your primary care doctor?",
+        "category": "objective",
+        "status": "unresolved",
+        "answer": null
+      },
+      {
+        "id": "q3",
+        "gap": "IgG and IgM levels",
+        "question": "Do you have the levels for IgG and IgM, and if so, can you provide them?",
+        "category": "objective",
+        "status": "unresolved",
+        "answer": null
+      }
+    ],
+    "dropped": [
+      {
+        "gap": "Duration of symptoms",
+        "question": "How long have you been experiencing frequent colds that linger longer than usual?",
+        "category": "subjective",
+        "status": "dropped_already_answered"
+      },
+      {
+        "gap": "Other medical conditions or medications",
+        "question": "Are there any other medical conditions or medications you're taking that might be relevant to your visit today?",
+        "category": "subjective",
+        "status": "dropped_already_answered"
+      }
+    ],
+    "num_generated": 5
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "My doctor just told me it was low, and I haven't had any other blood tests like a complete blood count or inflammatory markers.",
+        "statement": "The patient reports that their doctor informed them that their IgA level is low, and they have not had any additional blood tests, including a complete blood count or inflammatory markers.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.8296
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 23.8,
+  "ap_unchanged": true,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: Hi, I'm Kyle. I'm not sure about my exact age, but I'm in my late 20s or early 30s. I'm here because my primary care doctor told me I had some abnormal lab work and referred me to see you today. It had to do with something called low immunoglobulin A, and I wanted to understand more about it.\nDoctor: Could you clarify your exact age and provide more details about the lab results your primary care doctor mentioned?\nPatient: I'm not sure about my exact age, but I'm in my late 20s or early 30s. As for the lab results, my primary care doctor mentioned that I have a low immunoglobulin A level, which is one of the antibodies in the body that helps fight infections. I don't really understand what that means, but she wanted me to see you for further evaluation.\nDoctor: Could you please provide the specific immunoglobulin A (IgA) level, the reference range provided by the lab, and any other immunoglobulin levels (such as IgG or IgM) that were measured?\nPatient: I don't have the exact numbers for my IgA level or the reference range, but my primary care doctor said it was low. She didn't mention any other immunoglobulin levels like IgG or IgM. I just know that it has something to do with my body's ability to fight infections, and that's why she referred me to you.\nDoctor: Could you please describe any symptoms you've experienced that might be related to having low IgA, such as frequent infections, digestive issues, or skin problems? Also, do you have any family members who have been diagnosed with immunodeficiency or autoimmune disorders?\nPatient: I do tend to get infections, especially colds, and they kind of linger for a long time, but I don't know if it's more than usual. I don't have any abdominal issues like frequent diarrhea, and my family is pretty healthy—no one that I know of has immune deficiencies or autoimmune disorders.\nDoctor: Could you provide the exact value of your IgA level and the reference range used by your primary care doctor? Additionally, have you experienced any other symptoms such as recurrent sinus infections, skin infections, or gastrointestinal issues that might be related to your low IgA?\nPatient: I don't have the exact value of my IgA level or the reference range my doctor used. As for symptoms, I do get colds often, and they tend to linger, but I don't have any recurring sinus infections, skin infections, or gastrointestinal issues that I can think of.\nDoctor: Could you provide the specific IgA level and the reference range used by your primary care doctor? Additionally, have you had any other immunoglobulin levels tested, such as IgG or IgM?\nPatient: I don't have the exact value of my IgA level or the reference range my doctor used. She didn't mention any other immunoglobulin levels like IgG or IgM. I just know that it has something to do with my body's ability to fight infections, and that's why she referred me to you.\nDoctor: Could you describe any other symptoms you've experienced, such as frequent infections, fatigue, or digestive issues, and how often they occur?\nPatient: I do tend to get colds often, and they linger for a long time, but I don't know if it's more than usual. I don't have any other frequent infections or digestive issues that I can think of. I just notice that my colds take longer to go away than most people's, but I haven't had anything serious.\nDoctor: Could you provide the specific values of your IgG and IgM levels, along with the reference ranges used by your doctor?\nPatient: I don't have the specific values for my IgG or IgM levels, and my doctor didn't mention them when she told me about my low IgA. She just said my IgA was low and that's why she referred me to you.\nDoctor: Could you describe any other symptoms you've been experiencing, such as frequent infections, fatigue, or gastrointestinal issues, that might be related to your immune system?\nPatient: I do tend to get colds often, and they linger for a long time, but I don't have any other frequent infections or gastrointestinal issues. I haven't noticed any fatigue or other symptoms that would make me think something else is going on with my immune system.\nDoctor: Could you provide the specific IgA level and reference range from your recent lab work? Additionally, have you experienced any other symptoms such as chronic diarrhea, skin rashes, or recurrent sinus infections that might suggest an underlying immunodeficiency or autoimmune condition?\nPatient: I don't have the specific IgA level or the reference range from my lab work. My doctor just told me it was low, and I don't have any chronic diarrhea, skin rashes, or recurrent sinus infections that I can think of. I do get colds often, but they just linger a bit longer than usual.\nDoctor: Could you provide the specific IgA level and reference range from your lab work? Additionally, have you had any other blood tests, such as a complete blood count or inflammatory markers, that might help assess your immune status?\nPatient: I don't have the specific IgA level or the reference range from my lab work. My doctor just told me it was low, and I haven't had any other blood tests like a complete blood count or inflammatory markers. She only mentioned the IgA level when she referred me to you.\nDoctor: Could you describe any other symptoms you've been experiencing, such as frequent infections, fatigue, gastrointestinal issues, or any other concerns related to your immune system?\nPatient: I do tend to get colds often, and they linger for a long time, but I don't have any other frequent infections or gastrointestinal issues. I haven't noticed any fatigue or other symptoms that would make me think something else is going on with my immune system.\nDoctor: Could you provide the specific IgA level and reference range from your lab work, as well as the levels of IgG and IgM if available?\nPatient: I don't have the specific IgA level or the reference range from my lab work. My doctor just told me it was low, and I don't have the levels for IgG or IgM either. She only mentioned the IgA when she referred me to you.\nDoctor: Could you let me know if you have any other symptoms, such as frequent infections, fatigue, or digestive issues, that you've noticed recently? Also, have you been diagnosed with any other medical conditions or been on any medications?\nPatient: I do tend to get colds often, and they linger for a long time, but I don't have any other frequent infections or gastrointestinal issues. I haven't noticed any fatigue or other symptoms that would make me think something else is going on with my immune system. My only other medical condition is type two diabetes, which I was recently diagnosed with, and I'm on metformin.\nDoctor: Could you provide the specific IgA level and reference range from your lab work, as well as the levels for IgG and IgM?\nPatient: I don't have the specific IgA level or the reference range from my lab work. My doctor just told me it was low, and I don't have the levels for IgG or IgM either. She only mentioned the IgA when she referred me to you.",
+  "reference_so": {
+    "subjective": "Basic information: Patient name: Kyle; approximate age: late 20s or early 30s; reason for consultation: abnormal lab work related to low immunoglobulin A.\n\nHistory of present illness: Onset and course: Not yet provided. Symptom characteristics: Recurrent colds that linger for a long time. Frequency and duration of infections: Colds are frequent and linger for a long time, though the patient is unsure if this is more than usual. Progression: Not yet provided. Prior evaluation and treatment: Primary care doctor identified low IgA and referred for further evaluation. Response: Not yet provided.\n\nPast history: Previous illnesses: Not yet provided. Operations: Not yet provided. Trauma: Not yet provided. Allergies: Not yet provided. Personal history: Type 2 diabetes, recently diagnosed, on metformin. Family history: Family is pretty healthy—no one that I know of has immune deficiencies or autoimmune disorders.",
+    "objective": "Physical examination: Vital signs: Not yet provided. System examination findings: Not yet provided.\n\nInvestigations: Laboratory: Immunoglobulin A level: Low (specific value not yet provided). Reference range: Not yet provided. Other immunoglobulin levels: IgG and IgM levels not yet provided. Imaging: Not yet provided. ECG: Not yet provided."
+  }
+}

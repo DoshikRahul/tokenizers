@@ -1,0 +1,773 @@
+{
+  "case_id": "D2N106",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient is a 58-year-old male who presents with shortness of breath, which has been ongoing for a few months\n* Symptoms are not triggered by specific times of day, seasons, or activities\n* Patient reports no chest pain, cough, or fatigue\n* Shortness of breath is more noticeable when outside or at home, and is not relieved by inhaler use\n* Patient has not experienced any dizziness, lightheadedness, or syncope\n* No nocturnal dyspnea or orthopnea\n* Patient has not been evaluated for cardiac conditions or undergone cardiac testing",
+    "objective": "* Vital signs: Not documented\n* Physical examination findings:\n\t+ Faint expiratory wheezing bilaterally\n\t+ No rash, swelling, or other issues\n\t+ Chest X-ray and pulmonary function test were normal\n* No objective clinical measurements, examination findings, or investigation results were documented in the conversation"
+  },
+  "stage2_so": {
+    "subjective": "* The patient is 58 years old. The patient presents with shortness of breath. The patient's shortness of breath has been ongoing for a few months.\n* Symptoms are not triggered by specific times of day, seasons, or activities\n* Patient reports no chest pain, cough, or fatigue\n* Shortness of breath is more noticeable when outside. Shortness of breath is more noticeable when at home.\n* Patient has not experienced any dizziness, lightheadedness, or syncope\n* No nocturnal dyspnea or orthopnea\n* Patient has not been evaluated for cardiac conditions or undergone cardiac testing",
+    "objective": "* Vital signs: Not documented\n* Physical examination findings:\n\t+ Faint expiratory wheezing bilaterally\n\t+ No rash, swelling, or other issues\n\t+ Chest X-ray and pulmonary function test were normal\n* No objective clinical measurements, examination findings, or investigation results were documented in the conversation"
+  },
+  "stage3_so": {
+    "subjective": "* The patient is 58 years old. The patient presents with shortness of breath. The patient's shortness of breath has been ongoing for a few months.\n* The patient reports that the wheezing has been getting more frequent lately, but is unsure of the exact cause.\n* The patient reports noticing wheezing more frequently when outdoors or at home, without a specific trigger, but notes occasional worsening even when the cat is not present.\n* The patient reports using an inhaler as needed for symptoms.\n* Symptoms are not triggered by specific times of day, seasons, or activities\n* Patient reports no chest pain, cough, or fatigue\n* The patient reports wanting to figure out what is going on.\n* The patient reports living in the same place and denies exposure to new allergens, pollutants, or changes in weather patterns.\n* The patient wasn't really active before, but tries to walk around the property sometimes.\n* Shortness of breath is more noticeable when outside. Shortness of breath is more noticeable when at home.\n* The patient appears to be calm and not in distress, although they may be slightly nervous.\n* Patient has not experienced any dizziness, lightheadedness, or syncope\n* No nocturnal dyspnea or orthopnea\n* Patient has not been evaluated for cardiac conditions or undergone cardiac testing",
+    "objective": "* Vital signs: Not documented\n* Physical examination findings:\n\t+ Faint expiratory wheezing bilaterally\n\t+ No rash, swelling, or other issues\n\t+ Chest X-ray and pulmonary function test were normal\n* No objective clinical measurements, examination findings, or investigation results were documented in the conversation"
+  },
+  "stage1_ap": {
+    "assessment": "* The patient presents with chronic shortness of breath, which is not triggered by specific times of day, seasons, or activities\n* Symptoms are not relieved by inhaler use\n* No clear underlying cause has been established",
+    "plan": "* No explicit management or follow-up plan was documented in the conversation"
+  },
+  "stage2_audit": [
+    {
+      "claim": "The patient is a 58-year-old male.",
+      "scores": {
+        "entailment": 0.0024,
+        "neutral": 0.1158,
+        "contradiction": 0.8818
+      },
+      "support_evidence": "Patient: I'm 58 years old, and I'm here because I've been having trouble breathing more than usual. It's not something I've had before, and it's been happening in different situations, like when I'm outside or even when I'm at home. I just want to figure out what's going on.",
+      "contradiction_evidence": "Patient: I'm 58 years old, and I'm here because I've been having trouble breathing more than usual. It's not something I've had before, and it's been happening in different situations, like when I'm outside or even when I'm at home. I just want to figure out what's going on.",
+      "corrected_text": "The patient is 58 years old.",
+      "flagged": false,
+      "decision": "corrected",
+      "keep": true,
+      "output": "The patient is 58 years old.",
+      "reason": "Contradicted by the conversation; rewritten from the cited evidence.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 58-year-old male who presents with shortness of breath, which has been ongoing for a few months"
+    },
+    {
+      "claim": "The patient presents with shortness of breath.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0002,
+        "contradiction": 0.0023
+      },
+      "support_evidence": "Patient: The shortness of breath has been happening for a while now, maybe a few months. It doesn't really have a specific time or trigger, but I notice it more when I'm outside or even at home sometimes. I don't have chest pain or a cough, but I do get tired more easily when it happens. It's kind of frustrating because I feel like I should be able to breathe easier, you know?",
+      "contradiction_evidence": "Patient: No, I don't think I've had any blood tests recently. The doctor did mention my chest X-ray and pulmonary function test were normal, but I don't recall anything about blood work. I just came in because of the breathing issues, and I haven't had any other tests done.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient presents with shortness of breath.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 58-year-old male who presents with shortness of breath, which has been ongoing for a few months"
+    },
+    {
+      "claim": "The patient's shortness of breath has been ongoing for a few months.",
+      "scores": {
+        "entailment": 0.9988,
+        "neutral": 0.0008,
+        "contradiction": 0.0012
+      },
+      "support_evidence": "Patient: The shortness of breath has been happening for a while now, maybe a few months. It doesn't really have a specific time or trigger, but I notice it more when I'm outside or even at home sometimes. I don't have chest pain or a cough, but I do get tired more easily when it happens. It's kind of frustrating because I feel like I should be able to breathe easier, you know?",
+      "contradiction_evidence": "Patient: No, I don't think I've been evaluated for heart problems or had any tests like an echocardiogram or ECG. I just came in because of the breathing issues, and the doctor said my chest X-ray and pulmonary function test were normal. I haven't had any symptoms that make me think it's my heart.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient's shortness of breath has been ongoing for a few months.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 58-year-old male who presents with shortness of breath, which has been ongoing for a few months"
+    },
+    {
+      "claim": "Symptoms are not triggered by specific times of day, seasons, or activities",
+      "scores": {
+        "entailment": 0.999,
+        "neutral": 0.0008,
+        "contradiction": 0.8336
+      },
+      "support_evidence": "Patient: No, I haven't had any chest pain or palpitations, and my shortness of breath doesn't really happen with exertion or when lying flat. It just comes on randomly, sometimes when I'm outside, sometimes when I'm at home, even when I'm not doing anything. It's more like my breathing just feels off for no real reason.",
+      "contradiction_evidence": "Patient: The wheezing is more like a high-pitched sound, especially when I'm breathing out. It doesn't seem to be tied to one specific trigger, but I do notice it more when I'm outside or even sometimes when I'm at home, even when the cat isn't around. I'm not exactly sure why it happens, but it's been getting more frequent lately.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Symptoms are not triggered by specific times of day, seasons, or activities",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "Symptoms are not triggered by specific times of day, seasons, or activities",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient reports no chest pain, cough, or fatigue",
+      "scores": {
+        "entailment": 0.903,
+        "neutral": 0.0956,
+        "contradiction": 0.984
+      },
+      "support_evidence": "Patient: No, I haven't had any chest pain or palpitations, and my shortness of breath doesn't really happen with exertion or when lying flat. It just comes on randomly, sometimes when I'm outside, sometimes when I'm at home, even when I'm not doing anything. It's more like my breathing just feels off for no real reason.",
+      "contradiction_evidence": "Doctor: Could you describe the duration of your shortness of breath, any associated symptoms such as chest pain, cough, or fatigue, and whether there are any specific triggers or times of day when it worsens?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient reports no chest pain, cough, or fatigue",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Patient reports no chest pain, cough, or fatigue",
+      "level": "sentence"
+    },
+    {
+      "claim": "Shortness of breath is more noticeable when outside.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0004,
+        "contradiction": 0.1466
+      },
+      "support_evidence": "Patient: The shortness of breath has been happening for a while now, maybe a few months. It doesn't really have a specific time or trigger, but I notice it more when I'm outside or even at home sometimes. I don't have chest pain or a cough, but I do get tired more easily when it happens. It's kind of frustrating because I feel like I should be able to breathe easier, you know?",
+      "contradiction_evidence": "Patient: No, I haven't had any dizziness, lightheadedness, or fainting spells. I feel pretty steady on my feet, even when I'm walking around the property or doing things outside. I don't notice any issues with my balance or feeling weak when I stand up.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Shortness of breath is more noticeable when outside.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Shortness of breath is more noticeable when outside or at home, and is not relieved by inhaler use"
+    },
+    {
+      "claim": "Shortness of breath is more noticeable when at home.",
+      "scores": {
+        "entailment": 0.9986,
+        "neutral": 0.0008,
+        "contradiction": 0.0372
+      },
+      "support_evidence": "Patient: The shortness of breath has been happening for a while now, maybe a few months. It doesn't really have a specific time or trigger, but I notice it more when I'm outside or even at home sometimes. I don't have chest pain or a cough, but I do get tired more easily when it happens. It's kind of frustrating because I feel like I should be able to breathe easier, you know?",
+      "contradiction_evidence": "Patient: The wheezing is more like a high-pitched sound, especially when I'm breathing out. It doesn't seem to be tied to one specific trigger, but I do notice it more when I'm outside or even sometimes when I'm at home, even when the cat isn't around. I'm not exactly sure why it happens, but it's been getting more frequent lately.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Shortness of breath is more noticeable when at home.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Shortness of breath is more noticeable when outside or at home, and is not relieved by inhaler use"
+    },
+    {
+      "claim": "Shortness of breath is not relieved by inhaler use.",
+      "scores": {
+        "entailment": 0.889,
+        "neutral": 0.0588,
+        "contradiction": 0.8963
+      },
+      "support_evidence": "Doctor: Have you experienced any episodes of nocturnal dyspnea or orthopnea? Have you noticed any improvement in symptoms with the use of your inhaler?",
+      "contradiction_evidence": "Patient: I haven't started any new medications, but I do have an inhaler that I use when the symptoms come on. I wasn't really active before, but I try to walk around the property sometimes. I don't notice any swelling in my legs or feet, though.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "removed_contradicted",
+      "keep": false,
+      "output": "",
+      "reason": "Contradicted by the conversation and no evidence-based correction was possible.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Shortness of breath is more noticeable when outside or at home, and is not relieved by inhaler use"
+    },
+    {
+      "claim": "Patient has not experienced any dizziness, lightheadedness, or syncope",
+      "scores": {
+        "entailment": 0.9981,
+        "neutral": 0.0007,
+        "contradiction": 0.0131
+      },
+      "support_evidence": "Patient: No, I haven't had any dizziness, lightheadedness, or fainting spells. I feel pretty steady on my feet, even when I'm walking around the property or doing things outside. I don't notice any issues with my balance or feeling weak when I stand up.",
+      "contradiction_evidence": "Patient: The wheezing is more like a high-pitched sound, especially when I'm breathing out. It doesn't seem to be tied to one specific trigger, but I do notice it more when I'm outside or even sometimes when I'm at home, even when the cat isn't around. I'm not exactly sure why it happens, but it's been getting more frequent lately.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient has not experienced any dizziness, lightheadedness, or syncope",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Patient has not experienced any dizziness, lightheadedness, or syncope",
+      "level": "sentence"
+    },
+    {
+      "claim": "No nocturnal dyspnea or orthopnea",
+      "scores": {
+        "entailment": 0.9472,
+        "neutral": 0.0457,
+        "contradiction": 0.0472
+      },
+      "support_evidence": "Doctor: Have you experienced any episodes of nocturnal dyspnea or orthopnea? Have you noticed any improvement in symptoms with the use of your inhaler?",
+      "contradiction_evidence": "Patient: No, I don't think I've been evaluated for heart problems or had any tests like an echocardiogram or ECG. I just came in because of the breathing issues, and the doctor said my chest X-ray and pulmonary function test were normal. I haven't had any symptoms that make me think it's my heart.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "No nocturnal dyspnea or orthopnea",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "No nocturnal dyspnea or orthopnea",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient has not been evaluated for cardiac conditions or undergone cardiac testing",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0002,
+        "contradiction": 0.9905
+      },
+      "support_evidence": "Patient: No, I haven't really noticed any specific time of day or season that seems to trigger it more. It just happens randomly, sometimes when I'm outside, sometimes when I'm at home, even when I'm not doing anything. It's more like my breathing just feels off for no real reason.",
+      "contradiction_evidence": "Patient: Yes, I had a chest X-ray and a pulmonary function test when I came in, and they were both normal. The doctor didn't find anything wrong with my lungs on the tests, but I still feel like I'm having trouble breathing, especially when I'm outside or at home. It's kind of confusing because the tests didn't show anything, but the symptoms are real.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient has not been evaluated for cardiac conditions or undergone cardiac testing",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 6,
+      "sentence": "Patient has not been evaluated for cardiac conditions or undergone cardiac testing",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "Vital signs: Not documented",
+      "claim": "Vital signs: Not documented",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    },
+    {
+      "claim": "Physical examination findings:",
+      "scores": {
+        "entailment": 0.9677,
+        "neutral": 0.0312,
+        "contradiction": 0.436
+      },
+      "support_evidence": "Doctor: Have you noticed any correlation between your symptoms and specific times of the day, seasons, or activities?",
+      "contradiction_evidence": "Doctor: Could you please describe your physical examination findings, including your vital signs, heart sounds, and any signs of fluid retention or respiratory distress?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Physical examination findings:",
+      "reason": "Entailed by the conversation.",
+      "section": "objective",
+      "line": 1,
+      "sentence": "Physical examination findings:",
+      "level": "sentence"
+    },
+    {
+      "claim": "Faint expiratory wheezing bilaterally",
+      "scores": {
+        "entailment": 0.9967,
+        "neutral": 0.0024,
+        "contradiction": 0.5465
+      },
+      "support_evidence": "Patient: My vital signs look good, my pulse is okay, and my pulse ox is normal. I don't appear to be in any distress, though I might be a little nervous. My lungs exam showed some faint expiratory wheezing bilaterally, but I don't have any rash, swelling, or other issues. I was told my chest X-ray and pulmonary function test were normal.",
+      "contradiction_evidence": "Patient: No, I haven't had any dizziness, lightheadedness, or fainting spells. I feel pretty steady on my feet, even when I'm walking around the property or doing things outside. I don't notice any issues with my balance or feeling weak when I stand up.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Faint expiratory wheezing bilaterally",
+      "reason": "Entailed by the conversation.",
+      "section": "objective",
+      "line": 2,
+      "sentence": "Faint expiratory wheezing bilaterally",
+      "level": "sentence"
+    },
+    {
+      "claim": "No rash, swelling, or other issues",
+      "scores": {
+        "entailment": 0.9977,
+        "neutral": 0.0011,
+        "contradiction": 0.7834
+      },
+      "support_evidence": "Patient: My vital signs look good, my pulse is okay, and my pulse ox is normal. I don't appear to be in any distress, though I might be a little nervous. My lungs exam showed some faint expiratory wheezing bilaterally, but I don't have any rash, swelling, or other issues. I was told my chest X-ray and pulmonary function test were normal.",
+      "contradiction_evidence": "Doctor: Could you describe any recent changes in your activity level or any new medications you might be taking? Additionally, have you noticed any swelling in your legs or feet?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "No rash, swelling, or other issues",
+      "reason": "Entailed by the conversation.",
+      "section": "objective",
+      "line": 3,
+      "sentence": "No rash, swelling, or other issues",
+      "level": "sentence"
+    },
+    {
+      "claim": "Chest X-ray and pulmonary function test were normal",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.0044
+      },
+      "support_evidence": "Patient: No, I haven't had any cardiac evaluations like an echocardiogram or ECG. The doctor did some tests, like a chest X-ray and pulmonary function test, which were normal, but I don't think they checked my heart specifically. I just came in because of the breathing issues, and I haven't had any other tests done.",
+      "contradiction_evidence": "Doctor: Have you had any prior evaluations or diagnostic tests for this dyspnea, such as chest X-rays, pulmonary function tests, or blood work?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Chest X-ray and pulmonary function test were normal",
+      "reason": "Entailed by the conversation.",
+      "section": "objective",
+      "line": 4,
+      "sentence": "Chest X-ray and pulmonary function test were normal",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 5,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "corrected": 1,
+      "supported": 13,
+      "removed_contradicted": 1,
+      "exempt": 2
+    },
+    "num_claims": 15,
+    "num_kept": 14,
+    "claim_retention_rate": 0.9333
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient reports wanting to figure out what is going on.",
+      "evidence": "Patient: I'm 58 years old, and I'm here because I've been having trouble breathing more than usual. It's not something I've had before, and it's been happening in different situations, like when I'm outside or even when I'm at home. I just want to figure out what's going on.",
+      "section": "subjective",
+      "candidate": "I just want to figure out what's going on."
+    },
+    {
+      "statement": "The patient wasn't really active before, but tries to walk around the property sometimes.",
+      "evidence": "Patient: I haven't started any new medications, but I do have an inhaler that I use when the symptoms come on. I wasn't really active before, but I try to walk around the property sometimes. I don't notice any swelling in my legs or feet, though.",
+      "section": "subjective",
+      "candidate": "I wasn't really active before, but I try to walk around the property sometimes."
+    },
+    {
+      "statement": "The patient reports living in the same place and denies exposure to new allergens, pollutants, or changes in weather patterns.",
+      "evidence": "Doctor: Have you experienced any recent changes in your environment, such as exposure to new allergens, pollutants, or changes in weather patterns that might be associated with the increased frequency of your symptoms?",
+      "section": "subjective",
+      "candidate": "I live in the same place, and I don't think I've been exposed to anything new."
+    },
+    {
+      "statement": "The patient appears to be calm and not in distress, although they may be slightly nervous.",
+      "evidence": "Patient: My vital signs look good, my pulse is okay, and my pulse ox is normal. I don't appear to be in any distress, though I might be a little nervous. My lungs exam showed some faint expiratory wheezing bilaterally, but I don't have any rash, swelling, or other issues. I was told my chest X-ray and pulmonary function test were normal.",
+      "section": "subjective",
+      "candidate": "I don't appear to be in any distress, though I might be a little nervous."
+    },
+    {
+      "statement": "The patient reports that the wheezing has been getting more frequent lately, but is unsure of the exact cause.",
+      "evidence": "Patient: The wheezing is more like a high-pitched sound, especially when I'm breathing out. It doesn't seem to be tied to one specific trigger, but I do notice it more when I'm outside or even sometimes when I'm at home, even when the cat isn't around. I'm not exactly sure why it happens, but it's been getting more frequent lately.",
+      "section": "subjective",
+      "candidate": "I'm not exactly sure why it happens, but it's been getting more frequent lately."
+    },
+    {
+      "statement": "The patient reports noticing wheezing more frequently when outdoors or at home, without a specific trigger, but notes occasional worsening even when the cat is not present.",
+      "evidence": "Patient: The wheezing is more like a high-pitched sound, especially when I'm breathing out. It doesn't seem to be tied to one specific trigger, but I do notice it more when I'm outside or even sometimes when I'm at home, even when the cat isn't around. I'm not exactly sure why it happens, but it's been getting more frequent lately.",
+      "section": "subjective",
+      "candidate": "It doesn't seem to be tied to one specific trigger, but I do notice it more when I'm outside or even sometimes when I'm at home, even when the cat isn't around."
+    },
+    {
+      "statement": "The patient reports using an inhaler as needed for symptoms.",
+      "evidence": "Patient: I haven't started any new medications, but I do have an inhaler that I use when the symptoms come on. I wasn't really active before, but I try to walk around the property sometimes. I don't notice any swelling in my legs or feet, though.",
+      "section": "subjective",
+      "candidate": "I haven't started any new medications, but I do have an inhaler that I use when the symptoms come on."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I just want to figure out what's going on.",
+      "speaker": "Patient",
+      "coverage": 0.168,
+      "nearest_so_sentence": "No rash, swelling, or other issues",
+      "statement": "The patient reports wanting to figure out what is going on.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I'm 58 years old, and I'm here because I've been having trouble breathing more than usual. It's not something I've had before, and it's been happening in different situations, like when I'm outside or even when I'm at home. I just want to figure out what's going on.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9998,
+        "contradiction": 0.015
+      },
+      "duplicate_entailment": 0.0042,
+      "duplicate_similarity": 0.5554,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 3,
+        "perplexity": 14.73,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I wasn't really active before, but I try to walk around the property sometimes.",
+      "speaker": "Patient",
+      "coverage": 0.1965,
+      "nearest_so_sentence": "Shortness of breath is more noticeable when outside.",
+      "statement": "The patient wasn't really active before, but tries to walk around the property sometimes.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I haven't started any new medications, but I do have an inhaler that I use when the symptoms come on. I wasn't really active before, but I try to walk around the property sometimes. I don't notice any swelling in my legs or feet, though.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9959,
+        "contradiction": 0.002
+      },
+      "first_rewrite_rejected": "The patient reports being moderately active, attempting to walk around the property occasionally.",
+      "duplicate_entailment": 0.0004,
+      "duplicate_similarity": 0.5542,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 4,
+        "perplexity": 16.55,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I live in the same place, and I don't think I've been exposed to anything new.",
+      "speaker": "Patient",
+      "coverage": 0.2071,
+      "nearest_so_sentence": "Symptoms are not triggered by specific times of day, seasons, or activities",
+      "statement": "The patient reports living in the same place and denies exposure to new allergens, pollutants, or changes in weather patterns.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Doctor: Have you experienced any recent changes in your environment, such as exposure to new allergens, pollutants, or changes in weather patterns that might be associated with the increased frequency of your symptoms?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.2029
+      },
+      "duplicate_entailment": 0.015,
+      "duplicate_similarity": 0.4642,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 4,
+        "perplexity": 16.73,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I'm not sure why it's happening more.",
+      "speaker": "Patient",
+      "coverage": 0.2098,
+      "nearest_so_sentence": "Symptoms are not triggered by specific times of day, seasons, or activities",
+      "statement": "The patient reports being unsure why their symptoms are occurring more frequently.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I haven't really noticed any changes in my environment that seem to be causing this. I live in the same place, and I don't think I've been exposed to anything new. It just feels like my breathing has been off more often lately, even when I'm not doing anything different. I'm not sure why it's happening more.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0375
+      },
+      "duplicate_entailment": 0.3021,
+      "duplicate_similarity": 0.5291
+    },
+    {
+      "candidate": "I don't appear to be in any distress, though I might be a little nervous.",
+      "speaker": "Patient",
+      "coverage": 0.231,
+      "nearest_so_sentence": "Symptoms are not triggered by specific times of day, seasons, or activities",
+      "statement": "The patient appears to be calm and not in distress, although they may be slightly nervous.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: My vital signs look good, my pulse is okay, and my pulse ox is normal. I don't appear to be in any distress, though I might be a little nervous. My lungs exam showed some faint expiratory wheezing bilaterally, but I don't have any rash, swelling, or other issues. I was told my chest X-ray and pulmonary function test were normal.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9973,
+        "contradiction": 0.0042
+      },
+      "duplicate_entailment": 0.0011,
+      "duplicate_similarity": 0.5133,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 7,
+        "perplexity": 15.96,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I feel pretty steady on my feet, even when I'm walking around the property or doing things outside.",
+      "speaker": "Patient",
+      "coverage": 0.2747,
+      "nearest_so_sentence": "Shortness of breath is more noticeable when outside.",
+      "statement": "The patient reports feeling steady on their feet, even when walking or engaging in physical activities outside.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: No, I haven't had any dizziness, lightheadedness, or fainting spells. I feel pretty steady on my feet, even when I'm walking around the property or doing things outside. I don't notice any issues with my balance or feeling weak when I stand up.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9991,
+        "contradiction": 0.9995
+      }
+    },
+    {
+      "candidate": "It just comes on randomly, sometimes when I'm outside, sometimes when I'm at home, even when I'm not doing anything.",
+      "speaker": "Patient",
+      "coverage": 0.3179,
+      "nearest_so_sentence": "Symptoms are not triggered by specific times of day, seasons, or activities",
+      "statement": "The patient reports experiencing episodes of chest pain that occur randomly, sometimes while outside, sometimes at home, and even when not engaging in physical activity.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: The wheezing is more like a high-pitched sound, especially when I'm breathing out. It doesn't seem to be tied to one specific trigger, but I do notice it more when I'm outside or even sometimes when I'm at home, even when the cat isn't around. I'm not exactly sure why it happens, but it's been getting more frequent lately.",
+      "scores_vs_dialogue": {
+        "entailment": 0.8981,
+        "contradiction": 0.999
+      }
+    },
+    {
+      "candidate": "I'm not exactly sure why it happens, but it's been getting more frequent lately.",
+      "speaker": "Patient",
+      "coverage": 0.3215,
+      "nearest_so_sentence": "Symptoms are not triggered by specific times of day, seasons, or activities",
+      "statement": "The patient reports that the wheezing has been getting more frequent lately, but is unsure of the exact cause.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: The wheezing is more like a high-pitched sound, especially when I'm breathing out. It doesn't seem to be tied to one specific trigger, but I do notice it more when I'm outside or even sometimes when I'm at home, even when the cat isn't around. I'm not exactly sure why it happens, but it's been getting more frequent lately.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.226
+      },
+      "duplicate_entailment": 0.004,
+      "duplicate_similarity": 0.6222,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 1,
+        "perplexity": 15.16,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "It's not something I've had before, and it's been happening in different situations, like when I'm outside or even when I'm at home.",
+      "speaker": "Patient",
+      "coverage": 0.3351,
+      "nearest_so_sentence": "Symptoms are not triggered by specific times of day, seasons, or activities",
+      "statement": "The patient states it's not something they've had before and it's been happening in different situations.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 58 years old, and I'm here because I've been having trouble breathing more than usual. It's not something I've had before, and it's been happening in different situations, like when I'm outside or even when I'm at home. I just want to figure out what's going on.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0965
+      },
+      "first_rewrite_rejected": "The patient reports experiencing symptoms in various situations, including outdoors and at home.",
+      "duplicate_entailment": 0.9859,
+      "duplicate_similarity": 0.5347
+    },
+    {
+      "candidate": "No, I haven't really noticed any changes in my environment that seem to be causing this.",
+      "speaker": "Patient",
+      "coverage": 0.3599,
+      "nearest_so_sentence": "Symptoms are not triggered by specific times of day, seasons, or activities",
+      "statement": "The patient hasn't really noticed any changes in their environment that seem to be causing this.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I haven't really noticed any changes in my environment that seem to be causing this. I live in the same place, and I don't think I've been exposed to anything new. It just feels like my breathing has been off more often lately, even when I'm not doing anything different. I'm not sure why it's happening more.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.0161
+      },
+      "first_rewrite_rejected": "The patient denies noticing any changes in their environment that might be associated with the increased frequency of their symptoms.",
+      "duplicate_entailment": 0.0733,
+      "duplicate_similarity": 0.5538
+    },
+    {
+      "candidate": "It doesn't seem to be tied to one specific trigger, but I do notice it more when I'm outside or even sometimes when I'm at home, even when the cat isn't around.",
+      "speaker": "Patient",
+      "coverage": 0.3713,
+      "nearest_so_sentence": "Symptoms are not triggered by specific times of day, seasons, or activities",
+      "statement": "The patient reports noticing wheezing more frequently when outdoors or at home, without a specific trigger, but notes occasional worsening even when the cat is not present.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: The wheezing is more like a high-pitched sound, especially when I'm breathing out. It doesn't seem to be tied to one specific trigger, but I do notice it more when I'm outside or even sometimes when I'm at home, even when the cat isn't around. I'm not exactly sure why it happens, but it's been getting more frequent lately.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.0115
+      },
+      "duplicate_entailment": 0.0122,
+      "duplicate_similarity": 0.4488,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 2,
+        "perplexity": 16.04,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "It just happens randomly, sometimes when I'm outside, sometimes when I'm at home, even when I'm not doing anything.",
+      "speaker": "Patient",
+      "coverage": 0.3788,
+      "nearest_so_sentence": "Symptoms are not triggered by specific times of day, seasons, or activities",
+      "statement": "The patient reports that symptoms occur randomly, sometimes when outside, sometimes at home, and even when not engaging in any specific activity.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: No, I haven't really noticed any specific time of day or season that seems to trigger it more. It just happens randomly, sometimes when I'm outside, sometimes when I'm at home, even when I'm not doing anything. It's more like my breathing just feels off for no real reason.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.7548
+      }
+    },
+    {
+      "candidate": "I haven't started any new medications, but I do have an inhaler that I use when the symptoms come on.",
+      "speaker": "Patient",
+      "coverage": 0.3863,
+      "nearest_so_sentence": "Faint expiratory wheezing bilaterally",
+      "statement": "The patient reports using an inhaler as needed for symptoms.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I haven't started any new medications, but I do have an inhaler that I use when the symptoms come on. I wasn't really active before, but I try to walk around the property sometimes. I don't notice any swelling in my legs or feet, though.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0014
+      },
+      "duplicate_entailment": 0.0061,
+      "duplicate_similarity": 0.5671,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 3,
+        "perplexity": 15.51,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don't notice any issues with my balance or feeling weak when I stand up.",
+      "speaker": "Patient",
+      "coverage": 0.3985,
+      "nearest_so_sentence": "Shortness of breath is more noticeable when at home.",
+      "statement": "The patient reports no issues with balance or feeling weak when standing up.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I haven't had any dizziness, lightheadedness, or fainting spells. I feel pretty steady on my feet, even when I'm walking around the property or doing things outside. I don't notice any issues with my balance or feeling weak when I stand up.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0829
+      },
+      "duplicate_entailment": 0.867,
+      "duplicate_similarity": 0.5346
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 47,
+    "num_covered": 33,
+    "num_flagged": 14,
+    "num_not_checked_cap": 0,
+    "num_added": 7
+  },
+  "gaps": {
+    "gaps": [
+      {
+        "id": "q1",
+        "gap": "Severity of symptoms",
+        "question": "How would the patient rate the severity of their shortness of breath on a scale of 0-10?",
+        "category": "subjective",
+        "status": "unresolved",
+        "answer": null
+      },
+      {
+        "id": "q2",
+        "gap": "Medication regimen",
+        "question": "What medications is the patient currently taking, including dosages and frequencies?",
+        "category": "subjective",
+        "status": "unresolved",
+        "answer": null
+      }
+    ],
+    "dropped": [
+      {
+        "gap": "Vital signs",
+        "question": "What are the patient's vital signs (e.g., blood pressure, pulse, oxygen saturation)?",
+        "category": "objective",
+        "status": "dropped_already_answered"
+      },
+      {
+        "gap": "Duration of symptoms",
+        "question": "How long have the patient's symptoms been present before seeking medical attention?",
+        "category": "subjective",
+        "status": "dropped_already_answered"
+      },
+      {
+        "gap": "Cardiac evaluation",
+        "question": "Has the patient undergone any cardiac evaluations, such as an echocardiogram or ECG, to rule out cardiac causes of dyspnea?",
+        "category": "objective",
+        "status": "dropped_already_answered"
+      }
+    ],
+    "num_generated": 5
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "stage": "stage2",
+        "section": "subjective",
+        "claim": "Shortness of breath is not relieved by inhaler use.",
+        "source_sentence": "Shortness of breath is more noticeable when outside or at home, and is not relieved by inhaler use",
+        "decision": "removed_contradicted",
+        "scores": {
+          "entailment": 0.889,
+          "neutral": 0.0588,
+          "contradiction": 0.8963
+        },
+        "reason": "Contradicted by the conversation and no evidence-based correction was possible.",
+        "nearest_evidence": "Patient: I haven't started any new medications, but I do have an inhaler that I use when the symptoms come on. I wasn't really active before, but I try to walk around the property sometimes. I don't notice any swelling in my legs or feet, though."
+      }
+    ],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "I feel pretty steady on my feet, even when I'm walking around the property or doing things outside.",
+        "statement": "The patient reports feeling steady on their feet, even when walking or engaging in physical activities outside.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9991,
+          "contradiction": 0.9995
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "It just comes on randomly, sometimes when I'm outside, sometimes when I'm at home, even when I'm not doing anything.",
+        "statement": "The patient reports experiencing episodes of chest pain that occur randomly, sometimes while outside, sometimes at home, and even when not engaging in physical activity.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.8981,
+          "contradiction": 0.999
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "It just happens randomly, sometimes when I'm outside, sometimes when I'm at home, even when I'm not doing anything.",
+        "statement": "The patient reports that symptoms occur randomly, sometimes when outside, sometimes at home, and even when not engaging in any specific activity.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9995,
+          "contradiction": 0.7548
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 49.9,
+  "ap_unchanged": true,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 58 years old, and I'm here because I've been having trouble breathing more than usual. It's not something I've had before, and it's been happening in different situations, like when I'm outside or even when I'm at home. I just want to figure out what's going on.\nDoctor: Could you describe the duration of your shortness of breath, any associated symptoms such as chest pain, cough, or fatigue, and whether there are any specific triggers or times of day when it worsens?\nPatient: The shortness of breath has been happening for a while now, maybe a few months. It doesn't really have a specific time or trigger, but I notice it more when I'm outside or even at home sometimes. I don't have chest pain or a cough, but I do get tired more easily when it happens. It's kind of frustrating because I feel like I should be able to breathe easier, you know?\nDoctor: Have you had any prior evaluations or diagnostic tests for this dyspnea, such as chest X-rays, pulmonary function tests, or blood work?\nPatient: Yes, I had a chest X-ray and a pulmonary function test when I came in, and they were both normal. The doctor didn't find anything wrong with my lungs on the tests, but I still feel like I'm having trouble breathing, especially when I'm outside or at home. It's kind of confusing because the tests didn't show anything, but the symptoms are real.\nDoctor: Could you describe any recent changes in your activity level or any new medications you might be taking? Additionally, have you noticed any swelling in your legs or feet?\nPatient: I haven't started any new medications, but I do have an inhaler that I use when the symptoms come on. I wasn't really active before, but I try to walk around the property sometimes. I don't notice any swelling in my legs or feet, though.\nDoctor: Could you please describe your physical examination findings, including your vital signs, heart sounds, and any signs of fluid retention or respiratory distress?\nPatient: My vital signs look good, my pulse is okay, and my pulse ox is normal. I don't appear to be in any distress, though I might be a little nervous. My lungs exam showed some faint expiratory wheezing bilaterally, but I don't have any rash, swelling, or other issues. I was told my chest X-ray and pulmonary function test were normal.\nDoctor: Have you experienced any episodes of dizziness, lightheadedness, or syncope, especially upon standing or during physical exertion?\nPatient: No, I haven't had any dizziness, lightheadedness, or fainting spells. I feel pretty steady on my feet, even when I'm walking around the property or doing things outside. I don't notice any issues with my balance or feeling weak when I stand up.\nDoctor: Have you experienced any episodes of nocturnal dyspnea or orthopnea? Have you noticed any improvement in symptoms with the use of your inhaler?\nPatient: No, I haven't had any trouble breathing at night or when lying down. The inhaler helps a little when I feel the symptoms coming on, but it doesn't completely take them away. I still feel like I'm working harder to breathe, especially when I'm outside or even at home sometimes.\nDoctor: Have you experienced any palpitations, chest discomfort, or syncope in the past? Additionally, have you been evaluated for cardiac conditions such as heart failure, arrhythmias, or valvular disease?\nPatient: No, I haven't had any palpitations or chest discomfort, and I haven't fainted or passed out. I don't think I've been evaluated for heart problems, but I don't feel like my heart is racing or anything like that. I just feel like my breathing is off, not my heart.\nDoctor: Can you describe the exact nature of the wheezing? Is it high-pitched, low-pitched, or does it vary? Also, have you noticed any specific triggers that seem to worsen the dyspnea or wheezing?\nPatient: The wheezing is more like a high-pitched sound, especially when I'm breathing out. It doesn't seem to be tied to one specific trigger, but I do notice it more when I'm outside or even sometimes when I'm at home, even when the cat isn't around. I'm not exactly sure why it happens, but it's been getting more frequent lately.\nDoctor: Have you been evaluated for any cardiac conditions, such as heart failure or arrhythmias, or have you undergone any cardiac testing, such as an echocardiogram or ECG?\nPatient: No, I don't think I've been evaluated for heart problems or had any tests like an echocardiogram or ECG. I just came in because of the breathing issues, and the doctor said my chest X-ray and pulmonary function test were normal. I haven't had any symptoms that make me think it's my heart.\nDoctor: Have you experienced any episodes of chest pain, palpitations, or shortness of breath that occur with exertion or when lying flat? These could help assess for potential cardiac involvement.\nPatient: No, I haven't had any chest pain or palpitations, and my shortness of breath doesn't really happen with exertion or when lying flat. It just comes on randomly, sometimes when I'm outside, sometimes when I'm at home, even when I'm not doing anything. It's more like my breathing just feels off for no real reason.\nDoctor: Have you experienced any recent changes in your environment, such as exposure to new allergens, pollutants, or changes in weather patterns that might be associated with the increased frequency of your symptoms?\nPatient: No, I haven't really noticed any changes in my environment that seem to be causing this. I live in the same place, and I don't think I've been exposed to anything new. It just feels like my breathing has been off more often lately, even when I'm not doing anything different. I'm not sure why it's happening more.\nDoctor: Has the patient undergone any recent blood tests, such as a complete blood count (CBC), comprehensive metabolic panel (CMP), or thyroid function tests?\nPatient: No, I don't think I've had any blood tests recently. The doctor did mention my chest X-ray and pulmonary function test were normal, but I don't recall anything about blood work. I just came in because of the breathing issues, and I haven't had any other tests done.\nDoctor: Have you noticed any correlation between your symptoms and specific times of the day, seasons, or activities?\nPatient: No, I haven't really noticed any specific time of day or season that seems to trigger it more. It just happens randomly, sometimes when I'm outside, sometimes when I'm at home, even when I'm not doing anything. It's more like my breathing just feels off for no real reason.\nDoctor: Have you undergone any recent cardiac evaluations, such as an echocardiogram or ECG, to rule out cardiac causes of dyspnea?\nPatient: No, I haven't had any cardiac evaluations like an echocardiogram or ECG. The doctor did some tests, like a chest X-ray and pulmonary function test, which were normal, but I don't think they checked my heart specifically. I just came in because of the breathing issues, and I haven't had any other tests done.",
+  "reference_so": {
+    "subjective": "Basic information: 58-year-old patient presenting with new-onset dyspnea\n\nHistory of present illness: Onset of dyspnea in different situations (outside and at home), no prior history mentioned. The dyspnea has been occurring for a few months, without a specific trigger. The patient reports increased fatigue during episodes, but no chest pain or cough. The patient uses an inhaler during episodes of dyspnea. No improvement in symptoms reported with inhaler use. No nocturnal dyspnea or orthopnea reported. No history of dizziness, lightheadedness, or fainting spells. Patient is not physically active but attempts to walk around the property. No swelling in legs or feet. The inhaler helps a little when the symptoms come on, but it doesn't completely take them away. The patient still feels like they're working harder to breathe, especially when outside or even at home sometimes. The wheezing is more like a high-pitched sound, especially when breathing out. It doesn't seem to be tied to one specific trigger, but it's more noticeable when outside or sometimes at home, even when the cat isn't around. It's been getting more frequent lately. The patient denies chest pain, palpitations, or symptoms suggesting fluid retention such as swelling in the legs or feet. The dyspnea occurs randomly, without a clear trigger, and is not associated with exertion or lying flat.\n\nPast history: No prior history of heart disease, hypertension, diabetes, asthma, or COPD. No history of anemia, thyroid dysfunction, sleep apnea, or radiation/chemotherapy. No history of chronic fatigue, muscle weakness, or weight loss. No history of orthostatic hypotension or dizziness. No history of heart failure or cardiac evaluation.",
+    "objective": "Physical examination: Vital signs: pulse rate normal, blood pressure normal, pulse oximetry normal. Physical examination: no signs of distress, faint expiratory wheezing bilaterally on lung examination, no rash, swelling, or other abnormalities.\n\nInvestigations: Chest X-ray and pulmonary function test were normal. No further cardiac or pulmonary investigations have been performed yet. No echocardiogram or ECG performed yet. No recent blood tests performed, including CBC, CMP, or thyroid function tests."
+  }
+}

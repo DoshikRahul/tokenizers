@@ -1,0 +1,65 @@
+{
+  "split": "test",
+  "num_cases": 88,
+  "eval_nli_model": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4
+  },
+  "per_system": {
+    "A_stage1": {
+      "so_rouge1_f": 0.4533,
+      "so_rouge2_f": 0.2124,
+      "so_rougeL_f": 0.2928,
+      "so_rougeLsum_f": 0.398,
+      "so_bertscore_f1": 0.8767,
+      "subj_rouge1_f": 0.4844,
+      "subj_rouge2_f": 0.2494,
+      "subj_rougeL_f": 0.3189,
+      "subj_rougeLsum_f": 0.4093,
+      "subj_bertscore_f1": 0.8836,
+      "num_claims": 660,
+      "supported_rate": 0.9576,
+      "uncertain_rate": 0.0076,
+      "unsupported_claim_rate": 0.0348,
+      "contradiction_rate": 0.0288,
+      "mean_entailment": 0.9661,
+      "atomic_fact_recall": 0.6277,
+      "critical_fact_recall": 0.6544,
+      "recall_of_recoverable_facts": 0.7046
+    },
+    "B_verified": {
+      "so_rouge1_f": 0.4545,
+      "so_rouge2_f": 0.2132,
+      "so_rougeL_f": 0.2927,
+      "so_rougeLsum_f": 0.3996,
+      "so_bertscore_f1": 0.8766,
+      "subj_rouge1_f": 0.4845,
+      "subj_rouge2_f": 0.2498,
+      "subj_rougeL_f": 0.3187,
+      "subj_rougeLsum_f": 0.41,
+      "subj_bertscore_f1": 0.8834,
+      "num_claims": 653,
+      "supported_rate": 0.9862,
+      "uncertain_rate": 0.0107,
+      "unsupported_claim_rate": 0.0031,
+      "contradiction_rate": 0.0,
+      "mean_entailment": 0.9891,
+      "atomic_fact_recall": 0.6232,
+      "critical_fact_recall": 0.6485,
+      "recall_of_recoverable_facts": 0.7009
+    }
+  },
+  "task_metrics": {
+    "valid_claim_retention_proxy": 0.9888,
+    "num_genuine_omissions": 365,
+    "claim_retention_rate_stage2": 0.9852
+  },
+  "notes": [
+    "NLI-based rates are automatic proxies; validate on annotation_claims.csv.",
+    "Reference S/O used only for reference metrics and fact extraction.",
+    "gap_resolution_rate needs recorded follow-up answers."
+  ]
+}

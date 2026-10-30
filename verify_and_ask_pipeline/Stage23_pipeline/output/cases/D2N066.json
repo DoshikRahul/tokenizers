@@ -1,0 +1,434 @@
+{
+  "case_id": "D2N066",
+  "split": "dev",
+  "stage1_so": {
+    "subjective": "* Patient is a 43-year-old male who presents with a 4-day history of lower back pain that radiates down his left leg\n* Pain is described as a 6-7/10 intensity and is exacerbated by bending or sitting\n* Patient reports tingling in his left leg, especially around the calf and back of the knee, which is worsened by bending or sitting\n* Patient has not experienced any bowel or bladder dysfunction, numbness, or weakness in his left leg\n* Patient has not undergone any imaging studies or blood tests for this specific issue",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation"
+  },
+  "stage2_so": {
+    "subjective": "* Patient is a 43-year-old male who presents with a 4-day history of lower back pain that radiates down his left leg\n* Pain is described as a 6-7/10 intensity and is exacerbated by bending or sitting\n* Patient reports tingling in his left leg, especially around the calf and back of the knee, which is worsened by bending or sitting\n* Patient has not experienced any bowel or bladder dysfunction, numbness, or weakness in his left leg\n* Patient has not undergone any imaging studies or blood tests for this specific issue",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation"
+  },
+  "stage3_so": {
+    "subjective": "* The patient reports managing their symptoms with ibuprofen, which provided some relief.\n* The patient reports that this is the first time the back pain has been this severe and has lasted this long.\n* Patient is a 43-year-old male who presents with a 4-day history of lower back pain that radiates down his left leg\n* The patient reports that symptoms began approximately four days ago while working in the yard and bending over to pick something up.\n* Pain is described as a 6-7/10 intensity and is exacerbated by bending or sitting\n* Patient reports tingling in his left leg, especially around the calf and back of the knee, which is worsened by bending or sitting\n* Patient has not experienced any bowel or bladder dysfunction, numbness, or weakness in his left leg\n* Patient has not undergone any imaging studies or blood tests for this specific issue",
+    "objective": "* The patient's vital signs were normal when checked."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient presents with a 4-day history of lower back pain that radiates down his left leg, with a reported intensity of 6-7/10\n* The patient reports tingling in his left leg, especially around the calf and back of the knee, which is worsened by bending or sitting\n* No prior back injuries, surgeries, or episodes of similar pain were reported\n* No bowel or bladder dysfunction, numbness, or weakness in the left leg was reported\n* No imaging studies or blood tests have been performed for this specific issue",
+    "plan": "* No explicit management or follow-up plan was documented in the conversation"
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient is a 43-year-old male who presents with a 4-day history of lower back pain that radiates down his left leg",
+      "scores": {
+        "entailment": 0.9988,
+        "neutral": 0.0006,
+        "contradiction": 0.303
+      },
+      "support_evidence": "Patient: I'm 43 years old, male, and I'm here because of back pain. It started about four days ago when I was working in the yard and bent over to pick something up. The pain is in my lower back and goes down my left leg, and it hasn't been getting any better.",
+      "contradiction_evidence": "Patient: The tingling is mostly in my left leg, especially around the calf and the back of my knee, and it happens when I bend over or sit for a while. It doesn't really happen when I'm walking or standing straight. I haven't noticed any changes in muscle strength or difficulty with coordination in my left leg.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient is a 43-year-old male who presents with a 4-day history of lower back pain that radiates down his left leg",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 43-year-old male who presents with a 4-day history of lower back pain that radiates down his left leg",
+      "level": "sentence"
+    },
+    {
+      "claim": "Pain is described as a 6-7/10 intensity.",
+      "scores": {
+        "entailment": 0.9984,
+        "neutral": 0.0004,
+        "contradiction": 0.0012
+      },
+      "support_evidence": "Patient: The pain is maybe a 6 or 7 on the scale, and I do get some tingling in my left leg, especially when I'm in certain positions, but no real weakness or numbness.",
+      "contradiction_evidence": "Patient: The pain is maybe a 6 or 7 on the scale, and I do get some tingling in my left leg, especially when I'm in certain positions, but no real weakness or numbness.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Pain is described as a 6-7/10 intensity.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "Pain is described as a 6-7/10 intensity and is exacerbated by bending or sitting"
+    },
+    {
+      "claim": "Pain is exacerbated by bending.",
+      "scores": {
+        "entailment": 0.9991,
+        "neutral": 0.0006,
+        "contradiction": 0.0022
+      },
+      "support_evidence": "Patient: No, I haven't had any previous imaging studies for back or leg pain. This is the first time I've had this kind of pain, and I haven't had any tests done for it yet.",
+      "contradiction_evidence": "Patient: The tingling is mostly in my left leg, especially around the calf and the back of my knee, and it happens when I bend over or sit for a while. It doesn't really happen when I'm walking or standing straight.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Pain is exacerbated by bending.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "Pain is described as a 6-7/10 intensity and is exacerbated by bending or sitting"
+    },
+    {
+      "claim": "Pain is exacerbated by sitting.",
+      "scores": {
+        "entailment": 0.9989,
+        "neutral": 0.0008,
+        "contradiction": 0.0017
+      },
+      "support_evidence": "Patient: No, I haven't had any previous imaging studies for back or leg pain. This is the first time I've had this kind of pain, and I haven't had any tests done for it yet.",
+      "contradiction_evidence": "Patient: The tingling is mostly in my left leg, especially around the calf and the back of my knee, and it happens when I bend over or sit for a while. It doesn't really happen when I'm walking or standing straight.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Pain is exacerbated by sitting.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "Pain is described as a 6-7/10 intensity and is exacerbated by bending or sitting"
+    },
+    {
+      "claim": "Patient reports tingling in his left leg, especially around the calf and back of the knee, which is worsened by bending or sitting",
+      "scores": {
+        "entailment": 0.9982,
+        "neutral": 0.0013,
+        "contradiction": 0.8506
+      },
+      "support_evidence": "Patient: The tingling is mostly in my left leg, especially around the calf and the back of my knee, and it happens when I bend over or sit for a while. It doesn't really happen when I'm walking or standing straight.",
+      "contradiction_evidence": "Patient: I haven't noticed any changes in reflexes in my left leg, and I don't have any difficulty with coordination or muscle weakness in that leg. Everything feels pretty normal in terms of how my leg works.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient reports tingling in his left leg, especially around the calf and back of the knee, which is worsened by bending or sitting",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Patient reports tingling in his left leg, especially around the calf and back of the knee, which is worsened by bending or sitting",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient has not experienced any bowel or bladder dysfunction, numbness, or weakness in his left leg",
+      "scores": {
+        "entailment": 0.9965,
+        "neutral": 0.0016,
+        "contradiction": 0.2074
+      },
+      "support_evidence": "Doctor: Could you please describe any changes in your bowel or bladder function since the onset of your symptoms? Additionally, have you experienced any episodes of numbness or weakness in your left leg?",
+      "contradiction_evidence": "Patient: I don't have any recent physical examination results because I haven't had one since my last visit. The doctor mentioned during the exam that my neurological exam was normal, and I didn't have any changes in reflexes, muscle strength, or sensation in my left leg. My vital signs were also okay when he checked them.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient has not experienced any bowel or bladder dysfunction, numbness, or weakness in his left leg",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Patient has not experienced any bowel or bladder dysfunction, numbness, or weakness in his left leg",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient has not undergone any imaging studies or blood tests for this specific issue",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0003,
+        "contradiction": 0.0032
+      },
+      "support_evidence": "Patient: No, I haven't had any imaging studies like an MRI or X-ray of my lumbar spine, and I haven't had any blood tests for inflammation or infection recently. The doctor hasn't ordered any tests yet, so there are no results to share.",
+      "contradiction_evidence": "Patient: No, I haven't had any imaging studies like an MRI or X-ray of my lumbar spine. The doctor hasn't ordered any tests yet, so there are no findings to share.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient has not undergone any imaging studies or blood tests for this specific issue",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Patient has not undergone any imaging studies or blood tests for this specific issue",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 7,
+      "exempt": 1
+    },
+    "num_claims": 7,
+    "num_kept": 7,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient reports that this is the first time the back pain has been this severe and has lasted this long.",
+      "evidence": "Patient: No, I haven't had any back surgeries, but I have had back pain occasionally over the years. This seems to be the first time it's been this bad and lasted this long.",
+      "section": "subjective",
+      "candidate": "This seems to be the first time it's been this bad and lasted this long."
+    },
+    {
+      "statement": "The patient reports that symptoms began approximately four days ago while working in the yard and bending over to pick something up.",
+      "evidence": "Patient: I'm 43 years old, male, and I'm here because of back pain. It started about four days ago when I was working in the yard and bent over to pick something up. The pain is in my lower back and goes down my left leg, and it hasn't been getting any better.",
+      "section": "subjective",
+      "candidate": "It started about four days ago when I was working in the yard and bent over to pick something up."
+    },
+    {
+      "statement": "The patient's vital signs were normal when checked.",
+      "evidence": "Patient: I don't have any recent physical examination results because I haven't had one since my last visit. The doctor mentioned during the exam that my neurological exam was normal, and I didn't have any changes in reflexes, muscle strength, or sensation in my left leg. My vital signs were also okay when he checked them.",
+      "section": "objective",
+      "candidate": "My vital signs were also okay when he checked them."
+    },
+    {
+      "statement": "The patient reports managing their symptoms with ibuprofen, which provided some relief.",
+      "evidence": "Patient: No, I haven't had any imaging studies or blood tests for this specific issue yet. I've been managing it with ibuprofen, which helped a little, but nothing else so far.",
+      "section": "subjective",
+      "candidate": "I've been managing it with ibuprofen, which helped a little, but nothing else so far."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "This seems to be the first time it's been this bad and lasted this long.",
+      "speaker": "Patient",
+      "coverage": 0.1475,
+      "nearest_so_sentence": "Pain is described as a 6-7/10 intensity and is exacerbated by bending or sitting",
+      "statement": "The patient reports that this is the first time the back pain has been this severe and has lasted this long.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: No, I haven't had any back surgeries, but I have had back pain occasionally over the years. This seems to be the first time it's been this bad and lasted this long.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0121
+      },
+      "duplicate_entailment": 0.0017,
+      "duplicate_similarity": 0.6608,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 18.62,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "Everything has been normal in that regard.",
+      "speaker": "Patient",
+      "coverage": 0.2108,
+      "nearest_so_sentence": "Patient has not undergone any imaging studies or blood tests for this specific issue",
+      "statement": "The patient reports that everything has been normal in terms of bowel or bladder function.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: No, I haven't experienced any bowel or bladder dysfunction since the pain started. Everything has been normal in that regard.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9991,
+        "contradiction": 0.9987
+      }
+    },
+    {
+      "candidate": "It started about four days ago when I was working in the yard and bent over to pick something up.",
+      "speaker": "Patient",
+      "coverage": 0.2161,
+      "nearest_so_sentence": "Pain is described as a 6-7/10 intensity and is exacerbated by bending or sitting",
+      "statement": "The patient reports that symptoms began approximately four days ago while working in the yard and bending over to pick something up.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I'm 43 years old, male, and I'm here because of back pain. It started about four days ago when I was working in the yard and bent over to pick something up. The pain is in my lower back and goes down my left leg, and it hasn't been getting any better.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0018
+      },
+      "duplicate_entailment": 0.0222,
+      "duplicate_similarity": 0.4656,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 2,
+        "perplexity": 19.07,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "It doesn't really happen when I'm walking or standing straight.",
+      "speaker": "Patient",
+      "coverage": 0.2902,
+      "nearest_so_sentence": "Patient reports tingling in his left leg, especially around the calf and back of the knee, which is worsened by bending or sitting",
+      "statement": "The patient reports that the tingling in their left leg does not typically occur when they are walking or standing straight.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The tingling is mostly in my left leg, especially around the calf and the back of my knee, and it happens when I bend over or sit for a while. It doesn't really happen when I'm walking or standing straight. I haven't noticed any changes in muscle strength or difficulty with coordination in my left leg.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.126
+      },
+      "duplicate_entailment": 0.9951,
+      "duplicate_similarity": 0.7607
+    },
+    {
+      "candidate": "It doesn't really happen when I'm walking or standing straight.",
+      "speaker": "Patient",
+      "coverage": 0.2909,
+      "nearest_so_sentence": "Patient reports tingling in his left leg, especially around the calf and back of the knee, which is worsened by bending or sitting",
+      "statement": "The patient reports that the tingling in their left leg does not occur when they are walking or standing straight.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The tingling is mostly in my left leg, especially around the calf and the back of my knee, and it happens when I bend over or sit for a while. It doesn't really happen when I'm walking or standing straight. I haven't noticed any changes in muscle strength or difficulty with coordination in my left leg.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.1035
+      },
+      "duplicate_entailment": 0.9945,
+      "duplicate_similarity": 0.7711
+    },
+    {
+      "candidate": "It doesn't really happen when I'm walking or standing straight.",
+      "speaker": "Patient",
+      "coverage": 0.2912,
+      "nearest_so_sentence": "Patient reports tingling in his left leg, especially around the calf and back of the knee, which is worsened by bending or sitting",
+      "statement": "The patient reports that the tingling in the left leg does not typically occur when walking or standing straight.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The tingling is mostly in my left leg, especially around the calf and the back of my knee, and it happens when I bend over or sit for a while. It doesn't really happen when I'm walking or standing straight. I haven't noticed any changes in muscle strength or difficulty with coordination in my left leg.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.1358
+      },
+      "duplicate_entailment": 0.9945,
+      "duplicate_similarity": 0.7583
+    },
+    {
+      "candidate": "It doesn't really happen when I'm walking or standing straight.",
+      "speaker": "Patient",
+      "coverage": 0.2912,
+      "nearest_so_sentence": "Patient reports tingling in his left leg, especially around the calf and back of the knee, which is worsened by bending or sitting",
+      "statement": "The patient reports that the tingling in their left leg does not typically occur when they are walking or standing straight.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The tingling is mostly in my left leg, especially around the calf and the back of my knee, and it happens when I bend over or sit for a while. It doesn't really happen when I'm walking or standing straight. I haven't noticed any changes in muscle strength or difficulty with coordination in my left leg.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.126
+      },
+      "duplicate_entailment": 0.9951,
+      "duplicate_similarity": 0.7607
+    },
+    {
+      "candidate": "My vital signs were also okay when he checked them.",
+      "speaker": "Patient",
+      "coverage": 0.3379,
+      "nearest_so_sentence": "Patient has not undergone any imaging studies or blood tests for this specific issue",
+      "statement": "The patient's vital signs were normal when checked.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't have any recent physical examination results because I haven't had one since my last visit. The doctor mentioned during the exam that my neurological exam was normal, and I didn't have any changes in reflexes, muscle strength, or sensation in my left leg. My vital signs were also okay when he checked them.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9987,
+        "contradiction": 0.0009
+      },
+      "duplicate_entailment": 0.1087,
+      "duplicate_similarity": 0.5442,
+      "insertion": {
+        "section": "objective",
+        "line_index": 0,
+        "perplexity": null,
+        "removed_placeholder": [
+          "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation"
+        ]
+      }
+    },
+    {
+      "candidate": "No, I haven't noticed any changes in my bowel or bladder function since the back pain started.",
+      "speaker": "Patient",
+      "coverage": 0.3626,
+      "nearest_so_sentence": "Pain is described as a 6-7/10 intensity and is exacerbated by bending or sitting",
+      "statement": "The patient denies any changes in bowel or bladder function since the onset of symptoms.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Have you experienced any bowel or bladder dysfunction, such as difficulty urinating, incontinence, or changes in bowel habits, since the onset of your symptoms?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.033
+      },
+      "duplicate_entailment": 0.9982,
+      "duplicate_similarity": 0.5848
+    },
+    {
+      "candidate": "I've been managing it with ibuprofen, which helped a little, but nothing else so far.",
+      "speaker": "Patient",
+      "coverage": 0.3835,
+      "nearest_so_sentence": "Pain is described as a 6-7/10 intensity and is exacerbated by bending or sitting",
+      "statement": "The patient reports managing their symptoms with ibuprofen, which provided some relief.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: No, I haven't had any imaging studies or blood tests for this specific issue yet. I've been managing it with ibuprofen, which helped a little, but nothing else so far.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0006
+      },
+      "duplicate_entailment": 0.0031,
+      "duplicate_similarity": 0.4234,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 18.71,
+        "removed_placeholder": []
+      }
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 33,
+    "num_covered": 23,
+    "num_flagged": 10,
+    "num_not_checked_cap": 0,
+    "num_added": 4
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "Everything has been normal in that regard.",
+        "statement": "The patient reports that everything has been normal in terms of bowel or bladder function.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9991,
+          "contradiction": 0.9987
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 24.9,
+  "ap_unchanged": true,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 43 years old, male, and I'm here because of back pain. It started about four days ago when I was working in the yard and bent over to pick something up. The pain is in my lower back and goes down my left leg, and it hasn't been getting any better.\nDoctor: Could you describe the intensity of the back pain on a scale from 1 to 10, and have you experienced any numbness, tingling, or weakness in your left leg?\nPatient: The pain is maybe a 6 or 7 on the scale, and I do get some tingling in my left leg, especially when I'm in certain positions, but no real weakness or numbness.\nDoctor: Have you experienced any prior back injuries, surgeries, or episodes of similar pain in the past?\nPatient: No, I haven't had any back surgeries, but I have had back pain occasionally over the years. This seems to be the first time it's been this bad and lasted this long.\nDoctor: Have you experienced any bowel or bladder dysfunction, such as difficulty urinating, incontinence, or changes in bowel habits, since the onset of your symptoms?\nPatient: No, I haven't experienced any bowel or bladder dysfunction since the pain started. Everything has been normal in that regard.\nDoctor: Have you undergone any imaging studies such as an MRI or X-ray of the lumbar spine, or any blood tests to evaluate for inflammation or infection?\nPatient: No, I haven't had any imaging studies or blood tests for this specific issue yet. I've been managing it with ibuprofen, which helped a little, but nothing else so far.\nDoctor: Could you please describe the specific locations of tingling in the left leg and whether it is associated with any particular movements or positions?\nPatient: The tingling is mostly in my left leg, especially around the calf and the back of my knee, and it happens when I bend over or sit for a while. It doesn't really happen when I'm walking or standing straight.\nDoctor: Have you undergone any previous imaging studies for back or leg pain, such as X-rays, MRI, or CT scans?\nPatient: No, I haven't had any previous imaging studies for back or leg pain. This is the first time I've had this kind of pain, and I haven't had any tests done for it yet.\nDoctor: Could you please describe the specific location of the tingling in your left leg and whether it is associated with any particular movements or postures? Additionally, have you noticed any changes in muscle strength or any difficulty with coordination in your left leg?\nPatient: The tingling is mostly in my left leg, especially around the calf and the back of my knee, and it happens when I bend over or sit for a while. It doesn't really happen when I'm walking or standing straight. I haven't noticed any changes in muscle strength or difficulty with coordination in my left leg.\nDoctor: Could you please describe any changes in reflexes in your left leg, such as diminished or exaggerated responses, and have you noticed any difficulty with coordination or muscle weakness in that leg?\nPatient: I haven't noticed any changes in reflexes in my left leg, and I don't have any difficulty with coordination or muscle weakness in that leg. Everything feels pretty normal in terms of how my leg works.\nDoctor: Could you please provide the results of any recent physical examination, including neurological assessment findings such as reflexes, muscle strength, and sensation in the left leg, as well as vital signs?\nPatient: I don't have any recent physical examination results because I haven't had one since my last visit. The doctor mentioned during the exam that my neurological exam was normal, and I didn't have any changes in reflexes, muscle strength, or sensation in my left leg. My vital signs were also okay when he checked them.\nDoctor: Could you please confirm if you have had any imaging studies such as an MRI or X-ray of your lumbar spine, or any blood tests for inflammation or infection recently? If so, could you share the results with me?\nPatient: No, I haven't had any imaging studies like an MRI or X-ray of my lumbar spine, and I haven't had any blood tests for inflammation or infection recently. The doctor hasn't ordered any tests yet, so there are no results to share.\nDoctor: Could you describe the pattern of tingling in your left leg? For example, does it occur in specific areas, and does it worsen with certain activities or positions?\nPatient: The tingling is mostly in my left leg, especially around the calf and the back of my knee, and it happens when I bend over or sit for a while. It doesn't really happen when I'm walking or standing straight.\nDoctor: Could you please describe any changes in your bowel or bladder function since the onset of your symptoms? Additionally, have you experienced any episodes of numbness or weakness in your left leg?\nPatient: No, I haven't noticed any changes in my bowel or bladder function since the back pain started. And I haven't had any episodes of numbness or weakness in my left leg, just some tingling that comes and goes depending on how I'm sitting or moving.\nDoctor: Could you please describe the specific location of the tingling in your left leg and whether it is associated with any particular movements or postures? Additionally, have you experienced any muscle weakness or difficulty with coordination in the left leg?\nPatient: The tingling is mostly in my left leg, especially around the calf and the back of my knee, and it happens when I bend over or sit for a while. It doesn't really happen when I'm walking or standing straight. I haven't had any muscle weakness or difficulty with coordination in my left leg, just some tingling that comes and goes depending on how I'm sitting or moving.\nDoctor: Have you undergone any imaging studies such as an MRI or X-ray of the lumbar spine, and if so, what were the findings?\nPatient: No, I haven't had any imaging studies like an MRI or X-ray of my lumbar spine. The doctor hasn't ordered any tests yet, so there are no findings to share.",
+  "reference_so": {
+    "subjective": "Basic information: 43-year-old male presenting with lower back pain radiating to the left leg, onset four days ago during yard work.\n\nHistory of present illness: Onset four days ago during yard work, pain in lower back radiating to left leg, no improvement. Pain is described as 6 or 7 on a scale, with tingling in the left leg in certain positions, particularly when bending over or sitting for prolonged periods. No weakness or numbness reported, though the patient notes decreased sensation in the calf and posterior knee. No bowel or bladder dysfunction reported.\n\nPast history: No prior back surgeries, but has had occasional back pain over the years. This is the first time it has been this severe and prolonged.",
+    "objective": "Physical examination: Physical examination findings are pending. Neurological assessment including reflexes, muscle strength, and sensation in the left leg should be evaluated. Vital signs are not yet reported.\n\nInvestigations: Auxiliary examination findings are pending. Imaging studies such as MRI or X-ray of the lumbar spine, and blood tests for inflammation or infection have not yet been reported."
+  }
+}

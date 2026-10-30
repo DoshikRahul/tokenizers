@@ -1,0 +1,188 @@
+{
+  "case_id": "D2N049",
+  "split": "dev",
+  "stage1_so": {
+    "subjective": "* Patient is a 52-year-old male who presents with a 3-day history of severe left-sided flank pain, which has been worsening over time.\n* The patient reports blood in his urine this morning and has been experiencing nausea and chills.\n* He has a history of kidney stones, with this potentially being his third episode.\n* The patient is unable to eat or get comfortable due to the pain, which is constant and intense.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* The patient presents with a 3-day history of severe left-sided flank pain. The patient's flank pain has been worsening over time.\n* The patient reports blood in his urine this morning and has been experiencing nausea and chills.\n* He has a history of kidney stones, with this potentially being his third episode.\n* The patient is unable to eat or get comfortable due to the pain, which is constant and intense.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient is experiencing symptoms consistent with a possible kidney stone, including flank pain, hematuria, and nausea.",
+    "plan": "* The patient will undergo further evaluation, including urinalysis and imaging studies, to confirm the diagnosis and determine the best course of treatment.\n* The patient will be provided with pain management options and instructions on how to manage his symptoms until further evaluation is complete."
+  },
+  "stage2_audit": [
+    {
+      "claim": "The patient is a 52-year-old male.",
+      "scores": {
+        "entailment": 0.0028,
+        "neutral": 0.847,
+        "contradiction": 0.1502
+      },
+      "support_evidence": "Patient: I'm 52 years old, and I'm here because I think I have a kidney stone. I've been in a lot of pain on my left side for about three days, and it's been getting worse. I haven't passed it yet, and I'm really struggling with the pain.",
+      "contradiction_evidence": "Patient: I'm 52 years old, and I'm here because I think I have a kidney stone. I've been in a lot of pain on my left side for about three days, and it's been getting worse. I haven't passed it yet, and I'm really struggling with the pain.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "removed_unsupported",
+      "keep": false,
+      "output": "",
+      "reason": "No supporting evidence in the conversation (not asserted to be false).",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 52-year-old male who presents with a 3-day history of severe left-sided flank pain, which has been worsening over time."
+    },
+    {
+      "claim": "The patient presents with a 3-day history of severe left-sided flank pain.",
+      "scores": {
+        "entailment": 0.9956,
+        "neutral": 0.0027,
+        "contradiction": 0.1387
+      },
+      "support_evidence": "Patient: I'm 52 years old, and I'm here because I think I have a kidney stone. I've been in a lot of pain on my left side for about three days, and it's been getting worse. I haven't passed it yet, and I'm really struggling with the pain.",
+      "contradiction_evidence": "Patient: The pain started on my left back and has been traveling lower, but it's still mostly on the left side. I haven't passed the stone yet, and I've had some blood in my urine this morning. I also feel really nauseous and can't eat because of the pain. It's been constant and really intense.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient presents with a 3-day history of severe left-sided flank pain.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 52-year-old male who presents with a 3-day history of severe left-sided flank pain, which has been worsening over time."
+    },
+    {
+      "claim": "The patient's flank pain has been worsening over time.",
+      "scores": {
+        "entailment": 0.9989,
+        "neutral": 0.0008,
+        "contradiction": 0.039
+      },
+      "support_evidence": "Patient: I'm 52 years old, and I'm here because I think I have a kidney stone. I've been in a lot of pain on my left side for about three days, and it's been getting worse. I haven't passed it yet, and I'm really struggling with the pain.",
+      "contradiction_evidence": "Patient: No, I haven't had any urinalysis or imaging studies done for this current episode. I just came in today because the pain has been so bad and I noticed blood in my urine. I'm really hoping we can figure out what's going on and get me some relief.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient's flank pain has been worsening over time.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 52-year-old male who presents with a 3-day history of severe left-sided flank pain, which has been worsening over time."
+    },
+    {
+      "claim": "The patient reports blood in his urine this morning and has been experiencing nausea and chills.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0003,
+        "contradiction": 0.1899
+      },
+      "support_evidence": "Patient: No, I haven't had any urinalysis or imaging studies done for this current episode. I just came in today because the pain has been so bad and I noticed blood in my urine. I'm really hoping we can figure out what's going on and get me some relief.",
+      "contradiction_evidence": "Patient: No, I haven't had any urinalysis or imaging studies done for this current episode. I just came in today because the pain has been so bad and I noticed blood in my urine. I'm really hoping we can figure out what's going on and get me some relief.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient reports blood in his urine this morning and has been experiencing nausea and chills.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The patient reports blood in his urine this morning and has been experiencing nausea and chills.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has a history of kidney stones, with this potentially being his third episode.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.0003
+      },
+      "support_evidence": "Patient: Yes, I've had kidney stones before—this might be my third time. I haven't had one in a while, but I remember the pain being similar each time, and it usually takes about three to four days to pass.",
+      "contradiction_evidence": "Patient: Yes, I've had kidney stones before—this might be my third time. I haven't had one in a while, but I remember the pain being similar each time, and it usually takes about three to four days to pass.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has a history of kidney stones, with this potentially being his third episode.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "He has a history of kidney stones, with this potentially being his third episode.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient is unable to eat or get comfortable due to the pain, which is constant and intense.",
+      "scores": {
+        "entailment": 0.9988,
+        "neutral": 0.0009,
+        "contradiction": 0.0054
+      },
+      "support_evidence": "Patient: The pain started on my left back and has been traveling lower, but it's still mostly on the left side. It's been constant and really intense, and it's starting to go down into my groin, but I wouldn't say it's abdominal pain. It's just so bad I can't get comfortable.",
+      "contradiction_evidence": "Patient: I did notice some blood in my urine this morning, and I've been feeling pretty nauseous. I haven't had a fever, but I've had some chills. It's been really hard to eat or even get comfortable because of the pain.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient is unable to eat or get comfortable due to the pain, which is constant and intense.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "The patient is unable to eat or get comfortable due to the pain, which is constant and intense.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "removed_unsupported": 1,
+      "supported": 5,
+      "exempt": 1
+    },
+    "num_claims": 6,
+    "num_kept": 5,
+    "claim_retention_rate": 0.8333
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "stage": "stage2",
+        "section": "subjective",
+        "claim": "The patient is a 52-year-old male.",
+        "source_sentence": "Patient is a 52-year-old male who presents with a 3-day history of severe left-sided flank pain, which has been worsening over time.",
+        "decision": "removed_unsupported",
+        "scores": {
+          "entailment": 0.0028,
+          "neutral": 0.847,
+          "contradiction": 0.1502
+        },
+        "reason": "No supporting evidence in the conversation (not asserted to be false).",
+        "nearest_evidence": "Patient: I'm 52 years old, and I'm here because I think I have a kidney stone. I've been in a lot of pain on my left side for about three days, and it's been getting worse. I haven't passed it yet, and I'm really struggling with the pain."
+      }
+    ],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": []
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 3.0,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 52 years old, and I'm here because I think I have a kidney stone. I've been in a lot of pain on my left side for about three days, and it's been getting worse. I haven't passed it yet, and I'm really struggling with the pain.\nDoctor: Have you experienced any hematuria, nausea, vomiting, or fever associated with the pain?\nPatient: I did notice some blood in my urine this morning, and I've been feeling pretty nauseous. I haven't had a fever, but I've had some chills. It's been really hard to eat or even get comfortable because of the pain.\nDoctor: Have you experienced any prior episodes of kidney stones or similar symptoms in the past?\nPatient: Yes, I've had kidney stones before—this might be my third time. I haven't had one in a while, but I remember the pain being similar each time, and it usually takes about three to four days to pass.\nDoctor: Have you experienced any fever during this current episode, and if so, what was the highest temperature recorded? Additionally, have you had any prior surgical interventions for kidney stones or related complications?\nPatient: I haven't had a fever, but I did have some chills. I don't remember having any surgery for kidney stones before.\nDoctor: Could you describe the location of the pain, whether it radiates to any other areas, and if you have any other symptoms such as nausea, vomiting, or blood in your urine?\nPatient: The pain started on my left back and has been traveling lower, but it's still mostly on the left side. I haven't passed the stone yet, and I've had some blood in my urine this morning. I also feel really nauseous and can't eat because of the pain. It's been constant and really intense.\nDoctor: Have you had any recent imaging studies or urinalysis performed for this episode?\nPatient: No, I haven't had any recent imaging studies or urinalysis done for this episode. I just came in today because the pain has been so bad and I noticed blood in my urine. I'm really hoping we can figure out what's going on and get me some relief.\nDoctor: Has the patient experienced any fever during this episode, and if so, what was the highest temperature recorded?\nPatient: No, I haven't had a fever during this episode. I did have some chills, though. I'm just really hoping we can get this pain under control. It's been so bad I can't even eat or get comfortable.\nDoctor: Have you undergone any urinalysis or imaging studies, such as a CT scan or ultrasound, for this current episode?\nPatient: No, I haven't had any urinalysis or imaging studies done for this current episode. I just came in today because the pain has been so bad and I noticed blood in my urine. I'm really hoping we can figure out what's going on and get me some relief.\nDoctor: Could you please describe the location and intensity of the pain, and have you experienced any radiation of the pain to other areas, such as the groin or abdomen?\nPatient: The pain started on my left back and has been traveling lower, but it's still mostly on the left side. It's been constant and really intense, and it's starting to go down into my groin, but I wouldn't say it's abdominal pain. It's just so bad I can't get comfortable.\nDoctor: Has the patient undergone any urinalysis or imaging studies for this current episode?\nPatient: No, I haven't had any urinalysis or imaging studies done for this current episode. I just came in today because the pain has been so bad and I noticed blood in my urine. I'm really hoping we can figure out what's going on and get me some relief.\nDoctor: Has the patient had any fever or elevated temperature during this episode?\nPatient: No, I haven't had a fever during this episode. I did have some chills, though. I'm just really hoping we can get this pain under control. It's been so bad I can't even eat or get comfortable.\nDoctor: Has the patient experienced any vomiting or changes in urinary frequency or volume during this episode?\nPatient: No, I haven't vomited, but I do feel nauseous. I haven't noticed any changes in how much I'm urinating, just that I started seeing some blood this morning. It's been really hard to focus on anything else with how bad the pain is.\nDoctor: Have you had any fever or chills associated with this pain?\nPatient: I did have some chills, but no fever. I'm just really hoping we can get this pain under control. It's been so bad I can't even eat or get comfortable.\nDoctor: Have you had any urinalysis or imaging studies for this current episode?\nPatient: No, I haven't had any urinalysis or imaging studies done for this current episode. I just came in today because the pain has been so bad and I noticed blood in my urine. I'm really hoping we can figure out what's going on and get me some relief.\nDoctor: Could you describe the location, intensity, and any radiation of the pain? Have you noticed any changes in the color or frequency of your urine?\nPatient: The pain started on my left back and has been traveling lower, but it's still really intense and constant. I can't get comfortable, and I've noticed blood in my urine this morning. The color of my urine is different now, and I haven't had any changes in how much I'm urinating, just that it's been really painful.",
+  "reference_so": {
+    "subjective": "Basic information: 52-year-old male presenting with left-sided pain for three days, worsening, suspecting kidney stone\n\nHistory of present illness: Onset three days ago with left-sided pain, progressively worsening, no passage of stone yet, significant pain. Patient reported hematuria this morning, nausea, and chills. Pain has been severe and difficult to manage, affecting ability to eat or get comfortable. Patient has a history of similar episodes, with pain typically taking three to four days to pass. Pain started on the left back and has been traveling lower, but it's still mostly on the left side. Patient has not passed the stone yet. Patient has not had a fever, but did have some chills. Patient has not undergone any urinalysis or imaging studies for this current episode.\n\nPast history: Patient has a history of kidney stones, with this being the third episode. No prior surgical interventions for kidney stones reported. No mention of allergies or other significant past medical history.",
+    "objective": "Physical examination: Physical examination findings are pending.\n\nInvestigations: Auxiliary examination results are pending."
+  }
+}

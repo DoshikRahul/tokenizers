@@ -1,0 +1,322 @@
+{
+  "case_id": "D2N016",
+  "split": "dev",
+  "stage1_so": {
+    "subjective": "* Patient is a 59-year-old male who is here for a follow-up on his chronic problems, including depression, high blood pressure, and rotator cuff repair.\n* He reports managing his depression well with counseling and swimming.\n* He takes his antihypertensive medication, Norvasc, daily, but occasionally slips up with his diet.\n* He has been doing exercises at home with a yoga ball for his rotator cuff and feels it is healing well.\n* He has mild ankle swelling at the end of the day, but it resolves by morning.\n* He has not noticed any changes in his mood or energy levels lately.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* The patient is here for a follow-up. The patient has chronic problems. The patient has depression. The patient has high blood pressure. The patient has rotator cuff repair.\n* He reports managing his depression well with counseling and swimming.\n* He takes his antihypertensive medication, Norvasc, daily, but occasionally slips up with his diet.\n* He has been doing exercises at home with a yoga ball for his rotator cuff and feels it is healing well.\n* He has mild ankle swelling at the end of the day, but it resolves by morning.\n* He has not noticed any changes in his mood or energy levels lately.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient's depression is currently well-managed with counseling and swimming.\n* His high blood pressure has been running a little high over the past couple of months, but he has not noticed any symptoms such as headaches, dizziness, or shortness of breath.\n* His rotator cuff is healing well, and he is able to do exercises without any issues.\n* He has mild ankle swelling, but the cause is unknown.",
+    "plan": "* The patient will continue to manage his depression with counseling and swimming.\n* He will continue to take his antihypertensive medication, Norvasc, daily.\n* He will continue to do exercises at home with a yoga ball for his rotator cuff.\n* The patient will follow up with his doctor to discuss further management of his high blood pressure and ankle swelling."
+  },
+  "stage2_audit": [
+    {
+      "claim": "The patient is a 59-year-old male.",
+      "scores": {
+        "entailment": 0.0034,
+        "neutral": 0.9051,
+        "contradiction": 0.0916
+      },
+      "support_evidence": "Patient: I'm 59 years old, and I'm here for a follow-up on my chronic problems—depression, high blood pressure, and my rotator cuff repair. I've been doing okay overall, but I wanted to check in and make sure everything's still on track.",
+      "contradiction_evidence": "Patient: I'm 59 years old, and I'm here for a follow-up on my chronic problems—depression, high blood pressure, and my rotator cuff repair. I've been doing okay overall, but I wanted to check in and make sure everything's still on track.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "removed_unsupported",
+      "keep": false,
+      "output": "",
+      "reason": "No supporting evidence in the conversation (not asserted to be false).",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 59-year-old male who is here for a follow-up on his chronic problems, including depression, high blood pressure, and rotator cuff repair."
+    },
+    {
+      "claim": "The patient is here for a follow-up.",
+      "scores": {
+        "entailment": 0.9998,
+        "neutral": 0.0001,
+        "contradiction": 0.0083
+      },
+      "support_evidence": "Patient: I'm 59 years old, and I'm here for a follow-up on my chronic problems—depression, high blood pressure, and my rotator cuff repair. I've been doing okay overall, but I wanted to check in and make sure everything's still on track.",
+      "contradiction_evidence": "Patient: I don't have my most recent blood pressure readings with me, but I do go to CVS once a week to check it, and my doctor mentioned today that it's been running a little high over the past couple of months. As for lab results, I don't have them on me, but my doctor looked at them and said everything looks good, especially my kidney function and my EKG.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient is here for a follow-up.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 59-year-old male who is here for a follow-up on his chronic problems, including depression, high blood pressure, and rotator cuff repair."
+    },
+    {
+      "claim": "The patient has chronic problems.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0001,
+        "contradiction": 0.0019
+      },
+      "support_evidence": "Patient: I'm 59 years old, and I'm here for a follow-up on my chronic problems—depression, high blood pressure, and my rotator cuff repair. I've been doing okay overall, but I wanted to check in and make sure everything's still on track.",
+      "contradiction_evidence": "Patient: I don't have any recent lab results or imaging with me, but my doctor mentioned today that my blood pressure has been running a little high over the past couple of months. I don't know if there are any other tests I need to get—my doctor seems to be handling that. I feel okay otherwise.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has chronic problems.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 59-year-old male who is here for a follow-up on his chronic problems, including depression, high blood pressure, and rotator cuff repair."
+    },
+    {
+      "claim": "The patient has depression.",
+      "scores": {
+        "entailment": 0.9998,
+        "neutral": 0.0001,
+        "contradiction": 0.0042
+      },
+      "support_evidence": "Patient: I don't have my most recent blood pressure readings with me, but I do go to CVS once a week to check it, and my doctor mentioned today that it's been running a little high over the past couple of months. As for my depression, I feel like I'm managing it well with counseling and swimming, and my rotator cuff is doing fine—I can do my exercises without any issues. I don't have any other concerns right now.",
+      "contradiction_evidence": "Patient: I don't have any recent lab results or imaging with me, but my doctor mentioned today that my blood pressure has been running a little high over the past couple of months. I don't know if there are any other tests I need to get—my doctor seems to be handling that. I feel okay otherwise.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has depression.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 59-year-old male who is here for a follow-up on his chronic problems, including depression, high blood pressure, and rotator cuff repair."
+    },
+    {
+      "claim": "The patient has high blood pressure.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0002,
+        "contradiction": 0.002
+      },
+      "support_evidence": "Doctor: Thank you for the update. Since your blood pressure has been running a little high over the past couple of months, have you noticed any symptoms such as headaches, dizziness, or shortness of breath that might be related to this?",
+      "contradiction_evidence": "Patient: I don't have my most recent blood pressure readings with me, but I do go to CVS once a week to check it, and my doctor mentioned today that it's been running a little high over the past couple of months. As for lab results, I don't have them on me, but my doctor looked at them and said everything looks good, especially my kidney function and my EKG.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has high blood pressure.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 59-year-old male who is here for a follow-up on his chronic problems, including depression, high blood pressure, and rotator cuff repair."
+    },
+    {
+      "claim": "The patient has rotator cuff repair.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0001,
+        "contradiction": 0.0072
+      },
+      "support_evidence": "Patient: Sure. For my depression, I've been seeing a counselor once a week, and I've been swimming a lot this summer and fall, so I feel like I'm managing it pretty well. As for my high blood pressure, I take my medication daily, but I do slip up now and then with burgers and wine, which I know isn't helping. And my rotator cuff? I've been doing exercises at home with a yoga ball, and I'm getting stronger each time. It's been about eight months since the surgery, and I feel like it's doing well.",
+      "contradiction_evidence": "Patient: I don't have my most recent blood pressure readings with me, but I do go to CVS once a week to check it, and my doctor mentioned today that it's been running a little high over the past couple of months. As for my depression, I feel like I'm managing it well with counseling and swimming, and my rotator cuff is doing fine—I can do my exercises without any issues. I don't have any other concerns right now.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has rotator cuff repair.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 59-year-old male who is here for a follow-up on his chronic problems, including depression, high blood pressure, and rotator cuff repair."
+    },
+    {
+      "claim": "He reports managing his depression well with counseling and swimming.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0001,
+        "contradiction": 0.002
+      },
+      "support_evidence": "Patient: Sure. For my depression, I've been seeing a counselor once a week, and I've been swimming a lot this summer and fall, so I feel like I'm managing it pretty well. As for my high blood pressure, I take my medication daily, but I do slip up now and then with burgers and wine, which I know isn't helping. And my rotator cuff? I've been doing exercises at home with a yoga ball, and I'm getting stronger each time. It's been about eight months since the surgery, and I feel like it's doing well.",
+      "contradiction_evidence": "Patient: I don't have any recent lab results or imaging with me, but my doctor mentioned today that my blood pressure has been running a little high over the past couple of months. I don't know if there are any other tests I need to get—my doctor seems to be handling that. I feel okay otherwise.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He reports managing his depression well with counseling and swimming.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "He reports managing his depression well with counseling and swimming.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient takes Norvasc daily.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0003,
+        "contradiction": 0.0016
+      },
+      "support_evidence": "Patient: I'm currently taking Norvasc, and I think it's 5 mg a day. I don't remember the exact dosage, but I take it every day as prescribed. I haven't had any side effects from it, and I don't notice anything unusual when I take it.",
+      "contradiction_evidence": "Patient: I don't have my most recent blood pressure readings with me, but I do go to CVS once a week to check it, and my doctor mentioned today that it's been running a little high over the past couple of months. As for my depression, I feel like I'm managing it well with counseling and swimming, and my rotator cuff is doing fine—I can do my exercises without any issues. I don't have any other concerns right now.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient takes Norvasc daily.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "He takes his antihypertensive medication, Norvasc, daily, but occasionally slips up with his diet."
+    },
+    {
+      "claim": "The patient takes his antihypertensive medication daily.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0003,
+        "contradiction": 0.0008
+      },
+      "support_evidence": "Doctor: Could you provide more details about your current antihypertensive medication regimen, including the names, dosages, and frequency of use? Additionally, have you experienced any side effects from these medications?",
+      "contradiction_evidence": "Patient: Sure. For my depression, I've been seeing a counselor once a week, and I've been swimming a lot this summer and fall, so I feel like I'm managing it pretty well. As for my high blood pressure, I take my medication daily, but I do slip up now and then with burgers and wine, which I know isn't helping. And my rotator cuff? I've been doing exercises at home with a yoga ball, and I'm getting stronger each time. It's been about eight months since the surgery, and I feel like it's doing well.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient takes his antihypertensive medication daily.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "He takes his antihypertensive medication, Norvasc, daily, but occasionally slips up with his diet."
+    },
+    {
+      "claim": "The patient occasionally slips up with his diet.",
+      "scores": {
+        "entailment": 0.9992,
+        "neutral": 0.0006,
+        "contradiction": 0.0004
+      },
+      "support_evidence": "Patient: Sure. For my depression, I've been seeing a counselor once a week, and I've been swimming a lot this summer and fall, so I feel like I'm managing it pretty well. As for my high blood pressure, I take my medication daily, but I do slip up now and then with burgers and wine, which I know isn't helping. And my rotator cuff? I've been doing exercises at home with a yoga ball, and I'm getting stronger each time. It's been about eight months since the surgery, and I feel like it's doing well.",
+      "contradiction_evidence": "Patient: I don't have my most recent blood pressure readings with me, but I do go to CVS once a week to check it, and my doctor mentioned today that it's been running a little high over the past couple of months. As for lab results, I don't have them on me, but my doctor looked at them and said everything looks good, especially my kidney function and my EKG.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient occasionally slips up with his diet.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "He takes his antihypertensive medication, Norvasc, daily, but occasionally slips up with his diet."
+    },
+    {
+      "claim": "He has been doing exercises at home with a yoga ball for his rotator cuff and feels it is healing well.",
+      "scores": {
+        "entailment": 0.9991,
+        "neutral": 0.0006,
+        "contradiction": 0.0637
+      },
+      "support_evidence": "Patient: Sure. For my depression, I've been seeing a counselor once a week, and I've been swimming a lot this summer and fall, so I feel like I'm managing it pretty well. As for my high blood pressure, I take my medication daily, but I do slip up now and then with burgers and wine, which I know isn't helping. And my rotator cuff? I've been doing exercises at home with a yoga ball, and I'm getting stronger each time. It's been about eight months since the surgery, and I feel like it's doing well.",
+      "contradiction_evidence": "Patient: I don't have any recent blood tests with me, but my doctor mentioned today that my blood pressure has been running a little high over the past couple of months. I don't know if there are any other tests I need to get—my doctor seems to be handling that. I feel okay otherwise.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has been doing exercises at home with a yoga ball for his rotator cuff and feels it is healing well.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "He has been doing exercises at home with a yoga ball for his rotator cuff and feels it is healing well.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has mild ankle swelling at the end of the day, but it resolves by morning.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0005,
+        "contradiction": 0.0741
+      },
+      "support_evidence": "Patient: No, I haven't noticed any headaches, dizziness, or shortness of breath. I feel pretty okay overall, just some mild swelling in my ankles at the end of the day, but that goes away by morning. I don't feel like my high blood pressure is causing any other issues right now.",
+      "contradiction_evidence": "Doctor: Are there any recent lab results, such as serum creatinine, electrolytes, or a urinalysis, that have been obtained to evaluate the cause of the mild ankle swelling and assess kidney function?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has mild ankle swelling at the end of the day, but it resolves by morning.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "He has mild ankle swelling at the end of the day, but it resolves by morning.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has not noticed any changes in his mood or energy levels lately.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0004,
+        "contradiction": 0.0161
+      },
+      "support_evidence": "Doctor: Could you share your most recent blood pressure readings, if available? Also, have you noticed any changes in your mood or energy levels since your last visit?",
+      "contradiction_evidence": "Patient: I haven't noticed any changes in my mood or energy levels lately—things have been pretty stable. As for my rotator cuff, I don't have any pain or stiffness anymore, and I can do the exercises without any issues. I feel like it's really healing well.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has not noticed any changes in his mood or energy levels lately.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "He has not noticed any changes in his mood or energy levels lately.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "removed_unsupported": 1,
+      "supported": 12,
+      "exempt": 1
+    },
+    "num_claims": 13,
+    "num_kept": 12,
+    "claim_retention_rate": 0.9231
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "stage": "stage2",
+        "section": "subjective",
+        "claim": "The patient is a 59-year-old male.",
+        "source_sentence": "Patient is a 59-year-old male who is here for a follow-up on his chronic problems, including depression, high blood pressure, and rotator cuff repair.",
+        "decision": "removed_unsupported",
+        "scores": {
+          "entailment": 0.0034,
+          "neutral": 0.9051,
+          "contradiction": 0.0916
+        },
+        "reason": "No supporting evidence in the conversation (not asserted to be false).",
+        "nearest_evidence": "Patient: I'm 59 years old, and I'm here for a follow-up on my chronic problems—depression, high blood pressure, and my rotator cuff repair. I've been doing okay overall, but I wanted to check in and make sure everything's still on track."
+      }
+    ],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": []
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 41.4,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 59 years old, and I'm here for a follow-up on my chronic problems—depression, high blood pressure, and my rotator cuff repair. I've been doing okay overall, but I wanted to check in and make sure everything's still on track.\nDoctor: Thank you for sharing that. Could you please tell me more about your current symptoms or any specific concerns you have regarding your depression, high blood pressure, or rotator cuff repair?\nPatient: Sure. For my depression, I've been seeing a counselor once a week, and I've been swimming a lot this summer and fall, so I feel like I'm managing it pretty well. As for my high blood pressure, I take my medication daily, but I do slip up now and then with burgers and wine, which I know isn't helping. And my rotator cuff? I've been doing exercises at home with a yoga ball, and I'm getting stronger each time. It's been about eight months since the surgery, and I feel like it's doing well.\nDoctor: Could you provide more details about any recent changes in your depression symptoms, such as mood swings, sleep patterns, or energy levels? Additionally, have you experienced any new or worsening symptoms related to your rotator cuff, such as pain, stiffness, or difficulty with overhead movements?\nPatient: I haven't noticed any changes in my mood or energy levels lately—things have been pretty stable. As for my rotator cuff, I don't have any pain or stiffness anymore, and I can do the exercises without any issues. I feel like it's really healing well.\nDoctor: Could you provide your most recent blood pressure readings and any laboratory results related to hypertension management?\nPatient: I don't have my most recent blood pressure readings with me, but I do go to CVS once a week to check it, and my doctor mentioned today that it's been running a little high over the past couple of months. As for lab results, I don't have them on me, but my doctor looked at them and said everything looks good, especially my kidney function and my EKG.\nDoctor: Could you provide your most recent blood pressure readings from CVS and any additional concerns you may have about your depression, hypertension, or rotator cuff recovery?\nPatient: I don't have my most recent blood pressure readings with me, but I do go to CVS once a week to check it, and my doctor mentioned today that it's been running a little high over the past couple of months. As for my depression, I feel like I'm managing it well with counseling and swimming, and my rotator cuff is doing fine—I can do my exercises without any issues. I don't have any other concerns right now.\nDoctor: Could you provide your most recent blood pressure readings from CVS and confirm if there are any other concerns or symptoms related to your depression, hypertension, or rotator cuff recovery?\nPatient: I don't have my most recent blood pressure readings with me, but I do go to CVS once a week to check it, and my doctor mentioned today that it's been running a little high over the past couple of months. As for my depression, I feel like I'm managing it well with counseling and swimming, and my rotator cuff is doing fine—I can do my exercises without any issues. I don't have any other concerns right now.\nDoctor: Could you provide your most recent blood pressure readings from CVS and confirm if there are any other concerns or symptoms related to your depression, hypertension, or rotator cuff recovery?\nPatient: I don't have my most recent blood pressure readings with me, but I do go to CVS once a week to check it, and my doctor mentioned today that it's been running a little high over the past couple of months. As for my depression, I feel like I'm managing it well with counseling and swimming, and my rotator cuff is doing fine—I can do my exercises without any issues. I don't have any other concerns right now.\nDoctor: Thank you for the update. Since your blood pressure has been running a little high over the past couple of months, have you noticed any symptoms such as headaches, dizziness, or shortness of breath that might be related to this?\nPatient: No, I haven't noticed any headaches, dizziness, or shortness of breath. I feel pretty okay overall, just some mild swelling in my ankles at the end of the day, but that goes away by morning. I don't feel like my high blood pressure is causing any other issues right now.\nDoctor: Could you share your most recent blood pressure readings, if available? Also, have you noticed any changes in your mood or energy levels since your last visit?\nPatient: I don't have my most recent blood pressure readings with me, but I go to CVS once a week to check it, and my doctor mentioned today that it's been running a little high over the past couple of months. As for my mood and energy levels, I feel pretty good overall—no big changes since my last visit. I'm still swimming and seeing my counselor, so I think I'm managing well.\nDoctor: Could you please provide any recent lab results or imaging related to your hypertension or rotator cuff recovery? If not, is there any reason you are unable to provide them?\nPatient: I don't have any recent lab results or imaging with me, but my doctor mentioned today that my blood pressure has been running a little high over the past couple of months. I don't know if there are any other tests I need to get—my doctor seems to be handling that. I feel okay otherwise.\nDoctor: Are there any recent lab results, such as serum creatinine, electrolytes, or a urinalysis, that have been obtained to evaluate the cause of the mild ankle swelling and assess kidney function?\nPatient: I don't have any recent lab results with me, but my doctor mentioned today that my blood pressure has been running a little high over the past couple of months. I don't know if there are any other tests I need to get—my doctor seems to be handling that. I feel okay otherwise.\nDoctor: Could you provide more details about your current antihypertensive medication regimen, including the names, dosages, and frequency of use? Additionally, have you experienced any side effects from these medications?\nPatient: I'm currently taking Norvasc, and I think it's 5 mg a day. I don't remember the exact dosage, but I take it every day as prescribed. I haven't had any side effects from it, and I don't notice anything unusual when I take it.\nDoctor: Could you please confirm if you have had any recent blood tests, such as serum creatinine, electrolytes, or urinalysis, to check your kidney function and assess the cause of the mild ankle swelling?\nPatient: I don't have any recent blood tests with me, but my doctor mentioned today that my blood pressure has been running a little high over the past couple of months. I don't know if there are any other tests I need to get—my doctor seems to be handling that. I feel okay otherwise.\nDoctor: Have you had any recent blood tests, such as serum creatinine, electrolytes, or urinalysis, to assess kidney function?\nPatient: I don't have any recent blood tests with me, but my doctor mentioned today that my blood pressure has been running a little high over the past couple of months. I don't know if there are any other tests I need to get—my doctor seems to be handling that. I feel okay otherwise.\nDoctor: Has the patient had any recent serum creatinine, electrolyte, or urinalysis tests to assess kidney function and evaluate the cause of the mild ankle swelling?\nPatient: I don't have any recent blood tests with me, but my doctor mentioned today that my blood pressure has been running a little high over the past couple of months. I don't know if there are any other tests I need to get—my doctor seems to be handling that. I feel okay otherwise.",
+  "reference_so": {
+    "subjective": "Basic information: 59-year-old male here for follow-up on chronic problems—depression, high blood pressure, and rotator cuff repair. Patient reports doing okay overall but wants to check in and ensure everything is on track.\n\nHistory of present illness: Patient is undergoing follow-up for depression, hypertension, and rotator cuff repair. He reports managing depression with counseling and swimming, adhering to hypertension medication with occasional lapses in diet, and performing home exercises for rotator cuff recovery. He feels overall improvement but wants to ensure everything is on track. He mentions that his blood pressure has been running a little high over the past couple of months and reports mild ankle swelling that resolves by morning. He does not report any new or worsening symptoms such as headaches, dizziness, or shortness of breath.\n\nPast history: Depression, hypertension, and rotator cuff repair surgery. No other significant past medical history reported.",
+    "objective": "Physical examination: Vital signs: BP 132/84 mmHg, HR 72 bpm, RR 16, Temp 36.8°C. Mental status: Alert and oriented. No signs of depression. No acute distress. Musculoskeletal: Full range of motion and strength in the right shoulder, no pain or stiffness. No deformity or swelling. Neurovascular: Intact. Cardiovascular: No murmurs or gallops. Respiratory: Clear to auscultation. Abdomen: Soft, non-tender. Skin: No rashes or lesions.\n\nInvestigations: Recent blood pressure readings: 132/84 mmHg. No recent lab results or imaging provided. Current antihypertensive regimen: Norvasc 5 mg daily. Adherence: Good. No side effects reported. No recent serum creatinine, electrolytes, or urinalysis tests reported. Patient states that their doctor is handling further testing related to elevated blood pressure and ankle swelling."
+  }
+}

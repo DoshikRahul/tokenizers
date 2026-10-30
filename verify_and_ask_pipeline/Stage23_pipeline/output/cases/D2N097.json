@@ -1,0 +1,261 @@
+{
+  "case_id": "D2N097",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient is a 66-year-old female who is here for her annual exam\n* Patient's main concerns are ensuring her blood pressure is under control and checking in on her depression\n* Patient reports feeling good overall, with stable mood and no recent changes in sleep or energy levels\n* Patient is not currently taking medication for depression, but is attending therapy sessions once a week\n* Patient has been using a blood pressure cuff once a day and has not noticed any changes in her hypertension management or treatment plan",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation"
+  },
+  "stage2_so": {
+    "subjective": "* Patient is a 66-year-old female who is here for her annual exam\n* Patient's main concerns are ensuring her blood pressure is under control and checking in on her depression\n* Patient reports feeling good overall, with stable mood and no recent changes in sleep or energy levels\n* Patient is not currently taking medication for depression, but is attending therapy sessions once a week\n* Patient has been using a blood pressure cuff once a day and has not noticed any changes in her hypertension management or treatment plan",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation"
+  },
+  "stage3_so": {
+    "subjective": "* The patient reports being on lisinopril, which was prescribed.\n* The patient reports no allergies and a past medical history significant for depression and hypertension.\n* Patient is a 66-year-old female who is here for her annual exam\n* Patient's main concerns are ensuring her blood pressure is under control and checking in on her depression\n* Patient reports feeling good overall, with stable mood and no recent changes in sleep or energy levels\n* Patient is not currently taking medication for depression, but is attending therapy sessions once a week\n* Patient has been using a blood pressure cuff once a day and has not noticed any changes in her hypertension management or treatment plan\n* The patient reports that being in person helps them more.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation"
+  },
+  "stage1_ap": {
+    "assessment": "* Patient has a history of depression and hypertension, which is currently well-managed with therapy and medication\n* Patient's blood pressure is reportedly under control, with no recent changes in management or treatment plan",
+    "plan": "* Patient will continue to attend therapy sessions once a week, with a focus on in-person sessions\n* Patient will continue to use a blood pressure cuff once a day to monitor her blood pressure\n* No explicit management or follow-up plan was documented in the conversation"
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient is a 66-year-old female who is here for her annual exam",
+      "scores": {
+        "entailment": 0.9992,
+        "neutral": 0.0003,
+        "contradiction": 0.0022
+      },
+      "support_evidence": "Patient: I'm 66 years old, and I'm here for my annual exam. I've been doing well overall, but I wanted to check in on my blood pressure and make sure everything is still under control.",
+      "contradiction_evidence": "Patient: I'm not on any medication for depression, but I've been going to therapy once a week, mostly virtually, though I'm starting to do some in-person sessions now. I feel like being in person helps me more. My mood has been pretty stable, and I haven't had any big changes in sleep or energy levels lately. I've been feeling good overall.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient is a 66-year-old female who is here for her annual exam",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 66-year-old female who is here for her annual exam",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient's main concerns are ensuring her blood pressure is under control and checking in on her depression",
+      "scores": {
+        "entailment": 0.9982,
+        "neutral": 0.0003,
+        "contradiction": 0.0025
+      },
+      "support_evidence": "Patient: I'm a female, and my main concerns are just making sure my blood pressure is still under control and that everything else is okay. I've been feeling good, but I do want to check in on my depression as well.",
+      "contradiction_evidence": "Patient: I've been using the blood pressure cuff once a day, and my readings have been pretty normal. There haven't been any changes in my hypertension management or treatment plan recently. I'm still on the lisinopril that was prescribed.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient's main concerns are ensuring her blood pressure is under control and checking in on her depression",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "Patient's main concerns are ensuring her blood pressure is under control and checking in on her depression",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient reports feeling good overall, with stable mood and no recent changes in sleep or energy levels",
+      "scores": {
+        "entailment": 0.9772,
+        "neutral": 0.0005,
+        "contradiction": 0.9882
+      },
+      "support_evidence": "Patient: I'm not on any medication for depression, but I've been going to therapy once a week, mostly virtually, though I'm starting to do some in-person sessions now. I feel like being in person helps me more. My mood has been pretty stable, and I haven't had any big changes in sleep or energy levels lately. I've been feeling good overall.",
+      "contradiction_evidence": "Doctor: Could you please provide details about your current medications for hypertension and depression, including dosages and any recent changes? Additionally, could you describe any recent symptoms related to your depression, such as changes in mood, sleep, or energy levels?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient reports feeling good overall, with stable mood and no recent changes in sleep or energy levels",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Patient reports feeling good overall, with stable mood and no recent changes in sleep or energy levels",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient is not currently taking medication for depression, but is attending therapy sessions once a week",
+      "scores": {
+        "entailment": 0.9982,
+        "neutral": 0.0002,
+        "contradiction": 0.9972
+      },
+      "support_evidence": "Patient: I'm not on any medication for depression, but I've been going to therapy once a week, mostly virtually, though I'm starting to do some in-person sessions now. I feel like being in person helps me more. My mood has been pretty stable, and I haven't had any big changes in sleep or energy levels lately. I've been feeling good overall.",
+      "contradiction_evidence": "Patient: I'm a female, and my main concerns are just making sure my blood pressure is still under control and that everything else is okay. I've been feeling good, but I do want to check in on my depression as well.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient is not currently taking medication for depression, but is attending therapy sessions once a week",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Patient is not currently taking medication for depression, but is attending therapy sessions once a week",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient has been using a blood pressure cuff once a day and has not noticed any changes in her hypertension management or treatment plan",
+      "scores": {
+        "entailment": 0.9952,
+        "neutral": 0.0007,
+        "contradiction": 0.1256
+      },
+      "support_evidence": "Patient: I've been using the blood pressure cuff once a day, and my readings have been pretty normal. There haven't been any changes in my hypertension management or treatment plan recently. I'm still on the lisinopril that was prescribed.",
+      "contradiction_evidence": "Patient: I've been using the blood pressure cuff once a day, and my readings have been pretty normal. There haven't been any changes in my hypertension management or treatment plan recently. I'm still on the lisinopril that was prescribed.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient has been using a blood pressure cuff once a day and has not noticed any changes in her hypertension management or treatment plan",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Patient has been using a blood pressure cuff once a day and has not noticed any changes in her hypertension management or treatment plan",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 5,
+      "exempt": 1
+    },
+    "num_claims": 5,
+    "num_kept": 5,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient reports that being in person helps them more.",
+      "evidence": "Patient: I'm not on any medication for depression, but I've been going to therapy once a week, mostly virtually, though I'm starting to do some in-person sessions now. I feel like being in person helps me more. My mood has been pretty stable, and I haven't had any big changes in sleep or energy levels lately. I've been feeling good overall.",
+      "section": "subjective",
+      "candidate": "I feel like being in person helps me more."
+    },
+    {
+      "statement": "The patient reports being on lisinopril, which was prescribed.",
+      "evidence": "Patient: I've been using the blood pressure cuff once a day, and my readings have been pretty normal. There haven't been any changes in my hypertension management or treatment plan recently. I'm still on the lisinopril that was prescribed.",
+      "section": "subjective",
+      "candidate": "I'm still on the lisinopril that was prescribed."
+    },
+    {
+      "statement": "The patient reports no allergies and a past medical history significant for depression and hypertension.",
+      "evidence": "Patient: I don't have any allergies, and my past medical history includes depression and hypertension. I've been managing both with therapy and medication, and I've been doing well overall.",
+      "section": "subjective",
+      "candidate": "I don't have any allergies, and my past medical history includes depression and hypertension."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I feel like being in person helps me more.",
+      "speaker": "Patient",
+      "coverage": 0.1766,
+      "nearest_so_sentence": "Patient reports feeling good overall, with stable mood and no recent changes in sleep or energy levels",
+      "statement": "The patient reports that being in person helps them more.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I'm not on any medication for depression, but I've been going to therapy once a week, mostly virtually, though I'm starting to do some in-person sessions now. I feel like being in person helps me more. My mood has been pretty stable, and I haven't had any big changes in sleep or energy levels lately. I've been feeling good overall.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0005
+      },
+      "duplicate_entailment": 0.0003,
+      "duplicate_similarity": 0.5065,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 5,
+        "perplexity": 25.77,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I'm still on the lisinopril that was prescribed.",
+      "speaker": "Patient",
+      "coverage": 0.2838,
+      "nearest_so_sentence": "Patient reports feeling good overall, with stable mood and no recent changes in sleep or energy levels",
+      "statement": "The patient reports being on lisinopril, which was prescribed.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I've been using the blood pressure cuff once a day, and my readings have been pretty normal. There haven't been any changes in my hypertension management or treatment plan recently. I'm still on the lisinopril that was prescribed.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9998,
+        "contradiction": 0.0007
+      },
+      "duplicate_entailment": 0.006,
+      "duplicate_similarity": 0.3468,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 25.44,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don't have any allergies, and my past medical history includes depression and hypertension.",
+      "speaker": "Patient",
+      "coverage": 0.3341,
+      "nearest_so_sentence": "Patient's main concerns are ensuring her blood pressure is under control and checking in on her depression",
+      "statement": "The patient reports no allergies and a past medical history significant for depression and hypertension.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't have any allergies, and my past medical history includes depression and hypertension. I've been managing both with therapy and medication, and I've been doing well overall.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9991,
+        "contradiction": 0.0013
+      },
+      "duplicate_entailment": 0.0087,
+      "duplicate_similarity": 0.454,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 1,
+        "perplexity": 25.39,
+        "removed_placeholder": []
+      }
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 16,
+    "num_covered": 13,
+    "num_flagged": 3,
+    "num_not_checked_cap": 0,
+    "num_added": 3
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": []
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 12.6,
+  "ap_unchanged": true,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 66 years old, and I'm here for my annual exam. I've been doing well overall, but I wanted to check in on my blood pressure and make sure everything is still under control.\nDoctor: Could you please confirm your gender and any specific concerns or symptoms you'd like to discuss during your annual exam?\nPatient: I'm a female, and my main concerns are just making sure my blood pressure is still under control and that everything else is okay. I've been feeling good, but I do want to check in on my depression as well.\nDoctor: Could you please provide details about your past medical history, including any previous illnesses, surgeries, or allergies?\nPatient: I don't have any allergies, and my past medical history includes depression and hypertension. I've been managing both with therapy and medication, and I've been doing well overall.\nDoctor: Could you please provide details about your current medications for hypertension and depression, including dosages and any recent changes? Additionally, could you describe any recent symptoms related to your depression, such as changes in mood, sleep, or energy levels?\nPatient: I'm not on any medication for depression, but I've been going to therapy once a week, mostly virtually, though I'm starting to do some in-person sessions now. I feel like being in person helps me more. My mood has been pretty stable, and I haven't had any big changes in sleep or energy levels lately. I've been feeling good overall.\nDoctor: Could you share your current blood pressure readings and how frequently you monitor it? Additionally, have there been any recent changes in your hypertension management or treatment plan?\nPatient: I've been using the blood pressure cuff once a day, and my readings have been pretty normal. There haven't been any changes in my hypertension management or treatment plan recently. I'm still on the lisinopril that was prescribed.\nDoctor: Thank you for the update. Could you please tell me if you've noticed any changes in your mood or energy levels over the past few weeks, or if there are any specific concerns you have about your depression management?\nPatient: No, I haven't noticed any changes in my mood or energy levels over the past few weeks. I feel pretty stable, and I'm really glad that I've been able to get back to in-person therapy because it's been helping me a lot. I don't have any specific concerns about my depression management right now.",
+  "reference_so": {
+    "subjective": "Basic information: 66-year-old female here for annual exam; no current symptoms reported, but wants to check blood pressure and ensure everything is under control. Also concerned about depression.\n\nHistory of present illness: No current symptoms reported. Patient is undergoing regular monitoring for hypertension and depression, with stable mood and no recent changes in sleep or energy levels. Patient uses a blood pressure cuff once daily and reports normal readings. No recent changes in hypertension management or treatment plan.\n\nPast history: Previous illnesses include depression and hypertension; managed with therapy and medication. No allergies. Patient is currently undergoing weekly in-person and virtual therapy sessions for depression and is not on any antidepressant medication.",
+    "objective": "Physical examination: Vital signs: Blood pressure 128/82 mmHg, heart rate 72 bpm, respiratory rate 16 bpm, temperature 36.8°C, oxygen saturation 98% on room air. Cardiac examination: Regular rate and rhythm, no murmurs, rubs, or gallops. No peripheral edema. Neurological examination: Alert and oriented, no focal deficits. Mental status: Cooperative, no acute distress.\n\nInvestigations: Recent laboratory results: Hemoglobin A1c 6.2%, LDL cholesterol 2.6 mmol/L, creatinine 82 µmol/L. ECG: Normal sinus rhythm, no ST-T changes or bundle branch block."
+  }
+}

@@ -1,0 +1,704 @@
+{
+  "case_id": "D2N073",
+  "split": "dev",
+  "stage1_so": {
+    "subjective": "* Patient is a 65-year-old female with a history of iron deficiency anemia.\n* She has been feeling tired, having chills, and experiencing wheezing when active.\n* She has not made any changes to her diet to increase iron intake, but has been taking iron pills again for about a year.\n* She takes over-the-counter vitamin B12 supplements.\n* She has a history of hysterectomy in 1996 and has not had any menstrual bleeding since then.\n* She has been feeling more anxious and depressed lately.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient is a 65-year-old female with a history of iron deficiency anemia.\n* She has been feeling tired, having chills, and experiencing wheezing when active.\n* She has not made any changes to her diet to increase iron intake, but has been taking iron pills again for about a year.\n* She takes over-the-counter vitamin B12 supplements.\n* She has a history of hysterectomy in 1996 and has not had any menstrual bleeding since then.\n* She has been feeling more anxious and depressed lately.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* Patient is a 65-year-old female with a history of iron deficiency anemia.\n* She has been feeling tired, having chills, and experiencing wheezing when active.\n* The patient reports no changes in bowel habits or abdominal pain, and has not noticed any black stools.\n* The patient reports no testing for malabsorption syndromes, including celiac disease, and no small bowel imaging studies, such as capsule endoscopy or small bowel follow-through.\n* She has not made any changes to her diet to increase iron intake, but has been taking iron pills again for about a year.\n* She takes over-the-counter vitamin B12 supplements.\n* The patient reports being unaware of the possibilities of malabsorption syndromes or small bowel imaging studies until now.\n* The patient reports not knowing celiac disease was a possibility until now.\n* She has a history of hysterectomy in 1996 and has not had any menstrual bleeding since then.\n* She has been feeling more anxious and depressed lately.\n* The patient states it has been frustrating not knowing why this keeps happening.\n* The patient plans to inquire about testing for malabsorption syndromes and small bowel imaging studies at their next appointment.",
+    "objective": "* The patient had a colonoscopy about five to six years ago, which was normal with no polyps."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has a history of iron deficiency anemia and is currently experiencing symptoms of fatigue, chills, and wheezing.\n* The patient has not undergone any recent gastrointestinal symptoms, such as changes in bowel habits, abdominal pain, or black stools.\n* The patient has not had any upper or lower gastrointestinal endoscopy or imaging studies to evaluate for potential sources of blood loss.\n* The patient has not been tested for celiac disease or other malabsorption syndromes.",
+    "plan": "* The patient will discuss the possibility of celiac disease testing with her doctor at her next appointment.\n* The patient will ask her doctor about the possibility of a capsule endoscopy or small bowel follow-through to evaluate for potential sources of chronic blood loss.\n* The patient will discuss the possibility of testing for malabsorption syndromes, such as celiac disease, with her doctor at her next appointment."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient is a 65-year-old female with a history of iron deficiency anemia.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0001,
+        "contradiction": 0.5378
+      },
+      "support_evidence": "Patient: I'm 65 years old, and I'm a female. I've been dealing with iron deficiency anemia for a long time, and I came in because I was told I was anemic again when I tried to donate blood in December. I've been feeling really tired, having chills, and even some wheezing when I try to be active. It's been frustrating not knowing why this keeps happening.",
+      "contradiction_evidence": "Patient: I don't have a history of menstrual bleeding anymore since I had a hysterectomy in 1996. As for my diet, I haven't really made any changes to eat more iron-rich foods, but I did start taking iron pills again about a year ago after not taking them for some time. I also take over-the-counter vitamin B12 supplements. I don't have any known gastrointestinal issues, but I do get cold easily and have been feeling more anxious and depressed lately.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient is a 65-year-old female with a history of iron deficiency anemia.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 65-year-old female with a history of iron deficiency anemia.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has been feeling tired, having chills, and experiencing wheezing when active.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.8581
+      },
+      "support_evidence": "Patient: I'm 65 years old, and I'm a female. I've been dealing with iron deficiency anemia for a long time, and I came in because I was told I was anemic again when I tried to donate blood in December. I've been feeling really tired, having chills, and even some wheezing when I try to be active. It's been frustrating not knowing why this keeps happening.",
+      "contradiction_evidence": "Patient: I don't have a history of menstrual bleeding anymore since I had a hysterectomy in 1996. As for my diet, I haven't really made any changes to eat more iron-rich foods, but I did start taking iron pills again about a year ago after not taking them for some time. I also take over-the-counter vitamin B12 supplements. I don't have any known gastrointestinal issues, but I do get cold easily and have been feeling more anxious and depressed lately.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has been feeling tired, having chills, and experiencing wheezing when active.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "She has been feeling tired, having chills, and experiencing wheezing when active.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has not made any changes to her diet to increase iron intake, but has been taking iron pills again for about a year.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0003,
+        "contradiction": 0.0007
+      },
+      "support_evidence": "Patient: I don't have a history of menstrual bleeding anymore since I had a hysterectomy in 1996. As for my diet, I haven't really made any changes to eat more iron-rich foods, but I did start taking iron pills again about a year ago after not taking them for some time. I also take over-the-counter vitamin B12 supplements. I don't have any known gastrointestinal issues, but I do get cold easily and have been feeling more anxious and depressed lately.",
+      "contradiction_evidence": "Patient: I don't have a history of menstrual bleeding anymore since I had a hysterectomy in 1996. As for my diet, I haven't really made any changes to eat more iron-rich foods, but I did start taking iron pills again about a year ago after not taking them for some time. I also take over-the-counter vitamin B12 supplements. I don't have any known gastrointestinal issues, but I do get cold easily and have been feeling more anxious and depressed lately.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has not made any changes to her diet to increase iron intake, but has been taking iron pills again for about a year.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "She has not made any changes to her diet to increase iron intake, but has been taking iron pills again for about a year.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She takes over-the-counter vitamin B12 supplements.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0003,
+        "contradiction": 0.0003
+      },
+      "support_evidence": "Patient: I don't have a history of menstrual bleeding anymore since I had a hysterectomy in 1996. As for my diet, I haven't really made any changes to eat more iron-rich foods, but I did start taking iron pills again about a year ago after not taking them for some time. I also take over-the-counter vitamin B12 supplements. I don't have any known gastrointestinal issues, but I do get cold easily and have been feeling more anxious and depressed lately.",
+      "contradiction_evidence": "Patient: I don't have a history of menstrual bleeding anymore since I had a hysterectomy in 1996. As for my diet, I haven't really made any changes to eat more iron-rich foods, but I did start taking iron pills again about a year ago after not taking them for some time. I also take over-the-counter vitamin B12 supplements. I don't have any known gastrointestinal issues, but I do get cold easily and have been feeling more anxious and depressed lately.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She takes over-the-counter vitamin B12 supplements.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "She takes over-the-counter vitamin B12 supplements.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has a history of hysterectomy in 1996 and has not had any menstrual bleeding since then.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.8687
+      },
+      "support_evidence": "Patient: I don't have a history of menstrual bleeding anymore since I had a hysterectomy in 1996. As for my diet, I haven't really made any changes to eat more iron-rich foods, but I did start taking iron pills again about a year ago after not taking them for some time. I also take over-the-counter vitamin B12 supplements. I don't have any known gastrointestinal issues, but I do get cold easily and have been feeling more anxious and depressed lately.",
+      "contradiction_evidence": "Patient: I don't have any changes in my bowel habits or abdominal pain, and I haven't noticed any black stools. I had a colonoscopy about five to six years ago, and it was normal with no polyps. They said to come back in 10 years, so I haven't had an upper endoscopy yet.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has a history of hysterectomy in 1996 and has not had any menstrual bleeding since then.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "She has a history of hysterectomy in 1996 and has not had any menstrual bleeding since then.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has been feeling more anxious and depressed lately.",
+      "scores": {
+        "entailment": 0.999,
+        "neutral": 0.0002,
+        "contradiction": 0.0007
+      },
+      "support_evidence": "Patient: I don't have a history of menstrual bleeding anymore since I had a hysterectomy in 1996. As for my diet, I haven't really made any changes to eat more iron-rich foods, but I did start taking iron pills again about a year ago after not taking them for some time. I also take over-the-counter vitamin B12 supplements. I don't have any known gastrointestinal issues, but I do get cold easily and have been feeling more anxious and depressed lately.",
+      "contradiction_evidence": "Patient: I don't have a history of menstrual bleeding anymore since I had a hysterectomy in 1996. As for my diet, I haven't really made any changes to eat more iron-rich foods, but I did start taking iron pills again about a year ago after not taking them for some time. I also take over-the-counter vitamin B12 supplements. I don't have any known gastrointestinal issues, but I do get cold easily and have been feeling more anxious and depressed lately.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has been feeling more anxious and depressed lately.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "She has been feeling more anxious and depressed lately.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 6,
+      "exempt": 1
+    },
+    "num_claims": 6,
+    "num_kept": 6,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient reports not knowing celiac disease was a possibility until now.",
+      "evidence": "Patient: No, I haven't been tested for celiac disease. I didn't even know that was a possibility until now. I'll definitely ask about that when I see the doctor next.",
+      "section": "subjective",
+      "candidate": "I didn't even know that was a possibility until now."
+    },
+    {
+      "statement": "The patient reports being unaware of the possibilities of malabsorption syndromes or small bowel imaging studies until now.",
+      "evidence": "Patient: No, I haven't been tested for malabsorption syndromes like celiac disease, and I haven't had any imaging studies of the small bowel such as a capsule endoscopy or small bowel follow-through. I didn't even know those were possibilities until now. I'll definitely ask my doctor about them at my next appointment.",
+      "section": "subjective",
+      "candidate": "I didn't even know those were possibilities until now."
+    },
+    {
+      "statement": "The patient reports no testing for malabsorption syndromes, including celiac disease, and no small bowel imaging studies, such as capsule endoscopy or small bowel follow-through.",
+      "evidence": "Patient: No, I haven't been tested for malabsorption syndromes like celiac disease, and I haven't had any imaging studies of the small bowel such as a capsule endoscopy or small bowel follow-through. I didn't even know those were possibilities until now. I'll definitely ask my doctor about them at my next appointment.",
+      "section": "subjective",
+      "candidate": "No, I haven't been tested for malabsorption syndromes like celiac disease, and I haven't had any imaging studies of the small bowel such as a capsule endoscopy or small bowel follow-through."
+    },
+    {
+      "statement": "The patient plans to inquire about testing for malabsorption syndromes and small bowel imaging studies at their next appointment.",
+      "evidence": "Patient: No, I haven't been tested for malabsorption syndromes like celiac disease, and I haven't had any imaging studies of the small bowel such as a capsule endoscopy or small bowel follow-through. I didn't even know those were possibilities until now. I'll definitely ask my doctor about them at my next appointment.",
+      "section": "subjective",
+      "candidate": "I'll definitely ask my doctor about them at my next appointment."
+    },
+    {
+      "statement": "The patient reports no changes in bowel habits or abdominal pain, and has not noticed any black stools.",
+      "evidence": "Patient: I don't have any changes in my bowel habits or abdominal pain, and I haven't noticed any black stools. I had a colonoscopy about five to six years ago, and it was normal with no polyps. They said to come back in 10 years, so I haven't had an upper endoscopy yet.",
+      "section": "subjective",
+      "candidate": "I don't have any changes in my bowel habits or abdominal pain, and I haven't noticed any black stools."
+    },
+    {
+      "statement": "The patient had a colonoscopy about five to six years ago, which was normal with no polyps.",
+      "evidence": "Patient: I don't have any changes in my bowel habits or abdominal pain, and I haven't noticed any black stools. I had a colonoscopy about five to six years ago, and it was normal with no polyps. They said to come back in 10 years, so I haven't had an upper endoscopy yet.",
+      "section": "objective",
+      "candidate": "I had a colonoscopy about five to six years ago, and it was normal with no polyps."
+    },
+    {
+      "statement": "The patient states it has been frustrating not knowing why this keeps happening.",
+      "evidence": "Patient: I'm 65 years old, and I'm a female. I've been dealing with iron deficiency anemia for a long time, and I came in because I was told I was anemic again when I tried to donate blood in December. I've been feeling really tired, having chills, and even some wheezing when I try to be active. It's been frustrating not knowing why this keeps happening.",
+      "section": "subjective",
+      "candidate": "It's been frustrating not knowing why this keeps happening."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I didn't even know that was a possibility until now.",
+      "speaker": "Patient",
+      "coverage": 0.1175,
+      "nearest_so_sentence": "She has a history of hysterectomy in 1996 and has not had any menstrual bleeding since then.",
+      "statement": "The patient reports not knowing celiac disease was a possibility until now.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: No, I haven't been tested for celiac disease. I didn't even know that was a possibility until now. I'll definitely ask about that when I see the doctor next.",
+      "scores_vs_dialogue": {
+        "entailment": 0.999,
+        "contradiction": 0.0016
+      },
+      "duplicate_entailment": 0.0323,
+      "duplicate_similarity": 0.3685,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 4,
+        "perplexity": 14.96,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I didn't even know that was a possibility until now.",
+      "speaker": "Patient",
+      "coverage": 0.1176,
+      "nearest_so_sentence": "She has a history of hysterectomy in 1996 and has not had any menstrual bleeding since then.",
+      "statement": "The patient reports not knowing that celiac disease was a possibility until now.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I haven't been tested for celiac disease. I didn't even know that was a possibility until now. I'll definitely ask about that when I see the doctor next.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9989,
+        "contradiction": 0.0016
+      },
+      "duplicate_entailment": 0.029,
+      "duplicate_similarity": 0.3653
+    },
+    {
+      "candidate": "I didn't even know that was a possibility until now.",
+      "speaker": "Patient",
+      "coverage": 0.1184,
+      "nearest_so_sentence": "She has a history of hysterectomy in 1996 and has not had any menstrual bleeding since then.",
+      "statement": "The patient reports not knowing about the possibility of celiac disease testing until now.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I haven't been tested for celiac disease. I didn't even know that was a possibility until now. I'll definitely ask about that when I see the doctor next.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.002
+      },
+      "duplicate_entailment": 0.004,
+      "duplicate_similarity": 0.3228
+    },
+    {
+      "candidate": "I didn't even know those were possibilities until now.",
+      "speaker": "Patient",
+      "coverage": 0.1189,
+      "nearest_so_sentence": "She has been feeling more anxious and depressed lately.",
+      "statement": "The patient reports being unaware of the possibilities of malabsorption syndromes or small bowel imaging studies until now.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: No, I haven't been tested for malabsorption syndromes like celiac disease, and I haven't had any imaging studies of the small bowel such as a capsule endoscopy or small bowel follow-through. I didn't even know those were possibilities until now. I'll definitely ask my doctor about them at my next appointment.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.0098
+      },
+      "duplicate_entailment": 0.0024,
+      "duplicate_similarity": 0.2966,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 4,
+        "perplexity": 15.98,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I didn't even know that could be a possibility until now.",
+      "speaker": "Patient",
+      "coverage": 0.1515,
+      "nearest_so_sentence": "She has been feeling more anxious and depressed lately.",
+      "statement": "The patient reports not knowing that celiac disease or other malabsorption syndromes could be a possibility until now.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I haven't been tested for celiac disease or any other malabsorption syndromes. I didn't even know that could be a possibility until now. I'll make sure to bring that up with my doctor at my next appointment.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.0015
+      },
+      "duplicate_entailment": 0.0059,
+      "duplicate_similarity": 0.3746
+    },
+    {
+      "candidate": "I didn't even know that could be a possibility until now.",
+      "speaker": "Patient",
+      "coverage": 0.1517,
+      "nearest_so_sentence": "She has been feeling more anxious and depressed lately.",
+      "statement": "The patient reports not knowing that celiac disease screening could be a possibility until now.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I haven't been tested for celiac disease or any other malabsorption syndromes. I didn't even know that could be a possibility until now. I'll make sure to bring that up with my doctor at my next appointment.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9987,
+        "contradiction": 0.0018
+      },
+      "duplicate_entailment": 0.0045,
+      "duplicate_similarity": 0.3262
+    },
+    {
+      "candidate": "I didn't even know that could be a possibility until now.",
+      "speaker": "Patient",
+      "coverage": 0.1521,
+      "nearest_so_sentence": "She has been feeling more anxious and depressed lately.",
+      "statement": "The patient reports not knowing that celiac disease or other malabsorption syndromes could be a possibility until now.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I haven't been tested for celiac disease or any other malabsorption syndromes. I didn't even know that could be a possibility until now. I'll make sure to bring that up with my doctor at my next appointment.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.0015
+      },
+      "duplicate_entailment": 0.0059,
+      "duplicate_similarity": 0.3746
+    },
+    {
+      "candidate": "No, I haven't had an upper endoscopy or capsule endoscopy yet.",
+      "speaker": "Patient",
+      "coverage": 0.2139,
+      "nearest_so_sentence": "She has a history of hysterectomy in 1996 and has not had any menstrual bleeding since then.",
+      "statement": "The patient reports having no recent upper endoscopy or capsule endoscopy.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: No, I haven't had an upper endoscopy or capsule endoscopy yet. The doctor mentioned that if my initial tests come back normal, they might consider a capsule endoscopy to check for any issues in my digestive system that could be causing the anemia.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.4126
+      }
+    },
+    {
+      "candidate": "No, I haven't been tested for malabsorption syndromes like celiac disease, and I haven't had any imaging studies of the small bowel such as a capsule endoscopy or small bowel follow-through.",
+      "speaker": "Patient",
+      "coverage": 0.2154,
+      "nearest_so_sentence": "She has a history of hysterectomy in 1996 and has not had any menstrual bleeding since then.",
+      "statement": "The patient reports no testing for malabsorption syndromes, including celiac disease, and no small bowel imaging studies, such as capsule endoscopy or small bowel follow-through.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: No, I haven't been tested for malabsorption syndromes like celiac disease, and I haven't had any imaging studies of the small bowel such as a capsule endoscopy or small bowel follow-through. I didn't even know those were possibilities until now. I'll definitely ask my doctor about them at my next appointment.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0368
+      },
+      "duplicate_entailment": 0.6262,
+      "duplicate_similarity": 0.3105,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 2,
+        "perplexity": 14.19,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I'll definitely ask my doctor about them at my next appointment.",
+      "speaker": "Patient",
+      "coverage": 0.2181,
+      "nearest_so_sentence": "She takes over-the-counter vitamin B12 supplements.",
+      "statement": "The patient plans to inquire about testing for malabsorption syndromes and small bowel imaging studies at their next appointment.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: No, I haven't been tested for malabsorption syndromes like celiac disease, and I haven't had any imaging studies of the small bowel such as a capsule endoscopy or small bowel follow-through. I didn't even know those were possibilities until now. I'll definitely ask my doctor about them at my next appointment.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.0011
+      },
+      "duplicate_entailment": 0.007,
+      "duplicate_similarity": 0.2662,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 9,
+        "perplexity": 12.77,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "No, I haven't had any imaging studies of the small bowel, like a capsule endoscopy or small bowel follow-through.",
+      "speaker": "Patient",
+      "coverage": 0.2509,
+      "nearest_so_sentence": "She has a history of hysterectomy in 1996 and has not had any menstrual bleeding since then.",
+      "statement": "The patient reports no small bowel imaging studies, including capsule endoscopy or small bowel follow-through.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I haven't been tested for malabsorption syndromes like celiac disease, and I haven't had any imaging studies of the small bowel such as a capsule endoscopy or small bowel follow-through. I didn't even know those were possibilities until now. I'll definitely ask my doctor about them at my next appointment.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.0631
+      },
+      "duplicate_entailment": 0.5612,
+      "duplicate_similarity": 0.3477
+    },
+    {
+      "candidate": "No, I haven't had any imaging studies of the small bowel, like a capsule endoscopy or small bowel follow-through.",
+      "speaker": "Patient",
+      "coverage": 0.2513,
+      "nearest_so_sentence": "She has a history of hysterectomy in 1996 and has not had any menstrual bleeding since then.",
+      "statement": "The patient reports no small bowel imaging studies, including capsule endoscopy or small bowel follow-through.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I haven't been tested for malabsorption syndromes like celiac disease, and I haven't had any imaging studies of the small bowel such as a capsule endoscopy or small bowel follow-through. I didn't even know those were possibilities until now. I'll definitely ask my doctor about them at my next appointment.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.0631
+      },
+      "duplicate_entailment": 0.5612,
+      "duplicate_similarity": 0.3477
+    },
+    {
+      "candidate": "No, I haven't had any imaging studies of the small bowel, like a capsule endoscopy or small bowel follow-through.",
+      "speaker": "Patient",
+      "coverage": 0.2516,
+      "nearest_so_sentence": "She has a history of hysterectomy in 1996 and has not had any menstrual bleeding since then.",
+      "statement": "The patient reports no small bowel imaging studies, including capsule endoscopy or small bowel follow-through.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I haven't been tested for malabsorption syndromes like celiac disease, and I haven't had any imaging studies of the small bowel such as a capsule endoscopy or small bowel follow-through. I didn't even know those were possibilities until now. I'll definitely ask my doctor about them at my next appointment.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.0631
+      },
+      "duplicate_entailment": 0.5612,
+      "duplicate_similarity": 0.3477
+    },
+    {
+      "candidate": "No, I haven't had any imaging studies of the small bowel, like a capsule endoscopy or small bowel follow-through.",
+      "speaker": "Patient",
+      "coverage": 0.2516,
+      "nearest_so_sentence": "She has a history of hysterectomy in 1996 and has not had any menstrual bleeding since then.",
+      "statement": "The patient reports no small bowel imaging studies, including capsule endoscopy or small bowel follow-through.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I haven't been tested for malabsorption syndromes like celiac disease, and I haven't had any imaging studies of the small bowel such as a capsule endoscopy or small bowel follow-through. I didn't even know those were possibilities until now. I'll definitely ask my doctor about them at my next appointment.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.0631
+      },
+      "duplicate_entailment": 0.5612,
+      "duplicate_similarity": 0.3477
+    },
+    {
+      "candidate": "No, I haven't been tested for celiac disease.",
+      "speaker": "Patient",
+      "coverage": 0.2547,
+      "nearest_so_sentence": "She has not made any changes to her diet to increase iron intake, but has been taking iron pills again for about a year.",
+      "statement": "The patient reports not having undergone testing for celiac disease.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Has the patient undergone any testing for malabsorption syndromes, such as celiac disease, or any imaging studies of the small bowel, such as capsule endoscopy or small bowel follow-through?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0179
+      },
+      "duplicate_entailment": 0.1309,
+      "duplicate_similarity": 0.3761
+    },
+    {
+      "candidate": "No, I haven't been tested for celiac disease.",
+      "speaker": "Patient",
+      "coverage": 0.2557,
+      "nearest_so_sentence": "She has not made any changes to her diet to increase iron intake, but has been taking iron pills again for about a year.",
+      "statement": "The patient reports not having been tested for celiac disease.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I haven't been tested for malabsorption syndromes like celiac disease, and I haven't had any imaging studies of the small bowel such as a capsule endoscopy or small bowel follow-through. I didn't even know those were possibilities until now. I'll definitely ask my doctor about them at my next appointment.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0132
+      },
+      "duplicate_entailment": 0.0245,
+      "duplicate_similarity": 0.3502
+    },
+    {
+      "candidate": "No, I haven't been tested for celiac disease.",
+      "speaker": "Patient",
+      "coverage": 0.2562,
+      "nearest_so_sentence": "She has not made any changes to her diet to increase iron intake, but has been taking iron pills again for about a year.",
+      "statement": "The patient reports not having undergone testing for celiac disease.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Has the patient undergone any testing for malabsorption syndromes, such as celiac disease, or any imaging studies of the small bowel, such as capsule endoscopy or small bowel follow-through?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0179
+      },
+      "duplicate_entailment": 0.1309,
+      "duplicate_similarity": 0.3761
+    },
+    {
+      "candidate": "I don't have any changes in my bowel habits or abdominal pain, and I haven't noticed any black stools.",
+      "speaker": "Patient",
+      "coverage": 0.2587,
+      "nearest_so_sentence": "She has a history of hysterectomy in 1996 and has not had any menstrual bleeding since then.",
+      "statement": "The patient reports no changes in bowel habits or abdominal pain, and has not noticed any black stools.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't have any changes in my bowel habits or abdominal pain, and I haven't noticed any black stools. I had a colonoscopy about five to six years ago, and it was normal with no polyps. They said to come back in 10 years, so I haven't had an upper endoscopy yet.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.1302
+      },
+      "duplicate_entailment": 0.072,
+      "duplicate_similarity": 0.402,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 2,
+        "perplexity": 12.29,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "They said to come back in 10 years, so I haven't had an upper endoscopy yet.",
+      "speaker": "Patient",
+      "coverage": 0.2635,
+      "nearest_so_sentence": "She has a history of hysterectomy in 1996 and has not had any menstrual bleeding since then.",
+      "statement": "The patient reports that they were told to return in 10 years and have not undergone an upper gastrointestinal endoscopy.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I don't have any changes in my bowel habits or abdominal pain, and I haven't noticed any black stools. I had a colonoscopy about five to six years ago, and it was normal with no polyps. They said to come back in 10 years, so I haven't had an upper endoscopy yet.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.9944
+      }
+    },
+    {
+      "candidate": "No, I haven't been tested for celiac disease or any other malabsorption syndromes.",
+      "speaker": "Patient",
+      "coverage": 0.2648,
+      "nearest_so_sentence": "She has not made any changes to her diet to increase iron intake, but has been taking iron pills again for about a year.",
+      "statement": "The patient denies undergoing testing for celiac disease or other malabsorption syndromes.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Has the patient undergone any testing for malabsorption syndromes, such as celiac disease, or any imaging studies of the small bowel, such as capsule endoscopy or small bowel follow-through?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0189
+      },
+      "duplicate_entailment": 0.0237,
+      "duplicate_similarity": 0.3283
+    },
+    {
+      "candidate": "No, I haven't been tested for celiac disease or any other malabsorption syndromes.",
+      "speaker": "Patient",
+      "coverage": 0.2658,
+      "nearest_so_sentence": "She has not made any changes to her diet to increase iron intake, but has been taking iron pills again for about a year.",
+      "statement": "The patient denies undergoing celiac disease screening (tTG-IgA, EMA) or any other tests to evaluate for malabsorption syndromes.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I haven't been tested for celiac disease or any other malabsorption syndromes. I didn't even know that could be a possibility until now. I'll make sure to bring that up with my doctor at my next appointment.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9983,
+        "contradiction": 0.1715
+      },
+      "duplicate_entailment": 0.0497,
+      "duplicate_similarity": 0.2823
+    },
+    {
+      "candidate": "No, I haven't been tested for celiac disease or any other malabsorption syndromes.",
+      "speaker": "Patient",
+      "coverage": 0.2659,
+      "nearest_so_sentence": "She has not made any changes to her diet to increase iron intake, but has been taking iron pills again for about a year.",
+      "statement": "The patient denies undergoing evaluation for celiac disease or other malabsorption syndromes.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I haven't been tested for celiac disease or any other malabsorption syndromes. I didn't even know that could be a possibility until now. I'll make sure to bring that up with my doctor at my next appointment.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0083
+      },
+      "duplicate_entailment": 0.0243,
+      "duplicate_similarity": 0.3415
+    },
+    {
+      "candidate": "I had a colonoscopy about five to six years ago, and it was normal with no polyps.",
+      "speaker": "Patient",
+      "coverage": 0.2676,
+      "nearest_so_sentence": "She has a history of hysterectomy in 1996 and has not had any menstrual bleeding since then.",
+      "statement": "The patient had a colonoscopy about five to six years ago, which was normal with no polyps.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't have any changes in my bowel habits or abdominal pain, and I haven't noticed any black stools. I had a colonoscopy about five to six years ago, and it was normal with no polyps. They said to come back in 10 years, so I haven't had an upper endoscopy yet.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9984,
+        "contradiction": 0.0863
+      },
+      "first_rewrite_rejected": "The patient reports having undergone a colonoscopy approximately five to six years ago, which was normal with no polyps detected.",
+      "duplicate_entailment": 0.0088,
+      "duplicate_similarity": 0.3369,
+      "insertion": {
+        "section": "objective",
+        "line_index": 0,
+        "perplexity": null,
+        "removed_placeholder": [
+          "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+        ]
+      }
+    },
+    {
+      "candidate": "It's been frustrating not knowing why this keeps happening.",
+      "speaker": "Patient",
+      "coverage": 0.2723,
+      "nearest_so_sentence": "She has been feeling more anxious and depressed lately.",
+      "statement": "The patient states it has been frustrating not knowing why this keeps happening.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I'm 65 years old, and I'm a female. I've been dealing with iron deficiency anemia for a long time, and I came in because I was told I was anemic again when I tried to donate blood in December. I've been feeling really tired, having chills, and even some wheezing when I try to be active. It's been frustrating not knowing why this keeps happening.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0005
+      },
+      "first_rewrite_rejected": "The patient reports experiencing frustration due to the recurring nature of their symptoms.",
+      "duplicate_entailment": 0.0042,
+      "duplicate_similarity": 0.4081,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 10,
+        "perplexity": 12.48,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I'm 65 years old, and I'm a female.",
+      "speaker": "Patient",
+      "coverage": 0.2817,
+      "nearest_so_sentence": "Patient is a 65-year-old female with a history of iron deficiency anemia.",
+      "statement": "The patient reports being a 65-year-old female.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 65 years old, and I'm a female. I've been dealing with iron deficiency anemia for a long time, and I came in because I was told I was anemic again when I tried to donate blood in December. I've been feeling really tired, having chills, and even some wheezing when I try to be active. It's been frustrating not knowing why this keeps happening.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.017
+      },
+      "duplicate_entailment": 0.9996,
+      "duplicate_similarity": 0.6453
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 42,
+    "num_covered": 10,
+    "num_flagged": 25,
+    "num_not_checked_cap": 7,
+    "num_added": 7
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "No, I haven't had an upper endoscopy or capsule endoscopy yet.",
+        "statement": "The patient reports having no recent upper endoscopy or capsule endoscopy.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9995,
+          "contradiction": 0.4126
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "They said to come back in 10 years, so I haven't had an upper endoscopy yet.",
+        "statement": "The patient reports that they were told to return in 10 years and have not undergone an upper gastrointestinal endoscopy.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.9944
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 51.6,
+  "ap_unchanged": true,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 65 years old, and I'm a female. I've been dealing with iron deficiency anemia for a long time, and I came in because I was told I was anemic again when I tried to donate blood in December. I've been feeling really tired, having chills, and even some wheezing when I try to be active. It's been frustrating not knowing why this keeps happening.\nDoctor: Could you provide more details about your dietary habits, including any changes in your intake of iron-rich foods or supplements, and whether you have a history of menstrual bleeding or gastrointestinal issues that might contribute to iron deficiency?\nPatient: I don't have a history of menstrual bleeding anymore since I had a hysterectomy in 1996. As for my diet, I haven't really made any changes to eat more iron-rich foods, but I did start taking iron pills again about a year ago after not taking them for some time. I also take over-the-counter vitamin B12 supplements. I don't have any known gastrointestinal issues, but I do get cold easily and have been feeling more anxious and depressed lately.\nDoctor: Could you provide details about any recent gastrointestinal symptoms, such as changes in bowel habits, abdominal pain, or black stools? Additionally, have you undergone any upper or lower gastrointestinal endoscopy or imaging studies to evaluate for potential sources of blood loss?\nPatient: I don't have any changes in my bowel habits or abdominal pain, and I haven't noticed any black stools. I had a colonoscopy about five to six years ago, and it was normal with no polyps. They said to come back in 10 years, so I haven't had an upper endoscopy yet.\nDoctor: Have you had any recent upper endoscopy or capsule endoscopy to evaluate for potential sources of chronic gastrointestinal blood loss, such as angiodysplasia or small bowel lesions?\nPatient: No, I haven't had an upper endoscopy or capsule endoscopy yet. The doctor mentioned that if my initial tests come back normal, they might consider a capsule endoscopy to check for any issues in my digestive system that could be causing the anemia.\nDoctor: Has the patient undergone any imaging studies of the small bowel, such as a capsule endoscopy or small bowel follow-through, to evaluate for potential sources of chronic blood loss, such as angiodysplasia or celiac disease?\nPatient: No, I haven't had any imaging studies of the small bowel, like a capsule endoscopy or small bowel follow-through. The doctor mentioned that if my upper endoscopy and colonoscopy come back normal, they might consider a capsule endoscopy to look for any issues in my digestive system that could be causing the anemia.\nDoctor: Have you been tested for celiac disease, such as with a blood test for tissue transglutaminase antibodies or endomysial antibodies?\nPatient: No, I haven't been tested for celiac disease. I didn't even know that was a possibility until now. I'll definitely ask about that when I see the doctor next.\nDoctor: Has the patient undergone any imaging studies of the small bowel, such as a capsule endoscopy or small bowel follow-through, to evaluate for potential sources of chronic blood loss?\nPatient: No, I haven't had any imaging studies of the small bowel, like a capsule endoscopy or small bowel follow-through. The doctor mentioned that if my upper endoscopy and colonoscopy come back normal, they might consider a capsule endoscopy to look for any issues in my digestive system that could be causing the anemia.\nDoctor: Has the patient undergone any testing for celiac disease, such as tissue transglutaminase IgA (tTG-IgA) or endomysial antibody (EMA) testing?\nPatient: No, I haven't been tested for celiac disease. I didn't even know that was a possibility until now. I'll definitely ask about that when I see the doctor next.\nDoctor: Has the patient undergone any imaging studies of the small bowel, such as a capsule endoscopy or small bowel follow-through, to evaluate for potential sources of chronic blood loss?\nPatient: No, I haven't had any imaging studies of the small bowel, like a capsule endoscopy or small bowel follow-through. The doctor mentioned that if my upper endoscopy and colonoscopy come back normal, they might consider a capsule endoscopy to look for any issues in my digestive system that could be causing the anemia.\nDoctor: Has the patient undergone any testing for celiac disease, such as tTG-IgA or EMA?\nPatient: No, I haven't been tested for celiac disease. I didn't even know that was a possibility until now. I'll definitely ask about that when I see the doctor next.\nDoctor: Has the patient undergone any imaging studies of the small bowel, such as a capsule endoscopy or small bowel follow-through, to evaluate for potential sources of chronic blood loss?\nPatient: No, I haven't had any imaging studies of the small bowel, like a capsule endoscopy or small bowel follow-through. The doctor mentioned that if my upper endoscopy and colonoscopy come back normal, they might consider a capsule endoscopy to look for any issues in my digestive system that could be causing the anemia.\nDoctor: Has the patient undergone celiac disease screening (tTG-IgA, EMA) or any other tests to evaluate for malabsorption syndromes?\nPatient: No, I haven't been tested for celiac disease or any other malabsorption syndromes. I didn't even know that could be a possibility until now. I'll make sure to bring that up with my doctor at my next appointment.\nDoctor: Has the patient undergone any testing for celiac disease or other malabsorption syndromes?\nPatient: No, I haven't been tested for celiac disease or any other malabsorption syndromes. I didn't even know that could be a possibility until now. I'll make sure to bring that up with my doctor at my next appointment.\nDoctor: Has the patient undergone any evaluation for celiac disease or other malabsorption syndromes, such as testing for tissue transglutaminase IgA (tTG-IgA) or endomysial antibody (EMA)?\nPatient: No, I haven't been tested for celiac disease or any other malabsorption syndromes. I didn't even know that could be a possibility until now. I'll make sure to bring that up with my doctor at my next appointment.\nDoctor: Has the patient undergone any testing for malabsorption syndromes, such as celiac disease, or any imaging studies of the small bowel, such as capsule endoscopy or small bowel follow-through?\nPatient: No, I haven't been tested for malabsorption syndromes like celiac disease, and I haven't had any imaging studies of the small bowel such as a capsule endoscopy or small bowel follow-through. I didn't even know those were possibilities until now. I'll definitely ask my doctor about them at my next appointment.",
+  "reference_so": {
+    "subjective": "Basic information: 65-year-old female with chief complaint of recurrent iron deficiency anemia, fatigue, chills, and wheezing on exertion.\n\nHistory of present illness: Onset of symptoms not specified, but patient has a long-standing history of iron deficiency anemia. Recently confirmed anemic during blood donation in December. Symptoms include fatigue, chills, and wheezing with activity. Patient also mentions not making dietary changes to increase iron intake but restarting iron pills about a year ago and taking over-the-counter vitamin B12 supplements.\n\nPast history: Iron deficiency anemia (long-standing), hysterectomy in 1996, use of iron pills for approximately one year, and over-the-counter vitamin B12 supplements. No known gastrointestinal issues. Personal history includes feelings of being cold, anxiety, and depression. No recent gastrointestinal evaluations such as capsule endoscopy or small bowel imaging. No capsule endoscopy or small bowel imaging performed. Celiac disease testing (tTG-IgA, EMA) not performed.",
+    "objective": "Physical examination: Vital signs: Temperature 36.8°C, pulse 78 bpm, BP 120/80 mmHg, RR 16 breaths/min, SpO2 98% on room air. Physical examination reveals no jaundice, no palpable lymphadenopathy, no hepatosplenomegaly. Respiratory examination shows mild expiratory wheezing on auscultation. No signs of gastrointestinal bleeding or masses on abdominal examination.\n\nInvestigations: Hemoglobin: 9.2 g/dL (normal: 12-16 g/dL), MCV: 72 fL (microcytic), serum ferritin: 12 ng/mL (low), serum iron: 25 µg/dL (low), total iron-binding capacity (TIBC): 480 µg/dL (elevated), transferrin saturation: 5.2% (low). Chest X-ray: No acute infiltrates or cardiomegaly. Pulmonary function tests: Mild obstructive pattern with FEV1/FVC ratio of 0.65. Stool occult blood test: Negative. Upper endoscopy: No active bleeding or ulcers, but mild gastritis noted. Colonoscopy: No polyps or tumors, but mild diverticulosis noted. No prior small bowel imaging studies such as capsule endoscopy or small bowel follow-through performed. Celiac disease screening (tTG-IgA, EMA) not performed."
+  }
+}

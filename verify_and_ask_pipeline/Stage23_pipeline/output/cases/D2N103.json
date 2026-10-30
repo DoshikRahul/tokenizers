@@ -1,0 +1,731 @@
+{
+  "case_id": "D2N103",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient is a 60-year-old male who underwent mitral valve repair surgery in August 2020.\n* He reports feeling better overall, but still experiences chest discomfort, described as a pressure-like feeling, approximately 2-3 times a month, lasting a few minutes.\n* He also reports shallow breathing, especially during exertion.\n* He has a history of mitral regurgitation and atrial fibrillation, and is currently taking Coumadin, Lasix, and Atenolol.\n* He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.\n* He has not experienced any new symptoms such as dizziness, palpitations, or shortness of breath.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* The patient underwent mitral valve repair surgery. The patient underwent mitral valve repair surgery in August 2020.\n* He reports feeling better overall, but still experiences chest discomfort, described as a pressure-like feeling, approximately 2-3 times a month, lasting a few minutes.\n* He also reports shallow breathing, especially during exertion.\n* He has a history of mitral regurgitation and atrial fibrillation, and is currently taking Coumadin, Lasix, and Atenolol.\n* He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.\n* He has not experienced any new symptoms such as dizziness, palpitations, or shortness of breath.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* The patient underwent mitral valve repair surgery. The patient underwent mitral valve repair surgery in August 2020.\n* The patient reports having had an ECG on December 26th, but does not recall having an echocardiogram since the mitral valve repair surgery.\n* The patient reports taking it easy on days when experiencing chest discomfort.\n* The patient states that they have been doing okay otherwise, so maybe it's not needed right now.\n* He reports feeling better overall, but still experiences chest discomfort, described as a pressure-like feeling, approximately 2-3 times a month, lasting a few minutes.\n* He also reports shallow breathing, especially during exertion.\n* He has a history of mitral regurgitation and atrial fibrillation, and is currently taking Coumadin, Lasix, and Atenolol.\n* He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.\n* He has not experienced any new symptoms such as dizziness, palpitations, or shortness of breath.",
+    "objective": "* The patient does not have the details of their most recent echocardiogram, but their ECG from December 26th showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has a history of mitral valve repair surgery and atrial fibrillation, and is currently experiencing chest discomfort and shallow breathing.\n* The patient's symptoms have remained stable since his last follow-up, with no changes in frequency, duration, or intensity.",
+    "plan": "* No explicit management or follow-up plan was documented in the conversation."
+  },
+  "stage2_audit": [
+    {
+      "claim": "The patient is a 60-year-old male.",
+      "scores": {
+        "entailment": 0.0025,
+        "neutral": 0.88,
+        "contradiction": 0.1175
+      },
+      "support_evidence": "Patient: The chest discomfort is more of a pressure-like feeling, and it happens maybe a couple times a month. When it does, it usually only lasts a few minutes, and then it goes away for a while. I just take it easy on those days and don't push myself too hard.",
+      "contradiction_evidence": "Patient: The chest discomfort is more of a pressure-like feeling, and it happens maybe a couple times a month. When it does, it usually only lasts a few minutes, and then it goes away for a while. I just take it easy on those days and don't push myself too hard.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "removed_unsupported",
+      "keep": false,
+      "output": "",
+      "reason": "No supporting evidence in the conversation (not asserted to be false).",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 60-year-old male who underwent mitral valve repair surgery in August 2020."
+    },
+    {
+      "claim": "The patient underwent mitral valve repair surgery.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0001,
+        "contradiction": 0.0005
+      },
+      "support_evidence": "Patient: I'm 60 years old, and I'm here because I had mitral valve repair surgery in August 2020, and I just wanted to check in on how I'm doing. I've been feeling better overall, but I still have some chest discomfort sometimes and my breathing feels shallow at times.",
+      "contradiction_evidence": "Doctor: Has the patient undergone an echocardiogram since the mitral valve repair surgery in August 2020? If so, when was the most recent echocardiogram performed, and what were the findings?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient underwent mitral valve repair surgery.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 60-year-old male who underwent mitral valve repair surgery in August 2020."
+    },
+    {
+      "claim": "The patient underwent mitral valve repair surgery in August 2020.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0003,
+        "contradiction": 0.9365
+      },
+      "support_evidence": "Doctor: Has the patient undergone an echocardiogram since the mitral valve repair surgery in August 2020?",
+      "contradiction_evidence": "Patient: I don't have a history of heart attacks, but I do have a history of mitral regurgitation and atrial fibrillation. I've had a mitral valve repair surgery. As for medications, I'm taking Coumadin, Lasix, and Atenolol.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient underwent mitral valve repair surgery in August 2020.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 60-year-old male who underwent mitral valve repair surgery in August 2020."
+    },
+    {
+      "claim": "He reports feeling better overall, but still experiences chest discomfort, described as a pressure-like feeling, approximately 2-3 times a month, lasting a few minutes.",
+      "scores": {
+        "entailment": 0.9986,
+        "neutral": 0.0003,
+        "contradiction": 0.0142
+      },
+      "support_evidence": "Patient: The chest discomfort is more of a pressure-like feeling, and it happens maybe a couple times a month. When it does, it usually only lasts a few minutes, and then it goes away for a while. I just take it easy on those days and don't push myself too hard.",
+      "contradiction_evidence": "Patient: No, I haven't had any episodes that have gotten worse. The chest pain and shortness of breath I have are pretty much the same as before, and I've learned to manage them by slowing down when I feel them coming on. They usually go away after a few minutes and then don't come back for a while.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He reports feeling better overall, but still experiences chest discomfort, described as a pressure-like feeling, approximately 2-3 times a month, lasting a few minutes.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "He reports feeling better overall, but still experiences chest discomfort, described as a pressure-like feeling, approximately 2-3 times a month, lasting a few minutes.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He also reports shallow breathing, especially during exertion.",
+      "scores": {
+        "entailment": 0.9959,
+        "neutral": 0.0018,
+        "contradiction": 0.0129
+      },
+      "support_evidence": "Patient: No, I haven't noticed any changes in how often or how bad the chest discomfort is since my last check-up. It's still happening a couple times a month, and it's the same pressure-like feeling that goes away after a few minutes. I haven't had any new symptoms like dizziness or palpitations, but my breathing does feel a little shallow sometimes, especially when I'm exerting myself.",
+      "contradiction_evidence": "Patient: I'm 60 years old, and I'm here because I had mitral valve repair surgery in August 2020, and I just wanted to check in on how I'm doing. I've been feeling better overall, but I still have some chest discomfort sometimes and my breathing feels shallow at times.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He also reports shallow breathing, especially during exertion.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "He also reports shallow breathing, especially during exertion.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has a history of mitral regurgitation and atrial fibrillation, and is currently taking Coumadin, Lasix, and Atenolol.",
+      "scores": {
+        "entailment": 0.9785,
+        "neutral": 0.0146,
+        "contradiction": 0.0178
+      },
+      "support_evidence": "Patient: I don't have a history of heart attacks, but I do have a history of mitral regurgitation and atrial fibrillation. I've had a mitral valve repair surgery. As for medications, I'm taking Coumadin, Lasix, and Atenolol.",
+      "contradiction_evidence": "Patient: I don't have the details of my most recent echocardiogram, but my ECG from December 26th showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study. I haven't had any other blood tests or imaging studies since my surgery that I'm aware of.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has a history of mitral regurgitation and atrial fibrillation, and is currently taking Coumadin, Lasix, and Atenolol.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "He has a history of mitral regurgitation and atrial fibrillation, and is currently taking Coumadin, Lasix, and Atenolol.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.",
+      "scores": {
+        "entailment": 0.9961,
+        "neutral": 0.0025,
+        "contradiction": 0.0748
+      },
+      "support_evidence": "Patient: No, the chest discomfort I feel is more of a pressure-like sensation, and it doesn't feel sharp or sudden. It usually happens when I'm exerting myself, and it goes away after a few minutes. I haven't had any new or different kinds of pain since my last checkup.",
+      "contradiction_evidence": "Doctor: Has the patient experienced any episodes of shortness of breath, chest pain, or palpitations that have worsened in frequency or intensity since the last follow-up?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has not experienced any new symptoms such as dizziness, palpitations, or shortness of breath.",
+      "scores": {
+        "entailment": 0.9144,
+        "neutral": 0.0794,
+        "contradiction": 0.453
+      },
+      "support_evidence": "Doctor: Has the patient experienced any episodes of shortness of breath or chest discomfort that feel different from the usual pressure-like sensation, such as sharp, sudden, or radiating pain?",
+      "contradiction_evidence": "Patient: No, I haven't noticed any changes in how often or how bad the chest discomfort is since my last check-up. It's still happening a couple times a month, and it's the same pressure-like feeling that goes away after a few minutes. I haven't had any new symptoms like dizziness or palpitations, but my breathing does feel a little shallow sometimes, especially when I'm exerting myself.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has not experienced any new symptoms such as dizziness, palpitations, or shortness of breath.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "He has not experienced any new symptoms such as dizziness, palpitations, or shortness of breath.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "removed_unsupported": 1,
+      "supported": 7,
+      "exempt": 1
+    },
+    "num_claims": 8,
+    "num_kept": 7,
+    "claim_retention_rate": 0.875
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient states that they have been doing okay otherwise, so maybe it's not needed right now.",
+      "evidence": "Patient: No, I don't recall having an echocardiogram since my surgery. My doctor hasn't mentioned scheduling one, but I'm not sure if that's part of my follow-up plan. I've been doing okay otherwise, so maybe it's not needed right now.",
+      "section": "subjective",
+      "candidate": "I've been doing okay otherwise, so maybe it's not needed right now."
+    },
+    {
+      "statement": "The patient reports taking it easy on days when experiencing chest discomfort.",
+      "evidence": "Patient: The chest discomfort is more of a pressure-like feeling, and it happens maybe a couple times a month. When it does, it usually only lasts a few minutes, and then it goes away for a while. I just take it easy on those days and don't push myself too hard.",
+      "section": "subjective",
+      "candidate": "I just take it easy on those days and don't push myself too hard."
+    },
+    {
+      "statement": "The patient does not have the details of their most recent echocardiogram, but their ECG from December 26th showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly.",
+      "evidence": "Patient: I don't recall having an echocardiogram since my surgery, but my most recent ECG was done on December 26th. It showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study.",
+      "section": "objective",
+      "candidate": "I don't have the details of my most recent echocardiogram, but my ECG from December 26th showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly."
+    },
+    {
+      "statement": "The patient reports having had an ECG on December 26th, but does not recall having an echocardiogram since the mitral valve repair surgery.",
+      "evidence": "Patient: No, I don't recall having an echocardiogram since my surgery. My most recent ECG was done on December 26th, and it showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study.",
+      "section": "subjective",
+      "candidate": "I don't recall having an echocardiogram since my surgery, but my most recent ECG was done on December 26th."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "My doctor hasn't mentioned scheduling one, but I'm not sure if that's part of my follow-up plan.",
+      "speaker": "Patient",
+      "coverage": 0.1598,
+      "nearest_so_sentence": "He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.",
+      "statement": "The patient reports that their doctor has not mentioned scheduling an echocardiogram since the mitral valve repair surgery.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Doctor: Has the patient undergone an echocardiogram since the mitral valve repair surgery? If not, is there a plan to schedule one for further evaluation?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.9557
+      }
+    },
+    {
+      "candidate": "My doctor hasn't mentioned scheduling one, but I'm not sure if that's part of my follow-up plan.",
+      "speaker": "Patient",
+      "coverage": 0.161,
+      "nearest_so_sentence": "He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.",
+      "statement": "The patient reports that their doctor has not mentioned scheduling an echocardiogram or other cardiac imaging studies as part of their follow-up plan.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Doctor: Has the patient undergone any recent echocardiogram or other cardiac imaging studies since August 2020? If not, is there a plan to schedule one during this follow-up?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.9977
+      }
+    },
+    {
+      "candidate": "I've been doing okay otherwise, so maybe it's not needed right now.",
+      "speaker": "Patient",
+      "coverage": 0.1654,
+      "nearest_so_sentence": "He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.",
+      "statement": "The patient states that they have been doing okay otherwise, so maybe it's not needed right now.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: No, I don't recall having an echocardiogram since my surgery. My doctor hasn't mentioned scheduling one, but I'm not sure if that's part of my follow-up plan. I've been doing okay otherwise, so maybe it's not needed right now.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0004
+      },
+      "first_rewrite_rejected": "The patient reports that they are doing okay otherwise and do not believe an echocardiogram is currently needed.",
+      "duplicate_entailment": 0.0024,
+      "duplicate_similarity": 0.4566,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 1,
+        "perplexity": 17.29,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I've been doing okay otherwise, so maybe it's not needed right now.",
+      "speaker": "Patient",
+      "coverage": 0.1665,
+      "nearest_so_sentence": "He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.",
+      "statement": "The patient states they have been doing okay otherwise, so maybe it's not needed right now.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I don't recall having an echocardiogram since my surgery. My doctor hasn't mentioned scheduling one, but I'm not sure if that's part of my follow-up plan. I've been doing okay otherwise, so maybe it's not needed right now.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0004
+      },
+      "first_rewrite_rejected": "The patient reports that they are doing okay otherwise and do not believe an echocardiogram is currently needed.",
+      "duplicate_entailment": 0.0024,
+      "duplicate_similarity": 0.4472
+    },
+    {
+      "candidate": "No, I haven't had any episodes that have gotten worse.",
+      "speaker": "Patient",
+      "coverage": 0.205,
+      "nearest_so_sentence": "He has not experienced any new symptoms such as dizziness, palpitations, or shortness of breath.",
+      "statement": "The patient denies experiencing any episodes of shortness of breath, chest pain, or palpitations that have worsened in frequency or intensity since the last follow-up.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Has the patient experienced any episodes of shortness of breath, chest pain, or palpitations that have worsened in frequency or intensity since the last follow-up?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9982,
+        "contradiction": 0.1242
+      },
+      "duplicate_entailment": 0.9974,
+      "duplicate_similarity": 0.7012
+    },
+    {
+      "candidate": "They usually go away after a few minutes and then don't come back for a while.",
+      "speaker": "Patient",
+      "coverage": 0.2248,
+      "nearest_so_sentence": "He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.",
+      "statement": "The patient reports that episodes of shortness of breath, chest pain, or palpitations typically resolve after a few minutes and then do not recur for a while.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: The chest discomfort is more of a pressure-like feeling, and it happens maybe a couple times a month. When it does, it usually only lasts a few minutes, and then it goes away for a while. I just take it easy on those days and don't push myself too hard.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9974,
+        "contradiction": 0.3484
+      }
+    },
+    {
+      "candidate": "I just take it easy on those days and don't push myself too hard.",
+      "speaker": "Patient",
+      "coverage": 0.2495,
+      "nearest_so_sentence": "He reports feeling better overall, but still experiences chest discomfort, described as a pressure-like feeling, approximately 2-3 times a month, lasting a few minutes.",
+      "statement": "The patient reports taking it easy on days when experiencing chest discomfort.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: The chest discomfort is more of a pressure-like feeling, and it happens maybe a couple times a month. When it does, it usually only lasts a few minutes, and then it goes away for a while. I just take it easy on those days and don't push myself too hard.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0075
+      },
+      "duplicate_entailment": 0.0077,
+      "duplicate_similarity": 0.6555,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 1,
+        "perplexity": 16.7,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "When it does, it usually only lasts a few minutes, and then it goes away for a while.",
+      "speaker": "Patient",
+      "coverage": 0.2971,
+      "nearest_so_sentence": "He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.",
+      "statement": "The patient reports that the chest discomfort typically lasts a few minutes before resolving for a while.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The chest discomfort is more of a pressure-like feeling, and it happens maybe a couple times a month. When it does, it usually only lasts a few minutes, and then it goes away for a while. I just take it easy on those days and don't push myself too hard.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0029
+      },
+      "duplicate_entailment": 0.9964,
+      "duplicate_similarity": 0.7481
+    },
+    {
+      "candidate": "I don't have the details of my most recent echocardiogram, but my ECG from December 26th showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly.",
+      "speaker": "Patient",
+      "coverage": 0.305,
+      "nearest_so_sentence": "He has a history of mitral regurgitation and atrial fibrillation, and is currently taking Coumadin, Lasix, and Atenolol.",
+      "statement": "The patient does not have the details of their most recent echocardiogram, but their ECG from December 26th showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't recall having an echocardiogram since my surgery, but my most recent ECG was done on December 26th. It showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9967,
+        "contradiction": 0.0111
+      },
+      "first_rewrite_rejected": "The patient reports an ECG from December 26th showing atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly.",
+      "duplicate_entailment": 0.0023,
+      "duplicate_similarity": 0.4119,
+      "insertion": {
+        "section": "objective",
+        "line_index": 0,
+        "perplexity": null,
+        "removed_placeholder": [
+          "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+        ]
+      }
+    },
+    {
+      "candidate": "It usually happens when I'm exerting myself, and it goes away after a few minutes.",
+      "speaker": "Patient",
+      "coverage": 0.3197,
+      "nearest_so_sentence": "He also reports shallow breathing, especially during exertion.",
+      "statement": "The patient reports that the episodes of shortness of breath or chest discomfort typically occur when exerting themselves and resolve after a few minutes.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: No, the chest discomfort I feel is more of a pressure-like sensation, and it doesn't feel sharp or sudden. It usually happens when I'm exerting myself, and it goes away after a few minutes. I haven't had any new or different kinds of pain since my last checkup.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.7784
+      }
+    },
+    {
+      "candidate": "I haven't had any new or different kinds of pain since my last checkup.",
+      "speaker": "Patient",
+      "coverage": 0.3208,
+      "nearest_so_sentence": "He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.",
+      "statement": "The patient reports no new or different kinds of pain since their last checkup.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, the chest discomfort I feel is more of a pressure-like sensation, and it doesn't feel sharp or sudden. It usually happens when I'm exerting myself, and it goes away after a few minutes. I haven't had any new or different kinds of pain since my last checkup.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.2378
+      },
+      "duplicate_entailment": 0.9968,
+      "duplicate_similarity": 0.5826
+    },
+    {
+      "candidate": "My most recent ECG was done on December 26th, and it showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly.",
+      "speaker": "Patient",
+      "coverage": 0.3235,
+      "nearest_so_sentence": "He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.",
+      "statement": "The patient's most recent ECG, performed on December 26th, showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I don't recall having an echocardiogram since my surgery. My most recent ECG was done on December 26th, and it showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9801,
+        "contradiction": 0.275
+      },
+      "duplicate_entailment": 0.0034,
+      "duplicate_similarity": 0.423
+    },
+    {
+      "candidate": "My most recent ECG was done on December 26th, and it showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly.",
+      "speaker": "Patient",
+      "coverage": 0.3241,
+      "nearest_so_sentence": "He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.",
+      "statement": "The patient's most recent ECG, performed on December 26th, showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I don't recall having an echocardiogram since my surgery. My most recent ECG was done on December 26th, and it showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9801,
+        "contradiction": 0.275
+      },
+      "duplicate_entailment": 0.0034,
+      "duplicate_similarity": 0.423
+    },
+    {
+      "candidate": "No, I don't recall having an echocardiogram since my surgery.",
+      "speaker": "Patient",
+      "coverage": 0.3659,
+      "nearest_so_sentence": "He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.",
+      "statement": "The patient reports not recalling having an echocardiogram since the mitral valve repair surgery in August 2020.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Doctor: Has the patient undergone an echocardiogram since the mitral valve repair surgery in August 2020?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.898
+      }
+    },
+    {
+      "candidate": "No, I don't recall having an echocardiogram since my surgery.",
+      "speaker": "Patient",
+      "coverage": 0.3659,
+      "nearest_so_sentence": "He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.",
+      "statement": "The patient reports not having undergone an echocardiogram since the mitral valve repair surgery.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Doctor: Has the patient undergone an echocardiogram since the mitral valve repair surgery? If not, is there a plan to schedule one for further evaluation?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.9925
+      }
+    },
+    {
+      "candidate": "No, I don't recall having an echocardiogram since my surgery.",
+      "speaker": "Patient",
+      "coverage": 0.3659,
+      "nearest_so_sentence": "He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.",
+      "statement": "The patient reports not having undergone an echocardiogram since surgery.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Doctor: Has the patient undergone an echocardiogram since the mitral valve repair surgery? If not, is there a plan to schedule one for further evaluation?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.9944
+      }
+    },
+    {
+      "candidate": "No, I don't recall having an echocardiogram since my surgery.",
+      "speaker": "Patient",
+      "coverage": 0.3663,
+      "nearest_so_sentence": "He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.",
+      "statement": "The patient reports not having an echocardiogram since the mitral valve repair surgery in August 2020.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Doctor: Has the patient undergone an echocardiogram since the mitral valve repair surgery in August 2020?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.961
+      }
+    },
+    {
+      "candidate": "I don't recall having an echocardiogram since my surgery, but my most recent ECG was done on December 26th.",
+      "speaker": "Patient",
+      "coverage": 0.3764,
+      "nearest_so_sentence": "He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.",
+      "statement": "The patient reports having had an ECG on December 26th, but does not recall having an echocardiogram since the mitral valve repair surgery.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: No, I don't recall having an echocardiogram since my surgery. My most recent ECG was done on December 26th, and it showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0034
+      },
+      "duplicate_entailment": 0.0179,
+      "duplicate_similarity": 0.5336,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 1,
+        "perplexity": 15.43,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don't recall having an echocardiogram since my surgery, but my most recent ECG was done on December 26th.",
+      "speaker": "Patient",
+      "coverage": 0.3766,
+      "nearest_so_sentence": "He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.",
+      "statement": "The patient reports not having undergone an echocardiogram since the mitral valve repair surgery in August 2020, but notes that their most recent ECG was performed on December 26th.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: No, I don't recall having an echocardiogram since my surgery. My most recent ECG was done on December 26th, and it showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.713
+      }
+    },
+    {
+      "candidate": "I don't recall having an echocardiogram since my surgery, but my most recent ECG was done on December 26th.",
+      "speaker": "Patient",
+      "coverage": 0.377,
+      "nearest_so_sentence": "He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.",
+      "statement": "The patient reports not having undergone an echocardiogram since the mitral valve repair surgery, but notes that their most recent ECG was performed on December 26th.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I don't recall having an echocardiogram since my surgery. My most recent ECG was done on December 26th, and it showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.1357
+      },
+      "duplicate_entailment": 0.0064,
+      "duplicate_similarity": 0.6415
+    },
+    {
+      "candidate": "I don't recall having an echocardiogram since my surgery, but my most recent ECG was done on December 26th.",
+      "speaker": "Patient",
+      "coverage": 0.3772,
+      "nearest_so_sentence": "He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.",
+      "statement": "The patient states not recalling having undergone an echocardiogram since the mitral valve repair surgery, but notes that their most recent ECG was performed on December 26th.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I don't recall having an echocardiogram since my surgery. My most recent ECG was done on December 26th, and it showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0015
+      },
+      "first_rewrite_rejected": "The patient reports not having undergone an echocardiogram since the mitral valve repair surgery, but notes that their most recent electrocardiogram (ECG) was performed on December 26th.",
+      "duplicate_entailment": 0.0047,
+      "duplicate_similarity": 0.5888
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 44,
+    "num_covered": 23,
+    "num_flagged": 21,
+    "num_not_checked_cap": 0,
+    "num_added": 4
+  },
+  "gaps": {
+    "gaps": [
+      {
+        "id": "q1",
+        "gap": "Most recent echocardiogram results",
+        "question": "What were the findings of the most recent echocardiogram, if any?",
+        "category": "objective",
+        "status": "unresolved",
+        "answer": null
+      }
+    ],
+    "dropped": [],
+    "num_generated": 1
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "stage": "stage2",
+        "section": "subjective",
+        "claim": "The patient is a 60-year-old male.",
+        "source_sentence": "Patient is a 60-year-old male who underwent mitral valve repair surgery in August 2020.",
+        "decision": "removed_unsupported",
+        "scores": {
+          "entailment": 0.0025,
+          "neutral": 0.88,
+          "contradiction": 0.1175
+        },
+        "reason": "No supporting evidence in the conversation (not asserted to be false).",
+        "nearest_evidence": "Patient: The chest discomfort is more of a pressure-like feeling, and it happens maybe a couple times a month. When it does, it usually only lasts a few minutes, and then it goes away for a while. I just take it easy on those days and don't push myself too hard."
+      }
+    ],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "My doctor hasn't mentioned scheduling one, but I'm not sure if that's part of my follow-up plan.",
+        "statement": "The patient reports that their doctor has not mentioned scheduling an echocardiogram since the mitral valve repair surgery.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9995,
+          "contradiction": 0.9557
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "My doctor hasn't mentioned scheduling one, but I'm not sure if that's part of my follow-up plan.",
+        "statement": "The patient reports that their doctor has not mentioned scheduling an echocardiogram or other cardiac imaging studies as part of their follow-up plan.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9994,
+          "contradiction": 0.9977
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "They usually go away after a few minutes and then don't come back for a while.",
+        "statement": "The patient reports that episodes of shortness of breath, chest pain, or palpitations typically resolve after a few minutes and then do not recur for a while.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9974,
+          "contradiction": 0.3484
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "It usually happens when I'm exerting myself, and it goes away after a few minutes.",
+        "statement": "The patient reports that the episodes of shortness of breath or chest discomfort typically occur when exerting themselves and resolve after a few minutes.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9993,
+          "contradiction": 0.7784
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "No, I don't recall having an echocardiogram since my surgery.",
+        "statement": "The patient reports not recalling having an echocardiogram since the mitral valve repair surgery in August 2020.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.898
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "No, I don't recall having an echocardiogram since my surgery.",
+        "statement": "The patient reports not having undergone an echocardiogram since the mitral valve repair surgery.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.9925
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "No, I don't recall having an echocardiogram since my surgery.",
+        "statement": "The patient reports not having undergone an echocardiogram since surgery.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9997,
+          "contradiction": 0.9944
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "No, I don't recall having an echocardiogram since my surgery.",
+        "statement": "The patient reports not having an echocardiogram since the mitral valve repair surgery in August 2020.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9995,
+          "contradiction": 0.961
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I don't recall having an echocardiogram since my surgery, but my most recent ECG was done on December 26th.",
+        "statement": "The patient reports not having undergone an echocardiogram since the mitral valve repair surgery in August 2020, but notes that their most recent ECG was performed on December 26th.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9995,
+          "contradiction": 0.713
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 52.0,
+  "ap_unchanged": true,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 60 years old, and I'm here because I had mitral valve repair surgery in August 2020, and I just wanted to check in on how I'm doing. I've been feeling better overall, but I still have some chest discomfort sometimes and my breathing feels shallow at times.\nDoctor: Could you describe the nature of the chest discomfort (e.g., sharp, dull, pressure-like), its frequency (e.g., daily, weekly), and how long each episode typically lasts?\nPatient: The chest discomfort is more of a pressure-like feeling, and it happens maybe a couple times a month. When it does, it usually only lasts a few minutes, and then it goes away for a while. I just take it easy on those days and don't push myself too hard.\nDoctor: Could you please tell me if you have any history of heart attacks, arrhythmias, or other cardiac procedures, as well as any medications you are currently taking for your heart condition?\nPatient: I don't have a history of heart attacks, but I do have a history of mitral regurgitation and atrial fibrillation. I've had a mitral valve repair surgery. As for medications, I'm taking Coumadin, Lasix, and Atenolol.\nDoctor: Could you provide details about the results of your most recent echocardiogram and ECG, as well as any other relevant blood tests or imaging studies you've had since your mitral valve repair surgery?\nPatient: I don't have the details of my most recent echocardiogram, but my ECG from December 26th showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study. I haven't had any other blood tests or imaging studies since my surgery that I'm aware of.\nDoctor: Could you clarify if you have experienced any changes in the frequency, duration, or intensity of your chest discomfort since your last follow-up? Additionally, have you noticed any new symptoms such as dizziness, palpitations, or shortness of breath that might be related to your atrial fibrillation or mitral valve repair?\nPatient: No, I haven't noticed any changes in how often or how bad the chest discomfort is since my last check-up. It's still happening a couple times a month, and it's the same pressure-like feeling that goes away after a few minutes. I haven't had any new symptoms like dizziness or palpitations, but my breathing does feel a little shallow sometimes, especially when I'm exerting myself.\nDoctor: Has the patient undergone an echocardiogram since the mitral valve repair surgery? If so, when was the most recent one and what were the findings?\nPatient: I don't recall having an echocardiogram since my surgery, but my most recent ECG was done on December 26th. It showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study.\nDoctor: Has the patient undergone an echocardiogram since the mitral valve repair surgery in August 2020? If so, when was the most recent echocardiogram performed, and what were the findings?\nPatient: I don't recall having an echocardiogram since my surgery, but my most recent ECG was done on December 26th. It showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study.\nDoctor: Has the patient undergone an echocardiogram since the mitral valve repair surgery? If so, please provide the results and the date of the most recent echocardiogram.\nPatient: I don't recall having an echocardiogram since my surgery, but my most recent ECG was done on December 26th. It showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study.\nDoctor: Has the patient had any recent echocardiograms or other imaging studies since the mitral valve repair surgery? If not, when was the last echocardiogram performed?\nPatient: I don't recall having an echocardiogram since my surgery, but my most recent ECG was done on December 26th. It showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study.\nDoctor: Has the patient had an echocardiogram since the mitral valve repair surgery in August 2020?\nPatient: No, I don't recall having an echocardiogram since my surgery. My most recent ECG was done on December 26th, and it showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study.\nDoctor: Has the patient experienced any episodes of shortness of breath, chest pain, or palpitations that have worsened in frequency or intensity since the last follow-up?\nPatient: No, I haven't had any episodes that have gotten worse. The chest pain and shortness of breath I have are pretty much the same as before, and I've learned to manage them by slowing down when I feel them coming on. They usually go away after a few minutes and then don't come back for a while.\nDoctor: Has the patient undergone an echocardiogram since the mitral valve repair surgery in August 2020?\nPatient: No, I don't recall having an echocardiogram since my surgery. My most recent ECG was done on December 26th, and it showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study.\nDoctor: Has the patient undergone an echocardiogram since the mitral valve repair surgery? If not, is there a plan to schedule one for further evaluation?\nPatient: No, I don't recall having an echocardiogram since my surgery. My doctor hasn't mentioned scheduling one, but I'm not sure if that's part of my follow-up plan. I've been doing okay otherwise, so maybe it's not needed right now.\nDoctor: Has the patient experienced any episodes of shortness of breath or chest discomfort that feel different from the usual pressure-like sensation, such as sharp, sudden, or radiating pain?\nPatient: No, the chest discomfort I feel is more of a pressure-like sensation, and it doesn't feel sharp or sudden. It usually happens when I'm exerting myself, and it goes away after a few minutes. I haven't had any new or different kinds of pain since my last checkup.\nDoctor: Has the patient undergone any recent echocardiogram or other cardiac imaging studies since August 2020? If not, is there a plan to schedule one during this follow-up?\nPatient: No, I don't recall having an echocardiogram since my surgery. My doctor hasn't mentioned scheduling one, but I'm not sure if that's part of my follow-up plan. I've been doing okay otherwise, so maybe it's not needed right now.",
+  "reference_so": {
+    "subjective": "Basic information: 60-year-old male, post-mitral valve repair surgery (August 2020), presenting for follow-up. Reports ongoing chest discomfort and shallow breathing.\n\nHistory of present illness: The patient had mitral valve repair surgery in August 2020 and is now presenting for follow-up. He reports ongoing chest discomfort and shallow breathing, though he feels better overall. The chest discomfort is described as a pressure-like feeling, occurring a couple of times a month, lasting a few minutes, and resolving on its own. On those days, he takes it easy and avoids pushing himself too hard. There have been no changes in the pattern of symptoms since the last follow-up. He has not experienced any new symptoms such as dizziness or palpitations, but he notes that his breathing feels a little shallow, especially during exertion.\n\nPast history: The patient has a history of mitral valve repair surgery in August 2020, mitral regurgitation, and atrial fibrillation. Current medications include Coumadin, Lasix, and Atenolol. No echocardiogram since August 2020.",
+    "objective": "Physical examination: Physical examination findings are not yet available.\n\nInvestigations: ECG from December 26th: atrial fibrillation with controlled ventricular response and anterior T-wave inversion. No significant changes compared to the previous study. No other blood tests or imaging studies since surgery. Echocardiogram not performed since surgery."
+  }
+}

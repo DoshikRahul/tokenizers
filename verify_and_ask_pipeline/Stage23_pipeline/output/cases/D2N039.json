@@ -1,0 +1,667 @@
+{
+  "case_id": "D2N039",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient's age: Late 50s\n* Patient's gender: Not specified\n* Patient's primary concern: High blood pressure, despite taking medications as prescribed\n* Patient's symptoms: Mild headaches when blood pressure is high, no chest pain, shortness of breath, dizziness, or fatigue\n* Patient's medical history: Family history of high blood pressure and kidney disease\n* Patient's medication regimen: Norvasc 10 mg daily and Carvedilol 25 mg twice a day\n* Patient's understanding of kidney issues: Primary care doctor mentioned kidney issues, but patient was not given specific details",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient's age: Late 50s\n* Patient's gender: Not specified\n* Patient's primary concern: High blood pressure, despite taking medications as prescribed\n* Patient's symptoms: Mild headaches when blood pressure is high, no chest pain, shortness of breath, dizziness, or fatigue\n* Patient's medical history: Family history of high blood pressure and kidney disease\n* Patient's medication regimen: Norvasc 10 mg daily and Carvedilol 25 mg twice a day\n* Patient's understanding of kidney issues: Primary care doctor mentioned kidney issues, but patient was not given specific details",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* The patient, Virginia, identifies herself.\n* Patient's age: Late 50s\n* The patient reports that the blood tests were done recently, approximately a few months ago.\n* The patient reports not being given the exact details of their recent blood work findings, but the healthcare provider thought it was important to check further.\n* The patient reports that the primary care doctor thought it was important to check further, but did not provide exact details.\n* Patient's gender: Not specified\n* The patient is following the advice of a healthcare provider and is seeking to collaborate on resolving the issue.\n* Patient's primary concern: High blood pressure, despite taking medications as prescribed\n* The patient will ask their primary care doctor to get those specific values for them and bring them to their next appointment.\n* Patient's symptoms: Mild headaches when blood pressure is high, no chest pain, shortness of breath, dizziness, or fatigue\n* The patient feels a little tired sometimes.\n* The patient hasn't noticed any changes in urination patterns, such as more frequent trips to the bathroom or foamy urine.\n* Patient's medical history: Family history of high blood pressure and kidney disease\n* Patient's medication regimen: Norvasc 10 mg daily and Carvedilol 25 mg twice a day\n* Patient's understanding of kidney issues: Primary care doctor mentioned kidney issues, but patient was not given specific details",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has hypertension, despite taking medications as prescribed, and has been referred to the doctor due to concerns about kidney function.\n* The patient's primary care doctor mentioned kidney issues, but did not provide specific details or values.\n* The patient's family history includes high blood pressure and kidney disease.",
+    "plan": "* The patient will ask their primary care doctor to provide the specific values for serum creatinine, eGFR, and UACR from their recent blood work.\n* The patient will bring the values to their next appointment.\n* The doctor will assess the patient's kidney function and determine the impact of their current medications once the values are obtained."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient's age: Late 50s",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0002,
+        "contradiction": 0.0091
+      },
+      "support_evidence": "Patient: Hi, I'm Virginia. I'm not sure about my exact age, but I'm in my late 50s. What brings me in today is that my blood pressure has been really high, even though I've been taking my medications as prescribed. My primary care doctor noticed some issues with my kidneys in my last blood work and thought it would be a good idea for me to see you.",
+      "contradiction_evidence": "Patient: I'm not sure about my exact age, but I'm in my late 50s. I've had high blood pressure for a while now, and my primary care doctor has been adjusting my medications. I'm currently on Norvasc 10 mg daily and Carvedilol 25 mg twice a day. I don't have chest pain or shortness of breath, but I do get mild headaches when my blood pressure is really high. I don't have dizziness or fatigue on a regular basis, and I haven't noticed any changes in my urination.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient's age: Late 50s",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient's age: Late 50s",
+      "level": "sentence"
+    },
+    {
+      "section": "subjective",
+      "line": 1,
+      "sentence": "Patient's gender: Not specified",
+      "claim": "Patient's gender: Not specified",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    },
+    {
+      "claim": "Patient's primary concern: High blood pressure, despite taking medications as prescribed",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.2873
+      },
+      "support_evidence": "Patient: Hi, I'm Virginia. I'm not sure about my exact age, but I'm in my late 50s. What brings me in today is that my blood pressure has been really high, even though I've been taking my medications as prescribed. My primary care doctor noticed some issues with my kidneys in my last blood work and thought it would be a good idea for me to see you.",
+      "contradiction_evidence": "Patient: I don't have the specific values from my blood work, but my primary care doctor mentioned something about my kidneys, so that's why she referred me to you. I wasn't given the exact details, but she thought it was important to check further.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient's primary concern: High blood pressure, despite taking medications as prescribed",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Patient's primary concern: High blood pressure, despite taking medications as prescribed",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient's symptoms: Mild headaches when blood pressure is high, no chest pain, shortness of breath, dizziness, or fatigue",
+      "scores": {
+        "entailment": 0.9986,
+        "neutral": 0.0003,
+        "contradiction": 0.9925
+      },
+      "support_evidence": "Patient: I'm not sure about my exact age, but I'm in my late 50s. I've had high blood pressure for a while now, and my primary care doctor has been adjusting my medications. I'm currently on Norvasc 10 mg daily and Carvedilol 25 mg twice a day. I don't have chest pain or shortness of breath, but I do get mild headaches when my blood pressure is really high. I don't have dizziness or fatigue on a regular basis, and I haven't noticed any changes in my urination.",
+      "contradiction_evidence": "Patient: I don't have any specific symptoms related to my kidneys other than what my blood pressure issues might be causing. I do notice some swelling in my legs when I'm on my feet a lot, but I didn't think it was connected to my kidneys. I'm just following my doctor's advice and hoping we can figure this out.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient's symptoms: Mild headaches when blood pressure is high, no chest pain, shortness of breath, dizziness, or fatigue",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Patient's symptoms: Mild headaches when blood pressure is high, no chest pain, shortness of breath, dizziness, or fatigue",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient's medical history: Family history of high blood pressure and kidney disease",
+      "scores": {
+        "entailment": 0.9929,
+        "neutral": 0.0053,
+        "contradiction": 0.0018
+      },
+      "support_evidence": "Patient: Both my parents have high blood pressure, and one of them had kidney disease. I didn't realize how important that was, but I guess it's another reason why my blood pressure is so hard to control. I'll make sure to mention that to my primary care doctor when I ask for those test results.",
+      "contradiction_evidence": "Patient: I don't have any specific symptoms related to my kidneys other than what my blood pressure issues might be causing. I do notice some swelling in my legs when I'm on my feet a lot, but I didn't think it was connected to my kidneys. I'm just following my doctor's advice and hoping we can figure this out.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient's medical history: Family history of high blood pressure and kidney disease",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Patient's medical history: Family history of high blood pressure and kidney disease",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient's medication regimen: Norvasc 10 mg daily and Carvedilol 25 mg twice a day",
+      "scores": {
+        "entailment": 0.9986,
+        "neutral": 0.0003,
+        "contradiction": 0.6418
+      },
+      "support_evidence": "Patient: I'm not sure about my exact age, but I'm in my late 50s. I've had high blood pressure for a while now, and my primary care doctor has been adjusting my medications. I'm currently on Norvasc 10 mg daily and Carvedilol 25 mg twice a day. I don't have chest pain or shortness of breath, but I do get mild headaches when my blood pressure is really high. I don't have dizziness or fatigue on a regular basis, and I haven't noticed any changes in my urination.",
+      "contradiction_evidence": "Patient: I'm not sure about my exact age, but I'm in my late 50s. I've had high blood pressure for a while now, and my primary care doctor has been adjusting my medications. I'm currently on Norvasc 10 mg daily and Carvedilol 25 mg twice a day. I don't have chest pain or shortness of breath, but I do get mild headaches when my blood pressure is really high. I don't have dizziness or fatigue on a regular basis, and I haven't noticed any changes in my urination.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient's medication regimen: Norvasc 10 mg daily and Carvedilol 25 mg twice a day",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "Patient's medication regimen: Norvasc 10 mg daily and Carvedilol 25 mg twice a day",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient's understanding of kidney issues: Primary care doctor mentioned kidney issues, but patient was not given specific details",
+      "scores": {
+        "entailment": 0.9988,
+        "neutral": 0.0008,
+        "contradiction": 0.0028
+      },
+      "support_evidence": "Patient: I don't have the specific serum creatinine, eGFR, or UACR values from my blood work. My primary care doctor mentioned something about my kidneys, but she didn't give me the exact numbers. I'm just following her advice and hoping we can figure this out together.",
+      "contradiction_evidence": "Patient: Hi, I'm Virginia. I'm not sure about my exact age, but I'm in my late 50s. What brings me in today is that my blood pressure has been really high, even though I've been taking my medications as prescribed. My primary care doctor noticed some issues with my kidneys in my last blood work and thought it would be a good idea for me to see you.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient's understanding of kidney issues: Primary care doctor mentioned kidney issues, but patient was not given specific details",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 6,
+      "sentence": "Patient's understanding of kidney issues: Primary care doctor mentioned kidney issues, but patient was not given specific details",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 6,
+      "exempt": 2
+    },
+    "num_claims": 6,
+    "num_kept": 6,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient, Virginia, identifies herself.",
+      "evidence": "Patient: Hi, I'm Virginia. I'm not sure about my exact age, but I'm in my late 50s. What brings me in today is that my blood pressure has been really high, even though I've been taking my medications as prescribed. My primary care doctor noticed some issues with my kidneys in my last blood work and thought it would be a good idea for me to see you.",
+      "section": "subjective",
+      "candidate": "Hi, I'm Virginia."
+    },
+    {
+      "statement": "The patient is following the advice of a healthcare provider and is seeking to collaborate on resolving the issue.",
+      "evidence": "Patient: I haven't noticed any changes in my urination patterns, like more frequent trips to the bathroom or foamy urine. I do feel a little tired sometimes, but I think that's just from work and not sure if it's related to my kidneys or not.",
+      "section": "subjective",
+      "candidate": "I'm just following her advice and hoping we can figure this out together."
+    },
+    {
+      "statement": "The patient reports not being given the exact details of their recent blood work findings, but the healthcare provider thought it was important to check further.",
+      "evidence": "Patient: I don't have the specific numbers from my blood work, but my primary care doctor mentioned something about my kidneys, so that's why she referred me to you. I wasn't given the exact details, but she thought it was important to check further.",
+      "section": "subjective",
+      "candidate": "I wasn't given the exact details, but she thought it was important to check further."
+    },
+    {
+      "statement": "The patient reports that the primary care doctor thought it was important to check further, but did not provide exact details.",
+      "evidence": "Patient: I don't have the specific numbers from my blood work, but my primary care doctor mentioned something about my kidneys, so that's why she referred me to you. I wasn't given the exact details, but she thought it was important to check further.",
+      "section": "subjective",
+      "candidate": "I wasn't given the exact details, but she thought it was important to check further."
+    },
+    {
+      "statement": "The patient hasn't noticed any changes in urination patterns, such as more frequent trips to the bathroom or foamy urine.",
+      "evidence": "Patient: I haven't noticed any changes in my urination patterns, like more frequent trips to the bathroom or foamy urine. I do feel a little tired sometimes, but I think that's just from work and not sure if it's related to my kidneys or not.",
+      "section": "subjective",
+      "candidate": "I haven't noticed any changes in my urination patterns, like more frequent trips to the bathroom or foamy urine."
+    },
+    {
+      "statement": "The patient reports that the blood tests were done recently, approximately a few months ago.",
+      "evidence": "Patient: I don't have the exact date when the blood tests were done, but it was recently, maybe a few months ago. I don't have a copy of the results myself, but my primary care doctor has them and I'm sure she can provide them if needed.",
+      "section": "subjective",
+      "candidate": "I don't have the exact date when the blood tests were done, but it was recently, maybe a few months ago."
+    },
+    {
+      "statement": "The patient will ask their primary care doctor to get those specific values for them and bring them to their next appointment.",
+      "evidence": "Patient: I'll ask my primary care doctor to get those specific values for me and bring them to my next appointment. I didn't realize they were so important, but I'm happy to do whatever it takes to figure out what's going on with my kidneys and blood pressure.",
+      "section": "subjective",
+      "candidate": "I'll ask my primary care doctor to get those specific values for me and bring them to my next appointment."
+    },
+    {
+      "statement": "The patient feels a little tired sometimes.",
+      "evidence": "Patient: I haven't noticed any changes in my urination patterns, like more frequent trips to the bathroom or foamy urine. I do feel a little tired sometimes, but I think that's just from work and not sure if it's related to my kidneys or not.",
+      "section": "subjective",
+      "candidate": "I do feel a little tired sometimes, but I think that's just from work and not sure if it's related to my kidneys or not."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "Hi, I'm Virginia.",
+      "speaker": "Patient",
+      "coverage": 0.0864,
+      "nearest_so_sentence": "Patient's age: Late 50s",
+      "statement": "The patient, Virginia, identifies herself.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: Hi, I'm Virginia. I'm not sure about my exact age, but I'm in my late 50s. What brings me in today is that my blood pressure has been really high, even though I've been taking my medications as prescribed. My primary care doctor noticed some issues with my kidneys in my last blood work and thought it would be a good idea for me to see you.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9998,
+        "contradiction": 0.0911
+      },
+      "duplicate_entailment": 0.0006,
+      "duplicate_similarity": 0.4442,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 20.87,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I'm just following her advice and hoping we can figure this out together.",
+      "speaker": "Patient",
+      "coverage": 0.1232,
+      "nearest_so_sentence": "Patient's age: Late 50s",
+      "statement": "The patient is following the advice of a healthcare provider and is seeking to collaborate on resolving the issue.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I haven't noticed any changes in my urination patterns, like more frequent trips to the bathroom or foamy urine. I do feel a little tired sometimes, but I think that's just from work and not sure if it's related to my kidneys or not.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0011
+      },
+      "duplicate_entailment": 0.6428,
+      "duplicate_similarity": 0.4438,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 3,
+        "perplexity": 20.81,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I'm just following her advice and hoping we can figure this out together.",
+      "speaker": "Patient",
+      "coverage": 0.124,
+      "nearest_so_sentence": "Patient's age: Late 50s",
+      "statement": "The patient is following the advice of a healthcare provider and is seeking to collaborate on the assessment of kidney involvement.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I haven't noticed any changes in my urination patterns, like more frequent trips to the bathroom or foamy urine. I do feel a little tired sometimes, but I think that's just from work and not sure if it's related to my kidneys or not.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.001
+      },
+      "duplicate_entailment": 0.7599,
+      "duplicate_similarity": 0.671
+    },
+    {
+      "candidate": "I wasn't given the exact details, but she thought it was important to check further.",
+      "speaker": "Patient",
+      "coverage": 0.1613,
+      "nearest_so_sentence": "Patient's understanding of kidney issues: Primary care doctor mentioned kidney issues, but patient was not given specific details",
+      "statement": "The patient reports not being given the exact details of their serum creatinine, estimated glomerular filtration rate (eGFR), and urine albumin-to-creatinine ratio (UACR) from their most recent blood work.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Could you provide the specific findings from your recent blood work that indicated kidney issues, such as serum creatinine levels, estimated glomerular filtration rate (eGFR), and urine albumin-to-creatinine ratio (UACR)?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0105
+      },
+      "duplicate_entailment": 0.9808,
+      "duplicate_similarity": 0.4529
+    },
+    {
+      "candidate": "I wasn't given the exact details, but she thought it was important to check further.",
+      "speaker": "Patient",
+      "coverage": 0.1613,
+      "nearest_so_sentence": "Patient's understanding of kidney issues: Primary care doctor mentioned kidney issues, but patient was not given specific details",
+      "statement": "The patient reports that their primary care doctor thought it was important to check further, but did not provide exact details.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't have the specific numbers from my blood work, but my primary care doctor mentioned something about my kidneys, so that's why she referred me to you. I wasn't given the exact details, but she thought it was important to check further.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0579
+      },
+      "duplicate_entailment": 0.7936,
+      "duplicate_similarity": 0.48
+    },
+    {
+      "candidate": "I wasn't given the exact details, but she thought it was important to check further.",
+      "speaker": "Patient",
+      "coverage": 0.1613,
+      "nearest_so_sentence": "Patient's understanding of kidney issues: Primary care doctor mentioned kidney issues, but patient was not given specific details",
+      "statement": "The patient reports that their primary care doctor thought it was important to check further, but did not provide exact details.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't have the specific numbers from my blood work, but my primary care doctor mentioned something about my kidneys, so that's why she referred me to you. I wasn't given the exact details, but she thought it was important to check further.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0579
+      },
+      "duplicate_entailment": 0.7936,
+      "duplicate_similarity": 0.48
+    },
+    {
+      "candidate": "I wasn't given the exact details, but she thought it was important to check further.",
+      "speaker": "Patient",
+      "coverage": 0.1626,
+      "nearest_so_sentence": "Patient's understanding of kidney issues: Primary care doctor mentioned kidney issues, but patient was not given specific details",
+      "statement": "The patient reports not being given the exact details of their recent blood work findings, but the healthcare provider thought it was important to check further.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't have the specific numbers from my blood work, but my primary care doctor mentioned something about my kidneys, so that's why she referred me to you. I wasn't given the exact details, but she thought it was important to check further.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0014
+      },
+      "duplicate_entailment": 0.0017,
+      "duplicate_similarity": 0.4725,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 2,
+        "perplexity": 21.14,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I wasn't given the exact details, but she thought it was important to check further.",
+      "speaker": "Patient",
+      "coverage": 0.1636,
+      "nearest_so_sentence": "Patient's understanding of kidney issues: Primary care doctor mentioned kidney issues, but patient was not given specific details",
+      "statement": "The patient reports that the primary care doctor thought it was important to check further, but did not provide exact details.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't have the specific numbers from my blood work, but my primary care doctor mentioned something about my kidneys, so that's why she referred me to you. I wasn't given the exact details, but she thought it was important to check further.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0443
+      },
+      "duplicate_entailment": 0.5053,
+      "duplicate_similarity": 0.4784,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 3,
+        "perplexity": 17.77,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I wasn't given the exact details, but she thought it was important to check further.",
+      "speaker": "Patient",
+      "coverage": 0.1636,
+      "nearest_so_sentence": "Patient's understanding of kidney issues: Primary care doctor mentioned kidney issues, but patient was not given specific details",
+      "statement": "The patient reports that their primary care doctor thought it was important to check further, but did not provide specific details.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't have the specific numbers from my blood work, but my primary care doctor mentioned something about my kidneys, so that's why she referred me to you. I wasn't given the exact details, but she thought it was important to check further.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0942
+      },
+      "duplicate_entailment": 0.7078,
+      "duplicate_similarity": 0.479
+    },
+    {
+      "candidate": "I don't have the specific serum creatinine, eGFR, or UACR values from my blood work.",
+      "speaker": "Patient",
+      "coverage": 0.2307,
+      "nearest_so_sentence": "Patient's medication regimen: Norvasc 10 mg daily and Carvedilol 25 mg twice a day",
+      "statement": "The patient reports not having the specific serum creatinine, eGFR, or UACR values from their recent blood work.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Could you please ask your primary care doctor to provide the specific values for serum creatinine, eGFR, and UACR from your recent blood work? These are essential for assessing your kidney function and determining the impact of your current medications.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.005
+      },
+      "duplicate_entailment": 0.9291,
+      "duplicate_similarity": 0.3543
+    },
+    {
+      "candidate": "I don't have the specific serum creatinine, eGFR, or UACR values from my blood work.",
+      "speaker": "Patient",
+      "coverage": 0.2312,
+      "nearest_so_sentence": "Patient's medication regimen: Norvasc 10 mg daily and Carvedilol 25 mg twice a day",
+      "statement": "The patient reports not having the specific serum creatinine, eGFR, or UACR values from their recent blood work.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Could you please ask your primary care doctor to provide the specific values for serum creatinine, eGFR, and UACR from your recent blood work? These are essential for assessing your kidney function and determining the impact of your current medications.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.005
+      },
+      "duplicate_entailment": 0.9291,
+      "duplicate_similarity": 0.3543
+    },
+    {
+      "candidate": "I'm just following my doctor's advice and hoping we can figure this out.",
+      "speaker": "Patient",
+      "coverage": 0.2742,
+      "nearest_so_sentence": "Patient's medication regimen: Norvasc 10 mg daily and Carvedilol 25 mg twice a day",
+      "statement": "The patient reports following their doctor's advice and is seeking to resolve their issue.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't have any specific symptoms related to my kidneys other than what my blood pressure issues might be causing. I do notice some swelling in my legs when I'm on my feet a lot, but I didn't think it was connected to my kidneys. I'm just following my doctor's advice and hoping we can figure this out.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0013
+      },
+      "duplicate_entailment": 0.9745,
+      "duplicate_similarity": 0.5575
+    },
+    {
+      "candidate": "I don't have a copy of the results myself, but my primary care doctor has them and I'm sure she can provide them if needed.",
+      "speaker": "Patient",
+      "coverage": 0.2776,
+      "nearest_so_sentence": "Patient's age: Late 50s",
+      "statement": "The patient reports that their primary care doctor has a copy of their blood test results and can provide them if needed.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I don't have the exact date when the blood tests were done, but it was recently, maybe a few months ago. I don't have a copy of the results myself, but my primary care doctor has them and I'm sure she can provide them if needed.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.9979
+      }
+    },
+    {
+      "candidate": "I haven't noticed any changes in my urination patterns, like more frequent trips to the bathroom or foamy urine.",
+      "speaker": "Patient",
+      "coverage": 0.2884,
+      "nearest_so_sentence": "Patient's understanding of kidney issues: Primary care doctor mentioned kidney issues, but patient was not given specific details",
+      "statement": "The patient hasn't noticed any changes in urination patterns, such as more frequent trips to the bathroom or foamy urine.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I haven't noticed any changes in my urination patterns, like more frequent trips to the bathroom or foamy urine. I do feel a little tired sometimes, but I think that's just from work and not sure if it's related to my kidneys or not.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9984,
+        "contradiction": 0.2131
+      },
+      "first_rewrite_rejected": "The patient denies any changes in urination patterns, including increased frequency or foamy urine.",
+      "duplicate_entailment": 0.0488,
+      "duplicate_similarity": 0.4434,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 8,
+        "perplexity": 17.63,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don't have the exact date when the blood tests were done, but it was recently, maybe a few months ago.",
+      "speaker": "Patient",
+      "coverage": 0.312,
+      "nearest_so_sentence": "Patient's age: Late 50s",
+      "statement": "The patient reports that the blood tests were done recently, approximately a few months ago.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't have the exact date when the blood tests were done, but it was recently, maybe a few months ago. I don't have a copy of the results myself, but my primary care doctor has them and I'm sure she can provide them if needed.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0236
+      },
+      "duplicate_entailment": 0.0058,
+      "duplicate_similarity": 0.4122,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 2,
+        "perplexity": 16.6,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I'll ask my primary care doctor to get those specific values for me and bring them to my next appointment.",
+      "speaker": "Patient",
+      "coverage": 0.3146,
+      "nearest_so_sentence": "Patient's age: Late 50s",
+      "statement": "The patient will ask their primary care doctor to get those specific values for them and bring them to their next appointment.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I'll ask my primary care doctor to get those specific values for me and bring them to my next appointment. I didn't realize they were so important, but I'm happy to do whatever it takes to figure out what's going on with my kidneys and blood pressure.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.0012
+      },
+      "first_rewrite_rejected": "The patient reports that they will ask their primary care doctor to obtain specific values for serum creatinine, eGFR, and UACR from recent blood work and bring them to their next appointment.",
+      "duplicate_entailment": 0.0009,
+      "duplicate_similarity": 0.421,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 8,
+        "perplexity": 16.55,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I'll make sure to mention that to my primary care doctor when I ask for those test results.",
+      "speaker": "Patient",
+      "coverage": 0.3231,
+      "nearest_so_sentence": "Patient's understanding of kidney issues: Primary care doctor mentioned kidney issues, but patient was not given specific details",
+      "statement": "The patient reports that they will mention their request for test results to their primary care doctor.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Thank you for sharing that with me. Since you don't have the specific numbers from your blood work, could you let me know when you had the blood tests done and if you have a copy of the results or if your primary care doctor can provide them? This will help us move forward with your evaluation.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0055
+      },
+      "duplicate_entailment": 0.0038,
+      "duplicate_similarity": 0.4778
+    },
+    {
+      "candidate": "I don't have dizziness or fatigue on a regular basis, and I haven't noticed any changes in my urination.",
+      "speaker": "Patient",
+      "coverage": 0.3604,
+      "nearest_so_sentence": "Patient's symptoms: Mild headaches when blood pressure is high, no chest pain, shortness of breath, dizziness, or fatigue",
+      "statement": "The patient reports no regular dizziness or fatigue and denies any changes in urination.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I'm not sure about my exact age, but I'm in my late 50s. I've had high blood pressure for a while now, and my primary care doctor has been adjusting my medications. I'm currently on Norvasc 10 mg daily and Carvedilol 25 mg twice a day. I don't have chest pain or shortness of breath, but I do get mild headaches when my blood pressure is really high. I don't have dizziness or fatigue on a regular basis, and I haven't noticed any changes in my urination.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.9954
+      }
+    },
+    {
+      "candidate": "I do feel a little tired sometimes, but I think that's just from work and not sure if it's related to my kidneys or not.",
+      "speaker": "Patient",
+      "coverage": 0.3839,
+      "nearest_so_sentence": "Patient's understanding of kidney issues: Primary care doctor mentioned kidney issues, but patient was not given specific details",
+      "statement": "The patient feels a little tired sometimes.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I haven't noticed any changes in my urination patterns, like more frequent trips to the bathroom or foamy urine. I do feel a little tired sometimes, but I think that's just from work and not sure if it's related to my kidneys or not.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0029
+      },
+      "first_rewrite_rejected": "The patient reports feeling tired, attributing it to work-related factors, and is unsure if it is related to their kidneys.",
+      "duplicate_entailment": 0.1722,
+      "duplicate_similarity": 0.5022,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 10,
+        "perplexity": 16.23,
+        "removed_placeholder": []
+      }
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 39,
+    "num_covered": 20,
+    "num_flagged": 19,
+    "num_not_checked_cap": 0,
+    "num_added": 8
+  },
+  "gaps": {
+    "gaps": [
+      {
+        "id": "q1",
+        "gap": "Patient's exact age",
+        "question": "What is your exact age, Virginia?",
+        "category": "subjective",
+        "status": "unresolved",
+        "answer": null
+      },
+      {
+        "id": "q2",
+        "gap": "Severity of kidney issues",
+        "question": "Can you describe the severity of the kidney issues mentioned by your primary care doctor?",
+        "category": "subjective",
+        "status": "unresolved",
+        "answer": null
+      },
+      {
+        "id": "q3",
+        "gap": "Any relevant medical history or allergies",
+        "question": "Do you have any relevant medical history or allergies that may be contributing to your high blood pressure or kidney issues?",
+        "category": "subjective",
+        "status": "unresolved",
+        "answer": null
+      }
+    ],
+    "dropped": [
+      {
+        "gap": "Specific values for serum creatinine, eGFR, and UACR from recent blood work",
+        "question": "Can you please provide the specific values for serum creatinine, eGFR, and UACR from your recent blood work?",
+        "category": "objective",
+        "status": "dropped_already_answered"
+      },
+      {
+        "gap": "Duration of hypertension",
+        "question": "How long have you been experiencing hypertension, Virginia?",
+        "category": "subjective",
+        "status": "dropped_already_answered"
+      }
+    ],
+    "num_generated": 5
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "I don't have a copy of the results myself, but my primary care doctor has them and I'm sure she can provide them if needed.",
+        "statement": "The patient reports that their primary care doctor has a copy of their blood test results and can provide them if needed.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.9979
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I don't have dizziness or fatigue on a regular basis, and I haven't noticed any changes in my urination.",
+        "statement": "The patient reports no regular dizziness or fatigue and denies any changes in urination.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9995,
+          "contradiction": 0.9954
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 58.8,
+  "ap_unchanged": true,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: Hi, I'm Virginia. I'm not sure about my exact age, but I'm in my late 50s. What brings me in today is that my blood pressure has been really high, even though I've been taking my medications as prescribed. My primary care doctor noticed some issues with my kidneys in my last blood work and thought it would be a good idea for me to see you.\nDoctor: Could you please confirm your exact age and provide more details about your hypertension, such as how long you've had it, the medications you're currently taking, and whether you've experienced any symptoms like chest pain, shortness of breath, dizziness, swelling, fatigue, or changes in urination?\nPatient: I'm not sure about my exact age, but I'm in my late 50s. I've had high blood pressure for a while now, and my primary care doctor has been adjusting my medications. I'm currently on Norvasc 10 mg daily and Carvedilol 25 mg twice a day. I don't have chest pain or shortness of breath, but I do get mild headaches when my blood pressure is really high. I don't have dizziness or fatigue on a regular basis, and I haven't noticed any changes in my urination.\nDoctor: Could you provide the specific findings from your recent blood work that indicated kidney issues, such as serum creatinine levels, estimated glomerular filtration rate (eGFR), and urine albumin-to-creatinine ratio (UACR)?\nPatient: I don't have the specific numbers from my blood work, but my primary care doctor mentioned something about my kidneys, so that's why she referred me to you. I wasn't given the exact details, but she thought it was important to check further.\nDoctor: Thank you for sharing that with me. Since you don't have the specific numbers from your blood work, could you let me know when you had the blood tests done and if you have a copy of the results or if your primary care doctor can provide them? This will help us move forward with your evaluation.\nPatient: I don't have the exact date when the blood tests were done, but it was recently, maybe a few months ago. I don't have a copy of the results myself, but my primary care doctor has them and I'm sure she can provide them if needed.\nDoctor: Could you please ask your primary care doctor to provide the specific values for serum creatinine, eGFR, and UACR from your recent blood work? These are essential for assessing your kidney function and determining the impact of your current medications.\nPatient: I'll ask my primary care doctor to get those specific values for me and bring them to my next appointment. I didn't realize they were so important, but I'm happy to do whatever it takes to figure out what's going on with my kidneys and blood pressure.\nDoctor: Thank you for your willingness to cooperate. Once you have the serum creatinine, estimated glomerular filtration rate (eGFR), and urine albumin-to-creatinine ratio (UACR) values from your primary care doctor, please bring them to your next appointment. In the meantime, could you let me know if you have any history of kidney disease, hypertension, or other relevant medical conditions in your family?\nPatient: Both my parents have high blood pressure, and one of them had kidney disease. I didn't realize how important that was, but I guess it's another reason why my blood pressure is so hard to control. I'll make sure to mention that to my primary care doctor when I ask for those test results.\nDoctor: Could you please provide the specific values for your serum creatinine, estimated glomerular filtration rate (eGFR), and urine albumin-to-creatinine ratio (UACR) from your most recent blood work? This will help us better understand your kidney function.\nPatient: I don't have the specific values from my blood work, but my primary care doctor mentioned something about my kidneys, so that's why she referred me to you. I wasn't given the exact details, but she thought it was important to check further.\nDoctor: Thank you for sharing that with me. Since you don't have the specific values from your blood work, could you please let me know if your primary care doctor has provided you with any reports or if there is a way for us to obtain those results? This information is important for assessing your kidney function and guiding your treatment.\nPatient: I don't have the specific values from my blood work, but my primary care doctor mentioned something about my kidneys, so that's why she referred me to you. I wasn't given the exact details, but she thought it was important to check further.\nDoctor: Thank you for sharing that with me. Since you don't have the exact values from your blood work, could you let me know if your primary care doctor has provided you with any reports or if there's a way we can obtain those results for further evaluation?\nPatient: I don't have the specific values from my blood work, but my primary care doctor mentioned something about my kidneys, so that's why she referred me to you. I wasn't given the exact details, but she thought it was important to check further.\nDoctor: Thank you for sharing that with me. Since you don't have the specific blood work values, could you let me know if your primary care doctor has provided you with any reports or if there is a way for us to obtain those results for further evaluation?\nPatient: I don't have the specific values from my blood work, but my primary care doctor mentioned something about my kidneys, so that's why she referred me to you. I wasn't given the exact details, but she thought it was important to check further.\nDoctor: Thank you for sharing that with me. Since you don't have the specific values from your blood work, could you please let me know if your primary care doctor has provided you with any additional information or if there are any other symptoms you've noticed related to your kidney issues?\nPatient: I don't have the specific values from my blood work, but my primary care doctor mentioned something about my kidneys, so that's why she referred me to you. I wasn't given the exact details, but she thought it was important to check further.\nDoctor: Could you please describe any symptoms you might be experiencing related to your kidneys, such as swelling in your legs, fatigue, changes in your urination patterns, or difficulty concentrating?\nPatient: I don't have any specific symptoms related to my kidneys other than what my blood pressure issues might be causing. I do notice some swelling in my legs when I'm on my feet a lot, but I didn't think it was connected to my kidneys. I'm just following my doctor's advice and hoping we can figure this out.\nDoctor: Could you please provide the specific serum creatinine, eGFR, and UACR values from your recent blood work? These are essential for assessing the extent of kidney involvement.\nPatient: I don't have the specific serum creatinine, eGFR, or UACR values from my blood work. My primary care doctor mentioned something about my kidneys, but she didn't give me the exact numbers. I'm just following her advice and hoping we can figure this out together.\nDoctor: Could you please describe any changes in your urination patterns, such as increased frequency, decreased output, or foamy urine? Also, have you experienced any fatigue or difficulty concentrating recently?\nPatient: I haven't noticed any changes in my urination patterns, like more frequent trips to the bathroom or foamy urine. I do feel a little tired sometimes, but I think that's just from work and not sure if it's related to my kidneys or not.\nDoctor: Could you please provide the specific serum creatinine, eGFR, and UACR values from your recent blood work? These are essential for assessing kidney function and determining the severity of any renal involvement.\nPatient: I don't have the specific serum creatinine, eGFR, or UACR values from my blood work. My primary care doctor mentioned something about my kidneys, but she didn't give me the exact numbers. I'm just following her advice and hoping we can figure this out together.",
+  "reference_so": {
+    "subjective": "Basic information: Virginia, late 50s, chief complaint: hypertension and kidney issues\n\nHistory of present illness: Hypertension with prescribed medications (Norvasc 10 mg daily and Carvedilol 25 mg twice a day), primary care doctor noted kidney issues in recent blood work. Patient reports swelling in legs when standing for prolonged periods. Patient reports feeling tired sometimes, but not sure if it's related to kidneys.\n\nPast history: Family history of hypertension and kidney disease (parents)",
+    "objective": "Physical examination: Swelling in lower extremities noted; no other significant findings. Vital signs not provided by patient.\n\nInvestigations: Serum creatinine, eGFR, and UACR values not available; patient states primary care doctor noted kidney issues in recent blood work."
+  }
+}

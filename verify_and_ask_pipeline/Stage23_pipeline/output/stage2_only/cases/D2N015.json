@@ -1,0 +1,364 @@
+{
+  "case_id": "D2N015",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Age: 48 years old\n* Gender: Not specified\n* Chief complaint: Shortness of breath, especially with mild exercises or walking up the driveway, accompanied by palpitations\n* Associated symptoms: Palpitations, shortness of breath, fatigue, back pain\n* Family history: Unknown\n* Lifestyle factors: Trying to exercise more, diet hasn't changed, stressed sometimes, smoking less (1 pack a day)\n* Back pain: Chronic, constant ache in the lower back, doesn't radiate to other areas, comes and goes in intensity",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Age: 48 years old\n* Gender: Not specified\n* Chief complaint: Shortness of breath, especially with mild exercises or walking up the driveway, accompanied by palpitations\n* The patient has palpitations. The patient has shortness of breath. The patient has back pain.\n* Family history: Unknown\n* Lifestyle factors: Trying to exercise more, diet hasn't changed, stressed sometimes, smoking less (1 pack a day)\n* Back pain: Chronic, constant ache in the lower back, doesn't radiate to other areas, comes and goes in intensity",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient is experiencing symptoms of shortness of breath and palpitations, which are potentially related to their back pain.\n* The patient has a history of COPD, but no prior cardiac evaluations or diagnoses.",
+    "plan": "* Schedule cardiac evaluations, such as an ECG, echocardiogram, or stress test, to further evaluate the patient's symptoms.\n* The patient is open to scheduling these tests if needed."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Age: 48 years old",
+      "scores": {
+        "entailment": 0.8452,
+        "neutral": 0.0791,
+        "contradiction": 0.2017
+      },
+      "support_evidence": "Patient: I'm 48 years old, and I'm here because I've been having shortness of breath, especially when I'm doing mild exercises or even just walking up my driveway. I also feel my heart palpitating sometimes with it.",
+      "contradiction_evidence": "Patient: The palpitations feel kind of irregular, like my heart is skipping a beat sometimes, and they usually last for a few seconds to maybe a minute. They don't always happen at the same time as the shortness of breath, but when they do, it feels like my chest is working harder.",
+      "corrected_text": null,
+      "flagged": true,
+      "decision": "uncertain",
+      "keep": true,
+      "output": "Age: 48 years old",
+      "reason": "Partially supported; kept and flagged for review (neutral is not proof of falsehood).",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Age: 48 years old"
+    },
+    {
+      "section": "subjective",
+      "line": 1,
+      "sentence": "Gender: Not specified",
+      "claim": "Gender: Not specified",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    },
+    {
+      "claim": "Chief complaint: Shortness of breath, especially with mild exercises or walking up the driveway, accompanied by palpitations",
+      "scores": {
+        "entailment": 0.9979,
+        "neutral": 0.0008,
+        "contradiction": 0.3038
+      },
+      "support_evidence": "Patient: I'm 48 years old, and I'm here because I've been having shortness of breath, especially when I'm doing mild exercises or even just walking up my driveway. I also feel my heart palpitating sometimes with it.",
+      "contradiction_evidence": "Patient: The palpitations feel kind of irregular, like my heart is skipping a beat sometimes, and they usually last for a few seconds to maybe a minute. They don't always happen at the same time as the shortness of breath, but when they do, it feels like my chest is working harder.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Chief complaint: Shortness of breath, especially with mild exercises or walking up the driveway, accompanied by palpitations",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Chief complaint: Shortness of breath, especially with mild exercises or walking up the driveway, accompanied by palpitations",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient has palpitations.",
+      "scores": {
+        "entailment": 0.9998,
+        "neutral": 0.0002,
+        "contradiction": 0.0004
+      },
+      "support_evidence": "Patient: The palpitations feel rapid and forceful, like my heart is pounding really hard. They usually happen when I'm doing something mild, like walking or even just standing up, and they last for a few seconds to maybe a minute. I can't really tell if there's a specific trigger, but they seem to happen more often lately.",
+      "contradiction_evidence": "Patient: The palpitations feel kind of irregular, like my heart is skipping a beat sometimes, and they usually last for a few seconds to maybe a minute. They don't always happen at the same time as the shortness of breath, but when they do, it feels like my chest is working harder.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has palpitations.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Associated symptoms: Palpitations, shortness of breath, fatigue, back pain"
+    },
+    {
+      "claim": "The patient has shortness of breath.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0001,
+        "contradiction": 0.0009
+      },
+      "support_evidence": "Patient: The palpitations and shortness of breath have been happening more often lately, especially when I'm doing mild activities like walking up my driveway. I'm not exactly sure what triggers them, but I do wonder if my back pain might be related somehow.",
+      "contradiction_evidence": "Patient: The palpitations feel kind of irregular, like my heart is skipping a beat sometimes, and they usually last for a few seconds to maybe a minute. They don't always happen at the same time as the shortness of breath, but when they do, it feels like my chest is working harder.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has shortness of breath.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Associated symptoms: Palpitations, shortness of breath, fatigue, back pain"
+    },
+    {
+      "claim": "The patient has fatigue.",
+      "scores": {
+        "entailment": 0.8456,
+        "neutral": 0.025,
+        "contradiction": 0.8852
+      },
+      "support_evidence": "Patient: The palpitations and shortness of breath have been happening more often lately, especially when I'm doing mild activities like walking up my driveway. I'm not exactly sure what triggers them, but I do wonder if my back pain might be related somehow.",
+      "contradiction_evidence": "Patient: The palpitations feel rapid and forceful, like my heart is pounding really hard. They usually happen when I'm doing something mild, like walking or even just standing up, and they last for a few seconds to maybe a minute. I can't really tell if there's a specific trigger, but they seem to happen more often lately.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "removed_contradicted",
+      "keep": false,
+      "output": "",
+      "reason": "Contradicted by the conversation and no evidence-based correction was possible.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Associated symptoms: Palpitations, shortness of breath, fatigue, back pain"
+    },
+    {
+      "claim": "The patient has back pain.",
+      "scores": {
+        "entailment": 0.9998,
+        "neutral": 0.0001,
+        "contradiction": 0.9891
+      },
+      "support_evidence": "Patient: The palpitations and shortness of breath have been happening more often lately, especially when I'm doing mild activities like walking up my driveway. I'm not exactly sure what triggers them, but I do wonder if my back pain might be related somehow.",
+      "contradiction_evidence": "Patient: No, I don't have any prior cardiac evaluations like an ECG, echocardiogram, or stress test. I was just told I might have COPD from the pulmonary function tests and the chest x-ray, but nothing about my heart specifically.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has back pain.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Associated symptoms: Palpitations, shortness of breath, fatigue, back pain"
+    },
+    {
+      "claim": "Family history: Unknown",
+      "scores": {
+        "entailment": 0.9943,
+        "neutral": 0.0045,
+        "contradiction": 0.2222
+      },
+      "support_evidence": "Doctor: Have you experienced any chest pain, dizziness, fainting, or unusual fatigue along with these symptoms? Additionally, could you share if there is a family history of heart disease, hypertension, diabetes, or high cholesterol?",
+      "contradiction_evidence": "Doctor: Could you describe any previous cardiac evaluations, such as an ECG, echocardiogram, or stress test, and whether you have a history of hypertension, diabetes, or hyperlipidemia?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Family history: Unknown",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Family history: Unknown",
+      "level": "sentence"
+    },
+    {
+      "claim": "Lifestyle factors: Trying to exercise more, diet hasn't changed, stressed sometimes, smoking less (1 pack a day)",
+      "scores": {
+        "entailment": 0.9405,
+        "neutral": 0.0528,
+        "contradiction": 0.2569
+      },
+      "support_evidence": "Patient: I've been trying to exercise more lately to get rid of the \"Covid 15,\" so I'm probably doing a bit more than I used to. My diet hasn't really changed much, and I do feel stressed sometimes, but I'm not sure how much that plays into it. I've also been smoking less—maybe just once a day now instead of two packs.",
+      "contradiction_evidence": "Patient: The palpitations feel kind of irregular, like my heart is skipping a beat sometimes, and they usually last for a few seconds to maybe a minute. They don't always happen at the same time as the shortness of breath, but when they do, it feels like my chest is working harder.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Lifestyle factors: Trying to exercise more, diet hasn't changed, stressed sometimes, smoking less (1 pack a day)",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "Lifestyle factors: Trying to exercise more, diet hasn't changed, stressed sometimes, smoking less (1 pack a day)",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient has back pain.",
+      "scores": {
+        "entailment": 0.9998,
+        "neutral": 0.0001,
+        "contradiction": 0.9891
+      },
+      "support_evidence": "Patient: The palpitations and shortness of breath have been happening more often lately, especially when I'm doing mild activities like walking up my driveway. I'm not exactly sure what triggers them, but I do wonder if my back pain might be related somehow.",
+      "contradiction_evidence": "Patient: No, I don't have any prior cardiac evaluations like an ECG, echocardiogram, or stress test. I was just told I might have COPD from the pulmonary function tests and the chest x-ray, but nothing about my heart specifically.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has back pain.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 6,
+      "sentence": "Back pain: Chronic, constant ache in the lower back, doesn't radiate to other areas, comes and goes in intensity"
+    },
+    {
+      "claim": "The patient's back pain is chronic.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0002,
+        "contradiction": 0.103
+      },
+      "support_evidence": "Patient: My back pain is chronic, and it's been going on for a while. It doesn't always happen at the same time as the palpitations or shortness of breath, but sometimes they do feel connected. I'm not exactly sure why, but I've noticed that on days when my back feels worse, I sometimes feel more out of breath or have more palpitations.",
+      "contradiction_evidence": "Patient: My back pain is more of a constant ache, especially in my lower back, and it doesn't really radiate anywhere else. It's been there for a while, but it does come and go in intensity. Some days it's worse than others, and I don't really know what makes it flare up.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient's back pain is chronic.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 6,
+      "sentence": "Back pain: Chronic, constant ache in the lower back, doesn't radiate to other areas, comes and goes in intensity"
+    },
+    {
+      "claim": "The patient's back pain is a constant ache.",
+      "scores": {
+        "entailment": 0.9986,
+        "neutral": 0.0007,
+        "contradiction": 0.1693
+      },
+      "support_evidence": "Patient: My back pain is more of a constant ache, especially in my lower back, and it doesn't really radiate anywhere else. It's been there for a while, but it does come and go in intensity. Some days it's worse than others, and I don't really know what makes it flare up.",
+      "contradiction_evidence": "Patient: The palpitations feel rapid and forceful, like my heart is pounding really hard. They usually happen when I'm doing something mild, like walking or even just standing up, and they last for a few seconds to maybe a minute. I can't really tell if there's a specific trigger, but they seem to happen more often lately.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient's back pain is a constant ache.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 6,
+      "sentence": "Back pain: Chronic, constant ache in the lower back, doesn't radiate to other areas, comes and goes in intensity"
+    },
+    {
+      "claim": "The patient's back pain is located in the lower back.",
+      "scores": {
+        "entailment": 0.9985,
+        "neutral": 0.0011,
+        "contradiction": 0.192
+      },
+      "support_evidence": "Patient: My back pain is more of a constant ache, especially in my lower back, and it doesn't really radiate anywhere else. It's been there for a while, but it does come and go in intensity. Some days it's worse than others, and I don't really know what makes it flare up.",
+      "contradiction_evidence": "Patient: The palpitations feel rapid and forceful, like my heart is pounding really hard. They usually happen when I'm doing something mild, like walking or even just standing up, and they last for a few seconds to maybe a minute. I can't really tell if there's a specific trigger, but they seem to happen more often lately.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient's back pain is located in the lower back.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 6,
+      "sentence": "Back pain: Chronic, constant ache in the lower back, doesn't radiate to other areas, comes and goes in intensity"
+    },
+    {
+      "claim": "The patient's back pain does not radiate to other areas.",
+      "scores": {
+        "entailment": 0.9986,
+        "neutral": 0.0009,
+        "contradiction": 0.1616
+      },
+      "support_evidence": "Doctor: Could you describe the nature of your back pain? Is it constant or intermittent, and does it radiate to any other part of your body?",
+      "contradiction_evidence": "Patient: The palpitations feel rapid and forceful, like my heart is pounding really hard. They usually happen when I'm doing something mild, like walking or even just standing up, and they last for a few seconds to maybe a minute. I can't really tell if there's a specific trigger, but they seem to happen more often lately.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient's back pain does not radiate to other areas.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 6,
+      "sentence": "Back pain: Chronic, constant ache in the lower back, doesn't radiate to other areas, comes and goes in intensity"
+    },
+    {
+      "claim": "The patient's back pain comes and goes in intensity.",
+      "scores": {
+        "entailment": 0.999,
+        "neutral": 0.0005,
+        "contradiction": 0.1455
+      },
+      "support_evidence": "Patient: My back pain is more of a constant ache, especially in my lower back, and it doesn't really radiate anywhere else. It's been there for a while, but it does come and go in intensity. Some days it's worse than others, and I don't really know what makes it flare up.",
+      "contradiction_evidence": "Patient: My back pain is more of a constant ache, especially in my lower back, and it doesn't really radiate anywhere else. It's been there for a while, but it does come and go in intensity. Some days it's worse than others, and I don't really know what makes it flare up.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient's back pain comes and goes in intensity.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 6,
+      "sentence": "Back pain: Chronic, constant ache in the lower back, doesn't radiate to other areas, comes and goes in intensity"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "uncertain": 1,
+      "exempt": 2,
+      "supported": 12,
+      "removed_contradicted": 1
+    },
+    "num_claims": 14,
+    "num_kept": 13,
+    "claim_retention_rate": 0.9286
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "stage": "stage2",
+        "section": "subjective",
+        "claim": "The patient has fatigue.",
+        "source_sentence": "Associated symptoms: Palpitations, shortness of breath, fatigue, back pain",
+        "decision": "removed_contradicted",
+        "scores": {
+          "entailment": 0.8456,
+          "neutral": 0.025,
+          "contradiction": 0.8852
+        },
+        "reason": "Contradicted by the conversation and no evidence-based correction was possible.",
+        "nearest_evidence": "Patient: The palpitations feel rapid and forceful, like my heart is pounding really hard. They usually happen when I'm doing something mild, like walking or even just standing up, and they last for a few seconds to maybe a minute. I can't really tell if there's a specific trigger, but they seem to happen more often lately."
+      }
+    ],
+    "flagged_kept_stage2": [
+      {
+        "stage": "stage2",
+        "section": "subjective",
+        "claim": "Age: 48 years old",
+        "decision": "uncertain",
+        "scores": {
+          "entailment": 0.8452,
+          "neutral": 0.0791,
+          "contradiction": 0.2017
+        },
+        "reason": "Partially supported; kept and flagged for review (neutral is not proof of falsehood)."
+      }
+    ],
+    "rejected_stage3": []
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 8.8,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 48 years old, and I'm here because I've been having shortness of breath, especially when I'm doing mild exercises or even just walking up my driveway. I also feel my heart palpitating sometimes with it.\nDoctor: Have you experienced any chest pain, dizziness, fainting, or unusual fatigue along with these symptoms? Additionally, could you share if there is a family history of heart disease, hypertension, diabetes, or high cholesterol?\nPatient: I don't have chest pain, and I don't feel dizzy or faint. I do get tired more easily than before, but I'm not sure if that's related. As for family history, I don't have that information on hand.\nDoctor: Could you please describe the duration, frequency, and any specific triggers of your palpitations and shortness of breath?\nPatient: The palpitations and shortness of breath have been happening more often lately, especially when I'm doing mild activities like walking up my driveway. I'm not exactly sure what triggers them, but I do wonder if my back pain might be related somehow.\nDoctor: Could you please provide details about your lifestyle factors, including your exercise habits, diet, and stress levels?\nPatient: I've been trying to exercise more lately to get rid of the \"Covid 15,\" so I'm probably doing a bit more than I used to. My diet hasn't really changed much, and I do feel stressed sometimes, but I'm not sure how much that plays into it. I've also been smoking less—maybe just once a day now instead of two packs.\nDoctor: Could you clarify the nature and duration of your back pain, and whether it occurs simultaneously with or independently of the palpitations and shortness of breath?\nPatient: My back pain is chronic, and it's been going on for a while. It doesn't always happen at the same time as the palpitations or shortness of breath, but sometimes they do feel connected. I'm not exactly sure why, but I've noticed that on days when my back feels worse, I sometimes feel more out of breath or have more palpitations.\nDoctor: Can you describe the rhythm and duration of the palpitations? Are they regular or irregular, and do they last for seconds, minutes, or longer?\nPatient: The palpitations feel kind of irregular, like my heart is skipping a beat sometimes, and they usually last for a few seconds to maybe a minute. They don't always happen at the same time as the shortness of breath, but when they do, it feels like my chest is working harder.\nDoctor: Could you describe any previous cardiac evaluations, such as an ECG, echocardiogram, or stress test, and whether you have a history of hypertension, diabetes, or hyperlipidemia?\nPatient: I don't have any previous cardiac evaluations like an ECG or stress test. I don't have a history of hypertension, diabetes, or high cholesterol that I'm aware of. I was just told I might have COPD from the pulmonary function tests and the chest x-ray, but nothing about my heart specifically.\nDoctor: Could you describe the nature of your back pain? Is it constant or intermittent, and does it radiate to any other part of your body?\nPatient: My back pain is more of a constant ache, especially in my lower back, and it doesn't really radiate anywhere else. It's been there for a while, but it does come and go in intensity. Some days it's worse than others, and I don't really know what makes it flare up.\nDoctor: Have you experienced any chest pain, dizziness, or fainting episodes in the past, even if they were brief or not related to the current symptoms?\nPatient: No, I haven't experienced any chest pain, dizziness, or fainting episodes in the past. I've been focused more on the shortness of breath and the palpitations, and I haven't had any of those other symptoms. I just try to manage the back pain and the breathing issues as they come.\nDoctor: Could you describe the exact timing and duration of the palpitations in relation to the back pain and shortness of breath? For example, do the palpitations occur before, during, or after the back pain or shortness of breath?\nPatient: The palpitations usually happen around the same time as the shortness of breath, but not always with the back pain. Sometimes I feel them when I'm just walking or doing something mild, and they last for a few seconds to maybe a minute. I can't really tell if the back pain triggers them or if it's just coincidence.\nDoctor: Have you had any prior cardiac evaluations, such as an ECG, echocardiogram, or stress test?\nPatient: No, I don't have any prior cardiac evaluations like an ECG, echocardiogram, or stress test. I was just told I might have COPD from the pulmonary function tests and the chest x-ray, but nothing about my heart specifically.\nDoctor: Could you provide details about the nature of the palpitations? Are they described as irregular, rapid, or forceful? Have you noticed any patterns or specific triggers that consistently precede them?\nPatient: The palpitations feel rapid and forceful, like my heart is pounding really hard. They usually happen when I'm doing something mild, like walking or even just standing up, and they last for a few seconds to maybe a minute. I can't really tell if there's a specific trigger, but they seem to happen more often lately.\nDoctor: Have you undergone any cardiac evaluations such as an ECG, echocardiogram, or stress test in the past? If not, would you be willing to schedule these tests to evaluate for potential cardiac causes of your palpitations and shortness of breath?\nPatient: No, I don't have any prior cardiac evaluations like an ECG, echocardiogram, or stress test. I was just told I might have COPD from the pulmonary function tests and the chest x-ray, but nothing about my heart specifically. I haven't been offered any cardiac tests yet, but I'm open to scheduling them if needed.\nDoctor: Have you experienced any chest pain, dizziness, or fainting episodes along with the palpitations or shortness of breath?\nPatient: No, I haven't experienced any chest pain, dizziness, or fainting episodes along with the palpitations or shortness of breath. I've been focusing more on the breathing issues and the back pain, and I haven't had any of those other symptoms. I just try to manage everything as it comes.\nDoctor: Have you undergone any recent cardiac evaluations, such as an ECG, echocardiogram, or stress test? If not, would you be willing to schedule these tests to further evaluate your symptoms?\nPatient: No, I haven't had any recent cardiac evaluations like an ECG, echocardiogram, or stress test. I was just told I might have COPD from the pulmonary function tests and the chest x-ray, but nothing about my heart specifically. I haven't been offered any cardiac tests yet, but I'm open to scheduling them if needed.",
+  "reference_so": {
+    "subjective": "Basic information: 48-year-old patient presenting with shortness of breath and palpitations\n\nHistory of present illness: Onset of shortness of breath and palpitations during mild exertion or walking up the driveway. The symptoms have been increasing in frequency, especially with mild activities. The patient is unsure about the triggers but wonders if back pain might be related. Increased fatigue noted. Palpitations and shortness of breath have been happening more often lately, especially with mild activities. Patient smokes less now (once a day). The patient reports that the palpitations and shortness of breath are sometimes associated with chronic back pain, though the relationship is unclear. The patient has been exercising more to counteract \"Covid 15,\" with no significant changes in diet, and has reduced smoking to once a day. The patient also mentions occasional high stress levels. Palpitations feel rapid and forceful, like the heart is pounding really hard. They usually happen when the patient is doing something mild, like walking or even just standing up, and they last for a few seconds to maybe a minute. They seem to happen more often lately.\n\nPast history: Family history: Not available. Personal history: No chest pain, dizziness, or fainting reported. Unusual fatigue: Yes, increased fatigue noted. Lifestyle: Increased exercise to counteract \"Covid 15,\" diet unchanged, stress levels sometimes high, smoking reduced to once a day. No history of hypertension, diabetes, or hyperlipidemia reported. No prior cardiac evaluations (ECG, echocardiogram, or stress test) mentioned. Pulmonary function tests and chest x-ray suggest possible COPD. Chronic lower back pain with variable intensity, no radiation, no specific triggers identified; patient is unsure about the relationship between back pain and other symptoms.",
+    "objective": "Physical examination: Physical examination findings are pending.\n\nInvestigations: Auxiliary examination results are pending."
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "case_id": "D2N010",
+  "split": "dev",
+  "stage1_so": {
+    "subjective": "* The patient is a 58-year-old male who is concerned about his blood sugar levels, which have been running in the 300s when checked at home.\n* He reports no other symptoms such as frequent urination, increased thirst, or unexplained weight loss, but did experience some nausea a few days ago, which he attributes to sitting in the back of a car.\n* He has not experienced any unexplained weight loss, fatigue, blurred vision, or frequent infections recently.\n* His family history of diabetes is unknown, and his diet has not changed much, with most of his sugar coming from fruit.\n* He does not exercise much and has not changed any medications or supplements recently.\n* He has been checking his blood sugar at home whenever he feels like it, without a consistent schedule.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* The patient is a 58-year-old male who is concerned about his blood sugar levels, which have been running in the 300s when checked at home.\n* He reports no other symptoms such as frequent urination, increased thirst, or unexplained weight loss, but did experience some nausea a few days ago, which he attributes to sitting in the back of a car.\n* He has not experienced any unexplained weight loss, fatigue, blurred vision, or frequent infections recently.\n* His family history of diabetes is unknown, and his diet has not changed much, with most of his sugar coming from fruit.\n* He does not exercise much and has not changed any medications or supplements recently.\n* He has been checking his blood sugar at home whenever he feels like it, without a consistent schedule.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has high blood sugar levels, as reported by him, with readings in the 300s when checked at home.\n* No other clinical problems or diagnoses were established in the conversation.",
+    "plan": "* No explicit management or follow-up plan was documented in the conversation."
+  },
+  "stage2_audit": [
+    {
+      "claim": "The patient is a 58-year-old male who is concerned about his blood sugar levels, which have been running in the 300s when checked at home.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0001,
+        "contradiction": 0.0066
+      },
+      "support_evidence": "Patient: I'm 58 years old, male, and I'm here because my blood sugar has been really high lately. I've been checking it at home, and it's been running in the 300s. I'm worried about it.",
+      "contradiction_evidence": "Patient: I don't have the exact details on whether the readings are fasting or postprandial—I just check it at home whenever I feel like it. As for recent blood tests, I was told my Lyme titer is a little elevated and I tested positive for strep, but I haven't had any other recent blood work done.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient is a 58-year-old male who is concerned about his blood sugar levels, which have been running in the 300s when checked at home.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 58-year-old male who is concerned about his blood sugar levels, which have been running in the 300s when checked at home.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He reports no other symptoms such as frequent urination, increased thirst, or unexplained weight loss, but did experience some nausea a few days ago, which he attributes to sitting in the back of a car.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.9543
+      },
+      "support_evidence": "Patient: No, I haven't had any unexplained weight loss, fatigue, blurred vision, or frequent infections recently. The only thing I noticed was some nausea a couple of days ago, but I think that was just from sitting in the back of a car. I'm mostly worried about the high blood sugar.",
+      "contradiction_evidence": "Doctor: Could you clarify if you have had any recent blood tests related to your blood sugar levels, such as an HbA1c test, and whether you have experienced any other symptoms such as frequent urination, increased thirst, or weight loss?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He reports no other symptoms such as frequent urination, increased thirst, or unexplained weight loss, but did experience some nausea a few days ago, which he attributes to sitting in the back of a car.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "He reports no other symptoms such as frequent urination, increased thirst, or unexplained weight loss, but did experience some nausea a few days ago, which he attributes to sitting in the back of a car.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has not experienced any unexplained weight loss, fatigue, blurred vision, or frequent infections recently.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0003,
+        "contradiction": 0.7826
+      },
+      "support_evidence": "Doctor: Have you experienced any other symptoms such as unexplained weight loss, fatigue, blurred vision, or frequent infections in the past few weeks?",
+      "contradiction_evidence": "Patient: I haven't had any frequent urination, increased thirst, or unexplained weight loss—just the high blood sugar readings and some nausea a few days ago. I haven't noticed any changes in my appetite or energy levels recently.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has not experienced any unexplained weight loss, fatigue, blurred vision, or frequent infections recently.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "He has not experienced any unexplained weight loss, fatigue, blurred vision, or frequent infections recently.",
+      "level": "sentence"
+    },
+    {
+      "claim": "His family history of diabetes is unknown, and his diet has not changed much, with most of his sugar coming from fruit.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0003,
+        "contradiction": 0.0017
+      },
+      "support_evidence": "Patient: My family history isn't something I really think about, but I don't recall anyone close to me having diabetes. As for my diet, it hasn't changed much—I mostly eat the same things I always have. I don't add sugar to my tea, and most of my sugar comes from fruit. I don't exercise much these days, to be honest.",
+      "contradiction_evidence": "Patient: I don't have the exact details on whether the readings are fasting or postprandial—I just check it at home whenever I feel like it. As for recent blood tests, I was told my Lyme titer is a little elevated and I tested positive for strep, but I haven't had any other recent blood work done.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "His family history of diabetes is unknown, and his diet has not changed much, with most of his sugar coming from fruit.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "His family history of diabetes is unknown, and his diet has not changed much, with most of his sugar coming from fruit.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He does not exercise much and has not changed any medications or supplements recently.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.0061
+      },
+      "support_evidence": "Patient: I haven't been very active lately, and I don't think I've been sick with anything else recently. I haven't changed any of my medications or started any new supplements. I just try to keep things the same, but this blood sugar issue is really concerning me.",
+      "contradiction_evidence": "Patient: My family history isn't something I really think about, but I don't recall anyone close to me having diabetes. As for my diet, it hasn't changed much—I mostly eat the same things I always have. I don't add sugar to my tea, and most of my sugar comes from fruit. I don't exercise much these days, to be honest.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He does not exercise much and has not changed any medications or supplements recently.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "He does not exercise much and has not changed any medications or supplements recently.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has been checking his blood sugar at home whenever he feels like it, without a consistent schedule.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0004,
+        "contradiction": 0.0011
+      },
+      "support_evidence": "Patient: I don't have the exact numbers, just that they've been in the 300s. I check them at home whenever I feel like it, not at the same time every day. As for recent blood tests, I was told my Lyme titer is a little elevated and I tested positive for strep, but I haven't had any other recent blood work done.",
+      "contradiction_evidence": "Patient: I don't have the exact details on whether the readings are fasting or postprandial—I just check it at home whenever I feel like it. As for recent blood tests, I was told my Lyme titer is a little elevated and I tested positive for strep, but I haven't had any other recent blood work done.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has been checking his blood sugar at home whenever he feels like it, without a consistent schedule.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "He has been checking his blood sugar at home whenever he feels like it, without a consistent schedule.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 6,
+      "exempt": 1
+    },
+    "num_claims": 6,
+    "num_kept": 6,
+    "claim_retention_rate": 1.0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": []
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 6.5,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 58 years old, male, and I'm here because my blood sugar has been really high lately. I've been checking it at home, and it's been running in the 300s. I'm worried about it.\nDoctor: Could you please provide more details about when you first noticed the high blood sugar readings and whether you have any other symptoms such as frequent urination, increased thirst, or unexplained weight loss?\nPatient: I first noticed my blood sugar was high a few days ago when I was checking it at home. I haven't had any other symptoms like frequent urination or increased thirst, but I did feel a little nauseous a couple of days back. I'm just really concerned about the high numbers.\nDoctor: Have you experienced any other symptoms such as unexplained weight loss, fatigue, blurred vision, or frequent infections in the past few weeks?\nPatient: No, I haven't had any unexplained weight loss, fatigue, blurred vision, or frequent infections recently. The only thing I noticed was some nausea a couple of days ago, but I think that was just from sitting in the back of a car. I'm mostly worried about the high blood sugar.\nDoctor: Could you please share any information about your family history of diabetes, as well as your typical diet and exercise habits?\nPatient: My family history isn't something I really think about, but I don't recall anyone close to me having diabetes. As for my diet, it hasn't changed much—I mostly eat the same things I always have. I don't add sugar to my tea, and most of my sugar comes from fruit. I don't exercise much these days, to be honest.\nDoctor: Could you provide details about your recent physical activity levels, any recent illnesses or stressors, and whether you have had any recent changes in your medication or supplements?\nPatient: I haven't been very active lately, and I don't think I've been sick with anything else recently. I haven't changed any of my medications or started any new supplements. I just try to keep things the same, but this blood sugar issue is really concerning me.\nDoctor: Could you provide the exact blood sugar readings (e.g., fasting, postprandial, or random) and the dates when they were measured?\nPatient: I don't have the exact dates or specific times when I checked my blood sugar, but I've been getting readings in the 300s pretty consistently over the last few days. I just check it at home whenever I feel like it, not on a strict schedule.\nDoctor: Could you provide more details about your current symptoms, such as whether you have experienced any weight loss, fatigue, or blurred vision recently?\nPatient: I haven't had any weight loss, fatigue, or blurred vision recently. The only thing I noticed was some nausea a couple of days ago, but I think that was just from sitting in the back of a car. I'm mostly worried about the high blood sugar.\nDoctor: Could you provide the exact blood sugar readings (e.g., fasting or postprandial) and confirm whether you have any symptoms such as polyuria, polydipsia, or unexplained weight loss?\nPatient: I don't have the exact numbers, but my blood sugar has been running in the 300s lately. I haven't had any polyuria, polydipsia, or unexplained weight loss—just the high readings and some nausea a few days ago, which I think was from sitting in the back of a car. I'm really concerned about the high blood sugar.\nDoctor: Could you please provide details about whether the blood sugar readings of 300s are fasting, postprandial, or random, and whether you have undergone any recent blood tests or consultations with a healthcare provider?\nPatient: I don't have the exact details on whether the readings are fasting or postprandial—I just check it at home whenever I feel like it. As for recent blood tests, I was told my Lyme titer is a little elevated and I tested positive for strep, but I haven't had any other recent blood work done.\nDoctor: Can you confirm whether the blood sugar readings of 300s are fasting, postprandial, or random, and whether you have been checking them at the same time of day consistently?\nPatient: I don't have the exact details on whether the readings are fasting or postprandial—I just check it at home whenever I feel like it. As for recent blood tests, I was told my Lyme titer is a little elevated and I tested positive for strep, but I haven't had any other recent blood work done.\nDoctor: Could you clarify if you have been experiencing any symptoms such as frequent urination, increased thirst, or unexplained weight loss in addition to the high blood sugar readings? Also, have you noticed any changes in your appetite or energy levels recently?\nPatient: I haven't had any frequent urination, increased thirst, or unexplained weight loss—just the high blood sugar readings and some nausea a few days ago. I haven't noticed any changes in my appetite or energy levels recently.\nDoctor: Could you provide the exact blood glucose values (e.g., specific numbers in the 300s) and the time of day when these readings were taken? Additionally, have you had any recent blood tests, such as HbA1c, fasting blood glucose, or a comprehensive metabolic panel?\nPatient: I don't have the exact numbers, just that they've been in the 300s. I check them at home whenever I feel like it, not at the same time every day. As for recent blood tests, I was told my Lyme titer is a little elevated and I tested positive for strep, but I haven't had any other recent blood work done.\nDoctor: Could you clarify if you have experienced any other symptoms such as fatigue, blurred vision, or frequent urination in addition to the high blood sugar readings? Also, have you had any recent changes in your diet, activity level, or medication use that might be contributing to these readings?\nPatient: I haven't had any fatigue or blurred vision—just the high blood sugar readings and some nausea a few days ago. My diet hasn't changed much, and I haven't made any recent changes to my activity level or medication use.\nDoctor: Could you please provide the specific timing of the blood sugar readings (e.g., fasting, postprandial, or random) and confirm whether you have had any recent blood tests, such as HbA1c, fasting glucose, or other relevant laboratory investigations?\nPatient: I don't have the exact details on whether the readings are fasting or postprandial—I just check it at home whenever I feel like it. As for recent blood tests, I was told my Lyme titer is a little elevated and I tested positive for strep, but I haven't had any other recent blood work done.\nDoctor: Could you clarify if you have had any recent blood tests related to your blood sugar levels, such as an HbA1c test, and whether you have experienced any other symptoms such as frequent urination, increased thirst, or weight loss?\nPatient: I don't have the exact details on whether the readings are fasting or postprandial—I just check it at home whenever I feel like it. As for recent blood tests, I was told my Lyme titer is a little elevated and I tested positive for strep, but I haven't had any other recent blood work done.",
+  "reference_so": {
+    "subjective": "Basic information: 58-year-old male presenting with high blood sugar readings in the 300s.\n\nHistory of present illness: The patient first noticed high blood sugar readings a few days ago while checking at home. He has not experienced frequent urination or increased thirst, but he did feel slightly nauseous a couple of days ago. He is concerned about the high readings. The nausea was attributed to sitting in the back of a car and not directly related to high blood sugar readings. The patient has been getting readings in the 300s consistently over the last few days, though he checks it at home on an irregular schedule. He has not been very active lately and has not changed any medications or supplements. He denies weight loss, fatigue, or blurred vision.\n\nPast history: No prior diabetes diagnosis reported. No mention of medications, family history of diabetes, or lifestyle factors such as diet and exercise. The patient reports no significant changes in diet, exercise, or medication use recently. He states that he does not recall anyone close to him having diabetes. Recent illnesses include a positive strep test and elevated Lyme titer.",
+    "objective": "Physical examination: Physical examination findings are pending.\n\nInvestigations: Auxiliary examination results are pending."
+  }
+}

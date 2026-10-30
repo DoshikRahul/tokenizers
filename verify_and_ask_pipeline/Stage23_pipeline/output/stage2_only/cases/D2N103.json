@@ -1,0 +1,228 @@
+{
+  "case_id": "D2N103",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient is a 60-year-old male who underwent mitral valve repair surgery in August 2020.\n* He reports feeling better overall, but still experiences chest discomfort, described as a pressure-like feeling, approximately 2-3 times a month, lasting a few minutes.\n* He also reports shallow breathing, especially during exertion.\n* He has a history of mitral regurgitation and atrial fibrillation, and is currently taking Coumadin, Lasix, and Atenolol.\n* He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.\n* He has not experienced any new symptoms such as dizziness, palpitations, or shortness of breath.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* The patient underwent mitral valve repair surgery. The patient underwent mitral valve repair surgery in August 2020.\n* He reports feeling better overall, but still experiences chest discomfort, described as a pressure-like feeling, approximately 2-3 times a month, lasting a few minutes.\n* He also reports shallow breathing, especially during exertion.\n* He has a history of mitral regurgitation and atrial fibrillation, and is currently taking Coumadin, Lasix, and Atenolol.\n* He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.\n* He has not experienced any new symptoms such as dizziness, palpitations, or shortness of breath.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has a history of mitral valve repair surgery and atrial fibrillation, and is currently experiencing chest discomfort and shallow breathing.\n* The patient's symptoms have remained stable since his last follow-up, with no changes in frequency, duration, or intensity.",
+    "plan": "* No explicit management or follow-up plan was documented in the conversation."
+  },
+  "stage2_audit": [
+    {
+      "claim": "The patient is a 60-year-old male.",
+      "scores": {
+        "entailment": 0.0025,
+        "neutral": 0.88,
+        "contradiction": 0.1175
+      },
+      "support_evidence": "Patient: The chest discomfort is more of a pressure-like feeling, and it happens maybe a couple times a month. When it does, it usually only lasts a few minutes, and then it goes away for a while. I just take it easy on those days and don't push myself too hard.",
+      "contradiction_evidence": "Patient: The chest discomfort is more of a pressure-like feeling, and it happens maybe a couple times a month. When it does, it usually only lasts a few minutes, and then it goes away for a while. I just take it easy on those days and don't push myself too hard.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "removed_unsupported",
+      "keep": false,
+      "output": "",
+      "reason": "No supporting evidence in the conversation (not asserted to be false).",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 60-year-old male who underwent mitral valve repair surgery in August 2020."
+    },
+    {
+      "claim": "The patient underwent mitral valve repair surgery.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0001,
+        "contradiction": 0.0005
+      },
+      "support_evidence": "Patient: I'm 60 years old, and I'm here because I had mitral valve repair surgery in August 2020, and I just wanted to check in on how I'm doing. I've been feeling better overall, but I still have some chest discomfort sometimes and my breathing feels shallow at times.",
+      "contradiction_evidence": "Doctor: Has the patient undergone an echocardiogram since the mitral valve repair surgery in August 2020? If so, when was the most recent echocardiogram performed, and what were the findings?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient underwent mitral valve repair surgery.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 60-year-old male who underwent mitral valve repair surgery in August 2020."
+    },
+    {
+      "claim": "The patient underwent mitral valve repair surgery in August 2020.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0003,
+        "contradiction": 0.9365
+      },
+      "support_evidence": "Doctor: Has the patient undergone an echocardiogram since the mitral valve repair surgery in August 2020?",
+      "contradiction_evidence": "Patient: I don't have a history of heart attacks, but I do have a history of mitral regurgitation and atrial fibrillation. I've had a mitral valve repair surgery. As for medications, I'm taking Coumadin, Lasix, and Atenolol.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient underwent mitral valve repair surgery in August 2020.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 60-year-old male who underwent mitral valve repair surgery in August 2020."
+    },
+    {
+      "claim": "He reports feeling better overall, but still experiences chest discomfort, described as a pressure-like feeling, approximately 2-3 times a month, lasting a few minutes.",
+      "scores": {
+        "entailment": 0.9986,
+        "neutral": 0.0003,
+        "contradiction": 0.0142
+      },
+      "support_evidence": "Patient: The chest discomfort is more of a pressure-like feeling, and it happens maybe a couple times a month. When it does, it usually only lasts a few minutes, and then it goes away for a while. I just take it easy on those days and don't push myself too hard.",
+      "contradiction_evidence": "Patient: No, I haven't had any episodes that have gotten worse. The chest pain and shortness of breath I have are pretty much the same as before, and I've learned to manage them by slowing down when I feel them coming on. They usually go away after a few minutes and then don't come back for a while.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He reports feeling better overall, but still experiences chest discomfort, described as a pressure-like feeling, approximately 2-3 times a month, lasting a few minutes.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "He reports feeling better overall, but still experiences chest discomfort, described as a pressure-like feeling, approximately 2-3 times a month, lasting a few minutes.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He also reports shallow breathing, especially during exertion.",
+      "scores": {
+        "entailment": 0.9959,
+        "neutral": 0.0018,
+        "contradiction": 0.0129
+      },
+      "support_evidence": "Patient: No, I haven't noticed any changes in how often or how bad the chest discomfort is since my last check-up. It's still happening a couple times a month, and it's the same pressure-like feeling that goes away after a few minutes. I haven't had any new symptoms like dizziness or palpitations, but my breathing does feel a little shallow sometimes, especially when I'm exerting myself.",
+      "contradiction_evidence": "Patient: I'm 60 years old, and I'm here because I had mitral valve repair surgery in August 2020, and I just wanted to check in on how I'm doing. I've been feeling better overall, but I still have some chest discomfort sometimes and my breathing feels shallow at times.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He also reports shallow breathing, especially during exertion.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "He also reports shallow breathing, especially during exertion.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has a history of mitral regurgitation and atrial fibrillation, and is currently taking Coumadin, Lasix, and Atenolol.",
+      "scores": {
+        "entailment": 0.9785,
+        "neutral": 0.0146,
+        "contradiction": 0.0178
+      },
+      "support_evidence": "Patient: I don't have a history of heart attacks, but I do have a history of mitral regurgitation and atrial fibrillation. I've had a mitral valve repair surgery. As for medications, I'm taking Coumadin, Lasix, and Atenolol.",
+      "contradiction_evidence": "Patient: I don't have the details of my most recent echocardiogram, but my ECG from December 26th showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study. I haven't had any other blood tests or imaging studies since my surgery that I'm aware of.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has a history of mitral regurgitation and atrial fibrillation, and is currently taking Coumadin, Lasix, and Atenolol.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "He has a history of mitral regurgitation and atrial fibrillation, and is currently taking Coumadin, Lasix, and Atenolol.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.",
+      "scores": {
+        "entailment": 0.9961,
+        "neutral": 0.0025,
+        "contradiction": 0.0748
+      },
+      "support_evidence": "Patient: No, the chest discomfort I feel is more of a pressure-like sensation, and it doesn't feel sharp or sudden. It usually happens when I'm exerting myself, and it goes away after a few minutes. I haven't had any new or different kinds of pain since my last checkup.",
+      "contradiction_evidence": "Doctor: Has the patient experienced any episodes of shortness of breath, chest pain, or palpitations that have worsened in frequency or intensity since the last follow-up?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "He has not noticed any changes in the frequency, duration, or intensity of his chest discomfort since his last follow-up.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has not experienced any new symptoms such as dizziness, palpitations, or shortness of breath.",
+      "scores": {
+        "entailment": 0.9144,
+        "neutral": 0.0794,
+        "contradiction": 0.453
+      },
+      "support_evidence": "Doctor: Has the patient experienced any episodes of shortness of breath or chest discomfort that feel different from the usual pressure-like sensation, such as sharp, sudden, or radiating pain?",
+      "contradiction_evidence": "Patient: No, I haven't noticed any changes in how often or how bad the chest discomfort is since my last check-up. It's still happening a couple times a month, and it's the same pressure-like feeling that goes away after a few minutes. I haven't had any new symptoms like dizziness or palpitations, but my breathing does feel a little shallow sometimes, especially when I'm exerting myself.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has not experienced any new symptoms such as dizziness, palpitations, or shortness of breath.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "He has not experienced any new symptoms such as dizziness, palpitations, or shortness of breath.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "removed_unsupported": 1,
+      "supported": 7,
+      "exempt": 1
+    },
+    "num_claims": 8,
+    "num_kept": 7,
+    "claim_retention_rate": 0.875
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "stage": "stage2",
+        "section": "subjective",
+        "claim": "The patient is a 60-year-old male.",
+        "source_sentence": "Patient is a 60-year-old male who underwent mitral valve repair surgery in August 2020.",
+        "decision": "removed_unsupported",
+        "scores": {
+          "entailment": 0.0025,
+          "neutral": 0.88,
+          "contradiction": 0.1175
+        },
+        "reason": "No supporting evidence in the conversation (not asserted to be false).",
+        "nearest_evidence": "Patient: The chest discomfort is more of a pressure-like feeling, and it happens maybe a couple times a month. When it does, it usually only lasts a few minutes, and then it goes away for a while. I just take it easy on those days and don't push myself too hard."
+      }
+    ],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": []
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 3.3,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 60 years old, and I'm here because I had mitral valve repair surgery in August 2020, and I just wanted to check in on how I'm doing. I've been feeling better overall, but I still have some chest discomfort sometimes and my breathing feels shallow at times.\nDoctor: Could you describe the nature of the chest discomfort (e.g., sharp, dull, pressure-like), its frequency (e.g., daily, weekly), and how long each episode typically lasts?\nPatient: The chest discomfort is more of a pressure-like feeling, and it happens maybe a couple times a month. When it does, it usually only lasts a few minutes, and then it goes away for a while. I just take it easy on those days and don't push myself too hard.\nDoctor: Could you please tell me if you have any history of heart attacks, arrhythmias, or other cardiac procedures, as well as any medications you are currently taking for your heart condition?\nPatient: I don't have a history of heart attacks, but I do have a history of mitral regurgitation and atrial fibrillation. I've had a mitral valve repair surgery. As for medications, I'm taking Coumadin, Lasix, and Atenolol.\nDoctor: Could you provide details about the results of your most recent echocardiogram and ECG, as well as any other relevant blood tests or imaging studies you've had since your mitral valve repair surgery?\nPatient: I don't have the details of my most recent echocardiogram, but my ECG from December 26th showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study. I haven't had any other blood tests or imaging studies since my surgery that I'm aware of.\nDoctor: Could you clarify if you have experienced any changes in the frequency, duration, or intensity of your chest discomfort since your last follow-up? Additionally, have you noticed any new symptoms such as dizziness, palpitations, or shortness of breath that might be related to your atrial fibrillation or mitral valve repair?\nPatient: No, I haven't noticed any changes in how often or how bad the chest discomfort is since my last check-up. It's still happening a couple times a month, and it's the same pressure-like feeling that goes away after a few minutes. I haven't had any new symptoms like dizziness or palpitations, but my breathing does feel a little shallow sometimes, especially when I'm exerting myself.\nDoctor: Has the patient undergone an echocardiogram since the mitral valve repair surgery? If so, when was the most recent one and what were the findings?\nPatient: I don't recall having an echocardiogram since my surgery, but my most recent ECG was done on December 26th. It showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study.\nDoctor: Has the patient undergone an echocardiogram since the mitral valve repair surgery in August 2020? If so, when was the most recent echocardiogram performed, and what were the findings?\nPatient: I don't recall having an echocardiogram since my surgery, but my most recent ECG was done on December 26th. It showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study.\nDoctor: Has the patient undergone an echocardiogram since the mitral valve repair surgery? If so, please provide the results and the date of the most recent echocardiogram.\nPatient: I don't recall having an echocardiogram since my surgery, but my most recent ECG was done on December 26th. It showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study.\nDoctor: Has the patient had any recent echocardiograms or other imaging studies since the mitral valve repair surgery? If not, when was the last echocardiogram performed?\nPatient: I don't recall having an echocardiogram since my surgery, but my most recent ECG was done on December 26th. It showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study.\nDoctor: Has the patient had an echocardiogram since the mitral valve repair surgery in August 2020?\nPatient: No, I don't recall having an echocardiogram since my surgery. My most recent ECG was done on December 26th, and it showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study.\nDoctor: Has the patient experienced any episodes of shortness of breath, chest pain, or palpitations that have worsened in frequency or intensity since the last follow-up?\nPatient: No, I haven't had any episodes that have gotten worse. The chest pain and shortness of breath I have are pretty much the same as before, and I've learned to manage them by slowing down when I feel them coming on. They usually go away after a few minutes and then don't come back for a while.\nDoctor: Has the patient undergone an echocardiogram since the mitral valve repair surgery in August 2020?\nPatient: No, I don't recall having an echocardiogram since my surgery. My most recent ECG was done on December 26th, and it showed atrial fibrillation with a controlled ventricular response and some T-wave inversion anteriorly. My doctor said there were no significant changes compared to the previous study.\nDoctor: Has the patient undergone an echocardiogram since the mitral valve repair surgery? If not, is there a plan to schedule one for further evaluation?\nPatient: No, I don't recall having an echocardiogram since my surgery. My doctor hasn't mentioned scheduling one, but I'm not sure if that's part of my follow-up plan. I've been doing okay otherwise, so maybe it's not needed right now.\nDoctor: Has the patient experienced any episodes of shortness of breath or chest discomfort that feel different from the usual pressure-like sensation, such as sharp, sudden, or radiating pain?\nPatient: No, the chest discomfort I feel is more of a pressure-like sensation, and it doesn't feel sharp or sudden. It usually happens when I'm exerting myself, and it goes away after a few minutes. I haven't had any new or different kinds of pain since my last checkup.\nDoctor: Has the patient undergone any recent echocardiogram or other cardiac imaging studies since August 2020? If not, is there a plan to schedule one during this follow-up?\nPatient: No, I don't recall having an echocardiogram since my surgery. My doctor hasn't mentioned scheduling one, but I'm not sure if that's part of my follow-up plan. I've been doing okay otherwise, so maybe it's not needed right now.",
+  "reference_so": {
+    "subjective": "Basic information: 60-year-old male, post-mitral valve repair surgery (August 2020), presenting for follow-up. Reports ongoing chest discomfort and shallow breathing.\n\nHistory of present illness: The patient had mitral valve repair surgery in August 2020 and is now presenting for follow-up. He reports ongoing chest discomfort and shallow breathing, though he feels better overall. The chest discomfort is described as a pressure-like feeling, occurring a couple of times a month, lasting a few minutes, and resolving on its own. On those days, he takes it easy and avoids pushing himself too hard. There have been no changes in the pattern of symptoms since the last follow-up. He has not experienced any new symptoms such as dizziness or palpitations, but he notes that his breathing feels a little shallow, especially during exertion.\n\nPast history: The patient has a history of mitral valve repair surgery in August 2020, mitral regurgitation, and atrial fibrillation. Current medications include Coumadin, Lasix, and Atenolol. No echocardiogram since August 2020.",
+    "objective": "Physical examination: Physical examination findings are not yet available.\n\nInvestigations: ECG from December 26th: atrial fibrillation with controlled ventricular response and anterior T-wave inversion. No significant changes compared to the previous study. No other blood tests or imaging studies since surgery. Echocardiogram not performed since surgery."
+  }
+}

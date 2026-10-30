@@ -1,0 +1,768 @@
+{
+  "case_id": "D2N088",
+  "split": "dev",
+  "stage1_so": {
+    "subjective": "* Age: 59 years old, male\n* Patient-reported symptoms: feeling tired and short of breath, especially when doing landscaping work and lifting heavy bags; thinks he caught a cold and it seems to have gotten worse\n* Patient-reported medical history: hypertension, type 2 diabetes, hyperlipidemia; taking lisinopril for hypertension, metformin for diabetes, and no medication for hyperlipidemia\n* Patient-reported medication adherence: taking medications as prescribed, but not regularly checking blood pressure, blood sugar, or lipid levels at home\n* Patient-reported lifestyle: no specific information provided",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Age: 59 years old, male\n* Patient-reported symptoms: feeling tired and short of breath, especially when doing landscaping work and lifting heavy bags; thinks he caught a cold and it seems to have gotten worse\n* Patient-reported medical history: hypertension, type 2 diabetes, hyperlipidemia; taking lisinopril for hypertension, metformin for diabetes, and no medication for hyperlipidemia\n* Patient-reported medication adherence: taking medications as prescribed, but not regularly checking blood pressure, blood sugar, or lipid levels at home\n* Patient-reported lifestyle: no specific information provided",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* Age: 59 years old, male\n* The patient states they haven't noticed the swelling getting worse.\n* Patient-reported symptoms: feeling tired and short of breath, especially when doing landscaping work and lifting heavy bags; thinks he caught a cold and it seems to have gotten worse\n* Patient-reported medical history: hypertension, type 2 diabetes, hyperlipidemia; taking lisinopril for hypertension, metformin for diabetes, and no medication for hyperlipidemia\n* Patient-reported medication adherence: taking medications as prescribed, but not regularly checking blood pressure, blood sugar, or lipid levels at home\n* The patient reports being unsure if the swelling in their lower extremities worsens with standing or improves with elevation because they have not paid attention to this detail.\n* Patient-reported lifestyle: no specific information provided\n* The patient denies a history of heart attacks, arrhythmias, or heart failure.\n* The patient states that the fatigue and shortness of breath kind of came on suddenly when they were exerting themselves.\n* The patient is not sure how well the metformin is working right now.",
+    "objective": "* The patient reports that their recent chest X-ray was normal."
+  },
+  "stage1_ap": {
+    "assessment": "* Clinical problems or diagnoses explicitly established in the conversation: fatigue, shortness of breath, swelling in lower extremities, possible cold or respiratory infection\n* No confirmed diagnoses or established history were mentioned in the conversation.",
+    "plan": "* No explicit management or follow-up plan was documented in the conversation."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Age: 59 years old, male",
+      "scores": {
+        "entailment": 0.9765,
+        "neutral": 0.0126,
+        "contradiction": 0.0571
+      },
+      "support_evidence": "Patient: I'm 59 years old, male. I've been feeling pretty tired and short of breath, especially when I was doing some landscaping work and lifting heavy bags. I think I caught a cold, and it seems to have gotten worse.",
+      "contradiction_evidence": "Patient: I haven't had any chest pain or dizziness, and I don't have any swelling in my legs right now. As for heart-related issues, I don't have a history of heart attacks, arrhythmias, or heart failure.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Age: 59 years old, male",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Age: 59 years old, male",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient-reported symptoms: feeling tired and short of breath, especially when doing landscaping work and lifting heavy bags; thinks he caught a cold and it seems to have gotten worse",
+      "scores": {
+        "entailment": 0.9992,
+        "neutral": 0.0003,
+        "contradiction": 0.951
+      },
+      "support_evidence": "Patient: I'm 59 years old, male. I've been feeling pretty tired and short of breath, especially when I was doing some landscaping work and lifting heavy bags. I think I caught a cold, and it seems to have gotten worse.",
+      "contradiction_evidence": "Patient: The swelling in my lower extremities is on both sides, and I didn't really notice it until the doctor mentioned it during the exam. I haven't been checking it regularly, so I can't say for sure if it's gotten worse or not. It doesn't feel red or warm, and I haven't felt any tenderness in my legs. I don't know if it gets worse when I stand or if it improves when I elevate my legs because I haven't really paid attention to that.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient-reported symptoms: feeling tired and short of breath, especially when doing landscaping work and lifting heavy bags; thinks he caught a cold and it seems to have gotten worse",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "Patient-reported symptoms: feeling tired and short of breath, especially when doing landscaping work and lifting heavy bags; thinks he caught a cold and it seems to have gotten worse",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient-reported medical history: hypertension, type 2 diabetes, hyperlipidemia; taking lisinopril for hypertension, metformin for diabetes, and no medication for hyperlipidemia",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0002,
+        "contradiction": 0.9793
+      },
+      "support_evidence": "Patient: I have a history of hypertension, type two diabetes, and I was told I have some hyperlipidemia, but I don't have the exact details. I've been managing them with medication and lifestyle changes, but I don't know if they're under control right now.",
+      "contradiction_evidence": "Patient: I haven't had any chest pain or dizziness, and I don't have any swelling in my legs right now. As for heart-related issues, I don't have a history of heart attacks, arrhythmias, or heart failure.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient-reported medical history: hypertension, type 2 diabetes, hyperlipidemia; taking lisinopril for hypertension, metformin for diabetes, and no medication for hyperlipidemia",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Patient-reported medical history: hypertension, type 2 diabetes, hyperlipidemia; taking lisinopril for hypertension, metformin for diabetes, and no medication for hyperlipidemia",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient-reported medication adherence: taking medications as prescribed, but not regularly checking blood pressure, blood sugar, or lipid levels at home",
+      "scores": {
+        "entailment": 0.9969,
+        "neutral": 0.0017,
+        "contradiction": 0.9266
+      },
+      "support_evidence": "Patient: I don't have the most recent values for my blood pressure, blood sugar, or lipid panel written down. I was told my A1C was eight, and I know I'm on lisinopril for my blood pressure, but I haven't been checking my numbers regularly at home, especially on the weekends. I don't have the exact numbers for my lipids, but I was told I have hyperlipidemia. As for the swelling, I haven't really paid attention to whether it gets worse when I stand or improves when I elevate my legs.",
+      "contradiction_evidence": "Patient: I haven't had any chest pain or dizziness, and I don't have any swelling in my legs right now. As for heart-related issues, I don't have a history of heart attacks, arrhythmias, or heart failure.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient-reported medication adherence: taking medications as prescribed, but not regularly checking blood pressure, blood sugar, or lipid levels at home",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Patient-reported medication adherence: taking medications as prescribed, but not regularly checking blood pressure, blood sugar, or lipid levels at home",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient-reported lifestyle: no specific information provided",
+      "scores": {
+        "entailment": 0.9988,
+        "neutral": 0.0006,
+        "contradiction": 0.9986
+      },
+      "support_evidence": "Patient: I'm on lisinopril for my high blood pressure, 20 milligrams a day. For my diabetes, I take metformin, but I think it's only 500 milligrams once a day, though the doctor just said they might be increasing it to 1000 milligrams twice daily. I don't take anything for hyperlipidemia, but I was told I have it. I feel like my blood pressure is under control most of the time, and my diabetes has been okay, though my A1C was a little high at eight. I'm not sure how well the metformin is working right now.",
+      "contradiction_evidence": "Patient: I'm on lisinopril for my high blood pressure, 20 milligrams a day. For my diabetes, I take metformin, but I think it's only 500 milligrams once a day, though the doctor just said they might be increasing it to 1000 milligrams twice daily. I don't take anything for hyperlipidemia, but I was told I have it. I feel like my blood pressure is under control most of the time, and my diabetes has been okay, though my A1C was a little high at eight. I'm not sure how well the metformin is working right now.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient-reported lifestyle: no specific information provided",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Patient-reported lifestyle: no specific information provided",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 5,
+      "exempt": 1
+    },
+    "num_claims": 5,
+    "num_kept": 5,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient states they haven't noticed the swelling getting worse.",
+      "evidence": "Patient: The swelling in my legs is on both sides, and it's been there for a while, but I didn't really pay much attention to it until the doctor mentioned it during the exam. I haven't noticed it getting worse, but I also haven't been checking it regularly.",
+      "section": "subjective",
+      "candidate": "I haven't noticed it getting worse, but I also haven't been checking it regularly."
+    },
+    {
+      "statement": "The patient reports being unsure if the swelling in their lower extremities worsens with standing or improves with elevation because they have not paid attention to this detail.",
+      "evidence": "Patient: The swelling in my lower extremities is on both sides, and I didn't really notice it until the doctor mentioned it during the exam. I haven't been checking it regularly, so I can't say for sure if it's gotten worse or not. It doesn't feel red or warm, and I haven't felt any tenderness in my legs. I don't know if it gets worse when I stand or if it improves when I elevate my legs because I haven't really paid attention to that.",
+      "section": "subjective",
+      "candidate": "I don't know if it gets worse when I stand or if it improves when I elevate my legs because I haven't really paid attention to that."
+    },
+    {
+      "statement": "The patient states that the fatigue and shortness of breath kind of came on suddenly when they were exerting themselves.",
+      "evidence": "Patient: The fatigue and shortness of breath started about a week ago, around the time I was doing some landscaping work. It wasn’t too bad at first, but it got worse when I was lifting heavy bags of soil. I didn’t notice it getting gradually worse—it kind of came on suddenly when I was exerting myself.",
+      "section": "subjective",
+      "candidate": "I didn’t notice it getting gradually worse—it kind of came on suddenly when I was exerting myself."
+    },
+    {
+      "statement": "The patient denies a history of heart attacks, arrhythmias, or heart failure.",
+      "evidence": "Patient: I haven't had any chest pain or dizziness, and I don't have any swelling in my legs right now. As for heart-related issues, I don't have a history of heart attacks, arrhythmias, or heart failure.",
+      "section": "subjective",
+      "candidate": "As for heart-related issues, I don't have a history of heart attacks, arrhythmias, or heart failure."
+    },
+    {
+      "statement": "The patient reports that their recent chest X-ray was normal.",
+      "evidence": "Patient: I don't have the dates or results of any recent chest X-rays or blood tests. I was told that my chest X-ray looked normal, and I don't have any other test results with me.",
+      "section": "objective",
+      "candidate": "I was told that my chest X-ray looked normal, and I don't have any other test results with me."
+    },
+    {
+      "statement": "The patient is not sure how well the metformin is working right now.",
+      "evidence": "Patient: I'm on lisinopril for my high blood pressure, 20 milligrams a day. For my diabetes, I take metformin, but I think it's only 500 milligrams once a day, though the doctor just said they might be increasing it to 1000 milligrams twice daily. I don't take anything for hyperlipidemia, but I was told I have it. I feel like my blood pressure is under control most of the time, and my diabetes has been okay, though my A1C was a little high at eight. I'm not sure how well the metformin is working right now.",
+      "section": "subjective",
+      "candidate": "I'm not sure how well the metformin is working right now."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "It doesn't feel red or warm, and I haven't felt any tenderness in my legs.",
+      "speaker": "Patient",
+      "coverage": 0.155,
+      "nearest_so_sentence": "Patient-reported symptoms: feeling tired and short of breath, especially when doing landscaping work and lifting heavy bags; thinks he caught a cold and it seems to have gotten worse",
+      "statement": "The patient reports that the swelling in their lower extremities does not feel red or warm, and they have not experienced tenderness in their legs.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: The swelling in my legs is on both sides, and I didn't really notice it until the doctor mentioned it during the exam. I haven't been checking it regularly, so I can't say for sure if it's gotten worse or not. It doesn't feel red or warm, and I haven't felt any tenderness in my legs.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.7053
+      }
+    },
+    {
+      "candidate": "It doesn't feel red or warm, and I haven't felt any tenderness in my legs.",
+      "speaker": "Patient",
+      "coverage": 0.1562,
+      "nearest_so_sentence": "Patient-reported symptoms: feeling tired and short of breath, especially when doing landscaping work and lifting heavy bags; thinks he caught a cold and it seems to have gotten worse",
+      "statement": "The patient denies experiencing redness or warmth in the affected legs, and reports no tenderness.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: The swelling in my lower extremities is on both sides, and I didn't really notice it until the doctor mentioned it during the exam. I haven't been checking it regularly, so I can't say for sure if it's gotten worse or not. It doesn't feel red or warm, and I haven't felt any tenderness in my legs. I don't know if it gets worse when I stand or if it improves when I elevate my legs because I haven't really paid attention to that.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.8959
+      }
+    },
+    {
+      "candidate": "I haven't been checking it regularly, so I can't say for sure if it's gotten worse or not.",
+      "speaker": "Patient",
+      "coverage": 0.1913,
+      "nearest_so_sentence": "Patient-reported symptoms: feeling tired and short of breath, especially when doing landscaping work and lifting heavy bags; thinks he caught a cold and it seems to have gotten worse",
+      "statement": "The patient states they haven't been checking the swelling regularly, so they can't say for sure if it's gotten worse or not.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The swelling in my lower extremities is on both sides, and I didn't really notice it until the doctor mentioned it during the exam. I haven't been checking it regularly, so I can't say for sure if it's gotten worse or not. It doesn't feel red or warm, and I haven't felt any tenderness in my legs. I don't know if it gets worse when I stand or if it improves when I elevate my legs because I haven't really paid attention to that.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.1615
+      },
+      "first_rewrite_rejected": "The patient reports being unable to determine if the swelling in their lower extremities has worsened due to lack of regular monitoring.",
+      "duplicate_entailment": 0.7612,
+      "duplicate_similarity": 0.3403
+    },
+    {
+      "candidate": "I haven't been checking it regularly, so I can't say for sure if it's gotten worse or not.",
+      "speaker": "Patient",
+      "coverage": 0.192,
+      "nearest_so_sentence": "Patient-reported symptoms: feeling tired and short of breath, especially when doing landscaping work and lifting heavy bags; thinks he caught a cold and it seems to have gotten worse",
+      "statement": "The patient states they haven't been checking the swelling regularly, so they can't say for sure if it's gotten worse or not.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The swelling in my lower extremities is on both sides, and I didn't really notice it until the doctor mentioned it during the exam. I haven't been checking it regularly, so I can't say for sure if it's gotten worse or not. It doesn't feel red or warm, and I haven't felt any tenderness in my legs. I don't know if it gets worse when I stand or if it improves when I elevate my legs because I haven't really paid attention to that.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.1615
+      },
+      "first_rewrite_rejected": "The patient reports being unable to determine if the swelling in their legs has worsened over time due to lack of regular monitoring.",
+      "duplicate_entailment": 0.7612,
+      "duplicate_similarity": 0.3412
+    },
+    {
+      "candidate": "I haven't noticed it getting worse, but I also haven't been checking it regularly.",
+      "speaker": "Patient",
+      "coverage": 0.1947,
+      "nearest_so_sentence": "Patient-reported symptoms: feeling tired and short of breath, especially when doing landscaping work and lifting heavy bags; thinks he caught a cold and it seems to have gotten worse",
+      "statement": "The patient states they haven't noticed the swelling getting worse.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: The swelling in my legs is on both sides, and it's been there for a while, but I didn't really pay much attention to it until the doctor mentioned it during the exam. I haven't noticed it getting worse, but I also haven't been checking it regularly.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.2007
+      },
+      "first_rewrite_rejected": "The patient reports that the swelling in their lower extremities has not worsened, but they have not been regularly checking its progression.",
+      "duplicate_entailment": 0.2389,
+      "duplicate_similarity": 0.3393,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 1,
+        "perplexity": 21.11,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "The swelling in my lower extremities is on both sides, and I didn't really notice it until the doctor mentioned it during the exam.",
+      "speaker": "Patient",
+      "coverage": 0.1958,
+      "nearest_so_sentence": "Patient-reported symptoms: feeling tired and short of breath, especially when doing landscaping work and lifting heavy bags; thinks he caught a cold and it seems to have gotten worse",
+      "statement": "The patient reports bilateral swelling in their lower extremities.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: The swelling in my lower extremities is on both sides, and I didn't really notice it until the doctor mentioned it during the exam. I haven't been checking it regularly, so I can't say for sure if it's gotten worse or not. It doesn't feel red or warm, and I haven't felt any tenderness in my legs. I don't know if it gets worse when I stand or if it improves when I elevate my legs because I haven't really paid attention to that.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.9985
+      }
+    },
+    {
+      "candidate": "The swelling in my legs is on both sides, and I didn't really notice it until the doctor mentioned it during the exam.",
+      "speaker": "Patient",
+      "coverage": 0.2047,
+      "nearest_so_sentence": "Patient-reported symptoms: feeling tired and short of breath, especially when doing landscaping work and lifting heavy bags; thinks he caught a cold and it seems to have gotten worse",
+      "statement": "The patient reports bilateral leg swelling that was initially unnoticed until mentioned by the doctor during the examination.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: The swelling in my lower extremities is on both sides, and I didn't really notice it until the doctor mentioned it during the exam. I haven't been checking it regularly, so I can't say for sure if it's gotten worse or not. It doesn't feel red or warm, and I haven't felt any tenderness in my legs. I don't know if it gets worse when I stand or if it improves when I elevate my legs because I haven't really paid attention to that.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.9939
+      }
+    },
+    {
+      "candidate": "The swelling in my legs is on both sides, and it's been there for a while, but I didn't really pay much attention to it until the doctor mentioned it during the exam.",
+      "speaker": "Patient",
+      "coverage": 0.2072,
+      "nearest_so_sentence": "Patient-reported symptoms: feeling tired and short of breath, especially when doing landscaping work and lifting heavy bags; thinks he caught a cold and it seems to have gotten worse",
+      "statement": "The patient reports bilateral swelling in the lower extremities that has been present for a while, but was not previously noticed until mentioned during the examination.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: The swelling in my legs is on both sides, and it's been there for a while, but I didn't really pay much attention to it until the doctor mentioned it during the exam. I haven't noticed it getting worse, but I also haven't been checking it regularly.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.9899
+      }
+    },
+    {
+      "candidate": "I don't know if it gets worse when I stand or if it improves when I elevate my legs because I haven't really paid attention to that.",
+      "speaker": "Patient",
+      "coverage": 0.2115,
+      "nearest_so_sentence": "Patient-reported symptoms: feeling tired and short of breath, especially when doing landscaping work and lifting heavy bags; thinks he caught a cold and it seems to have gotten worse",
+      "statement": "The patient reports being unsure if the swelling in their lower extremities worsens with standing or improves with elevation because they have not paid attention to this detail.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: The swelling in my lower extremities is on both sides, and I didn't really notice it until the doctor mentioned it during the exam. I haven't been checking it regularly, so I can't say for sure if it's gotten worse or not. It doesn't feel red or warm, and I haven't felt any tenderness in my legs. I don't know if it gets worse when I stand or if it improves when I elevate my legs because I haven't really paid attention to that.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.1314
+      },
+      "duplicate_entailment": 0.0324,
+      "duplicate_similarity": 0.3607,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 5,
+        "perplexity": 22.35,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "As for the swelling, I haven't really paid attention to whether it gets worse when I stand or improves when I elevate my legs.",
+      "speaker": "Patient",
+      "coverage": 0.2528,
+      "nearest_so_sentence": "Patient-reported symptoms: feeling tired and short of breath, especially when doing landscaping work and lifting heavy bags; thinks he caught a cold and it seems to have gotten worse",
+      "statement": "The patient reports not paying attention to whether the swelling of their lower extremities worsens when standing or improves when elevating their legs.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Could you please provide the most recent values for your blood pressure, blood sugar, and lipid panel? Additionally, have you noticed any changes in the swelling of your lower extremities, such as whether it worsens when standing or improves when elevating your legs?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.1527
+      },
+      "duplicate_entailment": 0.2755,
+      "duplicate_similarity": 0.3182
+    },
+    {
+      "candidate": "I didn’t notice it getting gradually worse—it kind of came on suddenly when I was exerting myself.",
+      "speaker": "Patient",
+      "coverage": 0.2684,
+      "nearest_so_sentence": "Patient-reported symptoms: feeling tired and short of breath, especially when doing landscaping work and lifting heavy bags; thinks he caught a cold and it seems to have gotten worse",
+      "statement": "The patient states that the fatigue and shortness of breath kind of came on suddenly when they were exerting themselves.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: The fatigue and shortness of breath started about a week ago, around the time I was doing some landscaping work. It wasn’t too bad at first, but it got worse when I was lifting heavy bags of soil. I didn’t notice it getting gradually worse—it kind of came on suddenly when I was exerting myself.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9986,
+        "contradiction": 0.1064
+      },
+      "first_rewrite_rejected": "The patient reports that the fatigue and shortness of breath did not worsen gradually, but rather came on suddenly when exerting themselves.",
+      "duplicate_entailment": 0.0077,
+      "duplicate_similarity": 0.5245,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 7,
+        "perplexity": 20.81,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don't have the details of any recent blood tests with me. I was told my chest X-ray was normal, and the doctor mentioned some swelling in my legs and pain in my elbows, but I don't have any lab results written down.",
+      "speaker": "Patient",
+      "coverage": 0.2921,
+      "nearest_so_sentence": "Patient-reported symptoms: feeling tired and short of breath, especially when doing landscaping work and lifting heavy bags; thinks he caught a cold and it seems to have gotten worse",
+      "statement": "The patient reports not having the details of any recent blood tests with them.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Doctor: Could you please provide the most recent values for your blood pressure, blood sugar, and lipid panel? Additionally, have you noticed any changes in the swelling of your lower extremities, such as whether it worsens when standing or improves when elevating your legs?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.7264
+      }
+    },
+    {
+      "candidate": "It wasn’t too bad at first, but it got worse when I was lifting heavy bags of soil.",
+      "speaker": "Patient",
+      "coverage": 0.3062,
+      "nearest_so_sentence": "Patient-reported symptoms: feeling tired and short of breath, especially when doing landscaping work and lifting heavy bags; thinks he caught a cold and it seems to have gotten worse",
+      "statement": "The patient reports that the fatigue and shortness of breath were initially not severe, but worsened after lifting heavy bags of soil.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: The fatigue and shortness of breath started about a week ago, around the time I was doing some landscaping work. It wasn’t too bad at first, but it got worse when I was lifting heavy bags of soil. I didn’t notice it getting gradually worse—it kind of came on suddenly when I was exerting myself.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.5649
+      }
+    },
+    {
+      "candidate": "I haven't had any chest pain or dizziness, and I don't have any swelling in my legs right now.",
+      "speaker": "Patient",
+      "coverage": 0.3122,
+      "nearest_so_sentence": "Patient-reported symptoms: feeling tired and short of breath, especially when doing landscaping work and lifting heavy bags; thinks he caught a cold and it seems to have gotten worse",
+      "statement": "The patient denies experiencing chest pain, dizziness, or swelling in their legs.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I haven't had any chest pain or dizziness, and I don't have any swelling in my legs right now. As for heart-related issues, I don't have a history of heart attacks, arrhythmias, or heart failure.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.996
+      }
+    },
+    {
+      "candidate": "As for heart-related issues, I don't have a history of heart attacks, arrhythmias, or heart failure.",
+      "speaker": "Patient",
+      "coverage": 0.3187,
+      "nearest_so_sentence": "Patient-reported lifestyle: no specific information provided",
+      "statement": "The patient denies a history of heart attacks, arrhythmias, or heart failure.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I haven't had any chest pain or dizziness, and I don't have any swelling in my legs right now. As for heart-related issues, I don't have a history of heart attacks, arrhythmias, or heart failure.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9989,
+        "contradiction": 0.2264
+      },
+      "duplicate_entailment": 0.075,
+      "duplicate_similarity": 0.3423,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 7,
+        "perplexity": 18.73,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I did feel a little warm, but I thought it was from exertion.",
+      "speaker": "Patient",
+      "coverage": 0.3263,
+      "nearest_so_sentence": "Patient-reported symptoms: feeling tired and short of breath, especially when doing landscaping work and lifting heavy bags; thinks he caught a cold and it seems to have gotten worse",
+      "statement": "The patient reports feeling a little warm, attributing it to exertion.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I haven't had a cough yet, but I feel like it might be coming. I did feel a little warm, but I thought it was from exertion. I don't have a history of asthma or COPD, and I don't think I've had any recent infections besides maybe a cold.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9969,
+        "contradiction": 0.9983
+      }
+    },
+    {
+      "candidate": "He also noticed some swelling in my lower extremities and pain when pressing on my elbows.",
+      "speaker": "Patient",
+      "coverage": 0.3296,
+      "nearest_so_sentence": "Patient-reported symptoms: feeling tired and short of breath, especially when doing landscaping work and lifting heavy bags; thinks he caught a cold and it seems to have gotten worse",
+      "statement": "The patient reports noticing swelling in their lower extremities and experiencing pain when pressure is applied to their elbows.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I don't have the results of my most recent physical examination with me, but I was told that my vital signs were normal, and during the exam, the doctor heard some scattered ronchi in my lungs that cleared with coughing. He also noticed some swelling in my lower extremities and pain when pressing on my elbows.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9964,
+        "contradiction": 0.999
+      }
+    },
+    {
+      "candidate": "I was told that my chest X-ray looked normal, and I don't have any other test results with me.",
+      "speaker": "Patient",
+      "coverage": 0.3336,
+      "nearest_so_sentence": "Patient-reported lifestyle: no specific information provided",
+      "statement": "The patient reports that their recent chest X-ray was normal.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't have the dates or results of any recent chest X-rays or blood tests. I was told that my chest X-ray looked normal, and I don't have any other test results with me.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.1439
+      },
+      "duplicate_entailment": 0.0062,
+      "duplicate_similarity": 0.3385,
+      "insertion": {
+        "section": "objective",
+        "line_index": 0,
+        "perplexity": null,
+        "removed_placeholder": [
+          "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+        ]
+      }
+    },
+    {
+      "candidate": "I'm not sure how well the metformin is working right now.",
+      "speaker": "Patient",
+      "coverage": 0.3491,
+      "nearest_so_sentence": "Patient-reported medical history: hypertension, type 2 diabetes, hyperlipidemia; taking lisinopril for hypertension, metformin for diabetes, and no medication for hyperlipidemia",
+      "statement": "The patient is not sure how well the metformin is working right now.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I'm on lisinopril for my high blood pressure, 20 milligrams a day. For my diabetes, I take metformin, but I think it's only 500 milligrams once a day, though the doctor just said they might be increasing it to 1000 milligrams twice daily. I don't take anything for hyperlipidemia, but I was told I have it. I feel like my blood pressure is under control most of the time, and my diabetes has been okay, though my A1C was a little high at eight. I'm not sure how well the metformin is working right now.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0189
+      },
+      "first_rewrite_rejected": "The patient reports that the metformin is not sure how well it is working right now.",
+      "duplicate_entailment": 0.0022,
+      "duplicate_similarity": 0.4786,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 9,
+        "perplexity": 17.55,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don't have the exact numbers for my lipids, but I was told I have hyperlipidemia.",
+      "speaker": "Patient",
+      "coverage": 0.3591,
+      "nearest_so_sentence": "Patient-reported medical history: hypertension, type 2 diabetes, hyperlipidemia; taking lisinopril for hypertension, metformin for diabetes, and no medication for hyperlipidemia",
+      "statement": "The patient reports having hyperlipidemia, but does not have the exact numbers for their lipid panel.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I don't have the most recent values for my blood pressure, blood sugar, or lipid panel written down. I was told my A1C was eight, and I know I'm on lisinopril for my blood pressure, but I haven't been checking my numbers regularly at home, especially on the weekends. I don't have the exact numbers for my lipids, but I was told I have hyperlipidemia.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.3443
+      }
+    },
+    {
+      "candidate": "I don't have the exact numbers for my lipids, but I was told I have hyperlipidemia.",
+      "speaker": "Patient",
+      "coverage": 0.3593,
+      "nearest_so_sentence": "Patient-reported medical history: hypertension, type 2 diabetes, hyperlipidemia; taking lisinopril for hypertension, metformin for diabetes, and no medication for hyperlipidemia",
+      "statement": "The patient states they have hyperlipidemia.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't have the most recent values for my blood pressure, blood sugar, or lipid panel written down. I was told my A1C was eight, and I know I'm on lisinopril for my blood pressure, but I haven't been checking my numbers regularly at home, especially on the weekends. I don't have the exact numbers for my lipids, but I was told I have hyperlipidemia.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.1114
+      },
+      "first_rewrite_rejected": "The patient reports having hyperlipidemia, but does not have the exact numbers for their lipid panel.",
+      "duplicate_entailment": 0.999,
+      "duplicate_similarity": 0.4971
+    },
+    {
+      "candidate": "I don't have the dates or results of any recent chest X-rays or blood tests.",
+      "speaker": "Patient",
+      "coverage": 0.3645,
+      "nearest_so_sentence": "Patient-reported lifestyle: no specific information provided",
+      "statement": "The patient reports not having the dates or results of any recent chest X-rays or blood tests.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I don't have the dates or results of any recent chest X-rays or blood tests. I was told that my chest X-ray looked normal, and I don't have any other test results with me.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.9945
+      }
+    },
+    {
+      "candidate": "I haven't had a cough yet, but I feel like it might be coming.",
+      "speaker": "Patient",
+      "coverage": 0.3919,
+      "nearest_so_sentence": "Patient-reported symptoms: feeling tired and short of breath, especially when doing landscaping work and lifting heavy bags; thinks he caught a cold and it seems to have gotten worse",
+      "statement": "The patient reports not having a cough yet, but feels it may be impending.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I haven't had a cough yet, but I feel like it might be coming. I did feel a little warm, but I thought it was from exertion. I don't have a history of asthma or COPD, and I don't think I've had any recent infections besides maybe a cold.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9985,
+        "contradiction": 0.9956
+      }
+    },
+    {
+      "candidate": "I don't have the results of my most recent physical examination with me, but I was told that my vital signs were normal, and during the exam, the doctor heard some scattered ronchi in my lungs that cleared with coughing.",
+      "speaker": "Patient",
+      "coverage": 0.399,
+      "nearest_so_sentence": "Patient-reported symptoms: feeling tired and short of breath, especially when doing landscaping work and lifting heavy bags; thinks he caught a cold and it seems to have gotten worse",
+      "statement": "The patient reports that their vital signs were normal during their most recent physical examination, and scattered ronchi were heard in their lungs, which cleared with coughing.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I don't have the results of my most recent physical examination with me, but I was told that my vital signs were normal, and during the exam, the doctor heard some scattered ronchi in my lungs that cleared with coughing. He also noticed some swelling in my lower extremities and pain when pressing on my elbows.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9712,
+        "contradiction": 0.8839
+      }
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 42,
+    "num_covered": 18,
+    "num_flagged": 24,
+    "num_not_checked_cap": 0,
+    "num_added": 6
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "It doesn't feel red or warm, and I haven't felt any tenderness in my legs.",
+        "statement": "The patient reports that the swelling in their lower extremities does not feel red or warm, and they have not experienced tenderness in their legs.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9997,
+          "contradiction": 0.7053
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "It doesn't feel red or warm, and I haven't felt any tenderness in my legs.",
+        "statement": "The patient denies experiencing redness or warmth in the affected legs, and reports no tenderness.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.8959
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "The swelling in my lower extremities is on both sides, and I didn't really notice it until the doctor mentioned it during the exam.",
+        "statement": "The patient reports bilateral swelling in their lower extremities.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.9985
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "The swelling in my legs is on both sides, and I didn't really notice it until the doctor mentioned it during the exam.",
+        "statement": "The patient reports bilateral leg swelling that was initially unnoticed until mentioned by the doctor during the examination.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.9939
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "The swelling in my legs is on both sides, and it's been there for a while, but I didn't really pay much attention to it until the doctor mentioned it during the exam.",
+        "statement": "The patient reports bilateral swelling in the lower extremities that has been present for a while, but was not previously noticed until mentioned during the examination.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9993,
+          "contradiction": 0.9899
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I don't have the details of any recent blood tests with me. I was told my chest X-ray was normal, and the doctor mentioned some swelling in my legs and pain in my elbows, but I don't have any lab results written down.",
+        "statement": "The patient reports not having the details of any recent blood tests with them.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9997,
+          "contradiction": 0.7264
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "It wasn’t too bad at first, but it got worse when I was lifting heavy bags of soil.",
+        "statement": "The patient reports that the fatigue and shortness of breath were initially not severe, but worsened after lifting heavy bags of soil.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9995,
+          "contradiction": 0.5649
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I haven't had any chest pain or dizziness, and I don't have any swelling in my legs right now.",
+        "statement": "The patient denies experiencing chest pain, dizziness, or swelling in their legs.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9994,
+          "contradiction": 0.996
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I did feel a little warm, but I thought it was from exertion.",
+        "statement": "The patient reports feeling a little warm, attributing it to exertion.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9969,
+          "contradiction": 0.9983
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "He also noticed some swelling in my lower extremities and pain when pressing on my elbows.",
+        "statement": "The patient reports noticing swelling in their lower extremities and experiencing pain when pressure is applied to their elbows.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9964,
+          "contradiction": 0.999
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I don't have the exact numbers for my lipids, but I was told I have hyperlipidemia.",
+        "statement": "The patient reports having hyperlipidemia, but does not have the exact numbers for their lipid panel.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9994,
+          "contradiction": 0.3443
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I don't have the dates or results of any recent chest X-rays or blood tests.",
+        "statement": "The patient reports not having the dates or results of any recent chest X-rays or blood tests.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.9945
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I haven't had a cough yet, but I feel like it might be coming.",
+        "statement": "The patient reports not having a cough yet, but feels it may be impending.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9985,
+          "contradiction": 0.9956
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I don't have the results of my most recent physical examination with me, but I was told that my vital signs were normal, and during the exam, the doctor heard some scattered ronchi in my lungs that cleared with coughing.",
+        "statement": "The patient reports that their vital signs were normal during their most recent physical examination, and scattered ronchi were heard in their lungs, which cleared with coughing.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9712,
+          "contradiction": 0.8839
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 68.4,
+  "ap_unchanged": true,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 59 years old, male. I've been feeling pretty tired and short of breath, especially when I was doing some landscaping work and lifting heavy bags. I think I caught a cold, and it seems to have gotten worse.\nDoctor: Could you please provide your age, gender, and describe what is bringing you in today?\nPatient: I'm 59 years old, male. I've been feeling pretty tired and short of breath, especially when I was doing some landscaping work and lifting heavy bags. I think I caught a cold, and it seems to have gotten worse.\nDoctor: Have you experienced any chest pain, dizziness, or swelling in your legs? Have you had any prior heart-related issues, such as a heart attack, arrhythmia, or heart failure?\nPatient: I haven't had any chest pain or dizziness, and I don't have any swelling in my legs right now. As for heart-related issues, I don't have a history of heart attacks, arrhythmias, or heart failure.\nDoctor: Have you experienced any cough, fever, night sweats, or weight loss associated with your fatigue and shortness of breath? Additionally, do you have a history of respiratory conditions such as asthma or COPD, or any recent infections?\nPatient: I haven't had a cough yet, but I feel like it might be coming. I did feel a little warm, but I thought it was from exertion. I don't have a history of asthma or COPD, and I don't think I've had any recent infections besides maybe a cold.\nDoctor: Could you please provide the results of your most recent physical examination, including vital signs and any findings from the cardiovascular, respiratory, and general physical exams?\nPatient: I don't have the results of my most recent physical examination with me, but I was told that my vital signs were normal, and during the exam, the doctor heard some scattered ronchi in my lungs that cleared with coughing. He also noticed some swelling in my lower extremities and pain when pressing on my elbows.\nDoctor: Could you provide the dates and results of any recent chest X-rays, pulmonary function tests, or blood tests (such as CBC, BNP, or troponin levels) that have been performed?\nPatient: I don't have the dates or results of any recent chest X-rays or blood tests. I was told that my chest X-ray looked normal, and I don't have any other test results with me.\nDoctor: Can you provide more details about the timeline of your symptoms? Specifically, when did the fatigue and shortness of breath start, and have they been gradually worsening over time?\nPatient: The fatigue and shortness of breath started about a week ago, around the time I was doing some landscaping work. It wasn’t too bad at first, but it got worse when I was lifting heavy bags of soil. I didn’t notice it getting gradually worse—it kind of came on suddenly when I was exerting myself.\nDoctor: Could you provide more details about the swelling in your lower extremities? For example, is it bilateral or unilateral, and has it been progressively worsening?\nPatient: The swelling in my legs is on both sides, and it's been there for a while, but I didn't really pay much attention to it until the doctor mentioned it during the exam. I haven't noticed it getting worse, but I also haven't been checking it regularly.\nDoctor: Could you please provide details about any recent blood tests, such as a complete blood count (CBC), comprehensive metabolic panel (CMP), or B-type natriuretic peptide (BNP) levels, if available?\nPatient: I don't have the details of any recent blood tests with me. I was told my chest X-ray was normal, and the doctor mentioned some swelling in my legs and pain in my elbows, but I don't have any lab results written down.\nDoctor: Could you provide more details about the swelling in your legs, such as when it first started, whether it is accompanied by any redness, warmth, or tenderness, and if you have noticed any changes in its severity over time?\nPatient: The swelling in my legs is on both sides, and I didn't really notice it until the doctor mentioned it during the exam. I haven't been checking it regularly, so I can't say for sure if it's gotten worse or not. It doesn't feel red or warm, and I haven't felt any tenderness in my legs.\nDoctor: Could you please provide information about any history of hypertension, diabetes, or hyperlipidemia, as these are risk factors for cardiovascular conditions that may contribute to your symptoms?\nPatient: I have a history of hypertension, type two diabetes, and I was told I have some hyperlipidemia, but I don't have the exact details. I've been managing them with medication and lifestyle changes, but I don't know if they're under control right now.\nDoctor: Could you please share the names of the medications you are currently taking for hypertension, type 2 diabetes, and hyperlipidemia, along with the dosages and how well you feel they are controlling your conditions?\nPatient: I'm on lisinopril for my high blood pressure, 20 milligrams a day. For my diabetes, I take metformin, but I think it's only 500 milligrams once a day, though the doctor just said they might be increasing it to 1000 milligrams twice daily. I don't take anything for hyperlipidemia, but I was told I have it. I feel like my blood pressure is under control most of the time, and my diabetes has been okay, though my A1C was a little high at eight. I'm not sure how well the metformin is working right now.\nDoctor: Could you provide the most recent values of your blood pressure, blood sugar (including A1C), and lipid panel (LDL, HDL, triglycerides) to better assess the control of your hypertension, diabetes, and hyperlipidemia?\nPatient: I don't have the most recent values for my blood pressure, blood sugar, or lipid panel written down. I was told my A1C was eight, and I know I'm on lisinopril for my blood pressure, but I haven't been checking my numbers regularly at home, especially on the weekends. I don't have the exact numbers for my lipids, but I was told I have hyperlipidemia.\nDoctor: Could you provide more details about the swelling in your lower extremities? For example, is it bilateral or unilateral, and does it worsen with standing or improve with elevation?\nPatient: The swelling in my lower extremities is on both sides, and I didn't really notice it until the doctor mentioned it during the exam. I haven't been checking it regularly, so I can't say for sure if it's gotten worse or not. It doesn't feel red or warm, and I haven't felt any tenderness in my legs. I don't know if it gets worse when I stand or if it improves when I elevate my legs because I haven't really paid attention to that.\nDoctor: Could you please provide the most recent values for your blood pressure, blood sugar, and lipid panel? Additionally, have you noticed any changes in the swelling of your lower extremities, such as whether it worsens when standing or improves when elevating your legs?\nPatient: I don't have the most recent values for my blood pressure, blood sugar, or lipid panel written down. I was told my A1C was eight, and I know I'm on lisinopril for my blood pressure, but I haven't been checking my numbers regularly at home, especially on the weekends. I don't have the exact numbers for my lipids, but I was told I have hyperlipidemia. As for the swelling, I haven't really paid attention to whether it gets worse when I stand or improves when I elevate my legs.",
+  "reference_so": {
+    "subjective": "Basic information: 59-year-old male with chief complaint of fatigue and shortness of breath, especially during physical activity like landscaping and lifting heavy bags. He believes he caught a cold, which has worsened.\n\nHistory of present illness: The patient reports fatigue and shortness of breath, particularly during physical exertion such as landscaping and lifting heavy bags. He attributes these symptoms to a cold that has worsened. He denies chest pain, dizziness, or leg swelling. The symptoms have been progressive and are exacerbated by physical activity. He has not had a cough yet, but he feels like it might be coming. He did feel a little warm, but he thought it was from exertion. He denies a history of asthma or COPD, and he does not think he has had any recent infections besides maybe a cold. The fatigue and shortness of breath started about a week ago, around the time he was doing some landscaping work. It wasn’t too bad at first, but it got worse when he was lifting heavy bags of soil. It came on suddenly when he was exerting himself.\n\nPast history: The patient has a history of hypertension, type 2 diabetes, and hyperlipidemia. No mention of respiratory conditions like asthma or COPD, or recent infections. He is on lisinopril 20 mg daily for hypertension and metformin (500 mg once daily, possibly increased to 1000 mg twice daily) for diabetes. His A1C level is 8, and he has hyperlipidemia without specific medication.",
+    "objective": "Physical examination: Vital signs were normal per patient report. Scattered ronchi in lungs that cleared with coughing. Swelling in lower extremities noted. Pain on elbow palpation.\n\nInvestigations: Chest X-ray was normal per patient report. No recent blood test results available."
+  }
+}

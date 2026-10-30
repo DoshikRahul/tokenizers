@@ -1,0 +1,185 @@
+{
+  "case_id": "D2N039",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient's age: Late 50s\n* Patient's gender: Not specified\n* Patient's primary concern: High blood pressure, despite taking medications as prescribed\n* Patient's symptoms: Mild headaches when blood pressure is high, no chest pain, shortness of breath, dizziness, or fatigue\n* Patient's medical history: Family history of high blood pressure and kidney disease\n* Patient's medication regimen: Norvasc 10 mg daily and Carvedilol 25 mg twice a day\n* Patient's understanding of kidney issues: Primary care doctor mentioned kidney issues, but patient was not given specific details",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient's age: Late 50s\n* Patient's gender: Not specified\n* Patient's primary concern: High blood pressure, despite taking medications as prescribed\n* Patient's symptoms: Mild headaches when blood pressure is high, no chest pain, shortness of breath, dizziness, or fatigue\n* Patient's medical history: Family history of high blood pressure and kidney disease\n* Patient's medication regimen: Norvasc 10 mg daily and Carvedilol 25 mg twice a day\n* Patient's understanding of kidney issues: Primary care doctor mentioned kidney issues, but patient was not given specific details",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has hypertension, despite taking medications as prescribed, and has been referred to the doctor due to concerns about kidney function.\n* The patient's primary care doctor mentioned kidney issues, but did not provide specific details or values.\n* The patient's family history includes high blood pressure and kidney disease.",
+    "plan": "* The patient will ask their primary care doctor to provide the specific values for serum creatinine, eGFR, and UACR from their recent blood work.\n* The patient will bring the values to their next appointment.\n* The doctor will assess the patient's kidney function and determine the impact of their current medications once the values are obtained."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient's age: Late 50s",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0002,
+        "contradiction": 0.0091
+      },
+      "support_evidence": "Patient: Hi, I'm Virginia. I'm not sure about my exact age, but I'm in my late 50s. What brings me in today is that my blood pressure has been really high, even though I've been taking my medications as prescribed. My primary care doctor noticed some issues with my kidneys in my last blood work and thought it would be a good idea for me to see you.",
+      "contradiction_evidence": "Patient: I'm not sure about my exact age, but I'm in my late 50s. I've had high blood pressure for a while now, and my primary care doctor has been adjusting my medications. I'm currently on Norvasc 10 mg daily and Carvedilol 25 mg twice a day. I don't have chest pain or shortness of breath, but I do get mild headaches when my blood pressure is really high. I don't have dizziness or fatigue on a regular basis, and I haven't noticed any changes in my urination.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient's age: Late 50s",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient's age: Late 50s",
+      "level": "sentence"
+    },
+    {
+      "section": "subjective",
+      "line": 1,
+      "sentence": "Patient's gender: Not specified",
+      "claim": "Patient's gender: Not specified",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    },
+    {
+      "claim": "Patient's primary concern: High blood pressure, despite taking medications as prescribed",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.2873
+      },
+      "support_evidence": "Patient: Hi, I'm Virginia. I'm not sure about my exact age, but I'm in my late 50s. What brings me in today is that my blood pressure has been really high, even though I've been taking my medications as prescribed. My primary care doctor noticed some issues with my kidneys in my last blood work and thought it would be a good idea for me to see you.",
+      "contradiction_evidence": "Patient: I don't have the specific values from my blood work, but my primary care doctor mentioned something about my kidneys, so that's why she referred me to you. I wasn't given the exact details, but she thought it was important to check further.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient's primary concern: High blood pressure, despite taking medications as prescribed",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Patient's primary concern: High blood pressure, despite taking medications as prescribed",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient's symptoms: Mild headaches when blood pressure is high, no chest pain, shortness of breath, dizziness, or fatigue",
+      "scores": {
+        "entailment": 0.9986,
+        "neutral": 0.0003,
+        "contradiction": 0.9925
+      },
+      "support_evidence": "Patient: I'm not sure about my exact age, but I'm in my late 50s. I've had high blood pressure for a while now, and my primary care doctor has been adjusting my medications. I'm currently on Norvasc 10 mg daily and Carvedilol 25 mg twice a day. I don't have chest pain or shortness of breath, but I do get mild headaches when my blood pressure is really high. I don't have dizziness or fatigue on a regular basis, and I haven't noticed any changes in my urination.",
+      "contradiction_evidence": "Patient: I don't have any specific symptoms related to my kidneys other than what my blood pressure issues might be causing. I do notice some swelling in my legs when I'm on my feet a lot, but I didn't think it was connected to my kidneys. I'm just following my doctor's advice and hoping we can figure this out.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient's symptoms: Mild headaches when blood pressure is high, no chest pain, shortness of breath, dizziness, or fatigue",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Patient's symptoms: Mild headaches when blood pressure is high, no chest pain, shortness of breath, dizziness, or fatigue",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient's medical history: Family history of high blood pressure and kidney disease",
+      "scores": {
+        "entailment": 0.9929,
+        "neutral": 0.0053,
+        "contradiction": 0.0018
+      },
+      "support_evidence": "Patient: Both my parents have high blood pressure, and one of them had kidney disease. I didn't realize how important that was, but I guess it's another reason why my blood pressure is so hard to control. I'll make sure to mention that to my primary care doctor when I ask for those test results.",
+      "contradiction_evidence": "Patient: I don't have any specific symptoms related to my kidneys other than what my blood pressure issues might be causing. I do notice some swelling in my legs when I'm on my feet a lot, but I didn't think it was connected to my kidneys. I'm just following my doctor's advice and hoping we can figure this out.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient's medical history: Family history of high blood pressure and kidney disease",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Patient's medical history: Family history of high blood pressure and kidney disease",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient's medication regimen: Norvasc 10 mg daily and Carvedilol 25 mg twice a day",
+      "scores": {
+        "entailment": 0.9986,
+        "neutral": 0.0003,
+        "contradiction": 0.6418
+      },
+      "support_evidence": "Patient: I'm not sure about my exact age, but I'm in my late 50s. I've had high blood pressure for a while now, and my primary care doctor has been adjusting my medications. I'm currently on Norvasc 10 mg daily and Carvedilol 25 mg twice a day. I don't have chest pain or shortness of breath, but I do get mild headaches when my blood pressure is really high. I don't have dizziness or fatigue on a regular basis, and I haven't noticed any changes in my urination.",
+      "contradiction_evidence": "Patient: I'm not sure about my exact age, but I'm in my late 50s. I've had high blood pressure for a while now, and my primary care doctor has been adjusting my medications. I'm currently on Norvasc 10 mg daily and Carvedilol 25 mg twice a day. I don't have chest pain or shortness of breath, but I do get mild headaches when my blood pressure is really high. I don't have dizziness or fatigue on a regular basis, and I haven't noticed any changes in my urination.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient's medication regimen: Norvasc 10 mg daily and Carvedilol 25 mg twice a day",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "Patient's medication regimen: Norvasc 10 mg daily and Carvedilol 25 mg twice a day",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient's understanding of kidney issues: Primary care doctor mentioned kidney issues, but patient was not given specific details",
+      "scores": {
+        "entailment": 0.9988,
+        "neutral": 0.0008,
+        "contradiction": 0.0028
+      },
+      "support_evidence": "Patient: I don't have the specific serum creatinine, eGFR, or UACR values from my blood work. My primary care doctor mentioned something about my kidneys, but she didn't give me the exact numbers. I'm just following her advice and hoping we can figure this out together.",
+      "contradiction_evidence": "Patient: Hi, I'm Virginia. I'm not sure about my exact age, but I'm in my late 50s. What brings me in today is that my blood pressure has been really high, even though I've been taking my medications as prescribed. My primary care doctor noticed some issues with my kidneys in my last blood work and thought it would be a good idea for me to see you.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient's understanding of kidney issues: Primary care doctor mentioned kidney issues, but patient was not given specific details",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 6,
+      "sentence": "Patient's understanding of kidney issues: Primary care doctor mentioned kidney issues, but patient was not given specific details",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 6,
+      "exempt": 2
+    },
+    "num_claims": 6,
+    "num_kept": 6,
+    "claim_retention_rate": 1.0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": []
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 3.6,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: Hi, I'm Virginia. I'm not sure about my exact age, but I'm in my late 50s. What brings me in today is that my blood pressure has been really high, even though I've been taking my medications as prescribed. My primary care doctor noticed some issues with my kidneys in my last blood work and thought it would be a good idea for me to see you.\nDoctor: Could you please confirm your exact age and provide more details about your hypertension, such as how long you've had it, the medications you're currently taking, and whether you've experienced any symptoms like chest pain, shortness of breath, dizziness, swelling, fatigue, or changes in urination?\nPatient: I'm not sure about my exact age, but I'm in my late 50s. I've had high blood pressure for a while now, and my primary care doctor has been adjusting my medications. I'm currently on Norvasc 10 mg daily and Carvedilol 25 mg twice a day. I don't have chest pain or shortness of breath, but I do get mild headaches when my blood pressure is really high. I don't have dizziness or fatigue on a regular basis, and I haven't noticed any changes in my urination.\nDoctor: Could you provide the specific findings from your recent blood work that indicated kidney issues, such as serum creatinine levels, estimated glomerular filtration rate (eGFR), and urine albumin-to-creatinine ratio (UACR)?\nPatient: I don't have the specific numbers from my blood work, but my primary care doctor mentioned something about my kidneys, so that's why she referred me to you. I wasn't given the exact details, but she thought it was important to check further.\nDoctor: Thank you for sharing that with me. Since you don't have the specific numbers from your blood work, could you let me know when you had the blood tests done and if you have a copy of the results or if your primary care doctor can provide them? This will help us move forward with your evaluation.\nPatient: I don't have the exact date when the blood tests were done, but it was recently, maybe a few months ago. I don't have a copy of the results myself, but my primary care doctor has them and I'm sure she can provide them if needed.\nDoctor: Could you please ask your primary care doctor to provide the specific values for serum creatinine, eGFR, and UACR from your recent blood work? These are essential for assessing your kidney function and determining the impact of your current medications.\nPatient: I'll ask my primary care doctor to get those specific values for me and bring them to my next appointment. I didn't realize they were so important, but I'm happy to do whatever it takes to figure out what's going on with my kidneys and blood pressure.\nDoctor: Thank you for your willingness to cooperate. Once you have the serum creatinine, estimated glomerular filtration rate (eGFR), and urine albumin-to-creatinine ratio (UACR) values from your primary care doctor, please bring them to your next appointment. In the meantime, could you let me know if you have any history of kidney disease, hypertension, or other relevant medical conditions in your family?\nPatient: Both my parents have high blood pressure, and one of them had kidney disease. I didn't realize how important that was, but I guess it's another reason why my blood pressure is so hard to control. I'll make sure to mention that to my primary care doctor when I ask for those test results.\nDoctor: Could you please provide the specific values for your serum creatinine, estimated glomerular filtration rate (eGFR), and urine albumin-to-creatinine ratio (UACR) from your most recent blood work? This will help us better understand your kidney function.\nPatient: I don't have the specific values from my blood work, but my primary care doctor mentioned something about my kidneys, so that's why she referred me to you. I wasn't given the exact details, but she thought it was important to check further.\nDoctor: Thank you for sharing that with me. Since you don't have the specific values from your blood work, could you please let me know if your primary care doctor has provided you with any reports or if there is a way for us to obtain those results? This information is important for assessing your kidney function and guiding your treatment.\nPatient: I don't have the specific values from my blood work, but my primary care doctor mentioned something about my kidneys, so that's why she referred me to you. I wasn't given the exact details, but she thought it was important to check further.\nDoctor: Thank you for sharing that with me. Since you don't have the exact values from your blood work, could you let me know if your primary care doctor has provided you with any reports or if there's a way we can obtain those results for further evaluation?\nPatient: I don't have the specific values from my blood work, but my primary care doctor mentioned something about my kidneys, so that's why she referred me to you. I wasn't given the exact details, but she thought it was important to check further.\nDoctor: Thank you for sharing that with me. Since you don't have the specific blood work values, could you let me know if your primary care doctor has provided you with any reports or if there is a way for us to obtain those results for further evaluation?\nPatient: I don't have the specific values from my blood work, but my primary care doctor mentioned something about my kidneys, so that's why she referred me to you. I wasn't given the exact details, but she thought it was important to check further.\nDoctor: Thank you for sharing that with me. Since you don't have the specific values from your blood work, could you please let me know if your primary care doctor has provided you with any additional information or if there are any other symptoms you've noticed related to your kidney issues?\nPatient: I don't have the specific values from my blood work, but my primary care doctor mentioned something about my kidneys, so that's why she referred me to you. I wasn't given the exact details, but she thought it was important to check further.\nDoctor: Could you please describe any symptoms you might be experiencing related to your kidneys, such as swelling in your legs, fatigue, changes in your urination patterns, or difficulty concentrating?\nPatient: I don't have any specific symptoms related to my kidneys other than what my blood pressure issues might be causing. I do notice some swelling in my legs when I'm on my feet a lot, but I didn't think it was connected to my kidneys. I'm just following my doctor's advice and hoping we can figure this out.\nDoctor: Could you please provide the specific serum creatinine, eGFR, and UACR values from your recent blood work? These are essential for assessing the extent of kidney involvement.\nPatient: I don't have the specific serum creatinine, eGFR, or UACR values from my blood work. My primary care doctor mentioned something about my kidneys, but she didn't give me the exact numbers. I'm just following her advice and hoping we can figure this out together.\nDoctor: Could you please describe any changes in your urination patterns, such as increased frequency, decreased output, or foamy urine? Also, have you experienced any fatigue or difficulty concentrating recently?\nPatient: I haven't noticed any changes in my urination patterns, like more frequent trips to the bathroom or foamy urine. I do feel a little tired sometimes, but I think that's just from work and not sure if it's related to my kidneys or not.\nDoctor: Could you please provide the specific serum creatinine, eGFR, and UACR values from your recent blood work? These are essential for assessing kidney function and determining the severity of any renal involvement.\nPatient: I don't have the specific serum creatinine, eGFR, or UACR values from my blood work. My primary care doctor mentioned something about my kidneys, but she didn't give me the exact numbers. I'm just following her advice and hoping we can figure this out together.",
+  "reference_so": {
+    "subjective": "Basic information: Virginia, late 50s, chief complaint: hypertension and kidney issues\n\nHistory of present illness: Hypertension with prescribed medications (Norvasc 10 mg daily and Carvedilol 25 mg twice a day), primary care doctor noted kidney issues in recent blood work. Patient reports swelling in legs when standing for prolonged periods. Patient reports feeling tired sometimes, but not sure if it's related to kidneys.\n\nPast history: Family history of hypertension and kidney disease (parents)",
+    "objective": "Physical examination: Swelling in lower extremities noted; no other significant findings. Vital signs not provided by patient.\n\nInvestigations: Serum creatinine, eGFR, and UACR values not available; patient states primary care doctor noted kidney issues in recent blood work."
+  }
+}
