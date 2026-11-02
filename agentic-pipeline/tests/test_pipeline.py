@@ -402,13 +402,14 @@ class ResumeBatchTests(unittest.IsolatedAsyncioTestCase):
 
     async def test_resume_cli_skips_completed_notes_without_creating_another_run(self):
         self.assertEqual(await self.execute(), 0)
-        run = next(self.args.output_dir.iterdir())
-        note = run / "train/T001/soap_note.json"
+        state_root = self.args.output_dir.parent / "outputs-backups"
+        run = next(state_root.iterdir())
+        note = self.args.output_dir / "soap_notes/T001/soap_note.json"
         before = (note.read_bytes(), note.stat().st_mtime_ns, self.endpoint.turns)
         self.args.resume = "latest"
         self.assertEqual(await self.execute(), 0)
         self.assertEqual((note.read_bytes(), note.stat().st_mtime_ns, self.endpoint.turns), before)
-        self.assertEqual(list(self.args.output_dir.iterdir()), [run])
+        self.assertEqual([path.name for path in (self.args.output_dir / "soap_notes").iterdir()], ["T001"])
         manifest = json.loads((run / "run_manifest.json").read_text())
         self.assertEqual(len(manifest["resume_attempts"]), 1)
         self.assertEqual(manifest["status"], "completed")
@@ -420,9 +421,10 @@ class ResumeBatchTests(unittest.IsolatedAsyncioTestCase):
         self.args.resume = "latest"
         self.assertEqual(await self.execute(), 0)
         self.assertEqual(self.endpoint.turns, 2)
-        self.assertEqual(len(list(self.args.output_dir.iterdir())), 1)
-        run = next(self.args.output_dir.iterdir())
-        self.assertTrue(finished_case(run / "train/T001"))
+        self.assertEqual([path.name for path in (self.args.output_dir / "soap_notes").iterdir()], ["T001"])
+        state_root = self.args.output_dir.parent / "outputs-backups"
+        run = next(state_root.iterdir())
+        self.assertTrue(finished_case(self.args.output_dir / "soap_notes/T001", run / "train/T001"))
 
     async def test_resume_refuses_changed_source_before_touching_manifest(self):
         self.assertEqual(await self.execute(), 0)

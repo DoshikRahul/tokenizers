@@ -10,7 +10,7 @@ from .client import ModelClient, ModelError
 from .consultation import Consultation
 from .dataset import load_encounters, SPLITS
 from .outputs import CaseOutput, create_run, now, write_json
-from .resume import finished_case, generation_lock, resume_run
+from .resume import backup_root, finished_case, generation_lock, resume_run
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -27,12 +27,58 @@ def parser():
     result.add_argument("--max-turns", type=int, default=15)
     result.add_argument("--timeout", type=float, default=900, help="Seconds allowed for each model request.")
     result.add_argument("--check", action="store_true", help="Check the model endpoint and exit without generation.")
+    result.add_argument("--status", action="store_true", help="Show the latest generation status without contacting the model.")
     result.add_argument("--resume", nargs="?", const="latest", default=None, metavar="RUN_DIRECTORY",
                         help="Continue the latest saved run, or specify its directory. Reuse its original encounter selection.")
     return result
 
 
+def public_root(output_dir: Path) -> Path:
+    return output_dir / "soap_notes"
+
+
+def _latest_manifest(output_dir: Path) -> Path:
+    state_root = backup_root(output_dir)
+    manifests = sorted([*state_root.glob("*/run_manifest.json"),
+                        *output_dir.glob("*/run_manifest.json")])
+    if not manifests:
+        raise ValueError("No saved generation run found.")
+    return manifests[-1]
+
+
+def print_status(output_dir: Path) -> int:
+    manifest_path = _latest_manifest(output_dir)
+    run = manifest_path.parent
+    manifest = json.loads(manifest_path.read_text())
+    counts = {"completed": 0, "failed": 0, "running": 0, "pending": 0}
+    incomplete = []
+    for record in manifest.get("encounters", []):
+        encounter_id = record["encounter_id"]
+        public = public_root(output_dir) / encounter_id
+        state = run / record["split"] / encounter_id
+        status_path = state / "details/status.json"
+        status = "pending"
+        if finished_case(public, state):
+            status = "completed"
+        elif status_path.exists():
+            status = json.loads(status_path.read_text()).get("status", "running")
+            if status not in {"failed", "running", "completed"}:
+                status = "running"
+        counts[status] += 1
+        if status != "completed":
+            incomplete.append(encounter_id)
+    total = len(manifest.get("encounters", []))
+    print(f"Run: {run.name}")
+    print(f"Completed: {counts['completed']}/{total}")
+    print(f"Failed: {counts['failed']}; running/incomplete: {counts['running'] + counts['pending']}")
+    if incomplete:
+        print("Remaining: " + ", ".join(incomplete))
+    return 0
+
+
 async def execute(args) -> int:
+    if args.status:
+        return print_status(args.output_dir)
     if args.max_turns < 1 or args.limit < 0 or args.timeout <= 0:
         raise ValueError("Use --max-turns >= 1, --limit >= 0 and --timeout > 0.")
     with nullcontext() if args.check else generation_lock(args.output_dir):
@@ -62,25 +108,28 @@ async def execute_locked(args) -> int:
                   "reference_repo": "https://github.com/HovChen/Aegle", "reference_commit": "75297da",
                   "reference_paper": "https://arxiv.org/abs/2604.08927v3"}
         if resume_directory is None:
-            run = create_run(args.output_dir, config, encounters)
+            run = create_run(backup_root(args.output_dir), config, encounters)
         else:
             run = resume_directory
             manifest = json.loads((run / "run_manifest.json").read_text())
             attempts = manifest.get("resume_attempts", []) + [{"resumed_at": now(), "base_url": args.base_url,
                                                              "timeout_seconds": args.timeout}]
             write_json(run / "run_manifest.json", {**manifest, "status": "running", "resume_attempts": attempts})
-        print(f"Processing {len(encounters)} encounter(s). Outputs: {run}", flush=True)
+        public_output = public_root(args.output_dir)
+        print(f"Processing {len(encounters)} encounter(s). Outputs: {public_output}", flush=True)
         failed = []
         skipped = 0
         for encounter in encounters:
             try:
-                directory = run / encounter.split / encounter.encounter_id
-                if resume_directory and finished_case(directory):
+                directory = public_output / encounter.encounter_id
+                state_directory = run / encounter.split / encounter.encounter_id
+                if resume_directory and finished_case(directory, state_directory):
                     skipped += 1
                     print(f"Skipping completed: {encounter.encounter_id}", flush=True)
                     continue
-                resuming_case = resume_directory is not None and directory.exists()
-                output = CaseOutput(run, encounter.split, encounter.encounter_id, resume=resuming_case)
+                resuming_case = resume_directory is not None and state_directory.exists()
+                output = CaseOutput(run, encounter.split, encounter.encounter_id,
+                                    resume=resuming_case, public_root=public_output)
                 await Consultation(client, output).run(encounter, max_turns=args.max_turns, resume=resuming_case)
                 print(f"Saved: {output.directory / 'soap_note.md'}", flush=True)
             except Exception as exc:
@@ -89,7 +138,7 @@ async def execute_locked(args) -> int:
         manifest = json.loads((run / "run_manifest.json").read_text())
         write_json(run / "run_manifest.json", {**manifest, "finished_at": now(),
                    "status": "completed" if not failed else "completed_with_failures", "failed_encounters": failed})
-        print(f"Finished: {len(encounters) - len(failed)} succeeded ({skipped} already complete), {len(failed)} failed. Outputs: {run}")
+        print(f"Finished: {len(encounters) - len(failed)} succeeded ({skipped} already complete), {len(failed)} failed. Outputs: {public_output}")
         return 1 if failed else 0
     except BaseException as exc:
         if run is not None:

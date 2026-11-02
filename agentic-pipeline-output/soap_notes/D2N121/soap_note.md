@@ -1,0 +1,33 @@
+# SOAP note — D2N121
+
+History-taking stop reason: max_turns; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+History taking ended before the agent confirmed completion. Unelicited facts remain unknown.
+
+## Subjective
+
+Basic information: 58-year-old male presenting with right knee pain and swelling following an injury during water skiing.
+
+History of present illness: The patient injured his right knee while water skiing last weekend. He has experienced swelling and soreness since the injury, particularly when squatting or bending the knee. He has been using cold packs and taking Aleve to help with the pain. He has not experienced locking or the knee giving way, but it is sore to bend or squat, and he has been careful not to put too much weight on it. The injury occurred during a jump on the boat when he twisted upon landing, which caused a sensation of something stretching, followed by swelling. The patient reports that he did not hear or feel anything pop at the time of the injury. It just felt like something stretched, and then it started swelling. As for extending his knee, it's pretty sore to bend or squat, so he hasn't been trying to fully extend it because it hurts too much. He has been able to bear some weight on it, but it's been very sore to walk on, especially when he has to squat or climb stairs. He has been trying to keep it elevated and use the cold packs to help with the swelling. He hasn't been putting much weight on it at all, really just trying to rest it as much as possible.
+
+Past history: No prior knee issues, surgeries, or allergies reported. No numbness, tingling, or weakness in the leg or foot reported.
+
+## Objective
+
+Physical examination: Physical examination reveals mild effusion and tenderness along the medial joint line. Range of motion is limited due to pain, with no signs of ligamentous instability. No locking or giving way of the knee was noted.
+
+Investigations: Imaging studies: X-ray ordered (pending results). MRI not yet performed.
+
+## Assessment
+
+Preliminary diagnosis:
+Possible medial meniscus tear; Osteochondral injury (e.g., meniscal tear or chondral lesion); Early-stage osteoarthritis (unlikely given age and lack of prior knee issues); Hemarthrosis (unlikely given no history of bleeding disorders or anticoagulant use).
+
+Diagnostic discussion:
+A 58-year-old male presented with right knee pain and swelling following a twisting injury during water skiing. The injury mechanism suggests a possible meniscal tear, as the twisting motion is a common cause of such injuries. The absence of a popping sound and the presence of effusion and tenderness along the medial joint line support this possibility. Osteochondral injury, including meniscal tear or chondral lesion, is also a consideration given the acute onset and mechanism of injury. Early-stage osteoarthritis is less likely given the patient’s age and lack of prior knee issues, though it cannot be entirely excluded. Hemarthrosis is a consideration given the swelling and pain, though no history of bleeding disorders or anticoagulant use was reported. The physical examination shows mild effusion and tenderness along the medial joint line, with limited range of motion due to pain and no ligamentous instability. The absence of locking or giving way suggests that significant ligamentous injury is less likely. The pending X-ray results will help rule out fractures or significant bony abnormalities.
+
+## Plan
+
+Further evaluation: Obtain X-ray results to rule out fractures or bony abnormalities. If X-ray is inconclusive or if symptoms persist, consider MRI to evaluate for meniscal or chondral injuries. Medication: NSAIDs (e.g., Aleve) for pain and inflammation, with caution in patients with renal impairment or gastrointestinal risk factors. Acetaminophen may be used as an alternative if contraindications exist. Non-drug management and education: Continue using cold packs to reduce swelling. Avoid activities that exacerbate symptoms, such as squatting or climbing stairs. Gradual weight-bearing as tolerated, with the use of a brace or support if needed. Educate on the importance of rest and avoiding twisting motions. Monitor for signs of infection, increased swelling, or locking of the knee, which would require urgent evaluation. Follow-up: Reassessment in 1-2 weeks if X-ray is normal and symptoms do not improve. Earlier follow-up if symptoms worsen or new symptoms develop, such as locking or instability.

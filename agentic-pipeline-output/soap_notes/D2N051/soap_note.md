@@ -1,0 +1,39 @@
+# SOAP note — D2N051
+
+History-taking stop reason: max_turns; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+History taking ended before the agent confirmed completion. Unelicited facts remain unknown.
+
+## Subjective
+
+Basic information: 62-year-old patient with a non-healing ulcer on the right foot for six to eight weeks and a history of diabetes and myocardial infarction. Insulin regimen details pending clarification.
+
+History of present illness: Ulcer on the right foot for six to eight weeks, located near the fifth toe, measuring 2x3 cm, with granulation tissue and purulent discharge, no pain, no redness or swelling, no fever. Patient has diabetes managed with insulin, with recent elevated blood sugars and HbA1c >9%. Patient has a history of neuropathy and has quit smoking four years ago. Patient reports using a regular dressing obtained from the pharmacy, changing it when it gets dirty or soaked. Patient notes increased drainage recently but no significant changes in ulcer appearance or odor.
+
+Past history: Diabetes mellitus, history of myocardial infarction with stent placement, history of smoking (quit four years ago). Patient has a history of peripheral neuropathy.
+
+## Objective
+
+Physical examination: Physical examination reveals a non-tender ulcer on the right foot near the fifth toe, measuring 2x3 cm, with granulation tissue and purulent discharge. No erythema, swelling, or fever. Neurological examination shows evidence of peripheral neuropathy, particularly in cold conditions. Vascular examination findings are pending.
+
+Investigations: HbA1c level is >9%. No recent vascular assessments (ABI or Doppler ultrasound) performed in the past six months. Vascular assessments (ABI or Doppler ultrasound) are pending and recommended for further evaluation. Insulin regimen details pending clarification.
+
+## Assessment
+
+Preliminary diagnosis:
+1. Diabetic foot ulcer with infection
+2. Peripheral neuropathy
+3. Poorly controlled diabetes mellitus (HbA1c >9%)
+4. Risk of peripheral arterial disease (PAD)
+
+Diagnostic discussion:
+The patient is a 62-year-old individual with a non-healing ulcer on the right foot near the fifth toe, measuring 2x3 cm, with granulation tissue and purulent discharge. The ulcer has been present for six to eight weeks, and the patient has a history of diabetes mellitus, peripheral neuropathy, and a prior myocardial infarction. The patient is currently on an insulin regimen, but HbA1c is >9%, indicating poor glycemic control. The absence of pain, erythema, or swelling suggests a lack of acute inflammation or infection, but the presence of purulent discharge indicates possible infection. The patient has a history of peripheral neuropathy, which increases the risk of ulceration and delayed healing. Vascular assessment is pending, but the absence of recent vascular assessments (ABI or Doppler ultrasound) raises concern for potential peripheral arterial disease, which can further compromise wound healing. Differential diagnoses include diabetic foot ulcer with infection, ischemic ulcer, and neuro-ischemic ulcer.
+
+## Plan
+
+1. Further evaluation: Perform vascular assessment (ABI or Doppler ultrasound) to evaluate for peripheral arterial disease. Obtain wound culture to identify any infectious organisms. Monitor HbA1c and blood glucose levels closely to improve glycemic control.
+2. Medication: Initiate or optimize insulin regimen to achieve better glycemic control (target HbA1c <7%). Consider antibiotics if wound culture confirms infection (e.g., broad-spectrum antibiotics such as cephalexin or clindamycin). Monitor for adverse effects and renal function.
+3. Non-drug management and education: Educate on proper wound care, including regular dressing changes with sterile technique, offloading the affected foot, and maintaining hygiene. Encourage a low-sodium, low-oxalate diet to support wound healing. Advise on regular foot inspections and prompt medical attention for any worsening symptoms. Provide education on the importance of glycemic control and smoking cessation (already achieved). Educate on red flags such as increased pain, erythema, swelling, fever, or worsening drainage, which may indicate infection or complications.
+4. Follow-up: Schedule a follow-up in one week to assess ulcer progress, review wound culture results, and adjust treatment as needed. Repeat vascular assessment if indicated. Ensure adherence to medication and wound care instructions. Provide support for any barriers to care, such as access to wound care supplies or transportation.

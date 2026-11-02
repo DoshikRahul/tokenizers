@@ -24,18 +24,26 @@ def generation_lock(root: Path):
         os.close(descriptor)
 
 
+def backup_root(output_dir: Path) -> Path:
+    return output_dir.parent / f"{output_dir.name}-backups"
+
+
 def resume_run(args):
+    state_root = backup_root(args.output_dir)
     if args.resume == "latest":
-        manifests = sorted(args.output_dir.glob("*/run_manifest.json"))
+        manifests = sorted([*state_root.glob("*/run_manifest.json"),
+                            *args.output_dir.glob("*/run_manifest.json")])
         if not manifests:
             raise ValueError("No saved run found to resume.")
         run = manifests[-1].parent
     else:
         run = Path(args.resume).expanduser()
         if not run.is_dir():
-            run = args.output_dir / args.resume
+            run = state_root / args.resume
+            if not run.is_dir():
+                run = args.output_dir / args.resume
     run = run.resolve()
-    allowed_roots = {args.output_dir.resolve(), (args.output_dir.parent / "agentic-pipeline-output-backups").resolve()}
+    allowed_roots = {args.output_dir.resolve(), state_root.resolve()}
     if run.parent not in allowed_roots:
         raise ValueError("Resume directory must be directly inside the output or backup folder.")
     manifest = json.loads((run / "run_manifest.json").read_text())
@@ -58,13 +66,14 @@ def resume_run(args):
     return run, encounters
 
 
-def finished_case(directory: Path) -> bool:
-    status = directory / "details/status.json"
+def finished_case(directory: Path, state_directory: Path | None = None) -> bool:
+    state_directory = state_directory or directory
+    status = state_directory / "details/status.json"
     if not status.exists():
         return False
     if json.loads(status.read_text()).get("status") != "completed":
         return False
-    # A status alone is insufficient: both final artifacts must have been saved.
+    # A status alone is insufficient: both public final artifacts must exist.
     note = directory / "soap_note.json"
     if not note.exists() or not (directory / "soap_note.md").exists():
         return False

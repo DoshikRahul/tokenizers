@@ -38,13 +38,15 @@ def create_run(root: Path, config: dict, encounters: list) -> Path:
 
 
 class CaseOutput:
-    def __init__(self, run: Path, split: str, encounter_id: str, *, resume: bool = False):
+    def __init__(self, run: Path, split: str, encounter_id: str, *, resume: bool = False,
+                 public_root: Path | None = None):
         if Path(encounter_id).name != encounter_id or encounter_id in {".", ".."}:
             raise ValueError("Unsafe encounter ID for output directory.")
-        self.directory = run / split / encounter_id
+        self.state_directory = run / split / encounter_id
+        self.directory = (public_root / encounter_id) if public_root is not None else self.state_directory
         self.directory.mkdir(parents=True, exist_ok=resume)
-        self.details = self.directory / "details"
-        self.details.mkdir(exist_ok=resume)
+        self.details = self.state_directory / "details"
+        self.details.mkdir(parents=True, exist_ok=resume)
         self.turn = 0
         self.sequence = 0
         self.trace_sequence = 0

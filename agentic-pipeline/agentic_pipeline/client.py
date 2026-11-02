@@ -14,6 +14,47 @@ class ModelError(RuntimeError):
     pass
 
 
+def _compact_payload(payload: dict, aggressive: bool = False) -> tuple[dict, list[str]]:
+    """Reduce only derived request data after a server context-limit response.
+
+    The patient source transcript is never part of doctor payloads and is never
+    truncated here.
+    """
+    value = json.loads(json.dumps(payload, ensure_ascii=False))
+    actions = []
+    history_limit = 1 if aggressive else 2
+    for key in ("simulated_consultation", "recent_consultation", "recent_patient_responses"):
+        history = value.get(key)
+        if isinstance(history, list) and len(history) > history_limit:
+            value[key] = history[-history_limit:]
+            actions.append(f"{key}_to_{history_limit}")
+    if isinstance(value.get("specialist_outputs"), list):
+        limit = 600 if aggressive else 1200
+        compact = []
+        for item in value["specialist_outputs"]:
+            if not isinstance(item, dict):
+                continue
+            compact.append({
+                "specialist_id": item.get("specialist_id", "unknown"),
+                "draft_modifications": str(item.get("draft_modifications", ""))[:limit],
+                "next_question": str(item.get("next_question", ""))[:300],
+            })
+        value["specialist_outputs"] = compact
+        actions.append(f"specialist_proposals_to_{limit}_chars")
+    if isinstance(value.get("case_features"), dict):
+        limit = 800 if aggressive else 1600
+        value["case_features"] = {key: (str(item)[:limit] if isinstance(item, str) else item)
+                                   for key, item in value["case_features"].items()}
+        actions.append(f"derived_case_features_to_{limit}_chars")
+    for key, limit in (("orchestrator_instructions", 500 if aggressive else 1000),
+                       ("latest_patient_response", 700 if aggressive else 1400),
+                       ("suggested_question", 300 if aggressive else 600)):
+        if isinstance(value.get(key), str) and len(value[key]) > limit:
+            value[key] = value[key][:limit]
+            actions.append(f"{key}_to_{limit}_chars")
+    return value, actions
+
+
 class ModelClient:
     def __init__(self, base_url: str, model: str, api_key: str, *, timeout: float = 900, retries: int = 3,
                  transport=None, concurrency: int = 1):
@@ -54,11 +95,14 @@ class ModelClient:
             system += "\n\nReturn exactly one JSON object matching this schema. Use its exact keys; no Markdown.\n" + json.dumps(output.model_json_schema(), ensure_ascii=False)
         user = payload if isinstance(payload, str) else json.dumps(payload, ensure_ascii=False)
         messages = [{"role": "system", "content": system}, {"role": "user", "content": user}]
-        current_payload = dict(payload) if isinstance(payload, dict) else payload
+        current_payload = json.loads(json.dumps(payload, ensure_ascii=False)) if isinstance(payload, dict) else payload
         token_budget = min(max_tokens, self.output_limit)
+        compact_level = 0
         repair = ""
         error = ""
-        for attempt in range(1, self.retries + 1):
+        attempt = 0
+        while attempt < self.retries:
+            attempt += 1
             request = {
                 "model": self.model, "messages": messages + ([{"role": "user", "content": repair}] if repair else []),
                 "max_tokens": token_budget, "temperature": temperature,
@@ -75,28 +119,29 @@ class ModelClient:
                 context_error = re.search(r"Prompt has (\d+) tokens;.*?(\d+)-token context limit", response.text) if response.status_code == 400 else None
                 if context_error:
                     error = f"Context limit: {response.text[:1500]}"
-                    # Preserve the source transcript and evidence. Only redundant older
-                    # conversation context or the requested output budget may be reduced.
-                    trimmed = False
-                    if isinstance(current_payload, dict):
-                        for key in ("simulated_consultation", "recent_consultation", "recent_patient_responses"):
-                            history = current_payload.get(key)
-                            if isinstance(history, list) and len(history) > 2:
-                                current_payload[key] = history[-2:]
-                                messages[1]["content"] = json.dumps(current_payload, ensure_ascii=False)
-                                log.event({"event": "context_adjustment", "agent": agent, "phase": phase,
-                                           "action": "reduce_recent_history", "kept_messages": 2})
-                                trimmed = True
-                                break
-                    if trimmed:
+                    # The source transcript is never in doctor payloads and is
+                    # never truncated. Compact only derived evidence and chat context.
+                    if isinstance(current_payload, dict) and compact_level < 2:
+                        current_payload, actions = _compact_payload(current_payload, aggressive=compact_level == 1)
+                        compact_level += 1
+                        messages[1]["content"] = json.dumps(current_payload, ensure_ascii=False)
+                        token_budget = min(token_budget, 768 if compact_level == 1 else 512)
+                        log.event({"event": "context_adjustment", "agent": agent, "phase": phase,
+                                   "action": "compact_derived_payload", "level": compact_level,
+                                   "changes": actions, "max_tokens": token_budget})
                         repair = ""
+                        # Context recovery is an adjustment, not a failed model
+                        # attempt. Allow the compacted request to be sent.
+                        attempt -= 1
                         continue
                     available = int(context_error[2]) - int(context_error[1]) - 16
-                    if 256 <= available < token_budget:
+                    if available >= 256 and available < token_budget:
                         token_budget = available
                         repair = ""
                         log.event({"event": "context_adjustment", "agent": agent, "phase": phase,
                                    "action": "reduce_output_budget", "max_tokens": token_budget})
+                        # Give the reduced-budget request its own attempt.
+                        attempt -= 1
                         continue
                 if response.status_code in {400, 401, 403, 404, 422}:
                     raise ModelError(f"Endpoint rejected {agent}: HTTP {response.status_code}: {response.text[:1500]}")

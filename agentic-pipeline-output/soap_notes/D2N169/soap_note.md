@@ -1,0 +1,33 @@
+# SOAP note — D2N169
+
+History-taking stop reason: max_turns; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+History taking ended before the agent confirmed completion. Unelicited facts remain unknown.
+
+## Subjective
+
+Basic information: 61-year-old male presenting with shortness of breath and lightheadedness after a long bike ride over the weekend, which was unexpected as he usually bikes without issues.
+
+History of present illness: The shortness of breath and lightheadedness occurred after a long bike ride over the weekend and were intense. The patient felt like he couldn’t catch his breath and was very light-headed. He also reported a brief episode of chest pain that resolved after about an hour. There were no palpitations or dizziness. The chest pain was more of a mild discomfort, not really sharp or pressure-like, and it didn't radiate anywhere else. It just felt like a slight ache in my chest, and it went away after about an hour. I didn't feel it spreading to my arm, neck, or jaw. The patient reports this was the first time he experienced such symptoms after a bike ride, as he usually bikes without issues. The chest discomfort was mild, not worsening with specific activities, and resolved after about an hour without any specific intervention. The patient mentions that he has been biking every morning, and this was the first time he experienced anything like shortness of breath or chest discomfort after a bike ride, and it really caught him by surprise. The patient reports experiencing some wheezing after the incident, which was noted during the physical exam. He also had a mild cough with a cold about a year and a half ago, which resolved without further issues. No history of wheezing or respiratory symptoms prior to the incident.
+
+Past history: History of migraines managed with Imitrex, reflux managed with Protonix, cataract surgery four and a half months ago. No family history of heart disease. No other significant medical conditions. No prior cardiac evaluations such as ECG, stress test, or echocardiogram. No prior history of chest discomfort or exertion-related symptoms. The patient had a mild cough with a cold about a year and a half ago, which resolved without further issues. No prior history of asthma or other chronic respiratory conditions. No episodes of syncope, palpitations, or chest discomfort during rest or with minimal exertion in the past.
+
+## Objective
+
+Physical examination: Vital signs: BP 128/82 mmHg, HR 76 bpm, RR 16 breaths/min, SpO2 98% on room air. Cardiac exam: S1 and S2 normal, no S3 or S4, no murmurs. Respiratory exam: Clear to auscultation bilaterally. No peripheral edema. The patient reported some wheezing after the incident, which was noted during the physical exam.
+
+Investigations: ECG: Normal sinus rhythm, no ST-T changes or Q waves. Chest X-ray: No acute cardiomegaly or pulmonary congestion. Troponin I: 0.04 ng/mL (normal). Pulmonary function tests: Scheduled for further evaluation of potential asthma or obstructive lung disease.
+
+## Assessment
+
+Preliminary diagnosis:
+1. Exertional dyspnea and lightheadedness of unclear etiology. 2. Possible asthma or obstructive lung disease. 3. Non-cardiac cause of chest discomfort.
+
+Diagnostic discussion:
+The patient is a 61-year-old male with a history of migraines, reflux, and cataract surgery, but no prior cardiac or respiratory conditions. He presented with shortness of breath and lightheadedness after a long bike ride, which was unexpected as he usually bikes without issues. He also reported a brief episode of mild chest discomfort that resolved after an hour, without radiation or worsening with activity. The presence of wheezing on physical exam and the scheduled pulmonary function tests suggest a possible obstructive lung disease such as asthma. However, the absence of prior respiratory symptoms or asthma history makes this less likely. The normal ECG, normal troponin, and absence of cardiac findings on physical exam make acute coronary syndrome or other cardiac causes less likely. Other differentials include exercise-induced bronchoconstriction, anxiety, or deconditioning. The lack of prior cardiac evaluations and the sudden onset of symptoms make further cardiac evaluation prudent. A post-viral reactive airway change is also a consideration given the mild cough with a cold about a year and a half ago.
+
+## Plan
+
+1. Further evaluation: Pulmonary function tests to evaluate for obstructive lung disease. Cardiac stress test or echocardiogram to rule out cardiac causes of exertional dyspnea and chest discomfort. 2. Medication: If obstructive lung disease is confirmed, bronchodilators and inhaled corticosteroids may be considered. If cardiac causes are suspected, beta-blockers or calcium channel blockers may be considered, but only after further evaluation. 3. Non-drug management and education: Advise the patient to avoid strenuous exercise until further evaluation is complete. Encourage a low-sodium diet and regular monitoring of symptoms. Educate on recognizing signs of worsening dyspnea or chest discomfort. 4. Follow-up: Reassess in one week after pulmonary function tests and cardiac evaluation. If symptoms persist or worsen, schedule an earlier follow-up.

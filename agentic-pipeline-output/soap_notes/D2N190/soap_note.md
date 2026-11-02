@@ -1,0 +1,33 @@
+# SOAP note — D2N190
+
+History-taking stop reason: max_turns; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+History taking ended before the agent confirmed completion. Unelicited facts remain unknown.
+
+## Subjective
+
+Basic information: Patient name: Beverly. Age: 38. Gender: Female. Chief complaint: Right knee pain following a fall from a tandem bike two weeks ago.
+
+History of present illness: The patient fell off her tandem bike about two weeks ago and has been experiencing daily soreness and aching in her right knee since the incident. She is concerned about potential injury. The pain is a constant ache, especially when walking or going up hills. There is no significant swelling, but the knee feels unstable at times, like it might shift when walking. It is difficult to put weight on it without pain. X-rays were performed today and were reported as normal. The physician suspects a posterior cruciate ligament injury and has ordered an MRI to evaluate for meniscus tear or cartilage damage. The patient has not noticed any locking or catching sensations in her knee, but the pain definitely gets worse when she walks up hills or puts weight on it. It is especially tender on the inside of her knee, and sometimes it feels like it shifts when she is walking, which is unsettling. The shifting sensation feels like the knee is kind of sliding or moving a little to the side when she walks, and it's not super obvious, but it's enough to make her feel unstable. She can still straighten and bend it all the way, but sometimes it clicks when she does, and it feels a little weak when she is going up hills. The shifting sensation happens pretty often when she is walking, especially on uneven ground or when she is turning. It doesn't happen all the time, but it's enough to make her feel like the knee isn't stable. She hasn't noticed any locking or catching, just that odd sliding feeling and the clicking sometimes. The clicking is more like a soft snap when she bends or straightens it, not really sharp. And she can still bend and straighten it all the way, but sometimes it feels a little stiff, especially in the morning.
+
+Past history: No previous knee injuries, surgeries, or conditions reported. No history of joint instability or ligament injuries.
+
+## Objective
+
+Physical examination: The patient reports tenderness along the medial joint line of the right knee, instability with a sensation of shifting during ambulation, and pain exacerbated by weight-bearing and walking uphill. No swelling was noted. Ligament testing results are pending. The medial collateral ligament is intact, and there is a little laxity in the posterior drawer. The anterior drawer is negative. The patient describes tenderness localized to the medial joint line, and the sensation of shifting is most noticeable during weight-bearing activities such as walking or climbing hills.
+
+Investigations: X-rays: Normal (date not specified). MRI: Pending.
+
+## Assessment
+
+Preliminary diagnosis:
+1. Medial meniscus tear (unilateral, right knee). 2. Possible posterior cruciate ligament (PCL) injury. 3. Early-stage osteoarthritis (unconfirmed).
+
+Diagnostic discussion:
+The patient is a 38-year-old female with a history of a fall from a tandem bike two weeks ago, resulting in right knee pain, instability, and a sensation of shifting during ambulation. The pain is localized to the medial joint line and is exacerbated by weight-bearing and walking uphill. Physical examination reveals tenderness along the medial joint line, instability with a sensation of shifting, and mild laxity in the posterior drawer. X-rays were normal, but an MRI is pending to evaluate for meniscus tear or cartilage damage. The absence of swelling and the presence of pain localized to the medial joint line, along with the instability and shifting sensation, suggest a possible medial meniscus tear. The posterior drawer laxity raises concern for a PCL injury. The patient's age and lack of prior knee issues make early-stage osteoarthritis a less likely but still possible differential. Differential diagnoses include: 1. Medial meniscus tear: The patient's symptoms of pain localized to the medial joint line, instability, and shifting sensation are consistent with a medial meniscus tear. 2. Posterior cruciate ligament (PCL) injury: The posterior drawer laxity and the sensation of shifting during ambulation are indicative of a PCL injury. 3. Early-stage osteoarthritis: The patient's age and the presence of pain and stiffness could suggest early-stage osteoarthritis, although the acute onset following the fall makes this less likely.
+
+## Plan
+
+1. Further evaluation: An MRI of the right knee is indicated to confirm the presence of a meniscus tear, PCL injury, or cartilage damage. The MRI should be performed as soon as possible to guide further management. 2. Medication: Nonsteroidal anti-inflammatory drugs (NSAIDs) such as ibuprofen or naproxen may be prescribed to manage pain and inflammation. Acetaminophen can be used as an alternative if NSAIDs are contraindicated. 3. Non-drug management and education: The patient should avoid activities that exacerbate the pain, such as walking uphill or on uneven ground. A referral to a physical therapist for a rehabilitation program focusing on strengthening the quadriceps and hamstrings, improving knee stability, and enhancing range of motion is recommended. The patient should also be educated on the importance of proper footwear and the use of a knee brace if instability persists. 4. Follow-up: The patient should be reassessed in one to two weeks after the MRI results are available. If the MRI confirms a meniscus tear or PCL injury, further management options such as arthroscopic surgery may be considered. In the interim, the patient should monitor for any worsening symptoms, such as increased pain, swelling, or locking of the knee, which would require urgent medical attention.

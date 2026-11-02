@@ -1,0 +1,38 @@
+# SOAP note — D2N139
+
+History-taking stop reason: max_turns; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+History taking ended before the agent confirmed completion. Unelicited facts remain unknown.
+
+## Subjective
+
+Basic information: 49-year-old patient presenting with high blood pressure and palpitations; history of emergency room visit a few months ago for related symptoms
+
+History of present illness: Palpitations occurred once in March, associated with stress, excessive coffee intake, and skipped breakfast; patient attributes it to a panic attack. No new or worsening symptoms since last visit. No changes in medication or exercise routine. Patient reports no episodes of palpitations since March.
+
+Past history: Family history of hypertension; no known history of heart disease or endocrine disorders (thyroid or pheochromocytoma) reported by patient. Patient reports no recent weight changes, heat or cold intolerance, sweating, tremors, or changes in bowel habits. Thyroid function tests and imaging studies (e.g., thyroid ultrasound) not performed in the past, per patient report.
+
+## Objective
+
+Physical examination: Vital signs: Blood pressure 146-155 mmHg (morning readings). Heart rate and rhythm: normal. Cardiac examination: Heart sounds normal, no murmurs, rubs, or gallops. Pulses: Normal and symmetric. No edema in lower extremities.
+
+Investigations: Thyroid function tests (TSH, free T4) and 24-hour urine catecholamine testing pending; potassium level was 4.0 a few weeks ago.
+
+## Assessment
+
+Preliminary diagnosis:
+Essential hypertension
+Secondary hypertension (e.g., pheochromocytoma, hyperthyroidism)
+Anxiety-related palpitations
+
+Diagnostic discussion:
+The patient is a 49-year-old individual with a history of hypertension and palpitations, which occurred once in March and were attributed to stress, excessive coffee intake, and skipped meals. The palpitations were self-limited, with no recurrence since. The patient has a family history of hypertension but no known history of heart disease or endocrine disorders. Current vital signs show elevated blood pressure (146-155 mmHg) with normal heart rate and rhythm. No signs of cardiac or peripheral edema are present. Thyroid function tests and 24-hour urine catecholamine testing are pending, which are critical to rule out secondary causes of hypertension such as hyperthyroidism or pheochromocytoma. The absence of symptoms like weight changes, heat or cold intolerance, sweating, tremors, or changes in bowel habits makes hyperthyroidism less likely, but not entirely excluded. Anxiety-related palpitations are also a plausible explanation for the isolated episode in March. The differential includes essential hypertension, secondary hypertension (e.g., pheochromocytoma, hyperthyroidism), and anxiety-related palpitations.
+
+## Plan
+
+1. Further evaluation: Thyroid function tests (TSH, free T4) and 24-hour urine catecholamine testing should be completed to rule out secondary causes of hypertension. If these tests are positive, further imaging (e.g., thyroid ultrasound, abdominal CT/MRI) may be indicated. Blood pressure monitoring at home should be initiated to assess variability and response to treatment.
+2. Medication: First-line treatment for essential hypertension includes ACE inhibitors or ARBs, with calcium channel blockers or thiazide diuretics as alternatives. Beta-blockers may be considered for palpitations if anxiety is a contributing factor. Monitoring for side effects such as hypotension, hyperkalemia, or renal function changes is essential.
+3. Non-drug management and education: Encourage lifestyle modifications such as reducing caffeine intake, maintaining regular meals, and stress management techniques. Recommend a low-sodium diet and regular physical activity. Educate the patient on recognizing warning signs of hypertensive crisis or worsening symptoms, such as chest pain, shortness of breath, or severe headaches.
+4. Follow-up: Schedule a follow-up in 2-4 weeks after receiving thyroid and catecholamine test results. Repeat blood pressure measurements and review symptoms. If tests are normal, continue with lifestyle modifications and medication as needed. If secondary causes are identified, refer to the appropriate specialist for further management.

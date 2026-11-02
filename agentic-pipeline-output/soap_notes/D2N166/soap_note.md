@@ -1,0 +1,33 @@
+# SOAP note — D2N166
+
+History-taking stop reason: max_turns; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+History taking ended before the agent confirmed completion. Unelicited facts remain unknown.
+
+## Subjective
+
+Basic information: 28-year-old male presenting with worsening low back pain for a couple of weeks, with a history of lifting a box of books and feeling a pop; pain radiates down the left leg.
+
+History of present illness: Onset of low back pain following lifting a box of books, with a popping sensation; pain has worsened over the past few weeks and now radiates down the left leg. The pain is described as achy and sharp, and it has been getting worse over the past couple of weeks. It started when the patient lifted a box of books and felt a pop. The pain sometimes shoots down the left leg, but the patient has not experienced any numbness, tingling, or weakness in the left leg since the onset of the low back pain.
+
+Past history: No relevant past medical history, no prior surgeries, no known allergies. Family history is unremarkable.
+
+## Objective
+
+Physical examination: Vital signs: BP 120/80 mmHg, HR 72 bpm, Temp 36.8°C, SpO2 98% on room air. Physical examination reveals tenderness over the lumbar spine, particularly at L4-L5. Straight leg raise test is positive on the left side. No neurological deficits noted (no numbness, tingling, or weakness).
+
+Investigations: No imaging studies of the lumbar spine have been performed yet. The patient has not undergone an MRI or X-ray of the lumbar spine. The patient has not experienced any episodes of bowel or bladder dysfunction since the onset of the low back pain. No neurological assessments or EMG tests have been performed yet.
+
+## Assessment
+
+Preliminary diagnosis:
+1. Lumbar disc herniation (L4-L5 level). 2. Mechanical low back pain. 3. Sciatica.
+
+Diagnostic discussion:
+The patient is a 28-year-old male with a history of lifting a box of books and feeling a pop, followed by worsening low back pain radiating down the left leg. The pain is described as achy and sharp, and it has been getting worse over the past couple of weeks. On physical examination, there is tenderness over the lumbar spine, particularly at L4-L5, and a positive straight leg raise test on the left side, which is suggestive of nerve root irritation. These findings are consistent with lumbar disc herniation at the L4-L5 level, which can cause radicular pain down the left leg (sciatica). Mechanical low back pain is also a consideration, as the pain is exacerbated by activity and relieved by rest. Other differentials include spinal stenosis, spondylolisthesis, and musculoskeletal strain. However, the presence of a popping sensation and radicular pain supports a disc herniation diagnosis. The absence of neurological deficits (numbness, tingling, or weakness) and no bowel or bladder dysfunction suggests that the condition is not severe enough to cause cauda equina syndrome. The lack of imaging studies (MRI or X-ray) limits the ability to confirm the diagnosis definitively.
+
+## Plan
+
+1. Further evaluation: MRI of the lumbar spine is indicated to confirm the diagnosis of lumbar disc herniation and to assess the extent of nerve root involvement. This should be performed as soon as possible. 2. Medication: First-line treatment includes nonsteroidal anti-inflammatory drugs (NSAIDs) for pain and inflammation, such as ibuprofen or naproxen. If NSAIDs are contraindicated, acetaminophen may be used. A muscle relaxant, such as cyclobenzaprine, may be considered for muscle spasm. If there is no improvement with conservative management, a short course of corticosteroids may be considered. 3. Non-drug management and education: The patient should avoid heavy lifting and activities that exacerbate the pain. Physical therapy with a focus on core strengthening and flexibility exercises is recommended. Heat therapy may provide relief. The patient should be educated on proper body mechanics and posture. 4. Follow-up: The patient should be reassessed in one to two weeks after starting conservative management. If there is no improvement or if symptoms worsen, an MRI should be performed and surgical consultation considered.

@@ -1,0 +1,38 @@
+# SOAP note — D2N148
+
+History-taking stop reason: max_turns; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+History taking ended before the agent confirmed completion. Unelicited facts remain unknown.
+
+## Subjective
+
+Basic information: 45-year-old male with a chief complaint of lower back pain and occasional tingling following an injury four months ago during a move.
+
+History of present illness: Onset of lower back pain and tingling four months ago during a move; symptoms have persisted since then. The pain does not radiate to the legs, though there was initial tingling in the right foot, which has since resolved. No numbness, weakness, or bowel/bladder dysfunction reported. The pain is more of a dull ache, but sometimes it feels sharp, especially when turning a certain way or rolling over in sleep. It aggravates when lifting something heavy or sitting for a long time, but feels better when stretching or positioning oneself the right way. The patient tried physical therapy, heat, and ice, but these interventions did not provide significant relief.
+
+Past history: No previous illnesses, operations, or allergies reported. No prior history of lower back issues. No relevant past medical history, no prior surgeries, no known allergies. Family history is unremarkable for neurological conditions.
+
+## Objective
+
+Physical examination: Vital signs: BP 120/80 mmHg, HR 72 bpm, Temp 36.8°C, SpO2 98% on room air. Neurological examination: No focal weakness, no sensory deficits in the lower extremities, no reflex abnormalities. Straight leg raise test negative. No signs of bowel or bladder dysfunction.
+
+Investigations: No recent laboratory or imaging studies available. Patient declined MRI four months ago due to cost concerns. No prior imaging results provided. The patient does not have any metal implants or devices that would interfere with an MRI. The pain is localized to the lower back and is exacerbated by certain movements, but there are no recent changes in symptoms.
+
+## Assessment
+
+Preliminary diagnosis:
+1. Mechanical low back pain
+2. Possible lumbar radiculopathy (resolved)
+3. Chronic low back pain secondary to musculoskeletal strain
+
+Diagnostic discussion:
+The patient is a 45-year-old male with a four-month history of lower back pain and occasional tingling following an injury during a move. The pain is localized to the lower back, described as a dull ache with occasional sharp episodes, and is aggravated by heavy lifting or prolonged sitting. The initial tingling in the right foot has resolved, and there are no current neurological deficits, such as numbness, weakness, or bowel/bladder dysfunction. The physical examination is unremarkable, with no focal weakness, sensory deficits, or reflex abnormalities, and the straight leg raise test is negative. The absence of radiating pain, neurological deficits, or bowel/bladder dysfunction suggests a non-radicular, musculoskeletal etiology. The patient has no significant past medical history, no prior back issues, and no family history of neurological conditions. The lack of recent imaging or laboratory studies limits definitive diagnosis, but the clinical picture is consistent with chronic low back pain due to musculoskeletal strain or discogenic pain. Differential diagnoses include lumbar facet joint syndrome, lumbar disc herniation (less likely given the negative straight leg raise and absence of radiculopathy), and mechanical low back pain. The initial tingling raises the possibility of a resolved lumbar radiculopathy, but this is not confirmed by current findings. The patient declined an MRI due to cost concerns, which would be useful in ruling out structural abnormalities such as disc herniation or spinal stenosis.
+
+## Plan
+
+1. Further evaluation: Consider an MRI of the lumbar spine to evaluate for structural abnormalities such as disc herniation or spinal stenosis, particularly if symptoms persist or worsen. This should be discussed with the patient to address cost concerns and determine if alternative imaging or financial assistance is available.
+2. Medication: First-line treatment includes non-steroidal anti-inflammatory drugs (NSAIDs) for pain and inflammation, with acetaminophen as an alternative if contraindications exist. Muscle relaxants may be considered for acute episodes of spasm. Monitor for side effects such as gastrointestinal upset or renal function changes.
+3. Non-drug management and education: Avoid heavy lifting and prolonged sitting. Engage in regular stretching and strengthening exercises for the lower back and core muscles. Maintain a healthy weight and posture. Use heat or ice as needed for pain relief. Educate on proper body mechanics during daily activities. Monitor for new or worsening neurological symptoms, bowel/bladder dysfunction, or increased pain, which would require urgent evaluation.
+4. Follow-up: Reassess in two to four weeks to evaluate response to treatment and determine the need for further intervention. If symptoms persist or worsen, consider referral for further imaging or specialist evaluation. Follow-up may be conducted in person or via telehealth, depending on the patient’s preference and availability.

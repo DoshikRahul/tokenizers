@@ -1,0 +1,41 @@
+# SOAP note — D2N117
+
+History-taking stop reason: max_turns; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+History taking ended before the agent confirmed completion. Unelicited facts remain unknown.
+
+## Subjective
+
+Basic information: 45 years old, male, right elbow pain due to increased tennis play over the past three weeks.
+
+History of present illness: The patient reports a three-week history of right elbow pain, which he attributes to increased tennis play. The pain is described as sharp and shooting, and it worsens with elbow use, such as reaching for objects. There is no swelling or redness, and the patient finds it difficult to move the elbow without pain. The pain is really bad when he uses his elbow, like when he tries to grip something or lift things, and especially when he extends his arm. It feels like it's shooting and stabbing, and it's been getting worse the more he plays tennis. The pain is located on the outside part of the elbow and does not radiate elsewhere. There is no numbness, tingling, or weakness in the hand or fingers. The patient has not noticed any swelling, redness, or warmth around his elbow, and he hasn't experienced any locking, clicking, or popping sensations during movement. The movements that seem to trigger or worsen the pain are when he hits the ball, especially when he follows through with his arm, and even simple things like reaching up to get something from a cupboard. It feels like it's really straining that outside part of his elbow. The patient also mentions that this is the first time he has experienced this kind of pain and that it started after he began playing tennis more regularly.
+
+Past history: No prior injuries or surgeries on the right elbow. No history of repetitive strain in upper extremities other than recent increase in tennis. Played tennis extensively in high school.
+
+## Objective
+
+Physical examination: Physical examination findings are pending. The patient has not undergone any physical examination yet.
+
+Investigations: Auxiliary examination findings are pending. The patient has not undergone any imaging or laboratory tests yet.
+
+## Assessment
+
+Preliminary diagnosis:
+Lateral epicondylitis (tennis elbow)
+Elbow strain
+Radial nerve entrapment
+
+Diagnostic discussion:
+The patient is a 45-year-old male with a three-week history of right elbow pain, which he attributes to increased tennis play. The pain is sharp and shooting, localized to the lateral aspect of the elbow, and worsens with activities involving gripping, lifting, or extending the arm. The absence of swelling, redness, numbness, tingling, or weakness suggests a non-neurological and non-inflammatory etiology. Given the mechanism of injury (increased tennis play), lateral epicondylitis (tennis elbow) is the most likely diagnosis. Other considerations include elbow strain from overuse and radial nerve entrapment, though the latter is less likely given the absence of neurological symptoms. The patient has no prior injuries or surgeries on the right elbow, and his history of tennis play in high school may have contributed to a predisposition for overuse injuries. No imaging or laboratory tests have been performed yet, so further evaluation may be necessary to confirm the diagnosis and rule out other conditions.
+
+## Plan
+
+Further evaluation: Physical examination of the right elbow to assess for tenderness, range of motion, and strength. If symptoms persist or worsen, imaging (e.g., X-ray or MRI) may be considered to evaluate for structural abnormalities or soft tissue damage.
+
+Medication: Nonsteroidal anti-inflammatory drugs (NSAIDs) such as ibuprofen or naproxen may be prescribed to reduce pain and inflammation. If NSAIDs are contraindicated, acetaminophen may be used as an alternative. Topical NSAIDs or corticosteroid injections may also be considered for localized pain relief.
+
+Non-drug management and education: Activity modification is essential to avoid exacerbating the condition. The patient should avoid repetitive motions that strain the elbow, such as hitting a tennis ball or lifting heavy objects. Physical therapy, including stretching and strengthening exercises for the forearm muscles, may be recommended. Ergonomic adjustments to the patient’s tennis technique or equipment may also be beneficial. The patient should be educated on recognizing warning signs such as increasing pain, swelling, or neurological symptoms, which would warrant further evaluation.
+
+Follow-up: The patient should be reassessed in one to two weeks to evaluate the response to treatment. If symptoms persist or worsen, further imaging or referral to a specialist may be necessary.

@@ -1,0 +1,35 @@
+# SOAP note — D2N110
+
+History-taking stop reason: max_turns; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+History taking ended before the agent confirmed completion. Unelicited facts remain unknown.
+
+## Subjective
+
+Basic information: Male, late 50s, chief complaint: non-healing sore on right foot
+
+History of present illness: Onset: 2-3 weeks ago; symptoms: non-healing sore on right foot (one by two inch circular wound on the top of the right foot, near the fifth toe, with yellow discharge, no pain or warmth, and lack of sensation due to neuropathy). No prior foot ulcers or infections. The ulcer is on the surface of the foot, not deep into the tissue or bone. No signs of infection like more redness, swelling, or fever noted. The ulcer hasn't really changed much since it first appeared, except that it still doesn't hurt and sometimes the band-aid sticks to it when I take my sock off. No changes in ulcer appearance except for occasional band-aid adhesion.
+
+Past history: Diabetes mellitus (diagnosed a few years ago, last HbA1c >8%, managed with oral medications, no insulin use). No known complications such as retinopathy or nephropathy (unconfirmed). No vascular studies performed. Current oral diabetes medications: [Name and dosage to be confirmed].
+
+## Objective
+
+Physical examination: Neuropathy (lack of sensation in the right foot), non-healing ulcer on the top of the right foot near the fifth toe (1x2 inch, with yellow discharge, no pain or warmth). No erythema or warmth noted at the ulcer site. No palpable pulses in the lower extremities (assessment pending).
+
+Investigations: HbA1c >8% (recently), no vascular studies performed (ABI, Doppler ultrasound).
+
+## Assessment
+
+Preliminary diagnosis:
+1. Diabetic foot ulcer
+2. Diabetic neuropathy
+3. Possible peripheral arterial disease (PAD)
+
+Diagnostic discussion:
+The patient is a male in his late 50s with a history of diabetes mellitus, poorly controlled (HbA1c >8%), and presents with a non-healing ulcer on the top of the right foot near the fifth toe. The ulcer is 1x2 inches in size, with yellow discharge, and lacks pain or warmth, which is consistent with diabetic neuropathy. The absence of pain and sensation in the foot is a hallmark of diabetic neuropathy, a common complication of long-standing diabetes. The lack of erythema or warmth at the ulcer site suggests no acute infection, but the presence of yellow discharge raises concern for possible bacterial colonization or early infection. The absence of palpable pulses in the lower extremities, combined with the presence of a non-healing ulcer, raises concern for peripheral arterial disease (PAD), which can impair wound healing. The differential diagnoses include: 1) Diabetic foot ulcer (most likely given the history of diabetes, poor glycemic control, and the presence of a non-healing ulcer with neuropathy), 2) Infection (e.g., osteomyelitis or cellulitis), and 3) PAD (due to lack of palpable pulses and poor wound healing).
+
+## Plan
+
+1. Further evaluation: Perform ankle-brachial index (ABI) and Doppler ultrasound to assess for peripheral arterial disease. 2. Medication: Continue oral diabetes medications, with a focus on achieving better glycemic control (target HbA1c <7%). Consider metformin or other first-line agents, with adjustments based on renal function. Monitor for hypoglycemia and adjust as needed. 3. Non-drug management and education: Encourage regular foot inspection, proper hygiene, and off-loading of the affected foot. Recommend a low-sodium, low-oxalate diet to reduce the risk of complications. Educate on the importance of regular follow-up and signs of infection (e.g., increased redness, swelling, fever). 4. Follow-up: Schedule a follow-up in one week to reassess the ulcer and review the results of vascular studies. If the ulcer shows no improvement or signs of infection develop, consider referral to a wound care specialist or vascular surgeon for further evaluation and management.

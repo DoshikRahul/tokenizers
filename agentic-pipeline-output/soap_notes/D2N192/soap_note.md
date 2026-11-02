@@ -1,0 +1,33 @@
+# SOAP note — D2N192
+
+History-taking stop reason: max_turns; turns: 15.
+
+Assessment and Plan contain model-generated reasoning and proposed care.
+
+History taking ended before the agent confirmed completion. Unelicited facts remain unknown.
+
+## Subjective
+
+Basic information: 34-year-old female presenting with abdominal pain for ten days, worsening over the last couple of days, especially after meals.
+
+History of present illness: The pain is located on the right side, low in the abdomen, and may radiate slightly to the left. The pain is typically a dull ache but can become sharper upon palpation. It has been worsening over the last couple of days, especially after meals. Associated symptoms include nausea and heartburn, but no vomiting, fever, weight loss, or changes in bowel habits. The pain is usually a dull ache but can feel sharper when I press on it. It's been getting worse over the last couple of days, especially after meals, and it's been pretty constant, though it does wax and wane in severity throughout the day.
+
+Past history: No history of abdominal surgeries or other gastrointestinal issues. No family history of gastrointestinal diseases. No recent trauma or injury to the abdominal area. No change in bowel habits. No changes in menstrual cycle or gynecological symptoms like irregular bleeding, pelvic pain, or pressure in the last few weeks.
+
+## Objective
+
+Physical examination: Abdominal examination reveals tenderness on the right lower quadrant, with no rebound tenderness or guarding. No palpable masses. Bowel sounds are normal. No fever, weight loss, or jaundice noted.
+
+Investigations: No prior imaging studies or blood tests have been conducted for this abdominal pain.
+
+## Assessment
+
+Preliminary diagnosis:
+1. Right lower quadrant abdominal pain, likely of gastrointestinal origin. 2. Gastroesophageal reflux disease (GERD). 3. Ovarian cyst (unlikely given lack of gynecological symptoms).
+
+Diagnostic discussion:
+A 34-year-old female presents with a 10-day history of right lower quadrant abdominal pain that has worsened over the last couple of days, especially after meals. The pain is described as a dull ache that can become sharper upon palpation and is associated with nausea and heartburn. There is no vomiting, fever, weight loss, or changes in bowel habits. On physical examination, there is tenderness in the right lower quadrant without rebound tenderness, guarding, or palpable masses. The absence of fever, weight loss, or changes in bowel habits reduces the likelihood of infectious or inflammatory conditions such as appendicitis or inflammatory bowel disease. The presence of heartburn and nausea suggests a possible component of gastroesophageal reflux disease (GERD). The lack of gynecological symptoms (e.g., pelvic pain, irregular bleeding) makes ovarian cysts or other gynecological causes less likely, though not entirely excluded. Differential diagnoses include appendicitis, GERD, and ovarian cyst. The patient has no history of abdominal surgeries, gastrointestinal issues, or family history of gastrointestinal diseases, and no recent trauma or injury to the abdominal area. There are no changes in menstrual cycle or gynecological symptoms, which reduces the likelihood of gynecological causes. The lack of prior imaging or blood tests necessitates further evaluation to confirm the diagnosis.
+
+## Plan
+
+1. Further evaluation: An abdominal ultrasound or CT scan of the abdomen and pelvis should be performed to evaluate for appendicitis, ovarian cysts, or other structural abnormalities. Blood tests, including a complete blood count (CBC), C-reactive protein (CRP), and liver function tests, should be conducted to assess for infection or inflammation. Upper gastrointestinal endoscopy may be considered to assess for GERD or other upper gastrointestinal pathology. 2. Medication: Proton pump inhibitors (PPIs) such as omeprazole or esomeprazole may be prescribed for GERD. If appendicitis is suspected, broad-spectrum antibiotics such as ceftriaxone and metronidazole may be considered. 3. Non-drug management and education: The patient should avoid large meals and spicy or acidic foods to reduce GERD symptoms. She should also avoid activities that exacerbate the pain and monitor for worsening symptoms such as fever, vomiting, or changes in bowel habits. 4. Follow-up: The patient should be reassessed in 3-5 days after the initial evaluation and treatment. If symptoms persist or worsen, further investigation or surgical intervention may be required.
