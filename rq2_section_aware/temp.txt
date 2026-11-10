@@ -1,0 +1,98 @@
+I'll check how your Qwen server is launched so the commands match it, then add the one missing piece (a verifier training script) and a stage-by-stage run script.
+
+Your Qwen server listens on `127.0.0.1:8000` on gnode088, so you'll need a tunnel from your node. The one missing script is verifier training, so I'm writing `train_verifier.py` now.
+
+Now the stage-by-stage runner, so each step is one command and human-review points are explicit pauses.
+
+I added two things the plan still needed: a verifier training script, and `run_all_rq2.sh`, which runs RQ2 in stages and stops wherever someone has to review a sheet. These are in `0002-RQ2-verifier-training-script-and-stage-by-stage-runn.patch`, alongside the earlier fixes in the `0001` patch. I've only tested the runner with stand-in models. Training and the real-model stages haven't run, because torch can't be installed in my workspace. Below is every command, in order, saying where each one runs.
+
+### 1. Apply the two patches
+**On your laptop**, after downloading both patch files (use the login host you normally `ssh` into):
+```bash
+scp 0001-RQ2-fixes-*.patch 0002-RQ2-verifier-*.patch \
+    doshikrahul.repaka@<login-host>:/scratch/doshikrahul.repaka/tokenizers/
+```
+**On gnode004:**
+```bash
+cd /scratch/doshikrahul.repaka/tokenizers
+git pull                                   # should be at 4d872a2
+git am 0001-RQ2-fixes-*.patch 0002-RQ2-verifier-*.patch
+mv 0001-*.patch 0002-*.patch ~/            # keep the patches out of the repo
+git log --oneline -3
+git push origin main
+```
+
+### 2. Start the Qwen3-14B server and connect to it
+**On gnode088**, as Jyothika's README describes (skip this if it's already running):
+```bash
+screen -S qwen-server
+cd /scratch/jyothika.goparaju/Qwen3-14B_setup && bash run.sh --serve-only
+# wait for "Endpoint ready", then press Ctrl+a then d to detach
+```
+**On gnode004**, open a tunnel so `127.0.0.1:8000` reaches the server:
+```bash
+ssh -fN -L 8000:127.0.0.1:8000 gnode088
+curl http://127.0.0.1:8000/health
+```
+If the cluster blocks ssh into gnode088 without a job there, run the stages that need the server (`prep`, `merge`, `traindata`, `dev`, `test`) on gnode088 itself.
+
+### 3. One-time setup (gnode004)
+```bash
+cd /scratch/doshikrahul.repaka/tokenizers/rq2_section_aware
+cp rq2.env.example rq2.env
+nano rq2.env                    # set GEN_API_KEY if the server has one
+bash run_all_rq2.sh setup       # venv + packages + server check
+bash run_all_rq2.sh smoke       # offline plumbing test; must end in "SMOKE TEST OK"
+```
+
+### 4. Build the data (two review pauses)
+```bash
+bash run_all_rq2.sh prep
+```
+**Review:** two people fill
+- `data_out/planted_candidates_test1.csv`: `approved` = 1 or 0 for each planted error.
+- `data_out/audit_valid_test1.csv`: `valid_ok` = 0 drops a statement the dialogue doesn't support; `section_ok` fixes a wrong section.
+
+```bash
+bash run_all_rq2.sh merge
+```
+**Review:** spot-check about 10 encounters in `data_out/mask_audit_test1.csv`. If many are wrong, rerun `.venv/bin/python mask_ap.py --split test1 --redo`.
+
+### 5. Train the verifier (GPU)
+```bash
+bash run_all_rq2.sh traindata
+bash run_all_rq2.sh train
+```
+If training fails with a bitsandbytes or 4-bit error on the 1080 Ti, set `TRAIN_FLAGS=--no-4bit` and `VERIFIER_4BIT=0` in `rq2.env` and rerun `train`.
+
+### 6. Dev runs and tuning
+```bash
+bash run_all_rq2.sh dev          # 15 runs
+bash run_all_rq2.sh tune         # thresholds + reports/dev/metrics.md
+```
+Choose `K_REF` (best U4 k) and `K_TURN` (best U2 top-k) from `reports/dev/metrics.md` and set them in `rq2.env`.
+
+### 7. Test runs and report
+```bash
+bash run_all_rq2.sh test         # 11 runs on test1
+bash run_all_rq2.sh eval         # report + per-step annotation sheet
+```
+**Review:** fill the `gold` column in `data_out/steps_test1_U4_preap_ref<K>_link-llm_hf.csv` (about 60 statements).
+```bash
+bash run_all_rq2.sh steps
+```
+
+### 8. Save results
+```bash
+cd /scratch/doshikrahul.repaka/tokenizers
+git add rq2_section_aware/data_out
+git commit -m "RQ2: reviewed data and annotations"
+git push origin main
+```
+`runs/`, `reports/` and `models/` are kept out of git. Copy `reports/test1/` into the final report.
+
+The results are in `reports/test1/`: `metrics.md` for the main table, `summary.json` for the H2 verdict and significance tests, `tradeoff_curves.csv` for the retention-vs-recall plot, and `s3_decision_changes.csv` for S3.
+
+### Not covered by these commands
+- **S1:** it needs a set of claim-evidence examples covering all six error types, including the S/O ones. Nothing in the repo builds that yet. Once someone builds `data_out/s1_eval.jsonl`, run `.venv/bin/python s1_verifier_compare.py --data data_out/s1_eval.jsonl` three times: with `--verifier deberta`, with `--verifier hf`, and with `--verifier openai` pointed at a prompted 7B model.
+- **RQ1:** the code doesn't exist yet. That's withheld facts, checkpoint branching, the live ask loop, the baselines, and moving the cases off ACI train. I can't give commands for it until it's written.
