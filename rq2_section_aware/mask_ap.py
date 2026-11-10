@@ -35,11 +35,24 @@ Never edit patient turns. Never remove examination findings or results.
 Return JSON: {{"edits": [{{"tid": "T57", "action": "remove"}}, {{"tid": "T40", "action": "keep_text", "keep_text": "..."}}]}}"""
 
 
+WINDOW = 30  # turns per LLM call: keeps each JSON answer well under the server's 2048-token output cap
+
+
 def mask(enc, llm):
-    out = llm.chat_json(SYSTEM, USER.format(dialogue=turns_to_text(enc["turns"])), max_tokens=4000) or {}
-    edits = {e.get("tid"): e for e in (out.get("edits") or []) if isinstance(e, dict)} if isinstance(out, dict) else {}
+    """Returns (new_turns, log) or (None, reason) if any window could not be parsed."""
+    turns = enc["turns"]
+    edits = {}
+    for start in range(0, len(turns), WINDOW):
+        window = turns[start:start + WINDOW]
+        if not any(t["speaker"] == "Doctor" for t in window):
+            continue
+        out = llm.chat_json(SYSTEM, USER.format(dialogue=turns_to_text(window)), max_tokens=2048)
+        if not isinstance(out, dict) or not isinstance(out.get("edits"), list):
+            return None, f"unparseable LLM output for turns {window[0]['tid']}-{window[-1]['tid']}"
+        ids = {t["tid"] for t in window}
+        edits.update({e.get("tid"): e for e in out["edits"] if isinstance(e, dict) and e.get("tid") in ids})
     new, log = [], []
-    for t in enc["turns"]:
+    for t in turns:
         e = edits.get(t["tid"])
         if not e or t["speaker"] != "Doctor":
             new.append(t)
@@ -58,17 +71,22 @@ def main():
     ap.add_argument("--redo", action="store_true")
     a = ap.parse_args()
     path = C.DATA_DIR / f"encounters_{a.split}.jsonl"
-    encs, llm, audit = read_jsonl(path), GenLLM(), []
+    encs, llm, audit, failed = read_jsonl(path), GenLLM(), [], []
     for e in encs:
         if "turns_preap" in e and not a.redo:
             continue
-        e["turns_preap"], e["mask_log"] = mask(e, llm)
-        print(f"  {e['encounter_id']}: {len(e['mask_log'])} doctor turns edited/removed")
+        new, log = mask(e, llm)
+        if new is None:  # leave the encounter unmasked; run_rq2 --setting preap will refuse it
+            print(f"  FAILED {e['encounter_id']}: {log} - rerun mask_ap.py")
+            failed.append(e["encounter_id"])
+            continue
+        e["turns_preap"], e["mask_log"] = new, log
+        print(f"  {e['encounter_id']}: {len(log)} doctor turns edited/removed")
         audit += [dict(encounter_id=e["encounter_id"], **m, correct="", notes="") for m in e["mask_log"]]
         write_jsonl(path, encs)  # checkpoint after each encounter
     if audit:
         write_csv(C.DATA_DIR / f"mask_audit_{a.split}.csv", audit)
-    print("done ->", path)
+    print("done ->", path, f"({len(failed)} failed: {failed})" if failed else "")
 
 
 if __name__ == "__main__":

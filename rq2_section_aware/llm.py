@@ -25,6 +25,7 @@ class GenLLM:
                 self.stub_fn = respond
             return self.stub_fn(system, user)
         import requests
+        max_tokens = min(max_tokens, C.GEN_MAX_TOKENS)
         if C.GEN_NO_THINK and "qwen3" in self.model.lower():
             system = system + "\n/no_think"
         msgs = [{"role": "system", "content": system}, {"role": "user", "content": user}]

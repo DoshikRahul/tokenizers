@@ -96,11 +96,11 @@ class OpenAIVerifier:
         if self.logprobs_ok:
             payload.update(logprobs=True, top_logprobs=20)
         headers = {"Authorization": f"Bearer {self.key}"} if self.key else {}
-        body = None
+        body, last = None, "no attempt succeeded"
         for attempt in range(3):
             try:
                 r = self.s.post(self.url, json=payload, headers=headers, timeout=120)
-                if r.status_code == 400 and self.logprobs_ok:  # server refuses logprobs
+                if r.status_code in (400, 422) and self.logprobs_ok:  # server refuses logprobs fields
                     self.logprobs_ok = False
                     payload.pop("logprobs", None), payload.pop("top_logprobs", None)
                     continue

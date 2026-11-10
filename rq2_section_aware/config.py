@@ -42,7 +42,9 @@ GEN_BACKEND = _env("GEN_BACKEND", "openai" if GEN_BASE_URL else "ollama")
 OLLAMA_BASE = _env("OLLAMA_BASE", "http://127.0.0.1:11434")
 OLLAMA_MODEL = _env("OLLAMA_MODEL", "llama3:8b")
 GEN_TIMEOUT = int(_env("GEN_TIMEOUT", "600"))
-GEN_JSON_MODE = _env("GEN_JSON_MODE", "0") == "1"
+# Qwen3-14B host.py rejects max_tokens > MAX_OUTPUT_TOKENS (2048) and prompt+max_tokens > 8192.
+GEN_MAX_TOKENS = int(_env("GEN_MAX_TOKENS", "2048"))
+GEN_JSON_MODE = _env("GEN_JSON_MODE", "0") == "1"   # set 1 for host.py (it validates JSON objects)
 # Qwen3 models think by default; "/no_think" in the system prompt switches it off.
 GEN_NO_THINK = _env("GEN_NO_THINK", "1") == "1"
 

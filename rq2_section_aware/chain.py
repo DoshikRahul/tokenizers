@@ -69,7 +69,7 @@ def extract_features(enc: Dict, llm) -> List[Dict]:
         return read_json(p)["features"]
     valid_tids = {t["tid"] for t in enc["turns"]}
     out = llm.chat_json(FEAT_SYSTEM, FEAT_USER.format(dialogue=turns_to_text(enc["turns"])),
-                        max_tokens=3000) or {}
+                        max_tokens=2048) or {}
     feats = []
     for f in out.get("features", []) if isinstance(out, dict) else []:
         text = (f.get("text") or "").strip()
@@ -77,6 +77,10 @@ def extract_features(enc: Dict, llm) -> List[Dict]:
             continue
         turns = [t for t in (f.get("turns") or []) if t in valid_tids]
         feats.append(dict(fid=f"F{len(feats) + 1}", text=text, category=f.get("category", ""), turns=turns))
+    if not feats:
+        # do NOT cache an empty list: every statement of this encounter would become chain_broken
+        print(f"  WARNING {enc['encounter_id']}: feature extraction returned nothing; will retry next run")
+        return feats
     write_json(p, {"encounter_id": enc["encounter_id"], "features": feats, "grounded": False})
     return feats
 
@@ -84,6 +88,8 @@ def extract_features(enc: Dict, llm) -> List[Dict]:
 def ground_features(enc: Dict, feats: List[Dict], verifier=None, nli=None) -> List[Dict]:
     """Per-step check 1: is each feature supported by the turns it cites? Results stored on the feature."""
     p = feature_path(enc)
+    if not p.exists():
+        return feats
     blob = read_json(p)
     if blob.get("grounded"):
         return blob["features"]

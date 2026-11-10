@@ -98,16 +98,19 @@ def turns_to_text(turns: List[dict], with_ids: bool = True) -> str:
 
 
 # ---------------------------------------------------------------- text
+_ABBREV = re.compile(r"\b(Dr|Mr|Mrs|Ms|Prof|St|Jr|Sr|vs|approx|e\.g|i\.e|etc|No|Fig|mg|mL|q\.d|b\.i\.d|t\.i\.d)\.",
+                     re.IGNORECASE)
+
+
 def split_sentences(text: str) -> List[str]:
+    """Deterministic splitter (no optional dependency), so data_out is identical on every machine.
+    Abbreviations such as 'Dr.' are protected before splitting."""
     text = text.strip()
     if not text:
         return []
-    try:
-        import pysbd
-        segs = pysbd.Segmenter(language="en", clean=False).segment(text)
-    except ImportError:
-        segs = re.split(r"(?<=[.!?])\s+(?=[A-Z0-9\"'(])", text)
-    return [s.strip() for s in segs if s.strip()]
+    protected = _ABBREV.sub(lambda m: m.group(0).replace(".", "․"), text)
+    segs = re.split(r"(?<=[.!?])\s+(?=[A-Z0-9\"'(])", protected)
+    return [s.replace("․", ".").strip() for s in segs if s.strip()]
 
 
 def norm(text: str) -> str:
