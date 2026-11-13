@@ -85,9 +85,13 @@ def main():
                                              target_modules=["q_proj", "k_proj", "v_proj", "o_proj",
                                                              "gate_proj", "up_proj", "down_proj"]))
     model.print_trainable_parameters()
-    args = TrainingArguments(output_dir=a.out, per_device_train_batch_size=1, gradient_accumulation_steps=a.grad_accum,
+    import inspect
+    # transformers 5.x removed warmup_ratio; there a float < 1 in warmup_steps means the same ratio
+    warm = ({"warmup_ratio": 0.03} if "warmup_ratio" in inspect.signature(TrainingArguments.__init__).parameters
+            else {"warmup_steps": 0.03})
+    args = TrainingArguments(output_dir=a.out, **warm, per_device_train_batch_size=1, gradient_accumulation_steps=a.grad_accum,
                              num_train_epochs=a.epochs, learning_rate=a.lr, lr_scheduler_type="cosine",
-                             warmup_ratio=0.03, logging_steps=10, save_strategy="epoch", save_total_limit=1,
+                             logging_steps=10, save_strategy="epoch", save_total_limit=1,
                              fp16=True, bf16=False,  # Pascal / Turing: no bf16
                              report_to=[], remove_unused_columns=False, seed=C.SEED)
     Trainer(model=model, args=args, train_dataset=train_ds, data_collator=collate).train()
@@ -101,11 +105,18 @@ def main():
         torch.cuda.empty_cache()
         from verifier import HFVerifier
         v = HFVerifier(base=a.base, adapter=a.out, load_4bit=not a.no_4bit)
-        ok = 0
+        ok, per = 0, {}
         for r in dev:
             labels = C.LABELS_CHAIN if r["target"] in C.LABELS_CHAIN else C.LABELS_ENTAIL
-            ok += v.score(r["messages"], labels)["label"] == r["target"]
+            hit = v.score(r["messages"], labels)["label"] == r["target"]
+            ok += hit
+            n_hit = per.setdefault(r["target"], [0, 0])
+            n_hit[0] += 1
+            n_hit[1] += hit
         print(f"held-out accuracy {ok / len(dev):.3f} on {len(dev)} examples")
+        for label, (n, h) in sorted(per.items()):  # accuracy alone hides a majority-class verifier
+            print(f"  {label}: {h / n:.3f} on {n}")
+        print(f"  balanced accuracy {sum(h / n for n, h in per.values()) / len(per):.3f}")
 
 
 if __name__ == "__main__":

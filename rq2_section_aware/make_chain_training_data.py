@@ -51,10 +51,19 @@ def main(split="train", setting="preap", swap_per_encounter=3):
     for s in stmts:
         by_enc.setdefault(s["encounter_id"], []).append(s)
     pool = [s for s in stmts if s["origin"] == "reference" and s["stmt_type"] in ("diagnosis", "reasoning", "treatment")]
+    unmasked = [eid for eid in by_enc if setting == "preap" and "turns_preap" not in encs[eid]]
+    if unmasked:  # never fall back silently to the full dialogue (it contains the doctor's spoken A/P)
+        print(f"SKIPPING {len(unmasked)} encounters without turns_preap (rerun mask_ap.py --split {split}): {unmasked}")
+    no_feats = []
     for eid, ss in by_enc.items():
+        if eid in unmasked:
+            continue
         enc = dict(encs[eid], turns=encs[eid].get("turns_preap", encs[eid]["turns"]) if setting == "preap"
                    else encs[eid]["turns"], setting=setting)
         feats = chain.ground_features(enc, chain.extract_features(enc, gen))
+        if not feats:  # extraction failed: pairs without features would teach "no evidence -> chain_ok"
+            no_feats.append(eid)
+            continue
         for s in ss:
             if s["origin"] == "planted":
                 add(eid, s["section"], s["claim"], feats, "chain_broken", s["error_type"], s["statement_id"], 0)
@@ -66,6 +75,9 @@ def main(split="train", setting="preap", swap_per_encounter=3):
         for j, o in enumerate(rng.sample(others, min(swap_per_encounter, len(others)))):
             add(eid, o["section"], o["claim"], feats, "chain_broken", "swapped", f"{eid}_SW{j}", 0)
         print(f"  {eid}: {sum(x['encounter_id'] == eid for x in out)} examples")
+    if no_feats:
+        print(f"INCOMPLETE: feature extraction returned nothing for {no_feats}; they have no pairs. "
+              f"Rerun this command to retry them.")
     rng.shuffle(out)
     write_jsonl(C.DATA_DIR / f"chain_{split}.jsonl", out)
     pos = sum(x["target"] == "chain_ok" for x in out)

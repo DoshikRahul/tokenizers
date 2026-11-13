@@ -43,7 +43,7 @@ def read_csv(path) -> List[dict]:
 def write_csv(path, rows: List[dict], fields: List[str] = None):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
-    fields = fields or (list(rows[0].keys()) if rows else [])
+    fields = fields or list(dict.fromkeys(k for r in rows for k in r))  # every key, not only the first row's
     with path.open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
         w.writeheader()

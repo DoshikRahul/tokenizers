@@ -164,7 +164,7 @@ def main():
         from medlineplus import load_reference_index
         ref_index = load_reference_index()
 
-    features_by_enc, feat_index = {}, {}
+    features_by_enc, feat_index, skipped = {}, {}, set()
     for i, s in enumerate(stmts, 1):
         if s["statement_id"] in out:
             continue
@@ -205,6 +205,9 @@ def main():
                         from retrieval import HybridIndex
                         feat_index[ek] = HybridIndex([f for f in features_by_enc[ek] if f.get("grounded", True)])
                 feats = features_by_enc[ek]
+                if not feats:  # extraction failed (chain.py warned): write nothing, so a rerun retries it
+                    skipped.add(s["encounter_id"])
+                    continue
                 fmap = {f["fid"]: f for f in feats}
                 comps = chain.decompose(s, gen, decomp_cache)
                 comp_logs, p_broken_max = [], 0.0
@@ -230,6 +233,9 @@ def main():
         out.put(rec)
         if i % 25 == 0:
             print(f"  {i}/{len(stmts)}")
+    if skipped:
+        print(f"INCOMPLETE: no features for {sorted(skipped)}; their statements were not scored. "
+              f"Rerun the same command.")
     print("done:", out.path)
 
 

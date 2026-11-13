@@ -135,6 +135,8 @@ def link(stmt_id: str, comp_idx: int, section: str, component: str, feats: List[
     key = f"{stmt_id}#{comp_idx}#{LINKER}"
     if key in cache:
         return cache.get(key)["feature_ids"]
+    if not feats:  # feature extraction failed for this encounter: do not cache, so a rerun links again
+        return []
     usable = [f for f in feats if f.get("grounded", True)]
     if not usable:
         ids = []

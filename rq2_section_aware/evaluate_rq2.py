@@ -92,11 +92,15 @@ def curve(run, recs, gold):
 def pick_primary(runs, setting):
     """Default run per condition for the main comparison: whole-dialogue U2, LLM linker for U3/U4."""
     out = {}
+    kfile = C.ROOT / "k_values.json"  # {"K_REF": 3, "K_TURN": 5}, written after the dev k choice
+    k_ref = read_json(kfile).get("K_REF") if kfile.exists() else None
     for cond in ("U1", "U2", "U3", "U4"):
         cands = [r for r in runs if r.startswith(f"{cond}_{setting}") and "_top" not in r
                  and "link-retrieval" not in r and not r.endswith("+tuned")]
+        if cond == "U4" and k_ref is not None:  # several ref<k> runs exist on dev: compare the chosen k
+            cands = [r for r in cands if f"_ref{k_ref}_" in r] or cands
         if cands:
-            out[cond] = sorted(cands, key=len)[0]
+            out[cond] = sorted(cands, key=lambda r: (len(r), r))[0]
     return out
 
 
