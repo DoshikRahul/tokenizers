@@ -1,0 +1,550 @@
+{
+  "case_id": "D2N071",
+  "split": "dev",
+  "is_icl_demo": false,
+  "stage1_elements": "Here are the extracted clinical elements in concise bullet points:\n\n**Subjective Elements:**\n\n* Chief complaint: Annual exam, managing depression and hypertension\n* History of present illness:\n\t+ Symptoms: Mild chest pounding during runs on hot or humid days, shortness of breath\n\t+ Onset: Occasional, mostly during morning runs\n\t+ Duration: Typically lasts a few minutes, up to 5 minutes\n\t+ Frequency: Occasional, mostly on hot or humid days\n\t+ Associated symptoms: None reported\n* Relevant medical history:\n\t+ Lobectomy a few years back\n\t+ Hypertension\n\t+ Depression\n\t+ Family history of hypertension, but unclear about other cardiovascular disease\n* Medications:\n\t+ Antihypertensive medication\n\t+ Antidepressant medication\n\t+ No recent changes or new medications started\n\n**Objective Elements:**\n\n* Physical examination findings: None mentioned\n* Vital signs mentioned: None\n* Diagnostic lab/imaging results: None mentioned\n\n**Assessment Elements:**\n\n* Diagnoses: None mentioned\n* Clinical impressions: None mentioned\n\n**Plan Elements:**\n\n* Medical treatment plan: None mentioned\n* Prescriptions/dosages: None mentioned\n* Tests ordered: None mentioned\n* Follow-up instructions: None mentioned",
+  "stage1_raw_note": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:\n\n**SUBJECTIVE:**\n\n* **Chief Complaint:** Annual exam, managing depression and hypertension\n* **History of Present Illness (HPI):**\n\t+ Symptoms: Mild chest pounding during runs on hot or humid days, shortness of breath\n\t+ Onset: Occasional, mostly during morning runs\n\t+ Duration: Typically lasts a few minutes, up to 5 minutes\n\t+ Frequency: Occasional, mostly on hot or humid days\n\t+ Associated symptoms: None reported\n\n**OBJECTIVE:**\n\n* **Physical Examination & Vitals:** None mentioned\n* **Diagnostic Results & Labs:** None mentioned\n\n**ASSESSMENT AND PLAN:**\n\n* **Diagnoses and Clinical Reasoning:** The patient presents with mild chest pounding during runs on hot or humid days, which is a new symptom. The patient's hypertension and depression are well-controlled. The patient's family history of hypertension is unclear, but there is no known history of cardiovascular disease.\n* **Treatment Plan, Medications, and Follow-up:** The patient will continue to manage his hypertension and depression with his current medications. The patient will be advised to monitor his symptoms and report any changes or worsening of symptoms. A follow-up appointment will be scheduled in 6-8 weeks to reassess the patient's symptoms and adjust his treatment plan as needed.\n\nPlease note that this is a summary of the patient's visit and does not include any specific diagnoses or treatment plans. The actual SOAP note may vary depending on the patient's specific condition and the provider's clinical judgment.",
+  "stage1_parse": {
+    "parse_mode": "main_headings",
+    "parse_ok": true,
+    "dropped_preamble": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:"
+  },
+  "stage1_so": {
+    "subjective": "* **Chief Complaint:** Annual exam, managing depression and hypertension\n* **History of Present Illness (HPI):**\n\t+ Symptoms: Mild chest pounding during runs on hot or humid days, shortness of breath\n\t+ Onset: Occasional, mostly during morning runs\n\t+ Duration: Typically lasts a few minutes, up to 5 minutes\n\t+ Frequency: Occasional, mostly on hot or humid days\n\t+ Associated symptoms: None reported",
+    "objective": "* **Physical Examination & Vitals:** None mentioned\n* **Diagnostic Results & Labs:** None mentioned"
+  },
+  "stage1_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** The patient presents with mild chest pounding during runs on hot or humid days, which is a new symptom. The patient's hypertension and depression are well-controlled. The patient's family history of hypertension is unclear, but there is no known history of cardiovascular disease.\n* **Treatment Plan, Medications, and Follow-up:** The patient will continue to manage his hypertension and depression with his current medications. The patient will be advised to monitor his symptoms and report any changes or worsening of symptoms. A follow-up appointment will be scheduled in 6-8 weeks to reassess the patient's symptoms and adjust his treatment plan as needed.\n\nPlease note that this is a summary of the patient's visit and does not include any specific diagnoses or treatment plans. The actual SOAP note may vary depending on the patient's specific condition and the provider's clinical judgment."
+  },
+  "stage2_so": {
+    "subjective": "The patient has a Chief Complaint.\nNote that I did not add any information that is not present in the original statement. I also replaced the pronoun \"a\" with the subject \"The patient\" to make each fact self-contained.\nThe patient is managing depression.\nThe patient is managing hypertension.\nSymptoms: Mild chest pounding during runs on hot or humid days, shortness of breath\nThe onset is occasional.\nNote that I did not add any information that is not present in the statement. The statement does not specify what \"the onset\" refers to, so I did not replace the pronoun with a subject. If the statement had specified what \"the onset\" referred to, I would have replaced the pronoun with the subject.\nNote that I did not add any information that is not present in the original statement, and each fact is self-contained and can stand alone as true or false.\nDuration typically lasts a few minutes.\nDuration lasts up to 5 minutes.\nNote that I've split the statement into two separate facts, each describing a different aspect of the duration. I've also replaced the pronoun \"it\" with the subject \"Duration\" to make each fact self-contained.\nThe frequency is occasional.\nThe frequency is mostly on hot days.\nNote that there is only one proposition in this statement, so it can be output as a single fact.\nNote that I've broken down the statement into three separate facts, each describing a different aspect of the frequency.\nAssociated symptoms: None reported",
+    "objective": "Physical Examination is not mentioned.\nVitals are not mentioned.\nBased on the rules provided, I would decompose the statement as follows:\nThere is no mention of physical examination.\nThis is the only atomic fact that can be extracted from the statement, as it is a single proposition stating the absence of information about physical examination or vitals.\nDiagnostic Results are not mentioned.\nLabs are not mentioned.\nThe statement does not contain any specific findings or information."
+  },
+  "stage2_audit": {
+    "subjective": [
+      {
+        "unit": "Chief Complaint: Annual exam, managing depression and hypertension",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.4517,
+          "neutral": 0.2751,
+          "contradiction": 0.2732
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "they last, and are they associated with any specific activities or triggers? Patient: No, I haven't had any recent episodes of dizziness, faintness, or palpitations during or after those moments. The chest pounding is mild and goes away on its own after a few minutes. I don't feel lightheaded or have any other symptoms with it. Doctor: How long does each episode of chest pounding typically last, and how frequently do these episodes occur during physical activity? Patient: Each episode of chest pounding usually lasts a few minutes, maybe up to five or so, and it doesn't happen every time I run. It's more like once in a while, especially on the hotter, more humid days. Doctor: Has the patient experienced any episodes of chest pain, dizziness, or syncope during or after the chest pounding episodes? If so, please describe the nature, duration, and any associated symptoms. Patient: No, I haven't experienced any chest pain, dizziness, or syncope during or after the chest pounding episodes. The pounding is mild and goes away on its own after a few minutes. I don't feel lightheaded or have any other symptoms with it. Doctor: Have you noticed any changes in the frequency or intensity of the chest pounding episodes over the past few months? Are there any specific activities or times of day when the episodes are more likely to occur? Patient: No, I haven't noticed any changes in the frequency or intensity of the chest pounding over the past few months. It still happens occasionally, mostly when I'm running on hot or humid days, but it doesn't happen every time. I don't really notice it at other times of day or with other activities. Doctor: Have you had any recent changes in your medication regimen for hypertension or depression, or any new medications started recently? Patient: No, I haven't had any recent changes in my medication regimen for hypertension or depression, and I haven't started any new medications recently. I've been staying on the same medications as before, and they",
+        "atomic_decomposition": {
+          "original": "Chief Complaint: Annual exam, managing depression and hypertension",
+          "retained": [
+            {
+              "atom": "The patient has a Chief Complaint.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 62 years old, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please provide your age, gender, and the reason for your visit today? Patient: I'm 62 years old, male, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please tell me if you have any current symptoms or concerns you'd like to discuss during this visit? Patient: I've been feeling relatively okay overall, but I did have a tough spring with all the pollen and allergies. It was also a stressful time with my daughter moving out for college. I've been managing my depression pretty well with my medication, but my hypertension has been a bit more of a struggle, especially on the weekends when I sometimes forget to take my meds. I also run 4 to 5 miles a day, and sometimes when it's humid, I feel a little short of breath and get a bit of a pounding in my chest, but it usually goes away. Doctor: Have you experienced any episodes of chest pain, dizziness, or syncope during or after your runs, especially in humid conditions? Patient: No, I haven't had any chest pain, dizziness, or fainting during or after my runs. The pounding in my chest usually goes away on its own, and I don't feel lightheaded or anything like that. It's more of a mild sensation, and I don't worry about it too much. Doctor: Could you provide details about your family history of cardiovascular disease, including any history of heart",
+              "entailment": 0.5698,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I did not add any information that is not present in the original statement. I also replaced the pronoun \"a\" with the subject \"The patient\" to make each fact self-contained.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 62 years old, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please provide your age, gender, and the reason for your visit today? Patient: I'm 62 years old, male, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please tell me if you have any current symptoms or concerns you'd like to discuss during this visit? Patient: I've been feeling relatively okay overall, but I did have a tough spring with all the pollen and allergies. It was also a stressful time with my daughter moving out for college. I've been managing my depression pretty well with my medication, but my hypertension has been a bit more of a struggle, especially on the weekends when I sometimes forget to take my meds. I also run 4 to 5 miles a day, and sometimes when it's humid, I feel a little short of breath and get a bit of a pounding in my chest, but it usually goes away. Doctor: Have you experienced any episodes of chest pain, dizziness, or syncope during or after your runs, especially in humid conditions? Patient: No, I haven't had any chest pain, dizziness, or fainting during or after my runs. The pounding in my chest usually goes away on its own, and I don't feel lightheaded or anything like that. It's more of a mild sensation, and I don't worry about it too much. Doctor: Could you provide details about your family history of cardiovascular disease, including any history of heart",
+              "entailment": 0.9854,
+              "depth": 2
+            },
+            {
+              "atom": "The patient is managing depression.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 62 years old, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please provide your age, gender, and the reason for your visit today? Patient: I'm 62 years old, male, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please tell me if you have any current symptoms or concerns you'd like to discuss during this visit? Patient: I've been feeling relatively okay overall, but I did have a tough spring with all the pollen and allergies. It was also a stressful time with my daughter moving out for college. I've been managing my depression pretty well with my medication, but my hypertension has been a bit more of a struggle, especially on the weekends when I sometimes forget to take my meds. I also run 4 to 5 miles a day, and sometimes when it's humid, I feel a little short of breath and get a bit of a pounding in my chest, but it usually goes away. Doctor: Have you experienced any episodes of chest pain, dizziness, or syncope during or after your runs, especially in humid conditions? Patient: No, I haven't had any chest pain, dizziness, or fainting during or after my runs. The pounding in my chest usually goes away on its own, and I don't feel lightheaded or anything like that. It's more of a mild sensation, and I don't worry about it too much. Doctor: Could you provide details about your family history of cardiovascular disease, including any history of heart",
+              "entailment": 0.9995,
+              "depth": 1
+            },
+            {
+              "atom": "The patient is managing hypertension.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 62 years old, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please provide your age, gender, and the reason for your visit today? Patient: I'm 62 years old, male, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please tell me if you have any current symptoms or concerns you'd like to discuss during this visit? Patient: I've been feeling relatively okay overall, but I did have a tough spring with all the pollen and allergies. It was also a stressful time with my daughter moving out for college. I've been managing my depression pretty well with my medication, but my hypertension has been a bit more of a struggle, especially on the weekends when I sometimes forget to take my meds. I also run 4 to 5 miles a day, and sometimes when it's humid, I feel a little short of breath and get a bit of a pounding in my chest, but it usually goes away. Doctor: Have you experienced any episodes of chest pain, dizziness, or syncope during or after your runs, especially in humid conditions? Patient: No, I haven't had any chest pain, dizziness, or fainting during or after my runs. The pounding in my chest usually goes away on its own, and I don't feel lightheaded or anything like that. It's more of a mild sensation, and I don't worry about it too much. Doctor: Could you provide details about your family history of cardiovascular disease, including any history of heart",
+              "entailment": 0.9995,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "The Chief Complaint is Annual exam.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.449,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Symptoms: Mild chest pounding during runs on hot or humid days, shortness of breath",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9575,
+          "neutral": 0.0313,
+          "contradiction": 0.0114
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 62 years old, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please provide your age, gender, and the reason for your visit today? Patient: I'm 62 years old, male, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please tell me if you have any current symptoms or concerns you'd like to discuss during this visit? Patient: I've been feeling relatively okay overall, but I did have a tough spring with all the pollen and allergies. It was also a stressful time with my daughter moving out for college. I've been managing my depression pretty well with my medication, but my hypertension has been a bit more of a struggle, especially on the weekends when I sometimes forget to take my meds. I also run 4 to 5 miles a day, and sometimes when it's humid, I feel a little short of breath and get a bit of a pounding in my chest, but it usually goes away. Doctor: Have you experienced any episodes of chest pain, dizziness, or syncope during or after your runs, especially in humid conditions? Patient: No, I haven't had any chest pain, dizziness, or fainting during or after my runs. The pounding in my chest usually goes away on its own, and I don't feel lightheaded or anything like that. It's more of a mild sensation, and I don't worry about it too much. Doctor: Could you provide details about your family history of cardiovascular disease, including any history of heart",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "Onset: Occasional, mostly during morning runs",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.4724,
+          "neutral": 0.262,
+          "contradiction": 0.2656
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "'t happen every time, but when it does, it's more noticeable. It usually goes away on its own after a few minutes, and I don't really have any specific triggers other than the weather and exertion. Doctor: Has the patient experienced any episodes of syncope, palpitations, or chest pain during or after physical activity? If so, please describe the nature, duration, and any associated symptoms. Patient: No, I haven't experienced any episodes of syncope, palpitations, or chest pain during or after physical activity. The pounding in my chest is mild and usually goes away on its own after a few minutes. I don't feel lightheaded or have any other symptoms with it. Doctor: Could you describe the exact nature of the chest pounding you feel? Does it feel like a rapid heartbeat, a fluttering sensation, or something else? Also, have you noticed any patterns in when these episodes occur, such as specific times of day or types of activity? Patient: The chest pounding feels like a slight, rhythmic thumping in my chest, almost like my heart is beating a little harder than usual. It doesn't feel like a flutter or anything crazy—it's more of a mild sensation. It usually happens when I'm running, especially on humid days, but it doesn't happen every time. I don't really notice it at other times of the day or with other activities. Doctor: Could you describe if you've had any recent episodes of dizziness, faintness, or palpitations during or after these episodes? If so, how long do they last, and are they associated with any specific activities or triggers? Patient: No, I haven't had any recent episodes of dizziness, faintness, or palpitations during or after those moments. The chest pounding is mild and goes away on its own after a few minutes. I don't feel lightheaded or have any other symptoms with it. Doctor: How long does each episode of chest pounding typically last, and how frequently do these episodes occur during physical activity? Patient: Each episode of",
+        "atomic_decomposition": {
+          "original": "Onset: Occasional, mostly during morning runs",
+          "retained": [
+            {
+              "atom": "The onset is occasional.",
+              "citation": "or humid days, but it doesn't happen every time. I don't really notice it at other times of day or with other activities. Doctor: Have you had any recent changes in your medication regimen for hypertension or depression, or any new medications started recently? Patient: No, I haven't had any recent changes in my medication regimen for hypertension or depression, and I haven't started any new medications recently. I've been staying on the same medications as before, and they've been working pretty well for me. Doctor: Have you had any episodes of palpitations, lightheadedness, or syncope in the past, even if not related to the current symptoms? Patient: No, I don't recall having any episodes of palpitations, lightheadedness, or syncope in the past, even ones not related to the current symptoms. I've been pretty stable overall, and the only thing I've noticed recently is that mild chest pounding during runs on hot days, which goes away on its own.",
+              "entailment": 0.562,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I did not add any information that is not present in the statement. The statement does not specify what \"the onset\" refers to, so I did not replace the pronoun with a subject. If the statement had specified what \"the onset\" referred to, I would have replaced the pronoun with the subject.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 62 years old, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please provide your age, gender, and the reason for your visit today? Patient: I'm 62 years old, male, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please tell me if you have any current symptoms or concerns you'd like to discuss during this visit? Patient: I've been feeling relatively okay overall, but I did have a tough spring with all the pollen and allergies. It was also a stressful time with my daughter moving out for college. I've been managing my depression pretty well with my medication, but my hypertension has been a bit more of a struggle, especially on the weekends when I sometimes forget to take my meds. I also run 4 to 5 miles a day, and sometimes when it's humid, I feel a little short of breath and get a bit of a pounding in my chest, but it usually goes away. Doctor: Have you experienced any episodes of chest pain, dizziness, or syncope during or after your runs, especially in humid conditions? Patient: No, I haven't had any chest pain, dizziness, or fainting during or after my runs. The pounding in my chest usually goes away on its own, and I don't feel lightheaded or anything like that. It's more of a mild sensation, and I don't worry about it too much. Doctor: Could you provide details about your family history of cardiovascular disease, including any history of heart",
+              "entailment": 0.5732,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I did not add any information that is not present in the original statement, and each fact is self-contained and can stand alone as true or false.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 62 years old, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please provide your age, gender, and the reason for your visit today? Patient: I'm 62 years old, male, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please tell me if you have any current symptoms or concerns you'd like to discuss during this visit? Patient: I've been feeling relatively okay overall, but I did have a tough spring with all the pollen and allergies. It was also a stressful time with my daughter moving out for college. I've been managing my depression pretty well with my medication, but my hypertension has been a bit more of a struggle, especially on the weekends when I sometimes forget to take my meds. I also run 4 to 5 miles a day, and sometimes when it's humid, I feel a little short of breath and get a bit of a pounding in my chest, but it usually goes away. Doctor: Have you experienced any episodes of chest pain, dizziness, or syncope during or after your runs, especially in humid conditions? Patient: No, I haven't had any chest pain, dizziness, or fainting during or after my runs. The pounding in my chest usually goes away on its own, and I don't feel lightheaded or anything like that. It's more of a mild sensation, and I don't worry about it too much. Doctor: Could you provide details about your family history of cardiovascular disease, including any history of heart",
+              "entailment": 0.9902,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "Based on the rules, I decompose the statement into the following atomic facts:",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4561,
+              "depth": 2
+            },
+            {
+              "atom": "The onset occurs during morning runs.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4548,
+              "depth": 2
+            },
+            {
+              "atom": "The onset is mostly.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4543,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Duration: Typically lasts a few minutes, up to 5 minutes",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.4956,
+          "neutral": 0.2471,
+          "contradiction": 0.2573
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "they last, and are they associated with any specific activities or triggers? Patient: No, I haven't had any recent episodes of dizziness, faintness, or palpitations during or after those moments. The chest pounding is mild and goes away on its own after a few minutes. I don't feel lightheaded or have any other symptoms with it. Doctor: How long does each episode of chest pounding typically last, and how frequently do these episodes occur during physical activity? Patient: Each episode of chest pounding usually lasts a few minutes, maybe up to five or so, and it doesn't happen every time I run. It's more like once in a while, especially on the hotter, more humid days. Doctor: Has the patient experienced any episodes of chest pain, dizziness, or syncope during or after the chest pounding episodes? If so, please describe the nature, duration, and any associated symptoms. Patient: No, I haven't experienced any chest pain, dizziness, or syncope during or after the chest pounding episodes. The pounding is mild and goes away on its own after a few minutes. I don't feel lightheaded or have any other symptoms with it. Doctor: Have you noticed any changes in the frequency or intensity of the chest pounding episodes over the past few months? Are there any specific activities or times of day when the episodes are more likely to occur? Patient: No, I haven't noticed any changes in the frequency or intensity of the chest pounding over the past few months. It still happens occasionally, mostly when I'm running on hot or humid days, but it doesn't happen every time. I don't really notice it at other times of day or with other activities. Doctor: Have you had any recent changes in your medication regimen for hypertension or depression, or any new medications started recently? Patient: No, I haven't had any recent changes in my medication regimen for hypertension or depression, and I haven't started any new medications recently. I've been staying on the same medications as before, and they",
+        "atomic_decomposition": {
+          "original": "Duration: Typically lasts a few minutes, up to 5 minutes",
+          "retained": [
+            {
+              "atom": "Duration typically lasts a few minutes.",
+              "citation": "they last, and are they associated with any specific activities or triggers? Patient: No, I haven't had any recent episodes of dizziness, faintness, or palpitations during or after those moments. The chest pounding is mild and goes away on its own after a few minutes. I don't feel lightheaded or have any other symptoms with it. Doctor: How long does each episode of chest pounding typically last, and how frequently do these episodes occur during physical activity? Patient: Each episode of chest pounding usually lasts a few minutes, maybe up to five or so, and it doesn't happen every time I run. It's more like once in a while, especially on the hotter, more humid days. Doctor: Has the patient experienced any episodes of chest pain, dizziness, or syncope during or after the chest pounding episodes? If so, please describe the nature, duration, and any associated symptoms. Patient: No, I haven't experienced any chest pain, dizziness, or syncope during or after the chest pounding episodes. The pounding is mild and goes away on its own after a few minutes. I don't feel lightheaded or have any other symptoms with it. Doctor: Have you noticed any changes in the frequency or intensity of the chest pounding episodes over the past few months? Are there any specific activities or times of day when the episodes are more likely to occur? Patient: No, I haven't noticed any changes in the frequency or intensity of the chest pounding over the past few months. It still happens occasionally, mostly when I'm running on hot or humid days, but it doesn't happen every time. I don't really notice it at other times of day or with other activities. Doctor: Have you had any recent changes in your medication regimen for hypertension or depression, or any new medications started recently? Patient: No, I haven't had any recent changes in my medication regimen for hypertension or depression, and I haven't started any new medications recently. I've been staying on the same medications as before, and they",
+              "entailment": 0.5259,
+              "depth": 1
+            },
+            {
+              "atom": "Duration lasts up to 5 minutes.",
+              "citation": "they last, and are they associated with any specific activities or triggers? Patient: No, I haven't had any recent episodes of dizziness, faintness, or palpitations during or after those moments. The chest pounding is mild and goes away on its own after a few minutes. I don't feel lightheaded or have any other symptoms with it. Doctor: How long does each episode of chest pounding typically last, and how frequently do these episodes occur during physical activity? Patient: Each episode of chest pounding usually lasts a few minutes, maybe up to five or so, and it doesn't happen every time I run. It's more like once in a while, especially on the hotter, more humid days. Doctor: Has the patient experienced any episodes of chest pain, dizziness, or syncope during or after the chest pounding episodes? If so, please describe the nature, duration, and any associated symptoms. Patient: No, I haven't experienced any chest pain, dizziness, or syncope during or after the chest pounding episodes. The pounding is mild and goes away on its own after a few minutes. I don't feel lightheaded or have any other symptoms with it. Doctor: Have you noticed any changes in the frequency or intensity of the chest pounding episodes over the past few months? Are there any specific activities or times of day when the episodes are more likely to occur? Patient: No, I haven't noticed any changes in the frequency or intensity of the chest pounding over the past few months. It still happens occasionally, mostly when I'm running on hot or humid days, but it doesn't happen every time. I don't really notice it at other times of day or with other activities. Doctor: Have you had any recent changes in your medication regimen for hypertension or depression, or any new medications started recently? Patient: No, I haven't had any recent changes in my medication regimen for hypertension or depression, and I haven't started any new medications recently. I've been staying on the same medications as before, and they",
+              "entailment": 0.5107,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've split the statement into two separate facts, each describing a different aspect of the duration. I've also replaced the pronoun \"it\" with the subject \"Duration\" to make each fact self-contained.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 62 years old, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please provide your age, gender, and the reason for your visit today? Patient: I'm 62 years old, male, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please tell me if you have any current symptoms or concerns you'd like to discuss during this visit? Patient: I've been feeling relatively okay overall, but I did have a tough spring with all the pollen and allergies. It was also a stressful time with my daughter moving out for college. I've been managing my depression pretty well with my medication, but my hypertension has been a bit more of a struggle, especially on the weekends when I sometimes forget to take my meds. I also run 4 to 5 miles a day, and sometimes when it's humid, I feel a little short of breath and get a bit of a pounding in my chest, but it usually goes away. Doctor: Have you experienced any episodes of chest pain, dizziness, or syncope during or after your runs, especially in humid conditions? Patient: No, I haven't had any chest pain, dizziness, or fainting during or after my runs. The pounding in my chest usually goes away on its own, and I don't feel lightheaded or anything like that. It's more of a mild sensation, and I don't worry about it too much. Doctor: Could you provide details about your family history of cardiovascular disease, including any history of heart",
+              "entailment": 0.792,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "Frequency: Occasional, mostly on hot or humid days",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.5239,
+          "neutral": 0.2529,
+          "contradiction": 0.223
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "or humid days, but it doesn't happen every time. I don't really notice it at other times of day or with other activities. Doctor: Have you had any recent changes in your medication regimen for hypertension or depression, or any new medications started recently? Patient: No, I haven't had any recent changes in my medication regimen for hypertension or depression, and I haven't started any new medications recently. I've been staying on the same medications as before, and they've been working pretty well for me. Doctor: Have you had any episodes of palpitations, lightheadedness, or syncope in the past, even if not related to the current symptoms? Patient: No, I don't recall having any episodes of palpitations, lightheadedness, or syncope in the past, even ones not related to the current symptoms. I've been pretty stable overall, and the only thing I've noticed recently is that mild chest pounding during runs on hot days, which goes away on its own.",
+        "atomic_decomposition": {
+          "original": "Frequency: Occasional, mostly on hot or humid days",
+          "retained": [
+            {
+              "atom": "The frequency is occasional.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 62 years old, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please provide your age, gender, and the reason for your visit today? Patient: I'm 62 years old, male, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please tell me if you have any current symptoms or concerns you'd like to discuss during this visit? Patient: I've been feeling relatively okay overall, but I did have a tough spring with all the pollen and allergies. It was also a stressful time with my daughter moving out for college. I've been managing my depression pretty well with my medication, but my hypertension has been a bit more of a struggle, especially on the weekends when I sometimes forget to take my meds. I also run 4 to 5 miles a day, and sometimes when it's humid, I feel a little short of breath and get a bit of a pounding in my chest, but it usually goes away. Doctor: Have you experienced any episodes of chest pain, dizziness, or syncope during or after your runs, especially in humid conditions? Patient: No, I haven't had any chest pain, dizziness, or fainting during or after my runs. The pounding in my chest usually goes away on its own, and I don't feel lightheaded or anything like that. It's more of a mild sensation, and I don't worry about it too much. Doctor: Could you provide details about your family history of cardiovascular disease, including any history of heart",
+              "entailment": 0.9771,
+              "depth": 1
+            },
+            {
+              "atom": "The frequency is mostly on hot days.",
+              "citation": "or humid days, but it doesn't happen every time. I don't really notice it at other times of day or with other activities. Doctor: Have you had any recent changes in your medication regimen for hypertension or depression, or any new medications started recently? Patient: No, I haven't had any recent changes in my medication regimen for hypertension or depression, and I haven't started any new medications recently. I've been staying on the same medications as before, and they've been working pretty well for me. Doctor: Have you had any episodes of palpitations, lightheadedness, or syncope in the past, even if not related to the current symptoms? Patient: No, I don't recall having any episodes of palpitations, lightheadedness, or syncope in the past, even ones not related to the current symptoms. I've been pretty stable overall, and the only thing I've noticed recently is that mild chest pounding during runs on hot days, which goes away on its own.",
+              "entailment": 0.5249,
+              "depth": 1
+            },
+            {
+              "atom": "Note that there is only one proposition in this statement, so it can be output as a single fact.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 62 years old, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please provide your age, gender, and the reason for your visit today? Patient: I'm 62 years old, male, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please tell me if you have any current symptoms or concerns you'd like to discuss during this visit? Patient: I've been feeling relatively okay overall, but I did have a tough spring with all the pollen and allergies. It was also a stressful time with my daughter moving out for college. I've been managing my depression pretty well with my medication, but my hypertension has been a bit more of a struggle, especially on the weekends when I sometimes forget to take my meds. I also run 4 to 5 miles a day, and sometimes when it's humid, I feel a little short of breath and get a bit of a pounding in my chest, but it usually goes away. Doctor: Have you experienced any episodes of chest pain, dizziness, or syncope during or after your runs, especially in humid conditions? Patient: No, I haven't had any chest pain, dizziness, or fainting during or after my runs. The pounding in my chest usually goes away on its own, and I don't feel lightheaded or anything like that. It's more of a mild sensation, and I don't worry about it too much. Doctor: Could you provide details about your family history of cardiovascular disease, including any history of heart",
+              "entailment": 0.96,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I've broken down the statement into three separate facts, each describing a different aspect of the frequency.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 62 years old, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please provide your age, gender, and the reason for your visit today? Patient: I'm 62 years old, male, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please tell me if you have any current symptoms or concerns you'd like to discuss during this visit? Patient: I've been feeling relatively okay overall, but I did have a tough spring with all the pollen and allergies. It was also a stressful time with my daughter moving out for college. I've been managing my depression pretty well with my medication, but my hypertension has been a bit more of a struggle, especially on the weekends when I sometimes forget to take my meds. I also run 4 to 5 miles a day, and sometimes when it's humid, I feel a little short of breath and get a bit of a pounding in my chest, but it usually goes away. Doctor: Have you experienced any episodes of chest pain, dizziness, or syncope during or after your runs, especially in humid conditions? Patient: No, I haven't had any chest pain, dizziness, or fainting during or after my runs. The pounding in my chest usually goes away on its own, and I don't feel lightheaded or anything like that. It's more of a mild sensation, and I don't worry about it too much. Doctor: Could you provide details about your family history of cardiovascular disease, including any history of heart",
+              "entailment": 0.998,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "The frequency is mostly on humid days.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4795,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Associated symptoms: None reported",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9014,
+          "neutral": 0.0723,
+          "contradiction": 0.0264
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 62 years old, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please provide your age, gender, and the reason for your visit today? Patient: I'm 62 years old, male, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please tell me if you have any current symptoms or concerns you'd like to discuss during this visit? Patient: I've been feeling relatively okay overall, but I did have a tough spring with all the pollen and allergies. It was also a stressful time with my daughter moving out for college. I've been managing my depression pretty well with my medication, but my hypertension has been a bit more of a struggle, especially on the weekends when I sometimes forget to take my meds. I also run 4 to 5 miles a day, and sometimes when it's humid, I feel a little short of breath and get a bit of a pounding in my chest, but it usually goes away. Doctor: Have you experienced any episodes of chest pain, dizziness, or syncope during or after your runs, especially in humid conditions? Patient: No, I haven't had any chest pain, dizziness, or fainting during or after my runs. The pounding in my chest usually goes away on its own, and I don't feel lightheaded or anything like that. It's more of a mild sensation, and I don't worry about it too much. Doctor: Could you provide details about your family history of cardiovascular disease, including any history of heart",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      }
+    ],
+    "objective": [
+      {
+        "unit": "Physical Examination & Vitals: None mentioned",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.4551,
+          "neutral": 0.2654,
+          "contradiction": 0.2795
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "they last, and are they associated with any specific activities or triggers? Patient: No, I haven't had any recent episodes of dizziness, faintness, or palpitations during or after those moments. The chest pounding is mild and goes away on its own after a few minutes. I don't feel lightheaded or have any other symptoms with it. Doctor: How long does each episode of chest pounding typically last, and how frequently do these episodes occur during physical activity? Patient: Each episode of chest pounding usually lasts a few minutes, maybe up to five or so, and it doesn't happen every time I run. It's more like once in a while, especially on the hotter, more humid days. Doctor: Has the patient experienced any episodes of chest pain, dizziness, or syncope during or after the chest pounding episodes? If so, please describe the nature, duration, and any associated symptoms. Patient: No, I haven't experienced any chest pain, dizziness, or syncope during or after the chest pounding episodes. The pounding is mild and goes away on its own after a few minutes. I don't feel lightheaded or have any other symptoms with it. Doctor: Have you noticed any changes in the frequency or intensity of the chest pounding episodes over the past few months? Are there any specific activities or times of day when the episodes are more likely to occur? Patient: No, I haven't noticed any changes in the frequency or intensity of the chest pounding over the past few months. It still happens occasionally, mostly when I'm running on hot or humid days, but it doesn't happen every time. I don't really notice it at other times of day or with other activities. Doctor: Have you had any recent changes in your medication regimen for hypertension or depression, or any new medications started recently? Patient: No, I haven't had any recent changes in my medication regimen for hypertension or depression, and I haven't started any new medications recently. I've been staying on the same medications as before, and they",
+        "atomic_decomposition": {
+          "original": "Physical Examination & Vitals: None mentioned",
+          "retained": [
+            {
+              "atom": "Physical Examination is not mentioned.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 62 years old, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please provide your age, gender, and the reason for your visit today? Patient: I'm 62 years old, male, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please tell me if you have any current symptoms or concerns you'd like to discuss during this visit? Patient: I've been feeling relatively okay overall, but I did have a tough spring with all the pollen and allergies. It was also a stressful time with my daughter moving out for college. I've been managing my depression pretty well with my medication, but my hypertension has been a bit more of a struggle, especially on the weekends when I sometimes forget to take my meds. I also run 4 to 5 miles a day, and sometimes when it's humid, I feel a little short of breath and get a bit of a pounding in my chest, but it usually goes away. Doctor: Have you experienced any episodes of chest pain, dizziness, or syncope during or after your runs, especially in humid conditions? Patient: No, I haven't had any chest pain, dizziness, or fainting during or after my runs. The pounding in my chest usually goes away on its own, and I don't feel lightheaded or anything like that. It's more of a mild sensation, and I don't worry about it too much. Doctor: Could you provide details about your family history of cardiovascular disease, including any history of heart",
+              "entailment": 0.8867,
+              "depth": 1
+            },
+            {
+              "atom": "Vitals are not mentioned.",
+              "citation": "or humid days, but it doesn't happen every time. I don't really notice it at other times of day or with other activities. Doctor: Have you had any recent changes in your medication regimen for hypertension or depression, or any new medications started recently? Patient: No, I haven't had any recent changes in my medication regimen for hypertension or depression, and I haven't started any new medications recently. I've been staying on the same medications as before, and they've been working pretty well for me. Doctor: Have you had any episodes of palpitations, lightheadedness, or syncope in the past, even if not related to the current symptoms? Patient: No, I don't recall having any episodes of palpitations, lightheadedness, or syncope in the past, even ones not related to the current symptoms. I've been pretty stable overall, and the only thing I've noticed recently is that mild chest pounding during runs on hot days, which goes away on its own.",
+              "entailment": 0.6646,
+              "depth": 1
+            },
+            {
+              "atom": "Based on the rules provided, I would decompose the statement as follows:",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 62 years old, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please provide your age, gender, and the reason for your visit today? Patient: I'm 62 years old, male, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please tell me if you have any current symptoms or concerns you'd like to discuss during this visit? Patient: I've been feeling relatively okay overall, but I did have a tough spring with all the pollen and allergies. It was also a stressful time with my daughter moving out for college. I've been managing my depression pretty well with my medication, but my hypertension has been a bit more of a struggle, especially on the weekends when I sometimes forget to take my meds. I also run 4 to 5 miles a day, and sometimes when it's humid, I feel a little short of breath and get a bit of a pounding in my chest, but it usually goes away. Doctor: Have you experienced any episodes of chest pain, dizziness, or syncope during or after your runs, especially in humid conditions? Patient: No, I haven't had any chest pain, dizziness, or fainting during or after my runs. The pounding in my chest usually goes away on its own, and I don't feel lightheaded or anything like that. It's more of a mild sensation, and I don't worry about it too much. Doctor: Could you provide details about your family history of cardiovascular disease, including any history of heart",
+              "entailment": 0.9761,
+              "depth": 2
+            },
+            {
+              "atom": "There is no mention of physical examination.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 62 years old, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please provide your age, gender, and the reason for your visit today? Patient: I'm 62 years old, male, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please tell me if you have any current symptoms or concerns you'd like to discuss during this visit? Patient: I've been feeling relatively okay overall, but I did have a tough spring with all the pollen and allergies. It was also a stressful time with my daughter moving out for college. I've been managing my depression pretty well with my medication, but my hypertension has been a bit more of a struggle, especially on the weekends when I sometimes forget to take my meds. I also run 4 to 5 miles a day, and sometimes when it's humid, I feel a little short of breath and get a bit of a pounding in my chest, but it usually goes away. Doctor: Have you experienced any episodes of chest pain, dizziness, or syncope during or after your runs, especially in humid conditions? Patient: No, I haven't had any chest pain, dizziness, or fainting during or after my runs. The pounding in my chest usually goes away on its own, and I don't feel lightheaded or anything like that. It's more of a mild sensation, and I don't worry about it too much. Doctor: Could you provide details about your family history of cardiovascular disease, including any history of heart",
+              "entailment": 0.9663,
+              "depth": 2
+            },
+            {
+              "atom": "This is the only atomic fact that can be extracted from the statement, as it is a single proposition stating the absence of information about physical examination or vitals.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 62 years old, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please provide your age, gender, and the reason for your visit today? Patient: I'm 62 years old, male, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please tell me if you have any current symptoms or concerns you'd like to discuss during this visit? Patient: I've been feeling relatively okay overall, but I did have a tough spring with all the pollen and allergies. It was also a stressful time with my daughter moving out for college. I've been managing my depression pretty well with my medication, but my hypertension has been a bit more of a struggle, especially on the weekends when I sometimes forget to take my meds. I also run 4 to 5 miles a day, and sometimes when it's humid, I feel a little short of breath and get a bit of a pounding in my chest, but it usually goes away. Doctor: Have you experienced any episodes of chest pain, dizziness, or syncope during or after your runs, especially in humid conditions? Patient: No, I haven't had any chest pain, dizziness, or fainting during or after my runs. The pounding in my chest usually goes away on its own, and I don't feel lightheaded or anything like that. It's more of a mild sensation, and I don't worry about it too much. Doctor: Could you provide details about your family history of cardiovascular disease, including any history of heart",
+              "entailment": 0.9077,
+              "depth": 2
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "Please provide the statement you'd like me to decompose into atomic facts. I'll follow the rules and output the resulting atomic facts.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4595,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Diagnostic Results & Labs: None mentioned",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.4531,
+          "neutral": 0.2683,
+          "contradiction": 0.2786
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "they last, and are they associated with any specific activities or triggers? Patient: No, I haven't had any recent episodes of dizziness, faintness, or palpitations during or after those moments. The chest pounding is mild and goes away on its own after a few minutes. I don't feel lightheaded or have any other symptoms with it. Doctor: How long does each episode of chest pounding typically last, and how frequently do these episodes occur during physical activity? Patient: Each episode of chest pounding usually lasts a few minutes, maybe up to five or so, and it doesn't happen every time I run. It's more like once in a while, especially on the hotter, more humid days. Doctor: Has the patient experienced any episodes of chest pain, dizziness, or syncope during or after the chest pounding episodes? If so, please describe the nature, duration, and any associated symptoms. Patient: No, I haven't experienced any chest pain, dizziness, or syncope during or after the chest pounding episodes. The pounding is mild and goes away on its own after a few minutes. I don't feel lightheaded or have any other symptoms with it. Doctor: Have you noticed any changes in the frequency or intensity of the chest pounding episodes over the past few months? Are there any specific activities or times of day when the episodes are more likely to occur? Patient: No, I haven't noticed any changes in the frequency or intensity of the chest pounding over the past few months. It still happens occasionally, mostly when I'm running on hot or humid days, but it doesn't happen every time. I don't really notice it at other times of day or with other activities. Doctor: Have you had any recent changes in your medication regimen for hypertension or depression, or any new medications started recently? Patient: No, I haven't had any recent changes in my medication regimen for hypertension or depression, and I haven't started any new medications recently. I've been staying on the same medications as before, and they",
+        "atomic_decomposition": {
+          "original": "Diagnostic Results & Labs: None mentioned",
+          "retained": [
+            {
+              "atom": "Diagnostic Results are not mentioned.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 62 years old, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please provide your age, gender, and the reason for your visit today? Patient: I'm 62 years old, male, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update. Doctor: Could you please tell me if you have any current symptoms or concerns you'd like to discuss during this visit? Patient: I've been feeling relatively okay overall, but I did have a tough spring with all the pollen and allergies. It was also a stressful time with my daughter moving out for college. I've been managing my depression pretty well with my medication, but my hypertension has been a bit more of a struggle, especially on the weekends when I sometimes forget to take my meds. I also run 4 to 5 miles a day, and sometimes when it's humid, I feel a little short of breath and get a bit of a pounding in my chest, but it usually goes away. Doctor: Have you experienced any episodes of chest pain, dizziness, or syncope during or after your runs, especially in humid conditions? Patient: No, I haven't had any chest pain, dizziness, or fainting during or after my runs. The pounding in my chest usually goes away on its own, and I don't feel lightheaded or anything like that. It's more of a mild sensation, and I don't worry about it too much. Doctor: Could you provide details about your family history of cardiovascular disease, including any history of heart",
+              "entailment": 0.9951,
+              "depth": 1
+            },
+            {
+              "atom": "Labs are not mentioned.",
+              "citation": "or humid days, but it doesn't happen every time. I don't really notice it at other times of day or with other activities. Doctor: Have you had any recent changes in your medication regimen for hypertension or depression, or any new medications started recently? Patient: No, I haven't had any recent changes in my medication regimen for hypertension or depression, and I haven't started any new medications recently. I've been staying on the same medications as before, and they've been working pretty well for me. Doctor: Have you had any episodes of palpitations, lightheadedness, or syncope in the past, even if not related to the current symptoms? Patient: No, I don't recall having any episodes of palpitations, lightheadedness, or syncope in the past, even ones not related to the current symptoms. I've been pretty stable overall, and the only thing I've noticed recently is that mild chest pounding during runs on hot days, which goes away on its own.",
+              "entailment": 0.5259,
+              "depth": 1
+            },
+            {
+              "atom": "The statement does not contain any specific findings or information.",
+              "citation": "or humid days, but it doesn't happen every time. I don't really notice it at other times of day or with other activities. Doctor: Have you had any recent changes in your medication regimen for hypertension or depression, or any new medications started recently? Patient: No, I haven't had any recent changes in my medication regimen for hypertension or depression, and I haven't started any new medications recently. I've been staying on the same medications as before, and they've been working pretty well for me. Doctor: Have you had any episodes of palpitations, lightheadedness, or syncope in the past, even if not related to the current symptoms? Patient: No, I don't recall having any episodes of palpitations, lightheadedness, or syncope in the past, even ones not related to the current symptoms. I've been pretty stable overall, and the only thing I've noticed recently is that mild chest pounding during runs on hot days, which goes away on its own.",
+              "entailment": 0.5674,
+              "depth": 2
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "Please provide the statement you'd like me to decompose into atomic facts. I'll follow the rules and output the resulting atomic facts.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4595,
+              "depth": 2
+            },
+            {
+              "atom": "Statement: Note that the statement is very concise and does not contain any specific findings or information, so the resulting atomic facts are also quite simple.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4482,
+              "depth": 2
+            },
+            {
+              "atom": "Note is made.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4521,
+              "depth": 2
+            },
+            {
+              "atom": "The statement is very concise.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4502,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      }
+    ]
+  },
+  "stage2_stats": {
+    "decision_counts": {
+      "uncertain": 6,
+      "faithful": 2
+    },
+    "num_claims": 8,
+    "num_kept": 8,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_so": {
+    "subjective": "The patient has a Chief Complaint.\nNote that I did not add any information that is not present in the original statement. I also replaced the pronoun \"a\" with the subject \"The patient\" to make each fact self-contained.\nThe patient is managing depression.\nThe patient is managing hypertension.\nSymptoms: Mild chest pounding during runs on hot or humid days, shortness of breath\nThe onset is occasional.\nNote that I did not add any information that is not present in the statement. The statement does not specify what \"the onset\" refers to, so I did not replace the pronoun with a subject. If the statement had specified what \"the onset\" referred to, I would have replaced the pronoun with the subject.\nNote that I did not add any information that is not present in the original statement, and each fact is self-contained and can stand alone as true or false.\nDuration typically lasts a few minutes.\nDuration lasts up to 5 minutes.\nNote that I've split the statement into two separate facts, each describing a different aspect of the duration. I've also replaced the pronoun \"it\" with the subject \"Duration\" to make each fact self-contained.\nThe frequency is occasional.\nThe frequency is mostly on hot days.\nNote that there is only one proposition in this statement, so it can be output as a single fact.\nNote that I've broken down the statement into three separate facts, each describing a different aspect of the frequency.\nI've been managing my depression and hypertension, and I had a lobectomy a few years back.\nAssociated symptoms: None reported",
+    "objective": "Physical Examination is not mentioned.\nVitals are not mentioned.\nBased on the rules provided, I would decompose the statement as follows:\nThere is no mention of physical examination.\nThis is the only atomic fact that can be extracted from the statement, as it is a single proposition stating the absence of information about physical examination or vitals.\nDiagnostic Results are not mentioned.\nLabs are not mentioned.\nThe statement does not contain any specific findings or information."
+  },
+  "stage3_key_sentences": [
+    "I've been managing my depression and hypertension, and I had a lobectomy a few years back.",
+    "Doctor: Could you please provide your age, gender, and the reason for your visit today?"
+  ],
+  "stage3_summary_key_phrases": [
+    "pronoun subject duration",
+    "statement specified onset",
+    "frequency associated symptoms",
+    "onset occasional",
+    "contained frequency",
+    "subject statement",
+    "shortness breath onset",
+    "self contained patient",
+    "reported physical examination",
+    "separate facts describing"
+  ],
+  "stage3_coverage_scores": [
+    {
+      "sentence": "I've been managing my depression and hypertension, and I had a lobectomy a few years back.",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "I've been managing my depression and hypertension, and I had a lobectomy a few years back.",
+      "score": 0.2232,
+      "is_missing": true,
+      "action": "Added: Missing clinical dialogue detail (coverage < 0.40); inserted via GPT-2 fluency optimization."
+    },
+    {
+      "sentence": "Doctor: Could you please provide your age, gender, and the reason for your visit today?",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "Doctor: Could you please provide your age, gender, and the reason for your visit today?",
+      "score": 0.4028,
+      "is_missing": false,
+      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I've been managing my depression and hypertension, and I had a lobectomy a few years back.",
+      "statement": "I've been managing my depression and hypertension, and I had a lobectomy a few years back.",
+      "coverage": 0.2232,
+      "status": "added",
+      "reason": "coverage <= cov_min (uMedSum adds the dialogue sentence verbatim)",
+      "insertion": {
+        "section": "subjective",
+        "line_index": 15,
+        "perplexity": 14.51
+      }
+    }
+  ],
+  "stage3_added": [
+    {
+      "statement": "I've been managing my depression and hypertension, and I had a lobectomy a few years back.",
+      "evidence": "I've been managing my depression and hypertension, and I had a lobectomy a few years back.",
+      "section": "subjective",
+      "candidate": "I've been managing my depression and hypertension, and I had a lobectomy a few years back."
+    }
+  ],
+  "stage3_stats": {
+    "num_key_sentences": 2,
+    "num_flagged": 1,
+    "num_added": 1
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "section": "subjective",
+        "claim": "The Chief Complaint is Annual exam.",
+        "entailment": 0.449,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Chief Complaint: Annual exam, managing depression and hypertension"
+      },
+      {
+        "section": "subjective",
+        "claim": "Based on the rules, I decompose the statement into the following atomic facts:",
+        "entailment": 0.4561,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Onset: Occasional, mostly during morning runs"
+      },
+      {
+        "section": "subjective",
+        "claim": "The onset occurs during morning runs.",
+        "entailment": 0.4548,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Onset: Occasional, mostly during morning runs"
+      },
+      {
+        "section": "subjective",
+        "claim": "The onset is mostly.",
+        "entailment": 0.4543,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Onset: Occasional, mostly during morning runs"
+      },
+      {
+        "section": "subjective",
+        "claim": "The frequency is mostly on humid days.",
+        "entailment": 0.4795,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Frequency: Occasional, mostly on hot or humid days"
+      },
+      {
+        "section": "objective",
+        "claim": "Please provide the statement you'd like me to decompose into atomic facts. I'll follow the rules and output the resulting atomic facts.",
+        "entailment": 0.4595,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: None mentioned"
+      },
+      {
+        "section": "objective",
+        "claim": "Please provide the statement you'd like me to decompose into atomic facts. I'll follow the rules and output the resulting atomic facts.",
+        "entailment": 0.4595,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Diagnostic Results & Labs: None mentioned"
+      },
+      {
+        "section": "objective",
+        "claim": "Statement: Note that the statement is very concise and does not contain any specific findings or information, so the resulting atomic facts are also quite simple.",
+        "entailment": 0.4482,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Diagnostic Results & Labs: None mentioned"
+      },
+      {
+        "section": "objective",
+        "claim": "Note is made.",
+        "entailment": 0.4521,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Diagnostic Results & Labs: None mentioned"
+      },
+      {
+        "section": "objective",
+        "claim": "The statement is very concise.",
+        "entailment": 0.4502,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Diagnostic Results & Labs: None mentioned"
+      }
+    ]
+  },
+  "final_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** The patient presents with mild chest pounding during runs on hot or humid days, which is a new symptom. The patient's hypertension and depression are well-controlled. The patient's family history of hypertension is unclear, but there is no known history of cardiovascular disease.\n* **Treatment Plan, Medications, and Follow-up:** The patient will continue to manage his hypertension and depression with his current medications. The patient will be advised to monitor his symptoms and report any changes or worsening of symptoms. A follow-up appointment will be scheduled in 6-8 weeks to reassess the patient's symptoms and adjust his treatment plan as needed.\n\nPlease note that this is a summary of the patient's visit and does not include any specific diagnoses or treatment plans. The actual SOAP note may vary depending on the patient's specific condition and the provider's clinical judgment."
+  },
+  "ap_unchanged": true,
+  "thresholds": {
+    "Te": 0.9,
+    "Tc": 0.8,
+    "Ta": 0.5,
+    "cov_min": 0.4,
+    "top_m": 2,
+    "fix_header_bug": true
+  },
+  "models": {
+    "llm": "llama3:8b-instruct-q8_0",
+    "nli": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+    "embedder": "all-MiniLM-L6-v2",
+    "ppl": "gpt2"
+  },
+  "status": "success",
+  "seconds": 17.5,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 62 years old, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update.\nDoctor: Could you please provide your age, gender, and the reason for your visit today?\nPatient: I'm 62 years old, male, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update.\nDoctor: Could you please tell me if you have any current symptoms or concerns you'd like to discuss during this visit?\nPatient: I've been feeling relatively okay overall, but I did have a tough spring with all the pollen and allergies. It was also a stressful time with my daughter moving out for college. I've been managing my depression pretty well with my medication, but my hypertension has been a bit more of a struggle, especially on the weekends when I sometimes forget to take my meds. I also run 4 to 5 miles a day, and sometimes when it's humid, I feel a little short of breath and get a bit of a pounding in my chest, but it usually goes away.\nDoctor: Have you experienced any episodes of chest pain, dizziness, or syncope during or after your runs, especially in humid conditions?\nPatient: No, I haven't had any chest pain, dizziness, or fainting during or after my runs. The pounding in my chest usually goes away on its own, and I don't feel lightheaded or anything like that. It's more of a mild sensation, and I don't worry about it too much.\nDoctor: Could you provide details about your family history of cardiovascular disease, including any history of heart attacks, strokes, or hypertension in first-degree relatives?\nPatient: I don't have specific information about my family history of cardiovascular disease. I know I have a history of hypertension, but I'm not sure about my relatives' medical histories. I don't think it's been discussed much with me before.\nDoctor: Could you provide more details about your family history of cardiovascular disease, including any known conditions such as hypertension, coronary artery disease, or heart failure in first-degree relatives?\nPatient: I don't have specific information about my family history of cardiovascular disease. I know I have a history of hypertension, but I'm not sure about my relatives' medical histories. I don't think it's been discussed much with me before.\nDoctor: Could you provide more details about the duration and frequency of your shortness of breath and chest pounding during physical activity? Additionally, have you noticed any specific triggers or patterns associated with these symptoms?\nPatient: The shortness of breath and chest pounding usually happen when it's humid, especially during my morning runs. It doesn't happen every time, but when it does, it's more noticeable. It usually goes away on its own after a few minutes, and I don't really have any specific triggers other than the weather and exertion.\nDoctor: Has the patient experienced any episodes of syncope, palpitations, or chest pain during or after physical activity? If so, please describe the nature, duration, and any associated symptoms.\nPatient: No, I haven't experienced any episodes of syncope, palpitations, or chest pain during or after physical activity. The pounding in my chest is mild and usually goes away on its own after a few minutes. I don't feel lightheaded or have any other symptoms with it.\nDoctor: Could you describe the exact nature of the chest pounding you feel? Does it feel like a rapid heartbeat, a fluttering sensation, or something else? Also, have you noticed any patterns in when these episodes occur, such as specific times of day or types of activity?\nPatient: The chest pounding feels like a slight, rhythmic thumping in my chest, almost like my heart is beating a little harder than usual. It doesn't feel like a flutter or anything crazy—it's more of a mild sensation. It usually happens when I'm running, especially on humid days, but it doesn't happen every time. I don't really notice it at other times of the day or with other activities.\nDoctor: Could you describe if you've had any recent episodes of dizziness, faintness, or palpitations during or after these episodes? If so, how long do they last, and are they associated with any specific activities or triggers?\nPatient: No, I haven't had any recent episodes of dizziness, faintness, or palpitations during or after those moments. The chest pounding is mild and goes away on its own after a few minutes. I don't feel lightheaded or have any other symptoms with it.\nDoctor: How long does each episode of chest pounding typically last, and how frequently do these episodes occur during physical activity?\nPatient: Each episode of chest pounding usually lasts a few minutes, maybe up to five or so, and it doesn't happen every time I run. It's more like once in a while, especially on the hotter, more humid days.\nDoctor: Has the patient experienced any episodes of chest pain, dizziness, or syncope during or after the chest pounding episodes? If so, please describe the nature, duration, and any associated symptoms.\nPatient: No, I haven't experienced any chest pain, dizziness, or syncope during or after the chest pounding episodes. The pounding is mild and goes away on its own after a few minutes. I don't feel lightheaded or have any other symptoms with it.\nDoctor: Have you noticed any changes in the frequency or intensity of the chest pounding episodes over the past few months? Are there any specific activities or times of day when the episodes are more likely to occur?\nPatient: No, I haven't noticed any changes in the frequency or intensity of the chest pounding over the past few months. It still happens occasionally, mostly when I'm running on hot or humid days, but it doesn't happen every time. I don't really notice it at other times of day or with other activities.\nDoctor: Have you had any recent changes in your medication regimen for hypertension or depression, or any new medications started recently?\nPatient: No, I haven't had any recent changes in my medication regimen for hypertension or depression, and I haven't started any new medications recently. I've been staying on the same medications as before, and they've been working pretty well for me.\nDoctor: Have you had any episodes of palpitations, lightheadedness, or syncope in the past, even if not related to the current symptoms?\nPatient: No, I don't recall having any episodes of palpitations, lightheadedness, or syncope in the past, even ones not related to the current symptoms. I've been pretty stable overall, and the only thing I've noticed recently is that mild chest pounding during runs on hot days, which goes away on its own.",
+  "reference_so": {
+    "subjective": "Basic information: 62-year-old male presenting for annual exam.\n\nHistory of present illness: The patient reports experiencing shortness of breath and chest pounding during physical activity, particularly in humid conditions. These symptoms are described as intermittent and usually resolve on their own. He also mentions a tough spring with pollen allergies and stress related to his daughter moving out for college. He has been managing his depression with medication, though he experienced a stressful period and has been having difficulty adhering to his hypertension medications on weekends. The symptoms usually happen when it's humid, especially during his morning runs. It doesn't happen every time, but when it does, it's more noticeable. It usually goes away on its own after a few minutes, and he doesn't really have any specific triggers other than the weather and exertion. The patient denies experiencing syncope, palpitations, or chest pain during or after physical activity. The pounding in his chest is mild and usually goes away on its own after a few minutes. He does not feel lightheaded or have any other symptoms with it. The chest pounding feels like a slight, rhythmic thumping in his chest, almost like my heart is beating a little harder than usual. It doesn't feel like a flutter or anything crazy—it's more of a mild sensation. It usually happens when I'm running, especially on humid days, but it doesn't happen every time. I don't really notice it at other times of the day or with other activities. Each episode of chest pounding usually lasts a few minutes, maybe up to five or so, and it doesn't happen every time I run. It's more like once in a while, especially on the hotter, more humid days. The patient has not experienced any episodes of chest pain, dizziness, or syncope during or after the chest pounding episodes. The patient has not experienced any changes in the frequency or intensity of the chest pounding over the past few months. It still happens occasionally, mostly when running on hot or humid days, but it doesn't happen every time. The patient does not notice it at other times of day or with other activities.\n\nPast history: Depression, hypertension, lobectomy. Family history of cardiovascular disease: Unknown (patient states no specific information available).",
+    "objective": "Physical examination: Vital signs: BP 138/86 mmHg, HR 78 bpm, RR 16, Temp 98.6°F, SpO2 98% on room air. Cardiac exam: S1 and S2 normal, no S3 or S4, no murmurs. Respiratory exam: clear to auscultation bilaterally. No peripheral edema.\n\nInvestigations: ECG: sinus rhythm, normal axis, no ST-T changes. Chest X-ray: normal. Lipid panel (3 months ago): LDL 112 mg/dL, HDL 45 mg/dL, triglycerides 140 mg/dL. HbA1c: 5.8%."
+  }
+}

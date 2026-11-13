@@ -1,0 +1,483 @@
+{
+  "case_id": "D2N019",
+  "split": "test",
+  "is_icl_demo": false,
+  "stage1_elements": "Here are the extracted clinical elements in concise bullet points:\n\n**Subjective Elements:**\n\n* Chief complaint: Right elbow pain since yesterday\n* History of present illness:\n\t+ Pain started after lifting a box and feeling a pop in the right elbow\n\t+ Pain is throbbing, worsens with movement, and improves with ice\n\t+ Swelling and redness around the elbow, no bruising\n\t+ No numbness, tingling, or weakness in the arm or hand\n* Relevant medical history/medications:\n\t+ No prior elbow injuries or surgeries\n\t+ No history of arthritis or tendinitis in the elbow\n\t+ No prior surgeries except for neck surgery\n\t+ Currently using ice and ibuprofen for pain management\n\n**Objective Elements:**\n\n* Physical examination findings: Not mentioned\n* Vital signs: Not mentioned\n* Diagnostic lab/imaging results:\n\t+ X-rays showed no fractures, but swelling on the lateral side (interpreted as inflammation)\n\n**Assessment Elements:**\n\n* Diagnoses and clinical impressions: Not explicitly stated\n\n**Plan Elements:**\n\n* Medical treatment plan: Not explicitly stated\n* Prescriptions/dosages: Not mentioned\n* Tests ordered: Not mentioned\n* Follow-up instructions: Not mentioned",
+  "stage1_raw_note": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:\n\n**SUBJECTIVE:**\n\n* **Chief Complaint:** Right elbow pain since yesterday\n* **History of Present Illness (HPI):**\n\t+ Pain started after lifting a box and feeling a pop in the right elbow\n\t+ Pain is throbbing, worsens with movement, and improves with ice\n\t+ Swelling and redness around the elbow, no bruising\n\t+ No numbness, tingling, or weakness in the arm or hand\n\t+ No prior elbow injuries or surgeries\n\t+ No history of arthritis or tendinitis in the elbow\n\t+ No prior surgeries except for neck surgery\n\t+ Currently using ice and ibuprofen for pain management\n\n**OBJECTIVE:**\n\n* **Physical Examination & Vitals:** Not mentioned\n* **Diagnostic Results & Labs:**\n\t+ X-rays showed no fractures, but swelling on the lateral side (interpreted as inflammation)\n\n**ASSESSMENT AND PLAN:**\n\n* **Diagnoses and Clinical Reasoning:** Based on the patient's symptoms and physical examination findings, it is likely that the patient has a sprain or strain of the right elbow joint.\n* **Treatment Plan, Medications, and Follow-up:**\n\t+ Continue using ice and ibuprofen for pain management\n\t+ Consider ordering an MRI or ultrasound to further evaluate the elbow joint\n\t+ Refer the patient to a physical therapist for further evaluation and treatment\n\t+ Follow-up appointment in 1-2 weeks to reassess the patient's symptoms and progress\n\nPlease note that this is a sample SOAP note, and the actual diagnosis and treatment plan may vary depending on the patient's specific condition and the healthcare provider's clinical judgment.",
+  "stage1_parse": {
+    "parse_mode": "main_headings",
+    "parse_ok": true,
+    "dropped_preamble": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:"
+  },
+  "stage1_so": {
+    "subjective": "* **Chief Complaint:** Right elbow pain since yesterday\n* **History of Present Illness (HPI):**\n\t+ Pain started after lifting a box and feeling a pop in the right elbow\n\t+ Pain is throbbing, worsens with movement, and improves with ice\n\t+ Swelling and redness around the elbow, no bruising\n\t+ No numbness, tingling, or weakness in the arm or hand\n\t+ No prior elbow injuries or surgeries\n\t+ No history of arthritis or tendinitis in the elbow\n\t+ No prior surgeries except for neck surgery\n\t+ Currently using ice and ibuprofen for pain management",
+    "objective": "* **Physical Examination & Vitals:** Not mentioned\n* **Diagnostic Results & Labs:**\n\t+ X-rays showed no fractures, but swelling on the lateral side (interpreted as inflammation)"
+  },
+  "stage1_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** Based on the patient's symptoms and physical examination findings, it is likely that the patient has a sprain or strain of the right elbow joint.\n* **Treatment Plan, Medications, and Follow-up:**\n\t+ Continue using ice and ibuprofen for pain management\n\t+ Consider ordering an MRI or ultrasound to further evaluate the elbow joint\n\t+ Refer the patient to a physical therapist for further evaluation and treatment\n\t+ Follow-up appointment in 1-2 weeks to reassess the patient's symptoms and progress\n\nPlease note that this is a sample SOAP note, and the actual diagnosis and treatment plan may vary depending on the patient's specific condition and the healthcare provider's clinical judgment."
+  },
+  "stage2_so": {
+    "subjective": "Chief Complaint: Right elbow pain since yesterday\nPain started after lifting a box and feeling a pop in the right elbow\nThe pain is throbbing.\nNote that I've split the statement into two facts, as \"with movement\" is a separate finding that provides additional context to the worsening of pain.\nThe pain improves with ice.\nNote that I've replaced the pronoun \"it\" with \"the pain\" to make each fact self-contained.\nSwelling and redness around the elbow, no bruising\nNo numbness, tingling, or weakness in the arm or hand\nNo prior elbow injuries or surgeries\nNo history of arthritis or tendinitis in the elbow\nNo prior surgeries except for neck surgery\nCurrently using ice and ibuprofen for pain management",
+    "objective": "Based on the statement \"Physical Examination & Vitals: Not mentioned\", I decompose it into the following atomic facts:\nPhysical Examination is not mentioned.\nVitals are not mentioned.\nThese atomic facts are self-contained, independent, and can stand alone as true or false.\nPhysical Examination is not mentioned.\nVitals are not mentioned.\nNote that I did not add any information or infer anything from the statement. I simply broke it down into two self-contained facts that can stand alone as true or false.\nSwelling was present on the lateral side.\nThe swelling was interpreted as inflammation.\nNote that I've followed the rules by:\nSplitting the list (\"no fractures\" and \"swelling on the lateral side\") into separate facts\nReplacing the pronoun (\"it\") with the subject (\"swelling\")\nNot adding or inferring any information that is not present in the statement\nOutputting each fact as a self-contained proposition"
+  },
+  "stage2_audit": {
+    "subjective": [
+      {
+        "unit": "Chief Complaint: Right elbow pain since yesterday",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9961,
+          "neutral": 0.0031,
+          "contradiction": 0.001
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. I'm 48 years old, and I'm a female. I'm here because my right elbow has been hurting a lot since yesterday. I felt a pop when I was lifting a box while moving, and it's been throbbing ever since. Doctor: Could you please describe the nature of the pain in your right elbow? Is it sharp, dull, or throbbing? Have you noticed any swelling or bruising? Patient: The pain is throbbing, and it gets worse when I take the ice off. There's some swelling and redness around the elbow, but no bruising that I can see. It hurts when I try to bend or straighten my arm. Doctor: Have you experienced any numbness, tingling, or weakness in your right arm or hand since the injury? Patient: No, I haven't felt any numbness, tingling, or weakness in my arm or hand. My fingers move fine, and I don't have any pain there. The issue is really just around my elbow. Doctor: Have you experienced any prior elbow injuries, surgeries, or conditions such as arthritis or tendinitis? Patient: No, I don't have any prior elbow injuries or surgeries. The only surgery I've had was on my neck, and I don't have any history of arthritis or tendinitis in my elbow. This is the first time I've had this kind of pain. Doctor: Could you describe the exact location of the popping sensation and whether there was any immediate deformity or inability to move the elbow at the time of injury? Patient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that. Doctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury? Patient: No, I haven't felt any instability, locking, or cre",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "Pain started after lifting a box and feeling a pop in the right elbow",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9995,
+          "neutral": 0.0005,
+          "contradiction": 0.0003
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. I'm 48 years old, and I'm a female. I'm here because my right elbow has been hurting a lot since yesterday. I felt a pop when I was lifting a box while moving, and it's been throbbing ever since. Doctor: Could you please describe the nature of the pain in your right elbow? Is it sharp, dull, or throbbing? Have you noticed any swelling or bruising? Patient: The pain is throbbing, and it gets worse when I take the ice off. There's some swelling and redness around the elbow, but no bruising that I can see. It hurts when I try to bend or straighten my arm. Doctor: Have you experienced any numbness, tingling, or weakness in your right arm or hand since the injury? Patient: No, I haven't felt any numbness, tingling, or weakness in my arm or hand. My fingers move fine, and I don't have any pain there. The issue is really just around my elbow. Doctor: Have you experienced any prior elbow injuries, surgeries, or conditions such as arthritis or tendinitis? Patient: No, I don't have any prior elbow injuries or surgeries. The only surgery I've had was on my neck, and I don't have any history of arthritis or tendinitis in my elbow. This is the first time I've had this kind of pain. Doctor: Could you describe the exact location of the popping sensation and whether there was any immediate deformity or inability to move the elbow at the time of injury? Patient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that. Doctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury? Patient: No, I haven't felt any instability, locking, or cre",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "Pain is throbbing, worsens with movement, and improves with ice",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.395,
+          "neutral": 0.3364,
+          "contradiction": 0.2686
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "was any immediate deformity or inability to move the elbow at the time of injury? Patient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that. Doctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury? Patient: No, I haven't felt any instability, locking, or crepitus in my elbow joint since the injury. It just hurts when I move it, especially when bending or straightening my arm. Doctor: Have you undergone any imaging studies such as X-rays, MRI, or ultrasound for your elbow since the injury? Patient: No, I haven't had any imaging studies for my elbow since the injury. The doctor just looked at the X-rays here, and they didn't show any fractures, but there was some swelling on the lateral side. I wasn't sure what that meant, but he said it's probably just inflammation. Doctor: Have you been experiencing any numbness, tingling, or weakness in your hand or fingers since the injury? Patient: No, I haven't been experiencing any numbness, tingling, or weakness in my hand or fingers since the injury. The pain is mainly around my elbow, and my fingers move fine without any discomfort. Doctor: Have you experienced any previous episodes of similar elbow pain or injury, and if so, how were they managed? Patient: No, I haven't experienced any previous episodes of similar elbow pain or injury. This is the first time I've had this kind of pain, and I didn't manage it before because it just happened yesterday. I've only been using ice and ibuprofen so far. Doctor: Have you experienced any locking, clicking, or instability in the elbow joint since the injury? Patient: No, I haven't experienced any locking, clicking, or instability in the elbow joint since the injury. It just hurts when I move it, especially",
+        "atomic_decomposition": {
+          "original": "Pain is throbbing, worsens with movement, and improves with ice",
+          "retained": [
+            {
+              "atom": "The pain is throbbing.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. I'm 48 years old, and I'm a female. I'm here because my right elbow has been hurting a lot since yesterday. I felt a pop when I was lifting a box while moving, and it's been throbbing ever since. Doctor: Could you please describe the nature of the pain in your right elbow? Is it sharp, dull, or throbbing? Have you noticed any swelling or bruising? Patient: The pain is throbbing, and it gets worse when I take the ice off. There's some swelling and redness around the elbow, but no bruising that I can see. It hurts when I try to bend or straighten my arm. Doctor: Have you experienced any numbness, tingling, or weakness in your right arm or hand since the injury? Patient: No, I haven't felt any numbness, tingling, or weakness in my arm or hand. My fingers move fine, and I don't have any pain there. The issue is really just around my elbow. Doctor: Have you experienced any prior elbow injuries, surgeries, or conditions such as arthritis or tendinitis? Patient: No, I don't have any prior elbow injuries or surgeries. The only surgery I've had was on my neck, and I don't have any history of arthritis or tendinitis in my elbow. This is the first time I've had this kind of pain. Doctor: Could you describe the exact location of the popping sensation and whether there was any immediate deformity or inability to move the elbow at the time of injury? Patient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that. Doctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury? Patient: No, I haven't felt any instability, locking, or cre",
+              "entailment": 0.9976,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've split the statement into two facts, as \"with movement\" is a separate finding that provides additional context to the worsening of pain.",
+              "citation": "of similar elbow pain or injury. This is the first time I've had this kind of pain, and I didn't manage it before because it just happened yesterday. I've only been using ice and ibuprofen so far. Doctor: Have you experienced any locking, clicking, or instability in the elbow joint since the injury? Patient: No, I haven't experienced any locking, clicking, or instability in the elbow joint since the injury. It just hurts when I move it, especially when bending or straightening my arm.",
+              "entailment": 0.9917,
+              "depth": 2
+            },
+            {
+              "atom": "The pain improves with ice.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. I'm 48 years old, and I'm a female. I'm here because my right elbow has been hurting a lot since yesterday. I felt a pop when I was lifting a box while moving, and it's been throbbing ever since. Doctor: Could you please describe the nature of the pain in your right elbow? Is it sharp, dull, or throbbing? Have you noticed any swelling or bruising? Patient: The pain is throbbing, and it gets worse when I take the ice off. There's some swelling and redness around the elbow, but no bruising that I can see. It hurts when I try to bend or straighten my arm. Doctor: Have you experienced any numbness, tingling, or weakness in your right arm or hand since the injury? Patient: No, I haven't felt any numbness, tingling, or weakness in my arm or hand. My fingers move fine, and I don't have any pain there. The issue is really just around my elbow. Doctor: Have you experienced any prior elbow injuries, surgeries, or conditions such as arthritis or tendinitis? Patient: No, I don't have any prior elbow injuries or surgeries. The only surgery I've had was on my neck, and I don't have any history of arthritis or tendinitis in my elbow. This is the first time I've had this kind of pain. Doctor: Could you describe the exact location of the popping sensation and whether there was any immediate deformity or inability to move the elbow at the time of injury? Patient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that. Doctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury? Patient: No, I haven't felt any instability, locking, or cre",
+              "entailment": 0.7788,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've replaced the pronoun \"it\" with \"the pain\" to make each fact self-contained.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. I'm 48 years old, and I'm a female. I'm here because my right elbow has been hurting a lot since yesterday. I felt a pop when I was lifting a box while moving, and it's been throbbing ever since. Doctor: Could you please describe the nature of the pain in your right elbow? Is it sharp, dull, or throbbing? Have you noticed any swelling or bruising? Patient: The pain is throbbing, and it gets worse when I take the ice off. There's some swelling and redness around the elbow, but no bruising that I can see. It hurts when I try to bend or straighten my arm. Doctor: Have you experienced any numbness, tingling, or weakness in your right arm or hand since the injury? Patient: No, I haven't felt any numbness, tingling, or weakness in my arm or hand. My fingers move fine, and I don't have any pain there. The issue is really just around my elbow. Doctor: Have you experienced any prior elbow injuries, surgeries, or conditions such as arthritis or tendinitis? Patient: No, I don't have any prior elbow injuries or surgeries. The only surgery I've had was on my neck, and I don't have any history of arthritis or tendinitis in my elbow. This is the first time I've had this kind of pain. Doctor: Could you describe the exact location of the popping sensation and whether there was any immediate deformity or inability to move the elbow at the time of injury? Patient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that. Doctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury? Patient: No, I haven't felt any instability, locking, or cre",
+              "entailment": 0.9907,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "The pain worsens.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.3975,
+              "depth": 2
+            },
+            {
+              "atom": "The pain worsens with movement.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4832,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Swelling and redness around the elbow, no bruising",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9971,
+          "neutral": 0.0022,
+          "contradiction": 0.001
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. I'm 48 years old, and I'm a female. I'm here because my right elbow has been hurting a lot since yesterday. I felt a pop when I was lifting a box while moving, and it's been throbbing ever since. Doctor: Could you please describe the nature of the pain in your right elbow? Is it sharp, dull, or throbbing? Have you noticed any swelling or bruising? Patient: The pain is throbbing, and it gets worse when I take the ice off. There's some swelling and redness around the elbow, but no bruising that I can see. It hurts when I try to bend or straighten my arm. Doctor: Have you experienced any numbness, tingling, or weakness in your right arm or hand since the injury? Patient: No, I haven't felt any numbness, tingling, or weakness in my arm or hand. My fingers move fine, and I don't have any pain there. The issue is really just around my elbow. Doctor: Have you experienced any prior elbow injuries, surgeries, or conditions such as arthritis or tendinitis? Patient: No, I don't have any prior elbow injuries or surgeries. The only surgery I've had was on my neck, and I don't have any history of arthritis or tendinitis in my elbow. This is the first time I've had this kind of pain. Doctor: Could you describe the exact location of the popping sensation and whether there was any immediate deformity or inability to move the elbow at the time of injury? Patient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that. Doctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury? Patient: No, I haven't felt any instability, locking, or cre",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "No numbness, tingling, or weakness in the arm or hand",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9272,
+          "neutral": 0.0489,
+          "contradiction": 0.0239
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. I'm 48 years old, and I'm a female. I'm here because my right elbow has been hurting a lot since yesterday. I felt a pop when I was lifting a box while moving, and it's been throbbing ever since. Doctor: Could you please describe the nature of the pain in your right elbow? Is it sharp, dull, or throbbing? Have you noticed any swelling or bruising? Patient: The pain is throbbing, and it gets worse when I take the ice off. There's some swelling and redness around the elbow, but no bruising that I can see. It hurts when I try to bend or straighten my arm. Doctor: Have you experienced any numbness, tingling, or weakness in your right arm or hand since the injury? Patient: No, I haven't felt any numbness, tingling, or weakness in my arm or hand. My fingers move fine, and I don't have any pain there. The issue is really just around my elbow. Doctor: Have you experienced any prior elbow injuries, surgeries, or conditions such as arthritis or tendinitis? Patient: No, I don't have any prior elbow injuries or surgeries. The only surgery I've had was on my neck, and I don't have any history of arthritis or tendinitis in my elbow. This is the first time I've had this kind of pain. Doctor: Could you describe the exact location of the popping sensation and whether there was any immediate deformity or inability to move the elbow at the time of injury? Patient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that. Doctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury? Patient: No, I haven't felt any instability, locking, or cre",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "No prior elbow injuries or surgeries",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9663,
+          "neutral": 0.03,
+          "contradiction": 0.0036
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "of similar elbow pain or injury. This is the first time I've had this kind of pain, and I didn't manage it before because it just happened yesterday. I've only been using ice and ibuprofen so far. Doctor: Have you experienced any locking, clicking, or instability in the elbow joint since the injury? Patient: No, I haven't experienced any locking, clicking, or instability in the elbow joint since the injury. It just hurts when I move it, especially when bending or straightening my arm.",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "No history of arthritis or tendinitis in the elbow",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.978,
+          "neutral": 0.0135,
+          "contradiction": 0.0086
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. I'm 48 years old, and I'm a female. I'm here because my right elbow has been hurting a lot since yesterday. I felt a pop when I was lifting a box while moving, and it's been throbbing ever since. Doctor: Could you please describe the nature of the pain in your right elbow? Is it sharp, dull, or throbbing? Have you noticed any swelling or bruising? Patient: The pain is throbbing, and it gets worse when I take the ice off. There's some swelling and redness around the elbow, but no bruising that I can see. It hurts when I try to bend or straighten my arm. Doctor: Have you experienced any numbness, tingling, or weakness in your right arm or hand since the injury? Patient: No, I haven't felt any numbness, tingling, or weakness in my arm or hand. My fingers move fine, and I don't have any pain there. The issue is really just around my elbow. Doctor: Have you experienced any prior elbow injuries, surgeries, or conditions such as arthritis or tendinitis? Patient: No, I don't have any prior elbow injuries or surgeries. The only surgery I've had was on my neck, and I don't have any history of arthritis or tendinitis in my elbow. This is the first time I've had this kind of pain. Doctor: Could you describe the exact location of the popping sensation and whether there was any immediate deformity or inability to move the elbow at the time of injury? Patient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that. Doctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury? Patient: No, I haven't felt any instability, locking, or cre",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "No prior surgeries except for neck surgery",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9458,
+          "neutral": 0.049,
+          "contradiction": 0.0049
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. I'm 48 years old, and I'm a female. I'm here because my right elbow has been hurting a lot since yesterday. I felt a pop when I was lifting a box while moving, and it's been throbbing ever since. Doctor: Could you please describe the nature of the pain in your right elbow? Is it sharp, dull, or throbbing? Have you noticed any swelling or bruising? Patient: The pain is throbbing, and it gets worse when I take the ice off. There's some swelling and redness around the elbow, but no bruising that I can see. It hurts when I try to bend or straighten my arm. Doctor: Have you experienced any numbness, tingling, or weakness in your right arm or hand since the injury? Patient: No, I haven't felt any numbness, tingling, or weakness in my arm or hand. My fingers move fine, and I don't have any pain there. The issue is really just around my elbow. Doctor: Have you experienced any prior elbow injuries, surgeries, or conditions such as arthritis or tendinitis? Patient: No, I don't have any prior elbow injuries or surgeries. The only surgery I've had was on my neck, and I don't have any history of arthritis or tendinitis in my elbow. This is the first time I've had this kind of pain. Doctor: Could you describe the exact location of the popping sensation and whether there was any immediate deformity or inability to move the elbow at the time of injury? Patient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that. Doctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury? Patient: No, I haven't felt any instability, locking, or cre",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "Currently using ice and ibuprofen for pain management",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9995,
+          "neutral": 0.0004,
+          "contradiction": 0.0002
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "of similar elbow pain or injury. This is the first time I've had this kind of pain, and I didn't manage it before because it just happened yesterday. I've only been using ice and ibuprofen so far. Doctor: Have you experienced any locking, clicking, or instability in the elbow joint since the injury? Patient: No, I haven't experienced any locking, clicking, or instability in the elbow joint since the injury. It just hurts when I move it, especially when bending or straightening my arm.",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      }
+    ],
+    "objective": [
+      {
+        "unit": "Physical Examination & Vitals: Not mentioned",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.3904,
+          "neutral": 0.2646,
+          "contradiction": 0.345
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "was any immediate deformity or inability to move the elbow at the time of injury? Patient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that. Doctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury? Patient: No, I haven't felt any instability, locking, or crepitus in my elbow joint since the injury. It just hurts when I move it, especially when bending or straightening my arm. Doctor: Have you undergone any imaging studies such as X-rays, MRI, or ultrasound for your elbow since the injury? Patient: No, I haven't had any imaging studies for my elbow since the injury. The doctor just looked at the X-rays here, and they didn't show any fractures, but there was some swelling on the lateral side. I wasn't sure what that meant, but he said it's probably just inflammation. Doctor: Have you been experiencing any numbness, tingling, or weakness in your hand or fingers since the injury? Patient: No, I haven't been experiencing any numbness, tingling, or weakness in my hand or fingers since the injury. The pain is mainly around my elbow, and my fingers move fine without any discomfort. Doctor: Have you experienced any previous episodes of similar elbow pain or injury, and if so, how were they managed? Patient: No, I haven't experienced any previous episodes of similar elbow pain or injury. This is the first time I've had this kind of pain, and I didn't manage it before because it just happened yesterday. I've only been using ice and ibuprofen so far. Doctor: Have you experienced any locking, clicking, or instability in the elbow joint since the injury? Patient: No, I haven't experienced any locking, clicking, or instability in the elbow joint since the injury. It just hurts when I move it, especially",
+        "atomic_decomposition": {
+          "original": "Physical Examination & Vitals: Not mentioned",
+          "retained": [
+            {
+              "atom": "Based on the statement \"Physical Examination & Vitals: Not mentioned\", I decompose it into the following atomic facts:",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. I'm 48 years old, and I'm a female. I'm here because my right elbow has been hurting a lot since yesterday. I felt a pop when I was lifting a box while moving, and it's been throbbing ever since. Doctor: Could you please describe the nature of the pain in your right elbow? Is it sharp, dull, or throbbing? Have you noticed any swelling or bruising? Patient: The pain is throbbing, and it gets worse when I take the ice off. There's some swelling and redness around the elbow, but no bruising that I can see. It hurts when I try to bend or straighten my arm. Doctor: Have you experienced any numbness, tingling, or weakness in your right arm or hand since the injury? Patient: No, I haven't felt any numbness, tingling, or weakness in my arm or hand. My fingers move fine, and I don't have any pain there. The issue is really just around my elbow. Doctor: Have you experienced any prior elbow injuries, surgeries, or conditions such as arthritis or tendinitis? Patient: No, I don't have any prior elbow injuries or surgeries. The only surgery I've had was on my neck, and I don't have any history of arthritis or tendinitis in my elbow. This is the first time I've had this kind of pain. Doctor: Could you describe the exact location of the popping sensation and whether there was any immediate deformity or inability to move the elbow at the time of injury? Patient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that. Doctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury? Patient: No, I haven't felt any instability, locking, or cre",
+              "entailment": 0.5708,
+              "depth": 2
+            },
+            {
+              "atom": "Physical Examination is not mentioned.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. I'm 48 years old, and I'm a female. I'm here because my right elbow has been hurting a lot since yesterday. I felt a pop when I was lifting a box while moving, and it's been throbbing ever since. Doctor: Could you please describe the nature of the pain in your right elbow? Is it sharp, dull, or throbbing? Have you noticed any swelling or bruising? Patient: The pain is throbbing, and it gets worse when I take the ice off. There's some swelling and redness around the elbow, but no bruising that I can see. It hurts when I try to bend or straighten my arm. Doctor: Have you experienced any numbness, tingling, or weakness in your right arm or hand since the injury? Patient: No, I haven't felt any numbness, tingling, or weakness in my arm or hand. My fingers move fine, and I don't have any pain there. The issue is really just around my elbow. Doctor: Have you experienced any prior elbow injuries, surgeries, or conditions such as arthritis or tendinitis? Patient: No, I don't have any prior elbow injuries or surgeries. The only surgery I've had was on my neck, and I don't have any history of arthritis or tendinitis in my elbow. This is the first time I've had this kind of pain. Doctor: Could you describe the exact location of the popping sensation and whether there was any immediate deformity or inability to move the elbow at the time of injury? Patient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that. Doctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury? Patient: No, I haven't felt any instability, locking, or cre",
+              "entailment": 0.9976,
+              "depth": 2
+            },
+            {
+              "atom": "Vitals are not mentioned.",
+              "citation": "of similar elbow pain or injury. This is the first time I've had this kind of pain, and I didn't manage it before because it just happened yesterday. I've only been using ice and ibuprofen so far. Doctor: Have you experienced any locking, clicking, or instability in the elbow joint since the injury? Patient: No, I haven't experienced any locking, clicking, or instability in the elbow joint since the injury. It just hurts when I move it, especially when bending or straightening my arm.",
+              "entailment": 0.9849,
+              "depth": 2
+            },
+            {
+              "atom": "These atomic facts are self-contained, independent, and can stand alone as true or false.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. I'm 48 years old, and I'm a female. I'm here because my right elbow has been hurting a lot since yesterday. I felt a pop when I was lifting a box while moving, and it's been throbbing ever since. Doctor: Could you please describe the nature of the pain in your right elbow? Is it sharp, dull, or throbbing? Have you noticed any swelling or bruising? Patient: The pain is throbbing, and it gets worse when I take the ice off. There's some swelling and redness around the elbow, but no bruising that I can see. It hurts when I try to bend or straighten my arm. Doctor: Have you experienced any numbness, tingling, or weakness in your right arm or hand since the injury? Patient: No, I haven't felt any numbness, tingling, or weakness in my arm or hand. My fingers move fine, and I don't have any pain there. The issue is really just around my elbow. Doctor: Have you experienced any prior elbow injuries, surgeries, or conditions such as arthritis or tendinitis? Patient: No, I don't have any prior elbow injuries or surgeries. The only surgery I've had was on my neck, and I don't have any history of arthritis or tendinitis in my elbow. This is the first time I've had this kind of pain. Doctor: Could you describe the exact location of the popping sensation and whether there was any immediate deformity or inability to move the elbow at the time of injury? Patient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that. Doctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury? Patient: No, I haven't felt any instability, locking, or cre",
+              "entailment": 0.8945,
+              "depth": 2
+            },
+            {
+              "atom": "Physical Examination is not mentioned.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. I'm 48 years old, and I'm a female. I'm here because my right elbow has been hurting a lot since yesterday. I felt a pop when I was lifting a box while moving, and it's been throbbing ever since. Doctor: Could you please describe the nature of the pain in your right elbow? Is it sharp, dull, or throbbing? Have you noticed any swelling or bruising? Patient: The pain is throbbing, and it gets worse when I take the ice off. There's some swelling and redness around the elbow, but no bruising that I can see. It hurts when I try to bend or straighten my arm. Doctor: Have you experienced any numbness, tingling, or weakness in your right arm or hand since the injury? Patient: No, I haven't felt any numbness, tingling, or weakness in my arm or hand. My fingers move fine, and I don't have any pain there. The issue is really just around my elbow. Doctor: Have you experienced any prior elbow injuries, surgeries, or conditions such as arthritis or tendinitis? Patient: No, I don't have any prior elbow injuries or surgeries. The only surgery I've had was on my neck, and I don't have any history of arthritis or tendinitis in my elbow. This is the first time I've had this kind of pain. Doctor: Could you describe the exact location of the popping sensation and whether there was any immediate deformity or inability to move the elbow at the time of injury? Patient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that. Doctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury? Patient: No, I haven't felt any instability, locking, or cre",
+              "entailment": 0.9976,
+              "depth": 1
+            },
+            {
+              "atom": "Vitals are not mentioned.",
+              "citation": "of similar elbow pain or injury. This is the first time I've had this kind of pain, and I didn't manage it before because it just happened yesterday. I've only been using ice and ibuprofen so far. Doctor: Have you experienced any locking, clicking, or instability in the elbow joint since the injury? Patient: No, I haven't experienced any locking, clicking, or instability in the elbow joint since the injury. It just hurts when I move it, especially when bending or straightening my arm.",
+              "entailment": 0.9849,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I did not add any information or infer anything from the statement. I simply broke it down into two self-contained facts that can stand alone as true or false.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. I'm 48 years old, and I'm a female. I'm here because my right elbow has been hurting a lot since yesterday. I felt a pop when I was lifting a box while moving, and it's been throbbing ever since. Doctor: Could you please describe the nature of the pain in your right elbow? Is it sharp, dull, or throbbing? Have you noticed any swelling or bruising? Patient: The pain is throbbing, and it gets worse when I take the ice off. There's some swelling and redness around the elbow, but no bruising that I can see. It hurts when I try to bend or straighten my arm. Doctor: Have you experienced any numbness, tingling, or weakness in your right arm or hand since the injury? Patient: No, I haven't felt any numbness, tingling, or weakness in my arm or hand. My fingers move fine, and I don't have any pain there. The issue is really just around my elbow. Doctor: Have you experienced any prior elbow injuries, surgeries, or conditions such as arthritis or tendinitis? Patient: No, I don't have any prior elbow injuries or surgeries. The only surgery I've had was on my neck, and I don't have any history of arthritis or tendinitis in my elbow. This is the first time I've had this kind of pain. Doctor: Could you describe the exact location of the popping sensation and whether there was any immediate deformity or inability to move the elbow at the time of injury? Patient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that. Doctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury? Patient: No, I haven't felt any instability, locking, or cre",
+              "entailment": 0.9858,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Diagnostic Results & Labs:",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.4414,
+          "neutral": 0.29,
+          "contradiction": 0.2686
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "was any immediate deformity or inability to move the elbow at the time of injury? Patient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that. Doctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury? Patient: No, I haven't felt any instability, locking, or crepitus in my elbow joint since the injury. It just hurts when I move it, especially when bending or straightening my arm. Doctor: Have you undergone any imaging studies such as X-rays, MRI, or ultrasound for your elbow since the injury? Patient: No, I haven't had any imaging studies for my elbow since the injury. The doctor just looked at the X-rays here, and they didn't show any fractures, but there was some swelling on the lateral side. I wasn't sure what that meant, but he said it's probably just inflammation. Doctor: Have you been experiencing any numbness, tingling, or weakness in your hand or fingers since the injury? Patient: No, I haven't been experiencing any numbness, tingling, or weakness in my hand or fingers since the injury. The pain is mainly around my elbow, and my fingers move fine without any discomfort. Doctor: Have you experienced any previous episodes of similar elbow pain or injury, and if so, how were they managed? Patient: No, I haven't experienced any previous episodes of similar elbow pain or injury. This is the first time I've had this kind of pain, and I didn't manage it before because it just happened yesterday. I've only been using ice and ibuprofen so far. Doctor: Have you experienced any locking, clicking, or instability in the elbow joint since the injury? Patient: No, I haven't experienced any locking, clicking, or instability in the elbow joint since the injury. It just hurts when I move it, especially",
+        "atomic_decomposition": {
+          "original": "Diagnostic Results & Labs:",
+          "retained": [],
+          "discarded": [
+            {
+              "atom": "Diagnostic Results & Labs:",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4414,
+              "depth": 1
+            }
+          ],
+          "decomposition_method": "too_short",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "X-rays showed no fractures, but swelling on the lateral side (interpreted as inflammation)",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.5073,
+          "neutral": 0.2524,
+          "contradiction": 0.2404
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "was any immediate deformity or inability to move the elbow at the time of injury? Patient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that. Doctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury? Patient: No, I haven't felt any instability, locking, or crepitus in my elbow joint since the injury. It just hurts when I move it, especially when bending or straightening my arm. Doctor: Have you undergone any imaging studies such as X-rays, MRI, or ultrasound for your elbow since the injury? Patient: No, I haven't had any imaging studies for my elbow since the injury. The doctor just looked at the X-rays here, and they didn't show any fractures, but there was some swelling on the lateral side. I wasn't sure what that meant, but he said it's probably just inflammation. Doctor: Have you been experiencing any numbness, tingling, or weakness in your hand or fingers since the injury? Patient: No, I haven't been experiencing any numbness, tingling, or weakness in my hand or fingers since the injury. The pain is mainly around my elbow, and my fingers move fine without any discomfort. Doctor: Have you experienced any previous episodes of similar elbow pain or injury, and if so, how were they managed? Patient: No, I haven't experienced any previous episodes of similar elbow pain or injury. This is the first time I've had this kind of pain, and I didn't manage it before because it just happened yesterday. I've only been using ice and ibuprofen so far. Doctor: Have you experienced any locking, clicking, or instability in the elbow joint since the injury? Patient: No, I haven't experienced any locking, clicking, or instability in the elbow joint since the injury. It just hurts when I move it, especially",
+        "atomic_decomposition": {
+          "original": "X-rays showed no fractures, but swelling on the lateral side (interpreted as inflammation)",
+          "retained": [
+            {
+              "atom": "Swelling was present on the lateral side.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. I'm 48 years old, and I'm a female. I'm here because my right elbow has been hurting a lot since yesterday. I felt a pop when I was lifting a box while moving, and it's been throbbing ever since. Doctor: Could you please describe the nature of the pain in your right elbow? Is it sharp, dull, or throbbing? Have you noticed any swelling or bruising? Patient: The pain is throbbing, and it gets worse when I take the ice off. There's some swelling and redness around the elbow, but no bruising that I can see. It hurts when I try to bend or straighten my arm. Doctor: Have you experienced any numbness, tingling, or weakness in your right arm or hand since the injury? Patient: No, I haven't felt any numbness, tingling, or weakness in my arm or hand. My fingers move fine, and I don't have any pain there. The issue is really just around my elbow. Doctor: Have you experienced any prior elbow injuries, surgeries, or conditions such as arthritis or tendinitis? Patient: No, I don't have any prior elbow injuries or surgeries. The only surgery I've had was on my neck, and I don't have any history of arthritis or tendinitis in my elbow. This is the first time I've had this kind of pain. Doctor: Could you describe the exact location of the popping sensation and whether there was any immediate deformity or inability to move the elbow at the time of injury? Patient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that. Doctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury? Patient: No, I haven't felt any instability, locking, or cre",
+              "entailment": 0.9526,
+              "depth": 1
+            },
+            {
+              "atom": "The swelling was interpreted as inflammation.",
+              "citation": "was any immediate deformity or inability to move the elbow at the time of injury? Patient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that. Doctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury? Patient: No, I haven't felt any instability, locking, or crepitus in my elbow joint since the injury. It just hurts when I move it, especially when bending or straightening my arm. Doctor: Have you undergone any imaging studies such as X-rays, MRI, or ultrasound for your elbow since the injury? Patient: No, I haven't had any imaging studies for my elbow since the injury. The doctor just looked at the X-rays here, and they didn't show any fractures, but there was some swelling on the lateral side. I wasn't sure what that meant, but he said it's probably just inflammation. Doctor: Have you been experiencing any numbness, tingling, or weakness in your hand or fingers since the injury? Patient: No, I haven't been experiencing any numbness, tingling, or weakness in my hand or fingers since the injury. The pain is mainly around my elbow, and my fingers move fine without any discomfort. Doctor: Have you experienced any previous episodes of similar elbow pain or injury, and if so, how were they managed? Patient: No, I haven't experienced any previous episodes of similar elbow pain or injury. This is the first time I've had this kind of pain, and I didn't manage it before because it just happened yesterday. I've only been using ice and ibuprofen so far. Doctor: Have you experienced any locking, clicking, or instability in the elbow joint since the injury? Patient: No, I haven't experienced any locking, clicking, or instability in the elbow joint since the injury. It just hurts when I move it, especially",
+              "entailment": 0.7256,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've followed the rules by:",
+              "citation": "of similar elbow pain or injury. This is the first time I've had this kind of pain, and I didn't manage it before because it just happened yesterday. I've only been using ice and ibuprofen so far. Doctor: Have you experienced any locking, clicking, or instability in the elbow joint since the injury? Patient: No, I haven't experienced any locking, clicking, or instability in the elbow joint since the injury. It just hurts when I move it, especially when bending or straightening my arm.",
+              "entailment": 0.9912,
+              "depth": 1
+            },
+            {
+              "atom": "Splitting the list (\"no fractures\" and \"swelling on the lateral side\") into separate facts",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. I'm 48 years old, and I'm a female. I'm here because my right elbow has been hurting a lot since yesterday. I felt a pop when I was lifting a box while moving, and it's been throbbing ever since. Doctor: Could you please describe the nature of the pain in your right elbow? Is it sharp, dull, or throbbing? Have you noticed any swelling or bruising? Patient: The pain is throbbing, and it gets worse when I take the ice off. There's some swelling and redness around the elbow, but no bruising that I can see. It hurts when I try to bend or straighten my arm. Doctor: Have you experienced any numbness, tingling, or weakness in your right arm or hand since the injury? Patient: No, I haven't felt any numbness, tingling, or weakness in my arm or hand. My fingers move fine, and I don't have any pain there. The issue is really just around my elbow. Doctor: Have you experienced any prior elbow injuries, surgeries, or conditions such as arthritis or tendinitis? Patient: No, I don't have any prior elbow injuries or surgeries. The only surgery I've had was on my neck, and I don't have any history of arthritis or tendinitis in my elbow. This is the first time I've had this kind of pain. Doctor: Could you describe the exact location of the popping sensation and whether there was any immediate deformity or inability to move the elbow at the time of injury? Patient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that. Doctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury? Patient: No, I haven't felt any instability, locking, or cre",
+              "entailment": 0.9946,
+              "depth": 1
+            },
+            {
+              "atom": "Replacing the pronoun (\"it\") with the subject (\"swelling\")",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. I'm 48 years old, and I'm a female. I'm here because my right elbow has been hurting a lot since yesterday. I felt a pop when I was lifting a box while moving, and it's been throbbing ever since. Doctor: Could you please describe the nature of the pain in your right elbow? Is it sharp, dull, or throbbing? Have you noticed any swelling or bruising? Patient: The pain is throbbing, and it gets worse when I take the ice off. There's some swelling and redness around the elbow, but no bruising that I can see. It hurts when I try to bend or straighten my arm. Doctor: Have you experienced any numbness, tingling, or weakness in your right arm or hand since the injury? Patient: No, I haven't felt any numbness, tingling, or weakness in my arm or hand. My fingers move fine, and I don't have any pain there. The issue is really just around my elbow. Doctor: Have you experienced any prior elbow injuries, surgeries, or conditions such as arthritis or tendinitis? Patient: No, I don't have any prior elbow injuries or surgeries. The only surgery I've had was on my neck, and I don't have any history of arthritis or tendinitis in my elbow. This is the first time I've had this kind of pain. Doctor: Could you describe the exact location of the popping sensation and whether there was any immediate deformity or inability to move the elbow at the time of injury? Patient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that. Doctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury? Patient: No, I haven't felt any instability, locking, or cre",
+              "entailment": 0.9902,
+              "depth": 1
+            },
+            {
+              "atom": "Not adding or inferring any information that is not present in the statement",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. I'm 48 years old, and I'm a female. I'm here because my right elbow has been hurting a lot since yesterday. I felt a pop when I was lifting a box while moving, and it's been throbbing ever since. Doctor: Could you please describe the nature of the pain in your right elbow? Is it sharp, dull, or throbbing? Have you noticed any swelling or bruising? Patient: The pain is throbbing, and it gets worse when I take the ice off. There's some swelling and redness around the elbow, but no bruising that I can see. It hurts when I try to bend or straighten my arm. Doctor: Have you experienced any numbness, tingling, or weakness in your right arm or hand since the injury? Patient: No, I haven't felt any numbness, tingling, or weakness in my arm or hand. My fingers move fine, and I don't have any pain there. The issue is really just around my elbow. Doctor: Have you experienced any prior elbow injuries, surgeries, or conditions such as arthritis or tendinitis? Patient: No, I don't have any prior elbow injuries or surgeries. The only surgery I've had was on my neck, and I don't have any history of arthritis or tendinitis in my elbow. This is the first time I've had this kind of pain. Doctor: Could you describe the exact location of the popping sensation and whether there was any immediate deformity or inability to move the elbow at the time of injury? Patient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that. Doctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury? Patient: No, I haven't felt any instability, locking, or cre",
+              "entailment": 0.9653,
+              "depth": 1
+            },
+            {
+              "atom": "Outputting each fact as a self-contained proposition",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. I'm 48 years old, and I'm a female. I'm here because my right elbow has been hurting a lot since yesterday. I felt a pop when I was lifting a box while moving, and it's been throbbing ever since. Doctor: Could you please describe the nature of the pain in your right elbow? Is it sharp, dull, or throbbing? Have you noticed any swelling or bruising? Patient: The pain is throbbing, and it gets worse when I take the ice off. There's some swelling and redness around the elbow, but no bruising that I can see. It hurts when I try to bend or straighten my arm. Doctor: Have you experienced any numbness, tingling, or weakness in your right arm or hand since the injury? Patient: No, I haven't felt any numbness, tingling, or weakness in my arm or hand. My fingers move fine, and I don't have any pain there. The issue is really just around my elbow. Doctor: Have you experienced any prior elbow injuries, surgeries, or conditions such as arthritis or tendinitis? Patient: No, I don't have any prior elbow injuries or surgeries. The only surgery I've had was on my neck, and I don't have any history of arthritis or tendinitis in my elbow. This is the first time I've had this kind of pain. Doctor: Could you describe the exact location of the popping sensation and whether there was any immediate deformity or inability to move the elbow at the time of injury? Patient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that. Doctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury? Patient: No, I haven't felt any instability, locking, or cre",
+              "entailment": 0.8936,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "X-rays showed no fractures.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.479,
+              "depth": 1
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      }
+    ]
+  },
+  "stage2_stats": {
+    "decision_counts": {
+      "faithful": 8,
+      "uncertain": 4
+    },
+    "num_claims": 12,
+    "num_kept": 11,
+    "claim_retention_rate": 0.9167
+  },
+  "stage3_so": {
+    "subjective": "Chief Complaint: Right elbow pain since yesterday\nPain started after lifting a box and feeling a pop in the right elbow\nThe pain is throbbing.\nNote that I've split the statement into two facts, as \"with movement\" is a separate finding that provides additional context to the worsening of pain.\nI felt a pop when I was lifting a box while moving, and it's been throbbing ever since.\nThe pain improves with ice.\nNote that I've replaced the pronoun \"it\" with \"the pain\" to make each fact self-contained.\nSwelling and redness around the elbow, no bruising\nNo numbness, tingling, or weakness in the arm or hand\nNo prior elbow injuries or surgeries\nNo history of arthritis or tendinitis in the elbow\nNo prior surgeries except for neck surgery\nCurrently using ice and ibuprofen for pain management",
+    "objective": "Based on the statement \"Physical Examination & Vitals: Not mentioned\", I decompose it into the following atomic facts:\nPhysical Examination is not mentioned.\nVitals are not mentioned.\nThese atomic facts are self-contained, independent, and can stand alone as true or false.\nPhysical Examination is not mentioned.\nVitals are not mentioned.\nNote that I did not add any information or infer anything from the statement. I simply broke it down into two self-contained facts that can stand alone as true or false.\nSwelling was present on the lateral side.\nThe swelling was interpreted as inflammation.\nNote that I've followed the rules by:\nSplitting the list (\"no fractures\" and \"swelling on the lateral side\") into separate facts\nReplacing the pronoun (\"it\") with the subject (\"swelling\")\nNot adding or inferring any information that is not present in the statement\nOutputting each fact as a self-contained proposition"
+  },
+  "stage3_key_sentences": [
+    "Doctor: Could you please describe the nature of the pain in your right elbow?",
+    "I felt a pop when I was lifting a box while moving, and it's been throbbing ever since."
+  ],
+  "stage3_summary_key_phrases": [
+    "elbow pain throbbing",
+    "complaint right elbow",
+    "pain improves ice",
+    "facts physical examination",
+    "pain make fact",
+    "true false swelling",
+    "interpreted inflammation note",
+    "injuries surgeries",
+    "bruising numbness",
+    "mentioned atomic"
+  ],
+  "stage3_coverage_scores": [
+    {
+      "sentence": "Doctor: Could you please describe the nature of the pain in your right elbow?",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "Doctor: Could you please describe the nature of the pain in your right elbow?",
+      "score": 0.7706,
+      "is_missing": false,
+      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+    },
+    {
+      "sentence": "I felt a pop when I was lifting a box while moving, and it's been throbbing ever since.",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "I felt a pop when I was lifting a box while moving, and it's been throbbing ever since.",
+      "score": 0.3523,
+      "is_missing": true,
+      "action": "Added: Missing clinical dialogue detail (coverage < 0.40); inserted via GPT-2 fluency optimization."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I felt a pop when I was lifting a box while moving, and it's been throbbing ever since.",
+      "statement": "I felt a pop when I was lifting a box while moving, and it's been throbbing ever since.",
+      "coverage": 0.3523,
+      "status": "added",
+      "reason": "coverage <= cov_min (uMedSum adds the dialogue sentence verbatim)",
+      "insertion": {
+        "section": "subjective",
+        "line_index": 4,
+        "perplexity": 24.44
+      }
+    }
+  ],
+  "stage3_added": [
+    {
+      "statement": "I felt a pop when I was lifting a box while moving, and it's been throbbing ever since.",
+      "evidence": "I felt a pop when I was lifting a box while moving, and it's been throbbing ever since.",
+      "section": "subjective",
+      "candidate": "I felt a pop when I was lifting a box while moving, and it's been throbbing ever since."
+    }
+  ],
+  "stage3_stats": {
+    "num_key_sentences": 2,
+    "num_flagged": 1,
+    "num_added": 1
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "section": "subjective",
+        "claim": "The pain worsens.",
+        "entailment": 0.3975,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Pain is throbbing, worsens with movement, and improves with ice"
+      },
+      {
+        "section": "subjective",
+        "claim": "The pain worsens with movement.",
+        "entailment": 0.4832,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Pain is throbbing, worsens with movement, and improves with ice"
+      },
+      {
+        "section": "objective",
+        "claim": "Diagnostic Results & Labs:",
+        "entailment": 0.4414,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Diagnostic Results & Labs:"
+      },
+      {
+        "section": "objective",
+        "claim": "X-rays showed no fractures.",
+        "entailment": 0.479,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "X-rays showed no fractures, but swelling on the lateral side (interpreted as inflammation)"
+      }
+    ]
+  },
+  "final_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** Based on the patient's symptoms and physical examination findings, it is likely that the patient has a sprain or strain of the right elbow joint.\n* **Treatment Plan, Medications, and Follow-up:**\n\t+ Continue using ice and ibuprofen for pain management\n\t+ Consider ordering an MRI or ultrasound to further evaluate the elbow joint\n\t+ Refer the patient to a physical therapist for further evaluation and treatment\n\t+ Follow-up appointment in 1-2 weeks to reassess the patient's symptoms and progress\n\nPlease note that this is a sample SOAP note, and the actual diagnosis and treatment plan may vary depending on the patient's specific condition and the healthcare provider's clinical judgment."
+  },
+  "ap_unchanged": true,
+  "thresholds": {
+    "Te": 0.9,
+    "Tc": 0.8,
+    "Ta": 0.5,
+    "cov_min": 0.4,
+    "top_m": 2,
+    "fix_header_bug": true
+  },
+  "models": {
+    "llm": "llama3:8b-instruct-q8_0",
+    "nli": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+    "embedder": "all-MiniLM-L6-v2",
+    "ppl": "gpt2"
+  },
+  "status": "success",
+  "seconds": 12.3,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: Hello. I'm 48 years old, and I'm a female. I'm here because my right elbow has been hurting a lot since yesterday. I felt a pop when I was lifting a box while moving, and it's been throbbing ever since.\nDoctor: Could you please describe the nature of the pain in your right elbow? Is it sharp, dull, or throbbing? Have you noticed any swelling or bruising?\nPatient: The pain is throbbing, and it gets worse when I take the ice off. There's some swelling and redness around the elbow, but no bruising that I can see. It hurts when I try to bend or straighten my arm.\nDoctor: Have you experienced any numbness, tingling, or weakness in your right arm or hand since the injury?\nPatient: No, I haven't felt any numbness, tingling, or weakness in my arm or hand. My fingers move fine, and I don't have any pain there. The issue is really just around my elbow.\nDoctor: Have you experienced any prior elbow injuries, surgeries, or conditions such as arthritis or tendinitis?\nPatient: No, I don't have any prior elbow injuries or surgeries. The only surgery I've had was on my neck, and I don't have any history of arthritis or tendinitis in my elbow. This is the first time I've had this kind of pain.\nDoctor: Could you describe the exact location of the popping sensation and whether there was any immediate deformity or inability to move the elbow at the time of injury?\nPatient: The popping sensation happened right here at my elbow, on the outside, when I lifted the box up. There wasn't any deformity or inability to move it right away, but it started hurting pretty badly after that.\nDoctor: Have you experienced any instability, locking, or crepitus in the elbow joint since the injury?\nPatient: No, I haven't felt any instability, locking, or crepitus in my elbow joint since the injury. It just hurts when I move it, especially when bending or straightening my arm.\nDoctor: Have you undergone any imaging studies such as X-rays, MRI, or ultrasound for your elbow since the injury?\nPatient: No, I haven't had any imaging studies for my elbow since the injury. The doctor just looked at the X-rays here, and they didn't show any fractures, but there was some swelling on the lateral side. I wasn't sure what that meant, but he said it's probably just inflammation.\nDoctor: Have you been experiencing any numbness, tingling, or weakness in your hand or fingers since the injury?\nPatient: No, I haven't been experiencing any numbness, tingling, or weakness in my hand or fingers since the injury. The pain is mainly around my elbow, and my fingers move fine without any discomfort.\nDoctor: Have you experienced any previous episodes of similar elbow pain or injury, and if so, how were they managed?\nPatient: No, I haven't experienced any previous episodes of similar elbow pain or injury. This is the first time I've had this kind of pain, and I didn't manage it before because it just happened yesterday. I've only been using ice and ibuprofen so far.\nDoctor: Have you experienced any locking, clicking, or instability in the elbow joint since the injury?\nPatient: No, I haven't experienced any locking, clicking, or instability in the elbow joint since the injury. It just hurts when I move it, especially when bending or straightening my arm.",
+  "reference_so": {
+    "subjective": "Basic information: 48-year-old female presenting with right elbow pain following a popping sensation while lifting a box during moving.\n\nHistory of present illness: Right elbow pain began yesterday following a popping sensation while lifting a box during moving. The pain is described as throbbing. The pain worsens when ice is removed, and there is swelling and redness around the elbow. The patient experiences pain when bending or straightening the arm. No locking, clicking, or instability has been reported.\n\nPast history: No prior elbow injuries, surgeries, or conditions reported. The patient has a history of neck surgery but no history of arthritis or tendinitis in the elbow. No previous episodes of similar elbow pain or injury reported.",
+    "objective": "Physical examination: Vital signs: BP 120/80 mmHg, HR 78 bpm, Temp 36.8°C. Physical examination of the right elbow reveals localized swelling and redness without bruising. There is tenderness over the lateral epicondyle. Range of motion is limited due to pain, with no deformity noted. Neurological examination shows intact sensation and motor function in the arm and hand. No locking, clicking, or instability noted in the elbow joint.\n\nInvestigations: X-rays of the right elbow were performed and showed no fractures but noted swelling on the lateral side. No further imaging or diagnostic tests have been conducted."
+  }
+}

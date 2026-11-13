@@ -1,0 +1,359 @@
+{
+  "case_id": "D2N112",
+  "split": "test",
+  "is_icl_demo": false,
+  "stage1_elements": "Here are the extracted clinical elements in concise bullet points:\n\n**Subjective Elements:**\n\n* Chief complaint: Back pain\n* History of present illness: Back pain for a while, worsened lately, radiating down left leg, causing difficulty walking or standing\n* Relevant medical history:\n\t+ Prior injury: Fell off a roof 30 years ago, suspected fracture but no surgery\n\t+ Relevant medical conditions: None mentioned\n\t+ Medications: None mentioned\n\n**Objective Elements:**\n\n* Physical examination findings: None mentioned\n* Vital signs: None mentioned\n* Diagnostic lab/imaging results:\n\t+ MRI report: Disk herniation at L4-L5 level with nerve root impingement (exact nerve roots affected not specified)\n\t+ Spinal stenosis at L4-L5 level: Unclear, patient does not remember specific mention\n\n**Assessment Elements:**\n\n* Diagnoses: Disk herniation at L4-L5 level with nerve root impingement (exact nerve roots affected not specified)\n* Clinical impressions: Nerve root compression causing pain down left leg\n\n**Plan Elements:**\n\n* Medical treatment plan: None specified\n* Prescriptions/dosages: None mentioned\n* Tests ordered: None mentioned\n* Follow-up instructions: None mentioned",
+  "stage1_raw_note": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:\n\n**SUBJECTIVE:**\n\n* **Chief Complaint:** Back pain\n* **History of Present Illness (HPI):** The patient, a 35-year-old male, presents with a chief complaint of back pain that has been ongoing for a while, but has worsened lately. The pain radiates down his left leg, causing difficulty walking or standing. He reports an electric toothache-like sensation in his lower back, which is constant and worsens with standing or walking. He rates the pain as an 8 out of 10.\n\n**OBJECTIVE:**\n\n* **Physical Examination & Vitals:** No physical examination findings or vital signs were mentioned during the conversation.\n* **Diagnostic Results & Labs:** The patient had an MRI report that showed a disk herniation at the L4-L5 level with nerve root impingement. However, the exact nerve roots affected were not specified. Spinal stenosis at the L4-L5 level was not explicitly mentioned in the report.\n\n**ASSESSMENT AND PLAN:**\n\n* **Diagnoses and Clinical Reasoning:** Based on the patient's symptoms and the MRI report, the diagnosis is disk herniation at the L4-L5 level with nerve root impingement. The clinical impression is that the nerve root compression is causing the pain down the patient's left leg.\n* **Treatment Plan, Medications, and Follow-up:** The patient was advised to rest and avoid heavy lifting or bending. Further management and treatment options will be discussed with the patient's primary care physician and/or a specialist.\n\nPlease note that the patient's primary care physician or radiologist should be contacted to clarify the MRI report and provide more specific information about the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation.",
+  "stage1_parse": {
+    "parse_mode": "main_headings",
+    "parse_ok": true,
+    "dropped_preamble": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:"
+  },
+  "stage1_so": {
+    "subjective": "* **Chief Complaint:** Back pain\n* **History of Present Illness (HPI):** The patient, a 35-year-old male, presents with a chief complaint of back pain that has been ongoing for a while, but has worsened lately. The pain radiates down his left leg, causing difficulty walking or standing. He reports an electric toothache-like sensation in his lower back, which is constant and worsens with standing or walking. He rates the pain as an 8 out of 10.",
+    "objective": "* **Physical Examination & Vitals:** No physical examination findings or vital signs were mentioned during the conversation.\n* **Diagnostic Results & Labs:** The patient had an MRI report that showed a disk herniation at the L4-L5 level with nerve root impingement. However, the exact nerve roots affected were not specified. Spinal stenosis at the L4-L5 level was not explicitly mentioned in the report."
+  },
+  "stage1_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** Based on the patient's symptoms and the MRI report, the diagnosis is disk herniation at the L4-L5 level with nerve root impingement. The clinical impression is that the nerve root compression is causing the pain down the patient's left leg.\n* **Treatment Plan, Medications, and Follow-up:** The patient was advised to rest and avoid heavy lifting or bending. Further management and treatment options will be discussed with the patient's primary care physician and/or a specialist.\n\nPlease note that the patient's primary care physician or radiologist should be contacted to clarify the MRI report and provide more specific information about the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation."
+  },
+  "stage2_so": {
+    "subjective": "Chief Complaint: Back pain\nHistory of Present Illness (HPI): The patient, a 35-year-old male, presents with a chief complaint of back pain that has been ongoing for a while, but has worsened lately.\nThe pain radiates down his left leg, causing difficulty walking or standing.\nHe reports an electric toothache-like sensation in his lower back, which is constant and worsens with standing or walking.\nHe rates the pain as an 8 out of 10.",
+    "objective": "No physical examination findings were mentioned during the conversation.\nNo vital signs were mentioned during the conversation.\nNote that I did not add any information that is not present in the original statement, and each fact is self-contained and can stand alone as true or false.\nThe patient had an MRI report.\nThe MRI report showed a disk herniation.\nThe disk herniation is at the L4-L5 level.\nThe MRI report showed nerve root impingement.\nNote that I've followed the rules to split the statement into individual facts, replacing pronouns with the subject (\"The patient\"), and not adding or inferring any information that is not present in the original statement.\nThe exact nerve roots affected were not specified.\nNote that there is only one atomic fact in this statement, as it is a single proposition.\nSpinal stenosis exists at the L4-L5 level.\nThe report does not explicitly mention spinal stenosis at the L4-L5 level.\nNote that I've split the statement into two separate facts, as the conjunction \"and\" is not present, and the statement is describing two distinct propositions."
+  },
+  "stage2_audit": {
+    "subjective": [
+      {
+        "unit": "Chief Complaint: Back pain",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.998,
+          "neutral": 0.0007,
+          "contradiction": 0.0012
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 35, male. I've been having back pain for a while, and it's gotten really bad lately. It's been making it hard to walk or even stand for very long, and it radiates down my left leg like an electric toothache. I can't really tie my shoes anymore, and I've been using a cane. My primary care doctor sent me to see you. Doctor: Could you describe the exact location of the back pain, its intensity on a scale of 1 to 10, and whether it is constant or intermittent? Have you experienced any numbness, tingling, or weakness in your left leg? Have you had any prior injuries, surgeries, or conditions affecting your back or legs? Patient: The pain is in my lower back, right here, and it goes down through my hip, along the side of my leg, and all the way to my big toe. It feels like an electrical toothache, and it's been constant, especially when I'm standing or walking. It's been about an eight out of ten right now, but when it's really bad, it feels like thirteen. I do have some weakness in both legs, and my foot kinda drags when I walk. I also use a cane because it's hard to stand for long. As for past injuries, I fell off a roof about thirty years ago, and they thought there might have been a fracture, but I never had surgery. Doctor: Have you experienced any numbness, tingling, or loss of sensation in your left leg or foot? Have you had any bowel or bladder dysfunction? Have you been evaluated for this condition before, and if so, what were the findings? Patient: I haven't had any numbness or tingling in my left leg specifically, but I do feel weakness in both legs, and my foot kinda drags when I walk. I haven't had any issues with my bowel or bladder. I'",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "History of Present Illness (HPI): The patient, a 35-year-old male, presents with a chief complaint of back pain that has been ongoing for a while, but has worsened lately.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9521,
+          "neutral": 0.0342,
+          "contradiction": 0.0137
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 35, male. I've been having back pain for a while, and it's gotten really bad lately. It's been making it hard to walk or even stand for very long, and it radiates down my left leg like an electric toothache. I can't really tie my shoes anymore, and I've been using a cane. My primary care doctor sent me to see you. Doctor: Could you describe the exact location of the back pain, its intensity on a scale of 1 to 10, and whether it is constant or intermittent? Have you experienced any numbness, tingling, or weakness in your left leg? Have you had any prior injuries, surgeries, or conditions affecting your back or legs? Patient: The pain is in my lower back, right here, and it goes down through my hip, along the side of my leg, and all the way to my big toe. It feels like an electrical toothache, and it's been constant, especially when I'm standing or walking. It's been about an eight out of ten right now, but when it's really bad, it feels like thirteen. I do have some weakness in both legs, and my foot kinda drags when I walk. I also use a cane because it's hard to stand for long. As for past injuries, I fell off a roof about thirty years ago, and they thought there might have been a fracture, but I never had surgery. Doctor: Have you experienced any numbness, tingling, or loss of sensation in your left leg or foot? Have you had any bowel or bladder dysfunction? Have you been evaluated for this condition before, and if so, what were the findings? Patient: I haven't had any numbness or tingling in my left leg specifically, but I do feel weakness in both legs, and my foot kinda drags when I walk. I haven't had any issues with my bowel or bladder. I'",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "The pain radiates down his left leg, causing difficulty walking or standing.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9995,
+          "neutral": 0.0002,
+          "contradiction": 0.0004
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 35, male. I've been having back pain for a while, and it's gotten really bad lately. It's been making it hard to walk or even stand for very long, and it radiates down my left leg like an electric toothache. I can't really tie my shoes anymore, and I've been using a cane. My primary care doctor sent me to see you. Doctor: Could you describe the exact location of the back pain, its intensity on a scale of 1 to 10, and whether it is constant or intermittent? Have you experienced any numbness, tingling, or weakness in your left leg? Have you had any prior injuries, surgeries, or conditions affecting your back or legs? Patient: The pain is in my lower back, right here, and it goes down through my hip, along the side of my leg, and all the way to my big toe. It feels like an electrical toothache, and it's been constant, especially when I'm standing or walking. It's been about an eight out of ten right now, but when it's really bad, it feels like thirteen. I do have some weakness in both legs, and my foot kinda drags when I walk. I also use a cane because it's hard to stand for long. As for past injuries, I fell off a roof about thirty years ago, and they thought there might have been a fracture, but I never had surgery. Doctor: Have you experienced any numbness, tingling, or loss of sensation in your left leg or foot? Have you had any bowel or bladder dysfunction? Have you been evaluated for this condition before, and if so, what were the findings? Patient: I haven't had any numbness or tingling in my left leg specifically, but I do feel weakness in both legs, and my foot kinda drags when I walk. I haven't had any issues with my bowel or bladder. I'",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "He reports an electric toothache-like sensation in his lower back, which is constant and worsens with standing or walking.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9995,
+          "neutral": 0.0002,
+          "contradiction": 0.0004
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 35, male. I've been having back pain for a while, and it's gotten really bad lately. It's been making it hard to walk or even stand for very long, and it radiates down my left leg like an electric toothache. I can't really tie my shoes anymore, and I've been using a cane. My primary care doctor sent me to see you. Doctor: Could you describe the exact location of the back pain, its intensity on a scale of 1 to 10, and whether it is constant or intermittent? Have you experienced any numbness, tingling, or weakness in your left leg? Have you had any prior injuries, surgeries, or conditions affecting your back or legs? Patient: The pain is in my lower back, right here, and it goes down through my hip, along the side of my leg, and all the way to my big toe. It feels like an electrical toothache, and it's been constant, especially when I'm standing or walking. It's been about an eight out of ten right now, but when it's really bad, it feels like thirteen. I do have some weakness in both legs, and my foot kinda drags when I walk. I also use a cane because it's hard to stand for long. As for past injuries, I fell off a roof about thirty years ago, and they thought there might have been a fracture, but I never had surgery. Doctor: Have you experienced any numbness, tingling, or loss of sensation in your left leg or foot? Have you had any bowel or bladder dysfunction? Have you been evaluated for this condition before, and if so, what were the findings? Patient: I haven't had any numbness or tingling in my left leg specifically, but I do feel weakness in both legs, and my foot kinda drags when I walk. I haven't had any issues with my bowel or bladder. I'",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "He rates the pain as an 8 out of 10.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.998,
+          "neutral": 0.0006,
+          "contradiction": 0.0016
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 35, male. I've been having back pain for a while, and it's gotten really bad lately. It's been making it hard to walk or even stand for very long, and it radiates down my left leg like an electric toothache. I can't really tie my shoes anymore, and I've been using a cane. My primary care doctor sent me to see you. Doctor: Could you describe the exact location of the back pain, its intensity on a scale of 1 to 10, and whether it is constant or intermittent? Have you experienced any numbness, tingling, or weakness in your left leg? Have you had any prior injuries, surgeries, or conditions affecting your back or legs? Patient: The pain is in my lower back, right here, and it goes down through my hip, along the side of my leg, and all the way to my big toe. It feels like an electrical toothache, and it's been constant, especially when I'm standing or walking. It's been about an eight out of ten right now, but when it's really bad, it feels like thirteen. I do have some weakness in both legs, and my foot kinda drags when I walk. I also use a cane because it's hard to stand for long. As for past injuries, I fell off a roof about thirty years ago, and they thought there might have been a fracture, but I never had surgery. Doctor: Have you experienced any numbness, tingling, or loss of sensation in your left leg or foot? Have you had any bowel or bladder dysfunction? Have you been evaluated for this condition before, and if so, what were the findings? Patient: I haven't had any numbness or tingling in my left leg specifically, but I do feel weakness in both legs, and my foot kinda drags when I walk. I haven't had any issues with my bowel or bladder. I'",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      }
+    ],
+    "objective": [
+      {
+        "unit": "Physical Examination & Vitals: No physical examination findings or vital signs were mentioned during the conversation.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.4846,
+          "neutral": 0.2522,
+          "contradiction": 0.2632
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.",
+        "atomic_decomposition": {
+          "original": "Physical Examination & Vitals: No physical examination findings or vital signs were mentioned during the conversation.",
+          "retained": [
+            {
+              "atom": "No physical examination findings were mentioned during the conversation.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 35, male. I've been having back pain for a while, and it's gotten really bad lately. It's been making it hard to walk or even stand for very long, and it radiates down my left leg like an electric toothache. I can't really tie my shoes anymore, and I've been using a cane. My primary care doctor sent me to see you. Doctor: Could you describe the exact location of the back pain, its intensity on a scale of 1 to 10, and whether it is constant or intermittent? Have you experienced any numbness, tingling, or weakness in your left leg? Have you had any prior injuries, surgeries, or conditions affecting your back or legs? Patient: The pain is in my lower back, right here, and it goes down through my hip, along the side of my leg, and all the way to my big toe. It feels like an electrical toothache, and it's been constant, especially when I'm standing or walking. It's been about an eight out of ten right now, but when it's really bad, it feels like thirteen. I do have some weakness in both legs, and my foot kinda drags when I walk. I also use a cane because it's hard to stand for long. As for past injuries, I fell off a roof about thirty years ago, and they thought there might have been a fracture, but I never had surgery. Doctor: Have you experienced any numbness, tingling, or loss of sensation in your left leg or foot? Have you had any bowel or bladder dysfunction? Have you been evaluated for this condition before, and if so, what were the findings? Patient: I haven't had any numbness or tingling in my left leg specifically, but I do feel weakness in both legs, and my foot kinda drags when I walk. I haven't had any issues with my bowel or bladder. I'",
+              "entailment": 0.999,
+              "depth": 1
+            },
+            {
+              "atom": "No vital signs were mentioned during the conversation.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 35, male. I've been having back pain for a while, and it's gotten really bad lately. It's been making it hard to walk or even stand for very long, and it radiates down my left leg like an electric toothache. I can't really tie my shoes anymore, and I've been using a cane. My primary care doctor sent me to see you. Doctor: Could you describe the exact location of the back pain, its intensity on a scale of 1 to 10, and whether it is constant or intermittent? Have you experienced any numbness, tingling, or weakness in your left leg? Have you had any prior injuries, surgeries, or conditions affecting your back or legs? Patient: The pain is in my lower back, right here, and it goes down through my hip, along the side of my leg, and all the way to my big toe. It feels like an electrical toothache, and it's been constant, especially when I'm standing or walking. It's been about an eight out of ten right now, but when it's really bad, it feels like thirteen. I do have some weakness in both legs, and my foot kinda drags when I walk. I also use a cane because it's hard to stand for long. As for past injuries, I fell off a roof about thirty years ago, and they thought there might have been a fracture, but I never had surgery. Doctor: Have you experienced any numbness, tingling, or loss of sensation in your left leg or foot? Have you had any bowel or bladder dysfunction? Have you been evaluated for this condition before, and if so, what were the findings? Patient: I haven't had any numbness or tingling in my left leg specifically, but I do feel weakness in both legs, and my foot kinda drags when I walk. I haven't had any issues with my bowel or bladder. I'",
+              "entailment": 0.9917,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I did not add any information that is not present in the original statement, and each fact is self-contained and can stand alone as true or false.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 35, male. I've been having back pain for a while, and it's gotten really bad lately. It's been making it hard to walk or even stand for very long, and it radiates down my left leg like an electric toothache. I can't really tie my shoes anymore, and I've been using a cane. My primary care doctor sent me to see you. Doctor: Could you describe the exact location of the back pain, its intensity on a scale of 1 to 10, and whether it is constant or intermittent? Have you experienced any numbness, tingling, or weakness in your left leg? Have you had any prior injuries, surgeries, or conditions affecting your back or legs? Patient: The pain is in my lower back, right here, and it goes down through my hip, along the side of my leg, and all the way to my big toe. It feels like an electrical toothache, and it's been constant, especially when I'm standing or walking. It's been about an eight out of ten right now, but when it's really bad, it feels like thirteen. I do have some weakness in both legs, and my foot kinda drags when I walk. I also use a cane because it's hard to stand for long. As for past injuries, I fell off a roof about thirty years ago, and they thought there might have been a fracture, but I never had surgery. Doctor: Have you experienced any numbness, tingling, or loss of sensation in your left leg or foot? Have you had any bowel or bladder dysfunction? Have you been evaluated for this condition before, and if so, what were the findings? Patient: I haven't had any numbness or tingling in my left leg specifically, but I do feel weakness in both legs, and my foot kinda drags when I walk. I haven't had any issues with my bowel or bladder. I'",
+              "entailment": 0.8745,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "Diagnostic Results & Labs: The patient had an MRI report that showed a disk herniation at the L4-L5 level with nerve root impingement.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.5396,
+          "neutral": 0.2419,
+          "contradiction": 0.2185
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.",
+        "atomic_decomposition": {
+          "original": "Diagnostic Results & Labs: The patient had an MRI report that showed a disk herniation at the L4-L5 level with nerve root impingement.",
+          "retained": [
+            {
+              "atom": "The patient had an MRI report.",
+              "citation": "pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.",
+              "entailment": 0.9238,
+              "depth": 1
+            },
+            {
+              "atom": "The MRI report showed a disk herniation.",
+              "citation": "pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.",
+              "entailment": 0.5596,
+              "depth": 1
+            },
+            {
+              "atom": "The disk herniation is at the L4-L5 level.",
+              "citation": "pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.",
+              "entailment": 0.7642,
+              "depth": 1
+            },
+            {
+              "atom": "The MRI report showed nerve root impingement.",
+              "citation": "pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.",
+              "entailment": 0.5918,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've followed the rules to split the statement into individual facts, replacing pronouns with the subject (\"The patient\"), and not adding or inferring any information that is not present in the original statement.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 35, male. I've been having back pain for a while, and it's gotten really bad lately. It's been making it hard to walk or even stand for very long, and it radiates down my left leg like an electric toothache. I can't really tie my shoes anymore, and I've been using a cane. My primary care doctor sent me to see you. Doctor: Could you describe the exact location of the back pain, its intensity on a scale of 1 to 10, and whether it is constant or intermittent? Have you experienced any numbness, tingling, or weakness in your left leg? Have you had any prior injuries, surgeries, or conditions affecting your back or legs? Patient: The pain is in my lower back, right here, and it goes down through my hip, along the side of my leg, and all the way to my big toe. It feels like an electrical toothache, and it's been constant, especially when I'm standing or walking. It's been about an eight out of ten right now, but when it's really bad, it feels like thirteen. I do have some weakness in both legs, and my foot kinda drags when I walk. I also use a cane because it's hard to stand for long. As for past injuries, I fell off a roof about thirty years ago, and they thought there might have been a fracture, but I never had surgery. Doctor: Have you experienced any numbness, tingling, or loss of sensation in your left leg or foot? Have you had any bowel or bladder dysfunction? Have you been evaluated for this condition before, and if so, what were the findings? Patient: I haven't had any numbness or tingling in my left leg specifically, but I do feel weakness in both legs, and my foot kinda drags when I walk. I haven't had any issues with my bowel or bladder. I'",
+              "entailment": 0.9961,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "However, the exact nerve roots affected were not specified.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.7266,
+          "neutral": 0.1417,
+          "contradiction": 0.1316
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.",
+        "atomic_decomposition": {
+          "original": "However, the exact nerve roots affected were not specified.",
+          "retained": [
+            {
+              "atom": "The exact nerve roots affected were not specified.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 35, male. I've been having back pain for a while, and it's gotten really bad lately. It's been making it hard to walk or even stand for very long, and it radiates down my left leg like an electric toothache. I can't really tie my shoes anymore, and I've been using a cane. My primary care doctor sent me to see you. Doctor: Could you describe the exact location of the back pain, its intensity on a scale of 1 to 10, and whether it is constant or intermittent? Have you experienced any numbness, tingling, or weakness in your left leg? Have you had any prior injuries, surgeries, or conditions affecting your back or legs? Patient: The pain is in my lower back, right here, and it goes down through my hip, along the side of my leg, and all the way to my big toe. It feels like an electrical toothache, and it's been constant, especially when I'm standing or walking. It's been about an eight out of ten right now, but when it's really bad, it feels like thirteen. I do have some weakness in both legs, and my foot kinda drags when I walk. I also use a cane because it's hard to stand for long. As for past injuries, I fell off a roof about thirty years ago, and they thought there might have been a fracture, but I never had surgery. Doctor: Have you experienced any numbness, tingling, or loss of sensation in your left leg or foot? Have you had any bowel or bladder dysfunction? Have you been evaluated for this condition before, and if so, what were the findings? Patient: I haven't had any numbness or tingling in my left leg specifically, but I do feel weakness in both legs, and my foot kinda drags when I walk. I haven't had any issues with my bowel or bladder. I'",
+              "entailment": 0.8418,
+              "depth": 1
+            },
+            {
+              "atom": "Note that there is only one atomic fact in this statement, as it is a single proposition.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 35, male. I've been having back pain for a while, and it's gotten really bad lately. It's been making it hard to walk or even stand for very long, and it radiates down my left leg like an electric toothache. I can't really tie my shoes anymore, and I've been using a cane. My primary care doctor sent me to see you. Doctor: Could you describe the exact location of the back pain, its intensity on a scale of 1 to 10, and whether it is constant or intermittent? Have you experienced any numbness, tingling, or weakness in your left leg? Have you had any prior injuries, surgeries, or conditions affecting your back or legs? Patient: The pain is in my lower back, right here, and it goes down through my hip, along the side of my leg, and all the way to my big toe. It feels like an electrical toothache, and it's been constant, especially when I'm standing or walking. It's been about an eight out of ten right now, but when it's really bad, it feels like thirteen. I do have some weakness in both legs, and my foot kinda drags when I walk. I also use a cane because it's hard to stand for long. As for past injuries, I fell off a roof about thirty years ago, and they thought there might have been a fracture, but I never had surgery. Doctor: Have you experienced any numbness, tingling, or loss of sensation in your left leg or foot? Have you had any bowel or bladder dysfunction? Have you been evaluated for this condition before, and if so, what were the findings? Patient: I haven't had any numbness or tingling in my left leg specifically, but I do feel weakness in both legs, and my foot kinda drags when I walk. I haven't had any issues with my bowel or bladder. I'",
+              "entailment": 0.9854,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "Spinal stenosis at the L4-L5 level was not explicitly mentioned in the report.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.5679,
+          "neutral": 0.2329,
+          "contradiction": 0.1993
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if they specifically mentioned spinal stenosis, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you confirm if the MRI report mentioned any specific nerve roots (such as L5 or S1) that were affected by the herniation, and whether there was any mention of spinal stenosis at the L4-L5 level? Patient: I don't remember if they specifically mentioned spinal stenosis, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if they specifically mentioned spinal stenosis, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if they specifically mentioned spinal stenosis, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg",
+        "atomic_decomposition": {
+          "original": "Spinal stenosis at the L4-L5 level was not explicitly mentioned in the report.",
+          "retained": [
+            {
+              "atom": "Spinal stenosis exists at the L4-L5 level.",
+              "citation": "pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg. Doctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation? Patient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.",
+              "entailment": 0.52,
+              "depth": 1
+            },
+            {
+              "atom": "The report does not explicitly mention spinal stenosis at the L4-L5 level.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 35, male. I've been having back pain for a while, and it's gotten really bad lately. It's been making it hard to walk or even stand for very long, and it radiates down my left leg like an electric toothache. I can't really tie my shoes anymore, and I've been using a cane. My primary care doctor sent me to see you. Doctor: Could you describe the exact location of the back pain, its intensity on a scale of 1 to 10, and whether it is constant or intermittent? Have you experienced any numbness, tingling, or weakness in your left leg? Have you had any prior injuries, surgeries, or conditions affecting your back or legs? Patient: The pain is in my lower back, right here, and it goes down through my hip, along the side of my leg, and all the way to my big toe. It feels like an electrical toothache, and it's been constant, especially when I'm standing or walking. It's been about an eight out of ten right now, but when it's really bad, it feels like thirteen. I do have some weakness in both legs, and my foot kinda drags when I walk. I also use a cane because it's hard to stand for long. As for past injuries, I fell off a roof about thirty years ago, and they thought there might have been a fracture, but I never had surgery. Doctor: Have you experienced any numbness, tingling, or loss of sensation in your left leg or foot? Have you had any bowel or bladder dysfunction? Have you been evaluated for this condition before, and if so, what were the findings? Patient: I haven't had any numbness or tingling in my left leg specifically, but I do feel weakness in both legs, and my foot kinda drags when I walk. I haven't had any issues with my bowel or bladder. I'",
+              "entailment": 0.6201,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've split the statement into two separate facts, as the conjunction \"and\" is not present, and the statement is describing two distinct propositions.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 35, male. I've been having back pain for a while, and it's gotten really bad lately. It's been making it hard to walk or even stand for very long, and it radiates down my left leg like an electric toothache. I can't really tie my shoes anymore, and I've been using a cane. My primary care doctor sent me to see you. Doctor: Could you describe the exact location of the back pain, its intensity on a scale of 1 to 10, and whether it is constant or intermittent? Have you experienced any numbness, tingling, or weakness in your left leg? Have you had any prior injuries, surgeries, or conditions affecting your back or legs? Patient: The pain is in my lower back, right here, and it goes down through my hip, along the side of my leg, and all the way to my big toe. It feels like an electrical toothache, and it's been constant, especially when I'm standing or walking. It's been about an eight out of ten right now, but when it's really bad, it feels like thirteen. I do have some weakness in both legs, and my foot kinda drags when I walk. I also use a cane because it's hard to stand for long. As for past injuries, I fell off a roof about thirty years ago, and they thought there might have been a fracture, but I never had surgery. Doctor: Have you experienced any numbness, tingling, or loss of sensation in your left leg or foot? Have you had any bowel or bladder dysfunction? Have you been evaluated for this condition before, and if so, what were the findings? Patient: I haven't had any numbness or tingling in my left leg specifically, but I do feel weakness in both legs, and my foot kinda drags when I walk. I haven't had any issues with my bowel or bladder. I'",
+              "entailment": 0.9448,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      }
+    ]
+  },
+  "stage2_stats": {
+    "decision_counts": {
+      "faithful": 5,
+      "uncertain": 4
+    },
+    "num_claims": 9,
+    "num_kept": 9,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_so": {
+    "subjective": "Chief Complaint: Back pain\nIt feels like an electrical toothache, and it's been constant, especially when I'm standing or walking.\nHistory of Present Illness (HPI): The patient, a 35-year-old male, presents with a chief complaint of back pain that has been ongoing for a while, but has worsened lately.\nThe pain radiates down his left leg, causing difficulty walking or standing.\nHe reports an electric toothache-like sensation in his lower back, which is constant and worsens with standing or walking.\nHe rates the pain as an 8 out of 10.",
+    "objective": "No physical examination findings were mentioned during the conversation.\nNo vital signs were mentioned during the conversation.\nNote that I did not add any information that is not present in the original statement, and each fact is self-contained and can stand alone as true or false.\nThe patient had an MRI report.\nThe MRI report showed a disk herniation.\nThe disk herniation is at the L4-L5 level.\nThe MRI report showed nerve root impingement.\nNote that I've followed the rules to split the statement into individual facts, replacing pronouns with the subject (\"The patient\"), and not adding or inferring any information that is not present in the original statement.\nThe exact nerve roots affected were not specified.\nNote that there is only one atomic fact in this statement, as it is a single proposition.\nSpinal stenosis exists at the L4-L5 level.\nThe report does not explicitly mention spinal stenosis at the L4-L5 level.\nNote that I've split the statement into two separate facts, as the conjunction \"and\" is not present, and the statement is describing two distinct propositions."
+  },
+  "stage3_key_sentences": [
+    "Patient: The pain is in my lower back, right here, and it goes down through my hip, along the side of my leg, and all the way to my big toe.",
+    "It feels like an electrical toothache, and it's been constant, especially when I'm standing or walking."
+  ],
+  "stage3_summary_key_phrases": [
+    "report showed nerve",
+    "pain 10 physical",
+    "complaint pain history",
+    "false patient mri",
+    "mention spinal stenosis",
+    "root impingement",
+    "disk herniation l4",
+    "present illness hpi",
+    "pronouns subject patient",
+    "describing distinct propositions"
+  ],
+  "stage3_coverage_scores": [
+    {
+      "sentence": "Patient: The pain is in my lower back, right here, and it goes down through my hip, along the side of my leg, and all the way to my big toe.",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "Patient: The pain is in my lower back, right here, and it goes down through my hip, along the side of my leg, and all the way to my big toe.",
+      "score": 0.4571,
+      "is_missing": false,
+      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+    },
+    {
+      "sentence": "It feels like an electrical toothache, and it's been constant, especially when I'm standing or walking.",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "It feels like an electrical toothache, and it's been constant, especially when I'm standing or walking.",
+      "score": 0.3434,
+      "is_missing": true,
+      "action": "Added: Missing clinical dialogue detail (coverage < 0.40); inserted via GPT-2 fluency optimization."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "It feels like an electrical toothache, and it's been constant, especially when I'm standing or walking.",
+      "statement": "It feels like an electrical toothache, and it's been constant, especially when I'm standing or walking.",
+      "coverage": 0.3434,
+      "status": "added",
+      "reason": "coverage <= cov_min (uMedSum adds the dialogue sentence verbatim)",
+      "insertion": {
+        "section": "subjective",
+        "line_index": 1,
+        "perplexity": 20.12
+      }
+    }
+  ],
+  "stage3_added": [
+    {
+      "statement": "It feels like an electrical toothache, and it's been constant, especially when I'm standing or walking.",
+      "evidence": "It feels like an electrical toothache, and it's been constant, especially when I'm standing or walking.",
+      "section": "subjective",
+      "candidate": "It feels like an electrical toothache, and it's been constant, especially when I'm standing or walking."
+    }
+  ],
+  "stage3_stats": {
+    "num_key_sentences": 2,
+    "num_flagged": 1,
+    "num_added": 1
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": []
+  },
+  "final_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** Based on the patient's symptoms and the MRI report, the diagnosis is disk herniation at the L4-L5 level with nerve root impingement. The clinical impression is that the nerve root compression is causing the pain down the patient's left leg.\n* **Treatment Plan, Medications, and Follow-up:** The patient was advised to rest and avoid heavy lifting or bending. Further management and treatment options will be discussed with the patient's primary care physician and/or a specialist.\n\nPlease note that the patient's primary care physician or radiologist should be contacted to clarify the MRI report and provide more specific information about the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation."
+  },
+  "ap_unchanged": true,
+  "thresholds": {
+    "Te": 0.9,
+    "Tc": 0.8,
+    "Ta": 0.5,
+    "cov_min": 0.4,
+    "top_m": 2,
+    "fix_header_bug": true
+  },
+  "models": {
+    "llm": "llama3:8b-instruct-q8_0",
+    "nli": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+    "embedder": "all-MiniLM-L6-v2",
+    "ppl": "gpt2"
+  },
+  "status": "success",
+  "seconds": 11.9,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 35, male. I've been having back pain for a while, and it's gotten really bad lately. It's been making it hard to walk or even stand for very long, and it radiates down my left leg like an electric toothache. I can't really tie my shoes anymore, and I've been using a cane. My primary care doctor sent me to see you.\nDoctor: Could you describe the exact location of the back pain, its intensity on a scale of 1 to 10, and whether it is constant or intermittent? Have you experienced any numbness, tingling, or weakness in your left leg? Have you had any prior injuries, surgeries, or conditions affecting your back or legs?\nPatient: The pain is in my lower back, right here, and it goes down through my hip, along the side of my leg, and all the way to my big toe. It feels like an electrical toothache, and it's been constant, especially when I'm standing or walking. It's been about an eight out of ten right now, but when it's really bad, it feels like thirteen. I do have some weakness in both legs, and my foot kinda drags when I walk. I also use a cane because it's hard to stand for long. As for past injuries, I fell off a roof about thirty years ago, and they thought there might have been a fracture, but I never had surgery.\nDoctor: Have you experienced any numbness, tingling, or loss of sensation in your left leg or foot? Have you had any bowel or bladder dysfunction? Have you been evaluated for this condition before, and if so, what were the findings?\nPatient: I haven't had any numbness or tingling in my left leg specifically, but I do feel weakness in both legs, and my foot kinda drags when I walk. I haven't had any issues with my bowel or bladder. I've been to my primary care doctor, and they sent me here. They mentioned something about an MRI showing a disk issue, but I don't remember the exact details.\nDoctor: Could you clarify if your primary care physician mentioned the specific location of the disc issue (e.g., L4-L5) and whether there was any mention of spinal stenosis or nerve root compression on the MRI?\nPatient: They mentioned something about a disk herniation, I think at the L4-L5 level, and there was some nerve root impingement. I don't remember if they said anything about spinal stenosis specifically, but they did say it was causing the pain down my leg.\nDoctor: Could you confirm whether the MRI report specifically mentions spinal stenosis at the L4-L5 level, and whether there is evidence of nerve root compression affecting the L5 or S1 nerve roots?\nPatient: I don't remember if they specifically mentioned spinal stenosis, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.\nDoctor: Could you clarify whether the MRI report specifically mentions spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation?\nPatient: I don't remember if they specifically mentioned spinal stenosis, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.\nDoctor: Could you confirm if the MRI report mentioned any specific nerve roots (such as L5 or S1) that were affected by the herniation, and whether there was any mention of spinal stenosis at the L4-L5 level?\nPatient: I don't remember if they specifically mentioned spinal stenosis, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.\nDoctor: Could you clarify whether the MRI report specifically mentions spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation?\nPatient: I don't remember if they specifically mentioned spinal stenosis, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.\nDoctor: Could you clarify whether the MRI report specifically mentions spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation?\nPatient: I don't remember if they specifically mentioned spinal stenosis, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.\nDoctor: Could you ask the primary care physician or the radiologist to clarify whether spinal stenosis is present at the L4-L5 level and which specific nerve roots (L5 or S1) are affected by the herniation? This information is important for understanding the extent of the nerve impingement and guiding further management.\nPatient: I don't remember if spinal stenosis was mentioned specifically, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.\nDoctor: Could you clarify whether spinal stenosis is present at the L4-L5 level and which specific nerve roots (L5 or S1) are affected by the herniation, based on the MRI findings?\nPatient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.\nDoctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation?\nPatient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.\nDoctor: Could you clarify whether the MRI report specifically mentions spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation?\nPatient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.\nDoctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation?\nPatient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.\nDoctor: Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation?\nPatient: I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.",
+  "reference_so": {
+    "subjective": "Basic information: 35-year-old male with chief complaint of severe back pain radiating down the left leg, affecting mobility and daily activities.\n\nHistory of present illness: Onset and progression of back pain, with radiation to the left leg, described as an 'electric toothache,' limiting ability to walk, stand, or tie shoes. Use of a cane. Referral from primary care physician. Pain localized to lower back, radiating down the left leg through the hip, along the side of the leg, and to the big toe. Constant pain, exacerbated by standing or walking, rated 8/10 (up to 13/10 at worst). Weakness in both legs, foot dragging when walking.\n\nPast history: History of trauma (fall from roof 30 years ago with suspected fracture, no surgery).",
+    "objective": "Physical examination: Physical examination reveals weakness in both legs, foot dragging when walking, and pain radiating from the lower back down the left leg to the big toe. No numbness or tingling in the left leg. No bowel or bladder dysfunction noted.\n\nInvestigations: MRI findings (as reported by primary care physician): disc herniation at L4-L5 level with nerve root impingement; presence of spinal stenosis is pending clarification. Specific nerve roots affected (L5 or S1) are not mentioned."
+  }
+}

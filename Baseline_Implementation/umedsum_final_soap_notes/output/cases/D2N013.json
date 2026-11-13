@@ -1,0 +1,376 @@
+{
+  "case_id": "D2N013",
+  "split": "test",
+  "is_icl_demo": false,
+  "stage1_elements": "Here are the extracted clinical elements in concise bullet points:\n\n**Subjective Elements:**\n\n* Chief complaint: High blood sugar episode\n* History of present illness:\n\t+ Recent high blood sugar episode (a few days ago)\n\t+ No symptoms besides feeling \"a bit off\"\n\t+ Treated in the ER\n\t+ Started on metformin 500 mg twice a day\n* Relevant medical history/medications:\n\t+ No previous diagnosis of diabetes\n\t+ No information about family history of diabetes or cardiovascular disease\n\t+ No information about hypertension, hyperlipidemia, or smoking history\n\t+ Currently taking metformin 500 mg twice a day\n\n**Objective Elements:**\n\n* Physical examination findings: Not mentioned\n* Vital signs mentioned: Not mentioned\n* Diagnostic lab/imaging results:\n\t+ Blood glucose level: 162 mg/dL\n\t+ HbA1c test: 8% (higher than previous level)\n\n**Assessment Elements:**\n\n* Diagnoses and clinical impressions: Not explicitly stated, but likely to be related to diabetes or hyperglycemia\n\n**Plan Elements:**\n\n* Medical treatment plan: Not explicitly stated, but likely to include continued metformin therapy and potential further testing or evaluation\n* Prescriptions/dosages: Metformin 500 mg twice a day\n* Tests ordered: Not explicitly stated, but potentially including further blood glucose monitoring, HbA1c testing, or other diagnostic tests\n* Follow-up instructions: Not explicitly stated, but likely to include further evaluation and monitoring of blood glucose levels",
+  "stage1_raw_note": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:\n\n**SUBJECTIVE:**\n\n* **Chief Complaint:** High blood sugar episode\n* **History of Present Illness (HPI):** The patient, a 55-year-old male, presents with a recent high blood sugar episode, which occurred a few days ago. He reports no symptoms besides feeling \"a bit off.\" He was treated in the emergency room and started on metformin 500 mg twice a day.\n\n**OBJECTIVE:**\n\n* **Physical Examination & Vitals:** Not mentioned\n* **Diagnostic Results & Labs:**\n\t+ Blood glucose level: 162 mg/dL\n\t+ HbA1c test: 8% (higher than previous level)\n\n**ASSESSMENT AND PLAN:**\n\n* **Diagnoses and Clinical Reasoning:** The patient's recent high blood sugar episode and elevated HbA1c level suggest a diagnosis of hyperglycemia or diabetes. Further evaluation and testing are needed to confirm the diagnosis and determine the underlying cause.\n* **Treatment Plan, Medications, and Follow-up:** The patient will continue taking metformin 500 mg twice a day. Further testing, including blood glucose monitoring and HbA1c testing, will be ordered to monitor the patient's condition. The patient will be followed up with to assess the effectiveness of treatment and make any necessary adjustments.\n\nNote: The patient's lack of information about his family history, hypertension, hyperlipidemia, and smoking history limits the ability to fully assess his cardiovascular risk factors. However, the patient's current symptoms and laboratory results suggest a diagnosis of hyperglycemia or diabetes, and further evaluation and testing are necessary to confirm the diagnosis and determine the underlying cause.",
+  "stage1_parse": {
+    "parse_mode": "main_headings",
+    "parse_ok": true,
+    "dropped_preamble": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:"
+  },
+  "stage1_so": {
+    "subjective": "* **Chief Complaint:** High blood sugar episode\n* **History of Present Illness (HPI):** The patient, a 55-year-old male, presents with a recent high blood sugar episode, which occurred a few days ago. He reports no symptoms besides feeling \"a bit off.\" He was treated in the emergency room and started on metformin 500 mg twice a day.",
+    "objective": "* **Physical Examination & Vitals:** Not mentioned\n* **Diagnostic Results & Labs:**\n\t+ Blood glucose level: 162 mg/dL\n\t+ HbA1c test: 8% (higher than previous level)"
+  },
+  "stage1_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** The patient's recent high blood sugar episode and elevated HbA1c level suggest a diagnosis of hyperglycemia or diabetes. Further evaluation and testing are needed to confirm the diagnosis and determine the underlying cause.\n* **Treatment Plan, Medications, and Follow-up:** The patient will continue taking metformin 500 mg twice a day. Further testing, including blood glucose monitoring and HbA1c testing, will be ordered to monitor the patient's condition. The patient will be followed up with to assess the effectiveness of treatment and make any necessary adjustments.\n\nNote: The patient's lack of information about his family history, hypertension, hyperlipidemia, and smoking history limits the ability to fully assess his cardiovascular risk factors. However, the patient's current symptoms and laboratory results suggest a diagnosis of hyperglycemia or diabetes, and further evaluation and testing are necessary to confirm the diagnosis and determine the underlying cause."
+  },
+  "stage2_so": {
+    "subjective": "Chief Complaint: High blood sugar episode\nHistory of Present Illness (HPI): The patient, a 55-year-old male, presents with a recent high blood sugar episode, which occurred a few days ago.\nHe reports no symptoms besides feeling \"a bit off.\"\nHe was treated in the emergency room.\nHe was started on metformin.\nThe patient takes Metformin.\nNote that I did not add any information that is not present in the original statement. I also replaced the pronoun \"is\" with the subject \"Metformin\" to make each fact self-contained.",
+    "objective": "Physical Examination is not mentioned.\nVitals are not mentioned.\nPhysical Examination is not mentioned.\nVitals are not mentioned.\nNote that I did not add any information or infer anything from the statement. I simply broke it down into two self-contained facts that can stand alone as true or false.\nDiagnostic Results & Labs:\nBlood glucose level: 162 mg/dL\nHbA1c test: 8% (higher than previous level)"
+  },
+  "stage2_audit": {
+    "subjective": [
+      {
+        "unit": "Chief Complaint: High blood sugar episode",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9092,
+          "neutral": 0.0671,
+          "contradiction": 0.0239
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I was brought in because I had a really high blood sugar and they had to treat me for that. I think it was because I wasn't monitoring my sugar intake as much and there's been a lot of stress lately. Doctor: Could you please confirm your age, gender, and provide more details about your recent high blood sugar episode, including when it occurred and any symptoms you experienced? Patient: I'm 55, male. The high blood sugar was a few days ago, and I wasn't really watching what I ate much. I've been pretty stressed with all the events and visitors we've had, and I think that didn't help. I didn't have any symptoms other than feeling a bit off, but they had to treat me for it in the ER. Doctor: Could you provide details about your diabetes diagnosis, including when it was diagnosed, the type of diabetes (if known), and any medications or treatments you have been on? Patient: I wasn't actually diagnosed with diabetes yet, but they did find a really high blood sugar level and treated me in the ER. They put me on metformin, which I think is a medication for diabetes. I'm still figuring out what's going on, but I'm here to talk about it. Doctor: Could you share the specific blood glucose levels that were recorded during your recent episode, and have you had any follow-up tests such as HbA1c or fasting blood glucose tests since your ER visit? Patient: They actually did give me a lot of fluid in the emergency room, and my blood sugar was 162 when they checked it recently. I had eaten about two hours before that. They also did an HbA1c test, and it came back at 8, which they said is higher than it was before. Doctor: Could you provide more details about your family history of diabetes or cardiovascular disease, as well",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "History of Present Illness (HPI): The patient, a 55-year-old male, presents with a recent high blood sugar episode, which occurred a few days ago.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.915,
+          "neutral": 0.0578,
+          "contradiction": 0.0273
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I was brought in because I had a really high blood sugar and they had to treat me for that. I think it was because I wasn't monitoring my sugar intake as much and there's been a lot of stress lately. Doctor: Could you please confirm your age, gender, and provide more details about your recent high blood sugar episode, including when it occurred and any symptoms you experienced? Patient: I'm 55, male. The high blood sugar was a few days ago, and I wasn't really watching what I ate much. I've been pretty stressed with all the events and visitors we've had, and I think that didn't help. I didn't have any symptoms other than feeling a bit off, but they had to treat me for it in the ER. Doctor: Could you provide details about your diabetes diagnosis, including when it was diagnosed, the type of diabetes (if known), and any medications or treatments you have been on? Patient: I wasn't actually diagnosed with diabetes yet, but they did find a really high blood sugar level and treated me in the ER. They put me on metformin, which I think is a medication for diabetes. I'm still figuring out what's going on, but I'm here to talk about it. Doctor: Could you share the specific blood glucose levels that were recorded during your recent episode, and have you had any follow-up tests such as HbA1c or fasting blood glucose tests since your ER visit? Patient: They actually did give me a lot of fluid in the emergency room, and my blood sugar was 162 when they checked it recently. I had eaten about two hours before that. They also did an HbA1c test, and it came back at 8, which they said is higher than it was before. Doctor: Could you provide more details about your family history of diabetes or cardiovascular disease, as well",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "He reports no symptoms besides feeling \"a bit off.\"",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9961,
+          "neutral": 0.0014,
+          "contradiction": 0.0025
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I was brought in because I had a really high blood sugar and they had to treat me for that. I think it was because I wasn't monitoring my sugar intake as much and there's been a lot of stress lately. Doctor: Could you please confirm your age, gender, and provide more details about your recent high blood sugar episode, including when it occurred and any symptoms you experienced? Patient: I'm 55, male. The high blood sugar was a few days ago, and I wasn't really watching what I ate much. I've been pretty stressed with all the events and visitors we've had, and I think that didn't help. I didn't have any symptoms other than feeling a bit off, but they had to treat me for it in the ER. Doctor: Could you provide details about your diabetes diagnosis, including when it was diagnosed, the type of diabetes (if known), and any medications or treatments you have been on? Patient: I wasn't actually diagnosed with diabetes yet, but they did find a really high blood sugar level and treated me in the ER. They put me on metformin, which I think is a medication for diabetes. I'm still figuring out what's going on, but I'm here to talk about it. Doctor: Could you share the specific blood glucose levels that were recorded during your recent episode, and have you had any follow-up tests such as HbA1c or fasting blood glucose tests since your ER visit? Patient: They actually did give me a lot of fluid in the emergency room, and my blood sugar was 162 when they checked it recently. I had eaten about two hours before that. They also did an HbA1c test, and it came back at 8, which they said is higher than it was before. Doctor: Could you provide more details about your family history of diabetes or cardiovascular disease, as well",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "He was treated in the emergency room and started on metformin 500 mg twice a day.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.4773,
+          "neutral": 0.2729,
+          "contradiction": 0.2498
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "-up tests such as HbA1c or fasting blood glucose tests since your ER visit? Patient: They actually did give me a lot of fluid in the emergency room, and my blood sugar was 162 when they checked it recently. I had eaten about two hours before that. They also did an HbA1c test, and it came back at 8, which they said is higher than it was before. Doctor: Could you provide more details about your family history of diabetes or cardiovascular disease, as well as whether you have hypertension, hyperlipidemia, or a history of smoking? Patient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. I'm not sure about those details. Doctor: Could you please confirm if you currently take any medications, including metformin, or receive any other treatments for your high blood sugar? Patient: I currently take metformin, 500 mg twice a day, which they started me on in the emergency room. That's the only medication I'm on for my blood sugar right now. Doctor: Could you please provide information about your family history of diabetes or cardiovascular disease, as well as whether you have hypertension, hyperlipidemia, or a history of smoking? Patient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. I'm not sure about those details. Doctor: Could you please provide information about your family history of diabetes or cardiovascular disease, and whether you have hypertension, hyperlipidemia, or a history of smoking? Patient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. I'm not sure about those details. Doctor: Could you please provide information about your family history of diabetes or cardiovascular disease, and clarify whether you have hypertension, hyperlipidemia, or a history of smoking? Patient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a",
+        "atomic_decomposition": {
+          "original": "He was treated in the emergency room and started on metformin 500 mg twice a day.",
+          "retained": [
+            {
+              "atom": "He was treated in the emergency room.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I was brought in because I had a really high blood sugar and they had to treat me for that. I think it was because I wasn't monitoring my sugar intake as much and there's been a lot of stress lately. Doctor: Could you please confirm your age, gender, and provide more details about your recent high blood sugar episode, including when it occurred and any symptoms you experienced? Patient: I'm 55, male. The high blood sugar was a few days ago, and I wasn't really watching what I ate much. I've been pretty stressed with all the events and visitors we've had, and I think that didn't help. I didn't have any symptoms other than feeling a bit off, but they had to treat me for it in the ER. Doctor: Could you provide details about your diabetes diagnosis, including when it was diagnosed, the type of diabetes (if known), and any medications or treatments you have been on? Patient: I wasn't actually diagnosed with diabetes yet, but they did find a really high blood sugar level and treated me in the ER. They put me on metformin, which I think is a medication for diabetes. I'm still figuring out what's going on, but I'm here to talk about it. Doctor: Could you share the specific blood glucose levels that were recorded during your recent episode, and have you had any follow-up tests such as HbA1c or fasting blood glucose tests since your ER visit? Patient: They actually did give me a lot of fluid in the emergency room, and my blood sugar was 162 when they checked it recently. I had eaten about two hours before that. They also did an HbA1c test, and it came back at 8, which they said is higher than it was before. Doctor: Could you provide more details about your family history of diabetes or cardiovascular disease, as well",
+              "entailment": 0.9995,
+              "depth": 1
+            },
+            {
+              "atom": "He was started on metformin.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I was brought in because I had a really high blood sugar and they had to treat me for that. I think it was because I wasn't monitoring my sugar intake as much and there's been a lot of stress lately. Doctor: Could you please confirm your age, gender, and provide more details about your recent high blood sugar episode, including when it occurred and any symptoms you experienced? Patient: I'm 55, male. The high blood sugar was a few days ago, and I wasn't really watching what I ate much. I've been pretty stressed with all the events and visitors we've had, and I think that didn't help. I didn't have any symptoms other than feeling a bit off, but they had to treat me for it in the ER. Doctor: Could you provide details about your diabetes diagnosis, including when it was diagnosed, the type of diabetes (if known), and any medications or treatments you have been on? Patient: I wasn't actually diagnosed with diabetes yet, but they did find a really high blood sugar level and treated me in the ER. They put me on metformin, which I think is a medication for diabetes. I'm still figuring out what's going on, but I'm here to talk about it. Doctor: Could you share the specific blood glucose levels that were recorded during your recent episode, and have you had any follow-up tests such as HbA1c or fasting blood glucose tests since your ER visit? Patient: They actually did give me a lot of fluid in the emergency room, and my blood sugar was 162 when they checked it recently. I had eaten about two hours before that. They also did an HbA1c test, and it came back at 8, which they said is higher than it was before. Doctor: Could you provide more details about your family history of diabetes or cardiovascular disease, as well",
+              "entailment": 0.998,
+              "depth": 1
+            },
+            {
+              "atom": "The patient takes Metformin.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I was brought in because I had a really high blood sugar and they had to treat me for that. I think it was because I wasn't monitoring my sugar intake as much and there's been a lot of stress lately. Doctor: Could you please confirm your age, gender, and provide more details about your recent high blood sugar episode, including when it occurred and any symptoms you experienced? Patient: I'm 55, male. The high blood sugar was a few days ago, and I wasn't really watching what I ate much. I've been pretty stressed with all the events and visitors we've had, and I think that didn't help. I didn't have any symptoms other than feeling a bit off, but they had to treat me for it in the ER. Doctor: Could you provide details about your diabetes diagnosis, including when it was diagnosed, the type of diabetes (if known), and any medications or treatments you have been on? Patient: I wasn't actually diagnosed with diabetes yet, but they did find a really high blood sugar level and treated me in the ER. They put me on metformin, which I think is a medication for diabetes. I'm still figuring out what's going on, but I'm here to talk about it. Doctor: Could you share the specific blood glucose levels that were recorded during your recent episode, and have you had any follow-up tests such as HbA1c or fasting blood glucose tests since your ER visit? Patient: They actually did give me a lot of fluid in the emergency room, and my blood sugar was 162 when they checked it recently. I had eaten about two hours before that. They also did an HbA1c test, and it came back at 8, which they said is higher than it was before. Doctor: Could you provide more details about your family history of diabetes or cardiovascular disease, as well",
+              "entailment": 0.9946,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I did not add any information that is not present in the original statement. I also replaced the pronoun \"is\" with the subject \"Metformin\" to make each fact self-contained.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I was brought in because I had a really high blood sugar and they had to treat me for that. I think it was because I wasn't monitoring my sugar intake as much and there's been a lot of stress lately. Doctor: Could you please confirm your age, gender, and provide more details about your recent high blood sugar episode, including when it occurred and any symptoms you experienced? Patient: I'm 55, male. The high blood sugar was a few days ago, and I wasn't really watching what I ate much. I've been pretty stressed with all the events and visitors we've had, and I think that didn't help. I didn't have any symptoms other than feeling a bit off, but they had to treat me for it in the ER. Doctor: Could you provide details about your diabetes diagnosis, including when it was diagnosed, the type of diabetes (if known), and any medications or treatments you have been on? Patient: I wasn't actually diagnosed with diabetes yet, but they did find a really high blood sugar level and treated me in the ER. They put me on metformin, which I think is a medication for diabetes. I'm still figuring out what's going on, but I'm here to talk about it. Doctor: Could you share the specific blood glucose levels that were recorded during your recent episode, and have you had any follow-up tests such as HbA1c or fasting blood glucose tests since your ER visit? Patient: They actually did give me a lot of fluid in the emergency room, and my blood sugar was 162 when they checked it recently. I had eaten about two hours before that. They also did an HbA1c test, and it came back at 8, which they said is higher than it was before. Doctor: Could you provide more details about your family history of diabetes or cardiovascular disease, as well",
+              "entailment": 0.9897,
+              "depth": 2
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "Metformin is 500 mg.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.478,
+              "depth": 1
+            },
+            {
+              "atom": "Metformin is taken twice a day.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4819,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      }
+    ],
+    "objective": [
+      {
+        "unit": "Physical Examination & Vitals: Not mentioned",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.4451,
+          "neutral": 0.28,
+          "contradiction": 0.2747
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "a history of smoking? Patient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. I'm not sure about those details. Doctor: Could you please provide information about your family history of diabetes or cardiovascular disease, and clarify whether you have hypertension, hyperlipidemia, or a history of smoking? Patient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. I'm not sure about those details. Doctor: Could you please provide information about your family history of diabetes or cardiovascular disease, and whether you have hypertension, hyperlipidemia, or a history of smoking? Patient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. I'm not sure about those details. Doctor: Could you please provide information about your family history of diabetes or cardiovascular disease, and whether you have hypertension, hyperlipidemia, or a history of smoking? Patient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. I'm not sure about those details. Doctor: Could you please provide information regarding your family history of diabetes or cardiovascular disease, as well as whether you have hypertension, hyperlipidemia, or a history of smoking? Patient: I don't know about my family history or if I have hypertension, hyperlipidemia, or a history of smoking. That information isn't available to me. Doctor: Thank you for your response. Since you don't have access to your family history or information about hypertension, hyperlipidemia, or smoking, we will proceed with the information we have. Could you please let us know if you have any other medical conditions, medications, or allergies that you would like to share? Patient: I don't have any other medical conditions to report, and I'm not on any other medications besides the metformin for my diabetes. I",
+        "atomic_decomposition": {
+          "original": "Physical Examination & Vitals: Not mentioned",
+          "retained": [
+            {
+              "atom": "Physical Examination is not mentioned.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I was brought in because I had a really high blood sugar and they had to treat me for that. I think it was because I wasn't monitoring my sugar intake as much and there's been a lot of stress lately. Doctor: Could you please confirm your age, gender, and provide more details about your recent high blood sugar episode, including when it occurred and any symptoms you experienced? Patient: I'm 55, male. The high blood sugar was a few days ago, and I wasn't really watching what I ate much. I've been pretty stressed with all the events and visitors we've had, and I think that didn't help. I didn't have any symptoms other than feeling a bit off, but they had to treat me for it in the ER. Doctor: Could you provide details about your diabetes diagnosis, including when it was diagnosed, the type of diabetes (if known), and any medications or treatments you have been on? Patient: I wasn't actually diagnosed with diabetes yet, but they did find a really high blood sugar level and treated me in the ER. They put me on metformin, which I think is a medication for diabetes. I'm still figuring out what's going on, but I'm here to talk about it. Doctor: Could you share the specific blood glucose levels that were recorded during your recent episode, and have you had any follow-up tests such as HbA1c or fasting blood glucose tests since your ER visit? Patient: They actually did give me a lot of fluid in the emergency room, and my blood sugar was 162 when they checked it recently. I had eaten about two hours before that. They also did an HbA1c test, and it came back at 8, which they said is higher than it was before. Doctor: Could you provide more details about your family history of diabetes or cardiovascular disease, as well",
+              "entailment": 0.9746,
+              "depth": 2
+            },
+            {
+              "atom": "Vitals are not mentioned.",
+              "citation": "available to me. Doctor: Thank you for your response. Since you don't have access to your family history or information about hypertension, hyperlipidemia, or smoking, we will proceed with the information we have. Could you please let us know if you have any other medical conditions, medications, or allergies that you would like to share? Patient: I don't have any other medical conditions to report, and I'm not on any other medications besides the metformin for my diabetes. I don't think I have any allergies either. Doctor: Could you please provide information about your family history of diabetes or cardiovascular disease, and whether you have hypertension, hyperlipidemia, or a history of smoking? Patient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. That information isn't available to me. Doctor: Thank you for letting me know. Since we don't have information about your family history or cardiovascular risk factors, I would like to ask if you have had any previous medical evaluations or tests related to hypertension, hyperlipidemia, or smoking history? If not, we can note that as unavailable. Patient: No, I don't think I've had any previous evaluations or tests related to hypertension, hyperlipidemia, or smoking history. I just don't have that information available to me.",
+              "entailment": 0.5176,
+              "depth": 2
+            },
+            {
+              "atom": "Physical Examination is not mentioned.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I was brought in because I had a really high blood sugar and they had to treat me for that. I think it was because I wasn't monitoring my sugar intake as much and there's been a lot of stress lately. Doctor: Could you please confirm your age, gender, and provide more details about your recent high blood sugar episode, including when it occurred and any symptoms you experienced? Patient: I'm 55, male. The high blood sugar was a few days ago, and I wasn't really watching what I ate much. I've been pretty stressed with all the events and visitors we've had, and I think that didn't help. I didn't have any symptoms other than feeling a bit off, but they had to treat me for it in the ER. Doctor: Could you provide details about your diabetes diagnosis, including when it was diagnosed, the type of diabetes (if known), and any medications or treatments you have been on? Patient: I wasn't actually diagnosed with diabetes yet, but they did find a really high blood sugar level and treated me in the ER. They put me on metformin, which I think is a medication for diabetes. I'm still figuring out what's going on, but I'm here to talk about it. Doctor: Could you share the specific blood glucose levels that were recorded during your recent episode, and have you had any follow-up tests such as HbA1c or fasting blood glucose tests since your ER visit? Patient: They actually did give me a lot of fluid in the emergency room, and my blood sugar was 162 when they checked it recently. I had eaten about two hours before that. They also did an HbA1c test, and it came back at 8, which they said is higher than it was before. Doctor: Could you provide more details about your family history of diabetes or cardiovascular disease, as well",
+              "entailment": 0.9746,
+              "depth": 1
+            },
+            {
+              "atom": "Vitals are not mentioned.",
+              "citation": "available to me. Doctor: Thank you for your response. Since you don't have access to your family history or information about hypertension, hyperlipidemia, or smoking, we will proceed with the information we have. Could you please let us know if you have any other medical conditions, medications, or allergies that you would like to share? Patient: I don't have any other medical conditions to report, and I'm not on any other medications besides the metformin for my diabetes. I don't think I have any allergies either. Doctor: Could you please provide information about your family history of diabetes or cardiovascular disease, and whether you have hypertension, hyperlipidemia, or a history of smoking? Patient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. That information isn't available to me. Doctor: Thank you for letting me know. Since we don't have information about your family history or cardiovascular risk factors, I would like to ask if you have had any previous medical evaluations or tests related to hypertension, hyperlipidemia, or smoking history? If not, we can note that as unavailable. Patient: No, I don't think I've had any previous evaluations or tests related to hypertension, hyperlipidemia, or smoking history. I just don't have that information available to me.",
+              "entailment": 0.5176,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I did not add any information or infer anything from the statement. I simply broke it down into two self-contained facts that can stand alone as true or false.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I was brought in because I had a really high blood sugar and they had to treat me for that. I think it was because I wasn't monitoring my sugar intake as much and there's been a lot of stress lately. Doctor: Could you please confirm your age, gender, and provide more details about your recent high blood sugar episode, including when it occurred and any symptoms you experienced? Patient: I'm 55, male. The high blood sugar was a few days ago, and I wasn't really watching what I ate much. I've been pretty stressed with all the events and visitors we've had, and I think that didn't help. I didn't have any symptoms other than feeling a bit off, but they had to treat me for it in the ER. Doctor: Could you provide details about your diabetes diagnosis, including when it was diagnosed, the type of diabetes (if known), and any medications or treatments you have been on? Patient: I wasn't actually diagnosed with diabetes yet, but they did find a really high blood sugar level and treated me in the ER. They put me on metformin, which I think is a medication for diabetes. I'm still figuring out what's going on, but I'm here to talk about it. Doctor: Could you share the specific blood glucose levels that were recorded during your recent episode, and have you had any follow-up tests such as HbA1c or fasting blood glucose tests since your ER visit? Patient: They actually did give me a lot of fluid in the emergency room, and my blood sugar was 162 when they checked it recently. I had eaten about two hours before that. They also did an HbA1c test, and it came back at 8, which they said is higher than it was before. Doctor: Could you provide more details about your family history of diabetes or cardiovascular disease, as well",
+              "entailment": 0.9346,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "Based on the statement \"Physical Examination & Vitals: Not mentioned\", I decompose it into the following atomic facts:",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4443,
+              "depth": 2
+            },
+            {
+              "atom": "These atomic facts are self-contained, independent, and can stand alone as true or false.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4458,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Diagnostic Results & Labs:",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.5474,
+          "neutral": 0.396,
+          "contradiction": 0.0564
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I was brought in because I had a really high blood sugar and they had to treat me for that. I think it was because I wasn't monitoring my sugar intake as much and there's been a lot of stress lately. Doctor: Could you please confirm your age, gender, and provide more details about your recent high blood sugar episode, including when it occurred and any symptoms you experienced? Patient: I'm 55, male. The high blood sugar was a few days ago, and I wasn't really watching what I ate much. I've been pretty stressed with all the events and visitors we've had, and I think that didn't help. I didn't have any symptoms other than feeling a bit off, but they had to treat me for it in the ER. Doctor: Could you provide details about your diabetes diagnosis, including when it was diagnosed, the type of diabetes (if known), and any medications or treatments you have been on? Patient: I wasn't actually diagnosed with diabetes yet, but they did find a really high blood sugar level and treated me in the ER. They put me on metformin, which I think is a medication for diabetes. I'm still figuring out what's going on, but I'm here to talk about it. Doctor: Could you share the specific blood glucose levels that were recorded during your recent episode, and have you had any follow-up tests such as HbA1c or fasting blood glucose tests since your ER visit? Patient: They actually did give me a lot of fluid in the emergency room, and my blood sugar was 162 when they checked it recently. I had eaten about two hours before that. They also did an HbA1c test, and it came back at 8, which they said is higher than it was before. Doctor: Could you provide more details about your family history of diabetes or cardiovascular disease, as well",
+        "atomic_decomposition": {
+          "original": "Diagnostic Results & Labs:",
+          "retained": [
+            {
+              "atom": "Diagnostic Results & Labs:",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I was brought in because I had a really high blood sugar and they had to treat me for that. I think it was because I wasn't monitoring my sugar intake as much and there's been a lot of stress lately. Doctor: Could you please confirm your age, gender, and provide more details about your recent high blood sugar episode, including when it occurred and any symptoms you experienced? Patient: I'm 55, male. The high blood sugar was a few days ago, and I wasn't really watching what I ate much. I've been pretty stressed with all the events and visitors we've had, and I think that didn't help. I didn't have any symptoms other than feeling a bit off, but they had to treat me for it in the ER. Doctor: Could you provide details about your diabetes diagnosis, including when it was diagnosed, the type of diabetes (if known), and any medications or treatments you have been on? Patient: I wasn't actually diagnosed with diabetes yet, but they did find a really high blood sugar level and treated me in the ER. They put me on metformin, which I think is a medication for diabetes. I'm still figuring out what's going on, but I'm here to talk about it. Doctor: Could you share the specific blood glucose levels that were recorded during your recent episode, and have you had any follow-up tests such as HbA1c or fasting blood glucose tests since your ER visit? Patient: They actually did give me a lot of fluid in the emergency room, and my blood sugar was 162 when they checked it recently. I had eaten about two hours before that. They also did an HbA1c test, and it came back at 8, which they said is higher than it was before. Doctor: Could you provide more details about your family history of diabetes or cardiovascular disease, as well",
+              "entailment": 0.5474,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "too_short",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "Blood glucose level: 162 mg/dL",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.9448,
+          "neutral": 0.0417,
+          "contradiction": 0.0135
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I was brought in because I had a really high blood sugar and they had to treat me for that. I think it was because I wasn't monitoring my sugar intake as much and there's been a lot of stress lately. Doctor: Could you please confirm your age, gender, and provide more details about your recent high blood sugar episode, including when it occurred and any symptoms you experienced? Patient: I'm 55, male. The high blood sugar was a few days ago, and I wasn't really watching what I ate much. I've been pretty stressed with all the events and visitors we've had, and I think that didn't help. I didn't have any symptoms other than feeling a bit off, but they had to treat me for it in the ER. Doctor: Could you provide details about your diabetes diagnosis, including when it was diagnosed, the type of diabetes (if known), and any medications or treatments you have been on? Patient: I wasn't actually diagnosed with diabetes yet, but they did find a really high blood sugar level and treated me in the ER. They put me on metformin, which I think is a medication for diabetes. I'm still figuring out what's going on, but I'm here to talk about it. Doctor: Could you share the specific blood glucose levels that were recorded during your recent episode, and have you had any follow-up tests such as HbA1c or fasting blood glucose tests since your ER visit? Patient: They actually did give me a lot of fluid in the emergency room, and my blood sugar was 162 when they checked it recently. I had eaten about two hours before that. They also did an HbA1c test, and it came back at 8, which they said is higher than it was before. Doctor: Could you provide more details about your family history of diabetes or cardiovascular disease, as well",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "HbA1c test: 8% (higher than previous level)",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.9507,
+          "neutral": 0.0341,
+          "contradiction": 0.0149
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I was brought in because I had a really high blood sugar and they had to treat me for that. I think it was because I wasn't monitoring my sugar intake as much and there's been a lot of stress lately. Doctor: Could you please confirm your age, gender, and provide more details about your recent high blood sugar episode, including when it occurred and any symptoms you experienced? Patient: I'm 55, male. The high blood sugar was a few days ago, and I wasn't really watching what I ate much. I've been pretty stressed with all the events and visitors we've had, and I think that didn't help. I didn't have any symptoms other than feeling a bit off, but they had to treat me for it in the ER. Doctor: Could you provide details about your diabetes diagnosis, including when it was diagnosed, the type of diabetes (if known), and any medications or treatments you have been on? Patient: I wasn't actually diagnosed with diabetes yet, but they did find a really high blood sugar level and treated me in the ER. They put me on metformin, which I think is a medication for diabetes. I'm still figuring out what's going on, but I'm here to talk about it. Doctor: Could you share the specific blood glucose levels that were recorded during your recent episode, and have you had any follow-up tests such as HbA1c or fasting blood glucose tests since your ER visit? Patient: They actually did give me a lot of fluid in the emergency room, and my blood sugar was 162 when they checked it recently. I had eaten about two hours before that. They also did an HbA1c test, and it came back at 8, which they said is higher than it was before. Doctor: Could you provide more details about your family history of diabetes or cardiovascular disease, as well",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      }
+    ]
+  },
+  "stage2_stats": {
+    "decision_counts": {
+      "faithful": 5,
+      "uncertain": 3
+    },
+    "num_claims": 8,
+    "num_kept": 8,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_so": {
+    "subjective": "Chief Complaint: High blood sugar episode\nHistory of Present Illness (HPI): The patient, a 55-year-old male, presents with a recent high blood sugar episode, which occurred a few days ago.\nHe reports no symptoms besides feeling \"a bit off.\"\nHe was treated in the emergency room.\nHe was started on metformin.\nThe patient takes Metformin.\nNote that I did not add any information that is not present in the original statement. I also replaced the pronoun \"is\" with the subject \"Metformin\" to make each fact self-contained.\nI've been pretty stressed with all the events and visitors we've had, and I think that didn't help.",
+    "objective": "Physical Examination is not mentioned.\nVitals are not mentioned.\nPhysical Examination is not mentioned.\nVitals are not mentioned.\nNote that I did not add any information or infer anything from the statement. I simply broke it down into two self-contained facts that can stand alone as true or false.\nDiagnostic Results & Labs:\nBlood glucose level: 162 mg/dL\nHbA1c test: 8% (higher than previous level)"
+  },
+  "stage3_key_sentences": [
+    "Doctor: Could you please confirm your age, gender, and provide more details about your recent high blood sugar episode, including when it occurred and any symptoms you experienced?",
+    "I've been pretty stressed with all the events and visitors we've had, and I think that didn't help."
+  ],
+  "stage3_summary_key_phrases": [
+    "patient takes metformin",
+    "blood glucose level",
+    "present illness hpi",
+    "recent high blood",
+    "false diagnostic results",
+    "sugar episode occurred",
+    "hba1c test",
+    "examination mentioned vitals",
+    "162 mg dl",
+    "contained facts stand"
+  ],
+  "stage3_coverage_scores": [
+    {
+      "sentence": "Doctor: Could you please confirm your age, gender, and provide more details about your recent high blood sugar episode, including when it occurred and any symptoms you experienced?",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "Doctor: Could you please confirm your age, gender, and provide more details about your recent high blood sugar episode, including when it occurred and any symptoms you experienced?",
+      "score": 0.477,
+      "is_missing": false,
+      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+    },
+    {
+      "sentence": "I've been pretty stressed with all the events and visitors we've had, and I think that didn't help.",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "I've been pretty stressed with all the events and visitors we've had, and I think that didn't help.",
+      "score": 0.0803,
+      "is_missing": true,
+      "action": "Added: Missing clinical dialogue detail (coverage < 0.40); inserted via GPT-2 fluency optimization."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I've been pretty stressed with all the events and visitors we've had, and I think that didn't help.",
+      "statement": "I've been pretty stressed with all the events and visitors we've had, and I think that didn't help.",
+      "coverage": 0.0803,
+      "status": "added",
+      "reason": "coverage <= cov_min (uMedSum adds the dialogue sentence verbatim)",
+      "insertion": {
+        "section": "subjective",
+        "line_index": 7,
+        "perplexity": 24.1
+      }
+    }
+  ],
+  "stage3_added": [
+    {
+      "statement": "I've been pretty stressed with all the events and visitors we've had, and I think that didn't help.",
+      "evidence": "I've been pretty stressed with all the events and visitors we've had, and I think that didn't help.",
+      "section": "subjective",
+      "candidate": "I've been pretty stressed with all the events and visitors we've had, and I think that didn't help."
+    }
+  ],
+  "stage3_stats": {
+    "num_key_sentences": 2,
+    "num_flagged": 1,
+    "num_added": 1
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "section": "subjective",
+        "claim": "Metformin is 500 mg.",
+        "entailment": 0.478,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "He was treated in the emergency room and started on metformin 500 mg twice a day."
+      },
+      {
+        "section": "subjective",
+        "claim": "Metformin is taken twice a day.",
+        "entailment": 0.4819,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "He was treated in the emergency room and started on metformin 500 mg twice a day."
+      },
+      {
+        "section": "objective",
+        "claim": "Based on the statement \"Physical Examination & Vitals: Not mentioned\", I decompose it into the following atomic facts:",
+        "entailment": 0.4443,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: Not mentioned"
+      },
+      {
+        "section": "objective",
+        "claim": "These atomic facts are self-contained, independent, and can stand alone as true or false.",
+        "entailment": 0.4458,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: Not mentioned"
+      }
+    ]
+  },
+  "final_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** The patient's recent high blood sugar episode and elevated HbA1c level suggest a diagnosis of hyperglycemia or diabetes. Further evaluation and testing are needed to confirm the diagnosis and determine the underlying cause.\n* **Treatment Plan, Medications, and Follow-up:** The patient will continue taking metformin 500 mg twice a day. Further testing, including blood glucose monitoring and HbA1c testing, will be ordered to monitor the patient's condition. The patient will be followed up with to assess the effectiveness of treatment and make any necessary adjustments.\n\nNote: The patient's lack of information about his family history, hypertension, hyperlipidemia, and smoking history limits the ability to fully assess his cardiovascular risk factors. However, the patient's current symptoms and laboratory results suggest a diagnosis of hyperglycemia or diabetes, and further evaluation and testing are necessary to confirm the diagnosis and determine the underlying cause."
+  },
+  "ap_unchanged": true,
+  "thresholds": {
+    "Te": 0.9,
+    "Tc": 0.8,
+    "Ta": 0.5,
+    "cov_min": 0.4,
+    "top_m": 2,
+    "fix_header_bug": true
+  },
+  "models": {
+    "llm": "llama3:8b-instruct-q8_0",
+    "nli": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+    "embedder": "all-MiniLM-L6-v2",
+    "ppl": "gpt2"
+  },
+  "status": "success",
+  "seconds": 11.9,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 55 years old, male. I was brought in because I had a really high blood sugar and they had to treat me for that. I think it was because I wasn't monitoring my sugar intake as much and there's been a lot of stress lately.\nDoctor: Could you please confirm your age, gender, and provide more details about your recent high blood sugar episode, including when it occurred and any symptoms you experienced?\nPatient: I'm 55, male. The high blood sugar was a few days ago, and I wasn't really watching what I ate much. I've been pretty stressed with all the events and visitors we've had, and I think that didn't help. I didn't have any symptoms other than feeling a bit off, but they had to treat me for it in the ER.\nDoctor: Could you provide details about your diabetes diagnosis, including when it was diagnosed, the type of diabetes (if known), and any medications or treatments you have been on?\nPatient: I wasn't actually diagnosed with diabetes yet, but they did find a really high blood sugar level and treated me in the ER. They put me on metformin, which I think is a medication for diabetes. I'm still figuring out what's going on, but I'm here to talk about it.\nDoctor: Could you share the specific blood glucose levels that were recorded during your recent episode, and have you had any follow-up tests such as HbA1c or fasting blood glucose tests since your ER visit?\nPatient: They actually did give me a lot of fluid in the emergency room, and my blood sugar was 162 when they checked it recently. I had eaten about two hours before that. They also did an HbA1c test, and it came back at 8, which they said is higher than it was before.\nDoctor: Could you provide more details about your family history of diabetes or cardiovascular disease, as well as whether you have hypertension, hyperlipidemia, or a history of smoking?\nPatient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. I'm not sure about those details.\nDoctor: Could you please confirm if you currently take any medications, including metformin, or receive any other treatments for your high blood sugar?\nPatient: I currently take metformin, 500 mg twice a day, which they started me on in the emergency room. That's the only medication I'm on for my blood sugar right now.\nDoctor: Could you please provide information about your family history of diabetes or cardiovascular disease, as well as whether you have hypertension, hyperlipidemia, or a history of smoking?\nPatient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. I'm not sure about those details.\nDoctor: Could you please provide information about your family history of diabetes or cardiovascular disease, and whether you have hypertension, hyperlipidemia, or a history of smoking?\nPatient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. I'm not sure about those details.\nDoctor: Could you please provide information about your family history of diabetes or cardiovascular disease, and clarify whether you have hypertension, hyperlipidemia, or a history of smoking?\nPatient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. I'm not sure about those details.\nDoctor: Could you please provide information about your family history of diabetes or cardiovascular disease, and whether you have hypertension, hyperlipidemia, or a history of smoking?\nPatient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. I'm not sure about those details.\nDoctor: Could you please provide information about your family history of diabetes or cardiovascular disease, and whether you have hypertension, hyperlipidemia, or a history of smoking?\nPatient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. I'm not sure about those details.\nDoctor: Could you please provide information regarding your family history of diabetes or cardiovascular disease, as well as whether you have hypertension, hyperlipidemia, or a history of smoking?\nPatient: I don't know about my family history or if I have hypertension, hyperlipidemia, or a history of smoking. That information isn't available to me.\nDoctor: Thank you for your response. Since you don't have access to your family history or information about hypertension, hyperlipidemia, or smoking, we will proceed with the information we have. Could you please let us know if you have any other medical conditions, medications, or allergies that you would like to share?\nPatient: I don't have any other medical conditions to report, and I'm not on any other medications besides the metformin for my diabetes. I don't think I have any allergies either.\nDoctor: Could you please provide information about your family history of diabetes or cardiovascular disease, and whether you have hypertension, hyperlipidemia, or a history of smoking?\nPatient: I don't have information about my family history or whether I have hypertension, hyperlipidemia, or a history of smoking. That information isn't available to me.\nDoctor: Thank you for letting me know. Since we don't have information about your family history or cardiovascular risk factors, I would like to ask if you have had any previous medical evaluations or tests related to hypertension, hyperlipidemia, or smoking history? If not, we can note that as unavailable.\nPatient: No, I don't think I've had any previous evaluations or tests related to hypertension, hyperlipidemia, or smoking history. I just don't have that information available to me.",
+  "reference_so": {
+    "subjective": "Basic information: 55 years old, male. Chief complaint: high blood sugar requiring treatment.\n\nHistory of present illness: Recent episode of high blood sugar, possibly due to poor sugar intake monitoring and recent stress. Patient was treated for this. Blood sugar level was 162 mg/dL two hours after eating, and HbA1c was 8%. Patient is currently taking metformin, 500 mg twice a day, which was started in the emergency room.\n\nPast history: Diabetes history: Not diagnosed yet. Cardiovascular risk factors: Not specified yet. Family history: Not specified yet.",
+    "objective": "Physical examination: Not documented during the simulated consultation.\n\nInvestigations: HbA1c: 8%, Blood sugar level: 162 mg/dL (2 hours postprandial)."
+  }
+}

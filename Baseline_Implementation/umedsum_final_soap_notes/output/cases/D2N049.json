@@ -1,0 +1,348 @@
+{
+  "case_id": "D2N049",
+  "split": "dev",
+  "is_icl_demo": false,
+  "stage1_elements": "Here are the extracted clinical elements in concise bullet points:\n\n**Subjective Elements:**\n\n* Chief complaint: Severe left-sided flank pain\n* History of present illness:\n\t+ Duration: 3 days\n\t+ Onset: Gradual\n\t+ Intensity: Constant and intense\n\t+ Radiation: Pain travels from left back to lower left side, with some radiation to the groin\n\t+ Associated symptoms:\n\t\t- Hematuria (blood in urine)\n\t\t- Nausea\n\t\t- Chills (no fever)\n\t\t- No vomiting\n\t\t- No changes in urinary frequency or volume\n* Relevant medical history:\n\t+ Prior episodes of kidney stones (2-3 times)\n\t+ No prior surgical interventions for kidney stones or related complications\n\n**Objective Elements:**\n\n* None mentioned in the dialogue\n\n**Assessment Elements:**\n\n* Clinical impression: Suspected kidney stone\n\n**Plan Elements:**\n\n* None mentioned in the dialogue (the doctor has not yet made a treatment plan or ordered any tests)",
+  "stage1_raw_note": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:\n\n**SUBJECTIVE:**\n\n* **Chief Complaint:** Severe left-sided flank pain\n* **History of Present Illness (HPI):**\n\t+ Duration: 3 days\n\t+ Onset: Gradual\n\t+ Intensity: Constant and intense\n\t+ Radiation: Pain travels from left back to lower left side, with some radiation to the groin\n\t+ Associated symptoms:\n\t\t- Hematuria (blood in urine)\n\t\t- Nausea\n\t\t- Chills (no fever)\n\t\t- No vomiting\n\t\t- No changes in urinary frequency or volume\n\t+ Relevant medical history:\n\t\t- Prior episodes of kidney stones (2-3 times)\n\t\t- No prior surgical interventions for kidney stones or related complications\n\n**OBJECTIVE:**\n\n* None mentioned in the dialogue\n\n**ASSESSMENT AND PLAN:**\n\n* **Diagnoses and Clinical Reasoning:** Suspected kidney stone\n* **Treatment Plan, Medications, and Follow-up:** Further evaluation and management will be determined based on the results of imaging studies and urinalysis. The patient will be referred for a CT scan or ultrasound to confirm the diagnosis and rule out other potential causes of the pain. The patient will also be prescribed pain management medication as needed.\n\n**SOAP NOTE:**\n\nThis patient presents with a chief complaint of severe left-sided flank pain, which has been ongoing for 3 days. The patient reports a gradual onset of pain, which has been constant and intense, with radiation to the groin. The patient has a history of prior episodes of kidney stones, but no prior surgical interventions for kidney stones or related complications. The patient's symptoms are consistent with a suspected kidney stone, and further evaluation and management will be determined based on the results of imaging studies and urinalysis.",
+  "stage1_parse": {
+    "parse_mode": "main_headings",
+    "parse_ok": true,
+    "dropped_preamble": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:"
+  },
+  "stage1_so": {
+    "subjective": "* **Chief Complaint:** Severe left-sided flank pain\n* **History of Present Illness (HPI):**\n\t+ Duration: 3 days\n\t+ Onset: Gradual\n\t+ Intensity: Constant and intense\n\t+ Radiation: Pain travels from left back to lower left side, with some radiation to the groin\n\t+ Associated symptoms:\n\t\t- Hematuria (blood in urine)\n\t\t- Nausea\n\t\t- Chills (no fever)\n\t\t- No vomiting\n\t\t- No changes in urinary frequency or volume\n\t+ Relevant medical history:\n\t\t- Prior episodes of kidney stones (2-3 times)\n\t\t- No prior surgical interventions for kidney stones or related complications",
+    "objective": "* None mentioned in the dialogue"
+  },
+  "stage1_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** Suspected kidney stone\n* **Treatment Plan, Medications, and Follow-up:** Further evaluation and management will be determined based on the results of imaging studies and urinalysis. The patient will be referred for a CT scan or ultrasound to confirm the diagnosis and rule out other potential causes of the pain. The patient will also be prescribed pain management medication as needed.\n\n**SOAP NOTE:**\n\nThis patient presents with a chief complaint of severe left-sided flank pain, which has been ongoing for 3 days. The patient reports a gradual onset of pain, which has been constant and intense, with radiation to the groin. The patient has a history of prior episodes of kidney stones, but no prior surgical interventions for kidney stones or related complications. The patient's symptoms are consistent with a suspected kidney stone, and further evaluation and management will be determined based on the results of imaging studies and urinalysis."
+  },
+  "stage2_so": {
+    "subjective": "Chief Complaint: Severe left-sided flank pain\nDuration: 3 days\nIntensity: Constant and intense\nPain travels from the left back to the lower left side.\nRadiation travels from the left back to the lower left side.\nRadiation travels to the groin.\nNote that I've split the original statement into three separate facts, each describing a different aspect of the radiation and pain. I've also replaced the pronoun \"some\" with the subject \"radiation\" to make each fact self-contained.\nHematuria (blood in urine)\nChills (no fever)\nThe patient has no changes in urinary frequency.\nThe patient has no changes in urinary volume.\nNote that I've split the original statement into two separate facts, each describing a different aspect of urinary function.\nPrior episodes of kidney stones (2-3 times)\nNote that there is only one proposition in this statement, so it can be output as a single fact.\nThe patient has no prior surgical interventions for kidney stones.\nThe patient has no prior surgical interventions for related complications.\nNote that I've followed the rules by splitting the list, conjunction, and separate findings into individual facts, and replacing pronouns with the subject (\"The patient\").",
+    "objective": "None mentioned in the dialogue"
+  },
+  "stage2_audit": {
+    "subjective": [
+      {
+        "unit": "Chief Complaint: Severe left-sided flank pain",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9341,
+          "neutral": 0.0493,
+          "contradiction": 0.0164
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 52 years old, and I'm here because I think I have a kidney stone. I've been in a lot of pain on my left side for about three days, and it's been getting worse. I haven't passed it yet, and I'm really struggling with the pain. Doctor: Have you experienced any hematuria, nausea, vomiting, or fever associated with the pain? Patient: I did notice some blood in my urine this morning, and I've been feeling pretty nauseous. I haven't had a fever, but I've had some chills. It's been really hard to eat or even get comfortable because of the pain. Doctor: Have you experienced any prior episodes of kidney stones or similar symptoms in the past? Patient: Yes, I've had kidney stones before—this might be my third time. I haven't had one in a while, but I remember the pain being similar each time, and it usually takes about three to four days to pass. Doctor: Have you experienced any fever during this current episode, and if so, what was the highest temperature recorded? Additionally, have you had any prior surgical interventions for kidney stones or related complications? Patient: I haven't had a fever, but I did have some chills. I don't remember having any surgery for kidney stones before. Doctor: Could you describe the location of the pain, whether it radiates to any other areas, and if you have any other symptoms such as nausea, vomiting, or blood in your urine? Patient: The pain started on my left back and has been traveling lower, but it's still mostly on the left side. I haven't passed the stone yet, and I've had some blood in my urine this morning. I also feel really nauseous and can't eat because of the pain. It's been constant and really intense. Doctor: Have you had any recent imaging studies",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "Duration: 3 days",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9971,
+          "neutral": 0.0017,
+          "contradiction": 0.0011
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 52 years old, and I'm here because I think I have a kidney stone. I've been in a lot of pain on my left side for about three days, and it's been getting worse. I haven't passed it yet, and I'm really struggling with the pain. Doctor: Have you experienced any hematuria, nausea, vomiting, or fever associated with the pain? Patient: I did notice some blood in my urine this morning, and I've been feeling pretty nauseous. I haven't had a fever, but I've had some chills. It's been really hard to eat or even get comfortable because of the pain. Doctor: Have you experienced any prior episodes of kidney stones or similar symptoms in the past? Patient: Yes, I've had kidney stones before—this might be my third time. I haven't had one in a while, but I remember the pain being similar each time, and it usually takes about three to four days to pass. Doctor: Have you experienced any fever during this current episode, and if so, what was the highest temperature recorded? Additionally, have you had any prior surgical interventions for kidney stones or related complications? Patient: I haven't had a fever, but I did have some chills. I don't remember having any surgery for kidney stones before. Doctor: Could you describe the location of the pain, whether it radiates to any other areas, and if you have any other symptoms such as nausea, vomiting, or blood in your urine? Patient: The pain started on my left back and has been traveling lower, but it's still mostly on the left side. I haven't passed the stone yet, and I've had some blood in my urine this morning. I also feel really nauseous and can't eat because of the pain. It's been constant and really intense. Doctor: Have you had any recent imaging studies",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "Intensity: Constant and intense",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9727,
+          "neutral": 0.022,
+          "contradiction": 0.0056
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 52 years old, and I'm here because I think I have a kidney stone. I've been in a lot of pain on my left side for about three days, and it's been getting worse. I haven't passed it yet, and I'm really struggling with the pain. Doctor: Have you experienced any hematuria, nausea, vomiting, or fever associated with the pain? Patient: I did notice some blood in my urine this morning, and I've been feeling pretty nauseous. I haven't had a fever, but I've had some chills. It's been really hard to eat or even get comfortable because of the pain. Doctor: Have you experienced any prior episodes of kidney stones or similar symptoms in the past? Patient: Yes, I've had kidney stones before—this might be my third time. I haven't had one in a while, but I remember the pain being similar each time, and it usually takes about three to four days to pass. Doctor: Have you experienced any fever during this current episode, and if so, what was the highest temperature recorded? Additionally, have you had any prior surgical interventions for kidney stones or related complications? Patient: I haven't had a fever, but I did have some chills. I don't remember having any surgery for kidney stones before. Doctor: Could you describe the location of the pain, whether it radiates to any other areas, and if you have any other symptoms such as nausea, vomiting, or blood in your urine? Patient: The pain started on my left back and has been traveling lower, but it's still mostly on the left side. I haven't passed the stone yet, and I've had some blood in my urine this morning. I also feel really nauseous and can't eat because of the pain. It's been constant and really intense. Doctor: Have you had any recent imaging studies",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "Radiation: Pain travels from left back to lower left side, with some radiation to the groin",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.5259,
+          "neutral": 0.2461,
+          "contradiction": 0.228
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "on and get me some relief. Doctor: Could you please describe the location and intensity of the pain, and have you experienced any radiation of the pain to other areas, such as the groin or abdomen? Patient: The pain started on my left back and has been traveling lower, but it's still mostly on the left side. It's been constant and really intense, and it's starting to go down into my groin, but I wouldn't say it's abdominal pain. It's just so bad I can't get comfortable. Doctor: Has the patient undergone any urinalysis or imaging studies for this current episode? Patient: No, I haven't had any urinalysis or imaging studies done for this current episode. I just came in today because the pain has been so bad and I noticed blood in my urine. I'm really hoping we can figure out what's going on and get me some relief. Doctor: Has the patient had any fever or elevated temperature during this episode? Patient: No, I haven't had a fever during this episode. I did have some chills, though. I'm just really hoping we can get this pain under control. It's been so bad I can't even eat or get comfortable. Doctor: Has the patient experienced any vomiting or changes in urinary frequency or volume during this episode? Patient: No, I haven't vomited, but I do feel nauseous. I haven't noticed any changes in how much I'm urinating, just that I started seeing some blood this morning. It's been really hard to focus on anything else with how bad the pain is. Doctor: Have you had any fever or chills associated with this pain? Patient: I did have some chills, but no fever. I'm just really hoping we can get this pain under control. It's been so bad I can't even eat or get comfortable. Doctor: Have you had any urinalysis or imaging studies for this current episode? Patient: No, I haven't had any urinalysis or imaging studies",
+        "atomic_decomposition": {
+          "original": "Radiation: Pain travels from left back to lower left side, with some radiation to the groin",
+          "retained": [
+            {
+              "atom": "Pain travels from the left back to the lower left side.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 52 years old, and I'm here because I think I have a kidney stone. I've been in a lot of pain on my left side for about three days, and it's been getting worse. I haven't passed it yet, and I'm really struggling with the pain. Doctor: Have you experienced any hematuria, nausea, vomiting, or fever associated with the pain? Patient: I did notice some blood in my urine this morning, and I've been feeling pretty nauseous. I haven't had a fever, but I've had some chills. It's been really hard to eat or even get comfortable because of the pain. Doctor: Have you experienced any prior episodes of kidney stones or similar symptoms in the past? Patient: Yes, I've had kidney stones before—this might be my third time. I haven't had one in a while, but I remember the pain being similar each time, and it usually takes about three to four days to pass. Doctor: Have you experienced any fever during this current episode, and if so, what was the highest temperature recorded? Additionally, have you had any prior surgical interventions for kidney stones or related complications? Patient: I haven't had a fever, but I did have some chills. I don't remember having any surgery for kidney stones before. Doctor: Could you describe the location of the pain, whether it radiates to any other areas, and if you have any other symptoms such as nausea, vomiting, or blood in your urine? Patient: The pain started on my left back and has been traveling lower, but it's still mostly on the left side. I haven't passed the stone yet, and I've had some blood in my urine this morning. I also feel really nauseous and can't eat because of the pain. It's been constant and really intense. Doctor: Have you had any recent imaging studies",
+              "entailment": 0.9922,
+              "depth": 1
+            },
+            {
+              "atom": "Radiation travels from the left back to the lower left side.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 52 years old, and I'm here because I think I have a kidney stone. I've been in a lot of pain on my left side for about three days, and it's been getting worse. I haven't passed it yet, and I'm really struggling with the pain. Doctor: Have you experienced any hematuria, nausea, vomiting, or fever associated with the pain? Patient: I did notice some blood in my urine this morning, and I've been feeling pretty nauseous. I haven't had a fever, but I've had some chills. It's been really hard to eat or even get comfortable because of the pain. Doctor: Have you experienced any prior episodes of kidney stones or similar symptoms in the past? Patient: Yes, I've had kidney stones before—this might be my third time. I haven't had one in a while, but I remember the pain being similar each time, and it usually takes about three to four days to pass. Doctor: Have you experienced any fever during this current episode, and if so, what was the highest temperature recorded? Additionally, have you had any prior surgical interventions for kidney stones or related complications? Patient: I haven't had a fever, but I did have some chills. I don't remember having any surgery for kidney stones before. Doctor: Could you describe the location of the pain, whether it radiates to any other areas, and if you have any other symptoms such as nausea, vomiting, or blood in your urine? Patient: The pain started on my left back and has been traveling lower, but it's still mostly on the left side. I haven't passed the stone yet, and I've had some blood in my urine this morning. I also feel really nauseous and can't eat because of the pain. It's been constant and really intense. Doctor: Have you had any recent imaging studies",
+              "entailment": 0.8228,
+              "depth": 1
+            },
+            {
+              "atom": "Radiation travels to the groin.",
+              "citation": "on and get me some relief. Doctor: Could you please describe the location and intensity of the pain, and have you experienced any radiation of the pain to other areas, such as the groin or abdomen? Patient: The pain started on my left back and has been traveling lower, but it's still mostly on the left side. It's been constant and really intense, and it's starting to go down into my groin, but I wouldn't say it's abdominal pain. It's just so bad I can't get comfortable. Doctor: Has the patient undergone any urinalysis or imaging studies for this current episode? Patient: No, I haven't had any urinalysis or imaging studies done for this current episode. I just came in today because the pain has been so bad and I noticed blood in my urine. I'm really hoping we can figure out what's going on and get me some relief. Doctor: Has the patient had any fever or elevated temperature during this episode? Patient: No, I haven't had a fever during this episode. I did have some chills, though. I'm just really hoping we can get this pain under control. It's been so bad I can't even eat or get comfortable. Doctor: Has the patient experienced any vomiting or changes in urinary frequency or volume during this episode? Patient: No, I haven't vomited, but I do feel nauseous. I haven't noticed any changes in how much I'm urinating, just that I started seeing some blood this morning. It's been really hard to focus on anything else with how bad the pain is. Doctor: Have you had any fever or chills associated with this pain? Patient: I did have some chills, but no fever. I'm just really hoping we can get this pain under control. It's been so bad I can't even eat or get comfortable. Doctor: Have you had any urinalysis or imaging studies for this current episode? Patient: No, I haven't had any urinalysis or imaging studies",
+              "entailment": 0.5771,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've split the original statement into three separate facts, each describing a different aspect of the radiation and pain. I've also replaced the pronoun \"some\" with the subject \"radiation\" to make each fact self-contained.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 52 years old, and I'm here because I think I have a kidney stone. I've been in a lot of pain on my left side for about three days, and it's been getting worse. I haven't passed it yet, and I'm really struggling with the pain. Doctor: Have you experienced any hematuria, nausea, vomiting, or fever associated with the pain? Patient: I did notice some blood in my urine this morning, and I've been feeling pretty nauseous. I haven't had a fever, but I've had some chills. It's been really hard to eat or even get comfortable because of the pain. Doctor: Have you experienced any prior episodes of kidney stones or similar symptoms in the past? Patient: Yes, I've had kidney stones before—this might be my third time. I haven't had one in a while, but I remember the pain being similar each time, and it usually takes about three to four days to pass. Doctor: Have you experienced any fever during this current episode, and if so, what was the highest temperature recorded? Additionally, have you had any prior surgical interventions for kidney stones or related complications? Patient: I haven't had a fever, but I did have some chills. I don't remember having any surgery for kidney stones before. Doctor: Could you describe the location of the pain, whether it radiates to any other areas, and if you have any other symptoms such as nausea, vomiting, or blood in your urine? Patient: The pain started on my left back and has been traveling lower, but it's still mostly on the left side. I haven't passed the stone yet, and I've had some blood in my urine this morning. I also feel really nauseous and can't eat because of the pain. It's been constant and really intense. Doctor: Have you had any recent imaging studies",
+              "entailment": 0.9839,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "Hematuria (blood in urine)",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9971,
+          "neutral": 0.0019,
+          "contradiction": 0.0009
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 52 years old, and I'm here because I think I have a kidney stone. I've been in a lot of pain on my left side for about three days, and it's been getting worse. I haven't passed it yet, and I'm really struggling with the pain. Doctor: Have you experienced any hematuria, nausea, vomiting, or fever associated with the pain? Patient: I did notice some blood in my urine this morning, and I've been feeling pretty nauseous. I haven't had a fever, but I've had some chills. It's been really hard to eat or even get comfortable because of the pain. Doctor: Have you experienced any prior episodes of kidney stones or similar symptoms in the past? Patient: Yes, I've had kidney stones before—this might be my third time. I haven't had one in a while, but I remember the pain being similar each time, and it usually takes about three to four days to pass. Doctor: Have you experienced any fever during this current episode, and if so, what was the highest temperature recorded? Additionally, have you had any prior surgical interventions for kidney stones or related complications? Patient: I haven't had a fever, but I did have some chills. I don't remember having any surgery for kidney stones before. Doctor: Could you describe the location of the pain, whether it radiates to any other areas, and if you have any other symptoms such as nausea, vomiting, or blood in your urine? Patient: The pain started on my left back and has been traveling lower, but it's still mostly on the left side. I haven't passed the stone yet, and I've had some blood in my urine this morning. I also feel really nauseous and can't eat because of the pain. It's been constant and really intense. Doctor: Have you had any recent imaging studies",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "Chills (no fever)",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9985,
+          "neutral": 0.0008,
+          "contradiction": 0.0008
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 52 years old, and I'm here because I think I have a kidney stone. I've been in a lot of pain on my left side for about three days, and it's been getting worse. I haven't passed it yet, and I'm really struggling with the pain. Doctor: Have you experienced any hematuria, nausea, vomiting, or fever associated with the pain? Patient: I did notice some blood in my urine this morning, and I've been feeling pretty nauseous. I haven't had a fever, but I've had some chills. It's been really hard to eat or even get comfortable because of the pain. Doctor: Have you experienced any prior episodes of kidney stones or similar symptoms in the past? Patient: Yes, I've had kidney stones before—this might be my third time. I haven't had one in a while, but I remember the pain being similar each time, and it usually takes about three to four days to pass. Doctor: Have you experienced any fever during this current episode, and if so, what was the highest temperature recorded? Additionally, have you had any prior surgical interventions for kidney stones or related complications? Patient: I haven't had a fever, but I did have some chills. I don't remember having any surgery for kidney stones before. Doctor: Could you describe the location of the pain, whether it radiates to any other areas, and if you have any other symptoms such as nausea, vomiting, or blood in your urine? Patient: The pain started on my left back and has been traveling lower, but it's still mostly on the left side. I haven't passed the stone yet, and I've had some blood in my urine this morning. I also feel really nauseous and can't eat because of the pain. It's been constant and really intense. Doctor: Have you had any recent imaging studies",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "No changes in urinary frequency or volume",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.7798,
+          "neutral": 0.1295,
+          "contradiction": 0.0907
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "been really hard to focus on anything else with how bad the pain is. Doctor: Have you had any fever or chills associated with this pain? Patient: I did have some chills, but no fever. I'm just really hoping we can get this pain under control. It's been so bad I can't even eat or get comfortable. Doctor: Have you had any urinalysis or imaging studies for this current episode? Patient: No, I haven't had any urinalysis or imaging studies done for this current episode. I just came in today because the pain has been so bad and I noticed blood in my urine. I'm really hoping we can figure out what's going on and get me some relief. Doctor: Could you describe the location, intensity, and any radiation of the pain? Have you noticed any changes in the color or frequency of your urine? Patient: The pain started on my left back and has been traveling lower, but it's still really intense and constant. I can't get comfortable, and I've noticed blood in my urine this morning. The color of my urine is different now, and I haven't had any changes in how much I'm urinating, just that it's been really painful.",
+        "atomic_decomposition": {
+          "original": "No changes in urinary frequency or volume",
+          "retained": [
+            {
+              "atom": "The patient has no changes in urinary frequency.",
+              "citation": "been really hard to focus on anything else with how bad the pain is. Doctor: Have you had any fever or chills associated with this pain? Patient: I did have some chills, but no fever. I'm just really hoping we can get this pain under control. It's been so bad I can't even eat or get comfortable. Doctor: Have you had any urinalysis or imaging studies for this current episode? Patient: No, I haven't had any urinalysis or imaging studies done for this current episode. I just came in today because the pain has been so bad and I noticed blood in my urine. I'm really hoping we can figure out what's going on and get me some relief. Doctor: Could you describe the location, intensity, and any radiation of the pain? Have you noticed any changes in the color or frequency of your urine? Patient: The pain started on my left back and has been traveling lower, but it's still really intense and constant. I can't get comfortable, and I've noticed blood in my urine this morning. The color of my urine is different now, and I haven't had any changes in how much I'm urinating, just that it's been really painful.",
+              "entailment": 0.6094,
+              "depth": 1
+            },
+            {
+              "atom": "The patient has no changes in urinary volume.",
+              "citation": "been really hard to focus on anything else with how bad the pain is. Doctor: Have you had any fever or chills associated with this pain? Patient: I did have some chills, but no fever. I'm just really hoping we can get this pain under control. It's been so bad I can't even eat or get comfortable. Doctor: Have you had any urinalysis or imaging studies for this current episode? Patient: No, I haven't had any urinalysis or imaging studies done for this current episode. I just came in today because the pain has been so bad and I noticed blood in my urine. I'm really hoping we can figure out what's going on and get me some relief. Doctor: Could you describe the location, intensity, and any radiation of the pain? Have you noticed any changes in the color or frequency of your urine? Patient: The pain started on my left back and has been traveling lower, but it's still really intense and constant. I can't get comfortable, and I've noticed blood in my urine this morning. The color of my urine is different now, and I haven't had any changes in how much I'm urinating, just that it's been really painful.",
+              "entailment": 0.7354,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've split the original statement into two separate facts, each describing a different aspect of urinary function.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 52 years old, and I'm here because I think I have a kidney stone. I've been in a lot of pain on my left side for about three days, and it's been getting worse. I haven't passed it yet, and I'm really struggling with the pain. Doctor: Have you experienced any hematuria, nausea, vomiting, or fever associated with the pain? Patient: I did notice some blood in my urine this morning, and I've been feeling pretty nauseous. I haven't had a fever, but I've had some chills. It's been really hard to eat or even get comfortable because of the pain. Doctor: Have you experienced any prior episodes of kidney stones or similar symptoms in the past? Patient: Yes, I've had kidney stones before—this might be my third time. I haven't had one in a while, but I remember the pain being similar each time, and it usually takes about three to four days to pass. Doctor: Have you experienced any fever during this current episode, and if so, what was the highest temperature recorded? Additionally, have you had any prior surgical interventions for kidney stones or related complications? Patient: I haven't had a fever, but I did have some chills. I don't remember having any surgery for kidney stones before. Doctor: Could you describe the location of the pain, whether it radiates to any other areas, and if you have any other symptoms such as nausea, vomiting, or blood in your urine? Patient: The pain started on my left back and has been traveling lower, but it's still mostly on the left side. I haven't passed the stone yet, and I've had some blood in my urine this morning. I also feel really nauseous and can't eat because of the pain. It's been constant and really intense. Doctor: Have you had any recent imaging studies",
+              "entailment": 0.999,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "Prior episodes of kidney stones (2-3 times)",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9648,
+          "neutral": 0.028,
+          "contradiction": 0.0072
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 52 years old, and I'm here because I think I have a kidney stone. I've been in a lot of pain on my left side for about three days, and it's been getting worse. I haven't passed it yet, and I'm really struggling with the pain. Doctor: Have you experienced any hematuria, nausea, vomiting, or fever associated with the pain? Patient: I did notice some blood in my urine this morning, and I've been feeling pretty nauseous. I haven't had a fever, but I've had some chills. It's been really hard to eat or even get comfortable because of the pain. Doctor: Have you experienced any prior episodes of kidney stones or similar symptoms in the past? Patient: Yes, I've had kidney stones before—this might be my third time. I haven't had one in a while, but I remember the pain being similar each time, and it usually takes about three to four days to pass. Doctor: Have you experienced any fever during this current episode, and if so, what was the highest temperature recorded? Additionally, have you had any prior surgical interventions for kidney stones or related complications? Patient: I haven't had a fever, but I did have some chills. I don't remember having any surgery for kidney stones before. Doctor: Could you describe the location of the pain, whether it radiates to any other areas, and if you have any other symptoms such as nausea, vomiting, or blood in your urine? Patient: The pain started on my left back and has been traveling lower, but it's still mostly on the left side. I haven't passed the stone yet, and I've had some blood in my urine this morning. I also feel really nauseous and can't eat because of the pain. It's been constant and really intense. Doctor: Have you had any recent imaging studies",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "No prior surgical interventions for kidney stones or related complications",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.6792,
+          "neutral": 0.0862,
+          "contradiction": 0.2345
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 52 years old, and I'm here because I think I have a kidney stone. I've been in a lot of pain on my left side for about three days, and it's been getting worse. I haven't passed it yet, and I'm really struggling with the pain. Doctor: Have you experienced any hematuria, nausea, vomiting, or fever associated with the pain? Patient: I did notice some blood in my urine this morning, and I've been feeling pretty nauseous. I haven't had a fever, but I've had some chills. It's been really hard to eat or even get comfortable because of the pain. Doctor: Have you experienced any prior episodes of kidney stones or similar symptoms in the past? Patient: Yes, I've had kidney stones before—this might be my third time. I haven't had one in a while, but I remember the pain being similar each time, and it usually takes about three to four days to pass. Doctor: Have you experienced any fever during this current episode, and if so, what was the highest temperature recorded? Additionally, have you had any prior surgical interventions for kidney stones or related complications? Patient: I haven't had a fever, but I did have some chills. I don't remember having any surgery for kidney stones before. Doctor: Could you describe the location of the pain, whether it radiates to any other areas, and if you have any other symptoms such as nausea, vomiting, or blood in your urine? Patient: The pain started on my left back and has been traveling lower, but it's still mostly on the left side. I haven't passed the stone yet, and I've had some blood in my urine this morning. I also feel really nauseous and can't eat because of the pain. It's been constant and really intense. Doctor: Have you had any recent imaging studies",
+        "atomic_decomposition": {
+          "original": "No prior surgical interventions for kidney stones or related complications",
+          "retained": [
+            {
+              "atom": "Note that there is only one proposition in this statement, so it can be output as a single fact.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 52 years old, and I'm here because I think I have a kidney stone. I've been in a lot of pain on my left side for about three days, and it's been getting worse. I haven't passed it yet, and I'm really struggling with the pain. Doctor: Have you experienced any hematuria, nausea, vomiting, or fever associated with the pain? Patient: I did notice some blood in my urine this morning, and I've been feeling pretty nauseous. I haven't had a fever, but I've had some chills. It's been really hard to eat or even get comfortable because of the pain. Doctor: Have you experienced any prior episodes of kidney stones or similar symptoms in the past? Patient: Yes, I've had kidney stones before—this might be my third time. I haven't had one in a while, but I remember the pain being similar each time, and it usually takes about three to four days to pass. Doctor: Have you experienced any fever during this current episode, and if so, what was the highest temperature recorded? Additionally, have you had any prior surgical interventions for kidney stones or related complications? Patient: I haven't had a fever, but I did have some chills. I don't remember having any surgery for kidney stones before. Doctor: Could you describe the location of the pain, whether it radiates to any other areas, and if you have any other symptoms such as nausea, vomiting, or blood in your urine? Patient: The pain started on my left back and has been traveling lower, but it's still mostly on the left side. I haven't passed the stone yet, and I've had some blood in my urine this morning. I also feel really nauseous and can't eat because of the pain. It's been constant and really intense. Doctor: Have you had any recent imaging studies",
+              "entailment": 0.9775,
+              "depth": 2
+            },
+            {
+              "atom": "The patient has no prior surgical interventions for kidney stones.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 52 years old, and I'm here because I think I have a kidney stone. I've been in a lot of pain on my left side for about three days, and it's been getting worse. I haven't passed it yet, and I'm really struggling with the pain. Doctor: Have you experienced any hematuria, nausea, vomiting, or fever associated with the pain? Patient: I did notice some blood in my urine this morning, and I've been feeling pretty nauseous. I haven't had a fever, but I've had some chills. It's been really hard to eat or even get comfortable because of the pain. Doctor: Have you experienced any prior episodes of kidney stones or similar symptoms in the past? Patient: Yes, I've had kidney stones before—this might be my third time. I haven't had one in a while, but I remember the pain being similar each time, and it usually takes about three to four days to pass. Doctor: Have you experienced any fever during this current episode, and if so, what was the highest temperature recorded? Additionally, have you had any prior surgical interventions for kidney stones or related complications? Patient: I haven't had a fever, but I did have some chills. I don't remember having any surgery for kidney stones before. Doctor: Could you describe the location of the pain, whether it radiates to any other areas, and if you have any other symptoms such as nausea, vomiting, or blood in your urine? Patient: The pain started on my left back and has been traveling lower, but it's still mostly on the left side. I haven't passed the stone yet, and I've had some blood in my urine this morning. I also feel really nauseous and can't eat because of the pain. It's been constant and really intense. Doctor: Have you had any recent imaging studies",
+              "entailment": 0.9624,
+              "depth": 1
+            },
+            {
+              "atom": "The patient has no prior surgical interventions for related complications.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 52 years old, and I'm here because I think I have a kidney stone. I've been in a lot of pain on my left side for about three days, and it's been getting worse. I haven't passed it yet, and I'm really struggling with the pain. Doctor: Have you experienced any hematuria, nausea, vomiting, or fever associated with the pain? Patient: I did notice some blood in my urine this morning, and I've been feeling pretty nauseous. I haven't had a fever, but I've had some chills. It's been really hard to eat or even get comfortable because of the pain. Doctor: Have you experienced any prior episodes of kidney stones or similar symptoms in the past? Patient: Yes, I've had kidney stones before—this might be my third time. I haven't had one in a while, but I remember the pain being similar each time, and it usually takes about three to four days to pass. Doctor: Have you experienced any fever during this current episode, and if so, what was the highest temperature recorded? Additionally, have you had any prior surgical interventions for kidney stones or related complications? Patient: I haven't had a fever, but I did have some chills. I don't remember having any surgery for kidney stones before. Doctor: Could you describe the location of the pain, whether it radiates to any other areas, and if you have any other symptoms such as nausea, vomiting, or blood in your urine? Patient: The pain started on my left back and has been traveling lower, but it's still mostly on the left side. I haven't passed the stone yet, and I've had some blood in my urine this morning. I also feel really nauseous and can't eat because of the pain. It's been constant and really intense. Doctor: Have you had any recent imaging studies",
+              "entailment": 0.8198,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've followed the rules by splitting the list, conjunction, and separate findings into individual facts, and replacing pronouns with the subject (\"The patient\").",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 52 years old, and I'm here because I think I have a kidney stone. I've been in a lot of pain on my left side for about three days, and it's been getting worse. I haven't passed it yet, and I'm really struggling with the pain. Doctor: Have you experienced any hematuria, nausea, vomiting, or fever associated with the pain? Patient: I did notice some blood in my urine this morning, and I've been feeling pretty nauseous. I haven't had a fever, but I've had some chills. It's been really hard to eat or even get comfortable because of the pain. Doctor: Have you experienced any prior episodes of kidney stones or similar symptoms in the past? Patient: Yes, I've had kidney stones before—this might be my third time. I haven't had one in a while, but I remember the pain being similar each time, and it usually takes about three to four days to pass. Doctor: Have you experienced any fever during this current episode, and if so, what was the highest temperature recorded? Additionally, have you had any prior surgical interventions for kidney stones or related complications? Patient: I haven't had a fever, but I did have some chills. I don't remember having any surgery for kidney stones before. Doctor: Could you describe the location of the pain, whether it radiates to any other areas, and if you have any other symptoms such as nausea, vomiting, or blood in your urine? Patient: The pain started on my left back and has been traveling lower, but it's still mostly on the left side. I haven't passed the stone yet, and I've had some blood in my urine this morning. I also feel really nauseous and can't eat because of the pain. It's been constant and really intense. Doctor: Have you had any recent imaging studies",
+              "entailment": 0.9985,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "The patient has no prior surgical interventions.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4375,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      }
+    ],
+    "objective": [
+      {
+        "unit": "None mentioned in the dialogue",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.9854,
+          "neutral": 0.0029,
+          "contradiction": 0.0118
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 52 years old, and I'm here because I think I have a kidney stone. I've been in a lot of pain on my left side for about three days, and it's been getting worse. I haven't passed it yet, and I'm really struggling with the pain. Doctor: Have you experienced any hematuria, nausea, vomiting, or fever associated with the pain? Patient: I did notice some blood in my urine this morning, and I've been feeling pretty nauseous. I haven't had a fever, but I've had some chills. It's been really hard to eat or even get comfortable because of the pain. Doctor: Have you experienced any prior episodes of kidney stones or similar symptoms in the past? Patient: Yes, I've had kidney stones before—this might be my third time. I haven't had one in a while, but I remember the pain being similar each time, and it usually takes about three to four days to pass. Doctor: Have you experienced any fever during this current episode, and if so, what was the highest temperature recorded? Additionally, have you had any prior surgical interventions for kidney stones or related complications? Patient: I haven't had a fever, but I did have some chills. I don't remember having any surgery for kidney stones before. Doctor: Could you describe the location of the pain, whether it radiates to any other areas, and if you have any other symptoms such as nausea, vomiting, or blood in your urine? Patient: The pain started on my left back and has been traveling lower, but it's still mostly on the left side. I haven't passed the stone yet, and I've had some blood in my urine this morning. I also feel really nauseous and can't eat because of the pain. It's been constant and really intense. Doctor: Have you had any recent imaging studies",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      }
+    ]
+  },
+  "stage2_stats": {
+    "decision_counts": {
+      "faithful": 7,
+      "uncertain": 3
+    },
+    "num_claims": 10,
+    "num_kept": 10,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_so": {
+    "subjective": "Chief Complaint: Severe left-sided flank pain\nDuration: 3 days\nIntensity: Constant and intense\nPain travels from the left back to the lower left side.\nRadiation travels from the left back to the lower left side.\nRadiation travels to the groin.\nNote that I've split the original statement into three separate facts, each describing a different aspect of the radiation and pain. I've also replaced the pronoun \"some\" with the subject \"radiation\" to make each fact self-contained.\nHematuria (blood in urine)\nChills (no fever)\nThe patient has no changes in urinary frequency.\nThe patient has no changes in urinary volume.\nNote that I've split the original statement into two separate facts, each describing a different aspect of urinary function.\nPrior episodes of kidney stones (2-3 times)\nNote that there is only one proposition in this statement, so it can be output as a single fact.\nThe patient has no prior surgical interventions for kidney stones.\nThe patient has no prior surgical interventions for related complications.\nNote that I've followed the rules by splitting the list, conjunction, and separate findings into individual facts, and replacing pronouns with the subject (\"The patient\").",
+    "objective": "None mentioned in the dialogue"
+  },
+  "stage3_key_sentences": [
+    "Doctor: Have you experienced any prior episodes of kidney stones or similar symptoms in the past?",
+    "I haven't had a fever, but I've had some chills."
+  ],
+  "stage3_summary_key_phrases": [
+    "radiation travels groin",
+    "aspect radiation pain",
+    "different aspect urinary",
+    "stones patient prior",
+    "subject patient mentioned",
+    "sided flank pain",
+    "contained hematuria",
+    "pain duration days",
+    "fever patient changes",
+    "facts replacing pronouns"
+  ],
+  "stage3_coverage_scores": [
+    {
+      "sentence": "Doctor: Have you experienced any prior episodes of kidney stones or similar symptoms in the past?",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "Doctor: Have you experienced any prior episodes of kidney stones or similar symptoms in the past?",
+      "score": 0.5626,
+      "is_missing": false,
+      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+    },
+    {
+      "sentence": "I haven't had a fever, but I've had some chills.",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "I haven't had a fever, but I've had some chills.",
+      "score": 0.609,
+      "is_missing": false,
+      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+    }
+  ],
+  "stage3_candidate_log": [],
+  "stage3_added": [],
+  "stage3_stats": {
+    "num_key_sentences": 2,
+    "num_flagged": 0,
+    "num_added": 0
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "section": "subjective",
+        "claim": "The patient has no prior surgical interventions.",
+        "entailment": 0.4375,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "No prior surgical interventions for kidney stones or related complications"
+      }
+    ]
+  },
+  "final_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** Suspected kidney stone\n* **Treatment Plan, Medications, and Follow-up:** Further evaluation and management will be determined based on the results of imaging studies and urinalysis. The patient will be referred for a CT scan or ultrasound to confirm the diagnosis and rule out other potential causes of the pain. The patient will also be prescribed pain management medication as needed.\n\n**SOAP NOTE:**\n\nThis patient presents with a chief complaint of severe left-sided flank pain, which has been ongoing for 3 days. The patient reports a gradual onset of pain, which has been constant and intense, with radiation to the groin. The patient has a history of prior episodes of kidney stones, but no prior surgical interventions for kidney stones or related complications. The patient's symptoms are consistent with a suspected kidney stone, and further evaluation and management will be determined based on the results of imaging studies and urinalysis."
+  },
+  "ap_unchanged": true,
+  "thresholds": {
+    "Te": 0.9,
+    "Tc": 0.8,
+    "Ta": 0.5,
+    "cov_min": 0.4,
+    "top_m": 2,
+    "fix_header_bug": true
+  },
+  "models": {
+    "llm": "llama3:8b-instruct-q8_0",
+    "nli": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+    "embedder": "all-MiniLM-L6-v2",
+    "ppl": "gpt2"
+  },
+  "status": "success",
+  "seconds": 10.7,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 52 years old, and I'm here because I think I have a kidney stone. I've been in a lot of pain on my left side for about three days, and it's been getting worse. I haven't passed it yet, and I'm really struggling with the pain.\nDoctor: Have you experienced any hematuria, nausea, vomiting, or fever associated with the pain?\nPatient: I did notice some blood in my urine this morning, and I've been feeling pretty nauseous. I haven't had a fever, but I've had some chills. It's been really hard to eat or even get comfortable because of the pain.\nDoctor: Have you experienced any prior episodes of kidney stones or similar symptoms in the past?\nPatient: Yes, I've had kidney stones before—this might be my third time. I haven't had one in a while, but I remember the pain being similar each time, and it usually takes about three to four days to pass.\nDoctor: Have you experienced any fever during this current episode, and if so, what was the highest temperature recorded? Additionally, have you had any prior surgical interventions for kidney stones or related complications?\nPatient: I haven't had a fever, but I did have some chills. I don't remember having any surgery for kidney stones before.\nDoctor: Could you describe the location of the pain, whether it radiates to any other areas, and if you have any other symptoms such as nausea, vomiting, or blood in your urine?\nPatient: The pain started on my left back and has been traveling lower, but it's still mostly on the left side. I haven't passed the stone yet, and I've had some blood in my urine this morning. I also feel really nauseous and can't eat because of the pain. It's been constant and really intense.\nDoctor: Have you had any recent imaging studies or urinalysis performed for this episode?\nPatient: No, I haven't had any recent imaging studies or urinalysis done for this episode. I just came in today because the pain has been so bad and I noticed blood in my urine. I'm really hoping we can figure out what's going on and get me some relief.\nDoctor: Has the patient experienced any fever during this episode, and if so, what was the highest temperature recorded?\nPatient: No, I haven't had a fever during this episode. I did have some chills, though. I'm just really hoping we can get this pain under control. It's been so bad I can't even eat or get comfortable.\nDoctor: Have you undergone any urinalysis or imaging studies, such as a CT scan or ultrasound, for this current episode?\nPatient: No, I haven't had any urinalysis or imaging studies done for this current episode. I just came in today because the pain has been so bad and I noticed blood in my urine. I'm really hoping we can figure out what's going on and get me some relief.\nDoctor: Could you please describe the location and intensity of the pain, and have you experienced any radiation of the pain to other areas, such as the groin or abdomen?\nPatient: The pain started on my left back and has been traveling lower, but it's still mostly on the left side. It's been constant and really intense, and it's starting to go down into my groin, but I wouldn't say it's abdominal pain. It's just so bad I can't get comfortable.\nDoctor: Has the patient undergone any urinalysis or imaging studies for this current episode?\nPatient: No, I haven't had any urinalysis or imaging studies done for this current episode. I just came in today because the pain has been so bad and I noticed blood in my urine. I'm really hoping we can figure out what's going on and get me some relief.\nDoctor: Has the patient had any fever or elevated temperature during this episode?\nPatient: No, I haven't had a fever during this episode. I did have some chills, though. I'm just really hoping we can get this pain under control. It's been so bad I can't even eat or get comfortable.\nDoctor: Has the patient experienced any vomiting or changes in urinary frequency or volume during this episode?\nPatient: No, I haven't vomited, but I do feel nauseous. I haven't noticed any changes in how much I'm urinating, just that I started seeing some blood this morning. It's been really hard to focus on anything else with how bad the pain is.\nDoctor: Have you had any fever or chills associated with this pain?\nPatient: I did have some chills, but no fever. I'm just really hoping we can get this pain under control. It's been so bad I can't even eat or get comfortable.\nDoctor: Have you had any urinalysis or imaging studies for this current episode?\nPatient: No, I haven't had any urinalysis or imaging studies done for this current episode. I just came in today because the pain has been so bad and I noticed blood in my urine. I'm really hoping we can figure out what's going on and get me some relief.\nDoctor: Could you describe the location, intensity, and any radiation of the pain? Have you noticed any changes in the color or frequency of your urine?\nPatient: The pain started on my left back and has been traveling lower, but it's still really intense and constant. I can't get comfortable, and I've noticed blood in my urine this morning. The color of my urine is different now, and I haven't had any changes in how much I'm urinating, just that it's been really painful.",
+  "reference_so": {
+    "subjective": "Basic information: 52-year-old male presenting with left-sided pain for three days, worsening, suspecting kidney stone\n\nHistory of present illness: Onset three days ago with left-sided pain, progressively worsening, no passage of stone yet, significant pain. Patient reported hematuria this morning, nausea, and chills. Pain has been severe and difficult to manage, affecting ability to eat or get comfortable. Patient has a history of similar episodes, with pain typically taking three to four days to pass. Pain started on the left back and has been traveling lower, but it's still mostly on the left side. Patient has not passed the stone yet. Patient has not had a fever, but did have some chills. Patient has not undergone any urinalysis or imaging studies for this current episode.\n\nPast history: Patient has a history of kidney stones, with this being the third episode. No prior surgical interventions for kidney stones reported. No mention of allergies or other significant past medical history.",
+    "objective": "Physical examination: Physical examination findings are pending.\n\nInvestigations: Auxiliary examination results are pending."
+  }
+}

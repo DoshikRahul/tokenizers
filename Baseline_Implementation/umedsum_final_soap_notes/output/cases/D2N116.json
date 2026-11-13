@@ -1,0 +1,418 @@
+{
+  "case_id": "D2N116",
+  "split": "test",
+  "is_icl_demo": false,
+  "stage1_elements": "Here are the extracted clinical elements in concise bullet points:\n\n**Subjective Elements:**\n\n* Chief complaint: Right shoulder pain\n* History of present illness:\n\t+ Duration: A few weeks\n\t+ Onset: After doing work in the backyard\n\t+ Symptoms: Soreness, dull ache, especially on the outside of the shoulder\n\t+ Aggravating factors: Moving the arm, especially raising it or doing lifting\n\t+ Relieving factors: Icing and taking Advil\n* Relevant medical history:\n\t+ Prior shoulder injuries from playing baseball\n\t+ No prior surgeries on the affected shoulder\n* Medications:\n\t+ Taking Advil for pain relief\n\n**Objective Elements:**\n\n* Physical examination findings: Not mentioned\n* Vital signs: Not mentioned\n* Diagnostic lab/imaging results:\n\t+ X-ray: No fracture\n\t+ MRI: Not performed yet\n\n**Assessment Elements:**\n\n* Diagnoses: Not explicitly stated\n* Clinical impressions: Not explicitly stated\n\n**Plan Elements:**\n\n* Medical treatment plan: Not explicitly stated\n* Prescriptions/dosages: Not mentioned\n* Tests ordered: MRI (potential)\n* Follow-up instructions: Not explicitly stated",
+  "stage1_raw_note": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:\n\n**SUBJECTIVE:**\n\n* **Chief Complaint:** Right shoulder pain\n* **History of Present Illness (HPI):** The patient, a 55-year-old male, presents with a few weeks of right shoulder pain. The pain started after doing work in the backyard and is characterized as a soreness or dull ache, especially on the outside of the shoulder. The patient reports that the pain is aggravated by moving the arm, especially raising it or doing lifting, and is relieved by icing and taking Advil.\n\n**OBJECTIVE:**\n\n* **Physical Examination & Vitals:** Not mentioned\n* **Diagnostic Results & Labs:**\n\t+ X-ray: No fracture\n\t+ MRI: Not performed yet\n\n**ASSESSMENT AND PLAN:**\n\n* **Diagnoses and Clinical Reasoning:** Based on the patient's symptoms and medical history, it is likely that the patient is experiencing an acute exacerbation of a pre-existing shoulder condition, possibly related to the patient's prior baseball injuries. Further evaluation with an MRI may be necessary to determine the underlying cause of the pain.\n* **Treatment Plan, Medications, and Follow-up:** The patient will be referred for an MRI to further evaluate the shoulder condition. In the meantime, the patient will continue to take Advil as needed for pain relief. Follow-up instructions will be provided once the MRI results are available.\n\nPlease note that this is a hypothetical note and may not reflect actual clinical practice or patient information.",
+  "stage1_parse": {
+    "parse_mode": "main_headings",
+    "parse_ok": true,
+    "dropped_preamble": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:"
+  },
+  "stage1_so": {
+    "subjective": "* **Chief Complaint:** Right shoulder pain\n* **History of Present Illness (HPI):** The patient, a 55-year-old male, presents with a few weeks of right shoulder pain. The pain started after doing work in the backyard and is characterized as a soreness or dull ache, especially on the outside of the shoulder. The patient reports that the pain is aggravated by moving the arm, especially raising it or doing lifting, and is relieved by icing and taking Advil.",
+    "objective": "* **Physical Examination & Vitals:** Not mentioned\n* **Diagnostic Results & Labs:**\n\t+ X-ray: No fracture\n\t+ MRI: Not performed yet"
+  },
+  "stage1_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** Based on the patient's symptoms and medical history, it is likely that the patient is experiencing an acute exacerbation of a pre-existing shoulder condition, possibly related to the patient's prior baseball injuries. Further evaluation with an MRI may be necessary to determine the underlying cause of the pain.\n* **Treatment Plan, Medications, and Follow-up:** The patient will be referred for an MRI to further evaluate the shoulder condition. In the meantime, the patient will continue to take Advil as needed for pain relief. Follow-up instructions will be provided once the MRI results are available.\n\nPlease note that this is a hypothetical note and may not reflect actual clinical practice or patient information."
+  },
+  "stage2_so": {
+    "subjective": "Chief Complaint: Right shoulder pain\nHistory of Present Illness (HPI): The patient, a 55-year-old male, presents with a few weeks of right shoulder pain.\nThe pain started after doing work in the backyard and is characterized as a soreness or dull ache, especially on the outside of the shoulder.\nThe patient reports that the pain is aggravated by moving the arm.\nThe patient reports that the pain is aggravated by raising the arm.\nThe patient reports that the pain is aggravated by doing lifting.\nThe patient reports pain.\nNote that I've replaced the pronoun \"the\" with \"the patient\" to make each fact self-contained, as per the rules.\nThe patient reports pain.\nNote that I've replaced the pronoun \"the\" with the subject \"The patient\" to make each fact self-contained.\nNote that I've replaced the pronoun \"it\" with the subject \"the pain\" to make each fact self-contained.",
+    "objective": "Based on the statement \"Physical Examination & Vitals: Not mentioned\", I decompose it into the following atomic facts:\nPhysical Examination is not mentioned.\nVitals are not mentioned.\nThese atomic facts are self-contained, independent, and can stand alone as true or false.\nPhysical Examination is not mentioned.\nVitals are not mentioned.\nNote that I did not add any information or infer anything from the statement. I simply broke it down into two self-contained facts that can stand alone as true or false.\nX-ray: No fracture\nMRI: Not performed yet"
+  },
+  "stage2_audit": {
+    "subjective": [
+      {
+        "unit": "Chief Complaint: Right shoulder pain",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.939,
+          "neutral": 0.0504,
+          "contradiction": 0.0106
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I've been having some right shoulder pain for a few weeks now. It started after doing some work in my backyard on a bunch of different projects, and it just hasn't gone away. It's been really sore, especially on the outside of my shoulder, and it hurts when I move it. Doctor: Could you describe the nature of the pain (e.g., sharp, dull, burning) and whether it radiates to other areas? Have you experienced any swelling, redness, or limited range of motion in the shoulder? Have you had any prior shoulder injuries or surgeries? Patient: The pain is more of a soreness, kinda like a dull ache, and it's mostly on the outside of my shoulder. It doesn't really radiate anywhere else, but it definitely hurts when I move it, especially when I raise my arm. I have had some issues with that same shoulder before from playing baseball when I was younger, but nothing major. I don't remember any surgeries on it. Doctor: Have you undergone any imaging studies or consultations for this shoulder pain, and if so, what were the findings or recommendations? Patient: No, I haven't had any imaging studies done for this yet, but my doctor mentioned looking at an X-ray and there was no fracture. They did say they might order an MRI since I've had some issues before. I'm not sure what exactly they're looking for, but I'm hoping it's nothing too serious. Doctor: Have you experienced any weakness, numbness, or tingling in your right arm or hand? Additionally, could you describe any specific activities or movements that aggravate or relieve the pain? Patient: No, I haven't experienced any weakness, numbness, or tingling in my right arm or hand. The pain is aggravated when I move my arm, especially when I raise it or do things like lift stuff, but it",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "History of Present Illness (HPI): The patient, a 55-year-old male, presents with a few weeks of right shoulder pain.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9985,
+          "neutral": 0.001,
+          "contradiction": 0.0007
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I've been having some right shoulder pain for a few weeks now. It started after doing some work in my backyard on a bunch of different projects, and it just hasn't gone away. It's been really sore, especially on the outside of my shoulder, and it hurts when I move it. Doctor: Could you describe the nature of the pain (e.g., sharp, dull, burning) and whether it radiates to other areas? Have you experienced any swelling, redness, or limited range of motion in the shoulder? Have you had any prior shoulder injuries or surgeries? Patient: The pain is more of a soreness, kinda like a dull ache, and it's mostly on the outside of my shoulder. It doesn't really radiate anywhere else, but it definitely hurts when I move it, especially when I raise my arm. I have had some issues with that same shoulder before from playing baseball when I was younger, but nothing major. I don't remember any surgeries on it. Doctor: Have you undergone any imaging studies or consultations for this shoulder pain, and if so, what were the findings or recommendations? Patient: No, I haven't had any imaging studies done for this yet, but my doctor mentioned looking at an X-ray and there was no fracture. They did say they might order an MRI since I've had some issues before. I'm not sure what exactly they're looking for, but I'm hoping it's nothing too serious. Doctor: Have you experienced any weakness, numbness, or tingling in your right arm or hand? Additionally, could you describe any specific activities or movements that aggravate or relieve the pain? Patient: No, I haven't experienced any weakness, numbness, or tingling in my right arm or hand. The pain is aggravated when I move my arm, especially when I raise it or do things like lift stuff, but it",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "The pain started after doing work in the backyard and is characterized as a soreness or dull ache, especially on the outside of the shoulder.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9976,
+          "neutral": 0.001,
+          "contradiction": 0.0013
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I've been having some right shoulder pain for a few weeks now. It started after doing some work in my backyard on a bunch of different projects, and it just hasn't gone away. It's been really sore, especially on the outside of my shoulder, and it hurts when I move it. Doctor: Could you describe the nature of the pain (e.g., sharp, dull, burning) and whether it radiates to other areas? Have you experienced any swelling, redness, or limited range of motion in the shoulder? Have you had any prior shoulder injuries or surgeries? Patient: The pain is more of a soreness, kinda like a dull ache, and it's mostly on the outside of my shoulder. It doesn't really radiate anywhere else, but it definitely hurts when I move it, especially when I raise my arm. I have had some issues with that same shoulder before from playing baseball when I was younger, but nothing major. I don't remember any surgeries on it. Doctor: Have you undergone any imaging studies or consultations for this shoulder pain, and if so, what were the findings or recommendations? Patient: No, I haven't had any imaging studies done for this yet, but my doctor mentioned looking at an X-ray and there was no fracture. They did say they might order an MRI since I've had some issues before. I'm not sure what exactly they're looking for, but I'm hoping it's nothing too serious. Doctor: Have you experienced any weakness, numbness, or tingling in your right arm or hand? Additionally, could you describe any specific activities or movements that aggravate or relieve the pain? Patient: No, I haven't experienced any weakness, numbness, or tingling in my right arm or hand. The pain is aggravated when I move my arm, especially when I raise it or do things like lift stuff, but it",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "The patient reports that the pain is aggravated by moving the arm, especially raising it or doing lifting, and is relieved by icing and taking Advil.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.4783,
+          "neutral": 0.2747,
+          "contradiction": 0.2472
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "'re looking for, but I'm hoping it's nothing too serious. Doctor: Have you experienced any weakness, numbness, or tingling in your right arm or hand? Additionally, could you describe any specific activities or movements that aggravate or relieve the pain? Patient: No, I haven't experienced any weakness, numbness, or tingling in my right arm or hand. The pain is aggravated when I move my arm, especially when I raise it or do things like lift stuff, but it doesn't really bother me when I'm just sitting still. I've been trying to ice it and take some Advil, which helps a little, but it's still sore to touch. Doctor: Have you noticed any clicking, popping, or locking sensations in the shoulder when you move it? Patient: No, I haven't noticed any clicking, popping, or locking sensations in my shoulder when I move it. It just feels sore on the outside, especially when I raise my arm or do any lifting. It's been pretty consistent like that. Doctor: Could you describe the exact location of the pain on your shoulder and whether you have any difficulty performing daily activities such as dressing or reaching overhead? Patient: The pain is on the outside of my shoulder, kind of near the top where the arm connects, and it's been bothering me when I try to reach overhead or do any lifting. It doesn't really stop me from doing daily stuff, but it does make some things a bit uncomfortable, like putting on a shirt or reaching for something high. Doctor: Have you had any recent imaging studies, such as an X-ray or MRI, of the right shoulder? If not, would you be willing to undergo an MRI to better evaluate the cause of your shoulder pain? Patient: No, I haven't had any recent imaging studies of the right shoulder yet. I was told they looked at an X-ray and there was no fracture, but they might order an MRI since I've had some issues before. I'm willing to do that",
+        "atomic_decomposition": {
+          "original": "The patient reports that the pain is aggravated by moving the arm, especially raising it or doing lifting, and is relieved by icing and taking Advil.",
+          "retained": [
+            {
+              "atom": "The patient reports that the pain is aggravated by moving the arm.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I've been having some right shoulder pain for a few weeks now. It started after doing some work in my backyard on a bunch of different projects, and it just hasn't gone away. It's been really sore, especially on the outside of my shoulder, and it hurts when I move it. Doctor: Could you describe the nature of the pain (e.g., sharp, dull, burning) and whether it radiates to other areas? Have you experienced any swelling, redness, or limited range of motion in the shoulder? Have you had any prior shoulder injuries or surgeries? Patient: The pain is more of a soreness, kinda like a dull ache, and it's mostly on the outside of my shoulder. It doesn't really radiate anywhere else, but it definitely hurts when I move it, especially when I raise my arm. I have had some issues with that same shoulder before from playing baseball when I was younger, but nothing major. I don't remember any surgeries on it. Doctor: Have you undergone any imaging studies or consultations for this shoulder pain, and if so, what were the findings or recommendations? Patient: No, I haven't had any imaging studies done for this yet, but my doctor mentioned looking at an X-ray and there was no fracture. They did say they might order an MRI since I've had some issues before. I'm not sure what exactly they're looking for, but I'm hoping it's nothing too serious. Doctor: Have you experienced any weakness, numbness, or tingling in your right arm or hand? Additionally, could you describe any specific activities or movements that aggravate or relieve the pain? Patient: No, I haven't experienced any weakness, numbness, or tingling in my right arm or hand. The pain is aggravated when I move my arm, especially when I raise it or do things like lift stuff, but it",
+              "entailment": 0.9995,
+              "depth": 1
+            },
+            {
+              "atom": "The patient reports that the pain is aggravated by raising the arm.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I've been having some right shoulder pain for a few weeks now. It started after doing some work in my backyard on a bunch of different projects, and it just hasn't gone away. It's been really sore, especially on the outside of my shoulder, and it hurts when I move it. Doctor: Could you describe the nature of the pain (e.g., sharp, dull, burning) and whether it radiates to other areas? Have you experienced any swelling, redness, or limited range of motion in the shoulder? Have you had any prior shoulder injuries or surgeries? Patient: The pain is more of a soreness, kinda like a dull ache, and it's mostly on the outside of my shoulder. It doesn't really radiate anywhere else, but it definitely hurts when I move it, especially when I raise my arm. I have had some issues with that same shoulder before from playing baseball when I was younger, but nothing major. I don't remember any surgeries on it. Doctor: Have you undergone any imaging studies or consultations for this shoulder pain, and if so, what were the findings or recommendations? Patient: No, I haven't had any imaging studies done for this yet, but my doctor mentioned looking at an X-ray and there was no fracture. They did say they might order an MRI since I've had some issues before. I'm not sure what exactly they're looking for, but I'm hoping it's nothing too serious. Doctor: Have you experienced any weakness, numbness, or tingling in your right arm or hand? Additionally, could you describe any specific activities or movements that aggravate or relieve the pain? Patient: No, I haven't experienced any weakness, numbness, or tingling in my right arm or hand. The pain is aggravated when I move my arm, especially when I raise it or do things like lift stuff, but it",
+              "entailment": 0.9995,
+              "depth": 1
+            },
+            {
+              "atom": "The patient reports that the pain is aggravated by doing lifting.",
+              "citation": "Have you had any recent imaging studies, such as an X-ray or MRI, of the right shoulder? If not, would you be willing to undergo an MRI to better evaluate the cause of your shoulder pain? Patient: No, I haven't had any recent imaging studies of the right shoulder yet. I was told they looked at an X-ray and there was no fracture, but they might order an MRI since I've had some issues before. I'm willing to do that if it helps figure out what's going on. Doctor: Have you noticed any swelling, redness, or warmth around the affected shoulder area? Patient: No, I haven't noticed any swelling, redness, or warmth around the affected shoulder area. It's just sore and tender on the outside, especially when I move it, but there's no visible inflammation or heat around it. Doctor: Could you describe the specific movements or activities that trigger the pain the most, and have you noticed any weakness or limited range of motion in your right shoulder? Patient: The movements that trigger the pain the most are raising my arm or doing any kind of lifting, especially with the projects I've been working on in the yard. I don't really have any weakness, but I do feel some limitation when I try to move it a certain way, though I can still move it pretty well overall. Doctor: Have you experienced any numbness, tingling, or weakness in your arm or hand that could suggest nerve involvement? Patient: No, I haven't experienced any numbness, tingling, or weakness in my arm or hand. It's just the soreness in the shoulder, and my hand grip feels fine. I don't think it's related to any nerve issues. Doctor: Have you noticed any swelling, redness, or warmth around the affected shoulder area? Patient: No, I haven't noticed any swelling, redness, or warmth around the affected shoulder area. It's just sore and tender on the outside, especially when I move it, but there's",
+              "entailment": 0.9995,
+              "depth": 1
+            },
+            {
+              "atom": "The patient reports pain.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I've been having some right shoulder pain for a few weeks now. It started after doing some work in my backyard on a bunch of different projects, and it just hasn't gone away. It's been really sore, especially on the outside of my shoulder, and it hurts when I move it. Doctor: Could you describe the nature of the pain (e.g., sharp, dull, burning) and whether it radiates to other areas? Have you experienced any swelling, redness, or limited range of motion in the shoulder? Have you had any prior shoulder injuries or surgeries? Patient: The pain is more of a soreness, kinda like a dull ache, and it's mostly on the outside of my shoulder. It doesn't really radiate anywhere else, but it definitely hurts when I move it, especially when I raise my arm. I have had some issues with that same shoulder before from playing baseball when I was younger, but nothing major. I don't remember any surgeries on it. Doctor: Have you undergone any imaging studies or consultations for this shoulder pain, and if so, what were the findings or recommendations? Patient: No, I haven't had any imaging studies done for this yet, but my doctor mentioned looking at an X-ray and there was no fracture. They did say they might order an MRI since I've had some issues before. I'm not sure what exactly they're looking for, but I'm hoping it's nothing too serious. Doctor: Have you experienced any weakness, numbness, or tingling in your right arm or hand? Additionally, could you describe any specific activities or movements that aggravate or relieve the pain? Patient: No, I haven't experienced any weakness, numbness, or tingling in my right arm or hand. The pain is aggravated when I move my arm, especially when I raise it or do things like lift stuff, but it",
+              "entailment": 0.9995,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I've replaced the pronoun \"the\" with \"the patient\" to make each fact self-contained, as per the rules.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I've been having some right shoulder pain for a few weeks now. It started after doing some work in my backyard on a bunch of different projects, and it just hasn't gone away. It's been really sore, especially on the outside of my shoulder, and it hurts when I move it. Doctor: Could you describe the nature of the pain (e.g., sharp, dull, burning) and whether it radiates to other areas? Have you experienced any swelling, redness, or limited range of motion in the shoulder? Have you had any prior shoulder injuries or surgeries? Patient: The pain is more of a soreness, kinda like a dull ache, and it's mostly on the outside of my shoulder. It doesn't really radiate anywhere else, but it definitely hurts when I move it, especially when I raise my arm. I have had some issues with that same shoulder before from playing baseball when I was younger, but nothing major. I don't remember any surgeries on it. Doctor: Have you undergone any imaging studies or consultations for this shoulder pain, and if so, what were the findings or recommendations? Patient: No, I haven't had any imaging studies done for this yet, but my doctor mentioned looking at an X-ray and there was no fracture. They did say they might order an MRI since I've had some issues before. I'm not sure what exactly they're looking for, but I'm hoping it's nothing too serious. Doctor: Have you experienced any weakness, numbness, or tingling in your right arm or hand? Additionally, could you describe any specific activities or movements that aggravate or relieve the pain? Patient: No, I haven't experienced any weakness, numbness, or tingling in my right arm or hand. The pain is aggravated when I move my arm, especially when I raise it or do things like lift stuff, but it",
+              "entailment": 0.9902,
+              "depth": 2
+            },
+            {
+              "atom": "The patient reports pain.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I've been having some right shoulder pain for a few weeks now. It started after doing some work in my backyard on a bunch of different projects, and it just hasn't gone away. It's been really sore, especially on the outside of my shoulder, and it hurts when I move it. Doctor: Could you describe the nature of the pain (e.g., sharp, dull, burning) and whether it radiates to other areas? Have you experienced any swelling, redness, or limited range of motion in the shoulder? Have you had any prior shoulder injuries or surgeries? Patient: The pain is more of a soreness, kinda like a dull ache, and it's mostly on the outside of my shoulder. It doesn't really radiate anywhere else, but it definitely hurts when I move it, especially when I raise my arm. I have had some issues with that same shoulder before from playing baseball when I was younger, but nothing major. I don't remember any surgeries on it. Doctor: Have you undergone any imaging studies or consultations for this shoulder pain, and if so, what were the findings or recommendations? Patient: No, I haven't had any imaging studies done for this yet, but my doctor mentioned looking at an X-ray and there was no fracture. They did say they might order an MRI since I've had some issues before. I'm not sure what exactly they're looking for, but I'm hoping it's nothing too serious. Doctor: Have you experienced any weakness, numbness, or tingling in your right arm or hand? Additionally, could you describe any specific activities or movements that aggravate or relieve the pain? Patient: No, I haven't experienced any weakness, numbness, or tingling in my right arm or hand. The pain is aggravated when I move my arm, especially when I raise it or do things like lift stuff, but it",
+              "entailment": 0.9995,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I've replaced the pronoun \"the\" with the subject \"The patient\" to make each fact self-contained.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I've been having some right shoulder pain for a few weeks now. It started after doing some work in my backyard on a bunch of different projects, and it just hasn't gone away. It's been really sore, especially on the outside of my shoulder, and it hurts when I move it. Doctor: Could you describe the nature of the pain (e.g., sharp, dull, burning) and whether it radiates to other areas? Have you experienced any swelling, redness, or limited range of motion in the shoulder? Have you had any prior shoulder injuries or surgeries? Patient: The pain is more of a soreness, kinda like a dull ache, and it's mostly on the outside of my shoulder. It doesn't really radiate anywhere else, but it definitely hurts when I move it, especially when I raise my arm. I have had some issues with that same shoulder before from playing baseball when I was younger, but nothing major. I don't remember any surgeries on it. Doctor: Have you undergone any imaging studies or consultations for this shoulder pain, and if so, what were the findings or recommendations? Patient: No, I haven't had any imaging studies done for this yet, but my doctor mentioned looking at an X-ray and there was no fracture. They did say they might order an MRI since I've had some issues before. I'm not sure what exactly they're looking for, but I'm hoping it's nothing too serious. Doctor: Have you experienced any weakness, numbness, or tingling in your right arm or hand? Additionally, could you describe any specific activities or movements that aggravate or relieve the pain? Patient: No, I haven't experienced any weakness, numbness, or tingling in my right arm or hand. The pain is aggravated when I move my arm, especially when I raise it or do things like lift stuff, but it",
+              "entailment": 0.9736,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I've replaced the pronoun \"it\" with the subject \"the pain\" to make each fact self-contained.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I've been having some right shoulder pain for a few weeks now. It started after doing some work in my backyard on a bunch of different projects, and it just hasn't gone away. It's been really sore, especially on the outside of my shoulder, and it hurts when I move it. Doctor: Could you describe the nature of the pain (e.g., sharp, dull, burning) and whether it radiates to other areas? Have you experienced any swelling, redness, or limited range of motion in the shoulder? Have you had any prior shoulder injuries or surgeries? Patient: The pain is more of a soreness, kinda like a dull ache, and it's mostly on the outside of my shoulder. It doesn't really radiate anywhere else, but it definitely hurts when I move it, especially when I raise my arm. I have had some issues with that same shoulder before from playing baseball when I was younger, but nothing major. I don't remember any surgeries on it. Doctor: Have you undergone any imaging studies or consultations for this shoulder pain, and if so, what were the findings or recommendations? Patient: No, I haven't had any imaging studies done for this yet, but my doctor mentioned looking at an X-ray and there was no fracture. They did say they might order an MRI since I've had some issues before. I'm not sure what exactly they're looking for, but I'm hoping it's nothing too serious. Doctor: Have you experienced any weakness, numbness, or tingling in your right arm or hand? Additionally, could you describe any specific activities or movements that aggravate or relieve the pain? Patient: No, I haven't experienced any weakness, numbness, or tingling in my right arm or hand. The pain is aggravated when I move my arm, especially when I raise it or do things like lift stuff, but it",
+              "entailment": 0.9824,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "The pain is relieved.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4221,
+              "depth": 2
+            },
+            {
+              "atom": "The pain is relieved by icing.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4377,
+              "depth": 2
+            },
+            {
+              "atom": "The pain is relieved.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4221,
+              "depth": 2
+            },
+            {
+              "atom": "The pain is relieved by taking Advil.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.439,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      }
+    ],
+    "objective": [
+      {
+        "unit": "Physical Examination & Vitals: Not mentioned",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.4382,
+          "neutral": 0.2827,
+          "contradiction": 0.2788
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "or weakness in my arm or hand. It's just the soreness in the shoulder, and my hand grip feels fine. I don't think it's related to any nerve issues. Doctor: Have you noticed any swelling, redness, or warmth around the affected shoulder area? Patient: No, I haven't noticed any swelling, redness, or warmth around the affected shoulder area. It's just sore and tender on the outside, especially when I move it, but there's no visible inflammation or heat around it. Doctor: Have you had any recent imaging studies of the right shoulder, such as an MRI or ultrasound, to evaluate the soft tissues? Patient: No, I haven't had any recent imaging studies of the right shoulder yet. I was told they looked at an X-ray and there was no fracture, but they might order an MRI since I've had some issues before. I'm willing to do that if it helps figure out what's going on. Doctor: Have you noticed any swelling, redness, or warmth around the affected shoulder area? Patient: No, I haven't noticed any swelling, redness, or warmth around the affected shoulder area. It's just sore and tender on the outside, especially when I move it, but there's no visible inflammation or heat around it. Doctor: Have you experienced any recent trauma or fall to the shoulder that might have contributed to the pain? Patient: No, I don't think I've had any recent trauma or fall to the shoulder that might have contributed to the pain. It started after I was doing a lot of work in the yard, but I don't remember specifically falling or hitting it. It just gradually started hurting after all the lifting and projects I've been doing. Doctor: Have you experienced any night pain or pain that disrupts your sleep? Patient: Yes, it does bother me a little at night because I sleep on that side, but it's not really keeping me up or disrupting my sleep too much. It's more of",
+        "atomic_decomposition": {
+          "original": "Physical Examination & Vitals: Not mentioned",
+          "retained": [
+            {
+              "atom": "Based on the statement \"Physical Examination & Vitals: Not mentioned\", I decompose it into the following atomic facts:",
+              "citation": "Have you had any recent imaging studies, such as an X-ray or MRI, of the right shoulder? If not, would you be willing to undergo an MRI to better evaluate the cause of your shoulder pain? Patient: No, I haven't had any recent imaging studies of the right shoulder yet. I was told they looked at an X-ray and there was no fracture, but they might order an MRI since I've had some issues before. I'm willing to do that if it helps figure out what's going on. Doctor: Have you noticed any swelling, redness, or warmth around the affected shoulder area? Patient: No, I haven't noticed any swelling, redness, or warmth around the affected shoulder area. It's just sore and tender on the outside, especially when I move it, but there's no visible inflammation or heat around it. Doctor: Could you describe the specific movements or activities that trigger the pain the most, and have you noticed any weakness or limited range of motion in your right shoulder? Patient: The movements that trigger the pain the most are raising my arm or doing any kind of lifting, especially with the projects I've been working on in the yard. I don't really have any weakness, but I do feel some limitation when I try to move it a certain way, though I can still move it pretty well overall. Doctor: Have you experienced any numbness, tingling, or weakness in your arm or hand that could suggest nerve involvement? Patient: No, I haven't experienced any numbness, tingling, or weakness in my arm or hand. It's just the soreness in the shoulder, and my hand grip feels fine. I don't think it's related to any nerve issues. Doctor: Have you noticed any swelling, redness, or warmth around the affected shoulder area? Patient: No, I haven't noticed any swelling, redness, or warmth around the affected shoulder area. It's just sore and tender on the outside, especially when I move it, but there's",
+              "entailment": 0.6865,
+              "depth": 2
+            },
+            {
+              "atom": "Physical Examination is not mentioned.",
+              "citation": "pain. It started after I was doing a lot of work in the yard, but I don't remember specifically falling or hitting it. It just gradually started hurting after all the lifting and projects I've been doing. Doctor: Have you experienced any night pain or pain that disrupts your sleep? Patient: Yes, it does bother me a little at night because I sleep on that side, but it's not really keeping me up or disrupting my sleep too much. It's more of a mild discomfort that I notice when I shift positions.",
+              "entailment": 0.999,
+              "depth": 2
+            },
+            {
+              "atom": "Vitals are not mentioned.",
+              "citation": "pain. It started after I was doing a lot of work in the yard, but I don't remember specifically falling or hitting it. It just gradually started hurting after all the lifting and projects I've been doing. Doctor: Have you experienced any night pain or pain that disrupts your sleep? Patient: Yes, it does bother me a little at night because I sleep on that side, but it's not really keeping me up or disrupting my sleep too much. It's more of a mild discomfort that I notice when I shift positions.",
+              "entailment": 0.9985,
+              "depth": 2
+            },
+            {
+              "atom": "These atomic facts are self-contained, independent, and can stand alone as true or false.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I've been having some right shoulder pain for a few weeks now. It started after doing some work in my backyard on a bunch of different projects, and it just hasn't gone away. It's been really sore, especially on the outside of my shoulder, and it hurts when I move it. Doctor: Could you describe the nature of the pain (e.g., sharp, dull, burning) and whether it radiates to other areas? Have you experienced any swelling, redness, or limited range of motion in the shoulder? Have you had any prior shoulder injuries or surgeries? Patient: The pain is more of a soreness, kinda like a dull ache, and it's mostly on the outside of my shoulder. It doesn't really radiate anywhere else, but it definitely hurts when I move it, especially when I raise my arm. I have had some issues with that same shoulder before from playing baseball when I was younger, but nothing major. I don't remember any surgeries on it. Doctor: Have you undergone any imaging studies or consultations for this shoulder pain, and if so, what were the findings or recommendations? Patient: No, I haven't had any imaging studies done for this yet, but my doctor mentioned looking at an X-ray and there was no fracture. They did say they might order an MRI since I've had some issues before. I'm not sure what exactly they're looking for, but I'm hoping it's nothing too serious. Doctor: Have you experienced any weakness, numbness, or tingling in your right arm or hand? Additionally, could you describe any specific activities or movements that aggravate or relieve the pain? Patient: No, I haven't experienced any weakness, numbness, or tingling in my right arm or hand. The pain is aggravated when I move my arm, especially when I raise it or do things like lift stuff, but it",
+              "entailment": 0.835,
+              "depth": 2
+            },
+            {
+              "atom": "Physical Examination is not mentioned.",
+              "citation": "pain. It started after I was doing a lot of work in the yard, but I don't remember specifically falling or hitting it. It just gradually started hurting after all the lifting and projects I've been doing. Doctor: Have you experienced any night pain or pain that disrupts your sleep? Patient: Yes, it does bother me a little at night because I sleep on that side, but it's not really keeping me up or disrupting my sleep too much. It's more of a mild discomfort that I notice when I shift positions.",
+              "entailment": 0.999,
+              "depth": 1
+            },
+            {
+              "atom": "Vitals are not mentioned.",
+              "citation": "pain. It started after I was doing a lot of work in the yard, but I don't remember specifically falling or hitting it. It just gradually started hurting after all the lifting and projects I've been doing. Doctor: Have you experienced any night pain or pain that disrupts your sleep? Patient: Yes, it does bother me a little at night because I sleep on that side, but it's not really keeping me up or disrupting my sleep too much. It's more of a mild discomfort that I notice when I shift positions.",
+              "entailment": 0.9985,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I did not add any information or infer anything from the statement. I simply broke it down into two self-contained facts that can stand alone as true or false.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I've been having some right shoulder pain for a few weeks now. It started after doing some work in my backyard on a bunch of different projects, and it just hasn't gone away. It's been really sore, especially on the outside of my shoulder, and it hurts when I move it. Doctor: Could you describe the nature of the pain (e.g., sharp, dull, burning) and whether it radiates to other areas? Have you experienced any swelling, redness, or limited range of motion in the shoulder? Have you had any prior shoulder injuries or surgeries? Patient: The pain is more of a soreness, kinda like a dull ache, and it's mostly on the outside of my shoulder. It doesn't really radiate anywhere else, but it definitely hurts when I move it, especially when I raise my arm. I have had some issues with that same shoulder before from playing baseball when I was younger, but nothing major. I don't remember any surgeries on it. Doctor: Have you undergone any imaging studies or consultations for this shoulder pain, and if so, what were the findings or recommendations? Patient: No, I haven't had any imaging studies done for this yet, but my doctor mentioned looking at an X-ray and there was no fracture. They did say they might order an MRI since I've had some issues before. I'm not sure what exactly they're looking for, but I'm hoping it's nothing too serious. Doctor: Have you experienced any weakness, numbness, or tingling in your right arm or hand? Additionally, could you describe any specific activities or movements that aggravate or relieve the pain? Patient: No, I haven't experienced any weakness, numbness, or tingling in my right arm or hand. The pain is aggravated when I move my arm, especially when I raise it or do things like lift stuff, but it",
+              "entailment": 0.9854,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Diagnostic Results & Labs:",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.4846,
+          "neutral": 0.3816,
+          "contradiction": 0.1337
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "Have you had any recent imaging studies, such as an X-ray or MRI, of the right shoulder? If not, would you be willing to undergo an MRI to better evaluate the cause of your shoulder pain? Patient: No, I haven't had any recent imaging studies of the right shoulder yet. I was told they looked at an X-ray and there was no fracture, but they might order an MRI since I've had some issues before. I'm willing to do that if it helps figure out what's going on. Doctor: Have you noticed any swelling, redness, or warmth around the affected shoulder area? Patient: No, I haven't noticed any swelling, redness, or warmth around the affected shoulder area. It's just sore and tender on the outside, especially when I move it, but there's no visible inflammation or heat around it. Doctor: Could you describe the specific movements or activities that trigger the pain the most, and have you noticed any weakness or limited range of motion in your right shoulder? Patient: The movements that trigger the pain the most are raising my arm or doing any kind of lifting, especially with the projects I've been working on in the yard. I don't really have any weakness, but I do feel some limitation when I try to move it a certain way, though I can still move it pretty well overall. Doctor: Have you experienced any numbness, tingling, or weakness in your arm or hand that could suggest nerve involvement? Patient: No, I haven't experienced any numbness, tingling, or weakness in my arm or hand. It's just the soreness in the shoulder, and my hand grip feels fine. I don't think it's related to any nerve issues. Doctor: Have you noticed any swelling, redness, or warmth around the affected shoulder area? Patient: No, I haven't noticed any swelling, redness, or warmth around the affected shoulder area. It's just sore and tender on the outside, especially when I move it, but there's",
+        "atomic_decomposition": {
+          "original": "Diagnostic Results & Labs:",
+          "retained": [],
+          "discarded": [
+            {
+              "atom": "Diagnostic Results & Labs:",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4846,
+              "depth": 1
+            }
+          ],
+          "decomposition_method": "too_short",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "X-ray: No fracture",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.998,
+          "neutral": 0.0011,
+          "contradiction": 0.0009
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I've been having some right shoulder pain for a few weeks now. It started after doing some work in my backyard on a bunch of different projects, and it just hasn't gone away. It's been really sore, especially on the outside of my shoulder, and it hurts when I move it. Doctor: Could you describe the nature of the pain (e.g., sharp, dull, burning) and whether it radiates to other areas? Have you experienced any swelling, redness, or limited range of motion in the shoulder? Have you had any prior shoulder injuries or surgeries? Patient: The pain is more of a soreness, kinda like a dull ache, and it's mostly on the outside of my shoulder. It doesn't really radiate anywhere else, but it definitely hurts when I move it, especially when I raise my arm. I have had some issues with that same shoulder before from playing baseball when I was younger, but nothing major. I don't remember any surgeries on it. Doctor: Have you undergone any imaging studies or consultations for this shoulder pain, and if so, what were the findings or recommendations? Patient: No, I haven't had any imaging studies done for this yet, but my doctor mentioned looking at an X-ray and there was no fracture. They did say they might order an MRI since I've had some issues before. I'm not sure what exactly they're looking for, but I'm hoping it's nothing too serious. Doctor: Have you experienced any weakness, numbness, or tingling in your right arm or hand? Additionally, could you describe any specific activities or movements that aggravate or relieve the pain? Patient: No, I haven't experienced any weakness, numbness, or tingling in my right arm or hand. The pain is aggravated when I move my arm, especially when I raise it or do things like lift stuff, but it",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "MRI: Not performed yet",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.999,
+          "neutral": 0.0005,
+          "contradiction": 0.0004
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 55 years old, male. I've been having some right shoulder pain for a few weeks now. It started after doing some work in my backyard on a bunch of different projects, and it just hasn't gone away. It's been really sore, especially on the outside of my shoulder, and it hurts when I move it. Doctor: Could you describe the nature of the pain (e.g., sharp, dull, burning) and whether it radiates to other areas? Have you experienced any swelling, redness, or limited range of motion in the shoulder? Have you had any prior shoulder injuries or surgeries? Patient: The pain is more of a soreness, kinda like a dull ache, and it's mostly on the outside of my shoulder. It doesn't really radiate anywhere else, but it definitely hurts when I move it, especially when I raise my arm. I have had some issues with that same shoulder before from playing baseball when I was younger, but nothing major. I don't remember any surgeries on it. Doctor: Have you undergone any imaging studies or consultations for this shoulder pain, and if so, what were the findings or recommendations? Patient: No, I haven't had any imaging studies done for this yet, but my doctor mentioned looking at an X-ray and there was no fracture. They did say they might order an MRI since I've had some issues before. I'm not sure what exactly they're looking for, but I'm hoping it's nothing too serious. Doctor: Have you experienced any weakness, numbness, or tingling in your right arm or hand? Additionally, could you describe any specific activities or movements that aggravate or relieve the pain? Patient: No, I haven't experienced any weakness, numbness, or tingling in my right arm or hand. The pain is aggravated when I move my arm, especially when I raise it or do things like lift stuff, but it",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      }
+    ]
+  },
+  "stage2_stats": {
+    "decision_counts": {
+      "faithful": 5,
+      "uncertain": 3
+    },
+    "num_claims": 8,
+    "num_kept": 7,
+    "claim_retention_rate": 0.875
+  },
+  "stage3_so": {
+    "subjective": "Chief Complaint: Right shoulder pain\nHistory of Present Illness (HPI): The patient, a 55-year-old male, presents with a few weeks of right shoulder pain.\nThe pain started after doing work in the backyard and is characterized as a soreness or dull ache, especially on the outside of the shoulder.\nThe patient reports that the pain is aggravated by moving the arm.\nThe patient reports that the pain is aggravated by raising the arm.\nThe patient reports that the pain is aggravated by doing lifting.\nThe patient reports pain.\nNote that I've replaced the pronoun \"the\" with \"the patient\" to make each fact self-contained, as per the rules.\nThe patient reports pain.\nNote that I've replaced the pronoun \"the\" with the subject \"The patient\" to make each fact self-contained.\nNote that I've replaced the pronoun \"it\" with the subject \"the pain\" to make each fact self-contained.",
+    "objective": "Based on the statement \"Physical Examination & Vitals: Not mentioned\", I decompose it into the following atomic facts:\nIt's just sore and tender on the outside, especially when I move it, but there's no visible inflammation or heat around it.\nPhysical Examination is not mentioned.\nVitals are not mentioned.\nThese atomic facts are self-contained, independent, and can stand alone as true or false.\nPhysical Examination is not mentioned.\nVitals are not mentioned.\nNote that I did not add any information or infer anything from the statement. I simply broke it down into two self-contained facts that can stand alone as true or false.\nX-ray: No fracture\nMRI: Not performed yet"
+  },
+  "stage3_key_sentences": [
+    "Doctor: Have you undergone any imaging studies or consultations for this shoulder pain, and if so, what were the findings or recommendations?",
+    "It's just sore and tender on the outside, especially when I move it, but there's no visible inflammation or heat around it."
+  ],
+  "stage3_summary_key_phrases": [
+    "shoulder patient reports",
+    "patient reports pain",
+    "pronoun subject pain",
+    "patient make fact",
+    "physical examination vitals",
+    "replaced pronoun patient",
+    "contained facts stand",
+    "illness hpi",
+    "false ray fracture",
+    "decompose following atomic"
+  ],
+  "stage3_coverage_scores": [
+    {
+      "sentence": "Doctor: Have you undergone any imaging studies or consultations for this shoulder pain, and if so, what were the findings or recommendations?",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "Doctor: Have you undergone any imaging studies or consultations for this shoulder pain, and if so, what were the findings or recommendations?",
+      "score": 0.7267,
+      "is_missing": false,
+      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+    },
+    {
+      "sentence": "It's just sore and tender on the outside, especially when I move it, but there's no visible inflammation or heat around it.",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "It's just sore and tender on the outside, especially when I move it, but there's no visible inflammation or heat around it.",
+      "score": 0.3245,
+      "is_missing": true,
+      "action": "Added: Missing clinical dialogue detail (coverage < 0.40); inserted via GPT-2 fluency optimization."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "It's just sore and tender on the outside, especially when I move it, but there's no visible inflammation or heat around it.",
+      "statement": "It's just sore and tender on the outside, especially when I move it, but there's no visible inflammation or heat around it.",
+      "coverage": 0.3245,
+      "status": "added",
+      "reason": "coverage <= cov_min (uMedSum adds the dialogue sentence verbatim)",
+      "insertion": {
+        "section": "objective",
+        "line_index": 12,
+        "perplexity": 14.25
+      }
+    }
+  ],
+  "stage3_added": [
+    {
+      "statement": "It's just sore and tender on the outside, especially when I move it, but there's no visible inflammation or heat around it.",
+      "evidence": "It's just sore and tender on the outside, especially when I move it, but there's no visible inflammation or heat around it.",
+      "section": "objective",
+      "candidate": "It's just sore and tender on the outside, especially when I move it, but there's no visible inflammation or heat around it."
+    }
+  ],
+  "stage3_stats": {
+    "num_key_sentences": 2,
+    "num_flagged": 1,
+    "num_added": 1
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "section": "subjective",
+        "claim": "The pain is relieved.",
+        "entailment": 0.4221,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "The patient reports that the pain is aggravated by moving the arm, especially raising it or doing lifting, and is relieved by icing and taking Advil."
+      },
+      {
+        "section": "subjective",
+        "claim": "The pain is relieved by icing.",
+        "entailment": 0.4377,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "The patient reports that the pain is aggravated by moving the arm, especially raising it or doing lifting, and is relieved by icing and taking Advil."
+      },
+      {
+        "section": "subjective",
+        "claim": "The pain is relieved.",
+        "entailment": 0.4221,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "The patient reports that the pain is aggravated by moving the arm, especially raising it or doing lifting, and is relieved by icing and taking Advil."
+      },
+      {
+        "section": "subjective",
+        "claim": "The pain is relieved by taking Advil.",
+        "entailment": 0.439,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "The patient reports that the pain is aggravated by moving the arm, especially raising it or doing lifting, and is relieved by icing and taking Advil."
+      },
+      {
+        "section": "objective",
+        "claim": "Diagnostic Results & Labs:",
+        "entailment": 0.4846,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Diagnostic Results & Labs:"
+      }
+    ]
+  },
+  "final_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** Based on the patient's symptoms and medical history, it is likely that the patient is experiencing an acute exacerbation of a pre-existing shoulder condition, possibly related to the patient's prior baseball injuries. Further evaluation with an MRI may be necessary to determine the underlying cause of the pain.\n* **Treatment Plan, Medications, and Follow-up:** The patient will be referred for an MRI to further evaluate the shoulder condition. In the meantime, the patient will continue to take Advil as needed for pain relief. Follow-up instructions will be provided once the MRI results are available.\n\nPlease note that this is a hypothetical note and may not reflect actual clinical practice or patient information."
+  },
+  "ap_unchanged": true,
+  "thresholds": {
+    "Te": 0.9,
+    "Tc": 0.8,
+    "Ta": 0.5,
+    "cov_min": 0.4,
+    "top_m": 2,
+    "fix_header_bug": true
+  },
+  "models": {
+    "llm": "llama3:8b-instruct-q8_0",
+    "nli": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+    "embedder": "all-MiniLM-L6-v2",
+    "ppl": "gpt2"
+  },
+  "status": "success",
+  "seconds": 12.1,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 55 years old, male. I've been having some right shoulder pain for a few weeks now. It started after doing some work in my backyard on a bunch of different projects, and it just hasn't gone away. It's been really sore, especially on the outside of my shoulder, and it hurts when I move it.\nDoctor: Could you describe the nature of the pain (e.g., sharp, dull, burning) and whether it radiates to other areas? Have you experienced any swelling, redness, or limited range of motion in the shoulder? Have you had any prior shoulder injuries or surgeries?\nPatient: The pain is more of a soreness, kinda like a dull ache, and it's mostly on the outside of my shoulder. It doesn't really radiate anywhere else, but it definitely hurts when I move it, especially when I raise my arm. I have had some issues with that same shoulder before from playing baseball when I was younger, but nothing major. I don't remember any surgeries on it.\nDoctor: Have you undergone any imaging studies or consultations for this shoulder pain, and if so, what were the findings or recommendations?\nPatient: No, I haven't had any imaging studies done for this yet, but my doctor mentioned looking at an X-ray and there was no fracture. They did say they might order an MRI since I've had some issues before. I'm not sure what exactly they're looking for, but I'm hoping it's nothing too serious.\nDoctor: Have you experienced any weakness, numbness, or tingling in your right arm or hand? Additionally, could you describe any specific activities or movements that aggravate or relieve the pain?\nPatient: No, I haven't experienced any weakness, numbness, or tingling in my right arm or hand. The pain is aggravated when I move my arm, especially when I raise it or do things like lift stuff, but it doesn't really bother me when I'm just sitting still. I've been trying to ice it and take some Advil, which helps a little, but it's still sore to touch.\nDoctor: Have you noticed any clicking, popping, or locking sensations in the shoulder when you move it?\nPatient: No, I haven't noticed any clicking, popping, or locking sensations in my shoulder when I move it. It just feels sore on the outside, especially when I raise my arm or do any lifting. It's been pretty consistent like that.\nDoctor: Could you describe the exact location of the pain on your shoulder and whether you have any difficulty performing daily activities such as dressing or reaching overhead?\nPatient: The pain is on the outside of my shoulder, kind of near the top where the arm connects, and it's been bothering me when I try to reach overhead or do any lifting. It doesn't really stop me from doing daily stuff, but it does make some things a bit uncomfortable, like putting on a shirt or reaching for something high.\nDoctor: Have you had any recent imaging studies, such as an X-ray or MRI, of the right shoulder? If not, would you be willing to undergo an MRI to better evaluate the cause of your shoulder pain?\nPatient: No, I haven't had any recent imaging studies of the right shoulder yet. I was told they looked at an X-ray and there was no fracture, but they might order an MRI since I've had some issues before. I'm willing to do that if it helps figure out what's going on.\nDoctor: Have you noticed any swelling, redness, or warmth around the affected shoulder area?\nPatient: No, I haven't noticed any swelling, redness, or warmth around the affected shoulder area. It's just sore and tender on the outside, especially when I move it, but there's no visible inflammation or heat around it.\nDoctor: Could you describe the specific movements or activities that trigger the pain the most, and have you noticed any weakness or limited range of motion in your right shoulder?\nPatient: The movements that trigger the pain the most are raising my arm or doing any kind of lifting, especially with the projects I've been working on in the yard. I don't really have any weakness, but I do feel some limitation when I try to move it a certain way, though I can still move it pretty well overall.\nDoctor: Have you experienced any numbness, tingling, or weakness in your arm or hand that could suggest nerve involvement?\nPatient: No, I haven't experienced any numbness, tingling, or weakness in my arm or hand. It's just the soreness in the shoulder, and my hand grip feels fine. I don't think it's related to any nerve issues.\nDoctor: Have you noticed any swelling, redness, or warmth around the affected shoulder area?\nPatient: No, I haven't noticed any swelling, redness, or warmth around the affected shoulder area. It's just sore and tender on the outside, especially when I move it, but there's no visible inflammation or heat around it.\nDoctor: Have you had any recent imaging studies of the right shoulder, such as an MRI or ultrasound, to evaluate the soft tissues?\nPatient: No, I haven't had any recent imaging studies of the right shoulder yet. I was told they looked at an X-ray and there was no fracture, but they might order an MRI since I've had some issues before. I'm willing to do that if it helps figure out what's going on.\nDoctor: Have you noticed any swelling, redness, or warmth around the affected shoulder area?\nPatient: No, I haven't noticed any swelling, redness, or warmth around the affected shoulder area. It's just sore and tender on the outside, especially when I move it, but there's no visible inflammation or heat around it.\nDoctor: Have you experienced any recent trauma or fall to the shoulder that might have contributed to the pain?\nPatient: No, I don't think I've had any recent trauma or fall to the shoulder that might have contributed to the pain. It started after I was doing a lot of work in the yard, but I don't remember specifically falling or hitting it. It just gradually started hurting after all the lifting and projects I've been doing.\nDoctor: Have you experienced any night pain or pain that disrupts your sleep?\nPatient: Yes, it does bother me a little at night because I sleep on that side, but it's not really keeping me up or disrupting my sleep too much. It's more of a mild discomfort that I notice when I shift positions.",
+  "reference_so": {
+    "subjective": "Basic information: 55-year-old male with chief complaint of right shoulder pain for a few weeks, starting after backyard work\n\nHistory of present illness: Onset after backyard work, pain localized to the outside of the shoulder, exacerbated by movement. The pain is more of a soreness, kinda like a dull ache, and it's mostly on the outside of the shoulder. It doesn't really radiate anywhere else, but it definitely hurts when I move it, especially when I raise my arm. The pain is aggravated when moving the arm, especially when raising it or lifting stuff, but it doesn't bother me when sitting still. I've been trying to ice it and take some Advil, which helps a little, but it's still sore to touch. No clicking, popping, or locking sensations in the shoulder when moving it. The pain is on the outside of my shoulder, kind of near the top where the arm connects, and it's been bothering me when I try to reach overhead or do any lifting. It doesn't really stop me from doing daily stuff, but it does make some things a bit uncomfortable, like putting on a shirt or reaching for something high. The movements that trigger the pain the most are raising my arm or doing any kind of lifting, especially with the projects I've been working on in the yard. I don't really have any weakness, but I do feel some limitation when I try to move it a certain way, though I can still move it pretty well overall. No numbness, tingling, or weakness in my arm or hand. Hand grip feels fine. No swelling, redness, or warmth around the affected shoulder area. No, I don't think I've had any recent trauma or fall to the shoulder that might have contributed to the pain. It started after I was doing a lot of work in the yard, but I don't remember specifically falling or hitting it. It just gradually started hurting after all the lifting and projects I've been doing. It does bother me a little at night because I sleep on that side, but it's not really keeping me up or disrupting my sleep too much. It's more of a mild discomfort that I notice when I shift positions.\n\nPast history: Previous history of shoulder issues from playing baseball; no major injuries or surgeries reported.",
+    "objective": "Physical examination: Physical examination findings are pending. No objective findings reported yet.\n\nInvestigations: No recent imaging studies of the right shoulder have been performed. The patient mentioned that an X-ray was previously done and showed no fracture, but an MRI may be ordered due to prior shoulder issues."
+  }
+}

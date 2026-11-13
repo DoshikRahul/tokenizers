@@ -1,0 +1,525 @@
+{
+  "case_id": "D2N020",
+  "split": "test",
+  "is_icl_demo": false,
+  "stage1_elements": "Here are the extracted clinical elements in concise bullet points:\n\n**Subjective Elements:**\n\n* Chief complaint: Abnormal lab results, specifically low hemoglobin\n* History of present illness:\n\t+ Symptoms: Lightheadedness, feeling like passing out\n\t+ Onset: Not specified\n\t+ Duration: Not specified\n* Relevant medical history/medications:\n\t+ Past medical history: Gastritis, knee replacement, possible lung cancer (benign)\n\t+ Medications: Not specified\n* Family history:\n\t+ Blood disorders: Unknown\n\t+ Cancers: Unknown\n\n**Objective Elements:**\n\n* Physical examination findings: Not mentioned\n* Vital signs mentioned: Not mentioned\n* Diagnostic lab/imaging results:\n\t+ Hemoglobin level: 8.2\n\t+ Endoscopy: Gastritis, polyp (biopsy pending)\n\t+ Fecal occult blood test: Not performed\n\t+ Other lab tests: Not specified\n\n**Assessment Elements:**\n\n* Diagnoses: Not specified\n* Clinical impressions: Not specified\n\n**Plan Elements:**\n\n* Medical treatment plan: Not specified\n* Prescriptions/dosages: Not specified\n* Tests ordered: Not specified\n* Follow-up instructions: Not specified",
+  "stage1_raw_note": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:\n\n**SUBJECTIVE:**\n\n* **Chief Complaint:** Abnormal lab results, specifically low hemoglobin.\n* **History of Present Illness (HPI):** The patient, a 56-year-old male, presented with complaints of lightheadedness and feeling like passing out. He reported that he was in the ER and was found to have a low hemoglobin level of 8.2. He denied any other symptoms, including fatigue, shortness of breath, chest pain, or changes in bowel habits.\n\n**OBJECTIVE:**\n\n* **Physical Examination & Vitals:** Not mentioned.\n* **Diagnostic Results & Labs:**\n\t+ Hemoglobin level: 8.2\n\t+ Endoscopy: Gastritis, polyp (biopsy pending)\n\t+ Fecal occult blood test: Not performed\n\t+ Other lab tests: Not specified\n\n**ASSESSMENT AND PLAN:**\n\n* **Diagnoses and Clinical Reasoning:** The patient's low hemoglobin level and symptoms of lightheadedness suggest anemia. The presence of gastritis and a polyp on endoscopy may be contributing factors. Further evaluation is needed to determine the cause of the anemia and to rule out any underlying gastrointestinal issues.\n* **Treatment Plan, Medications, and Follow-up:** The patient will need to undergo further testing, including a complete blood count and iron studies, to determine the cause of the anemia. He will also need to undergo a colonoscopy to evaluate the polyp and rule out any underlying gastrointestinal issues. The patient will be referred to a gastroenterologist for further evaluation and management.\n\n**SOAP NOTE:**\n\nThis patient presented with complaints of lightheadedness and feeling like passing out, which were found to be related to a low hemoglobin level of 8.2. The patient has a history of gastritis and a polyp on endoscopy, which may be contributing factors to the anemia. Further evaluation is needed to determine the cause of the anemia and to rule out any underlying gastrointestinal issues. The patient will be referred to a gastroenterologist for further evaluation and management.",
+  "stage1_parse": {
+    "parse_mode": "main_headings",
+    "parse_ok": true,
+    "dropped_preamble": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:"
+  },
+  "stage1_so": {
+    "subjective": "* **Chief Complaint:** Abnormal lab results, specifically low hemoglobin.\n* **History of Present Illness (HPI):** The patient, a 56-year-old male, presented with complaints of lightheadedness and feeling like passing out. He reported that he was in the ER and was found to have a low hemoglobin level of 8.2. He denied any other symptoms, including fatigue, shortness of breath, chest pain, or changes in bowel habits.",
+    "objective": "* **Physical Examination & Vitals:** Not mentioned.\n* **Diagnostic Results & Labs:**\n\t+ Hemoglobin level: 8.2\n\t+ Endoscopy: Gastritis, polyp (biopsy pending)\n\t+ Fecal occult blood test: Not performed\n\t+ Other lab tests: Not specified"
+  },
+  "stage1_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** The patient's low hemoglobin level and symptoms of lightheadedness suggest anemia. The presence of gastritis and a polyp on endoscopy may be contributing factors. Further evaluation is needed to determine the cause of the anemia and to rule out any underlying gastrointestinal issues.\n* **Treatment Plan, Medications, and Follow-up:** The patient will need to undergo further testing, including a complete blood count and iron studies, to determine the cause of the anemia. He will also need to undergo a colonoscopy to evaluate the polyp and rule out any underlying gastrointestinal issues. The patient will be referred to a gastroenterologist for further evaluation and management.\n\n**SOAP NOTE:**\n\nThis patient presented with complaints of lightheadedness and feeling like passing out, which were found to be related to a low hemoglobin level of 8.2. The patient has a history of gastritis and a polyp on endoscopy, which may be contributing factors to the anemia. Further evaluation is needed to determine the cause of the anemia and to rule out any underlying gastrointestinal issues. The patient will be referred to a gastroenterologist for further evaluation and management."
+  },
+  "stage2_so": {
+    "subjective": "The patient has an abnormal lab result.\nThe abnormal lab result is related to low hemoglobin.\nHistory of Present Illness (HPI): The patient, a 56-year-old male, presented with complaints of lightheadedness and feeling like passing out.\nHe reported that he was in the ER and was found to have a low hemoglobin level of 8.2.\nHe denied fatigue.\nHe denied shortness of breath.\nHe denied chest pain.\nHe denied changes in bowel habits.\nNote that I've replaced the pronoun \"He\" with the subject, and each fact is self-contained and stands alone as true or false.",
+    "objective": "Statement: Physical Examination & Vitals: Not mentioned.\nPhysical Examination is not mentioned.\nDiagnostic Results & Labs:\nHemoglobin level: 8.2\nThe patient has Gastritis.\nThe patient has a polyp.\nA biopsy is pending for the polyp.\nNote that there is only one proposition in this statement, so it can be output as a single atomic fact.\nNote that there is only one proposition in this statement, so only one atomic fact is needed.\nOther lab tests are not specified.\nNote that there is only one proposition in this statement, so I output a single fact."
+  },
+  "stage2_audit": {
+    "subjective": [
+      {
+        "unit": "Chief Complaint: Abnormal lab results, specifically low hemoglobin.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.8911,
+          "neutral": 0.059,
+          "contradiction": 0.0498
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 56 years old, male. I came in because I had some abnormal lab results, specifically a low hemoglobin. I was in the ER and they found that, and I've been feeling pretty lightheaded. Doctor: Could you please confirm your age, gender, and the specific lab results you received? Also, have you experienced any other symptoms along with the lightheadedness? Patient: I'm 56, male. The lab result was a low hemoglobin. I was feeling very lightheaded, like I was going to pass out sometimes. I didn't have any other symptoms, just that lightheadedness. Doctor: What was the exact hemoglobin value reported in the lab results? Patient: I don't know the exact number, but it was low enough that they mentioned it in the ER. The doctor said it was 8.2 later, but I didn't get that detail at first. Doctor: Could you please provide more details about any other symptoms you may have experienced, such as fatigue, shortness of breath, chest pain, or changes in bowel habits? Patient: I don't have any fatigue or chest pain. I didn't notice any changes in my bowel habits, and I haven't had any blood in my stool. The only thing is that I was very lightheaded, like I was going to pass out sometimes. Doctor: Could you please provide information about your past medical history, including any prior diagnoses of anemia, gastrointestinal issues, or chronic conditions? Also, do you have a family history of blood disorders or cancers? Patient: I don't have any history of anemia or gastrointestinal issues, other than the gastritis they found during the endoscopy. I had a knee replacement last year, and a few years ago, there was a scare with possible lung cancer, but it turned out to be benign. I don't know about my family history of blood disorders or cancers. Doctor: Could you describe any recent changes in your energy levels,",
+        "atomic_decomposition": {
+          "original": "Chief Complaint: Abnormal lab results, specifically low hemoglobin.",
+          "retained": [
+            {
+              "atom": "The patient has an abnormal lab result.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 56 years old, male. I came in because I had some abnormal lab results, specifically a low hemoglobin. I was in the ER and they found that, and I've been feeling pretty lightheaded. Doctor: Could you please confirm your age, gender, and the specific lab results you received? Also, have you experienced any other symptoms along with the lightheadedness? Patient: I'm 56, male. The lab result was a low hemoglobin. I was feeling very lightheaded, like I was going to pass out sometimes. I didn't have any other symptoms, just that lightheadedness. Doctor: What was the exact hemoglobin value reported in the lab results? Patient: I don't know the exact number, but it was low enough that they mentioned it in the ER. The doctor said it was 8.2 later, but I didn't get that detail at first. Doctor: Could you please provide more details about any other symptoms you may have experienced, such as fatigue, shortness of breath, chest pain, or changes in bowel habits? Patient: I don't have any fatigue or chest pain. I didn't notice any changes in my bowel habits, and I haven't had any blood in my stool. The only thing is that I was very lightheaded, like I was going to pass out sometimes. Doctor: Could you please provide information about your past medical history, including any prior diagnoses of anemia, gastrointestinal issues, or chronic conditions? Also, do you have a family history of blood disorders or cancers? Patient: I don't have any history of anemia or gastrointestinal issues, other than the gastritis they found during the endoscopy. I had a knee replacement last year, and a few years ago, there was a scare with possible lung cancer, but it turned out to be benign. I don't know about my family history of blood disorders or cancers. Doctor: Could you describe any recent changes in your energy levels,",
+              "entailment": 0.998,
+              "depth": 1
+            },
+            {
+              "atom": "The abnormal lab result is related to low hemoglobin.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 56 years old, male. I came in because I had some abnormal lab results, specifically a low hemoglobin. I was in the ER and they found that, and I've been feeling pretty lightheaded. Doctor: Could you please confirm your age, gender, and the specific lab results you received? Also, have you experienced any other symptoms along with the lightheadedness? Patient: I'm 56, male. The lab result was a low hemoglobin. I was feeling very lightheaded, like I was going to pass out sometimes. I didn't have any other symptoms, just that lightheadedness. Doctor: What was the exact hemoglobin value reported in the lab results? Patient: I don't know the exact number, but it was low enough that they mentioned it in the ER. The doctor said it was 8.2 later, but I didn't get that detail at first. Doctor: Could you please provide more details about any other symptoms you may have experienced, such as fatigue, shortness of breath, chest pain, or changes in bowel habits? Patient: I don't have any fatigue or chest pain. I didn't notice any changes in my bowel habits, and I haven't had any blood in my stool. The only thing is that I was very lightheaded, like I was going to pass out sometimes. Doctor: Could you please provide information about your past medical history, including any prior diagnoses of anemia, gastrointestinal issues, or chronic conditions? Also, do you have a family history of blood disorders or cancers? Patient: I don't have any history of anemia or gastrointestinal issues, other than the gastritis they found during the endoscopy. I had a knee replacement last year, and a few years ago, there was a scare with possible lung cancer, but it turned out to be benign. I don't know about my family history of blood disorders or cancers. Doctor: Could you describe any recent changes in your energy levels,",
+              "entailment": 0.9824,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "History of Present Illness (HPI): The patient, a 56-year-old male, presented with complaints of lightheadedness and feeling like passing out.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9771,
+          "neutral": 0.0149,
+          "contradiction": 0.0082
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 56 years old, male. I came in because I had some abnormal lab results, specifically a low hemoglobin. I was in the ER and they found that, and I've been feeling pretty lightheaded. Doctor: Could you please confirm your age, gender, and the specific lab results you received? Also, have you experienced any other symptoms along with the lightheadedness? Patient: I'm 56, male. The lab result was a low hemoglobin. I was feeling very lightheaded, like I was going to pass out sometimes. I didn't have any other symptoms, just that lightheadedness. Doctor: What was the exact hemoglobin value reported in the lab results? Patient: I don't know the exact number, but it was low enough that they mentioned it in the ER. The doctor said it was 8.2 later, but I didn't get that detail at first. Doctor: Could you please provide more details about any other symptoms you may have experienced, such as fatigue, shortness of breath, chest pain, or changes in bowel habits? Patient: I don't have any fatigue or chest pain. I didn't notice any changes in my bowel habits, and I haven't had any blood in my stool. The only thing is that I was very lightheaded, like I was going to pass out sometimes. Doctor: Could you please provide information about your past medical history, including any prior diagnoses of anemia, gastrointestinal issues, or chronic conditions? Also, do you have a family history of blood disorders or cancers? Patient: I don't have any history of anemia or gastrointestinal issues, other than the gastritis they found during the endoscopy. I had a knee replacement last year, and a few years ago, there was a scare with possible lung cancer, but it turned out to be benign. I don't know about my family history of blood disorders or cancers. Doctor: Could you describe any recent changes in your energy levels,",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "He reported that he was in the ER and was found to have a low hemoglobin level of 8.2.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9966,
+          "neutral": 0.0013,
+          "contradiction": 0.0019
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 56 years old, male. I came in because I had some abnormal lab results, specifically a low hemoglobin. I was in the ER and they found that, and I've been feeling pretty lightheaded. Doctor: Could you please confirm your age, gender, and the specific lab results you received? Also, have you experienced any other symptoms along with the lightheadedness? Patient: I'm 56, male. The lab result was a low hemoglobin. I was feeling very lightheaded, like I was going to pass out sometimes. I didn't have any other symptoms, just that lightheadedness. Doctor: What was the exact hemoglobin value reported in the lab results? Patient: I don't know the exact number, but it was low enough that they mentioned it in the ER. The doctor said it was 8.2 later, but I didn't get that detail at first. Doctor: Could you please provide more details about any other symptoms you may have experienced, such as fatigue, shortness of breath, chest pain, or changes in bowel habits? Patient: I don't have any fatigue or chest pain. I didn't notice any changes in my bowel habits, and I haven't had any blood in my stool. The only thing is that I was very lightheaded, like I was going to pass out sometimes. Doctor: Could you please provide information about your past medical history, including any prior diagnoses of anemia, gastrointestinal issues, or chronic conditions? Also, do you have a family history of blood disorders or cancers? Patient: I don't have any history of anemia or gastrointestinal issues, other than the gastritis they found during the endoscopy. I had a knee replacement last year, and a few years ago, there was a scare with possible lung cancer, but it turned out to be benign. I don't know about my family history of blood disorders or cancers. Doctor: Could you describe any recent changes in your energy levels,",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "He denied any other symptoms, including fatigue, shortness of breath, chest pain, or changes in bowel habits.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.7607,
+          "neutral": 0.0228,
+          "contradiction": 0.2164
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 56 years old, male. I came in because I had some abnormal lab results, specifically a low hemoglobin. I was in the ER and they found that, and I've been feeling pretty lightheaded. Doctor: Could you please confirm your age, gender, and the specific lab results you received? Also, have you experienced any other symptoms along with the lightheadedness? Patient: I'm 56, male. The lab result was a low hemoglobin. I was feeling very lightheaded, like I was going to pass out sometimes. I didn't have any other symptoms, just that lightheadedness. Doctor: What was the exact hemoglobin value reported in the lab results? Patient: I don't know the exact number, but it was low enough that they mentioned it in the ER. The doctor said it was 8.2 later, but I didn't get that detail at first. Doctor: Could you please provide more details about any other symptoms you may have experienced, such as fatigue, shortness of breath, chest pain, or changes in bowel habits? Patient: I don't have any fatigue or chest pain. I didn't notice any changes in my bowel habits, and I haven't had any blood in my stool. The only thing is that I was very lightheaded, like I was going to pass out sometimes. Doctor: Could you please provide information about your past medical history, including any prior diagnoses of anemia, gastrointestinal issues, or chronic conditions? Also, do you have a family history of blood disorders or cancers? Patient: I don't have any history of anemia or gastrointestinal issues, other than the gastritis they found during the endoscopy. I had a knee replacement last year, and a few years ago, there was a scare with possible lung cancer, but it turned out to be benign. I don't know about my family history of blood disorders or cancers. Doctor: Could you describe any recent changes in your energy levels,",
+        "atomic_decomposition": {
+          "original": "He denied any other symptoms, including fatigue, shortness of breath, chest pain, or changes in bowel habits.",
+          "retained": [
+            {
+              "atom": "He denied fatigue.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 56 years old, male. I came in because I had some abnormal lab results, specifically a low hemoglobin. I was in the ER and they found that, and I've been feeling pretty lightheaded. Doctor: Could you please confirm your age, gender, and the specific lab results you received? Also, have you experienced any other symptoms along with the lightheadedness? Patient: I'm 56, male. The lab result was a low hemoglobin. I was feeling very lightheaded, like I was going to pass out sometimes. I didn't have any other symptoms, just that lightheadedness. Doctor: What was the exact hemoglobin value reported in the lab results? Patient: I don't know the exact number, but it was low enough that they mentioned it in the ER. The doctor said it was 8.2 later, but I didn't get that detail at first. Doctor: Could you please provide more details about any other symptoms you may have experienced, such as fatigue, shortness of breath, chest pain, or changes in bowel habits? Patient: I don't have any fatigue or chest pain. I didn't notice any changes in my bowel habits, and I haven't had any blood in my stool. The only thing is that I was very lightheaded, like I was going to pass out sometimes. Doctor: Could you please provide information about your past medical history, including any prior diagnoses of anemia, gastrointestinal issues, or chronic conditions? Also, do you have a family history of blood disorders or cancers? Patient: I don't have any history of anemia or gastrointestinal issues, other than the gastritis they found during the endoscopy. I had a knee replacement last year, and a few years ago, there was a scare with possible lung cancer, but it turned out to be benign. I don't know about my family history of blood disorders or cancers. Doctor: Could you describe any recent changes in your energy levels,",
+              "entailment": 0.9424,
+              "depth": 1
+            },
+            {
+              "atom": "He denied shortness of breath.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 56 years old, male. I came in because I had some abnormal lab results, specifically a low hemoglobin. I was in the ER and they found that, and I've been feeling pretty lightheaded. Doctor: Could you please confirm your age, gender, and the specific lab results you received? Also, have you experienced any other symptoms along with the lightheadedness? Patient: I'm 56, male. The lab result was a low hemoglobin. I was feeling very lightheaded, like I was going to pass out sometimes. I didn't have any other symptoms, just that lightheadedness. Doctor: What was the exact hemoglobin value reported in the lab results? Patient: I don't know the exact number, but it was low enough that they mentioned it in the ER. The doctor said it was 8.2 later, but I didn't get that detail at first. Doctor: Could you please provide more details about any other symptoms you may have experienced, such as fatigue, shortness of breath, chest pain, or changes in bowel habits? Patient: I don't have any fatigue or chest pain. I didn't notice any changes in my bowel habits, and I haven't had any blood in my stool. The only thing is that I was very lightheaded, like I was going to pass out sometimes. Doctor: Could you please provide information about your past medical history, including any prior diagnoses of anemia, gastrointestinal issues, or chronic conditions? Also, do you have a family history of blood disorders or cancers? Patient: I don't have any history of anemia or gastrointestinal issues, other than the gastritis they found during the endoscopy. I had a knee replacement last year, and a few years ago, there was a scare with possible lung cancer, but it turned out to be benign. I don't know about my family history of blood disorders or cancers. Doctor: Could you describe any recent changes in your energy levels,",
+              "entailment": 0.9482,
+              "depth": 1
+            },
+            {
+              "atom": "He denied chest pain.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 56 years old, male. I came in because I had some abnormal lab results, specifically a low hemoglobin. I was in the ER and they found that, and I've been feeling pretty lightheaded. Doctor: Could you please confirm your age, gender, and the specific lab results you received? Also, have you experienced any other symptoms along with the lightheadedness? Patient: I'm 56, male. The lab result was a low hemoglobin. I was feeling very lightheaded, like I was going to pass out sometimes. I didn't have any other symptoms, just that lightheadedness. Doctor: What was the exact hemoglobin value reported in the lab results? Patient: I don't know the exact number, but it was low enough that they mentioned it in the ER. The doctor said it was 8.2 later, but I didn't get that detail at first. Doctor: Could you please provide more details about any other symptoms you may have experienced, such as fatigue, shortness of breath, chest pain, or changes in bowel habits? Patient: I don't have any fatigue or chest pain. I didn't notice any changes in my bowel habits, and I haven't had any blood in my stool. The only thing is that I was very lightheaded, like I was going to pass out sometimes. Doctor: Could you please provide information about your past medical history, including any prior diagnoses of anemia, gastrointestinal issues, or chronic conditions? Also, do you have a family history of blood disorders or cancers? Patient: I don't have any history of anemia or gastrointestinal issues, other than the gastritis they found during the endoscopy. I had a knee replacement last year, and a few years ago, there was a scare with possible lung cancer, but it turned out to be benign. I don't know about my family history of blood disorders or cancers. Doctor: Could you describe any recent changes in your energy levels,",
+              "entailment": 0.9902,
+              "depth": 1
+            },
+            {
+              "atom": "He denied changes in bowel habits.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 56 years old, male. I came in because I had some abnormal lab results, specifically a low hemoglobin. I was in the ER and they found that, and I've been feeling pretty lightheaded. Doctor: Could you please confirm your age, gender, and the specific lab results you received? Also, have you experienced any other symptoms along with the lightheadedness? Patient: I'm 56, male. The lab result was a low hemoglobin. I was feeling very lightheaded, like I was going to pass out sometimes. I didn't have any other symptoms, just that lightheadedness. Doctor: What was the exact hemoglobin value reported in the lab results? Patient: I don't know the exact number, but it was low enough that they mentioned it in the ER. The doctor said it was 8.2 later, but I didn't get that detail at first. Doctor: Could you please provide more details about any other symptoms you may have experienced, such as fatigue, shortness of breath, chest pain, or changes in bowel habits? Patient: I don't have any fatigue or chest pain. I didn't notice any changes in my bowel habits, and I haven't had any blood in my stool. The only thing is that I was very lightheaded, like I was going to pass out sometimes. Doctor: Could you please provide information about your past medical history, including any prior diagnoses of anemia, gastrointestinal issues, or chronic conditions? Also, do you have a family history of blood disorders or cancers? Patient: I don't have any history of anemia or gastrointestinal issues, other than the gastritis they found during the endoscopy. I had a knee replacement last year, and a few years ago, there was a scare with possible lung cancer, but it turned out to be benign. I don't know about my family history of blood disorders or cancers. Doctor: Could you describe any recent changes in your energy levels,",
+              "entailment": 0.9624,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've replaced the pronoun \"He\" with the subject, and each fact is self-contained and stands alone as true or false.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 56 years old, male. I came in because I had some abnormal lab results, specifically a low hemoglobin. I was in the ER and they found that, and I've been feeling pretty lightheaded. Doctor: Could you please confirm your age, gender, and the specific lab results you received? Also, have you experienced any other symptoms along with the lightheadedness? Patient: I'm 56, male. The lab result was a low hemoglobin. I was feeling very lightheaded, like I was going to pass out sometimes. I didn't have any other symptoms, just that lightheadedness. Doctor: What was the exact hemoglobin value reported in the lab results? Patient: I don't know the exact number, but it was low enough that they mentioned it in the ER. The doctor said it was 8.2 later, but I didn't get that detail at first. Doctor: Could you please provide more details about any other symptoms you may have experienced, such as fatigue, shortness of breath, chest pain, or changes in bowel habits? Patient: I don't have any fatigue or chest pain. I didn't notice any changes in my bowel habits, and I haven't had any blood in my stool. The only thing is that I was very lightheaded, like I was going to pass out sometimes. Doctor: Could you please provide information about your past medical history, including any prior diagnoses of anemia, gastrointestinal issues, or chronic conditions? Also, do you have a family history of blood disorders or cancers? Patient: I don't have any history of anemia or gastrointestinal issues, other than the gastritis they found during the endoscopy. I had a knee replacement last year, and a few years ago, there was a scare with possible lung cancer, but it turned out to be benign. I don't know about my family history of blood disorders or cancers. Doctor: Could you describe any recent changes in your energy levels,",
+              "entailment": 0.9541,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      }
+    ],
+    "objective": [
+      {
+        "unit": "Physical Examination & Vitals: Not mentioned.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.47,
+          "neutral": 0.2632,
+          "contradiction": 0.2668
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "or location. They did take a biopsy of it, though, and the results are still pending. Doctor: Could you please provide the results of the fecal occult blood test, if available? Patient: I don't have a fecal occult blood test result because they didn't mention doing one. They only did an endoscopy in the ER. Doctor: Could you please provide details regarding the size and location of the polyp identified during the endoscopy, as well as any family history of blood disorders or cancers? Patient: I don't know the details about the polyp's size or location. They did take a biopsy of it, though, and the results are still pending. I also don't know about my family history of blood disorders or cancers. Doctor: Could you please provide information about the patient's family history of blood disorders or cancers? Patient: I don't know about my family history of blood disorders or cancers. That information isn't available to me. Doctor: Could you please provide the results of the pending biopsy of the polyp identified during the endoscopy and confirm whether the fecal occult blood test has been performed? Patient: I don't know the results of the biopsy yet because they're still pending. As for the fecal occult blood test, they didn't mention doing one—they only did an endoscopy in the ER. Doctor: Has the patient undergone any recent blood tests to evaluate for iron deficiency, vitamin B12, or folate levels? Patient: I don't know about any recent blood tests for iron deficiency, vitamin B12, or folate levels. They only did the hemoglobin test and the endoscopy in the ER. Doctor: Has the patient had a fecal occult blood test recently, and if so, what were the results? Patient: I don't know about a fecal occult blood test. They didn't mention doing one—they only did an endoscopy in the ER. Doctor: Has the patient had any recent blood tests for iron deficiency, vitamin B12, or folate levels? Patient: I don",
+        "atomic_decomposition": {
+          "original": "Physical Examination & Vitals: Not mentioned.",
+          "retained": [
+            {
+              "atom": "Statement: Physical Examination & Vitals: Not mentioned.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 56 years old, male. I came in because I had some abnormal lab results, specifically a low hemoglobin. I was in the ER and they found that, and I've been feeling pretty lightheaded. Doctor: Could you please confirm your age, gender, and the specific lab results you received? Also, have you experienced any other symptoms along with the lightheadedness? Patient: I'm 56, male. The lab result was a low hemoglobin. I was feeling very lightheaded, like I was going to pass out sometimes. I didn't have any other symptoms, just that lightheadedness. Doctor: What was the exact hemoglobin value reported in the lab results? Patient: I don't know the exact number, but it was low enough that they mentioned it in the ER. The doctor said it was 8.2 later, but I didn't get that detail at first. Doctor: Could you please provide more details about any other symptoms you may have experienced, such as fatigue, shortness of breath, chest pain, or changes in bowel habits? Patient: I don't have any fatigue or chest pain. I didn't notice any changes in my bowel habits, and I haven't had any blood in my stool. The only thing is that I was very lightheaded, like I was going to pass out sometimes. Doctor: Could you please provide information about your past medical history, including any prior diagnoses of anemia, gastrointestinal issues, or chronic conditions? Also, do you have a family history of blood disorders or cancers? Patient: I don't have any history of anemia or gastrointestinal issues, other than the gastritis they found during the endoscopy. I had a knee replacement last year, and a few years ago, there was a scare with possible lung cancer, but it turned out to be benign. I don't know about my family history of blood disorders or cancers. Doctor: Could you describe any recent changes in your energy levels,",
+              "entailment": 0.5713,
+              "depth": 1
+            },
+            {
+              "atom": "Physical Examination is not mentioned.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 56 years old, male. I came in because I had some abnormal lab results, specifically a low hemoglobin. I was in the ER and they found that, and I've been feeling pretty lightheaded. Doctor: Could you please confirm your age, gender, and the specific lab results you received? Also, have you experienced any other symptoms along with the lightheadedness? Patient: I'm 56, male. The lab result was a low hemoglobin. I was feeling very lightheaded, like I was going to pass out sometimes. I didn't have any other symptoms, just that lightheadedness. Doctor: What was the exact hemoglobin value reported in the lab results? Patient: I don't know the exact number, but it was low enough that they mentioned it in the ER. The doctor said it was 8.2 later, but I didn't get that detail at first. Doctor: Could you please provide more details about any other symptoms you may have experienced, such as fatigue, shortness of breath, chest pain, or changes in bowel habits? Patient: I don't have any fatigue or chest pain. I didn't notice any changes in my bowel habits, and I haven't had any blood in my stool. The only thing is that I was very lightheaded, like I was going to pass out sometimes. Doctor: Could you please provide information about your past medical history, including any prior diagnoses of anemia, gastrointestinal issues, or chronic conditions? Also, do you have a family history of blood disorders or cancers? Patient: I don't have any history of anemia or gastrointestinal issues, other than the gastritis they found during the endoscopy. I had a knee replacement last year, and a few years ago, there was a scare with possible lung cancer, but it turned out to be benign. I don't know about my family history of blood disorders or cancers. Doctor: Could you describe any recent changes in your energy levels,",
+              "entailment": 0.9712,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "Statement: Based on the rules provided, I will decompose the statement into independent, self-contained ATOMIC FACTS.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4668,
+              "depth": 2
+            },
+            {
+              "atom": "The rules are provided.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4668,
+              "depth": 2
+            },
+            {
+              "atom": "I will decompose the statement.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4431,
+              "depth": 2
+            },
+            {
+              "atom": "I will decompose the statement into independent, self-contained ATOMIC FACTS.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4541,
+              "depth": 2
+            },
+            {
+              "atom": "The statement is decomposed based on the rules.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4839,
+              "depth": 2
+            },
+            {
+              "atom": "Vitals are not mentioned.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4348,
+              "depth": 1
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Diagnostic Results & Labs:",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.6611,
+          "neutral": 0.2805,
+          "contradiction": 0.0581
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 56 years old, male. I came in because I had some abnormal lab results, specifically a low hemoglobin. I was in the ER and they found that, and I've been feeling pretty lightheaded. Doctor: Could you please confirm your age, gender, and the specific lab results you received? Also, have you experienced any other symptoms along with the lightheadedness? Patient: I'm 56, male. The lab result was a low hemoglobin. I was feeling very lightheaded, like I was going to pass out sometimes. I didn't have any other symptoms, just that lightheadedness. Doctor: What was the exact hemoglobin value reported in the lab results? Patient: I don't know the exact number, but it was low enough that they mentioned it in the ER. The doctor said it was 8.2 later, but I didn't get that detail at first. Doctor: Could you please provide more details about any other symptoms you may have experienced, such as fatigue, shortness of breath, chest pain, or changes in bowel habits? Patient: I don't have any fatigue or chest pain. I didn't notice any changes in my bowel habits, and I haven't had any blood in my stool. The only thing is that I was very lightheaded, like I was going to pass out sometimes. Doctor: Could you please provide information about your past medical history, including any prior diagnoses of anemia, gastrointestinal issues, or chronic conditions? Also, do you have a family history of blood disorders or cancers? Patient: I don't have any history of anemia or gastrointestinal issues, other than the gastritis they found during the endoscopy. I had a knee replacement last year, and a few years ago, there was a scare with possible lung cancer, but it turned out to be benign. I don't know about my family history of blood disorders or cancers. Doctor: Could you describe any recent changes in your energy levels,",
+        "atomic_decomposition": {
+          "original": "Diagnostic Results & Labs:",
+          "retained": [
+            {
+              "atom": "Diagnostic Results & Labs:",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 56 years old, male. I came in because I had some abnormal lab results, specifically a low hemoglobin. I was in the ER and they found that, and I've been feeling pretty lightheaded. Doctor: Could you please confirm your age, gender, and the specific lab results you received? Also, have you experienced any other symptoms along with the lightheadedness? Patient: I'm 56, male. The lab result was a low hemoglobin. I was feeling very lightheaded, like I was going to pass out sometimes. I didn't have any other symptoms, just that lightheadedness. Doctor: What was the exact hemoglobin value reported in the lab results? Patient: I don't know the exact number, but it was low enough that they mentioned it in the ER. The doctor said it was 8.2 later, but I didn't get that detail at first. Doctor: Could you please provide more details about any other symptoms you may have experienced, such as fatigue, shortness of breath, chest pain, or changes in bowel habits? Patient: I don't have any fatigue or chest pain. I didn't notice any changes in my bowel habits, and I haven't had any blood in my stool. The only thing is that I was very lightheaded, like I was going to pass out sometimes. Doctor: Could you please provide information about your past medical history, including any prior diagnoses of anemia, gastrointestinal issues, or chronic conditions? Also, do you have a family history of blood disorders or cancers? Patient: I don't have any history of anemia or gastrointestinal issues, other than the gastritis they found during the endoscopy. I had a knee replacement last year, and a few years ago, there was a scare with possible lung cancer, but it turned out to be benign. I don't know about my family history of blood disorders or cancers. Doctor: Could you describe any recent changes in your energy levels,",
+              "entailment": 0.6611,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "too_short",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "Hemoglobin level: 8.2",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.9648,
+          "neutral": 0.0273,
+          "contradiction": 0.0079
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 56 years old, male. I came in because I had some abnormal lab results, specifically a low hemoglobin. I was in the ER and they found that, and I've been feeling pretty lightheaded. Doctor: Could you please confirm your age, gender, and the specific lab results you received? Also, have you experienced any other symptoms along with the lightheadedness? Patient: I'm 56, male. The lab result was a low hemoglobin. I was feeling very lightheaded, like I was going to pass out sometimes. I didn't have any other symptoms, just that lightheadedness. Doctor: What was the exact hemoglobin value reported in the lab results? Patient: I don't know the exact number, but it was low enough that they mentioned it in the ER. The doctor said it was 8.2 later, but I didn't get that detail at first. Doctor: Could you please provide more details about any other symptoms you may have experienced, such as fatigue, shortness of breath, chest pain, or changes in bowel habits? Patient: I don't have any fatigue or chest pain. I didn't notice any changes in my bowel habits, and I haven't had any blood in my stool. The only thing is that I was very lightheaded, like I was going to pass out sometimes. Doctor: Could you please provide information about your past medical history, including any prior diagnoses of anemia, gastrointestinal issues, or chronic conditions? Also, do you have a family history of blood disorders or cancers? Patient: I don't have any history of anemia or gastrointestinal issues, other than the gastritis they found during the endoscopy. I had a knee replacement last year, and a few years ago, there was a scare with possible lung cancer, but it turned out to be benign. I don't know about my family history of blood disorders or cancers. Doctor: Could you describe any recent changes in your energy levels,",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "Endoscopy: Gastritis, polyp (biopsy pending)",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.4902,
+          "neutral": 0.2744,
+          "contradiction": 0.2354
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "or location. They did take a biopsy of it, though, and the results are still pending. Doctor: Could you please provide the results of the fecal occult blood test, if available? Patient: I don't have a fecal occult blood test result because they didn't mention doing one. They only did an endoscopy in the ER. Doctor: Could you please provide details regarding the size and location of the polyp identified during the endoscopy, as well as any family history of blood disorders or cancers? Patient: I don't know the details about the polyp's size or location. They did take a biopsy of it, though, and the results are still pending. I also don't know about my family history of blood disorders or cancers. Doctor: Could you please provide information about the patient's family history of blood disorders or cancers? Patient: I don't know about my family history of blood disorders or cancers. That information isn't available to me. Doctor: Could you please provide the results of the pending biopsy of the polyp identified during the endoscopy and confirm whether the fecal occult blood test has been performed? Patient: I don't know the results of the biopsy yet because they're still pending. As for the fecal occult blood test, they didn't mention doing one—they only did an endoscopy in the ER. Doctor: Has the patient undergone any recent blood tests to evaluate for iron deficiency, vitamin B12, or folate levels? Patient: I don't know about any recent blood tests for iron deficiency, vitamin B12, or folate levels. They only did the hemoglobin test and the endoscopy in the ER. Doctor: Has the patient had a fecal occult blood test recently, and if so, what were the results? Patient: I don't know about a fecal occult blood test. They didn't mention doing one—they only did an endoscopy in the ER. Doctor: Has the patient had any recent blood tests for iron deficiency, vitamin B12, or folate levels? Patient: I don",
+        "atomic_decomposition": {
+          "original": "Endoscopy: Gastritis, polyp (biopsy pending)",
+          "retained": [
+            {
+              "atom": "The patient has Gastritis.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 56 years old, male. I came in because I had some abnormal lab results, specifically a low hemoglobin. I was in the ER and they found that, and I've been feeling pretty lightheaded. Doctor: Could you please confirm your age, gender, and the specific lab results you received? Also, have you experienced any other symptoms along with the lightheadedness? Patient: I'm 56, male. The lab result was a low hemoglobin. I was feeling very lightheaded, like I was going to pass out sometimes. I didn't have any other symptoms, just that lightheadedness. Doctor: What was the exact hemoglobin value reported in the lab results? Patient: I don't know the exact number, but it was low enough that they mentioned it in the ER. The doctor said it was 8.2 later, but I didn't get that detail at first. Doctor: Could you please provide more details about any other symptoms you may have experienced, such as fatigue, shortness of breath, chest pain, or changes in bowel habits? Patient: I don't have any fatigue or chest pain. I didn't notice any changes in my bowel habits, and I haven't had any blood in my stool. The only thing is that I was very lightheaded, like I was going to pass out sometimes. Doctor: Could you please provide information about your past medical history, including any prior diagnoses of anemia, gastrointestinal issues, or chronic conditions? Also, do you have a family history of blood disorders or cancers? Patient: I don't have any history of anemia or gastrointestinal issues, other than the gastritis they found during the endoscopy. I had a knee replacement last year, and a few years ago, there was a scare with possible lung cancer, but it turned out to be benign. I don't know about my family history of blood disorders or cancers. Doctor: Could you describe any recent changes in your energy levels,",
+              "entailment": 0.9888,
+              "depth": 1
+            },
+            {
+              "atom": "The patient has a polyp.",
+              "citation": "or location. They did take a biopsy of it, though, and the results are still pending. Doctor: Could you please provide the results of the fecal occult blood test, if available? Patient: I don't have a fecal occult blood test result because they didn't mention doing one. They only did an endoscopy in the ER. Doctor: Could you please provide details regarding the size and location of the polyp identified during the endoscopy, as well as any family history of blood disorders or cancers? Patient: I don't know the details about the polyp's size or location. They did take a biopsy of it, though, and the results are still pending. I also don't know about my family history of blood disorders or cancers. Doctor: Could you please provide information about the patient's family history of blood disorders or cancers? Patient: I don't know about my family history of blood disorders or cancers. That information isn't available to me. Doctor: Could you please provide the results of the pending biopsy of the polyp identified during the endoscopy and confirm whether the fecal occult blood test has been performed? Patient: I don't know the results of the biopsy yet because they're still pending. As for the fecal occult blood test, they didn't mention doing one—they only did an endoscopy in the ER. Doctor: Has the patient undergone any recent blood tests to evaluate for iron deficiency, vitamin B12, or folate levels? Patient: I don't know about any recent blood tests for iron deficiency, vitamin B12, or folate levels. They only did the hemoglobin test and the endoscopy in the ER. Doctor: Has the patient had a fecal occult blood test recently, and if so, what were the results? Patient: I don't know about a fecal occult blood test. They didn't mention doing one—they only did an endoscopy in the ER. Doctor: Has the patient had any recent blood tests for iron deficiency, vitamin B12, or folate levels? Patient: I don",
+              "entailment": 0.5669,
+              "depth": 1
+            },
+            {
+              "atom": "A biopsy is pending for the polyp.",
+              "citation": "or location. They did take a biopsy of it, though, and the results are still pending. Doctor: Could you please provide the results of the fecal occult blood test, if available? Patient: I don't have a fecal occult blood test result because they didn't mention doing one. They only did an endoscopy in the ER. Doctor: Could you please provide details regarding the size and location of the polyp identified during the endoscopy, as well as any family history of blood disorders or cancers? Patient: I don't know the details about the polyp's size or location. They did take a biopsy of it, though, and the results are still pending. I also don't know about my family history of blood disorders or cancers. Doctor: Could you please provide information about the patient's family history of blood disorders or cancers? Patient: I don't know about my family history of blood disorders or cancers. That information isn't available to me. Doctor: Could you please provide the results of the pending biopsy of the polyp identified during the endoscopy and confirm whether the fecal occult blood test has been performed? Patient: I don't know the results of the biopsy yet because they're still pending. As for the fecal occult blood test, they didn't mention doing one—they only did an endoscopy in the ER. Doctor: Has the patient undergone any recent blood tests to evaluate for iron deficiency, vitamin B12, or folate levels? Patient: I don't know about any recent blood tests for iron deficiency, vitamin B12, or folate levels. They only did the hemoglobin test and the endoscopy in the ER. Doctor: Has the patient had a fecal occult blood test recently, and if so, what were the results? Patient: I don't know about a fecal occult blood test. They didn't mention doing one—they only did an endoscopy in the ER. Doctor: Has the patient had any recent blood tests for iron deficiency, vitamin B12, or folate levels? Patient: I don",
+              "entailment": 0.5386,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "Fecal occult blood test: Not performed",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.5,
+          "neutral": 0.2661,
+          "contradiction": 0.2341
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "12, or folate levels. They only did the hemoglobin test and the endoscopy in the ER. Doctor: Has the patient had a fecal occult blood test recently, and if so, what were the results? Patient: I don't know about a fecal occult blood test. They didn't mention doing one—they only did an endoscopy in the ER. Doctor: Has the patient had any recent blood tests for iron deficiency, vitamin B12, or folate levels? Patient: I don't know about any recent blood tests for iron deficiency, vitamin B12, or folate levels. They only did the hemoglobin test and the endoscopy in the ER.",
+        "atomic_decomposition": {
+          "original": "Fecal occult blood test: Not performed",
+          "retained": [
+            {
+              "atom": "Note that there is only one proposition in this statement, so it can be output as a single atomic fact.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 56 years old, male. I came in because I had some abnormal lab results, specifically a low hemoglobin. I was in the ER and they found that, and I've been feeling pretty lightheaded. Doctor: Could you please confirm your age, gender, and the specific lab results you received? Also, have you experienced any other symptoms along with the lightheadedness? Patient: I'm 56, male. The lab result was a low hemoglobin. I was feeling very lightheaded, like I was going to pass out sometimes. I didn't have any other symptoms, just that lightheadedness. Doctor: What was the exact hemoglobin value reported in the lab results? Patient: I don't know the exact number, but it was low enough that they mentioned it in the ER. The doctor said it was 8.2 later, but I didn't get that detail at first. Doctor: Could you please provide more details about any other symptoms you may have experienced, such as fatigue, shortness of breath, chest pain, or changes in bowel habits? Patient: I don't have any fatigue or chest pain. I didn't notice any changes in my bowel habits, and I haven't had any blood in my stool. The only thing is that I was very lightheaded, like I was going to pass out sometimes. Doctor: Could you please provide information about your past medical history, including any prior diagnoses of anemia, gastrointestinal issues, or chronic conditions? Also, do you have a family history of blood disorders or cancers? Patient: I don't have any history of anemia or gastrointestinal issues, other than the gastritis they found during the endoscopy. I had a knee replacement last year, and a few years ago, there was a scare with possible lung cancer, but it turned out to be benign. I don't know about my family history of blood disorders or cancers. Doctor: Could you describe any recent changes in your energy levels,",
+              "entailment": 0.709,
+              "depth": 2
+            },
+            {
+              "atom": "Note that there is only one proposition in this statement, so only one atomic fact is needed.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 56 years old, male. I came in because I had some abnormal lab results, specifically a low hemoglobin. I was in the ER and they found that, and I've been feeling pretty lightheaded. Doctor: Could you please confirm your age, gender, and the specific lab results you received? Also, have you experienced any other symptoms along with the lightheadedness? Patient: I'm 56, male. The lab result was a low hemoglobin. I was feeling very lightheaded, like I was going to pass out sometimes. I didn't have any other symptoms, just that lightheadedness. Doctor: What was the exact hemoglobin value reported in the lab results? Patient: I don't know the exact number, but it was low enough that they mentioned it in the ER. The doctor said it was 8.2 later, but I didn't get that detail at first. Doctor: Could you please provide more details about any other symptoms you may have experienced, such as fatigue, shortness of breath, chest pain, or changes in bowel habits? Patient: I don't have any fatigue or chest pain. I didn't notice any changes in my bowel habits, and I haven't had any blood in my stool. The only thing is that I was very lightheaded, like I was going to pass out sometimes. Doctor: Could you please provide information about your past medical history, including any prior diagnoses of anemia, gastrointestinal issues, or chronic conditions? Also, do you have a family history of blood disorders or cancers? Patient: I don't have any history of anemia or gastrointestinal issues, other than the gastritis they found during the endoscopy. I had a knee replacement last year, and a few years ago, there was a scare with possible lung cancer, but it turned out to be benign. I don't know about my family history of blood disorders or cancers. Doctor: Could you describe any recent changes in your energy levels,",
+              "entailment": 0.7515,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "Fecal occult blood test is not performed.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4604,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Other lab tests: Not specified",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.4763,
+          "neutral": 0.2708,
+          "contradiction": 0.2529
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "or location. They did take a biopsy of it, though, and the results are still pending. Doctor: Could you please provide the results of the fecal occult blood test, if available? Patient: I don't have a fecal occult blood test result because they didn't mention doing one. They only did an endoscopy in the ER. Doctor: Could you please provide details regarding the size and location of the polyp identified during the endoscopy, as well as any family history of blood disorders or cancers? Patient: I don't know the details about the polyp's size or location. They did take a biopsy of it, though, and the results are still pending. I also don't know about my family history of blood disorders or cancers. Doctor: Could you please provide information about the patient's family history of blood disorders or cancers? Patient: I don't know about my family history of blood disorders or cancers. That information isn't available to me. Doctor: Could you please provide the results of the pending biopsy of the polyp identified during the endoscopy and confirm whether the fecal occult blood test has been performed? Patient: I don't know the results of the biopsy yet because they're still pending. As for the fecal occult blood test, they didn't mention doing one—they only did an endoscopy in the ER. Doctor: Has the patient undergone any recent blood tests to evaluate for iron deficiency, vitamin B12, or folate levels? Patient: I don't know about any recent blood tests for iron deficiency, vitamin B12, or folate levels. They only did the hemoglobin test and the endoscopy in the ER. Doctor: Has the patient had a fecal occult blood test recently, and if so, what were the results? Patient: I don't know about a fecal occult blood test. They didn't mention doing one—they only did an endoscopy in the ER. Doctor: Has the patient had any recent blood tests for iron deficiency, vitamin B12, or folate levels? Patient: I don",
+        "atomic_decomposition": {
+          "original": "Other lab tests: Not specified",
+          "retained": [
+            {
+              "atom": "Other lab tests are not specified.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 56 years old, male. I came in because I had some abnormal lab results, specifically a low hemoglobin. I was in the ER and they found that, and I've been feeling pretty lightheaded. Doctor: Could you please confirm your age, gender, and the specific lab results you received? Also, have you experienced any other symptoms along with the lightheadedness? Patient: I'm 56, male. The lab result was a low hemoglobin. I was feeling very lightheaded, like I was going to pass out sometimes. I didn't have any other symptoms, just that lightheadedness. Doctor: What was the exact hemoglobin value reported in the lab results? Patient: I don't know the exact number, but it was low enough that they mentioned it in the ER. The doctor said it was 8.2 later, but I didn't get that detail at first. Doctor: Could you please provide more details about any other symptoms you may have experienced, such as fatigue, shortness of breath, chest pain, or changes in bowel habits? Patient: I don't have any fatigue or chest pain. I didn't notice any changes in my bowel habits, and I haven't had any blood in my stool. The only thing is that I was very lightheaded, like I was going to pass out sometimes. Doctor: Could you please provide information about your past medical history, including any prior diagnoses of anemia, gastrointestinal issues, or chronic conditions? Also, do you have a family history of blood disorders or cancers? Patient: I don't have any history of anemia or gastrointestinal issues, other than the gastritis they found during the endoscopy. I had a knee replacement last year, and a few years ago, there was a scare with possible lung cancer, but it turned out to be benign. I don't know about my family history of blood disorders or cancers. Doctor: Could you describe any recent changes in your energy levels,",
+              "entailment": 0.9883,
+              "depth": 1
+            },
+            {
+              "atom": "Note that there is only one proposition in this statement, so I output a single fact.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 56 years old, male. I came in because I had some abnormal lab results, specifically a low hemoglobin. I was in the ER and they found that, and I've been feeling pretty lightheaded. Doctor: Could you please confirm your age, gender, and the specific lab results you received? Also, have you experienced any other symptoms along with the lightheadedness? Patient: I'm 56, male. The lab result was a low hemoglobin. I was feeling very lightheaded, like I was going to pass out sometimes. I didn't have any other symptoms, just that lightheadedness. Doctor: What was the exact hemoglobin value reported in the lab results? Patient: I don't know the exact number, but it was low enough that they mentioned it in the ER. The doctor said it was 8.2 later, but I didn't get that detail at first. Doctor: Could you please provide more details about any other symptoms you may have experienced, such as fatigue, shortness of breath, chest pain, or changes in bowel habits? Patient: I don't have any fatigue or chest pain. I didn't notice any changes in my bowel habits, and I haven't had any blood in my stool. The only thing is that I was very lightheaded, like I was going to pass out sometimes. Doctor: Could you please provide information about your past medical history, including any prior diagnoses of anemia, gastrointestinal issues, or chronic conditions? Also, do you have a family history of blood disorders or cancers? Patient: I don't have any history of anemia or gastrointestinal issues, other than the gastritis they found during the endoscopy. I had a knee replacement last year, and a few years ago, there was a scare with possible lung cancer, but it turned out to be benign. I don't know about my family history of blood disorders or cancers. Doctor: Could you describe any recent changes in your energy levels,",
+              "entailment": 0.7729,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "Please provide the statement you'd like me to decompose into atomic facts. I'll follow the rules and output the resulting atomic facts.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4568,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      }
+    ]
+  },
+  "stage2_stats": {
+    "decision_counts": {
+      "uncertain": 7,
+      "faithful": 3
+    },
+    "num_claims": 10,
+    "num_kept": 10,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_so": {
+    "subjective": "The patient has an abnormal lab result.\nThe abnormal lab result is related to low hemoglobin.\nHistory of Present Illness (HPI): The patient, a 56-year-old male, presented with complaints of lightheadedness and feeling like passing out.\nHe reported that he was in the ER and was found to have a low hemoglobin level of 8.2.\nHe denied fatigue.\nHe denied shortness of breath.\nHe denied chest pain.\nHe denied changes in bowel habits.\nNote that I've replaced the pronoun \"He\" with the subject, and each fact is self-contained and stands alone as true or false.\nAlso, have you experienced any other symptoms along with the lightheadedness?",
+    "objective": "Statement: Physical Examination & Vitals: Not mentioned.\nPhysical Examination is not mentioned.\nDiagnostic Results & Labs:\nHemoglobin level: 8.2\nThe patient has Gastritis.\nThe patient has a polyp.\nA biopsy is pending for the polyp.\nNote that there is only one proposition in this statement, so it can be output as a single atomic fact.\nNote that there is only one proposition in this statement, so only one atomic fact is needed.\nOther lab tests are not specified.\nNote that there is only one proposition in this statement, so I output a single fact."
+  },
+  "stage3_key_sentences": [
+    "The lab result was a low hemoglobin.",
+    "Also, have you experienced any other symptoms along with the lightheadedness?"
+  ],
+  "stage3_summary_key_phrases": [
+    "examination mentioned diagnostic",
+    "false statement physical",
+    "hemoglobin level denied",
+    "gastritis patient polyp",
+    "hpi patient 56",
+    "male presented complaints",
+    "denied fatigue",
+    "single atomic fact",
+    "proposition statement output",
+    "pronoun subject"
+  ],
+  "stage3_coverage_scores": [
+    {
+      "sentence": "The lab result was a low hemoglobin.",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "The lab result was a low hemoglobin.",
+      "score": 0.6338,
+      "is_missing": false,
+      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+    },
+    {
+      "sentence": "Also, have you experienced any other symptoms along with the lightheadedness?",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "Also, have you experienced any other symptoms along with the lightheadedness?",
+      "score": 0.2564,
+      "is_missing": true,
+      "action": "Added: Missing clinical dialogue detail (coverage < 0.40); inserted via GPT-2 fluency optimization."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "Also, have you experienced any other symptoms along with the lightheadedness?",
+      "statement": "Also, have you experienced any other symptoms along with the lightheadedness?",
+      "coverage": 0.2564,
+      "status": "added",
+      "reason": "coverage <= cov_min (uMedSum adds the dialogue sentence verbatim)",
+      "insertion": {
+        "section": "subjective",
+        "line_index": 9,
+        "perplexity": 21.4
+      }
+    }
+  ],
+  "stage3_added": [
+    {
+      "statement": "Also, have you experienced any other symptoms along with the lightheadedness?",
+      "evidence": "Also, have you experienced any other symptoms along with the lightheadedness?",
+      "section": "subjective",
+      "candidate": "Also, have you experienced any other symptoms along with the lightheadedness?"
+    }
+  ],
+  "stage3_stats": {
+    "num_key_sentences": 2,
+    "num_flagged": 1,
+    "num_added": 1
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "section": "objective",
+        "claim": "Statement: Based on the rules provided, I will decompose the statement into independent, self-contained ATOMIC FACTS.",
+        "entailment": 0.4668,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: Not mentioned."
+      },
+      {
+        "section": "objective",
+        "claim": "The rules are provided.",
+        "entailment": 0.4668,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: Not mentioned."
+      },
+      {
+        "section": "objective",
+        "claim": "I will decompose the statement.",
+        "entailment": 0.4431,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: Not mentioned."
+      },
+      {
+        "section": "objective",
+        "claim": "I will decompose the statement into independent, self-contained ATOMIC FACTS.",
+        "entailment": 0.4541,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: Not mentioned."
+      },
+      {
+        "section": "objective",
+        "claim": "The statement is decomposed based on the rules.",
+        "entailment": 0.4839,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: Not mentioned."
+      },
+      {
+        "section": "objective",
+        "claim": "Vitals are not mentioned.",
+        "entailment": 0.4348,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: Not mentioned."
+      },
+      {
+        "section": "objective",
+        "claim": "Fecal occult blood test is not performed.",
+        "entailment": 0.4604,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Fecal occult blood test: Not performed"
+      },
+      {
+        "section": "objective",
+        "claim": "Please provide the statement you'd like me to decompose into atomic facts. I'll follow the rules and output the resulting atomic facts.",
+        "entailment": 0.4568,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Other lab tests: Not specified"
+      }
+    ]
+  },
+  "final_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** The patient's low hemoglobin level and symptoms of lightheadedness suggest anemia. The presence of gastritis and a polyp on endoscopy may be contributing factors. Further evaluation is needed to determine the cause of the anemia and to rule out any underlying gastrointestinal issues.\n* **Treatment Plan, Medications, and Follow-up:** The patient will need to undergo further testing, including a complete blood count and iron studies, to determine the cause of the anemia. He will also need to undergo a colonoscopy to evaluate the polyp and rule out any underlying gastrointestinal issues. The patient will be referred to a gastroenterologist for further evaluation and management.\n\n**SOAP NOTE:**\n\nThis patient presented with complaints of lightheadedness and feeling like passing out, which were found to be related to a low hemoglobin level of 8.2. The patient has a history of gastritis and a polyp on endoscopy, which may be contributing factors to the anemia. Further evaluation is needed to determine the cause of the anemia and to rule out any underlying gastrointestinal issues. The patient will be referred to a gastroenterologist for further evaluation and management."
+  },
+  "ap_unchanged": true,
+  "thresholds": {
+    "Te": 0.9,
+    "Tc": 0.8,
+    "Ta": 0.5,
+    "cov_min": 0.4,
+    "top_m": 2,
+    "fix_header_bug": true
+  },
+  "models": {
+    "llm": "llama3:8b-instruct-q8_0",
+    "nli": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+    "embedder": "all-MiniLM-L6-v2",
+    "ppl": "gpt2"
+  },
+  "status": "success",
+  "seconds": 15.2,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 56 years old, male. I came in because I had some abnormal lab results, specifically a low hemoglobin. I was in the ER and they found that, and I've been feeling pretty lightheaded.\nDoctor: Could you please confirm your age, gender, and the specific lab results you received? Also, have you experienced any other symptoms along with the lightheadedness?\nPatient: I'm 56, male. The lab result was a low hemoglobin. I was feeling very lightheaded, like I was going to pass out sometimes. I didn't have any other symptoms, just that lightheadedness.\nDoctor: What was the exact hemoglobin value reported in the lab results?\nPatient: I don't know the exact number, but it was low enough that they mentioned it in the ER. The doctor said it was 8.2 later, but I didn't get that detail at first.\nDoctor: Could you please provide more details about any other symptoms you may have experienced, such as fatigue, shortness of breath, chest pain, or changes in bowel habits?\nPatient: I don't have any fatigue or chest pain. I didn't notice any changes in my bowel habits, and I haven't had any blood in my stool. The only thing is that I was very lightheaded, like I was going to pass out sometimes.\nDoctor: Could you please provide information about your past medical history, including any prior diagnoses of anemia, gastrointestinal issues, or chronic conditions? Also, do you have a family history of blood disorders or cancers?\nPatient: I don't have any history of anemia or gastrointestinal issues, other than the gastritis they found during the endoscopy. I had a knee replacement last year, and a few years ago, there was a scare with possible lung cancer, but it turned out to be benign. I don't know about my family history of blood disorders or cancers.\nDoctor: Could you describe any recent changes in your energy levels, appetite, or any other symptoms you might be experiencing?\nPatient: I've had a slight decrease in my appetite, but I haven't lost any weight. I don't feel overly tired, and the only other thing is that I get a little nauseous sometimes, like when I'm sitting in the back of a car. Other than that, I feel okay.\nDoctor: Could you please provide details about your family history of blood disorders or cancers? Additionally, have you had any recent imaging or tests related to your gastrointestinal tract, such as a colonoscopy or fecal occult blood test?\nPatient: I don't know about my family history of blood disorders or cancers. As for recent tests, they did an endoscopy in the ER, and they found some gastritis and a polyp, but I haven't had a colonoscopy or a fecal occult blood test recently.\nDoctor: Could you please provide details about the polyp found during the endoscopy, including its size, location, and whether it was biopsied?\nPatient: I don't know the details about the polyp's size or location. They did take a biopsy of it, though, and the results are still pending.\nDoctor: Could you please provide the results of the fecal occult blood test, if available?\nPatient: I don't have a fecal occult blood test result because they didn't mention doing one. They only did an endoscopy in the ER.\nDoctor: Could you please provide details regarding the size and location of the polyp identified during the endoscopy, as well as any family history of blood disorders or cancers?\nPatient: I don't know the details about the polyp's size or location. They did take a biopsy of it, though, and the results are still pending. I also don't know about my family history of blood disorders or cancers.\nDoctor: Could you please provide information about the patient's family history of blood disorders or cancers?\nPatient: I don't know about my family history of blood disorders or cancers. That information isn't available to me.\nDoctor: Could you please provide the results of the pending biopsy of the polyp identified during the endoscopy and confirm whether the fecal occult blood test has been performed?\nPatient: I don't know the results of the biopsy yet because they're still pending. As for the fecal occult blood test, they didn't mention doing one—they only did an endoscopy in the ER.\nDoctor: Has the patient undergone any recent blood tests to evaluate for iron deficiency, vitamin B12, or folate levels?\nPatient: I don't know about any recent blood tests for iron deficiency, vitamin B12, or folate levels. They only did the hemoglobin test and the endoscopy in the ER.\nDoctor: Has the patient had a fecal occult blood test recently, and if so, what were the results?\nPatient: I don't know about a fecal occult blood test. They didn't mention doing one—they only did an endoscopy in the ER.\nDoctor: Has the patient had any recent blood tests for iron deficiency, vitamin B12, or folate levels?\nPatient: I don't know about any recent blood tests for iron deficiency, vitamin B12, or folate levels. They only did the hemoglobin test and the endoscopy in the ER.",
+  "reference_so": {
+    "subjective": "Basic information: 56-year-old male presenting with abnormal lab results, specifically low hemoglobin (8.2 g/dL), and reports of lightheadedness.\n\nHistory of present illness: The patient reported abnormal lab results, specifically low hemoglobin (8.2 g/dL), and has been experiencing lightheadedness. He was evaluated in the ER where the low hemoglobin was identified. He mentions feeling very lightheaded, like he was going to pass out sometimes, and no other symptoms were reported. He also mentioned a slight decrease in appetite, occasional nausea, but no weight loss or significant fatigue. Endoscopy revealed gastritis and a polyp.\n\nPast history: Had a knee replacement last year, and a few years ago, there was a scare with possible lung cancer, but it turned out to be benign. Had an endoscopy which showed gastritis and a polyp; no history of anemia or gastrointestinal issues otherwise. Family history of blood disorders or cancers: Patient states they do not know the details and has not been informed about their family history of blood disorders or cancers.",
+    "objective": "Physical examination: Physical examination findings are pending.\n\nInvestigations: Low hemoglobin (8.2 g/dL), endoscopy showing gastritis and a polyp; biopsy of the polyp pending; fecal occult blood test: Not performed or results not available."
+  }
+}

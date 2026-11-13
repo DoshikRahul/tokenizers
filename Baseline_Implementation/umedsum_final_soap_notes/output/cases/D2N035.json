@@ -1,0 +1,459 @@
+{
+  "case_id": "D2N035",
+  "split": "test",
+  "is_icl_demo": false,
+  "stage1_elements": "Here are the extracted clinical elements in concise bullet points:\n\n**Subjective Elements:**\n\n* Chief complaint: Trouble with heart, swelling ankles, shortness of breath\n* History of present illness:\n\t+ Duration of swelling: Not specified\n\t+ Duration of shortness of breath: Not specified\n\t+ Onset of symptoms: Not specified\n* Relevant medical history:\n\t+ Diagnosed with heart failure during hospitalization\n\t+ Diagnosed with kidney disease\n* Medications:\n\t+ Taking medications for heart and kidney issues, but exact names and dosages unknown\n\t+ Taking Bumex (bumetanide) and Cozaar (losartan), but exact dosages unknown\n* Diet: Consumes salty foods, such as salt and vinegar potato chips, daily\n\n**Objective Elements:**\n\n* Vital signs:\n\t+ Blood pressure: 200/90 (mentioned during hospitalization)\n* Diagnostic lab/imaging results:\n\t+ Serum creatinine and eGFR levels: Unknown\n\t+ Urine albumin-to-creatinine ratio (UACR): Unknown\n\n**Assessment Elements:**\n\n* Diagnoses:\n\t+ Heart failure\n\t+ Kidney disease\n* Clinical impressions:\n\t+ Patient has heart failure and kidney disease\n\n**Plan Elements:**\n\n* Medical treatment plan:\n\t+ Continue taking Bumex and Cozaar as prescribed\n\t+ Follow-up instructions: None specified\n* Prescriptions/dosages:\n\t+ Bumex (bumetanide) and Cozaar (losartan), but exact dosages unknown\n* Tests ordered:\n\t+ None specified\n* Follow-up instructions:\n\t+ None specified",
+  "stage1_raw_note": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:\n\n**SUBJECTIVE:**\n\n* **Chief Complaint:** Trouble with heart, swelling ankles, shortness of breath\n* **History of Present Illness (HPI):** The patient, a 62-year-old woman, presents with complaints of heart trouble, swelling ankles, and shortness of breath. She was recently hospitalized for heart failure and was diagnosed with kidney disease. She reports that her swelling has decreased significantly since being discharged from the hospital, and her shortness of breath has improved. She still experiences fatigue, but it has improved slightly.\n\n**OBJECTIVE:**\n\n* **Physical Examination & Vitals:** Not applicable, as the patient was not examined physically during this visit.\n* **Diagnostic Results & Labs:** Not applicable, as the patient's lab results were not provided during this visit.\n\n**ASSESSMENT AND PLAN:**\n\n* **Diagnoses and Clinical Reasoning:** The patient has a history of heart failure and kidney disease. Her symptoms of swelling ankles and shortness of breath have improved since being discharged from the hospital, but she still experiences fatigue. Her kidney function tests and urine tests for proteinuria are unknown.\n* **Treatment Plan, Medications, and Follow-up:** The patient is to continue taking Bumex (bumetanide) and Cozaar (losartan) as prescribed. She is advised to follow up with her primary care physician for further evaluation and management of her heart failure and kidney disease.\n\nPlease note that this SOAP note is based on the provided dialogue and extracted clinical elements. It is essential to ensure that the note accurately reflects the patient's medical history, symptoms, and treatment plan.",
+  "stage1_parse": {
+    "parse_mode": "main_headings",
+    "parse_ok": true,
+    "dropped_preamble": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:"
+  },
+  "stage1_so": {
+    "subjective": "* **Chief Complaint:** Trouble with heart, swelling ankles, shortness of breath\n* **History of Present Illness (HPI):** The patient, a 62-year-old woman, presents with complaints of heart trouble, swelling ankles, and shortness of breath. She was recently hospitalized for heart failure and was diagnosed with kidney disease. She reports that her swelling has decreased significantly since being discharged from the hospital, and her shortness of breath has improved. She still experiences fatigue, but it has improved slightly.",
+    "objective": "* **Physical Examination & Vitals:** Not applicable, as the patient was not examined physically during this visit.\n* **Diagnostic Results & Labs:** Not applicable, as the patient's lab results were not provided during this visit."
+  },
+  "stage1_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** The patient has a history of heart failure and kidney disease. Her symptoms of swelling ankles and shortness of breath have improved since being discharged from the hospital, but she still experiences fatigue. Her kidney function tests and urine tests for proteinuria are unknown.\n* **Treatment Plan, Medications, and Follow-up:** The patient is to continue taking Bumex (bumetanide) and Cozaar (losartan) as prescribed. She is advised to follow up with her primary care physician for further evaluation and management of her heart failure and kidney disease.\n\nPlease note that this SOAP note is based on the provided dialogue and extracted clinical elements. It is essential to ensure that the note accurately reflects the patient's medical history, symptoms, and treatment plan."
+  },
+  "stage2_so": {
+    "subjective": "Chief Complaint: Trouble with heart, swelling ankles, shortness of breath\nThe patient presents with complaints of heart trouble.\nThe patient presents with complaints of swelling ankles.\nThe patient presents with complaints of shortness of breath.\nShe was recently hospitalized for heart failure and was diagnosed with kidney disease.\nShe reports that her swelling has decreased significantly since being discharged from the hospital.\nShe reports that her shortness of breath has improved.\nThe patient has a history of hypertension.\nShe still experiences fatigue.\nIt has improved slightly.\nNote that I've replaced the pronoun \"it\" with the subject \"She\" to make each fact self-contained.",
+    "objective": "The patient was not examined physically during this visit.\nNote that there is only one proposition in this statement, so it can be output as a single fact.\nThe examination did not occur during this visit.\nNote that I did not add any information that is not present in the original statement. I also replaced the pronoun \"this\" with the subject \"visit\" to make each fact self-contained.\nNote that I did not add any information that was not present in the original statement, and I replaced the pronoun \"this\" with the subject \"visit\" to make each fact self-contained.\nThe patient's lab results were not provided during this visit.\nBased on the rules provided, I decompose the statement into the following atomic facts:\nNote that I did not combine the two findings into a single fact, as they are separate and distinct. Additionally, I did not add any information that is not present in the original statement.\nNote that I did not add any information that is not present in the statement, and I did not infer any additional facts. The statement is stating that the patient's lab results were not provided, and that Diagnostic Results & Labs are not applicable as a result."
+  },
+  "stage2_audit": {
+    "subjective": [
+      {
+        "unit": "Chief Complaint: Trouble with heart, swelling ankles, shortness of breath",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9971,
+          "neutral": 0.0007,
+          "contradiction": 0.0023
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm a woman, and I'm here because I've been having trouble with my heart. My ankles have been swelling, and I've been having a hard time breathing, especially at night. I had to call an ambulance and was taken to the hospital for heart failure. Doctor: Could you please provide more details about the duration and progression of your swelling and shortness of breath? Have you experienced any other symptoms such as fatigue, chest pain, or palpitations? Additionally, have you been diagnosed with heart failure before, and if so, what medications are you currently taking? Patient: I haven't been diagnosed with heart failure before, but I was told I was in the hospital for it. I was having trouble with my ankles swelling and couldn't get them to go down, even when I was in bed. I had to prop myself up to breathe at night, and I felt really bad. I called 911 because I was having a hard time talking, and they took me to the ER. I was told my blood pressure was really high, like 200 over 90. I try to take my medications, but I might miss a dose now and then. I also eat a lot of salty foods, like salt and vinegar potato chips, which I snack on every day at home. Doctor: Have you been evaluated for kidney function or tested for proteinuria, such as a urine albumin-to-creatinine ratio or a 24-hour urine protein test, since your hospitalization for heart failure? Patient: I don't know if I've had any tests for kidney function or proteinuria since I was in the hospital. I wasn't told about any of those specific tests, but I do know I have some kidney disease, which the doctor mentioned. Doctor: Could you confirm if you were told about any kidney function tests, such as serum creatinine or eGFR, or any urine tests for proteinuria, like the urine albumin-to-creatinine",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "History of Present Illness (HPI): The patient, a 62-year-old woman, presents with complaints of heart trouble, swelling ankles, and shortness of breath.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.8701,
+          "neutral": 0.1143,
+          "contradiction": 0.0155
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm a woman, and I'm here because I've been having trouble with my heart. My ankles have been swelling, and I've been having a hard time breathing, especially at night. I had to call an ambulance and was taken to the hospital for heart failure. Doctor: Could you please provide more details about the duration and progression of your swelling and shortness of breath? Have you experienced any other symptoms such as fatigue, chest pain, or palpitations? Additionally, have you been diagnosed with heart failure before, and if so, what medications are you currently taking? Patient: I haven't been diagnosed with heart failure before, but I was told I was in the hospital for it. I was having trouble with my ankles swelling and couldn't get them to go down, even when I was in bed. I had to prop myself up to breathe at night, and I felt really bad. I called 911 because I was having a hard time talking, and they took me to the ER. I was told my blood pressure was really high, like 200 over 90. I try to take my medications, but I might miss a dose now and then. I also eat a lot of salty foods, like salt and vinegar potato chips, which I snack on every day at home. Doctor: Have you been evaluated for kidney function or tested for proteinuria, such as a urine albumin-to-creatinine ratio or a 24-hour urine protein test, since your hospitalization for heart failure? Patient: I don't know if I've had any tests for kidney function or proteinuria since I was in the hospital. I wasn't told about any of those specific tests, but I do know I have some kidney disease, which the doctor mentioned. Doctor: Could you confirm if you were told about any kidney function tests, such as serum creatinine or eGFR, or any urine tests for proteinuria, like the urine albumin-to-creatinine",
+        "atomic_decomposition": {
+          "original": "History of Present Illness (HPI): The patient, a 62-year-old woman, presents with complaints of heart trouble, swelling ankles, and shortness of breath.",
+          "retained": [
+            {
+              "atom": "The patient presents with complaints of heart trouble.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm a woman, and I'm here because I've been having trouble with my heart. My ankles have been swelling, and I've been having a hard time breathing, especially at night. I had to call an ambulance and was taken to the hospital for heart failure. Doctor: Could you please provide more details about the duration and progression of your swelling and shortness of breath? Have you experienced any other symptoms such as fatigue, chest pain, or palpitations? Additionally, have you been diagnosed with heart failure before, and if so, what medications are you currently taking? Patient: I haven't been diagnosed with heart failure before, but I was told I was in the hospital for it. I was having trouble with my ankles swelling and couldn't get them to go down, even when I was in bed. I had to prop myself up to breathe at night, and I felt really bad. I called 911 because I was having a hard time talking, and they took me to the ER. I was told my blood pressure was really high, like 200 over 90. I try to take my medications, but I might miss a dose now and then. I also eat a lot of salty foods, like salt and vinegar potato chips, which I snack on every day at home. Doctor: Have you been evaluated for kidney function or tested for proteinuria, such as a urine albumin-to-creatinine ratio or a 24-hour urine protein test, since your hospitalization for heart failure? Patient: I don't know if I've had any tests for kidney function or proteinuria since I was in the hospital. I wasn't told about any of those specific tests, but I do know I have some kidney disease, which the doctor mentioned. Doctor: Could you confirm if you were told about any kidney function tests, such as serum creatinine or eGFR, or any urine tests for proteinuria, like the urine albumin-to-creatinine",
+              "entailment": 0.9995,
+              "depth": 1
+            },
+            {
+              "atom": "The patient presents with complaints of swelling ankles.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm a woman, and I'm here because I've been having trouble with my heart. My ankles have been swelling, and I've been having a hard time breathing, especially at night. I had to call an ambulance and was taken to the hospital for heart failure. Doctor: Could you please provide more details about the duration and progression of your swelling and shortness of breath? Have you experienced any other symptoms such as fatigue, chest pain, or palpitations? Additionally, have you been diagnosed with heart failure before, and if so, what medications are you currently taking? Patient: I haven't been diagnosed with heart failure before, but I was told I was in the hospital for it. I was having trouble with my ankles swelling and couldn't get them to go down, even when I was in bed. I had to prop myself up to breathe at night, and I felt really bad. I called 911 because I was having a hard time talking, and they took me to the ER. I was told my blood pressure was really high, like 200 over 90. I try to take my medications, but I might miss a dose now and then. I also eat a lot of salty foods, like salt and vinegar potato chips, which I snack on every day at home. Doctor: Have you been evaluated for kidney function or tested for proteinuria, such as a urine albumin-to-creatinine ratio or a 24-hour urine protein test, since your hospitalization for heart failure? Patient: I don't know if I've had any tests for kidney function or proteinuria since I was in the hospital. I wasn't told about any of those specific tests, but I do know I have some kidney disease, which the doctor mentioned. Doctor: Could you confirm if you were told about any kidney function tests, such as serum creatinine or eGFR, or any urine tests for proteinuria, like the urine albumin-to-creatinine",
+              "entailment": 0.9995,
+              "depth": 1
+            },
+            {
+              "atom": "The patient presents with complaints of shortness of breath.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm a woman, and I'm here because I've been having trouble with my heart. My ankles have been swelling, and I've been having a hard time breathing, especially at night. I had to call an ambulance and was taken to the hospital for heart failure. Doctor: Could you please provide more details about the duration and progression of your swelling and shortness of breath? Have you experienced any other symptoms such as fatigue, chest pain, or palpitations? Additionally, have you been diagnosed with heart failure before, and if so, what medications are you currently taking? Patient: I haven't been diagnosed with heart failure before, but I was told I was in the hospital for it. I was having trouble with my ankles swelling and couldn't get them to go down, even when I was in bed. I had to prop myself up to breathe at night, and I felt really bad. I called 911 because I was having a hard time talking, and they took me to the ER. I was told my blood pressure was really high, like 200 over 90. I try to take my medications, but I might miss a dose now and then. I also eat a lot of salty foods, like salt and vinegar potato chips, which I snack on every day at home. Doctor: Have you been evaluated for kidney function or tested for proteinuria, such as a urine albumin-to-creatinine ratio or a 24-hour urine protein test, since your hospitalization for heart failure? Patient: I don't know if I've had any tests for kidney function or proteinuria since I was in the hospital. I wasn't told about any of those specific tests, but I do know I have some kidney disease, which the doctor mentioned. Doctor: Could you confirm if you were told about any kidney function tests, such as serum creatinine or eGFR, or any urine tests for proteinuria, like the urine albumin-to-creatinine",
+              "entailment": 0.9995,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "The patient is a 62-year-old woman.",
+              "reasoning": "Could not be decomposed further and not entailed above threshold Ta.",
+              "entailment": 0.4409,
+              "depth": 1
+            }
+          ],
+          "decomposition_method": "unsplit",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "She was recently hospitalized for heart failure and was diagnosed with kidney disease.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9961,
+          "neutral": 0.0027,
+          "contradiction": 0.0011
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm a woman, and I'm here because I've been having trouble with my heart. My ankles have been swelling, and I've been having a hard time breathing, especially at night. I had to call an ambulance and was taken to the hospital for heart failure. Doctor: Could you please provide more details about the duration and progression of your swelling and shortness of breath? Have you experienced any other symptoms such as fatigue, chest pain, or palpitations? Additionally, have you been diagnosed with heart failure before, and if so, what medications are you currently taking? Patient: I haven't been diagnosed with heart failure before, but I was told I was in the hospital for it. I was having trouble with my ankles swelling and couldn't get them to go down, even when I was in bed. I had to prop myself up to breathe at night, and I felt really bad. I called 911 because I was having a hard time talking, and they took me to the ER. I was told my blood pressure was really high, like 200 over 90. I try to take my medications, but I might miss a dose now and then. I also eat a lot of salty foods, like salt and vinegar potato chips, which I snack on every day at home. Doctor: Have you been evaluated for kidney function or tested for proteinuria, such as a urine albumin-to-creatinine ratio or a 24-hour urine protein test, since your hospitalization for heart failure? Patient: I don't know if I've had any tests for kidney function or proteinuria since I was in the hospital. I wasn't told about any of those specific tests, but I do know I have some kidney disease, which the doctor mentioned. Doctor: Could you confirm if you were told about any kidney function tests, such as serum creatinine or eGFR, or any urine tests for proteinuria, like the urine albumin-to-creatinine",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "She reports that her swelling has decreased significantly since being discharged from the hospital, and her shortness of breath has improved.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.6904,
+          "neutral": 0.1571,
+          "contradiction": 0.1523
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "Also, have you noticed any changes in your swelling, shortness of breath, or fatigue since being discharged from the hospital? Patient: Yes, I am taking Bumex and Cozaar, but I don't remember the exact dosages. Since I've been home, my swelling has gone down a lot, and I'm not as short of breath, but I still feel a little tired some days. Doctor: Could you provide the most recent results of your kidney function tests, such as serum creatinine and eGFR, as well as urine tests for proteinuria (e.g., urine albumin-to-creatinine ratio)? Patient: I don't know the exact results of any kidney function tests or urine tests for proteinuria that were done during my hospital stay. I wasn't given specific numbers or details about them, but I was told I have some kidney disease. Doctor: Could you please provide the specific dosages of Bumex and Cozaar you are currently taking, and have you had any recent kidney function tests (such as serum creatinine, eGFR) or urine tests for proteinuria (such as urine albumin-to-creatinine ratio) since your hospitalization? Patient: I don't know the exact dosages of Bumex or Cozaar I'm taking, but I was told to continue them. I wasn't given specific numbers for any recent kidney function tests or urine tests since being discharged, but I was told I have some kidney disease. Doctor: Could you please describe any changes in your symptoms since being discharged from the hospital, such as whether your fatigue has worsened or improved, or if you've experienced any new symptoms? Patient: Since being discharged from the hospital, my fatigue has improved a little, but I still feel a bit tired some days. My swelling has gone down a lot, and I'm not as short of breath, but I haven't had any new symptoms or worsening of my old ones. I feel like I'm getting better overall. Doctor: Could you please provide the current dosages of Bumex",
+        "atomic_decomposition": {
+          "original": "She reports that her swelling has decreased significantly since being discharged from the hospital, and her shortness of breath has improved.",
+          "retained": [
+            {
+              "atom": "She reports that her swelling has decreased significantly since being discharged from the hospital.",
+              "citation": "Also, have you noticed any changes in your swelling, shortness of breath, or fatigue since being discharged from the hospital? Patient: Yes, I am taking Bumex and Cozaar, but I don't remember the exact dosages. Since I've been home, my swelling has gone down a lot, and I'm not as short of breath, but I still feel a little tired some days. Doctor: Could you provide the most recent results of your kidney function tests, such as serum creatinine and eGFR, as well as urine tests for proteinuria (e.g., urine albumin-to-creatinine ratio)? Patient: I don't know the exact results of any kidney function tests or urine tests for proteinuria that were done during my hospital stay. I wasn't given specific numbers or details about them, but I was told I have some kidney disease. Doctor: Could you please provide the specific dosages of Bumex and Cozaar you are currently taking, and have you had any recent kidney function tests (such as serum creatinine, eGFR) or urine tests for proteinuria (such as urine albumin-to-creatinine ratio) since your hospitalization? Patient: I don't know the exact dosages of Bumex or Cozaar I'm taking, but I was told to continue them. I wasn't given specific numbers for any recent kidney function tests or urine tests since being discharged, but I was told I have some kidney disease. Doctor: Could you please describe any changes in your symptoms since being discharged from the hospital, such as whether your fatigue has worsened or improved, or if you've experienced any new symptoms? Patient: Since being discharged from the hospital, my fatigue has improved a little, but I still feel a bit tired some days. My swelling has gone down a lot, and I'm not as short of breath, but I haven't had any new symptoms or worsening of my old ones. I feel like I'm getting better overall. Doctor: Could you please provide the current dosages of Bumex",
+              "entailment": 0.8481,
+              "depth": 1
+            },
+            {
+              "atom": "She reports that her shortness of breath has improved.",
+              "citation": "Also, have you noticed any changes in your swelling, shortness of breath, or fatigue since being discharged from the hospital? Patient: Yes, I am taking Bumex and Cozaar, but I don't remember the exact dosages. Since I've been home, my swelling has gone down a lot, and I'm not as short of breath, but I still feel a little tired some days. Doctor: Could you provide the most recent results of your kidney function tests, such as serum creatinine and eGFR, as well as urine tests for proteinuria (e.g., urine albumin-to-creatinine ratio)? Patient: I don't know the exact results of any kidney function tests or urine tests for proteinuria that were done during my hospital stay. I wasn't given specific numbers or details about them, but I was told I have some kidney disease. Doctor: Could you please provide the specific dosages of Bumex and Cozaar you are currently taking, and have you had any recent kidney function tests (such as serum creatinine, eGFR) or urine tests for proteinuria (such as urine albumin-to-creatinine ratio) since your hospitalization? Patient: I don't know the exact dosages of Bumex or Cozaar I'm taking, but I was told to continue them. I wasn't given specific numbers for any recent kidney function tests or urine tests since being discharged, but I was told I have some kidney disease. Doctor: Could you please describe any changes in your symptoms since being discharged from the hospital, such as whether your fatigue has worsened or improved, or if you've experienced any new symptoms? Patient: Since being discharged from the hospital, my fatigue has improved a little, but I still feel a bit tired some days. My swelling has gone down a lot, and I'm not as short of breath, but I haven't had any new symptoms or worsening of my old ones. I feel like I'm getting better overall. Doctor: Could you please provide the current dosages of Bumex",
+              "entailment": 0.6436,
+              "depth": 1
+            },
+            {
+              "atom": "The patient has a history of hypertension.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm a woman, and I'm here because I've been having trouble with my heart. My ankles have been swelling, and I've been having a hard time breathing, especially at night. I had to call an ambulance and was taken to the hospital for heart failure. Doctor: Could you please provide more details about the duration and progression of your swelling and shortness of breath? Have you experienced any other symptoms such as fatigue, chest pain, or palpitations? Additionally, have you been diagnosed with heart failure before, and if so, what medications are you currently taking? Patient: I haven't been diagnosed with heart failure before, but I was told I was in the hospital for it. I was having trouble with my ankles swelling and couldn't get them to go down, even when I was in bed. I had to prop myself up to breathe at night, and I felt really bad. I called 911 because I was having a hard time talking, and they took me to the ER. I was told my blood pressure was really high, like 200 over 90. I try to take my medications, but I might miss a dose now and then. I also eat a lot of salty foods, like salt and vinegar potato chips, which I snack on every day at home. Doctor: Have you been evaluated for kidney function or tested for proteinuria, such as a urine albumin-to-creatinine ratio or a 24-hour urine protein test, since your hospitalization for heart failure? Patient: I don't know if I've had any tests for kidney function or proteinuria since I was in the hospital. I wasn't told about any of those specific tests, but I do know I have some kidney disease, which the doctor mentioned. Doctor: Could you confirm if you were told about any kidney function tests, such as serum creatinine or eGFR, or any urine tests for proteinuria, like the urine albumin-to-creatinine",
+              "entailment": 0.9907,
+              "depth": 2
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "Statement: The patient has a history of hypertension and is currently taking metoprolol 50 mg daily, but has not taken it for the past three days.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4504,
+              "depth": 2
+            },
+            {
+              "atom": "The patient is currently taking metoprolol 50 mg daily.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4492,
+              "depth": 2
+            },
+            {
+              "atom": "The patient has not taken metoprolol for the past three days.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.449,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "She still experiences fatigue, but it has improved slightly.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.8159,
+          "neutral": 0.098,
+          "contradiction": 0.0861
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "Also, have you noticed any changes in your swelling, shortness of breath, or fatigue since being discharged from the hospital? Patient: Yes, I am taking Bumex and Cozaar, but I don't remember the exact dosages. Since I've been home, my swelling has gone down a lot, and I'm not as short of breath, but I still feel a little tired some days. Doctor: Could you provide the most recent results of your kidney function tests, such as serum creatinine and eGFR, as well as urine tests for proteinuria (e.g., urine albumin-to-creatinine ratio)? Patient: I don't know the exact results of any kidney function tests or urine tests for proteinuria that were done during my hospital stay. I wasn't given specific numbers or details about them, but I was told I have some kidney disease. Doctor: Could you please provide the specific dosages of Bumex and Cozaar you are currently taking, and have you had any recent kidney function tests (such as serum creatinine, eGFR) or urine tests for proteinuria (such as urine albumin-to-creatinine ratio) since your hospitalization? Patient: I don't know the exact dosages of Bumex or Cozaar I'm taking, but I was told to continue them. I wasn't given specific numbers for any recent kidney function tests or urine tests since being discharged, but I was told I have some kidney disease. Doctor: Could you please describe any changes in your symptoms since being discharged from the hospital, such as whether your fatigue has worsened or improved, or if you've experienced any new symptoms? Patient: Since being discharged from the hospital, my fatigue has improved a little, but I still feel a bit tired some days. My swelling has gone down a lot, and I'm not as short of breath, but I haven't had any new symptoms or worsening of my old ones. I feel like I'm getting better overall. Doctor: Could you please provide the current dosages of Bumex",
+        "atomic_decomposition": {
+          "original": "She still experiences fatigue, but it has improved slightly.",
+          "retained": [
+            {
+              "atom": "She still experiences fatigue.",
+              "citation": "Also, have you noticed any changes in your swelling, shortness of breath, or fatigue since being discharged from the hospital? Patient: Yes, I am taking Bumex and Cozaar, but I don't remember the exact dosages. Since I've been home, my swelling has gone down a lot, and I'm not as short of breath, but I still feel a little tired some days. Doctor: Could you provide the most recent results of your kidney function tests, such as serum creatinine and eGFR, as well as urine tests for proteinuria (e.g., urine albumin-to-creatinine ratio)? Patient: I don't know the exact results of any kidney function tests or urine tests for proteinuria that were done during my hospital stay. I wasn't given specific numbers or details about them, but I was told I have some kidney disease. Doctor: Could you please provide the specific dosages of Bumex and Cozaar you are currently taking, and have you had any recent kidney function tests (such as serum creatinine, eGFR) or urine tests for proteinuria (such as urine albumin-to-creatinine ratio) since your hospitalization? Patient: I don't know the exact dosages of Bumex or Cozaar I'm taking, but I was told to continue them. I wasn't given specific numbers for any recent kidney function tests or urine tests since being discharged, but I was told I have some kidney disease. Doctor: Could you please describe any changes in your symptoms since being discharged from the hospital, such as whether your fatigue has worsened or improved, or if you've experienced any new symptoms? Patient: Since being discharged from the hospital, my fatigue has improved a little, but I still feel a bit tired some days. My swelling has gone down a lot, and I'm not as short of breath, but I haven't had any new symptoms or worsening of my old ones. I feel like I'm getting better overall. Doctor: Could you please provide the current dosages of Bumex",
+              "entailment": 0.8613,
+              "depth": 1
+            },
+            {
+              "atom": "It has improved slightly.",
+              "citation": "Also, have you noticed any changes in your swelling, shortness of breath, or fatigue since being discharged from the hospital? Patient: Yes, I am taking Bumex and Cozaar, but I don't remember the exact dosages. Since I've been home, my swelling has gone down a lot, and I'm not as short of breath, but I still feel a little tired some days. Doctor: Could you provide the most recent results of your kidney function tests, such as serum creatinine and eGFR, as well as urine tests for proteinuria (e.g., urine albumin-to-creatinine ratio)? Patient: I don't know the exact results of any kidney function tests or urine tests for proteinuria that were done during my hospital stay. I wasn't given specific numbers or details about them, but I was told I have some kidney disease. Doctor: Could you please provide the specific dosages of Bumex and Cozaar you are currently taking, and have you had any recent kidney function tests (such as serum creatinine, eGFR) or urine tests for proteinuria (such as urine albumin-to-creatinine ratio) since your hospitalization? Patient: I don't know the exact dosages of Bumex or Cozaar I'm taking, but I was told to continue them. I wasn't given specific numbers for any recent kidney function tests or urine tests since being discharged, but I was told I have some kidney disease. Doctor: Could you please describe any changes in your symptoms since being discharged from the hospital, such as whether your fatigue has worsened or improved, or if you've experienced any new symptoms? Patient: Since being discharged from the hospital, my fatigue has improved a little, but I still feel a bit tired some days. My swelling has gone down a lot, and I'm not as short of breath, but I haven't had any new symptoms or worsening of my old ones. I feel like I'm getting better overall. Doctor: Could you please provide the current dosages of Bumex",
+              "entailment": 0.8115,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've replaced the pronoun \"it\" with the subject \"She\" to make each fact self-contained.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm a woman, and I'm here because I've been having trouble with my heart. My ankles have been swelling, and I've been having a hard time breathing, especially at night. I had to call an ambulance and was taken to the hospital for heart failure. Doctor: Could you please provide more details about the duration and progression of your swelling and shortness of breath? Have you experienced any other symptoms such as fatigue, chest pain, or palpitations? Additionally, have you been diagnosed with heart failure before, and if so, what medications are you currently taking? Patient: I haven't been diagnosed with heart failure before, but I was told I was in the hospital for it. I was having trouble with my ankles swelling and couldn't get them to go down, even when I was in bed. I had to prop myself up to breathe at night, and I felt really bad. I called 911 because I was having a hard time talking, and they took me to the ER. I was told my blood pressure was really high, like 200 over 90. I try to take my medications, but I might miss a dose now and then. I also eat a lot of salty foods, like salt and vinegar potato chips, which I snack on every day at home. Doctor: Have you been evaluated for kidney function or tested for proteinuria, such as a urine albumin-to-creatinine ratio or a 24-hour urine protein test, since your hospitalization for heart failure? Patient: I don't know if I've had any tests for kidney function or proteinuria since I was in the hospital. I wasn't told about any of those specific tests, but I do know I have some kidney disease, which the doctor mentioned. Doctor: Could you confirm if you were told about any kidney function tests, such as serum creatinine or eGFR, or any urine tests for proteinuria, like the urine albumin-to-creatinine",
+              "entailment": 0.9976,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      }
+    ],
+    "objective": [
+      {
+        "unit": "Physical Examination & Vitals: Not applicable, as the patient was not examined physically during this visit.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.7607,
+          "neutral": 0.2115,
+          "contradiction": 0.0277
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm a woman, and I'm here because I've been having trouble with my heart. My ankles have been swelling, and I've been having a hard time breathing, especially at night. I had to call an ambulance and was taken to the hospital for heart failure. Doctor: Could you please provide more details about the duration and progression of your swelling and shortness of breath? Have you experienced any other symptoms such as fatigue, chest pain, or palpitations? Additionally, have you been diagnosed with heart failure before, and if so, what medications are you currently taking? Patient: I haven't been diagnosed with heart failure before, but I was told I was in the hospital for it. I was having trouble with my ankles swelling and couldn't get them to go down, even when I was in bed. I had to prop myself up to breathe at night, and I felt really bad. I called 911 because I was having a hard time talking, and they took me to the ER. I was told my blood pressure was really high, like 200 over 90. I try to take my medications, but I might miss a dose now and then. I also eat a lot of salty foods, like salt and vinegar potato chips, which I snack on every day at home. Doctor: Have you been evaluated for kidney function or tested for proteinuria, such as a urine albumin-to-creatinine ratio or a 24-hour urine protein test, since your hospitalization for heart failure? Patient: I don't know if I've had any tests for kidney function or proteinuria since I was in the hospital. I wasn't told about any of those specific tests, but I do know I have some kidney disease, which the doctor mentioned. Doctor: Could you confirm if you were told about any kidney function tests, such as serum creatinine or eGFR, or any urine tests for proteinuria, like the urine albumin-to-creatinine",
+        "atomic_decomposition": {
+          "original": "Physical Examination & Vitals: Not applicable, as the patient was not examined physically during this visit.",
+          "retained": [
+            {
+              "atom": "The patient was not examined physically during this visit.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm a woman, and I'm here because I've been having trouble with my heart. My ankles have been swelling, and I've been having a hard time breathing, especially at night. I had to call an ambulance and was taken to the hospital for heart failure. Doctor: Could you please provide more details about the duration and progression of your swelling and shortness of breath? Have you experienced any other symptoms such as fatigue, chest pain, or palpitations? Additionally, have you been diagnosed with heart failure before, and if so, what medications are you currently taking? Patient: I haven't been diagnosed with heart failure before, but I was told I was in the hospital for it. I was having trouble with my ankles swelling and couldn't get them to go down, even when I was in bed. I had to prop myself up to breathe at night, and I felt really bad. I called 911 because I was having a hard time talking, and they took me to the ER. I was told my blood pressure was really high, like 200 over 90. I try to take my medications, but I might miss a dose now and then. I also eat a lot of salty foods, like salt and vinegar potato chips, which I snack on every day at home. Doctor: Have you been evaluated for kidney function or tested for proteinuria, such as a urine albumin-to-creatinine ratio or a 24-hour urine protein test, since your hospitalization for heart failure? Patient: I don't know if I've had any tests for kidney function or proteinuria since I was in the hospital. I wasn't told about any of those specific tests, but I do know I have some kidney disease, which the doctor mentioned. Doctor: Could you confirm if you were told about any kidney function tests, such as serum creatinine or eGFR, or any urine tests for proteinuria, like the urine albumin-to-creatinine",
+              "entailment": 0.9653,
+              "depth": 1
+            },
+            {
+              "atom": "Note that there is only one proposition in this statement, so it can be output as a single fact.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm a woman, and I'm here because I've been having trouble with my heart. My ankles have been swelling, and I've been having a hard time breathing, especially at night. I had to call an ambulance and was taken to the hospital for heart failure. Doctor: Could you please provide more details about the duration and progression of your swelling and shortness of breath? Have you experienced any other symptoms such as fatigue, chest pain, or palpitations? Additionally, have you been diagnosed with heart failure before, and if so, what medications are you currently taking? Patient: I haven't been diagnosed with heart failure before, but I was told I was in the hospital for it. I was having trouble with my ankles swelling and couldn't get them to go down, even when I was in bed. I had to prop myself up to breathe at night, and I felt really bad. I called 911 because I was having a hard time talking, and they took me to the ER. I was told my blood pressure was really high, like 200 over 90. I try to take my medications, but I might miss a dose now and then. I also eat a lot of salty foods, like salt and vinegar potato chips, which I snack on every day at home. Doctor: Have you been evaluated for kidney function or tested for proteinuria, such as a urine albumin-to-creatinine ratio or a 24-hour urine protein test, since your hospitalization for heart failure? Patient: I don't know if I've had any tests for kidney function or proteinuria since I was in the hospital. I wasn't told about any of those specific tests, but I do know I have some kidney disease, which the doctor mentioned. Doctor: Could you confirm if you were told about any kidney function tests, such as serum creatinine or eGFR, or any urine tests for proteinuria, like the urine albumin-to-creatinine",
+              "entailment": 0.8003,
+              "depth": 2
+            },
+            {
+              "atom": "The examination did not occur during this visit.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm a woman, and I'm here because I've been having trouble with my heart. My ankles have been swelling, and I've been having a hard time breathing, especially at night. I had to call an ambulance and was taken to the hospital for heart failure. Doctor: Could you please provide more details about the duration and progression of your swelling and shortness of breath? Have you experienced any other symptoms such as fatigue, chest pain, or palpitations? Additionally, have you been diagnosed with heart failure before, and if so, what medications are you currently taking? Patient: I haven't been diagnosed with heart failure before, but I was told I was in the hospital for it. I was having trouble with my ankles swelling and couldn't get them to go down, even when I was in bed. I had to prop myself up to breathe at night, and I felt really bad. I called 911 because I was having a hard time talking, and they took me to the ER. I was told my blood pressure was really high, like 200 over 90. I try to take my medications, but I might miss a dose now and then. I also eat a lot of salty foods, like salt and vinegar potato chips, which I snack on every day at home. Doctor: Have you been evaluated for kidney function or tested for proteinuria, such as a urine albumin-to-creatinine ratio or a 24-hour urine protein test, since your hospitalization for heart failure? Patient: I don't know if I've had any tests for kidney function or proteinuria since I was in the hospital. I wasn't told about any of those specific tests, but I do know I have some kidney disease, which the doctor mentioned. Doctor: Could you confirm if you were told about any kidney function tests, such as serum creatinine or eGFR, or any urine tests for proteinuria, like the urine albumin-to-creatinine",
+              "entailment": 0.9971,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I did not add any information that is not present in the original statement. I also replaced the pronoun \"this\" with the subject \"visit\" to make each fact self-contained.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm a woman, and I'm here because I've been having trouble with my heart. My ankles have been swelling, and I've been having a hard time breathing, especially at night. I had to call an ambulance and was taken to the hospital for heart failure. Doctor: Could you please provide more details about the duration and progression of your swelling and shortness of breath? Have you experienced any other symptoms such as fatigue, chest pain, or palpitations? Additionally, have you been diagnosed with heart failure before, and if so, what medications are you currently taking? Patient: I haven't been diagnosed with heart failure before, but I was told I was in the hospital for it. I was having trouble with my ankles swelling and couldn't get them to go down, even when I was in bed. I had to prop myself up to breathe at night, and I felt really bad. I called 911 because I was having a hard time talking, and they took me to the ER. I was told my blood pressure was really high, like 200 over 90. I try to take my medications, but I might miss a dose now and then. I also eat a lot of salty foods, like salt and vinegar potato chips, which I snack on every day at home. Doctor: Have you been evaluated for kidney function or tested for proteinuria, such as a urine albumin-to-creatinine ratio or a 24-hour urine protein test, since your hospitalization for heart failure? Patient: I don't know if I've had any tests for kidney function or proteinuria since I was in the hospital. I wasn't told about any of those specific tests, but I do know I have some kidney disease, which the doctor mentioned. Doctor: Could you confirm if you were told about any kidney function tests, such as serum creatinine or eGFR, or any urine tests for proteinuria, like the urine albumin-to-creatinine",
+              "entailment": 0.9463,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I did not add any information that was not present in the original statement, and I replaced the pronoun \"this\" with the subject \"visit\" to make each fact self-contained.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm a woman, and I'm here because I've been having trouble with my heart. My ankles have been swelling, and I've been having a hard time breathing, especially at night. I had to call an ambulance and was taken to the hospital for heart failure. Doctor: Could you please provide more details about the duration and progression of your swelling and shortness of breath? Have you experienced any other symptoms such as fatigue, chest pain, or palpitations? Additionally, have you been diagnosed with heart failure before, and if so, what medications are you currently taking? Patient: I haven't been diagnosed with heart failure before, but I was told I was in the hospital for it. I was having trouble with my ankles swelling and couldn't get them to go down, even when I was in bed. I had to prop myself up to breathe at night, and I felt really bad. I called 911 because I was having a hard time talking, and they took me to the ER. I was told my blood pressure was really high, like 200 over 90. I try to take my medications, but I might miss a dose now and then. I also eat a lot of salty foods, like salt and vinegar potato chips, which I snack on every day at home. Doctor: Have you been evaluated for kidney function or tested for proteinuria, such as a urine albumin-to-creatinine ratio or a 24-hour urine protein test, since your hospitalization for heart failure? Patient: I don't know if I've had any tests for kidney function or proteinuria since I was in the hospital. I wasn't told about any of those specific tests, but I do know I have some kidney disease, which the doctor mentioned. Doctor: Could you confirm if you were told about any kidney function tests, such as serum creatinine or eGFR, or any urine tests for proteinuria, like the urine albumin-to-creatinine",
+              "entailment": 0.9131,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "The physical examination was not applicable.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4624,
+              "depth": 2
+            },
+            {
+              "atom": "The vital signs were not examined.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4458,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Diagnostic Results & Labs: Not applicable, as the patient's lab results were not provided during this visit.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.4661,
+          "neutral": 0.2163,
+          "contradiction": 0.3176
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "Also, have you noticed any changes in your swelling, shortness of breath, or fatigue since being discharged from the hospital? Patient: Yes, I am taking Bumex and Cozaar, but I don't remember the exact dosages. Since I've been home, my swelling has gone down a lot, and I'm not as short of breath, but I still feel a little tired some days. Doctor: Could you provide the most recent results of your kidney function tests, such as serum creatinine and eGFR, as well as urine tests for proteinuria (e.g., urine albumin-to-creatinine ratio)? Patient: I don't know the exact results of any kidney function tests or urine tests for proteinuria that were done during my hospital stay. I wasn't given specific numbers or details about them, but I was told I have some kidney disease. Doctor: Could you please provide the specific dosages of Bumex and Cozaar you are currently taking, and have you had any recent kidney function tests (such as serum creatinine, eGFR) or urine tests for proteinuria (such as urine albumin-to-creatinine ratio) since your hospitalization? Patient: I don't know the exact dosages of Bumex or Cozaar I'm taking, but I was told to continue them. I wasn't given specific numbers for any recent kidney function tests or urine tests since being discharged, but I was told I have some kidney disease. Doctor: Could you please describe any changes in your symptoms since being discharged from the hospital, such as whether your fatigue has worsened or improved, or if you've experienced any new symptoms? Patient: Since being discharged from the hospital, my fatigue has improved a little, but I still feel a bit tired some days. My swelling has gone down a lot, and I'm not as short of breath, but I haven't had any new symptoms or worsening of my old ones. I feel like I'm getting better overall. Doctor: Could you please provide the current dosages of Bumex",
+        "atomic_decomposition": {
+          "original": "Diagnostic Results & Labs: Not applicable, as the patient's lab results were not provided during this visit.",
+          "retained": [
+            {
+              "atom": "The patient's lab results were not provided during this visit.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm a woman, and I'm here because I've been having trouble with my heart. My ankles have been swelling, and I've been having a hard time breathing, especially at night. I had to call an ambulance and was taken to the hospital for heart failure. Doctor: Could you please provide more details about the duration and progression of your swelling and shortness of breath? Have you experienced any other symptoms such as fatigue, chest pain, or palpitations? Additionally, have you been diagnosed with heart failure before, and if so, what medications are you currently taking? Patient: I haven't been diagnosed with heart failure before, but I was told I was in the hospital for it. I was having trouble with my ankles swelling and couldn't get them to go down, even when I was in bed. I had to prop myself up to breathe at night, and I felt really bad. I called 911 because I was having a hard time talking, and they took me to the ER. I was told my blood pressure was really high, like 200 over 90. I try to take my medications, but I might miss a dose now and then. I also eat a lot of salty foods, like salt and vinegar potato chips, which I snack on every day at home. Doctor: Have you been evaluated for kidney function or tested for proteinuria, such as a urine albumin-to-creatinine ratio or a 24-hour urine protein test, since your hospitalization for heart failure? Patient: I don't know if I've had any tests for kidney function or proteinuria since I was in the hospital. I wasn't told about any of those specific tests, but I do know I have some kidney disease, which the doctor mentioned. Doctor: Could you confirm if you were told about any kidney function tests, such as serum creatinine or eGFR, or any urine tests for proteinuria, like the urine albumin-to-creatinine",
+              "entailment": 0.9556,
+              "depth": 1
+            },
+            {
+              "atom": "Based on the rules provided, I decompose the statement into the following atomic facts:",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm a woman, and I'm here because I've been having trouble with my heart. My ankles have been swelling, and I've been having a hard time breathing, especially at night. I had to call an ambulance and was taken to the hospital for heart failure. Doctor: Could you please provide more details about the duration and progression of your swelling and shortness of breath? Have you experienced any other symptoms such as fatigue, chest pain, or palpitations? Additionally, have you been diagnosed with heart failure before, and if so, what medications are you currently taking? Patient: I haven't been diagnosed with heart failure before, but I was told I was in the hospital for it. I was having trouble with my ankles swelling and couldn't get them to go down, even when I was in bed. I had to prop myself up to breathe at night, and I felt really bad. I called 911 because I was having a hard time talking, and they took me to the ER. I was told my blood pressure was really high, like 200 over 90. I try to take my medications, but I might miss a dose now and then. I also eat a lot of salty foods, like salt and vinegar potato chips, which I snack on every day at home. Doctor: Have you been evaluated for kidney function or tested for proteinuria, such as a urine albumin-to-creatinine ratio or a 24-hour urine protein test, since your hospitalization for heart failure? Patient: I don't know if I've had any tests for kidney function or proteinuria since I was in the hospital. I wasn't told about any of those specific tests, but I do know I have some kidney disease, which the doctor mentioned. Doctor: Could you confirm if you were told about any kidney function tests, such as serum creatinine or eGFR, or any urine tests for proteinuria, like the urine albumin-to-creatinine",
+              "entailment": 0.5132,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I did not combine the two findings into a single fact, as they are separate and distinct. Additionally, I did not add any information that is not present in the original statement.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm a woman, and I'm here because I've been having trouble with my heart. My ankles have been swelling, and I've been having a hard time breathing, especially at night. I had to call an ambulance and was taken to the hospital for heart failure. Doctor: Could you please provide more details about the duration and progression of your swelling and shortness of breath? Have you experienced any other symptoms such as fatigue, chest pain, or palpitations? Additionally, have you been diagnosed with heart failure before, and if so, what medications are you currently taking? Patient: I haven't been diagnosed with heart failure before, but I was told I was in the hospital for it. I was having trouble with my ankles swelling and couldn't get them to go down, even when I was in bed. I had to prop myself up to breathe at night, and I felt really bad. I called 911 because I was having a hard time talking, and they took me to the ER. I was told my blood pressure was really high, like 200 over 90. I try to take my medications, but I might miss a dose now and then. I also eat a lot of salty foods, like salt and vinegar potato chips, which I snack on every day at home. Doctor: Have you been evaluated for kidney function or tested for proteinuria, such as a urine albumin-to-creatinine ratio or a 24-hour urine protein test, since your hospitalization for heart failure? Patient: I don't know if I've had any tests for kidney function or proteinuria since I was in the hospital. I wasn't told about any of those specific tests, but I do know I have some kidney disease, which the doctor mentioned. Doctor: Could you confirm if you were told about any kidney function tests, such as serum creatinine or eGFR, or any urine tests for proteinuria, like the urine albumin-to-creatinine",
+              "entailment": 0.981,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I did not add any information that is not present in the statement, and I did not infer any additional facts. The statement is stating that the patient's lab results were not provided, and that Diagnostic Results & Labs are not applicable as a result.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm a woman, and I'm here because I've been having trouble with my heart. My ankles have been swelling, and I've been having a hard time breathing, especially at night. I had to call an ambulance and was taken to the hospital for heart failure. Doctor: Could you please provide more details about the duration and progression of your swelling and shortness of breath? Have you experienced any other symptoms such as fatigue, chest pain, or palpitations? Additionally, have you been diagnosed with heart failure before, and if so, what medications are you currently taking? Patient: I haven't been diagnosed with heart failure before, but I was told I was in the hospital for it. I was having trouble with my ankles swelling and couldn't get them to go down, even when I was in bed. I had to prop myself up to breathe at night, and I felt really bad. I called 911 because I was having a hard time talking, and they took me to the ER. I was told my blood pressure was really high, like 200 over 90. I try to take my medications, but I might miss a dose now and then. I also eat a lot of salty foods, like salt and vinegar potato chips, which I snack on every day at home. Doctor: Have you been evaluated for kidney function or tested for proteinuria, such as a urine albumin-to-creatinine ratio or a 24-hour urine protein test, since your hospitalization for heart failure? Patient: I don't know if I've had any tests for kidney function or proteinuria since I was in the hospital. I wasn't told about any of those specific tests, but I do know I have some kidney disease, which the doctor mentioned. Doctor: Could you confirm if you were told about any kidney function tests, such as serum creatinine or eGFR, or any urine tests for proteinuria, like the urine albumin-to-creatinine",
+              "entailment": 0.7061,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "Diagnostic Results are not applicable.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4385,
+              "depth": 2
+            },
+            {
+              "atom": "Labs are not applicable.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4438,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      }
+    ]
+  },
+  "stage2_stats": {
+    "decision_counts": {
+      "faithful": 2,
+      "uncertain": 5
+    },
+    "num_claims": 7,
+    "num_kept": 7,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_so": {
+    "subjective": "Chief Complaint: Trouble with heart, swelling ankles, shortness of breath\nThe patient presents with complaints of heart trouble.\nThe patient presents with complaints of swelling ankles.\nThe patient presents with complaints of shortness of breath.\nShe was recently hospitalized for heart failure and was diagnosed with kidney disease.\nShe reports that her swelling has decreased significantly since being discharged from the hospital.\nShe reports that her shortness of breath has improved.\nThe patient has a history of hypertension.\nShe still experiences fatigue.\nIt has improved slightly.\nNote that I've replaced the pronoun \"it\" with the subject \"She\" to make each fact self-contained.",
+    "objective": "The patient was not examined physically during this visit.\nNote that there is only one proposition in this statement, so it can be output as a single fact.\nThe examination did not occur during this visit.\nNote that I did not add any information that is not present in the original statement. I also replaced the pronoun \"this\" with the subject \"visit\" to make each fact self-contained.\nNote that I did not add any information that was not present in the original statement, and I replaced the pronoun \"this\" with the subject \"visit\" to make each fact self-contained.\nThe patient's lab results were not provided during this visit.\nBased on the rules provided, I decompose the statement into the following atomic facts:\nNote that I did not combine the two findings into a single fact, as they are separate and distinct. Additionally, I did not add any information that is not present in the original statement.\nNote that I did not add any information that is not present in the statement, and I did not infer any additional facts. The statement is stating that the patient's lab results were not provided, and that Diagnostic Results & Labs are not applicable as a result."
+  },
+  "stage3_key_sentences": [
+    "Additionally, have you been diagnosed with heart failure before, and if so, what medications are you currently taking?",
+    "My ankles have been swelling, and I've been having a hard time breathing, especially at night."
+  ],
+  "stage3_summary_key_phrases": [
+    "patient presents complaints",
+    "pronoun subject visit",
+    "fact self contained",
+    "statement replaced pronoun",
+    "chief complaint trouble",
+    "information present statement",
+    "examined physically",
+    "trouble heart swelling",
+    "significantly discharged hospital",
+    "shortness breath improved"
+  ],
+  "stage3_coverage_scores": [
+    {
+      "sentence": "Additionally, have you been diagnosed with heart failure before, and if so, what medications are you currently taking?",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "Additionally, have you been diagnosed with heart failure before, and if so, what medications are you currently taking?",
+      "score": 0.4043,
+      "is_missing": false,
+      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+    },
+    {
+      "sentence": "My ankles have been swelling, and I've been having a hard time breathing, especially at night.",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "My ankles have been swelling, and I've been having a hard time breathing, especially at night.",
+      "score": 0.5657,
+      "is_missing": false,
+      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+    }
+  ],
+  "stage3_candidate_log": [],
+  "stage3_added": [],
+  "stage3_stats": {
+    "num_key_sentences": 2,
+    "num_flagged": 0,
+    "num_added": 0
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "section": "subjective",
+        "claim": "The patient is a 62-year-old woman.",
+        "entailment": 0.4409,
+        "reason": "Could not be decomposed further and not entailed above threshold Ta.",
+        "from_unit": "History of Present Illness (HPI): The patient, a 62-year-old woman, presents with complaints of heart trouble, swelling ankles, and shortness of breath."
+      },
+      {
+        "section": "subjective",
+        "claim": "Statement: The patient has a history of hypertension and is currently taking metoprolol 50 mg daily, but has not taken it for the past three days.",
+        "entailment": 0.4504,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "She reports that her swelling has decreased significantly since being discharged from the hospital, and her shortness of breath has improved."
+      },
+      {
+        "section": "subjective",
+        "claim": "The patient is currently taking metoprolol 50 mg daily.",
+        "entailment": 0.4492,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "She reports that her swelling has decreased significantly since being discharged from the hospital, and her shortness of breath has improved."
+      },
+      {
+        "section": "subjective",
+        "claim": "The patient has not taken metoprolol for the past three days.",
+        "entailment": 0.449,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "She reports that her swelling has decreased significantly since being discharged from the hospital, and her shortness of breath has improved."
+      },
+      {
+        "section": "objective",
+        "claim": "The physical examination was not applicable.",
+        "entailment": 0.4624,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: Not applicable, as the patient was not examined physically during this visit."
+      },
+      {
+        "section": "objective",
+        "claim": "The vital signs were not examined.",
+        "entailment": 0.4458,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: Not applicable, as the patient was not examined physically during this visit."
+      },
+      {
+        "section": "objective",
+        "claim": "Diagnostic Results are not applicable.",
+        "entailment": 0.4385,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Diagnostic Results & Labs: Not applicable, as the patient's lab results were not provided during this visit."
+      },
+      {
+        "section": "objective",
+        "claim": "Labs are not applicable.",
+        "entailment": 0.4438,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Diagnostic Results & Labs: Not applicable, as the patient's lab results were not provided during this visit."
+      }
+    ]
+  },
+  "final_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** The patient has a history of heart failure and kidney disease. Her symptoms of swelling ankles and shortness of breath have improved since being discharged from the hospital, but she still experiences fatigue. Her kidney function tests and urine tests for proteinuria are unknown.\n* **Treatment Plan, Medications, and Follow-up:** The patient is to continue taking Bumex (bumetanide) and Cozaar (losartan) as prescribed. She is advised to follow up with her primary care physician for further evaluation and management of her heart failure and kidney disease.\n\nPlease note that this SOAP note is based on the provided dialogue and extracted clinical elements. It is essential to ensure that the note accurately reflects the patient's medical history, symptoms, and treatment plan."
+  },
+  "ap_unchanged": true,
+  "thresholds": {
+    "Te": 0.9,
+    "Tc": 0.8,
+    "Ta": 0.5,
+    "cov_min": 0.4,
+    "top_m": 2,
+    "fix_header_bug": true
+  },
+  "models": {
+    "llm": "llama3:8b-instruct-q8_0",
+    "nli": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+    "embedder": "all-MiniLM-L6-v2",
+    "ppl": "gpt2"
+  },
+  "status": "success",
+  "seconds": 16.7,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm a woman, and I'm here because I've been having trouble with my heart. My ankles have been swelling, and I've been having a hard time breathing, especially at night. I had to call an ambulance and was taken to the hospital for heart failure.\nDoctor: Could you please provide more details about the duration and progression of your swelling and shortness of breath? Have you experienced any other symptoms such as fatigue, chest pain, or palpitations? Additionally, have you been diagnosed with heart failure before, and if so, what medications are you currently taking?\nPatient: I haven't been diagnosed with heart failure before, but I was told I was in the hospital for it. I was having trouble with my ankles swelling and couldn't get them to go down, even when I was in bed. I had to prop myself up to breathe at night, and I felt really bad. I called 911 because I was having a hard time talking, and they took me to the ER. I was told my blood pressure was really high, like 200 over 90. I try to take my medications, but I might miss a dose now and then. I also eat a lot of salty foods, like salt and vinegar potato chips, which I snack on every day at home.\nDoctor: Have you been evaluated for kidney function or tested for proteinuria, such as a urine albumin-to-creatinine ratio or a 24-hour urine protein test, since your hospitalization for heart failure?\nPatient: I don't know if I've had any tests for kidney function or proteinuria since I was in the hospital. I wasn't told about any of those specific tests, but I do know I have some kidney disease, which the doctor mentioned.\nDoctor: Could you confirm if you were told about any kidney function tests, such as serum creatinine or eGFR, or any urine tests for proteinuria, like the urine albumin-to-creatinine ratio, during your hospitalization for heart failure?\nPatient: I don't know if I had any specific kidney function tests done, like serum creatinine or eGFR, or urine tests for proteinuria, like the urine albumin-to-creatinine ratio. I wasn't told about those tests, but I was told I have some kidney disease.\nDoctor: Could you please provide the results of any kidney function tests (e.g., serum creatinine, eGFR) and urine tests for proteinuria (e.g., urine albumin-to-creatinine ratio) that were conducted during your hospitalization for heart failure?\nPatient: I don't know the exact results of any kidney function tests or urine tests for proteinuria that were done during my hospital stay. I wasn't given specific numbers or details about them, but I was told I have some kidney disease.\nDoctor: Could you please provide more details about your current medications, including any prescribed for heart failure or kidney disease, and how consistently you have been taking them? Additionally, could you describe your typical daily diet, especially your intake of salty foods?\nPatient: I'm taking some medications for my heart and kidney issues, but I might miss a dose now and then. I try to take them all the time, but it's not always consistent. As for my diet, I eat a lot of salt and vinegar potato chips every day at home. I like them a lot, even though I know they're not good for me.\nDoctor: Could you please provide the specific medications you are taking for your heart and kidney issues, including their names and dosages? Additionally, have you experienced any symptoms such as fatigue, chest pain, or palpitations in addition to swelling and shortness of breath?\nPatient: I'm taking medications for my heart and kidneys, but I can't remember the exact names or dosages. I do feel tired sometimes, but I haven't had chest pain or palpitations. The main issues are the swelling and shortness of breath, which have been getting better since I've been home.\nDoctor: Could you please provide the names and dosages of the medications you are currently taking for your heart and kidney issues?\nPatient: I can't remember the exact names or dosages of the medications I'm taking, but I know I'm on some blood pressure meds and a water pill. The doctor mentioned something about a Bumex and Cozaar, but I'm not sure about the exact amounts.\nDoctor: Could you clarify if you are currently taking Bumex (bumetanide) and Cozaar (losartan), and if so, what are the specific dosages? Also, have you noticed any changes in your swelling, shortness of breath, or fatigue since being discharged from the hospital?\nPatient: Yes, I am taking Bumex and Cozaar, but I don't remember the exact dosages. Since I've been home, my swelling has gone down a lot, and I'm not as short of breath, but I still feel a little tired some days.\nDoctor: Could you provide the most recent results of your kidney function tests, such as serum creatinine and eGFR, as well as urine tests for proteinuria (e.g., urine albumin-to-creatinine ratio)?\nPatient: I don't know the exact results of any kidney function tests or urine tests for proteinuria that were done during my hospital stay. I wasn't given specific numbers or details about them, but I was told I have some kidney disease.\nDoctor: Could you please provide the specific dosages of Bumex and Cozaar you are currently taking, and have you had any recent kidney function tests (such as serum creatinine, eGFR) or urine tests for proteinuria (such as urine albumin-to-creatinine ratio) since your hospitalization?\nPatient: I don't know the exact dosages of Bumex or Cozaar I'm taking, but I was told to continue them. I wasn't given specific numbers for any recent kidney function tests or urine tests since being discharged, but I was told I have some kidney disease.\nDoctor: Could you please describe any changes in your symptoms since being discharged from the hospital, such as whether your fatigue has worsened or improved, or if you've experienced any new symptoms?\nPatient: Since being discharged from the hospital, my fatigue has improved a little, but I still feel a bit tired some days. My swelling has gone down a lot, and I'm not as short of breath, but I haven't had any new symptoms or worsening of my old ones. I feel like I'm getting better overall.\nDoctor: Could you please provide the current dosages of Bumex and Cozaar that you are taking?\nPatient: I don't know the exact dosages of Bumex or Cozaar I'm taking, but I was told to continue them as prescribed. I haven't been given specific numbers or instructions about the amounts, just to keep taking them.\nDoctor: Could you please provide the patient's current serum creatinine level, estimated glomerular filtration rate (eGFR), and urine albumin-to-creatinine ratio (UACR) results? These are essential for assessing kidney function and proteinuria.\nPatient: I don't know the exact numbers for my serum creatinine, eGFR, or urine albumin-to-creatinine ratio. I wasn't given specific results when I was in the hospital or after I came home, just that I have some kidney disease. I'm trying to follow my doctor's advice and take my medications as told.\nDoctor: Could you please provide the exact dosages of Bumex and Cozaar that you are currently taking? Additionally, could you describe how your fatigue has been lately and whether you have noticed any changes in your swelling or shortness of breath since being discharged from the hospital?\nPatient: I don't know the exact dosages of Bumex or Cozaar I'm taking, but I was told to continue them as prescribed. My fatigue has improved a little since being discharged, and my swelling has gone down a lot. I'm not as short of breath anymore, and I feel like I'm getting better overall.",
+  "reference_so": {
+    "subjective": "Basic information: Female, chief complaint: trouble with heart, symptoms include swelling in ankles and shortness of breath, especially at night\n\nHistory of present illness: Recent hospitalization for heart failure; symptoms include swelling in ankles and shortness of breath, especially at night. The patient reported high blood pressure (200/90 mmHg) during the hospitalization, missed medication doses, and a diet high in salt (e.g., salt and vinegar potato chips). The patient also reports feeling tired sometimes. The patient is currently taking Bumex and Cozaar for heart and kidney conditions, though exact dosages are not yet specified. Since discharge, swelling has improved, but fatigue persists. The patient is uncertain about specific kidney function tests (e.g., serum creatinine, eGFR) and urine tests for proteinuria (e.g., urine albumin-to-creatinine ratio) conducted during hospitalization.\n\nPast history: No prior diagnosis of heart failure, but hospitalized for it. Patient mentions having some kidney disease, as mentioned by the doctor. Patient is uncertain about specific kidney function tests (e.g., serum creatinine, eGFR) and urine tests for proteinuria (e.g., urine albumin-to-creatinine ratio) conducted during hospitalization.",
+    "objective": "Physical examination: Not yet provided\n\nInvestigations: Not yet provided"
+  }
+}

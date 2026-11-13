@@ -1,0 +1,445 @@
+{
+  "case_id": "D2N099",
+  "split": "test",
+  "is_icl_demo": false,
+  "stage1_elements": "Here are the extracted clinical elements in concise bullet points:\n\n**Subjective Elements:**\n\n* Chief complaints: Runny nose, cough, low-grade fever, pulling on ears, and rubbing nose\n* History of present illness (symptoms, onset, duration):\n\t+ Symptoms started around supper time last night\n\t+ Duration: 2 days\n\t+ Fever: 100.3°F (rectal)\n\t+ Appetite: Some appetite initially, but decreased later\n\t+ Sleep: Trouble sleeping\n\t+ Irritability: Yes\n* Relevant medical history/medications:\n\t+ Exposure to sick individuals (older sister and nephew)\n\t+ No recent vaccinations\n\t+ No history of recurrent ear infections\n\n**Objective Elements:**\n\n* Physical examination findings:\n\t+ Ears looked okay\n\t+ Breathing well\n\t+ No other issues during the exam\n* Vital signs:\n\t+ Temperature: 100.3°F (rectal)\n\t+ Heart rate: Not mentioned\n\t+ Respiratory rate: Not mentioned\n\t+ Oxygen saturation: Not mentioned\n* Diagnostic lab/imaging results: None mentioned\n\n**Assessment Elements:**\n\n* Diagnoses and clinical impressions: Not explicitly stated, but likely includes a viral upper respiratory tract infection\n\n**Plan Elements:**\n\n* Medical treatment plan: Not explicitly stated, but likely includes antiviral medication and supportive care\n* Prescriptions/dosages: Not mentioned\n* Tests ordered: None mentioned\n* Follow-up instructions: Not mentioned",
+  "stage1_raw_note": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:\n\n**SUBJECTIVE:**\n\n* **Chief Complaint:** Runny nose, cough, low-grade fever, pulling on ears, and rubbing nose\n* **History of Present Illness (HPI):** Symptoms started around supper time last night, duration of 2 days, fever of 100.3°F (rectal), some appetite initially, decreased later, trouble sleeping, and irritability.\n\n**OBJECTIVE:**\n\n* **Physical Examination & Vitals:** Ears looked okay, breathing well, no other issues during the exam. Vital signs: temperature of 100.3°F (rectal), heart rate not mentioned, respiratory rate not mentioned, and oxygen saturation not mentioned.\n* **Diagnostic Results & Labs:** None mentioned.\n\n**ASSESSMENT AND PLAN:**\n\n* **Diagnoses and Clinical Reasoning:** Based on the patient's symptoms and physical examination findings, it is likely that the child has a viral upper respiratory tract infection.\n* **Treatment Plan, Medications, and Follow-up:** The patient will be treated with antiviral medication and supportive care. Follow-up instructions will be provided to monitor the patient's condition and adjust treatment as necessary.\n\nNote: The doctor's assessment and plan are not explicitly stated in the dialogue, so I have made an educated inference based on the patient's symptoms and physical examination findings.",
+  "stage1_parse": {
+    "parse_mode": "main_headings",
+    "parse_ok": true,
+    "dropped_preamble": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:"
+  },
+  "stage1_so": {
+    "subjective": "* **Chief Complaint:** Runny nose, cough, low-grade fever, pulling on ears, and rubbing nose\n* **History of Present Illness (HPI):** Symptoms started around supper time last night, duration of 2 days, fever of 100.3°F (rectal), some appetite initially, decreased later, trouble sleeping, and irritability.",
+    "objective": "* **Physical Examination & Vitals:** Ears looked okay, breathing well, no other issues during the exam. Vital signs: temperature of 100.3°F (rectal), heart rate not mentioned, respiratory rate not mentioned, and oxygen saturation not mentioned.\n* **Diagnostic Results & Labs:** None mentioned."
+  },
+  "stage1_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** Based on the patient's symptoms and physical examination findings, it is likely that the child has a viral upper respiratory tract infection.\n* **Treatment Plan, Medications, and Follow-up:** The patient will be treated with antiviral medication and supportive care. Follow-up instructions will be provided to monitor the patient's condition and adjust treatment as necessary.\n\nNote: The doctor's assessment and plan are not explicitly stated in the dialogue, so I have made an educated inference based on the patient's symptoms and physical examination findings."
+  },
+  "stage2_so": {
+    "subjective": "The patient has a runny nose.\nThe patient has a cough.\nThe patient has a low-grade fever.\nThe patient is pulling on their ears.\nThe patient is rubbing their nose.\nNote that I've replaced the pronoun \"their\" with the subject \"the patient\" to make each fact self-contained.\nSymptoms started around supper time last night.\nThe duration of symptoms is 2 days.\nThe patient has a fever of 100.3°F (rectal).\nThe patient initially had some appetite.\nThe patient's appetite decreased later.\nThe patient had trouble sleeping.\nThe patient experienced irritability.\nNote that I've replaced pronouns with the subject (\"the patient\") and split each clause into its own fact, as per the rules.",
+    "objective": "The patient's ears looked okay.\nThe patient's breathing was well.\nNo other issues were present during the physical examination.\nNote that I've replaced the pronoun \"the exam\" with the subject \"physical examination\" to make each fact self-contained.\nThe patient's temperature is 100.3°F (rectal).\nThe patient's heart rate is not mentioned.\nThe patient's respiratory rate is not mentioned.\nThe patient's oxygen saturation is not mentioned.\nNote that I've followed the rules by splitting each list item into its own fact, replacing pronouns with the subject (\"The patient\"), and not adding or inferring any information that's not present in the original statement.\nDiagnostic Results are not mentioned.\nLabs are not mentioned.\nThe statement does not contain any specific findings or information."
+  },
+  "stage2_audit": {
+    "subjective": [
+      {
+        "unit": "Chief Complaint: Runny nose, cough, low-grade fever, pulling on ears, and rubbing nose",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.7622,
+          "neutral": 0.1569,
+          "contradiction": 0.0811
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her. Doctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister? Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations. Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears? Patient: My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus. Doctor: Has the patient had any recent vaccinations, and if so, which ones? Patient: I don't know about any vaccinations. I don't think we've had any recent ones. Doctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms? Patient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been",
+        "atomic_decomposition": {
+          "original": "Chief Complaint: Runny nose, cough, low-grade fever, pulling on ears, and rubbing nose",
+          "retained": [
+            {
+              "atom": "The patient has a runny nose.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her. Doctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister? Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations. Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears? Patient: My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus. Doctor: Has the patient had any recent vaccinations, and if so, which ones? Patient: I don't know about any vaccinations. I don't think we've had any recent ones. Doctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms? Patient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been",
+              "entailment": 0.9995,
+              "depth": 1
+            },
+            {
+              "atom": "The patient has a cough.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her. Doctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister? Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations. Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears? Patient: My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus. Doctor: Has the patient had any recent vaccinations, and if so, which ones? Patient: I don't know about any vaccinations. I don't think we've had any recent ones. Doctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms? Patient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been",
+              "entailment": 0.9995,
+              "depth": 1
+            },
+            {
+              "atom": "The patient has a low-grade fever.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her. Doctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister? Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations. Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears? Patient: My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus. Doctor: Has the patient had any recent vaccinations, and if so, which ones? Patient: I don't know about any vaccinations. I don't think we've had any recent ones. Doctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms? Patient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been",
+              "entailment": 0.9995,
+              "depth": 1
+            },
+            {
+              "atom": "The patient is pulling on their ears.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her. Doctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister? Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations. Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears? Patient: My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus. Doctor: Has the patient had any recent vaccinations, and if so, which ones? Patient: I don't know about any vaccinations. I don't think we've had any recent ones. Doctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms? Patient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been",
+              "entailment": 0.999,
+              "depth": 1
+            },
+            {
+              "atom": "The patient is rubbing their nose.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her. Doctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister? Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations. Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears? Patient: My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus. Doctor: Has the patient had any recent vaccinations, and if so, which ones? Patient: I don't know about any vaccinations. I don't think we've had any recent ones. Doctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms? Patient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been",
+              "entailment": 0.999,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've replaced the pronoun \"their\" with the subject \"the patient\" to make each fact self-contained.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her. Doctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister? Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations. Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears? Patient: My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus. Doctor: Has the patient had any recent vaccinations, and if so, which ones? Patient: I don't know about any vaccinations. I don't think we've had any recent ones. Doctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms? Patient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been",
+              "entailment": 0.9985,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "History of Present Illness (HPI): Symptoms started around supper time last night, duration of 2 days, fever of 100.3°F (rectal), some appetite initially, decreased later, trouble sleeping, and irritability.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.458,
+          "neutral": 0.2964,
+          "contradiction": 0.2454
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "the patient had any changes in behavior, such as irritability, difficulty concentrating, or decreased interaction with others during this illness? Patient: Yes, he has been more irritable than usual and seems to have trouble sleeping. He’s not his normal self, but I haven’t noticed any changes in how he interacts with others or his ability to concentrate. Doctor: Has the patient had any recent changes in hearing or ear pain that could suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Has the patient had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Could you please provide details about the child's physical examination findings, including vital signs such as temperature, heart rate, respiratory rate, and oxygen saturation, as well as any findings from a head-to-toe examination? Patient: I don't have the exact numbers for his vital signs, but his temperature was 100.3 when I checked it rectally. The doctor examined him and said his ears looked okay, and he was breathing well. He didn't seem to have any other issues during the exam. Doctor: Has the child had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Has the child had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's",
+        "atomic_decomposition": {
+          "original": "History of Present Illness (HPI): Symptoms started around supper time last night, duration of 2 days, fever of 100.3°F (rectal), some appetite initially, decreased later, trouble sleeping, and irritability.",
+          "retained": [
+            {
+              "atom": "Symptoms started around supper time last night.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her. Doctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister? Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations. Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears? Patient: My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus. Doctor: Has the patient had any recent vaccinations, and if so, which ones? Patient: I don't know about any vaccinations. I don't think we've had any recent ones. Doctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms? Patient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been",
+              "entailment": 0.9912,
+              "depth": 1
+            },
+            {
+              "atom": "The duration of symptoms is 2 days.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her. Doctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister? Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations. Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears? Patient: My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus. Doctor: Has the patient had any recent vaccinations, and if so, which ones? Patient: I don't know about any vaccinations. I don't think we've had any recent ones. Doctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms? Patient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been",
+              "entailment": 0.9888,
+              "depth": 1
+            },
+            {
+              "atom": "The patient has a fever of 100.3°F (rectal).",
+              "citation": "the patient had any changes in behavior, such as irritability, difficulty concentrating, or decreased interaction with others during this illness? Patient: Yes, he has been more irritable than usual and seems to have trouble sleeping. He’s not his normal self, but I haven’t noticed any changes in how he interacts with others or his ability to concentrate. Doctor: Has the patient had any recent changes in hearing or ear pain that could suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Has the patient had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Could you please provide details about the child's physical examination findings, including vital signs such as temperature, heart rate, respiratory rate, and oxygen saturation, as well as any findings from a head-to-toe examination? Patient: I don't have the exact numbers for his vital signs, but his temperature was 100.3 when I checked it rectally. The doctor examined him and said his ears looked okay, and he was breathing well. He didn't seem to have any other issues during the exam. Doctor: Has the child had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Has the child had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's",
+              "entailment": 0.519,
+              "depth": 1
+            },
+            {
+              "atom": "The patient initially had some appetite.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her. Doctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister? Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations. Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears? Patient: My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus. Doctor: Has the patient had any recent vaccinations, and if so, which ones? Patient: I don't know about any vaccinations. I don't think we've had any recent ones. Doctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms? Patient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been",
+              "entailment": 0.9995,
+              "depth": 1
+            },
+            {
+              "atom": "The patient's appetite decreased later.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her. Doctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister? Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations. Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears? Patient: My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus. Doctor: Has the patient had any recent vaccinations, and if so, which ones? Patient: I don't know about any vaccinations. I don't think we've had any recent ones. Doctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms? Patient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been",
+              "entailment": 0.9985,
+              "depth": 1
+            },
+            {
+              "atom": "The patient had trouble sleeping.",
+              "citation": "the patient had any changes in behavior, such as irritability, difficulty concentrating, or decreased interaction with others during this illness? Patient: Yes, he has been more irritable than usual and seems to have trouble sleeping. He’s not his normal self, but I haven’t noticed any changes in how he interacts with others or his ability to concentrate. Doctor: Has the patient had any recent changes in hearing or ear pain that could suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Has the patient had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Could you please provide details about the child's physical examination findings, including vital signs such as temperature, heart rate, respiratory rate, and oxygen saturation, as well as any findings from a head-to-toe examination? Patient: I don't have the exact numbers for his vital signs, but his temperature was 100.3 when I checked it rectally. The doctor examined him and said his ears looked okay, and he was breathing well. He didn't seem to have any other issues during the exam. Doctor: Has the child had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Has the child had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's",
+              "entailment": 0.9722,
+              "depth": 1
+            },
+            {
+              "atom": "The patient experienced irritability.",
+              "citation": "the patient had any changes in behavior, such as irritability, difficulty concentrating, or decreased interaction with others during this illness? Patient: Yes, he has been more irritable than usual and seems to have trouble sleeping. He’s not his normal self, but I haven’t noticed any changes in how he interacts with others or his ability to concentrate. Doctor: Has the patient had any recent changes in hearing or ear pain that could suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Has the patient had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Could you please provide details about the child's physical examination findings, including vital signs such as temperature, heart rate, respiratory rate, and oxygen saturation, as well as any findings from a head-to-toe examination? Patient: I don't have the exact numbers for his vital signs, but his temperature was 100.3 when I checked it rectally. The doctor examined him and said his ears looked okay, and he was breathing well. He didn't seem to have any other issues during the exam. Doctor: Has the child had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Has the child had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's",
+              "entailment": 0.9995,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've replaced pronouns with the subject (\"the patient\") and split each clause into its own fact, as per the rules.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her. Doctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister? Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations. Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears? Patient: My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus. Doctor: Has the patient had any recent vaccinations, and if so, which ones? Patient: I don't know about any vaccinations. I don't think we've had any recent ones. Doctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms? Patient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been",
+              "entailment": 0.9902,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      }
+    ],
+    "objective": [
+      {
+        "unit": "Physical Examination & Vitals: Ears looked okay, breathing well, no other issues during the exam.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.5757,
+          "neutral": 0.2986,
+          "contradiction": 0.1255
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "the child had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Has the child had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Has the child experienced any difficulty breathing, such as rapid breathing, wheezing, or nasal congestion that makes it hard for him to breathe? Patient: Yes, he has had nasal congestion, and it's been making it a little harder for him to breathe through his nose, but he's been able to breathe okay overall. He hasn't had any wheezing or rapid breathing that I noticed.",
+        "atomic_decomposition": {
+          "original": "Physical Examination & Vitals: Ears looked okay, breathing well, no other issues during the exam.",
+          "retained": [
+            {
+              "atom": "The patient's ears looked okay.",
+              "citation": "the patient had any changes in behavior, such as irritability, difficulty concentrating, or decreased interaction with others during this illness? Patient: Yes, he has been more irritable than usual and seems to have trouble sleeping. He’s not his normal self, but I haven’t noticed any changes in how he interacts with others or his ability to concentrate. Doctor: Has the patient had any recent changes in hearing or ear pain that could suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Has the patient had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Could you please provide details about the child's physical examination findings, including vital signs such as temperature, heart rate, respiratory rate, and oxygen saturation, as well as any findings from a head-to-toe examination? Patient: I don't have the exact numbers for his vital signs, but his temperature was 100.3 when I checked it rectally. The doctor examined him and said his ears looked okay, and he was breathing well. He didn't seem to have any other issues during the exam. Doctor: Has the child had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Has the child had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's",
+              "entailment": 0.6807,
+              "depth": 1
+            },
+            {
+              "atom": "The patient's breathing was well.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her. Doctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister? Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations. Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears? Patient: My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus. Doctor: Has the patient had any recent vaccinations, and if so, which ones? Patient: I don't know about any vaccinations. I don't think we've had any recent ones. Doctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms? Patient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been",
+              "entailment": 0.9971,
+              "depth": 1
+            },
+            {
+              "atom": "No other issues were present during the physical examination.",
+              "citation": "the patient had any changes in behavior, such as irritability, difficulty concentrating, or decreased interaction with others during this illness? Patient: Yes, he has been more irritable than usual and seems to have trouble sleeping. He’s not his normal self, but I haven’t noticed any changes in how he interacts with others or his ability to concentrate. Doctor: Has the patient had any recent changes in hearing or ear pain that could suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Has the patient had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Could you please provide details about the child's physical examination findings, including vital signs such as temperature, heart rate, respiratory rate, and oxygen saturation, as well as any findings from a head-to-toe examination? Patient: I don't have the exact numbers for his vital signs, but his temperature was 100.3 when I checked it rectally. The doctor examined him and said his ears looked okay, and he was breathing well. He didn't seem to have any other issues during the exam. Doctor: Has the child had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Has the child had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's",
+              "entailment": 0.5098,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've replaced the pronoun \"the exam\" with the subject \"physical examination\" to make each fact self-contained.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her. Doctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister? Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations. Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears? Patient: My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus. Doctor: Has the patient had any recent vaccinations, and if so, which ones? Patient: I don't know about any vaccinations. I don't think we've had any recent ones. Doctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms? Patient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been",
+              "entailment": 0.8784,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "Vital signs: temperature of 100.3°F (rectal), heart rate not mentioned, respiratory rate not mentioned, and oxygen saturation not mentioned.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.5493,
+          "neutral": 0.2318,
+          "contradiction": 0.2189
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "the patient had any changes in behavior, such as irritability, difficulty concentrating, or decreased interaction with others during this illness? Patient: Yes, he has been more irritable than usual and seems to have trouble sleeping. He’s not his normal self, but I haven’t noticed any changes in how he interacts with others or his ability to concentrate. Doctor: Has the patient had any recent changes in hearing or ear pain that could suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Has the patient had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Could you please provide details about the child's physical examination findings, including vital signs such as temperature, heart rate, respiratory rate, and oxygen saturation, as well as any findings from a head-to-toe examination? Patient: I don't have the exact numbers for his vital signs, but his temperature was 100.3 when I checked it rectally. The doctor examined him and said his ears looked okay, and he was breathing well. He didn't seem to have any other issues during the exam. Doctor: Has the child had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Has the child had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's",
+        "atomic_decomposition": {
+          "original": "Vital signs: temperature of 100.3°F (rectal), heart rate not mentioned, respiratory rate not mentioned, and oxygen saturation not mentioned.",
+          "retained": [
+            {
+              "atom": "The patient's temperature is 100.3°F (rectal).",
+              "citation": "the patient had any changes in behavior, such as irritability, difficulty concentrating, or decreased interaction with others during this illness? Patient: Yes, he has been more irritable than usual and seems to have trouble sleeping. He’s not his normal self, but I haven’t noticed any changes in how he interacts with others or his ability to concentrate. Doctor: Has the patient had any recent changes in hearing or ear pain that could suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Has the patient had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Could you please provide details about the child's physical examination findings, including vital signs such as temperature, heart rate, respiratory rate, and oxygen saturation, as well as any findings from a head-to-toe examination? Patient: I don't have the exact numbers for his vital signs, but his temperature was 100.3 when I checked it rectally. The doctor examined him and said his ears looked okay, and he was breathing well. He didn't seem to have any other issues during the exam. Doctor: Has the child had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Has the child had any recent changes in hearing or ear pain that would suggest an ear infection? Patient: No, I don't think he's",
+              "entailment": 0.5068,
+              "depth": 1
+            },
+            {
+              "atom": "The patient's heart rate is not mentioned.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her. Doctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister? Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations. Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears? Patient: My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus. Doctor: Has the patient had any recent vaccinations, and if so, which ones? Patient: I don't know about any vaccinations. I don't think we've had any recent ones. Doctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms? Patient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been",
+              "entailment": 0.9893,
+              "depth": 1
+            },
+            {
+              "atom": "The patient's respiratory rate is not mentioned.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her. Doctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister? Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations. Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears? Patient: My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus. Doctor: Has the patient had any recent vaccinations, and if so, which ones? Patient: I don't know about any vaccinations. I don't think we've had any recent ones. Doctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms? Patient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been",
+              "entailment": 0.9976,
+              "depth": 1
+            },
+            {
+              "atom": "The patient's oxygen saturation is not mentioned.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her. Doctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister? Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations. Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears? Patient: My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus. Doctor: Has the patient had any recent vaccinations, and if so, which ones? Patient: I don't know about any vaccinations. I don't think we've had any recent ones. Doctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms? Patient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been",
+              "entailment": 0.9951,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've followed the rules by splitting each list item into its own fact, replacing pronouns with the subject (\"The patient\"), and not adding or inferring any information that's not present in the original statement.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her. Doctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister? Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations. Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears? Patient: My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus. Doctor: Has the patient had any recent vaccinations, and if so, which ones? Patient: I don't know about any vaccinations. I don't think we've had any recent ones. Doctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms? Patient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been",
+              "entailment": 0.9956,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "Diagnostic Results & Labs: None mentioned.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.4795,
+          "neutral": 0.2825,
+          "contradiction": 0.238
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": ". My nose has been runny with clear mucus. Doctor: Has the patient had any recent vaccinations, and if so, which ones? Patient: I don't know about any vaccinations. I don't think we've had any recent ones. Doctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms? Patient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been mostly irritable and having trouble sleeping, but I haven't had any of those other issues. Doctor: Has the patient had any recent ear infections or a history of recurrent otitis media? Patient: No, I don't think he's had any recent ear infections or a history of recurrent ear infections. He's been pulling on his ears, but I don't know if that means he has an infection right now. Doctor: Has the patient experienced any ear pain or changes in hearing during this illness? Patient: No, I don't think he's had any ear pain or changes in hearing during this illness. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing. Doctor: Has the patient had any recent ear infections or a history of recurrent ear infections? Patient: No, I don't think he's had any recent ear infections or a history of recurrent ear infections. He's been pulling on his ears, but I don't know if that means he has an infection right now. Doctor: Has the patient had any changes in behavior, such as irritability, difficulty concentrating, or decreased interaction with others during this illness? Patient: Yes, he has been more irritable than usual and seems to have trouble sleeping. He’s not his normal self, but I haven’t noticed any changes in how he interacts with others or his ability to concentrate. Doctor: Has the patient had any recent changes in hearing or ear pain that could suggest an ear infection? Patient: No, I don't think",
+        "atomic_decomposition": {
+          "original": "Diagnostic Results & Labs: None mentioned.",
+          "retained": [
+            {
+              "atom": "Diagnostic Results are not mentioned.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her. Doctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister? Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations. Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears? Patient: My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus. Doctor: Has the patient had any recent vaccinations, and if so, which ones? Patient: I don't know about any vaccinations. I don't think we've had any recent ones. Doctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms? Patient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been",
+              "entailment": 0.998,
+              "depth": 1
+            },
+            {
+              "atom": "Labs are not mentioned.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her. Doctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister? Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations. Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears? Patient: My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus. Doctor: Has the patient had any recent vaccinations, and if so, which ones? Patient: I don't know about any vaccinations. I don't think we've had any recent ones. Doctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms? Patient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been",
+              "entailment": 0.9785,
+              "depth": 1
+            },
+            {
+              "atom": "The statement does not contain any specific findings or information.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her. Doctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister? Patient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations. Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears? Patient: My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus. Doctor: Has the patient had any recent vaccinations, and if so, which ones? Patient: I don't know about any vaccinations. I don't think we've had any recent ones. Doctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms? Patient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been",
+              "entailment": 0.8818,
+              "depth": 2
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "Please provide the statement you'd like me to decompose into atomic facts. I'll follow the rules and output the resulting atomic facts.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4961,
+              "depth": 2
+            },
+            {
+              "atom": "Statement: Note that the statement is very concise and does not contain any specific findings or information, so the resulting atomic facts are also quite simple.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4187,
+              "depth": 2
+            },
+            {
+              "atom": "Note is made.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4695,
+              "depth": 2
+            },
+            {
+              "atom": "The statement is very concise.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.3606,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      }
+    ]
+  },
+  "stage2_stats": {
+    "decision_counts": {
+      "uncertain": 5
+    },
+    "num_claims": 5,
+    "num_kept": 5,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_so": {
+    "subjective": "Also, have you had any recent vaccinations or exposure to sick individuals besides your sister?\nThe patient has a runny nose.\nThe patient has a cough.\nThe patient has a low-grade fever.\nThe patient is pulling on their ears.\nThe patient is rubbing their nose.\nNote that I've replaced the pronoun \"their\" with the subject \"the patient\" to make each fact self-contained.\nSymptoms started around supper time last night.\nThe duration of symptoms is 2 days.\nThe patient has a fever of 100.3°F (rectal).\nThe patient initially had some appetite.\nThe patient's appetite decreased later.\nThe patient had trouble sleeping.\nThe patient experienced irritability.\nNote that I've replaced pronouns with the subject (\"the patient\") and split each clause into its own fact, as per the rules.",
+    "objective": "The patient's ears looked okay.\nThe patient's breathing was well.\nNo other issues were present during the physical examination.\nNote that I've replaced the pronoun \"the exam\" with the subject \"physical examination\" to make each fact self-contained.\nThe patient's temperature is 100.3°F (rectal).\nThe patient's heart rate is not mentioned.\nThe patient's respiratory rate is not mentioned.\nThe patient's oxygen saturation is not mentioned.\nNote that I've followed the rules by splitting each list item into its own fact, replacing pronouns with the subject (\"The patient\"), and not adding or inferring any information that's not present in the original statement.\nDiagnostic Results are not mentioned.\nLabs are not mentioned.\nThe statement does not contain any specific findings or information."
+  },
+  "stage3_key_sentences": [
+    "Also, have you had any recent vaccinations or exposure to sick individuals besides your sister?",
+    "Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears?"
+  ],
+  "stage3_summary_key_phrases": [
+    "pronoun subject patient",
+    "patient split clause",
+    "contained patient temperature",
+    "patient respiratory",
+    "patient runny nose",
+    "present physical examination",
+    "patient trouble sleeping",
+    "fact replacing pronouns",
+    "statement diagnostic results",
+    "symptoms started supper"
+  ],
+  "stage3_coverage_scores": [
+    {
+      "sentence": "Also, have you had any recent vaccinations or exposure to sick individuals besides your sister?",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "Also, have you had any recent vaccinations or exposure to sick individuals besides your sister?",
+      "score": 0.2683,
+      "is_missing": true,
+      "action": "Added: Missing clinical dialogue detail (coverage < 0.40); inserted via GPT-2 fluency optimization."
+    },
+    {
+      "sentence": "Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears?",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "Doctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears?",
+      "score": 0.6038,
+      "is_missing": false,
+      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "Also, have you had any recent vaccinations or exposure to sick individuals besides your sister?",
+      "statement": "Also, have you had any recent vaccinations or exposure to sick individuals besides your sister?",
+      "coverage": 0.2683,
+      "status": "added",
+      "reason": "coverage <= cov_min (uMedSum adds the dialogue sentence verbatim)",
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 15.48
+      }
+    }
+  ],
+  "stage3_added": [
+    {
+      "statement": "Also, have you had any recent vaccinations or exposure to sick individuals besides your sister?",
+      "evidence": "Also, have you had any recent vaccinations or exposure to sick individuals besides your sister?",
+      "section": "subjective",
+      "candidate": "Also, have you had any recent vaccinations or exposure to sick individuals besides your sister?"
+    }
+  ],
+  "stage3_stats": {
+    "num_key_sentences": 2,
+    "num_flagged": 1,
+    "num_added": 1
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "section": "objective",
+        "claim": "Please provide the statement you'd like me to decompose into atomic facts. I'll follow the rules and output the resulting atomic facts.",
+        "entailment": 0.4961,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Diagnostic Results & Labs: None mentioned."
+      },
+      {
+        "section": "objective",
+        "claim": "Statement: Note that the statement is very concise and does not contain any specific findings or information, so the resulting atomic facts are also quite simple.",
+        "entailment": 0.4187,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Diagnostic Results & Labs: None mentioned."
+      },
+      {
+        "section": "objective",
+        "claim": "Note is made.",
+        "entailment": 0.4695,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Diagnostic Results & Labs: None mentioned."
+      },
+      {
+        "section": "objective",
+        "claim": "The statement is very concise.",
+        "entailment": 0.3606,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Diagnostic Results & Labs: None mentioned."
+      }
+    ]
+  },
+  "final_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** Based on the patient's symptoms and physical examination findings, it is likely that the child has a viral upper respiratory tract infection.\n* **Treatment Plan, Medications, and Follow-up:** The patient will be treated with antiviral medication and supportive care. Follow-up instructions will be provided to monitor the patient's condition and adjust treatment as necessary.\n\nNote: The doctor's assessment and plan are not explicitly stated in the dialogue, so I have made an educated inference based on the patient's symptoms and physical examination findings."
+  },
+  "ap_unchanged": true,
+  "thresholds": {
+    "Te": 0.9,
+    "Tc": 0.8,
+    "Ta": 0.5,
+    "cov_min": 0.4,
+    "top_m": 2,
+    "fix_header_bug": true
+  },
+  "models": {
+    "llm": "llama3:8b-instruct-q8_0",
+    "nli": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+    "embedder": "all-MiniLM-L6-v2",
+    "ppl": "gpt2"
+  },
+  "status": "success",
+  "seconds": 14.0,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her.\nDoctor: Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister?\nPatient: I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations.\nDoctor: Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears?\nPatient: My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus.\nDoctor: Has the patient had any recent vaccinations, and if so, which ones?\nPatient: I don't know about any vaccinations. I don't think we've had any recent ones.\nDoctor: Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms?\nPatient: No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been mostly irritable and having trouble sleeping, but I haven't had any of those other issues.\nDoctor: Has the patient had any recent ear infections or a history of recurrent otitis media?\nPatient: No, I don't think he's had any recent ear infections or a history of recurrent ear infections. He's been pulling on his ears, but I don't know if that means he has an infection right now.\nDoctor: Has the patient experienced any ear pain or changes in hearing during this illness?\nPatient: No, I don't think he's had any ear pain or changes in hearing during this illness. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing.\nDoctor: Has the patient had any recent ear infections or a history of recurrent ear infections?\nPatient: No, I don't think he's had any recent ear infections or a history of recurrent ear infections. He's been pulling on his ears, but I don't know if that means he has an infection right now.\nDoctor: Has the patient had any changes in behavior, such as irritability, difficulty concentrating, or decreased interaction with others during this illness?\nPatient: Yes, he has been more irritable than usual and seems to have trouble sleeping. He’s not his normal self, but I haven’t noticed any changes in how he interacts with others or his ability to concentrate.\nDoctor: Has the patient had any recent changes in hearing or ear pain that could suggest an ear infection?\nPatient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing.\nDoctor: Has the patient had any recent changes in hearing or ear pain that would suggest an ear infection?\nPatient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing.\nDoctor: Could you please provide details about the child's physical examination findings, including vital signs such as temperature, heart rate, respiratory rate, and oxygen saturation, as well as any findings from a head-to-toe examination?\nPatient: I don't have the exact numbers for his vital signs, but his temperature was 100.3 when I checked it rectally. The doctor examined him and said his ears looked okay, and he was breathing well. He didn't seem to have any other issues during the exam.\nDoctor: Has the child had any recent changes in hearing or ear pain that would suggest an ear infection?\nPatient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing.\nDoctor: Has the child had any recent changes in hearing or ear pain that would suggest an ear infection?\nPatient: No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing.\nDoctor: Has the child experienced any difficulty breathing, such as rapid breathing, wheezing, or nasal congestion that makes it hard for him to breathe?\nPatient: Yes, he has had nasal congestion, and it's been making it a little harder for him to breathe through his nose, but he's been able to breathe okay overall. He hasn't had any wheezing or rapid breathing that I noticed.",
+  "reference_so": {
+    "subjective": "Basic information: Patient name: Randy Gutierrez; Age: 3 years old; Gender: Male; Chief complaint: Feeling sick for a couple of days with runny nose, cough, low-grade fever, pulling on ears, and rubbing nose; Possible source of illness: Older sister and nephew.\n\nHistory of present illness: Onset: Around supper time last night; Symptoms: Runny nose, cough, low-grade fever, pulling on ears, and rubbing nose; Course: Ongoing; Prior diagnosis and treatment: Not specified; Response: Not specified. No prior ear infections or history of recurrent ear infections. Behavior: More irritable than usual and trouble sleeping. Not his normal self, but no changes in interaction or concentration noted. No recent changes in hearing or ear pain reported. Nasal congestion is present and has been making it a little harder for him to breathe through his nose, but he has been able to breathe okay overall. No wheezing or rapid breathing noted.\n\nPast history: No prior ear infections or history of recurrent ear infections.",
+    "objective": "Physical examination: Temperature: 100.3°F; Nasal discharge: Clear mucus; Appetite: Reduced; Sleep patterns: Troubled sleep; Behavior: Irritable and not his normal self.\n\nInvestigations: Temperature: 100.3°F; Nasal discharge: Clear mucus; Appetite: Reduced; Sleep patterns: Troubled sleep; Behavior: Irritable and not his normal self."
+  }
+}

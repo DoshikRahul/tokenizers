@@ -1,0 +1,316 @@
+{
+  "case_id": "D2N003",
+  "split": "test",
+  "is_icl_demo": false,
+  "stage1_elements": "Here are the extracted clinical elements in concise bullet points:\n\n**Subjective Elements:**\n\n* Chief complaint: Back pain, blood in urine, and dizziness\n* History of present illness:\n\t+ Back pain started on the right side, shifted to the left, and is now constant\n\t+ Pain is severe (8-9/10), worsened by exertion, and not relieved by Tylenol\n\t+ Blood in urine is faint pinkish tint, not associated with burning or urgency\n\t+ Dizziness when exerting oneself\n* Relevant medical history:\n\t+ Kidney stones 2 years ago\n\t+ Migraines (taking Imitrex)\n\t+ Gastroesophageal reflux disease (taking Protonix)\n* Medications:\n\t+ Imitrex for migraines\n\t+ Protonix 40mg/day for gastroesophageal reflux disease\n\n**Objective Elements:**\n\n* Vital signs: Not mentioned\n* Physical examination findings: Not mentioned\n* Diagnostic lab/imaging results: Not mentioned\n\n**Assessment Elements:**\n\n* Diagnoses: Not explicitly stated, but likely includes urinary tract infection, kidney stone, or other urological issues\n* Clinical impressions: Not explicitly stated, but likely includes suspicion of urinary tract infection or other urological issues\n\n**Plan Elements:**\n\n* Medical treatment plan: Not explicitly stated, but likely includes further evaluation and testing\n* Prescriptions/dosages: Not mentioned\n* Tests ordered: Not mentioned\n* Follow-up instructions: Not mentioned",
+  "stage1_raw_note": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:\n\n**SUBJECTIVE:**\n\n* **Chief Complaint:** Back pain, blood in urine, and dizziness.\n* **History of Present Illness (HPI):** The patient, a 61-year-old male, presents with a 4-day history of worsening back pain that started on the right side and has shifted to the left. The pain is severe (8-9/10), worsened by exertion, and not relieved by Tylenol. He also reports blood in his urine, which appears as a faint pinkish tint, and dizziness when exerting himself.\n\n**OBJECTIVE:**\n\n* **Physical Examination & Vitals:** Not mentioned.\n* **Diagnostic Results & Labs:** Not mentioned.\n\n**ASSESSMENT AND PLAN:**\n\n* **Diagnoses and Clinical Reasoning:** Based on the patient's symptoms and medical history, it is likely that he is experiencing a urinary tract infection, kidney stone, or other urological issue. Further evaluation and testing are needed to determine the underlying cause of his symptoms.\n* **Treatment Plan, Medications, and Follow-up:** The patient will undergo further evaluation and testing to determine the underlying cause of his symptoms. He will be prescribed antibiotics if a urinary tract infection is suspected. He will also be referred to a urologist for further evaluation and treatment. Follow-up appointments will be scheduled to monitor his progress and adjust his treatment plan as needed.\n\nPlease note that this is a hypothetical note, and actual patient information should be kept confidential.",
+  "stage1_parse": {
+    "parse_mode": "main_headings",
+    "parse_ok": true,
+    "dropped_preamble": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:"
+  },
+  "stage1_so": {
+    "subjective": "* **Chief Complaint:** Back pain, blood in urine, and dizziness.\n* **History of Present Illness (HPI):** The patient, a 61-year-old male, presents with a 4-day history of worsening back pain that started on the right side and has shifted to the left. The pain is severe (8-9/10), worsened by exertion, and not relieved by Tylenol. He also reports blood in his urine, which appears as a faint pinkish tint, and dizziness when exerting himself.",
+    "objective": "* **Physical Examination & Vitals:** Not mentioned.\n* **Diagnostic Results & Labs:** Not mentioned."
+  },
+  "stage1_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** Based on the patient's symptoms and medical history, it is likely that he is experiencing a urinary tract infection, kidney stone, or other urological issue. Further evaluation and testing are needed to determine the underlying cause of his symptoms.\n* **Treatment Plan, Medications, and Follow-up:** The patient will undergo further evaluation and testing to determine the underlying cause of his symptoms. He will be prescribed antibiotics if a urinary tract infection is suspected. He will also be referred to a urologist for further evaluation and treatment. Follow-up appointments will be scheduled to monitor his progress and adjust his treatment plan as needed.\n\nPlease note that this is a hypothetical note, and actual patient information should be kept confidential."
+  },
+  "stage2_so": {
+    "subjective": "Chief Complaint: Back pain, blood in urine, and dizziness.\nHistory of Present Illness (HPI): The patient, a 61-year-old male, presents with a 4-day history of worsening back pain that started on the right side and has shifted to the left.\nThe pain is severe (8-9/10), worsened by exertion, and not relieved by Tylenol.\nHe also reports blood in his urine, which appears as a faint pinkish tint, and dizziness when exerting himself.",
+    "objective": "Statement: Based on the rules provided, I will decompose the statement into independent, self-contained ATOMIC FACTS.\nThe rules are provided.\nThe statement is decomposed based on the rules.\nStatement: Physical Examination & Vitals: Not mentioned.\nPhysical Examination is not mentioned.\nVitals are not mentioned.\nSince the statement is \"Diagnostic Results & Labs: Not mentioned.\", I will decompose it into the following atomic facts:\nDiagnostic results are not mentioned.\nLabs are not mentioned.\nThese two facts are independent, self-contained, and can stand alone as true or false."
+  },
+  "stage2_audit": {
+    "subjective": [
+      {
+        "unit": "Chief Complaint: Back pain, blood in urine, and dizziness.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.998,
+          "neutral": 0.0013,
+          "contradiction": 0.0008
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 61 years old, male, and I'm here because I've been having back pain that's been getting worse over the last few days. I'm also noticing some blood in my urine and feeling a bit dizzy when I exert myself. Doctor: Can you describe the location of your back pain, whether it radiates to other areas, its severity on a scale of 1 to 10, how long it has been present, and what makes it better or worse? Patient: The pain started on the right side of my back, but it's been shifting and now it's more on the left. It's been going on for about four days. At first, it came and went, but now it's been constant and pretty bad—maybe around an 8 or 9 out of 10. It gets worse when I exert myself, like climbing stairs or running to catch the bus. Tylenol doesn't seem to help much. Doctor: Could you provide details about the hematuria—such as whether it is gross or microscopic, the frequency, and if it is associated with any other symptoms like dysuria or urgency? Additionally, have you had any recent urinary tract infections, kidney stones, or other urological issues? Patient: The blood in my urine is kind of hard to detect, but it does look a little off-color. I haven't noticed any burning or urgency, just that it looks different. I had kidney stones about two years ago, but nothing recently. Doctor: Could you describe any other symptoms associated with the back pain, such as radiation to other areas or any neurological symptoms like numbness or weakness? Patient: I don't have any numbness or weakness, but I do feel some body aches because I'm favoring my back when I walk. The pain sometimes feels like it's in my abdomen too, especially when I'm exerting myself. It's been pretty tough, but I'm trying to",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "History of Present Illness (HPI): The patient, a 61-year-old male, presents with a 4-day history of worsening back pain that started on the right side and has shifted to the left.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9976,
+          "neutral": 0.0018,
+          "contradiction": 0.0006
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 61 years old, male, and I'm here because I've been having back pain that's been getting worse over the last few days. I'm also noticing some blood in my urine and feeling a bit dizzy when I exert myself. Doctor: Can you describe the location of your back pain, whether it radiates to other areas, its severity on a scale of 1 to 10, how long it has been present, and what makes it better or worse? Patient: The pain started on the right side of my back, but it's been shifting and now it's more on the left. It's been going on for about four days. At first, it came and went, but now it's been constant and pretty bad—maybe around an 8 or 9 out of 10. It gets worse when I exert myself, like climbing stairs or running to catch the bus. Tylenol doesn't seem to help much. Doctor: Could you provide details about the hematuria—such as whether it is gross or microscopic, the frequency, and if it is associated with any other symptoms like dysuria or urgency? Additionally, have you had any recent urinary tract infections, kidney stones, or other urological issues? Patient: The blood in my urine is kind of hard to detect, but it does look a little off-color. I haven't noticed any burning or urgency, just that it looks different. I had kidney stones about two years ago, but nothing recently. Doctor: Could you describe any other symptoms associated with the back pain, such as radiation to other areas or any neurological symptoms like numbness or weakness? Patient: I don't have any numbness or weakness, but I do feel some body aches because I'm favoring my back when I walk. The pain sometimes feels like it's in my abdomen too, especially when I'm exerting myself. It's been pretty tough, but I'm trying to",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "The pain is severe (8-9/10), worsened by exertion, and not relieved by Tylenol.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9863,
+          "neutral": 0.0115,
+          "contradiction": 0.0019
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 61 years old, male, and I'm here because I've been having back pain that's been getting worse over the last few days. I'm also noticing some blood in my urine and feeling a bit dizzy when I exert myself. Doctor: Can you describe the location of your back pain, whether it radiates to other areas, its severity on a scale of 1 to 10, how long it has been present, and what makes it better or worse? Patient: The pain started on the right side of my back, but it's been shifting and now it's more on the left. It's been going on for about four days. At first, it came and went, but now it's been constant and pretty bad—maybe around an 8 or 9 out of 10. It gets worse when I exert myself, like climbing stairs or running to catch the bus. Tylenol doesn't seem to help much. Doctor: Could you provide details about the hematuria—such as whether it is gross or microscopic, the frequency, and if it is associated with any other symptoms like dysuria or urgency? Additionally, have you had any recent urinary tract infections, kidney stones, or other urological issues? Patient: The blood in my urine is kind of hard to detect, but it does look a little off-color. I haven't noticed any burning or urgency, just that it looks different. I had kidney stones about two years ago, but nothing recently. Doctor: Could you describe any other symptoms associated with the back pain, such as radiation to other areas or any neurological symptoms like numbness or weakness? Patient: I don't have any numbness or weakness, but I do feel some body aches because I'm favoring my back when I walk. The pain sometimes feels like it's in my abdomen too, especially when I'm exerting myself. It's been pretty tough, but I'm trying to",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "He also reports blood in his urine, which appears as a faint pinkish tint, and dizziness when exerting himself.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9805,
+          "neutral": 0.0176,
+          "contradiction": 0.0021
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 61 years old, male, and I'm here because I've been having back pain that's been getting worse over the last few days. I'm also noticing some blood in my urine and feeling a bit dizzy when I exert myself. Doctor: Can you describe the location of your back pain, whether it radiates to other areas, its severity on a scale of 1 to 10, how long it has been present, and what makes it better or worse? Patient: The pain started on the right side of my back, but it's been shifting and now it's more on the left. It's been going on for about four days. At first, it came and went, but now it's been constant and pretty bad—maybe around an 8 or 9 out of 10. It gets worse when I exert myself, like climbing stairs or running to catch the bus. Tylenol doesn't seem to help much. Doctor: Could you provide details about the hematuria—such as whether it is gross or microscopic, the frequency, and if it is associated with any other symptoms like dysuria or urgency? Additionally, have you had any recent urinary tract infections, kidney stones, or other urological issues? Patient: The blood in my urine is kind of hard to detect, but it does look a little off-color. I haven't noticed any burning or urgency, just that it looks different. I had kidney stones about two years ago, but nothing recently. Doctor: Could you describe any other symptoms associated with the back pain, such as radiation to other areas or any neurological symptoms like numbness or weakness? Patient: I don't have any numbness or weakness, but I do feel some body aches because I'm favoring my back when I walk. The pain sometimes feels like it's in my abdomen too, especially when I'm exerting myself. It's been pretty tough, but I'm trying to",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      }
+    ],
+    "objective": [
+      {
+        "unit": "Physical Examination & Vitals: Not mentioned.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.4495,
+          "neutral": 0.087,
+          "contradiction": 0.4634
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "I haven't had any fever, chills, or unexplained weight loss in the past four days. And I don't remember any recent trauma or injury to my back or abdomen. Doctor: Could you describe the exact location of the back pain and whether it radiates to any other part of your body? Also, have you noticed any changes in your urine output or any blood clots in your urine? Patient: The back pain started on the right side but has shifted to the left, and it sometimes feels like it's in my abdomen, especially when I'm exerting myself. I haven't noticed any blood clots in my urine, but the stream seems weaker, and I've been urinating less frequently than usual. Doctor: Has the patient experienced any recent changes in bowel habits or noticed any swelling in the lower extremities? Patient: No, I haven't noticed any changes in my bowel habits or any swelling in my lower extremities. Everything else seems pretty normal. Doctor: Has the patient undergone any urological evaluations or imaging related to his urinary symptoms, such as an ultrasound of the kidneys or bladder, or a cystoscopy? Patient: No, I haven't had any urological evaluations or imaging related to my urinary symptoms. I haven't been to the doctor for anything related to my urine other than this visit. Doctor: Has the patient experienced any fever, chills, or flank pain in addition to the back pain? Also, has he noticed any changes in his urine output or color other than the faint pinkish tint? Patient: No, I haven't had any fever or chills, and the flank pain hasn't been something I've noticed beyond the back pain itself. The urine color has been a faint pinkish tint, and I haven't seen any other changes in the color or output besides what I already mentioned. Doctor: Could you please describe any changes in your urinary output or any difficulty in passing urine, such as a weaker stream or feeling of incomplete emptying? Patient: The stream seems weaker, and I've been urinating less frequently than usual. I",
+        "atomic_decomposition": {
+          "original": "Physical Examination & Vitals: Not mentioned.",
+          "retained": [
+            {
+              "atom": "Statement: Based on the rules provided, I will decompose the statement into independent, self-contained ATOMIC FACTS.",
+              "citation": "I haven't had any fever, chills, or unexplained weight loss in the past four days. And I don't remember any recent trauma or injury to my back or abdomen. Doctor: Could you describe the exact location of the back pain and whether it radiates to any other part of your body? Also, have you noticed any changes in your urine output or any blood clots in your urine? Patient: The back pain started on the right side but has shifted to the left, and it sometimes feels like it's in my abdomen, especially when I'm exerting myself. I haven't noticed any blood clots in my urine, but the stream seems weaker, and I've been urinating less frequently than usual. Doctor: Has the patient experienced any recent changes in bowel habits or noticed any swelling in the lower extremities? Patient: No, I haven't noticed any changes in my bowel habits or any swelling in my lower extremities. Everything else seems pretty normal. Doctor: Has the patient undergone any urological evaluations or imaging related to his urinary symptoms, such as an ultrasound of the kidneys or bladder, or a cystoscopy? Patient: No, I haven't had any urological evaluations or imaging related to my urinary symptoms. I haven't been to the doctor for anything related to my urine other than this visit. Doctor: Has the patient experienced any fever, chills, or flank pain in addition to the back pain? Also, has he noticed any changes in his urine output or color other than the faint pinkish tint? Patient: No, I haven't had any fever or chills, and the flank pain hasn't been something I've noticed beyond the back pain itself. The urine color has been a faint pinkish tint, and I haven't seen any other changes in the color or output besides what I already mentioned. Doctor: Could you please describe any changes in your urinary output or any difficulty in passing urine, such as a weaker stream or feeling of incomplete emptying? Patient: The stream seems weaker, and I've been urinating less frequently than usual. I",
+              "entailment": 0.5347,
+              "depth": 2
+            },
+            {
+              "atom": "The rules are provided.",
+              "citation": "I haven't had any fever, chills, or unexplained weight loss in the past four days. And I don't remember any recent trauma or injury to my back or abdomen. Doctor: Could you describe the exact location of the back pain and whether it radiates to any other part of your body? Also, have you noticed any changes in your urine output or any blood clots in your urine? Patient: The back pain started on the right side but has shifted to the left, and it sometimes feels like it's in my abdomen, especially when I'm exerting myself. I haven't noticed any blood clots in my urine, but the stream seems weaker, and I've been urinating less frequently than usual. Doctor: Has the patient experienced any recent changes in bowel habits or noticed any swelling in the lower extremities? Patient: No, I haven't noticed any changes in my bowel habits or any swelling in my lower extremities. Everything else seems pretty normal. Doctor: Has the patient undergone any urological evaluations or imaging related to his urinary symptoms, such as an ultrasound of the kidneys or bladder, or a cystoscopy? Patient: No, I haven't had any urological evaluations or imaging related to my urinary symptoms. I haven't been to the doctor for anything related to my urine other than this visit. Doctor: Has the patient experienced any fever, chills, or flank pain in addition to the back pain? Also, has he noticed any changes in his urine output or color other than the faint pinkish tint? Patient: No, I haven't had any fever or chills, and the flank pain hasn't been something I've noticed beyond the back pain itself. The urine color has been a faint pinkish tint, and I haven't seen any other changes in the color or output besides what I already mentioned. Doctor: Could you please describe any changes in your urinary output or any difficulty in passing urine, such as a weaker stream or feeling of incomplete emptying? Patient: The stream seems weaker, and I've been urinating less frequently than usual. I",
+              "entailment": 0.7026,
+              "depth": 2
+            },
+            {
+              "atom": "The statement is decomposed based on the rules.",
+              "citation": "I haven't had any fever, chills, or unexplained weight loss in the past four days. And I don't remember any recent trauma or injury to my back or abdomen. Doctor: Could you describe the exact location of the back pain and whether it radiates to any other part of your body? Also, have you noticed any changes in your urine output or any blood clots in your urine? Patient: The back pain started on the right side but has shifted to the left, and it sometimes feels like it's in my abdomen, especially when I'm exerting myself. I haven't noticed any blood clots in my urine, but the stream seems weaker, and I've been urinating less frequently than usual. Doctor: Has the patient experienced any recent changes in bowel habits or noticed any swelling in the lower extremities? Patient: No, I haven't noticed any changes in my bowel habits or any swelling in my lower extremities. Everything else seems pretty normal. Doctor: Has the patient undergone any urological evaluations or imaging related to his urinary symptoms, such as an ultrasound of the kidneys or bladder, or a cystoscopy? Patient: No, I haven't had any urological evaluations or imaging related to my urinary symptoms. I haven't been to the doctor for anything related to my urine other than this visit. Doctor: Has the patient experienced any fever, chills, or flank pain in addition to the back pain? Also, has he noticed any changes in his urine output or color other than the faint pinkish tint? Patient: No, I haven't had any fever or chills, and the flank pain hasn't been something I've noticed beyond the back pain itself. The urine color has been a faint pinkish tint, and I haven't seen any other changes in the color or output besides what I already mentioned. Doctor: Could you please describe any changes in your urinary output or any difficulty in passing urine, such as a weaker stream or feeling of incomplete emptying? Patient: The stream seems weaker, and I've been urinating less frequently than usual. I",
+              "entailment": 0.7798,
+              "depth": 2
+            },
+            {
+              "atom": "Statement: Physical Examination & Vitals: Not mentioned.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 61 years old, male, and I'm here because I've been having back pain that's been getting worse over the last few days. I'm also noticing some blood in my urine and feeling a bit dizzy when I exert myself. Doctor: Can you describe the location of your back pain, whether it radiates to other areas, its severity on a scale of 1 to 10, how long it has been present, and what makes it better or worse? Patient: The pain started on the right side of my back, but it's been shifting and now it's more on the left. It's been going on for about four days. At first, it came and went, but now it's been constant and pretty bad—maybe around an 8 or 9 out of 10. It gets worse when I exert myself, like climbing stairs or running to catch the bus. Tylenol doesn't seem to help much. Doctor: Could you provide details about the hematuria—such as whether it is gross or microscopic, the frequency, and if it is associated with any other symptoms like dysuria or urgency? Additionally, have you had any recent urinary tract infections, kidney stones, or other urological issues? Patient: The blood in my urine is kind of hard to detect, but it does look a little off-color. I haven't noticed any burning or urgency, just that it looks different. I had kidney stones about two years ago, but nothing recently. Doctor: Could you describe any other symptoms associated with the back pain, such as radiation to other areas or any neurological symptoms like numbness or weakness? Patient: I don't have any numbness or weakness, but I do feel some body aches because I'm favoring my back when I walk. The pain sometimes feels like it's in my abdomen too, especially when I'm exerting myself. It's been pretty tough, but I'm trying to",
+              "entailment": 0.7764,
+              "depth": 1
+            },
+            {
+              "atom": "Physical Examination is not mentioned.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 61 years old, male, and I'm here because I've been having back pain that's been getting worse over the last few days. I'm also noticing some blood in my urine and feeling a bit dizzy when I exert myself. Doctor: Can you describe the location of your back pain, whether it radiates to other areas, its severity on a scale of 1 to 10, how long it has been present, and what makes it better or worse? Patient: The pain started on the right side of my back, but it's been shifting and now it's more on the left. It's been going on for about four days. At first, it came and went, but now it's been constant and pretty bad—maybe around an 8 or 9 out of 10. It gets worse when I exert myself, like climbing stairs or running to catch the bus. Tylenol doesn't seem to help much. Doctor: Could you provide details about the hematuria—such as whether it is gross or microscopic, the frequency, and if it is associated with any other symptoms like dysuria or urgency? Additionally, have you had any recent urinary tract infections, kidney stones, or other urological issues? Patient: The blood in my urine is kind of hard to detect, but it does look a little off-color. I haven't noticed any burning or urgency, just that it looks different. I had kidney stones about two years ago, but nothing recently. Doctor: Could you describe any other symptoms associated with the back pain, such as radiation to other areas or any neurological symptoms like numbness or weakness? Patient: I don't have any numbness or weakness, but I do feel some body aches because I'm favoring my back when I walk. The pain sometimes feels like it's in my abdomen too, especially when I'm exerting myself. It's been pretty tough, but I'm trying to",
+              "entailment": 0.998,
+              "depth": 1
+            },
+            {
+              "atom": "Vitals are not mentioned.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 61 years old, male, and I'm here because I've been having back pain that's been getting worse over the last few days. I'm also noticing some blood in my urine and feeling a bit dizzy when I exert myself. Doctor: Can you describe the location of your back pain, whether it radiates to other areas, its severity on a scale of 1 to 10, how long it has been present, and what makes it better or worse? Patient: The pain started on the right side of my back, but it's been shifting and now it's more on the left. It's been going on for about four days. At first, it came and went, but now it's been constant and pretty bad—maybe around an 8 or 9 out of 10. It gets worse when I exert myself, like climbing stairs or running to catch the bus. Tylenol doesn't seem to help much. Doctor: Could you provide details about the hematuria—such as whether it is gross or microscopic, the frequency, and if it is associated with any other symptoms like dysuria or urgency? Additionally, have you had any recent urinary tract infections, kidney stones, or other urological issues? Patient: The blood in my urine is kind of hard to detect, but it does look a little off-color. I haven't noticed any burning or urgency, just that it looks different. I had kidney stones about two years ago, but nothing recently. Doctor: Could you describe any other symptoms associated with the back pain, such as radiation to other areas or any neurological symptoms like numbness or weakness? Patient: I don't have any numbness or weakness, but I do feel some body aches because I'm favoring my back when I walk. The pain sometimes feels like it's in my abdomen too, especially when I'm exerting myself. It's been pretty tough, but I'm trying to",
+              "entailment": 0.9116,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "I will decompose the statement.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4368,
+              "depth": 2
+            },
+            {
+              "atom": "I will decompose the statement into independent, self-contained ATOMIC FACTS.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.436,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Diagnostic Results & Labs: Not mentioned.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.54,
+          "neutral": 0.2349,
+          "contradiction": 0.2252
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "I haven't had any fever, chills, or unexplained weight loss in the past four days. And I don't remember any recent trauma or injury to my back or abdomen. Doctor: Could you describe the exact location of the back pain and whether it radiates to any other part of your body? Also, have you noticed any changes in your urine output or any blood clots in your urine? Patient: The back pain started on the right side but has shifted to the left, and it sometimes feels like it's in my abdomen, especially when I'm exerting myself. I haven't noticed any blood clots in my urine, but the stream seems weaker, and I've been urinating less frequently than usual. Doctor: Has the patient experienced any recent changes in bowel habits or noticed any swelling in the lower extremities? Patient: No, I haven't noticed any changes in my bowel habits or any swelling in my lower extremities. Everything else seems pretty normal. Doctor: Has the patient undergone any urological evaluations or imaging related to his urinary symptoms, such as an ultrasound of the kidneys or bladder, or a cystoscopy? Patient: No, I haven't had any urological evaluations or imaging related to my urinary symptoms. I haven't been to the doctor for anything related to my urine other than this visit. Doctor: Has the patient experienced any fever, chills, or flank pain in addition to the back pain? Also, has he noticed any changes in his urine output or color other than the faint pinkish tint? Patient: No, I haven't had any fever or chills, and the flank pain hasn't been something I've noticed beyond the back pain itself. The urine color has been a faint pinkish tint, and I haven't seen any other changes in the color or output besides what I already mentioned. Doctor: Could you please describe any changes in your urinary output or any difficulty in passing urine, such as a weaker stream or feeling of incomplete emptying? Patient: The stream seems weaker, and I've been urinating less frequently than usual. I",
+        "atomic_decomposition": {
+          "original": "Diagnostic Results & Labs: Not mentioned.",
+          "retained": [
+            {
+              "atom": "Since the statement is \"Diagnostic Results & Labs: Not mentioned.\", I will decompose it into the following atomic facts:",
+              "citation": "I haven't had any fever, chills, or unexplained weight loss in the past four days. And I don't remember any recent trauma or injury to my back or abdomen. Doctor: Could you describe the exact location of the back pain and whether it radiates to any other part of your body? Also, have you noticed any changes in your urine output or any blood clots in your urine? Patient: The back pain started on the right side but has shifted to the left, and it sometimes feels like it's in my abdomen, especially when I'm exerting myself. I haven't noticed any blood clots in my urine, but the stream seems weaker, and I've been urinating less frequently than usual. Doctor: Has the patient experienced any recent changes in bowel habits or noticed any swelling in the lower extremities? Patient: No, I haven't noticed any changes in my bowel habits or any swelling in my lower extremities. Everything else seems pretty normal. Doctor: Has the patient undergone any urological evaluations or imaging related to his urinary symptoms, such as an ultrasound of the kidneys or bladder, or a cystoscopy? Patient: No, I haven't had any urological evaluations or imaging related to my urinary symptoms. I haven't been to the doctor for anything related to my urine other than this visit. Doctor: Has the patient experienced any fever, chills, or flank pain in addition to the back pain? Also, has he noticed any changes in his urine output or color other than the faint pinkish tint? Patient: No, I haven't had any fever or chills, and the flank pain hasn't been something I've noticed beyond the back pain itself. The urine color has been a faint pinkish tint, and I haven't seen any other changes in the color or output besides what I already mentioned. Doctor: Could you please describe any changes in your urinary output or any difficulty in passing urine, such as a weaker stream or feeling of incomplete emptying? Patient: The stream seems weaker, and I've been urinating less frequently than usual. I",
+              "entailment": 0.8135,
+              "depth": 1
+            },
+            {
+              "atom": "Diagnostic results are not mentioned.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 61 years old, male, and I'm here because I've been having back pain that's been getting worse over the last few days. I'm also noticing some blood in my urine and feeling a bit dizzy when I exert myself. Doctor: Can you describe the location of your back pain, whether it radiates to other areas, its severity on a scale of 1 to 10, how long it has been present, and what makes it better or worse? Patient: The pain started on the right side of my back, but it's been shifting and now it's more on the left. It's been going on for about four days. At first, it came and went, but now it's been constant and pretty bad—maybe around an 8 or 9 out of 10. It gets worse when I exert myself, like climbing stairs or running to catch the bus. Tylenol doesn't seem to help much. Doctor: Could you provide details about the hematuria—such as whether it is gross or microscopic, the frequency, and if it is associated with any other symptoms like dysuria or urgency? Additionally, have you had any recent urinary tract infections, kidney stones, or other urological issues? Patient: The blood in my urine is kind of hard to detect, but it does look a little off-color. I haven't noticed any burning or urgency, just that it looks different. I had kidney stones about two years ago, but nothing recently. Doctor: Could you describe any other symptoms associated with the back pain, such as radiation to other areas or any neurological symptoms like numbness or weakness? Patient: I don't have any numbness or weakness, but I do feel some body aches because I'm favoring my back when I walk. The pain sometimes feels like it's in my abdomen too, especially when I'm exerting myself. It's been pretty tough, but I'm trying to",
+              "entailment": 0.9985,
+              "depth": 1
+            },
+            {
+              "atom": "Labs are not mentioned.",
+              "citation": "I haven't had any fever, chills, or unexplained weight loss in the past four days. And I don't remember any recent trauma or injury to my back or abdomen. Doctor: Could you describe the exact location of the back pain and whether it radiates to any other part of your body? Also, have you noticed any changes in your urine output or any blood clots in your urine? Patient: The back pain started on the right side but has shifted to the left, and it sometimes feels like it's in my abdomen, especially when I'm exerting myself. I haven't noticed any blood clots in my urine, but the stream seems weaker, and I've been urinating less frequently than usual. Doctor: Has the patient experienced any recent changes in bowel habits or noticed any swelling in the lower extremities? Patient: No, I haven't noticed any changes in my bowel habits or any swelling in my lower extremities. Everything else seems pretty normal. Doctor: Has the patient undergone any urological evaluations or imaging related to his urinary symptoms, such as an ultrasound of the kidneys or bladder, or a cystoscopy? Patient: No, I haven't had any urological evaluations or imaging related to my urinary symptoms. I haven't been to the doctor for anything related to my urine other than this visit. Doctor: Has the patient experienced any fever, chills, or flank pain in addition to the back pain? Also, has he noticed any changes in his urine output or color other than the faint pinkish tint? Patient: No, I haven't had any fever or chills, and the flank pain hasn't been something I've noticed beyond the back pain itself. The urine color has been a faint pinkish tint, and I haven't seen any other changes in the color or output besides what I already mentioned. Doctor: Could you please describe any changes in your urinary output or any difficulty in passing urine, such as a weaker stream or feeling of incomplete emptying? Patient: The stream seems weaker, and I've been urinating less frequently than usual. I",
+              "entailment": 0.9912,
+              "depth": 1
+            },
+            {
+              "atom": "These two facts are independent, self-contained, and can stand alone as true or false.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 61 years old, male, and I'm here because I've been having back pain that's been getting worse over the last few days. I'm also noticing some blood in my urine and feeling a bit dizzy when I exert myself. Doctor: Can you describe the location of your back pain, whether it radiates to other areas, its severity on a scale of 1 to 10, how long it has been present, and what makes it better or worse? Patient: The pain started on the right side of my back, but it's been shifting and now it's more on the left. It's been going on for about four days. At first, it came and went, but now it's been constant and pretty bad—maybe around an 8 or 9 out of 10. It gets worse when I exert myself, like climbing stairs or running to catch the bus. Tylenol doesn't seem to help much. Doctor: Could you provide details about the hematuria—such as whether it is gross or microscopic, the frequency, and if it is associated with any other symptoms like dysuria or urgency? Additionally, have you had any recent urinary tract infections, kidney stones, or other urological issues? Patient: The blood in my urine is kind of hard to detect, but it does look a little off-color. I haven't noticed any burning or urgency, just that it looks different. I had kidney stones about two years ago, but nothing recently. Doctor: Could you describe any other symptoms associated with the back pain, such as radiation to other areas or any neurological symptoms like numbness or weakness? Patient: I don't have any numbness or weakness, but I do feel some body aches because I'm favoring my back when I walk. The pain sometimes feels like it's in my abdomen too, especially when I'm exerting myself. It's been pretty tough, but I'm trying to",
+              "entailment": 0.9956,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      }
+    ]
+  },
+  "stage2_stats": {
+    "decision_counts": {
+      "faithful": 4,
+      "uncertain": 2
+    },
+    "num_claims": 6,
+    "num_kept": 6,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_so": {
+    "subjective": "Chief Complaint: Back pain, blood in urine, and dizziness.\nHistory of Present Illness (HPI): The patient, a 61-year-old male, presents with a 4-day history of worsening back pain that started on the right side and has shifted to the left.\nThe pain is severe (8-9/10), worsened by exertion, and not relieved by Tylenol.\nHe also reports blood in his urine, which appears as a faint pinkish tint, and dizziness when exerting himself.",
+    "objective": "Statement: Based on the rules provided, I will decompose the statement into independent, self-contained ATOMIC FACTS.\nThe rules are provided.\nThe statement is decomposed based on the rules.\nStatement: Physical Examination & Vitals: Not mentioned.\nPhysical Examination is not mentioned.\nVitals are not mentioned.\nSince the statement is \"Diagnostic Results & Labs: Not mentioned.\", I will decompose it into the following atomic facts:\nDiagnostic results are not mentioned.\nLabs are not mentioned.\nThese two facts are independent, self-contained, and can stand alone as true or false.\nPatient: I'm 61 years old, male, and I'm here because I've been having back pain that's been getting worse over the last few days."
+  },
+  "stage3_key_sentences": [
+    "Patient: I'm 61 years old, male, and I'm here because I've been having back pain that's been getting worse over the last few days.",
+    "Doctor: Could you provide details about the hematuria—such as whether it is gross or microscopic, the frequency, and if it is associated with any other symptoms like dysuria or urgency?"
+  ],
+  "stage3_summary_key_phrases": [
+    "statement physical examination",
+    "mentioned statement diagnostic",
+    "atomic facts diagnostic",
+    "diagnostic results",
+    "dizziness exerting statement",
+    "provided statement decomposed",
+    "present illness hpi",
+    "reports blood urine",
+    "mentioned facts independent",
+    "relieved tylenol reports"
+  ],
+  "stage3_coverage_scores": [
+    {
+      "sentence": "Patient: I'm 61 years old, male, and I'm here because I've been having back pain that's been getting worse over the last few days.",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "Patient: I'm 61 years old, male, and I'm here because I've been having back pain that's been getting worse over the last few days.",
+      "score": 0.2738,
+      "is_missing": true,
+      "action": "Added: Missing clinical dialogue detail (coverage < 0.40); inserted via GPT-2 fluency optimization."
+    },
+    {
+      "sentence": "Doctor: Could you provide details about the hematuria—such as whether it is gross or microscopic, the frequency, and if it is associated with any other symptoms like dysuria or urgency?",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "Doctor: Could you provide details about the hematuria—such as whether it is gross or microscopic, the frequency, and if it is associated with any other symptoms like dysuria or urgency?",
+      "score": 0.5522,
+      "is_missing": false,
+      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "Patient: I'm 61 years old, male, and I'm here because I've been having back pain that's been getting worse over the last few days.",
+      "statement": "Patient: I'm 61 years old, male, and I'm here because I've been having back pain that's been getting worse over the last few days.",
+      "coverage": 0.2738,
+      "status": "added",
+      "reason": "coverage <= cov_min (uMedSum adds the dialogue sentence verbatim)",
+      "insertion": {
+        "section": "objective",
+        "line_index": 14,
+        "perplexity": 23.34
+      }
+    }
+  ],
+  "stage3_added": [
+    {
+      "statement": "Patient: I'm 61 years old, male, and I'm here because I've been having back pain that's been getting worse over the last few days.",
+      "evidence": "Patient: I'm 61 years old, male, and I'm here because I've been having back pain that's been getting worse over the last few days.",
+      "section": "objective",
+      "candidate": "Patient: I'm 61 years old, male, and I'm here because I've been having back pain that's been getting worse over the last few days."
+    }
+  ],
+  "stage3_stats": {
+    "num_key_sentences": 2,
+    "num_flagged": 1,
+    "num_added": 1
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "section": "objective",
+        "claim": "I will decompose the statement.",
+        "entailment": 0.4368,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: Not mentioned."
+      },
+      {
+        "section": "objective",
+        "claim": "I will decompose the statement into independent, self-contained ATOMIC FACTS.",
+        "entailment": 0.436,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: Not mentioned."
+      }
+    ]
+  },
+  "final_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** Based on the patient's symptoms and medical history, it is likely that he is experiencing a urinary tract infection, kidney stone, or other urological issue. Further evaluation and testing are needed to determine the underlying cause of his symptoms.\n* **Treatment Plan, Medications, and Follow-up:** The patient will undergo further evaluation and testing to determine the underlying cause of his symptoms. He will be prescribed antibiotics if a urinary tract infection is suspected. He will also be referred to a urologist for further evaluation and treatment. Follow-up appointments will be scheduled to monitor his progress and adjust his treatment plan as needed.\n\nPlease note that this is a hypothetical note, and actual patient information should be kept confidential."
+  },
+  "ap_unchanged": true,
+  "thresholds": {
+    "Te": 0.9,
+    "Tc": 0.8,
+    "Ta": 0.5,
+    "cov_min": 0.4,
+    "top_m": 2,
+    "fix_header_bug": true
+  },
+  "models": {
+    "llm": "llama3:8b-instruct-q8_0",
+    "nli": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+    "embedder": "all-MiniLM-L6-v2",
+    "ppl": "gpt2"
+  },
+  "status": "success",
+  "seconds": 11.8,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 61 years old, male, and I'm here because I've been having back pain that's been getting worse over the last few days. I'm also noticing some blood in my urine and feeling a bit dizzy when I exert myself.\nDoctor: Can you describe the location of your back pain, whether it radiates to other areas, its severity on a scale of 1 to 10, how long it has been present, and what makes it better or worse?\nPatient: The pain started on the right side of my back, but it's been shifting and now it's more on the left. It's been going on for about four days. At first, it came and went, but now it's been constant and pretty bad—maybe around an 8 or 9 out of 10. It gets worse when I exert myself, like climbing stairs or running to catch the bus. Tylenol doesn't seem to help much.\nDoctor: Could you provide details about the hematuria—such as whether it is gross or microscopic, the frequency, and if it is associated with any other symptoms like dysuria or urgency? Additionally, have you had any recent urinary tract infections, kidney stones, or other urological issues?\nPatient: The blood in my urine is kind of hard to detect, but it does look a little off-color. I haven't noticed any burning or urgency, just that it looks different. I had kidney stones about two years ago, but nothing recently.\nDoctor: Could you describe any other symptoms associated with the back pain, such as radiation to other areas or any neurological symptoms like numbness or weakness?\nPatient: I don't have any numbness or weakness, but I do feel some body aches because I'm favoring my back when I walk. The pain sometimes feels like it's in my abdomen too, especially when I'm exerting myself. It's been pretty tough, but I'm trying to stay on top of my medications and stay hydrated.\nDoctor: Could you provide details about your current medications, including any over-the-counter or prescription drugs you are taking, and whether you have any known allergies?\nPatient: I'm taking Imitrex for my migraines, and I've been on Protonix 40 milligrams a day for my reflux. I actually need a refill on the Protonix. I don't have any allergies that I'm aware of.\nDoctor: Could you describe the exact color of your urine and whether you have noticed any clots or changes in frequency or volume of urination?\nPatient: The urine looks a little off-color, but it's not really dark or bright red—more like a faint pinkish tint. I haven't noticed any clots, but I have been urinating less frequently than usual, and the stream seems a bit weaker than before.\nDoctor: Have you experienced any fever, chills, or unexplained weight loss in the past four days? Additionally, have you had any recent trauma or injury to your back or abdomen?\nPatient: No, I haven't had any fever, chills, or unexplained weight loss in the past four days. And I don't remember any recent trauma or injury to my back or abdomen.\nDoctor: Could you describe the exact location of the back pain and whether it radiates to any other part of your body? Also, have you noticed any changes in your urine output or any blood clots in your urine?\nPatient: The back pain started on the right side but has shifted to the left, and it sometimes feels like it's in my abdomen, especially when I'm exerting myself. I haven't noticed any blood clots in my urine, but the stream seems weaker, and I've been urinating less frequently than usual.\nDoctor: Has the patient experienced any recent changes in bowel habits or noticed any swelling in the lower extremities?\nPatient: No, I haven't noticed any changes in my bowel habits or any swelling in my lower extremities. Everything else seems pretty normal.\nDoctor: Has the patient undergone any urological evaluations or imaging related to his urinary symptoms, such as an ultrasound of the kidneys or bladder, or a cystoscopy?\nPatient: No, I haven't had any urological evaluations or imaging related to my urinary symptoms. I haven't been to the doctor for anything related to my urine other than this visit.\nDoctor: Has the patient experienced any fever, chills, or flank pain in addition to the back pain? Also, has he noticed any changes in his urine output or color other than the faint pinkish tint?\nPatient: No, I haven't had any fever or chills, and the flank pain hasn't been something I've noticed beyond the back pain itself. The urine color has been a faint pinkish tint, and I haven't seen any other changes in the color or output besides what I already mentioned.\nDoctor: Could you please describe any changes in your urinary output or any difficulty in passing urine, such as a weaker stream or feeling of incomplete emptying?\nPatient: The stream seems weaker, and I've been urinating less frequently than usual. I also feel like I don't completely empty my bladder when I go.\nDoctor: Could you describe the exact location of the back pain and whether it radiates to any other part of your body? Additionally, have you noticed any fever, chills, or pain in your flank area?\nPatient: The back pain is mostly on the left side now, but it shifts, and sometimes it feels like it's in my abdomen, especially when I'm exerting myself. I haven't had any fever or chills, and I don't really notice pain in my flank area beyond the back pain itself.\nDoctor: Has the patient undergone any urodynamic studies or cystoscopy in the past? If not, would he be willing to undergo these tests to further evaluate the weak urine stream and incomplete bladder emptying?\nPatient: No, I haven't had any urodynamic studies or cystoscopy in the past. I'm not sure about those tests, but I'm willing to do whatever is needed to figure out what's going on.\nDoctor: Could you please describe the exact location of the back pain and whether it radiates to any other part of your body? Additionally, have you noticed any changes in your bowel movements or any swelling in your legs?\nPatient: The back pain is mostly on the left side now, but it shifts, and sometimes it feels like it's in my abdomen, especially when I'm exerting myself. I haven't noticed any changes in my bowel movements or swelling in my legs.",
+  "reference_so": {
+    "subjective": "Basic information: 61-year-old male presenting with worsening back pain, hematuria, and dizziness on exertion.\n\nHistory of present illness: The patient reports worsening back pain over the last four days, initially on the right side but now more on the left. The pain is constant, severe (8-9/10), and exacerbated by exertion. He also reports hematuria, which is difficult to detect but notes a change in urine color (faint pinkish tint), and dizziness on exertion. Tylenol provides minimal relief. The patient does not report numbness or weakness, but he does feel some body aches because he is favoring his back when he walks. The pain sometimes feels like it's in his abdomen too, especially when he is exerting himself. He also notes decreased urinary frequency and a weaker urine stream. The stream seems weaker, and he has been urinating less frequently than usual. He also feels like he doesn't completely empty his bladder when he goes. The patient has not experienced any recent changes in bowel movements or swelling in the legs.\n\nPast history: History of kidney stones two years ago. Current medications: Imitrex for migraines and Protonix 40 mg/day for reflux. Patient needs a refill on Protonix. No known allergies. No prior urological evaluations or imaging related to urinary symptoms. No urodynamic studies or cystoscopy performed in the past. No history of urinary retention or complete inability to urinate.",
+    "objective": "Physical examination: Vital signs: BP 130/85 mmHg, HR 78 bpm, RR 16, Temp 36.8°C. No acute distress. Back tenderness to palpation, more pronounced on the left side. No neurological deficits. Abdominal examination reveals mild tenderness without guarding or rebound. No edema in the lower extremities. Bowel sounds normal without tenderness.\n\nInvestigations: Urinalysis: Hematuria present, no leukocytes or nitrites. Renal function tests: Serum creatinine 1.2 mg/dL, BUN 18 mg/dL. Imaging: Non-contrast CT of the abdomen and pelvis pending. Prior imaging: None reported. Urodynamic studies: Not performed. Cystoscopy: Not performed. No prior imaging studies for back pain or urinary symptoms reported."
+  }
+}

@@ -1,0 +1,474 @@
+{
+  "case_id": "D2N109",
+  "split": "test",
+  "is_icl_demo": false,
+  "stage1_elements": "Here are the extracted clinical elements in concise bullet points:\n\n**Subjective Elements:**\n\n* Chief complaint: Painful and swollen left ankle after slipping on ice\n* History of present illness:\n\t+ Onset: 2 days ago\n\t+ Duration: Ongoing\n\t+ Description: Throbbing and aching pain on the outside of the ankle, swelling, and difficulty walking\n* Relevant medical history/medications:\n\t+ No previous ankle injuries or conditions (sprains, fractures, arthritis)\n\t+ No prior imaging or evaluation of the ankle injury\n\n**Objective Elements:**\n\n* Physical examination findings:\n\t+ Swelling and pain on the outside of the ankle\n\t+ No bruising, deformity, or numbness/tingling/weakness in the foot or ankle\n* Vital signs mentioned: None\n* Diagnostic lab/imaging results:\n\t+ No imaging studies done yet (X-ray ordered to check for possible fracture)\n\n**Assessment Elements:**\n\n* Diagnoses and clinical impressions made by the doctor: Not explicitly stated in the dialogue\n\n**Plan Elements:**\n\n* Medical treatment plan: Order X-ray to check for possible fracture\n* Prescriptions/dosages: None mentioned\n* Tests ordered: X-ray\n* Follow-up instructions: Not explicitly stated in the dialogue",
+  "stage1_raw_note": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:\n\n**SUBJECTIVE:**\n\n* **Chief Complaint:** Painful and swollen left ankle after slipping on ice.\n* **History of Present Illness (HPI):** The patient, a 36-year-old female, presents with a 2-day history of throbbing and aching pain on the outside of her left ankle, swelling, and difficulty walking. She reports that the pain is constant and worsens with movement. She denies any previous ankle injuries or conditions, such as sprains, fractures, or arthritis.\n\n**OBJECTIVE:**\n\n* **Physical Examination & Vitals:** The patient's physical examination revealed swelling and pain on the outside of the left ankle, with no bruising, deformity, or numbness/tingling/weakness in the foot or ankle. Vital signs were not taken during the examination.\n* **Diagnostic Results & Labs:** No imaging studies were performed during the visit, but an X-ray was ordered to check for a possible fracture.\n\n**ASSESSMENT AND PLAN:**\n\n* **Diagnoses and Clinical Reasoning:** Based on the patient's symptoms and physical examination findings, it is likely that the patient has sustained a left ankle sprain or strain. Further evaluation with an X-ray is necessary to rule out a possible fracture.\n* **Treatment Plan, Medications, and Follow-up:** The patient will undergo an X-ray to check for a possible fracture. If the X-ray is normal, the patient will be treated with conservative management, including rest, ice, compression, and elevation (RICE). The patient will be advised to follow up with the doctor in 1-2 weeks to reassess the injury and determine if further treatment is necessary.\n\nPlease note that this is a preliminary assessment and plan, and the final diagnosis and treatment plan may be adjusted based on the results of the X-ray and further evaluation.",
+  "stage1_parse": {
+    "parse_mode": "main_headings",
+    "parse_ok": true,
+    "dropped_preamble": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:"
+  },
+  "stage1_so": {
+    "subjective": "* **Chief Complaint:** Painful and swollen left ankle after slipping on ice.\n* **History of Present Illness (HPI):** The patient, a 36-year-old female, presents with a 2-day history of throbbing and aching pain on the outside of her left ankle, swelling, and difficulty walking. She reports that the pain is constant and worsens with movement. She denies any previous ankle injuries or conditions, such as sprains, fractures, or arthritis.",
+    "objective": "* **Physical Examination & Vitals:** The patient's physical examination revealed swelling and pain on the outside of the left ankle, with no bruising, deformity, or numbness/tingling/weakness in the foot or ankle. Vital signs were not taken during the examination.\n* **Diagnostic Results & Labs:** No imaging studies were performed during the visit, but an X-ray was ordered to check for a possible fracture."
+  },
+  "stage1_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** Based on the patient's symptoms and physical examination findings, it is likely that the patient has sustained a left ankle sprain or strain. Further evaluation with an X-ray is necessary to rule out a possible fracture.\n* **Treatment Plan, Medications, and Follow-up:** The patient will undergo an X-ray to check for a possible fracture. If the X-ray is normal, the patient will be treated with conservative management, including rest, ice, compression, and elevation (RICE). The patient will be advised to follow up with the doctor in 1-2 weeks to reassess the injury and determine if further treatment is necessary.\n\nPlease note that this is a preliminary assessment and plan, and the final diagnosis and treatment plan may be adjusted based on the results of the X-ray and further evaluation."
+  },
+  "stage2_so": {
+    "subjective": "Chief Complaint: Painful and swollen left ankle after slipping on ice.\nHistory of Present Illness (HPI): The patient, a 36-year-old female, presents with a 2-day history of throbbing and aching pain on the outside of her left ankle, swelling, and difficulty walking.\nShe reports that the pain is constant.\nNote that I've split the statement into two facts, as \"with movement\" is a separate finding that provides additional context to the worsening of pain.\nNote that I did not combine the two clauses into a single fact, as they are independent and self-contained propositions.\nShe denies any previous ankle injuries or conditions, such as sprains, fractures, or arthritis.",
+    "objective": "The patient's physical examination revealed swelling on the outside of the left ankle.\nThe patient's physical examination revealed pain on the outside of the left ankle.\nThe patient's physical examination did not reveal bruising on the outside of the left ankle.\nThe patient's physical examination did not reveal deformity on the outside of the left ankle.\nThe patient's physical examination did not reveal numbness on the outside of the left ankle.\nThe patient's physical examination did not reveal tingling on the outside of the left ankle.\nThe patient's physical examination did not reveal weakness on the outside of the left ankle.\nThe patient's physical examination did not reveal any abnormalities in the foot.\nNote that I've followed the rules by splitting the sentence into two separate facts, replacing the pronoun \"any\" with the subject \"abnormalities\", and not adding or inferring any new information.\nNote that there is only one proposition in this statement, so it can be represented by a single atomic fact.\nThe examination occurred.\nNote that I've followed the rules:\nSplit the conjunction \"during\" into two separate facts.\nReplaced the pronoun \"the\" with the subject \"examination\".\nDid not add or infer any information that is not present in the statement.\nOutput two separate facts, each representing a self-contained proposition.\nNo imaging studies were performed during the visit.\nAn X-ray was ordered.\nAn X-ray was ordered to check for a possible fracture.\nNote that I've followed the rules:\nSplit the list (\"No imaging studies were performed during the visit, but an X-ray was ordered to check for a possible fracture.\") into three separate facts.\nReplaced the pronoun (\"it\") with the subject (\"an X-ray\").\nDid not add, infer, or change any information that is not in the statement."
+  },
+  "stage2_audit": {
+    "subjective": [
+      {
+        "unit": "Chief Complaint: Painful and swollen left ankle after slipping on ice.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9878,
+          "neutral": 0.0099,
+          "contradiction": 0.0024
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 36 years old, and I'm here because I hurt my left ankle a couple of days ago when I slipped on some ice. It's been swollen and really painful, and it's hard for me to walk on it. Doctor: Could you please confirm your age, gender, and describe the injury to your left ankle in more detail, including when it occurred and what activity you were doing at the time? Patient: I'm 36 years old, and I'm a female. I hurt my left ankle about two days ago when I was walking to my car and slipped on some snow and ice. It twisted underneath me, and I fell. It's been swollen and really painful since then, and it's hard for me to walk on it. Doctor: Have you experienced any previous ankle injuries or conditions, such as sprains, fractures, or arthritis? Patient: No, I haven't had any previous ankle injuries or conditions like sprains, fractures, or arthritis. This is the first time I've had an issue like this. Doctor: Could you describe the nature of the pain in your left ankle? Is it sharp, dull, throbbing, or a combination of these? Have you noticed any bruising or deformity around the ankle area? Patient: The pain is more of a throbbing and aching feeling, especially on the outside of my ankle. I haven't noticed any bruising, but there's quite a bit of swelling. It doesn't look deformed, just really sore and swollen. Doctor: Have you experienced any numbness, tingling, or weakness in your left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you undergone any imaging studies such as X-rays or MRI for this injury? If so,",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "History of Present Illness (HPI): The patient, a 36-year-old female, presents with a 2-day history of throbbing and aching pain on the outside of her left ankle, swelling, and difficulty walking.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9951,
+          "neutral": 0.004,
+          "contradiction": 0.001
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 36 years old, and I'm here because I hurt my left ankle a couple of days ago when I slipped on some ice. It's been swollen and really painful, and it's hard for me to walk on it. Doctor: Could you please confirm your age, gender, and describe the injury to your left ankle in more detail, including when it occurred and what activity you were doing at the time? Patient: I'm 36 years old, and I'm a female. I hurt my left ankle about two days ago when I was walking to my car and slipped on some snow and ice. It twisted underneath me, and I fell. It's been swollen and really painful since then, and it's hard for me to walk on it. Doctor: Have you experienced any previous ankle injuries or conditions, such as sprains, fractures, or arthritis? Patient: No, I haven't had any previous ankle injuries or conditions like sprains, fractures, or arthritis. This is the first time I've had an issue like this. Doctor: Could you describe the nature of the pain in your left ankle? Is it sharp, dull, throbbing, or a combination of these? Have you noticed any bruising or deformity around the ankle area? Patient: The pain is more of a throbbing and aching feeling, especially on the outside of my ankle. I haven't noticed any bruising, but there's quite a bit of swelling. It doesn't look deformed, just really sore and swollen. Doctor: Have you experienced any numbness, tingling, or weakness in your left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you undergone any imaging studies such as X-rays or MRI for this injury? If so,",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "She reports that the pain is constant and worsens with movement.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.4326,
+          "neutral": 0.2849,
+          "contradiction": 0.2825
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "since the injury. I can still feel everything normally, and there's no tingling or numbness at all. Doctor: Has the patient undergone any imaging studies for the left ankle injury, such as X-rays or MRI? Patient: No, I haven't undergone any imaging studies for the left ankle injury yet. The doctor is going to order an X-ray to check for a possible fracture. I didn't have any imaging done before coming in today. Doctor: Could you please describe if you have experienced any numbness, tingling, or weakness in your foot or toes since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my foot or toes since the injury. I can still feel everything normally, and there's no tingling or numbness at all. Doctor: Has the patient experienced any numbness, tingling, or weakness in the foot or toes since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in the foot or toes since the injury. I can still feel everything normally, and there's no tingling or numbness at all. Doctor: Have you experienced any numbness, tingling, or weakness in the foot or toes since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in the foot or toes since the injury. I can still feel everything normally, and there's no tingling or numbness at all. Doctor: Have you noticed any changes in the color of your foot or toes since the injury, such as pallor or redness? Patient: No, I haven't noticed any changes in the color of my foot or toes since the injury. It looks normal, and there's no pallor or unusual redness that I can see. Doctor: Have you experienced any locking, catching, or instability in the ankle joint since the injury? Patient: No, I haven't experienced any locking, catching, or instability in the ankle joint since the injury. It feels a little sore and swollen, but it doesn't catch or lock",
+        "atomic_decomposition": {
+          "original": "She reports that the pain is constant and worsens with movement.",
+          "retained": [
+            {
+              "atom": "She reports that the pain is constant.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 36 years old, and I'm here because I hurt my left ankle a couple of days ago when I slipped on some ice. It's been swollen and really painful, and it's hard for me to walk on it. Doctor: Could you please confirm your age, gender, and describe the injury to your left ankle in more detail, including when it occurred and what activity you were doing at the time? Patient: I'm 36 years old, and I'm a female. I hurt my left ankle about two days ago when I was walking to my car and slipped on some snow and ice. It twisted underneath me, and I fell. It's been swollen and really painful since then, and it's hard for me to walk on it. Doctor: Have you experienced any previous ankle injuries or conditions, such as sprains, fractures, or arthritis? Patient: No, I haven't had any previous ankle injuries or conditions like sprains, fractures, or arthritis. This is the first time I've had an issue like this. Doctor: Could you describe the nature of the pain in your left ankle? Is it sharp, dull, throbbing, or a combination of these? Have you noticed any bruising or deformity around the ankle area? Patient: The pain is more of a throbbing and aching feeling, especially on the outside of my ankle. I haven't noticed any bruising, but there's quite a bit of swelling. It doesn't look deformed, just really sore and swollen. Doctor: Have you experienced any numbness, tingling, or weakness in your left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you undergone any imaging studies such as X-rays or MRI for this injury? If so,",
+              "entailment": 0.9619,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've split the statement into two facts, as \"with movement\" is a separate finding that provides additional context to the worsening of pain.",
+              "citation": "No, I haven't noticed any changes in the color of my foot or toes since the injury. It looks normal, and there's no pallor or unusual redness that I can see. Doctor: Have you experienced any locking, catching, or instability in the ankle joint since the injury? Patient: No, I haven't experienced any locking, catching, or instability in the ankle joint since the injury. It feels a little sore and swollen, but it doesn't catch or lock up when I move it.",
+              "entailment": 0.9912,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I did not combine the two clauses into a single fact, as they are independent and self-contained propositions.",
+              "citation": "No, I haven't noticed any changes in the color of my foot or toes since the injury. It looks normal, and there's no pallor or unusual redness that I can see. Doctor: Have you experienced any locking, catching, or instability in the ankle joint since the injury? Patient: No, I haven't experienced any locking, catching, or instability in the ankle joint since the injury. It feels a little sore and swollen, but it doesn't catch or lock up when I move it.",
+              "entailment": 0.9971,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "The pain worsens.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4346,
+              "depth": 2
+            },
+            {
+              "atom": "The pain worsens with movement.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4336,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "She denies any previous ankle injuries or conditions, such as sprains, fractures, or arthritis.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9985,
+          "neutral": 0.0007,
+          "contradiction": 0.0009
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 36 years old, and I'm here because I hurt my left ankle a couple of days ago when I slipped on some ice. It's been swollen and really painful, and it's hard for me to walk on it. Doctor: Could you please confirm your age, gender, and describe the injury to your left ankle in more detail, including when it occurred and what activity you were doing at the time? Patient: I'm 36 years old, and I'm a female. I hurt my left ankle about two days ago when I was walking to my car and slipped on some snow and ice. It twisted underneath me, and I fell. It's been swollen and really painful since then, and it's hard for me to walk on it. Doctor: Have you experienced any previous ankle injuries or conditions, such as sprains, fractures, or arthritis? Patient: No, I haven't had any previous ankle injuries or conditions like sprains, fractures, or arthritis. This is the first time I've had an issue like this. Doctor: Could you describe the nature of the pain in your left ankle? Is it sharp, dull, throbbing, or a combination of these? Have you noticed any bruising or deformity around the ankle area? Patient: The pain is more of a throbbing and aching feeling, especially on the outside of my ankle. I haven't noticed any bruising, but there's quite a bit of swelling. It doesn't look deformed, just really sore and swollen. Doctor: Have you experienced any numbness, tingling, or weakness in your left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you undergone any imaging studies such as X-rays or MRI for this injury? If so,",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      }
+    ],
+    "objective": [
+      {
+        "unit": "Physical Examination & Vitals: The patient's physical examination revealed swelling and pain on the outside of the left ankle, with no bruising, deformity, or numbness/tingling/weakness in the foot or ankle.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.6924,
+          "neutral": 0.2803,
+          "contradiction": 0.0275
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 36 years old, and I'm here because I hurt my left ankle a couple of days ago when I slipped on some ice. It's been swollen and really painful, and it's hard for me to walk on it. Doctor: Could you please confirm your age, gender, and describe the injury to your left ankle in more detail, including when it occurred and what activity you were doing at the time? Patient: I'm 36 years old, and I'm a female. I hurt my left ankle about two days ago when I was walking to my car and slipped on some snow and ice. It twisted underneath me, and I fell. It's been swollen and really painful since then, and it's hard for me to walk on it. Doctor: Have you experienced any previous ankle injuries or conditions, such as sprains, fractures, or arthritis? Patient: No, I haven't had any previous ankle injuries or conditions like sprains, fractures, or arthritis. This is the first time I've had an issue like this. Doctor: Could you describe the nature of the pain in your left ankle? Is it sharp, dull, throbbing, or a combination of these? Have you noticed any bruising or deformity around the ankle area? Patient: The pain is more of a throbbing and aching feeling, especially on the outside of my ankle. I haven't noticed any bruising, but there's quite a bit of swelling. It doesn't look deformed, just really sore and swollen. Doctor: Have you experienced any numbness, tingling, or weakness in your left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you undergone any imaging studies such as X-rays or MRI for this injury? If so,",
+        "atomic_decomposition": {
+          "original": "Physical Examination & Vitals: The patient's physical examination revealed swelling and pain on the outside of the left ankle, with no bruising, deformity, or numbness/tingling/weakness in the foot or ankle.",
+          "retained": [
+            {
+              "atom": "The patient's physical examination revealed swelling on the outside of the left ankle.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 36 years old, and I'm here because I hurt my left ankle a couple of days ago when I slipped on some ice. It's been swollen and really painful, and it's hard for me to walk on it. Doctor: Could you please confirm your age, gender, and describe the injury to your left ankle in more detail, including when it occurred and what activity you were doing at the time? Patient: I'm 36 years old, and I'm a female. I hurt my left ankle about two days ago when I was walking to my car and slipped on some snow and ice. It twisted underneath me, and I fell. It's been swollen and really painful since then, and it's hard for me to walk on it. Doctor: Have you experienced any previous ankle injuries or conditions, such as sprains, fractures, or arthritis? Patient: No, I haven't had any previous ankle injuries or conditions like sprains, fractures, or arthritis. This is the first time I've had an issue like this. Doctor: Could you describe the nature of the pain in your left ankle? Is it sharp, dull, throbbing, or a combination of these? Have you noticed any bruising or deformity around the ankle area? Patient: The pain is more of a throbbing and aching feeling, especially on the outside of my ankle. I haven't noticed any bruising, but there's quite a bit of swelling. It doesn't look deformed, just really sore and swollen. Doctor: Have you experienced any numbness, tingling, or weakness in your left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you undergone any imaging studies such as X-rays or MRI for this injury? If so,",
+              "entailment": 0.9941,
+              "depth": 1
+            },
+            {
+              "atom": "The patient's physical examination revealed pain on the outside of the left ankle.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 36 years old, and I'm here because I hurt my left ankle a couple of days ago when I slipped on some ice. It's been swollen and really painful, and it's hard for me to walk on it. Doctor: Could you please confirm your age, gender, and describe the injury to your left ankle in more detail, including when it occurred and what activity you were doing at the time? Patient: I'm 36 years old, and I'm a female. I hurt my left ankle about two days ago when I was walking to my car and slipped on some snow and ice. It twisted underneath me, and I fell. It's been swollen and really painful since then, and it's hard for me to walk on it. Doctor: Have you experienced any previous ankle injuries or conditions, such as sprains, fractures, or arthritis? Patient: No, I haven't had any previous ankle injuries or conditions like sprains, fractures, or arthritis. This is the first time I've had an issue like this. Doctor: Could you describe the nature of the pain in your left ankle? Is it sharp, dull, throbbing, or a combination of these? Have you noticed any bruising or deformity around the ankle area? Patient: The pain is more of a throbbing and aching feeling, especially on the outside of my ankle. I haven't noticed any bruising, but there's quite a bit of swelling. It doesn't look deformed, just really sore and swollen. Doctor: Have you experienced any numbness, tingling, or weakness in your left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you undergone any imaging studies such as X-rays or MRI for this injury? If so,",
+              "entailment": 0.9966,
+              "depth": 1
+            },
+            {
+              "atom": "The patient's physical examination did not reveal bruising on the outside of the left ankle.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 36 years old, and I'm here because I hurt my left ankle a couple of days ago when I slipped on some ice. It's been swollen and really painful, and it's hard for me to walk on it. Doctor: Could you please confirm your age, gender, and describe the injury to your left ankle in more detail, including when it occurred and what activity you were doing at the time? Patient: I'm 36 years old, and I'm a female. I hurt my left ankle about two days ago when I was walking to my car and slipped on some snow and ice. It twisted underneath me, and I fell. It's been swollen and really painful since then, and it's hard for me to walk on it. Doctor: Have you experienced any previous ankle injuries or conditions, such as sprains, fractures, or arthritis? Patient: No, I haven't had any previous ankle injuries or conditions like sprains, fractures, or arthritis. This is the first time I've had an issue like this. Doctor: Could you describe the nature of the pain in your left ankle? Is it sharp, dull, throbbing, or a combination of these? Have you noticed any bruising or deformity around the ankle area? Patient: The pain is more of a throbbing and aching feeling, especially on the outside of my ankle. I haven't noticed any bruising, but there's quite a bit of swelling. It doesn't look deformed, just really sore and swollen. Doctor: Have you experienced any numbness, tingling, or weakness in your left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you undergone any imaging studies such as X-rays or MRI for this injury? If so,",
+              "entailment": 0.9985,
+              "depth": 1
+            },
+            {
+              "atom": "The patient's physical examination did not reveal deformity on the outside of the left ankle.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 36 years old, and I'm here because I hurt my left ankle a couple of days ago when I slipped on some ice. It's been swollen and really painful, and it's hard for me to walk on it. Doctor: Could you please confirm your age, gender, and describe the injury to your left ankle in more detail, including when it occurred and what activity you were doing at the time? Patient: I'm 36 years old, and I'm a female. I hurt my left ankle about two days ago when I was walking to my car and slipped on some snow and ice. It twisted underneath me, and I fell. It's been swollen and really painful since then, and it's hard for me to walk on it. Doctor: Have you experienced any previous ankle injuries or conditions, such as sprains, fractures, or arthritis? Patient: No, I haven't had any previous ankle injuries or conditions like sprains, fractures, or arthritis. This is the first time I've had an issue like this. Doctor: Could you describe the nature of the pain in your left ankle? Is it sharp, dull, throbbing, or a combination of these? Have you noticed any bruising or deformity around the ankle area? Patient: The pain is more of a throbbing and aching feeling, especially on the outside of my ankle. I haven't noticed any bruising, but there's quite a bit of swelling. It doesn't look deformed, just really sore and swollen. Doctor: Have you experienced any numbness, tingling, or weakness in your left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you undergone any imaging studies such as X-rays or MRI for this injury? If so,",
+              "entailment": 0.9976,
+              "depth": 1
+            },
+            {
+              "atom": "The patient's physical examination did not reveal numbness on the outside of the left ankle.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 36 years old, and I'm here because I hurt my left ankle a couple of days ago when I slipped on some ice. It's been swollen and really painful, and it's hard for me to walk on it. Doctor: Could you please confirm your age, gender, and describe the injury to your left ankle in more detail, including when it occurred and what activity you were doing at the time? Patient: I'm 36 years old, and I'm a female. I hurt my left ankle about two days ago when I was walking to my car and slipped on some snow and ice. It twisted underneath me, and I fell. It's been swollen and really painful since then, and it's hard for me to walk on it. Doctor: Have you experienced any previous ankle injuries or conditions, such as sprains, fractures, or arthritis? Patient: No, I haven't had any previous ankle injuries or conditions like sprains, fractures, or arthritis. This is the first time I've had an issue like this. Doctor: Could you describe the nature of the pain in your left ankle? Is it sharp, dull, throbbing, or a combination of these? Have you noticed any bruising or deformity around the ankle area? Patient: The pain is more of a throbbing and aching feeling, especially on the outside of my ankle. I haven't noticed any bruising, but there's quite a bit of swelling. It doesn't look deformed, just really sore and swollen. Doctor: Have you experienced any numbness, tingling, or weakness in your left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you undergone any imaging studies such as X-rays or MRI for this injury? If so,",
+              "entailment": 0.9976,
+              "depth": 1
+            },
+            {
+              "atom": "The patient's physical examination did not reveal tingling on the outside of the left ankle.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 36 years old, and I'm here because I hurt my left ankle a couple of days ago when I slipped on some ice. It's been swollen and really painful, and it's hard for me to walk on it. Doctor: Could you please confirm your age, gender, and describe the injury to your left ankle in more detail, including when it occurred and what activity you were doing at the time? Patient: I'm 36 years old, and I'm a female. I hurt my left ankle about two days ago when I was walking to my car and slipped on some snow and ice. It twisted underneath me, and I fell. It's been swollen and really painful since then, and it's hard for me to walk on it. Doctor: Have you experienced any previous ankle injuries or conditions, such as sprains, fractures, or arthritis? Patient: No, I haven't had any previous ankle injuries or conditions like sprains, fractures, or arthritis. This is the first time I've had an issue like this. Doctor: Could you describe the nature of the pain in your left ankle? Is it sharp, dull, throbbing, or a combination of these? Have you noticed any bruising or deformity around the ankle area? Patient: The pain is more of a throbbing and aching feeling, especially on the outside of my ankle. I haven't noticed any bruising, but there's quite a bit of swelling. It doesn't look deformed, just really sore and swollen. Doctor: Have you experienced any numbness, tingling, or weakness in your left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you undergone any imaging studies such as X-rays or MRI for this injury? If so,",
+              "entailment": 0.9966,
+              "depth": 1
+            },
+            {
+              "atom": "The patient's physical examination did not reveal weakness on the outside of the left ankle.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 36 years old, and I'm here because I hurt my left ankle a couple of days ago when I slipped on some ice. It's been swollen and really painful, and it's hard for me to walk on it. Doctor: Could you please confirm your age, gender, and describe the injury to your left ankle in more detail, including when it occurred and what activity you were doing at the time? Patient: I'm 36 years old, and I'm a female. I hurt my left ankle about two days ago when I was walking to my car and slipped on some snow and ice. It twisted underneath me, and I fell. It's been swollen and really painful since then, and it's hard for me to walk on it. Doctor: Have you experienced any previous ankle injuries or conditions, such as sprains, fractures, or arthritis? Patient: No, I haven't had any previous ankle injuries or conditions like sprains, fractures, or arthritis. This is the first time I've had an issue like this. Doctor: Could you describe the nature of the pain in your left ankle? Is it sharp, dull, throbbing, or a combination of these? Have you noticed any bruising or deformity around the ankle area? Patient: The pain is more of a throbbing and aching feeling, especially on the outside of my ankle. I haven't noticed any bruising, but there's quite a bit of swelling. It doesn't look deformed, just really sore and swollen. Doctor: Have you experienced any numbness, tingling, or weakness in your left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you undergone any imaging studies such as X-rays or MRI for this injury? If so,",
+              "entailment": 0.9946,
+              "depth": 1
+            },
+            {
+              "atom": "The patient's physical examination did not reveal any abnormalities in the foot.",
+              "citation": "No, I haven't noticed any changes in the color of my foot or toes since the injury. It looks normal, and there's no pallor or unusual redness that I can see. Doctor: Have you experienced any locking, catching, or instability in the ankle joint since the injury? Patient: No, I haven't experienced any locking, catching, or instability in the ankle joint since the injury. It feels a little sore and swollen, but it doesn't catch or lock up when I move it.",
+              "entailment": 0.5996,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've followed the rules by splitting the sentence into two separate facts, replacing the pronoun \"any\" with the subject \"abnormalities\", and not adding or inferring any new information.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 36 years old, and I'm here because I hurt my left ankle a couple of days ago when I slipped on some ice. It's been swollen and really painful, and it's hard for me to walk on it. Doctor: Could you please confirm your age, gender, and describe the injury to your left ankle in more detail, including when it occurred and what activity you were doing at the time? Patient: I'm 36 years old, and I'm a female. I hurt my left ankle about two days ago when I was walking to my car and slipped on some snow and ice. It twisted underneath me, and I fell. It's been swollen and really painful since then, and it's hard for me to walk on it. Doctor: Have you experienced any previous ankle injuries or conditions, such as sprains, fractures, or arthritis? Patient: No, I haven't had any previous ankle injuries or conditions like sprains, fractures, or arthritis. This is the first time I've had an issue like this. Doctor: Could you describe the nature of the pain in your left ankle? Is it sharp, dull, throbbing, or a combination of these? Have you noticed any bruising or deformity around the ankle area? Patient: The pain is more of a throbbing and aching feeling, especially on the outside of my ankle. I haven't noticed any bruising, but there's quite a bit of swelling. It doesn't look deformed, just really sore and swollen. Doctor: Have you experienced any numbness, tingling, or weakness in your left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you undergone any imaging studies such as X-rays or MRI for this injury? If so,",
+              "entailment": 0.9839,
+              "depth": 2
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "The patient's physical examination did not reveal any abnormalities.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4641,
+              "depth": 2
+            },
+            {
+              "atom": "The abnormalities are in the ankle.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4724,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Vital signs were not taken during the examination.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.8423,
+          "neutral": 0.083,
+          "contradiction": 0.0748
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 36 years old, and I'm here because I hurt my left ankle a couple of days ago when I slipped on some ice. It's been swollen and really painful, and it's hard for me to walk on it. Doctor: Could you please confirm your age, gender, and describe the injury to your left ankle in more detail, including when it occurred and what activity you were doing at the time? Patient: I'm 36 years old, and I'm a female. I hurt my left ankle about two days ago when I was walking to my car and slipped on some snow and ice. It twisted underneath me, and I fell. It's been swollen and really painful since then, and it's hard for me to walk on it. Doctor: Have you experienced any previous ankle injuries or conditions, such as sprains, fractures, or arthritis? Patient: No, I haven't had any previous ankle injuries or conditions like sprains, fractures, or arthritis. This is the first time I've had an issue like this. Doctor: Could you describe the nature of the pain in your left ankle? Is it sharp, dull, throbbing, or a combination of these? Have you noticed any bruising or deformity around the ankle area? Patient: The pain is more of a throbbing and aching feeling, especially on the outside of my ankle. I haven't noticed any bruising, but there's quite a bit of swelling. It doesn't look deformed, just really sore and swollen. Doctor: Have you experienced any numbness, tingling, or weakness in your left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you undergone any imaging studies such as X-rays or MRI for this injury? If so,",
+        "atomic_decomposition": {
+          "original": "Vital signs were not taken during the examination.",
+          "retained": [
+            {
+              "atom": "Note that there is only one proposition in this statement, so it can be represented by a single atomic fact.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 36 years old, and I'm here because I hurt my left ankle a couple of days ago when I slipped on some ice. It's been swollen and really painful, and it's hard for me to walk on it. Doctor: Could you please confirm your age, gender, and describe the injury to your left ankle in more detail, including when it occurred and what activity you were doing at the time? Patient: I'm 36 years old, and I'm a female. I hurt my left ankle about two days ago when I was walking to my car and slipped on some snow and ice. It twisted underneath me, and I fell. It's been swollen and really painful since then, and it's hard for me to walk on it. Doctor: Have you experienced any previous ankle injuries or conditions, such as sprains, fractures, or arthritis? Patient: No, I haven't had any previous ankle injuries or conditions like sprains, fractures, or arthritis. This is the first time I've had an issue like this. Doctor: Could you describe the nature of the pain in your left ankle? Is it sharp, dull, throbbing, or a combination of these? Have you noticed any bruising or deformity around the ankle area? Patient: The pain is more of a throbbing and aching feeling, especially on the outside of my ankle. I haven't noticed any bruising, but there's quite a bit of swelling. It doesn't look deformed, just really sore and swollen. Doctor: Have you experienced any numbness, tingling, or weakness in your left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you undergone any imaging studies such as X-rays or MRI for this injury? If so,",
+              "entailment": 0.9551,
+              "depth": 2
+            },
+            {
+              "atom": "The examination occurred.",
+              "citation": "No, I haven't noticed any changes in the color of my foot or toes since the injury. It looks normal, and there's no pallor or unusual redness that I can see. Doctor: Have you experienced any locking, catching, or instability in the ankle joint since the injury? Patient: No, I haven't experienced any locking, catching, or instability in the ankle joint since the injury. It feels a little sore and swollen, but it doesn't catch or lock up when I move it.",
+              "entailment": 0.9932,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've followed the rules:",
+              "citation": "No, I haven't noticed any changes in the color of my foot or toes since the injury. It looks normal, and there's no pallor or unusual redness that I can see. Doctor: Have you experienced any locking, catching, or instability in the ankle joint since the injury? Patient: No, I haven't experienced any locking, catching, or instability in the ankle joint since the injury. It feels a little sore and swollen, but it doesn't catch or lock up when I move it.",
+              "entailment": 0.8657,
+              "depth": 1
+            },
+            {
+              "atom": "Split the conjunction \"during\" into two separate facts.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 36 years old, and I'm here because I hurt my left ankle a couple of days ago when I slipped on some ice. It's been swollen and really painful, and it's hard for me to walk on it. Doctor: Could you please confirm your age, gender, and describe the injury to your left ankle in more detail, including when it occurred and what activity you were doing at the time? Patient: I'm 36 years old, and I'm a female. I hurt my left ankle about two days ago when I was walking to my car and slipped on some snow and ice. It twisted underneath me, and I fell. It's been swollen and really painful since then, and it's hard for me to walk on it. Doctor: Have you experienced any previous ankle injuries or conditions, such as sprains, fractures, or arthritis? Patient: No, I haven't had any previous ankle injuries or conditions like sprains, fractures, or arthritis. This is the first time I've had an issue like this. Doctor: Could you describe the nature of the pain in your left ankle? Is it sharp, dull, throbbing, or a combination of these? Have you noticed any bruising or deformity around the ankle area? Patient: The pain is more of a throbbing and aching feeling, especially on the outside of my ankle. I haven't noticed any bruising, but there's quite a bit of swelling. It doesn't look deformed, just really sore and swollen. Doctor: Have you experienced any numbness, tingling, or weakness in your left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you undergone any imaging studies such as X-rays or MRI for this injury? If so,",
+              "entailment": 0.9775,
+              "depth": 1
+            },
+            {
+              "atom": "Replaced the pronoun \"the\" with the subject \"examination\".",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 36 years old, and I'm here because I hurt my left ankle a couple of days ago when I slipped on some ice. It's been swollen and really painful, and it's hard for me to walk on it. Doctor: Could you please confirm your age, gender, and describe the injury to your left ankle in more detail, including when it occurred and what activity you were doing at the time? Patient: I'm 36 years old, and I'm a female. I hurt my left ankle about two days ago when I was walking to my car and slipped on some snow and ice. It twisted underneath me, and I fell. It's been swollen and really painful since then, and it's hard for me to walk on it. Doctor: Have you experienced any previous ankle injuries or conditions, such as sprains, fractures, or arthritis? Patient: No, I haven't had any previous ankle injuries or conditions like sprains, fractures, or arthritis. This is the first time I've had an issue like this. Doctor: Could you describe the nature of the pain in your left ankle? Is it sharp, dull, throbbing, or a combination of these? Have you noticed any bruising or deformity around the ankle area? Patient: The pain is more of a throbbing and aching feeling, especially on the outside of my ankle. I haven't noticed any bruising, but there's quite a bit of swelling. It doesn't look deformed, just really sore and swollen. Doctor: Have you experienced any numbness, tingling, or weakness in your left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you undergone any imaging studies such as X-rays or MRI for this injury? If so,",
+              "entailment": 0.8579,
+              "depth": 1
+            },
+            {
+              "atom": "Did not add or infer any information that is not present in the statement.",
+              "citation": "No, I haven't noticed any changes in the color of my foot or toes since the injury. It looks normal, and there's no pallor or unusual redness that I can see. Doctor: Have you experienced any locking, catching, or instability in the ankle joint since the injury? Patient: No, I haven't experienced any locking, catching, or instability in the ankle joint since the injury. It feels a little sore and swollen, but it doesn't catch or lock up when I move it.",
+              "entailment": 0.9707,
+              "depth": 1
+            },
+            {
+              "atom": "Output two separate facts, each representing a self-contained proposition.",
+              "citation": "No, I haven't noticed any changes in the color of my foot or toes since the injury. It looks normal, and there's no pallor or unusual redness that I can see. Doctor: Have you experienced any locking, catching, or instability in the ankle joint since the injury? Patient: No, I haven't experienced any locking, catching, or instability in the ankle joint since the injury. It feels a little sore and swollen, but it doesn't catch or lock up when I move it.",
+              "entailment": 0.9595,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "Vital signs were not taken.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4209,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Diagnostic Results & Labs: No imaging studies were performed during the visit, but an X-ray was ordered to check for a possible fracture.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.8574,
+          "neutral": 0.1116,
+          "contradiction": 0.0307
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": ". It doesn't look deformed, just really sore and swollen. Doctor: Have you experienced any numbness, tingling, or weakness in your left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you undergone any imaging studies such as X-rays or MRI for this injury? If so, please provide the results. Patient: No, I haven't had any imaging studies done for this injury yet. The doctor is going to order an X-ray to check for a possible fracture. I didn't have any imaging done before coming in today. Doctor: Has the patient experienced any numbness, tingling, or weakness in the left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you had any prior imaging or evaluation of this ankle injury? Patient: No, I haven't had any prior imaging or evaluation of this ankle injury. This is the first time I've had an issue like this, so I haven't had anything done before today. Doctor: Has the patient experienced any numbness, tingling, or weakness in the foot or toes since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in the foot or toes since the injury. I can still feel everything normally, and there's no tingling or numbness at all. Doctor: Has the patient undergone any imaging studies for the left ankle injury, such as X-rays or MRI? Patient: No, I haven't undergone any imaging studies for the left ankle injury yet. The doctor is going to order an X-ray to check for a possible fracture. I didn't have any imaging done before coming in today. Doctor: Could you please describe",
+        "atomic_decomposition": {
+          "original": "Diagnostic Results & Labs: No imaging studies were performed during the visit, but an X-ray was ordered to check for a possible fracture.",
+          "retained": [
+            {
+              "atom": "No imaging studies were performed during the visit.",
+              "citation": ". It doesn't look deformed, just really sore and swollen. Doctor: Have you experienced any numbness, tingling, or weakness in your left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you undergone any imaging studies such as X-rays or MRI for this injury? If so, please provide the results. Patient: No, I haven't had any imaging studies done for this injury yet. The doctor is going to order an X-ray to check for a possible fracture. I didn't have any imaging done before coming in today. Doctor: Has the patient experienced any numbness, tingling, or weakness in the left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you had any prior imaging or evaluation of this ankle injury? Patient: No, I haven't had any prior imaging or evaluation of this ankle injury. This is the first time I've had an issue like this, so I haven't had anything done before today. Doctor: Has the patient experienced any numbness, tingling, or weakness in the foot or toes since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in the foot or toes since the injury. I can still feel everything normally, and there's no tingling or numbness at all. Doctor: Has the patient undergone any imaging studies for the left ankle injury, such as X-rays or MRI? Patient: No, I haven't undergone any imaging studies for the left ankle injury yet. The doctor is going to order an X-ray to check for a possible fracture. I didn't have any imaging done before coming in today. Doctor: Could you please describe",
+              "entailment": 0.6191,
+              "depth": 1
+            },
+            {
+              "atom": "An X-ray was ordered.",
+              "citation": ". It doesn't look deformed, just really sore and swollen. Doctor: Have you experienced any numbness, tingling, or weakness in your left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you undergone any imaging studies such as X-rays or MRI for this injury? If so, please provide the results. Patient: No, I haven't had any imaging studies done for this injury yet. The doctor is going to order an X-ray to check for a possible fracture. I didn't have any imaging done before coming in today. Doctor: Has the patient experienced any numbness, tingling, or weakness in the left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you had any prior imaging or evaluation of this ankle injury? Patient: No, I haven't had any prior imaging or evaluation of this ankle injury. This is the first time I've had an issue like this, so I haven't had anything done before today. Doctor: Has the patient experienced any numbness, tingling, or weakness in the foot or toes since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in the foot or toes since the injury. I can still feel everything normally, and there's no tingling or numbness at all. Doctor: Has the patient undergone any imaging studies for the left ankle injury, such as X-rays or MRI? Patient: No, I haven't undergone any imaging studies for the left ankle injury yet. The doctor is going to order an X-ray to check for a possible fracture. I didn't have any imaging done before coming in today. Doctor: Could you please describe",
+              "entailment": 0.7705,
+              "depth": 1
+            },
+            {
+              "atom": "An X-ray was ordered to check for a possible fracture.",
+              "citation": ". It doesn't look deformed, just really sore and swollen. Doctor: Have you experienced any numbness, tingling, or weakness in your left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you undergone any imaging studies such as X-rays or MRI for this injury? If so, please provide the results. Patient: No, I haven't had any imaging studies done for this injury yet. The doctor is going to order an X-ray to check for a possible fracture. I didn't have any imaging done before coming in today. Doctor: Has the patient experienced any numbness, tingling, or weakness in the left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you had any prior imaging or evaluation of this ankle injury? Patient: No, I haven't had any prior imaging or evaluation of this ankle injury. This is the first time I've had an issue like this, so I haven't had anything done before today. Doctor: Has the patient experienced any numbness, tingling, or weakness in the foot or toes since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in the foot or toes since the injury. I can still feel everything normally, and there's no tingling or numbness at all. Doctor: Has the patient undergone any imaging studies for the left ankle injury, such as X-rays or MRI? Patient: No, I haven't undergone any imaging studies for the left ankle injury yet. The doctor is going to order an X-ray to check for a possible fracture. I didn't have any imaging done before coming in today. Doctor: Could you please describe",
+              "entailment": 0.9565,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've followed the rules:",
+              "citation": "No, I haven't noticed any changes in the color of my foot or toes since the injury. It looks normal, and there's no pallor or unusual redness that I can see. Doctor: Have you experienced any locking, catching, or instability in the ankle joint since the injury? Patient: No, I haven't experienced any locking, catching, or instability in the ankle joint since the injury. It feels a little sore and swollen, but it doesn't catch or lock up when I move it.",
+              "entailment": 0.8657,
+              "depth": 1
+            },
+            {
+              "atom": "Split the list (\"No imaging studies were performed during the visit, but an X-ray was ordered to check for a possible fracture.\") into three separate facts.",
+              "citation": "No, I haven't noticed any changes in the color of my foot or toes since the injury. It looks normal, and there's no pallor or unusual redness that I can see. Doctor: Have you experienced any locking, catching, or instability in the ankle joint since the injury? Patient: No, I haven't experienced any locking, catching, or instability in the ankle joint since the injury. It feels a little sore and swollen, but it doesn't catch or lock up when I move it.",
+              "entailment": 0.6641,
+              "depth": 1
+            },
+            {
+              "atom": "Replaced the pronoun (\"it\") with the subject (\"an X-ray\").",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 36 years old, and I'm here because I hurt my left ankle a couple of days ago when I slipped on some ice. It's been swollen and really painful, and it's hard for me to walk on it. Doctor: Could you please confirm your age, gender, and describe the injury to your left ankle in more detail, including when it occurred and what activity you were doing at the time? Patient: I'm 36 years old, and I'm a female. I hurt my left ankle about two days ago when I was walking to my car and slipped on some snow and ice. It twisted underneath me, and I fell. It's been swollen and really painful since then, and it's hard for me to walk on it. Doctor: Have you experienced any previous ankle injuries or conditions, such as sprains, fractures, or arthritis? Patient: No, I haven't had any previous ankle injuries or conditions like sprains, fractures, or arthritis. This is the first time I've had an issue like this. Doctor: Could you describe the nature of the pain in your left ankle? Is it sharp, dull, throbbing, or a combination of these? Have you noticed any bruising or deformity around the ankle area? Patient: The pain is more of a throbbing and aching feeling, especially on the outside of my ankle. I haven't noticed any bruising, but there's quite a bit of swelling. It doesn't look deformed, just really sore and swollen. Doctor: Have you experienced any numbness, tingling, or weakness in your left foot or ankle since the injury? Patient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally. Doctor: Have you undergone any imaging studies such as X-rays or MRI for this injury? If so,",
+              "entailment": 0.7319,
+              "depth": 1
+            },
+            {
+              "atom": "Did not add, infer, or change any information that is not in the statement.",
+              "citation": "No, I haven't noticed any changes in the color of my foot or toes since the injury. It looks normal, and there's no pallor or unusual redness that I can see. Doctor: Have you experienced any locking, catching, or instability in the ankle joint since the injury? Patient: No, I haven't experienced any locking, catching, or instability in the ankle joint since the injury. It feels a little sore and swollen, but it doesn't catch or lock up when I move it.",
+              "entailment": 0.8345,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "Please provide the statement you'd like me to decompose into atomic facts. I'll break it down into independent, self-contained propositions.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4443,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      }
+    ]
+  },
+  "stage2_stats": {
+    "decision_counts": {
+      "faithful": 3,
+      "uncertain": 4
+    },
+    "num_claims": 7,
+    "num_kept": 7,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_so": {
+    "subjective": "Chief Complaint: Painful and swollen left ankle after slipping on ice.\nHistory of Present Illness (HPI): The patient, a 36-year-old female, presents with a 2-day history of throbbing and aching pain on the outside of her left ankle, swelling, and difficulty walking.\nShe reports that the pain is constant.\nNote that I've split the statement into two facts, as \"with movement\" is a separate finding that provides additional context to the worsening of pain.\nNote that I did not combine the two clauses into a single fact, as they are independent and self-contained propositions.\nShe denies any previous ankle injuries or conditions, such as sprains, fractures, or arthritis.",
+    "objective": "The patient's physical examination revealed swelling on the outside of the left ankle.\nThe patient's physical examination revealed pain on the outside of the left ankle.\nThe patient's physical examination did not reveal bruising on the outside of the left ankle.\nThe patient's physical examination did not reveal deformity on the outside of the left ankle.\nThe patient's physical examination did not reveal numbness on the outside of the left ankle.\nThe patient's physical examination did not reveal tingling on the outside of the left ankle.\nThe patient's physical examination did not reveal weakness on the outside of the left ankle.\nThe patient's physical examination did not reveal any abnormalities in the foot.\nNote that I've followed the rules by splitting the sentence into two separate facts, replacing the pronoun \"any\" with the subject \"abnormalities\", and not adding or inferring any new information.\nNote that there is only one proposition in this statement, so it can be represented by a single atomic fact.\nThe examination occurred.\nNote that I've followed the rules:\nSplit the conjunction \"during\" into two separate facts.\nReplaced the pronoun \"the\" with the subject \"examination\".\nDid not add or infer any information that is not present in the statement.\nOutput two separate facts, each representing a self-contained proposition.\nNo imaging studies were performed during the visit.\nAn X-ray was ordered.\nAn X-ray was ordered to check for a possible fracture.\nNote that I've followed the rules:\nSplit the list (\"No imaging studies were performed during the visit, but an X-ray was ordered to check for a possible fracture.\") into three separate facts.\nReplaced the pronoun (\"it\") with the subject (\"an X-ray\").\nDid not add, infer, or change any information that is not in the statement."
+  },
+  "stage3_key_sentences": [
+    "Patient: I'm 36 years old, and I'm here because I hurt my left ankle a couple of days ago when I slipped on some ice.",
+    "Doctor: Could you please describe if you have experienced any numbness, tingling, or weakness in your foot or toes since the injury?"
+  ],
+  "stage3_summary_key_phrases": [
+    "left ankle patient",
+    "ankle slipping ice",
+    "swelling difficulty walking",
+    "denies previous ankle",
+    "conditions sprains",
+    "arthritis patient physical",
+    "reports pain",
+    "tingling outside left",
+    "present illness hpi",
+    "clauses single fact"
+  ],
+  "stage3_coverage_scores": [
+    {
+      "sentence": "Patient: I'm 36 years old, and I'm here because I hurt my left ankle a couple of days ago when I slipped on some ice.",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "Patient: I'm 36 years old, and I'm here because I hurt my left ankle a couple of days ago when I slipped on some ice.",
+      "score": 0.7041,
+      "is_missing": false,
+      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+    },
+    {
+      "sentence": "Doctor: Could you please describe if you have experienced any numbness, tingling, or weakness in your foot or toes since the injury?",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "Doctor: Could you please describe if you have experienced any numbness, tingling, or weakness in your foot or toes since the injury?",
+      "score": 0.516,
+      "is_missing": false,
+      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+    }
+  ],
+  "stage3_candidate_log": [],
+  "stage3_added": [],
+  "stage3_stats": {
+    "num_key_sentences": 2,
+    "num_flagged": 0,
+    "num_added": 0
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "section": "subjective",
+        "claim": "The pain worsens.",
+        "entailment": 0.4346,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "She reports that the pain is constant and worsens with movement."
+      },
+      {
+        "section": "subjective",
+        "claim": "The pain worsens with movement.",
+        "entailment": 0.4336,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "She reports that the pain is constant and worsens with movement."
+      },
+      {
+        "section": "objective",
+        "claim": "The patient's physical examination did not reveal any abnormalities.",
+        "entailment": 0.4641,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: The patient's physical examination revealed swelling and pain on the outside of the left ankle, with no bruising, deformity, or numbness/tingling/weakness in the foot or ankle."
+      },
+      {
+        "section": "objective",
+        "claim": "The abnormalities are in the ankle.",
+        "entailment": 0.4724,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: The patient's physical examination revealed swelling and pain on the outside of the left ankle, with no bruising, deformity, or numbness/tingling/weakness in the foot or ankle."
+      },
+      {
+        "section": "objective",
+        "claim": "Vital signs were not taken.",
+        "entailment": 0.4209,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Vital signs were not taken during the examination."
+      },
+      {
+        "section": "objective",
+        "claim": "Please provide the statement you'd like me to decompose into atomic facts. I'll break it down into independent, self-contained propositions.",
+        "entailment": 0.4443,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Diagnostic Results & Labs: No imaging studies were performed during the visit, but an X-ray was ordered to check for a possible fracture."
+      }
+    ]
+  },
+  "final_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** Based on the patient's symptoms and physical examination findings, it is likely that the patient has sustained a left ankle sprain or strain. Further evaluation with an X-ray is necessary to rule out a possible fracture.\n* **Treatment Plan, Medications, and Follow-up:** The patient will undergo an X-ray to check for a possible fracture. If the X-ray is normal, the patient will be treated with conservative management, including rest, ice, compression, and elevation (RICE). The patient will be advised to follow up with the doctor in 1-2 weeks to reassess the injury and determine if further treatment is necessary.\n\nPlease note that this is a preliminary assessment and plan, and the final diagnosis and treatment plan may be adjusted based on the results of the X-ray and further evaluation."
+  },
+  "ap_unchanged": true,
+  "thresholds": {
+    "Te": 0.9,
+    "Tc": 0.8,
+    "Ta": 0.5,
+    "cov_min": 0.4,
+    "top_m": 2,
+    "fix_header_bug": true
+  },
+  "models": {
+    "llm": "llama3:8b-instruct-q8_0",
+    "nli": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+    "embedder": "all-MiniLM-L6-v2",
+    "ppl": "gpt2"
+  },
+  "status": "success",
+  "seconds": 15.8,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 36 years old, and I'm here because I hurt my left ankle a couple of days ago when I slipped on some ice. It's been swollen and really painful, and it's hard for me to walk on it.\nDoctor: Could you please confirm your age, gender, and describe the injury to your left ankle in more detail, including when it occurred and what activity you were doing at the time?\nPatient: I'm 36 years old, and I'm a female. I hurt my left ankle about two days ago when I was walking to my car and slipped on some snow and ice. It twisted underneath me, and I fell. It's been swollen and really painful since then, and it's hard for me to walk on it.\nDoctor: Have you experienced any previous ankle injuries or conditions, such as sprains, fractures, or arthritis?\nPatient: No, I haven't had any previous ankle injuries or conditions like sprains, fractures, or arthritis. This is the first time I've had an issue like this.\nDoctor: Could you describe the nature of the pain in your left ankle? Is it sharp, dull, throbbing, or a combination of these? Have you noticed any bruising or deformity around the ankle area?\nPatient: The pain is more of a throbbing and aching feeling, especially on the outside of my ankle. I haven't noticed any bruising, but there's quite a bit of swelling. It doesn't look deformed, just really sore and swollen.\nDoctor: Have you experienced any numbness, tingling, or weakness in your left foot or ankle since the injury?\nPatient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally.\nDoctor: Have you undergone any imaging studies such as X-rays or MRI for this injury? If so, please provide the results.\nPatient: No, I haven't had any imaging studies done for this injury yet. The doctor is going to order an X-ray to check for a possible fracture. I didn't have any imaging done before coming in today.\nDoctor: Has the patient experienced any numbness, tingling, or weakness in the left foot or ankle since the injury?\nPatient: No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally.\nDoctor: Have you had any prior imaging or evaluation of this ankle injury?\nPatient: No, I haven't had any prior imaging or evaluation of this ankle injury. This is the first time I've had an issue like this, so I haven't had anything done before today.\nDoctor: Has the patient experienced any numbness, tingling, or weakness in the foot or toes since the injury?\nPatient: No, I haven't experienced any numbness, tingling, or weakness in the foot or toes since the injury. I can still feel everything normally, and there's no tingling or numbness at all.\nDoctor: Has the patient undergone any imaging studies for the left ankle injury, such as X-rays or MRI?\nPatient: No, I haven't undergone any imaging studies for the left ankle injury yet. The doctor is going to order an X-ray to check for a possible fracture. I didn't have any imaging done before coming in today.\nDoctor: Could you please describe if you have experienced any numbness, tingling, or weakness in your foot or toes since the injury?\nPatient: No, I haven't experienced any numbness, tingling, or weakness in my foot or toes since the injury. I can still feel everything normally, and there's no tingling or numbness at all.\nDoctor: Has the patient experienced any numbness, tingling, or weakness in the foot or toes since the injury?\nPatient: No, I haven't experienced any numbness, tingling, or weakness in the foot or toes since the injury. I can still feel everything normally, and there's no tingling or numbness at all.\nDoctor: Have you experienced any numbness, tingling, or weakness in the foot or toes since the injury?\nPatient: No, I haven't experienced any numbness, tingling, or weakness in the foot or toes since the injury. I can still feel everything normally, and there's no tingling or numbness at all.\nDoctor: Have you noticed any changes in the color of your foot or toes since the injury, such as pallor or redness?\nPatient: No, I haven't noticed any changes in the color of my foot or toes since the injury. It looks normal, and there's no pallor or unusual redness that I can see.\nDoctor: Have you experienced any locking, catching, or instability in the ankle joint since the injury?\nPatient: No, I haven't experienced any locking, catching, or instability in the ankle joint since the injury. It feels a little sore and swollen, but it doesn't catch or lock up when I move it.",
+  "reference_so": {
+    "subjective": "Basic information: 36 years old, female, presented with left ankle injury from slipping on ice a couple of days ago, resulting in swelling and pain, difficulty walking.\n\nHistory of present illness: Onset was two days ago due to slipping on ice, which caused twisting of the ankle and a fall. Symptoms include swelling, pain, and difficulty walking. The pain is more of a throbbing and aching feeling, especially on the outside of the ankle. There is no bruising, but there is quite a bit of swelling. The ankle does not look deformed, just really sore and swollen. No locking, catching, or instability in the ankle joint since the injury.\n\nPast history: No history of previous ankle injuries or conditions such as sprains, fractures, or arthritis. No prior imaging or evaluation of this ankle injury.",
+    "objective": "Physical examination: Physical examination reveals tenderness localized to the lateral aspect of the left ankle, with swelling and no visible deformity. Range of motion is limited due to pain. No bruising is observed. Dorsalis pedis and posterior tibial pulses are intact and symmetric bilaterally.\n\nInvestigations: Imaging studies (X-ray) have not been performed yet; pending results."
+  }
+}

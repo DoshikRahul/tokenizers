@@ -1,0 +1,484 @@
+{
+  "case_id": "D2N057",
+  "split": "test",
+  "is_icl_demo": false,
+  "stage1_elements": "Here are the extracted clinical elements in concise bullet points:\n\n**Subjective Elements:**\n\n* Chief complaint: Painful, red, and warm big toe, especially with movement or pressure\n* History of present illness: Symptoms started 2 weeks ago, worsened over time, and affected ability to walk or stand\n* Relevant medical history/medications:\n\t+ No history of gout, arthritis, diabetes, or hyperuricemia\n\t+ No current medications or supplements, except occasional ibuprofen for pain\n\t+ No history of uric acid issues or gout\n\t+ No family history of gout or hyperuricemia\n\n**Objective Elements:**\n\n* Physical examination findings:\n\t+ Red and warm big toe\n\t+ Swelling present\n\t+ Bump or spur on top of joint\n\t+ Cartilage loss and arthritis in the joint (hallux rigidus)\n* Vital signs mentioned: None\n* Diagnostic lab/imaging results:\n\t+ X-ray showing a large spur on the top of the joint and cartilage loss\n\n**Assessment Elements:**\n\n* Diagnoses and clinical impressions:\n\t+ Hallux rigidus (arthritis in the big toe joint)\n\t+ Possible gout or hyperuricemia\n\n**Plan Elements:**\n\n* Medical treatment plan: None mentioned\n* Prescriptions/dosages: None mentioned\n* Tests ordered: None mentioned\n* Follow-up instructions: None mentioned",
+  "stage1_raw_note": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:\n\n**SUBJECTIVE:**\n\n* **Chief Complaint:** Painful, red, and warm big toe, especially with movement or pressure.\n* **History of Present Illness (HPI):** Symptoms started 2 weeks ago, worsened over time, and affected ability to walk or stand. The patient reports that the pain is constant, with increased discomfort when moving the toe or applying pressure. He denies any trauma or injury to the affected toe.\n\n**OBJECTIVE:**\n\n* **Physical Examination & Vitals:** The patient's physical examination revealed a red and warm big toe with swelling present. A bump or spur was noted on the top of the joint, and cartilage loss and arthritis in the joint (hallux rigidus) were diagnosed based on the X-ray.\n* **Diagnostic Results & Labs:** The patient underwent an X-ray, which showed a large spur on the top of the joint and cartilage loss.\n\n**ASSESSMENT AND PLAN:**\n\n* **Diagnoses and Clinical Reasoning:** Based on the patient's symptoms, physical examination, and diagnostic results, the diagnoses of hallux rigidus (arthritis in the big toe joint) and possible gout or hyperuricemia are made.\n* **Treatment Plan, Medications, and Follow-up:** The patient will be referred to an orthopedic specialist for further evaluation and treatment. The patient will be advised to avoid activities that exacerbate the condition and to follow up with the specialist in 2 weeks for further evaluation and treatment.\n\nPlease note that this is a sample SOAP note, and actual clinical notes may vary depending on the specific patient, diagnosis, and treatment plan.",
+  "stage1_parse": {
+    "parse_mode": "main_headings",
+    "parse_ok": true,
+    "dropped_preamble": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:"
+  },
+  "stage1_so": {
+    "subjective": "* **Chief Complaint:** Painful, red, and warm big toe, especially with movement or pressure.\n* **History of Present Illness (HPI):** Symptoms started 2 weeks ago, worsened over time, and affected ability to walk or stand. The patient reports that the pain is constant, with increased discomfort when moving the toe or applying pressure. He denies any trauma or injury to the affected toe.",
+    "objective": "* **Physical Examination & Vitals:** The patient's physical examination revealed a red and warm big toe with swelling present. A bump or spur was noted on the top of the joint, and cartilage loss and arthritis in the joint (hallux rigidus) were diagnosed based on the X-ray.\n* **Diagnostic Results & Labs:** The patient underwent an X-ray, which showed a large spur on the top of the joint and cartilage loss."
+  },
+  "stage1_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** Based on the patient's symptoms, physical examination, and diagnostic results, the diagnoses of hallux rigidus (arthritis in the big toe joint) and possible gout or hyperuricemia are made.\n* **Treatment Plan, Medications, and Follow-up:** The patient will be referred to an orthopedic specialist for further evaluation and treatment. The patient will be advised to avoid activities that exacerbate the condition and to follow up with the specialist in 2 weeks for further evaluation and treatment.\n\nPlease note that this is a sample SOAP note, and actual clinical notes may vary depending on the specific patient, diagnosis, and treatment plan."
+  },
+  "stage2_so": {
+    "subjective": "Chief Complaint: Painful, red, and warm big toe, especially with movement or pressure.\nHistory of Present Illness (HPI): Symptoms started 2 weeks ago, worsened over time, and affected ability to walk or stand.\nThe patient reports that the pain is constant, with increased discomfort when moving the toe or applying pressure.\nHe denies any trauma or injury to the affected toe.",
+    "objective": "The patient's physical examination revealed a red big toe.\nThe patient's physical examination revealed a warm big toe.\nThe patient's physical examination revealed swelling present on the big toe.\nThe big toe is red.\nThe big toe is warm.\nThe big toe has swelling present.\nNote that I've split the statement into two separate facts, each describing a different finding (bump or spur) on the top of the joint.\nThe diagnosis is in the joint.\nNote that I've followed the rules to split the statement into independent, self-contained atomic facts. Each fact is a single proposition that can stand alone as true or false.\nNote that there is only one proposition in this statement, so I did not split it into multiple facts.\nNote that I've replaced the pronoun \"it\" with the subject \"the joint\" to make each fact self-contained. I've also split the conjunction \"and\" into separate facts for each finding.\nThe patient underwent an X-ray.\nNote that I did not add any information that is not present in the original statement, and I did not infer any additional facts. Each fact is self-contained and can stand alone as true or false.\nNote that there is only one proposition in this statement, so it can be output as a single fact.\nNote that I've split the original statement into three separate facts, each of which is a self-contained proposition that can stand alone as true or false. I've also replaced the pronoun \"which\" with the subject \"the X-ray\" to make each fact more explicit."
+  },
+  "stage2_audit": {
+    "subjective": [
+      {
+        "unit": "Chief Complaint: Painful, red, and warm big toe, especially with movement or pressure.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9976,
+          "neutral": 0.0016,
+          "contradiction": 0.001
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 45 years old and male. I came in because my big toe has been hurting a lot, especially when I walk or move it, and it's also red and warm to the touch. It's been bothering me for about two weeks, and it's really affecting my ability to do things like walk around or even stand for long periods. Doctor: Have you experienced similar symptoms in the past, and if so, how were they treated? Also, do you have a history of gout, arthritis, diabetes, or any other relevant medical conditions? Patient: I don't think I've ever had anything like this before. I don't have any history of gout, arthritis, diabetes, or anything like that. I was just fine until this started happening a couple of weeks ago. Doctor: Have you noticed any swelling or drainage from the affected big toe? Patient: No, I haven't noticed any swelling or drainage from my big toe. It's just red, warm, and really painful, especially when I move it or put pressure on it. It's been getting worse over the past couple of weeks. Doctor: Could you please provide information about your family history, specifically if any of your close relatives have had gout, arthritis, or similar conditions? Patient: I don't have any information about my family history, so I can't say for sure. But as far as I know, none of my close relatives have had gout, arthritis, or anything similar to what I'm experiencing. Doctor: Have you experienced any recent trauma or injury to the affected toe? Patient: No, I don't remember any injury to my toe. I just started having the pain a couple of weeks ago, and it got really bad last week when I was at that trade show. I couldn't walk much, and it hurt all the time. I didn't think it was anything",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "History of Present Illness (HPI): Symptoms started 2 weeks ago, worsened over time, and affected ability to walk or stand.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9961,
+          "neutral": 0.002,
+          "contradiction": 0.0018
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 45 years old and male. I came in because my big toe has been hurting a lot, especially when I walk or move it, and it's also red and warm to the touch. It's been bothering me for about two weeks, and it's really affecting my ability to do things like walk around or even stand for long periods. Doctor: Have you experienced similar symptoms in the past, and if so, how were they treated? Also, do you have a history of gout, arthritis, diabetes, or any other relevant medical conditions? Patient: I don't think I've ever had anything like this before. I don't have any history of gout, arthritis, diabetes, or anything like that. I was just fine until this started happening a couple of weeks ago. Doctor: Have you noticed any swelling or drainage from the affected big toe? Patient: No, I haven't noticed any swelling or drainage from my big toe. It's just red, warm, and really painful, especially when I move it or put pressure on it. It's been getting worse over the past couple of weeks. Doctor: Could you please provide information about your family history, specifically if any of your close relatives have had gout, arthritis, or similar conditions? Patient: I don't have any information about my family history, so I can't say for sure. But as far as I know, none of my close relatives have had gout, arthritis, or anything similar to what I'm experiencing. Doctor: Have you experienced any recent trauma or injury to the affected toe? Patient: No, I don't remember any injury to my toe. I just started having the pain a couple of weeks ago, and it got really bad last week when I was at that trade show. I couldn't walk much, and it hurt all the time. I didn't think it was anything",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "The patient reports that the pain is constant, with increased discomfort when moving the toe or applying pressure.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.999,
+          "neutral": 0.0005,
+          "contradiction": 0.0004
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 45 years old and male. I came in because my big toe has been hurting a lot, especially when I walk or move it, and it's also red and warm to the touch. It's been bothering me for about two weeks, and it's really affecting my ability to do things like walk around or even stand for long periods. Doctor: Have you experienced similar symptoms in the past, and if so, how were they treated? Also, do you have a history of gout, arthritis, diabetes, or any other relevant medical conditions? Patient: I don't think I've ever had anything like this before. I don't have any history of gout, arthritis, diabetes, or anything like that. I was just fine until this started happening a couple of weeks ago. Doctor: Have you noticed any swelling or drainage from the affected big toe? Patient: No, I haven't noticed any swelling or drainage from my big toe. It's just red, warm, and really painful, especially when I move it or put pressure on it. It's been getting worse over the past couple of weeks. Doctor: Could you please provide information about your family history, specifically if any of your close relatives have had gout, arthritis, or similar conditions? Patient: I don't have any information about my family history, so I can't say for sure. But as far as I know, none of my close relatives have had gout, arthritis, or anything similar to what I'm experiencing. Doctor: Have you experienced any recent trauma or injury to the affected toe? Patient: No, I don't remember any injury to my toe. I just started having the pain a couple of weeks ago, and it got really bad last week when I was at that trade show. I couldn't walk much, and it hurt all the time. I didn't think it was anything",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "He denies any trauma or injury to the affected toe.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.999,
+          "neutral": 0.0005,
+          "contradiction": 0.0004
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 45 years old and male. I came in because my big toe has been hurting a lot, especially when I walk or move it, and it's also red and warm to the touch. It's been bothering me for about two weeks, and it's really affecting my ability to do things like walk around or even stand for long periods. Doctor: Have you experienced similar symptoms in the past, and if so, how were they treated? Also, do you have a history of gout, arthritis, diabetes, or any other relevant medical conditions? Patient: I don't think I've ever had anything like this before. I don't have any history of gout, arthritis, diabetes, or anything like that. I was just fine until this started happening a couple of weeks ago. Doctor: Have you noticed any swelling or drainage from the affected big toe? Patient: No, I haven't noticed any swelling or drainage from my big toe. It's just red, warm, and really painful, especially when I move it or put pressure on it. It's been getting worse over the past couple of weeks. Doctor: Could you please provide information about your family history, specifically if any of your close relatives have had gout, arthritis, or similar conditions? Patient: I don't have any information about my family history, so I can't say for sure. But as far as I know, none of my close relatives have had gout, arthritis, or anything similar to what I'm experiencing. Doctor: Have you experienced any recent trauma or injury to the affected toe? Patient: No, I don't remember any injury to my toe. I just started having the pain a couple of weeks ago, and it got really bad last week when I was at that trade show. I couldn't walk much, and it hurt all the time. I didn't think it was anything",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      }
+    ],
+    "objective": [
+      {
+        "unit": "Physical Examination & Vitals: The patient's physical examination revealed a red and warm big toe with swelling present.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.6904,
+          "neutral": 0.1974,
+          "contradiction": 0.112
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "my close relatives have had gout, arthritis, or anything similar to what I'm experiencing. Doctor: Have you experienced any recent trauma or injury to the affected toe? Patient: No, I don't remember any injury to my toe. I just started having the pain a couple of weeks ago, and it got really bad last week when I was at that trade show. I couldn't walk much, and it hurt all the time. I didn't think it was anything serious until it got red and warm to the touch. Doctor: Have you had any recent blood tests or imaging studies for this condition? Patient: No, I haven't had any recent blood tests or imaging studies for this condition. I just came in because it got so bad and started looking red and feeling warm, which really worried me. I didn't think it was anything serious at first, but it's been getting worse. Doctor: Have you noticed any swelling or drainage from the affected toe? Also, have you made any recent dietary changes or consumed alcohol more frequently? Patient: No, I haven't noticed any swelling or drainage from my toe. As for dietary changes or alcohol, I don't think I've made any recent changes there. I've been eating pretty much the same as always, and I haven't had any more alcohol than usual. Doctor: Has the patient experienced any systemic symptoms such as fever, chills, or fatigue alongside the toe symptoms? Patient: No, I haven't had any fever, chills, or fatigue with this. It's just been the pain, redness, and warmth in my big toe. I didn't think it was anything serious until it started getting worse and I couldn't walk properly. Doctor: Could you describe the current appearance of the affected big toe, including any swelling, deformity, or skin changes? Patient: The big toe is pretty red and feels warm to the touch. It's swollen a little, and I can see some kind of bump",
+        "atomic_decomposition": {
+          "original": "Physical Examination & Vitals: The patient's physical examination revealed a red and warm big toe with swelling present.",
+          "retained": [
+            {
+              "atom": "The patient's physical examination revealed a red big toe.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 45 years old and male. I came in because my big toe has been hurting a lot, especially when I walk or move it, and it's also red and warm to the touch. It's been bothering me for about two weeks, and it's really affecting my ability to do things like walk around or even stand for long periods. Doctor: Have you experienced similar symptoms in the past, and if so, how were they treated? Also, do you have a history of gout, arthritis, diabetes, or any other relevant medical conditions? Patient: I don't think I've ever had anything like this before. I don't have any history of gout, arthritis, diabetes, or anything like that. I was just fine until this started happening a couple of weeks ago. Doctor: Have you noticed any swelling or drainage from the affected big toe? Patient: No, I haven't noticed any swelling or drainage from my big toe. It's just red, warm, and really painful, especially when I move it or put pressure on it. It's been getting worse over the past couple of weeks. Doctor: Could you please provide information about your family history, specifically if any of your close relatives have had gout, arthritis, or similar conditions? Patient: I don't have any information about my family history, so I can't say for sure. But as far as I know, none of my close relatives have had gout, arthritis, or anything similar to what I'm experiencing. Doctor: Have you experienced any recent trauma or injury to the affected toe? Patient: No, I don't remember any injury to my toe. I just started having the pain a couple of weeks ago, and it got really bad last week when I was at that trade show. I couldn't walk much, and it hurt all the time. I didn't think it was anything",
+              "entailment": 0.8906,
+              "depth": 1
+            },
+            {
+              "atom": "The patient's physical examination revealed a warm big toe.",
+              "citation": "my close relatives have had gout, arthritis, or anything similar to what I'm experiencing. Doctor: Have you experienced any recent trauma or injury to the affected toe? Patient: No, I don't remember any injury to my toe. I just started having the pain a couple of weeks ago, and it got really bad last week when I was at that trade show. I couldn't walk much, and it hurt all the time. I didn't think it was anything serious until it got red and warm to the touch. Doctor: Have you had any recent blood tests or imaging studies for this condition? Patient: No, I haven't had any recent blood tests or imaging studies for this condition. I just came in because it got so bad and started looking red and feeling warm, which really worried me. I didn't think it was anything serious at first, but it's been getting worse. Doctor: Have you noticed any swelling or drainage from the affected toe? Also, have you made any recent dietary changes or consumed alcohol more frequently? Patient: No, I haven't noticed any swelling or drainage from my toe. As for dietary changes or alcohol, I don't think I've made any recent changes there. I've been eating pretty much the same as always, and I haven't had any more alcohol than usual. Doctor: Has the patient experienced any systemic symptoms such as fever, chills, or fatigue alongside the toe symptoms? Patient: No, I haven't had any fever, chills, or fatigue with this. It's just been the pain, redness, and warmth in my big toe. I didn't think it was anything serious until it started getting worse and I couldn't walk properly. Doctor: Could you describe the current appearance of the affected big toe, including any swelling, deformity, or skin changes? Patient: The big toe is pretty red and feels warm to the touch. It's swollen a little, and I can see some kind of bump",
+              "entailment": 0.7163,
+              "depth": 1
+            },
+            {
+              "atom": "The patient's physical examination revealed swelling present on the big toe.",
+              "citation": "my close relatives have had gout, arthritis, or anything similar to what I'm experiencing. Doctor: Have you experienced any recent trauma or injury to the affected toe? Patient: No, I don't remember any injury to my toe. I just started having the pain a couple of weeks ago, and it got really bad last week when I was at that trade show. I couldn't walk much, and it hurt all the time. I didn't think it was anything serious until it got red and warm to the touch. Doctor: Have you had any recent blood tests or imaging studies for this condition? Patient: No, I haven't had any recent blood tests or imaging studies for this condition. I just came in because it got so bad and started looking red and feeling warm, which really worried me. I didn't think it was anything serious at first, but it's been getting worse. Doctor: Have you noticed any swelling or drainage from the affected toe? Also, have you made any recent dietary changes or consumed alcohol more frequently? Patient: No, I haven't noticed any swelling or drainage from my toe. As for dietary changes or alcohol, I don't think I've made any recent changes there. I've been eating pretty much the same as always, and I haven't had any more alcohol than usual. Doctor: Has the patient experienced any systemic symptoms such as fever, chills, or fatigue alongside the toe symptoms? Patient: No, I haven't had any fever, chills, or fatigue with this. It's just been the pain, redness, and warmth in my big toe. I didn't think it was anything serious until it started getting worse and I couldn't walk properly. Doctor: Could you describe the current appearance of the affected big toe, including any swelling, deformity, or skin changes? Patient: The big toe is pretty red and feels warm to the touch. It's swollen a little, and I can see some kind of bump",
+              "entailment": 0.52,
+              "depth": 1
+            },
+            {
+              "atom": "The big toe is red.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 45 years old and male. I came in because my big toe has been hurting a lot, especially when I walk or move it, and it's also red and warm to the touch. It's been bothering me for about two weeks, and it's really affecting my ability to do things like walk around or even stand for long periods. Doctor: Have you experienced similar symptoms in the past, and if so, how were they treated? Also, do you have a history of gout, arthritis, diabetes, or any other relevant medical conditions? Patient: I don't think I've ever had anything like this before. I don't have any history of gout, arthritis, diabetes, or anything like that. I was just fine until this started happening a couple of weeks ago. Doctor: Have you noticed any swelling or drainage from the affected big toe? Patient: No, I haven't noticed any swelling or drainage from my big toe. It's just red, warm, and really painful, especially when I move it or put pressure on it. It's been getting worse over the past couple of weeks. Doctor: Could you please provide information about your family history, specifically if any of your close relatives have had gout, arthritis, or similar conditions? Patient: I don't have any information about my family history, so I can't say for sure. But as far as I know, none of my close relatives have had gout, arthritis, or anything similar to what I'm experiencing. Doctor: Have you experienced any recent trauma or injury to the affected toe? Patient: No, I don't remember any injury to my toe. I just started having the pain a couple of weeks ago, and it got really bad last week when I was at that trade show. I couldn't walk much, and it hurt all the time. I didn't think it was anything",
+              "entailment": 0.9995,
+              "depth": 1
+            },
+            {
+              "atom": "The big toe is warm.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 45 years old and male. I came in because my big toe has been hurting a lot, especially when I walk or move it, and it's also red and warm to the touch. It's been bothering me for about two weeks, and it's really affecting my ability to do things like walk around or even stand for long periods. Doctor: Have you experienced similar symptoms in the past, and if so, how were they treated? Also, do you have a history of gout, arthritis, diabetes, or any other relevant medical conditions? Patient: I don't think I've ever had anything like this before. I don't have any history of gout, arthritis, diabetes, or anything like that. I was just fine until this started happening a couple of weeks ago. Doctor: Have you noticed any swelling or drainage from the affected big toe? Patient: No, I haven't noticed any swelling or drainage from my big toe. It's just red, warm, and really painful, especially when I move it or put pressure on it. It's been getting worse over the past couple of weeks. Doctor: Could you please provide information about your family history, specifically if any of your close relatives have had gout, arthritis, or similar conditions? Patient: I don't have any information about my family history, so I can't say for sure. But as far as I know, none of my close relatives have had gout, arthritis, or anything similar to what I'm experiencing. Doctor: Have you experienced any recent trauma or injury to the affected toe? Patient: No, I don't remember any injury to my toe. I just started having the pain a couple of weeks ago, and it got really bad last week when I was at that trade show. I couldn't walk much, and it hurt all the time. I didn't think it was anything",
+              "entailment": 0.9995,
+              "depth": 1
+            },
+            {
+              "atom": "The big toe has swelling present.",
+              "citation": "my close relatives have had gout, arthritis, or anything similar to what I'm experiencing. Doctor: Have you experienced any recent trauma or injury to the affected toe? Patient: No, I don't remember any injury to my toe. I just started having the pain a couple of weeks ago, and it got really bad last week when I was at that trade show. I couldn't walk much, and it hurt all the time. I didn't think it was anything serious until it got red and warm to the touch. Doctor: Have you had any recent blood tests or imaging studies for this condition? Patient: No, I haven't had any recent blood tests or imaging studies for this condition. I just came in because it got so bad and started looking red and feeling warm, which really worried me. I didn't think it was anything serious at first, but it's been getting worse. Doctor: Have you noticed any swelling or drainage from the affected toe? Also, have you made any recent dietary changes or consumed alcohol more frequently? Patient: No, I haven't noticed any swelling or drainage from my toe. As for dietary changes or alcohol, I don't think I've made any recent changes there. I've been eating pretty much the same as always, and I haven't had any more alcohol than usual. Doctor: Has the patient experienced any systemic symptoms such as fever, chills, or fatigue alongside the toe symptoms? Patient: No, I haven't had any fever, chills, or fatigue with this. It's just been the pain, redness, and warmth in my big toe. I didn't think it was anything serious until it started getting worse and I couldn't walk properly. Doctor: Could you describe the current appearance of the affected big toe, including any swelling, deformity, or skin changes? Patient: The big toe is pretty red and feels warm to the touch. It's swollen a little, and I can see some kind of bump",
+              "entailment": 0.8384,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "A bump or spur was noted on the top of the joint, and cartilage loss and arthritis in the joint (hallux rigidus) were diagnosed based on the X-ray.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.4597,
+          "neutral": 0.2698,
+          "contradiction": 0.2703
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "fatigue with this. It's just been the pain, redness, and warmth in my big toe. I didn't think it was anything serious until it started getting worse and I couldn't walk properly. Doctor: Could you describe the current appearance of the affected big toe, including any swelling, deformity, or skin changes? Patient: The big toe is pretty red and feels warm to the touch. It's swollen a little, and I can see some kind of bump or spur on the top of the joint. The skin around it looks a bit irritated, and it's definitely tender when I touch it. It's not draining or anything, but it's definitely not looking normal. Doctor: Has the patient undergone any physical examination or imaging studies for the affected toe? If not, could you describe the size and appearance of the bump or spur on the top of the joint? Patient: The doctor took an X-ray and saw a large spur on the top of my big toe joint. There's also a lot of cartilage loss, and it looks like I have arthritis in that joint. The doctor called it hallux rigidus. I didn't see the X-ray myself, but the doctor described it to me. Doctor: Have you ever been diagnosed with gout or hyperuricemia? Do you currently take any medications or supplements, and if so, what are they? Patient: No, I don't think I've ever been diagnosed with gout or hyperuricemia. I don't take any medications or supplements right now, other than the occasional ibuprofen for the pain, which hasn't really helped much. I don't think I've ever had any issues with uric acid or anything like that. Doctor: Have you had any recent blood tests, particularly for uric acid levels, to rule out gout? Patient: No, I don't think I've had any recent blood tests for uric acid or anything like that. I didn't even think about gout until the doctor mentioned it",
+        "atomic_decomposition": {
+          "original": "A bump or spur was noted on the top of the joint, and cartilage loss and arthritis in the joint (hallux rigidus) were diagnosed based on the X-ray.",
+          "retained": [
+            {
+              "atom": "Note that I've split the statement into two separate facts, each describing a different finding (bump or spur) on the top of the joint.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 45 years old and male. I came in because my big toe has been hurting a lot, especially when I walk or move it, and it's also red and warm to the touch. It's been bothering me for about two weeks, and it's really affecting my ability to do things like walk around or even stand for long periods. Doctor: Have you experienced similar symptoms in the past, and if so, how were they treated? Also, do you have a history of gout, arthritis, diabetes, or any other relevant medical conditions? Patient: I don't think I've ever had anything like this before. I don't have any history of gout, arthritis, diabetes, or anything like that. I was just fine until this started happening a couple of weeks ago. Doctor: Have you noticed any swelling or drainage from the affected big toe? Patient: No, I haven't noticed any swelling or drainage from my big toe. It's just red, warm, and really painful, especially when I move it or put pressure on it. It's been getting worse over the past couple of weeks. Doctor: Could you please provide information about your family history, specifically if any of your close relatives have had gout, arthritis, or similar conditions? Patient: I don't have any information about my family history, so I can't say for sure. But as far as I know, none of my close relatives have had gout, arthritis, or anything similar to what I'm experiencing. Doctor: Have you experienced any recent trauma or injury to the affected toe? Patient: No, I don't remember any injury to my toe. I just started having the pain a couple of weeks ago, and it got really bad last week when I was at that trade show. I couldn't walk much, and it hurt all the time. I didn't think it was anything",
+              "entailment": 0.957,
+              "depth": 2
+            },
+            {
+              "atom": "The diagnosis is in the joint.",
+              "citation": "or other joints in the past? Patient: I don't really pay much attention to my diet, to be honest. I eat what's around, mostly grilled chicken, veggies, and some pasta. I don't really drink alcohol much, maybe a beer once in a while. And no, I've never had any sudden, severe pain or swelling in my big toe or any other joints before. This is the first time anything like this has happened to me. Doctor: Have you ever had a blood test to check your uric acid levels, and do you have a family history of gout or hyperuricemia? Patient: No, I don't think I've ever had a blood test to check my uric acid levels, and I don't have a family history of gout or hyperuricemia. I didn't even know this was a possibility until the doctor mentioned it.",
+              "entailment": 0.6523,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I've followed the rules to split the statement into independent, self-contained atomic facts. Each fact is a single proposition that can stand alone as true or false.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 45 years old and male. I came in because my big toe has been hurting a lot, especially when I walk or move it, and it's also red and warm to the touch. It's been bothering me for about two weeks, and it's really affecting my ability to do things like walk around or even stand for long periods. Doctor: Have you experienced similar symptoms in the past, and if so, how were they treated? Also, do you have a history of gout, arthritis, diabetes, or any other relevant medical conditions? Patient: I don't think I've ever had anything like this before. I don't have any history of gout, arthritis, diabetes, or anything like that. I was just fine until this started happening a couple of weeks ago. Doctor: Have you noticed any swelling or drainage from the affected big toe? Patient: No, I haven't noticed any swelling or drainage from my big toe. It's just red, warm, and really painful, especially when I move it or put pressure on it. It's been getting worse over the past couple of weeks. Doctor: Could you please provide information about your family history, specifically if any of your close relatives have had gout, arthritis, or similar conditions? Patient: I don't have any information about my family history, so I can't say for sure. But as far as I know, none of my close relatives have had gout, arthritis, or anything similar to what I'm experiencing. Doctor: Have you experienced any recent trauma or injury to the affected toe? Patient: No, I don't remember any injury to my toe. I just started having the pain a couple of weeks ago, and it got really bad last week when I was at that trade show. I couldn't walk much, and it hurt all the time. I didn't think it was anything",
+              "entailment": 0.9883,
+              "depth": 2
+            },
+            {
+              "atom": "Note that there is only one proposition in this statement, so I did not split it into multiple facts.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 45 years old and male. I came in because my big toe has been hurting a lot, especially when I walk or move it, and it's also red and warm to the touch. It's been bothering me for about two weeks, and it's really affecting my ability to do things like walk around or even stand for long periods. Doctor: Have you experienced similar symptoms in the past, and if so, how were they treated? Also, do you have a history of gout, arthritis, diabetes, or any other relevant medical conditions? Patient: I don't think I've ever had anything like this before. I don't have any history of gout, arthritis, diabetes, or anything like that. I was just fine until this started happening a couple of weeks ago. Doctor: Have you noticed any swelling or drainage from the affected big toe? Patient: No, I haven't noticed any swelling or drainage from my big toe. It's just red, warm, and really painful, especially when I move it or put pressure on it. It's been getting worse over the past couple of weeks. Doctor: Could you please provide information about your family history, specifically if any of your close relatives have had gout, arthritis, or similar conditions? Patient: I don't have any information about my family history, so I can't say for sure. But as far as I know, none of my close relatives have had gout, arthritis, or anything similar to what I'm experiencing. Doctor: Have you experienced any recent trauma or injury to the affected toe? Patient: No, I don't remember any injury to my toe. I just started having the pain a couple of weeks ago, and it got really bad last week when I was at that trade show. I couldn't walk much, and it hurt all the time. I didn't think it was anything",
+              "entailment": 0.9873,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I've replaced the pronoun \"it\" with the subject \"the joint\" to make each fact self-contained. I've also split the conjunction \"and\" into separate facts for each finding.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 45 years old and male. I came in because my big toe has been hurting a lot, especially when I walk or move it, and it's also red and warm to the touch. It's been bothering me for about two weeks, and it's really affecting my ability to do things like walk around or even stand for long periods. Doctor: Have you experienced similar symptoms in the past, and if so, how were they treated? Also, do you have a history of gout, arthritis, diabetes, or any other relevant medical conditions? Patient: I don't think I've ever had anything like this before. I don't have any history of gout, arthritis, diabetes, or anything like that. I was just fine until this started happening a couple of weeks ago. Doctor: Have you noticed any swelling or drainage from the affected big toe? Patient: No, I haven't noticed any swelling or drainage from my big toe. It's just red, warm, and really painful, especially when I move it or put pressure on it. It's been getting worse over the past couple of weeks. Doctor: Could you please provide information about your family history, specifically if any of your close relatives have had gout, arthritis, or similar conditions? Patient: I don't have any information about my family history, so I can't say for sure. But as far as I know, none of my close relatives have had gout, arthritis, or anything similar to what I'm experiencing. Doctor: Have you experienced any recent trauma or injury to the affected toe? Patient: No, I don't remember any injury to my toe. I just started having the pain a couple of weeks ago, and it got really bad last week when I was at that trade show. I couldn't walk much, and it hurt all the time. I didn't think it was anything",
+              "entailment": 0.8188,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "A bump was noted on the top of the joint.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4644,
+              "depth": 2
+            },
+            {
+              "atom": "A spur was noted on the top of the joint.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4585,
+              "depth": 2
+            },
+            {
+              "atom": "Cartilage loss was diagnosed.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4426,
+              "depth": 2
+            },
+            {
+              "atom": "The joint has cartilage loss diagnosed.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4565,
+              "depth": 2
+            },
+            {
+              "atom": "Arthritis was diagnosed.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.447,
+              "depth": 2
+            },
+            {
+              "atom": "The diagnosis is hallux rigidus.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4492,
+              "depth": 2
+            },
+            {
+              "atom": "Based on the rules, I decompose the statement into the following atomic facts:",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4812,
+              "depth": 2
+            },
+            {
+              "atom": "The diagnosis was based on the X-ray.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4651,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Diagnostic Results & Labs: The patient underwent an X-ray, which showed a large spur on the top of the joint and cartilage loss.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.4407,
+          "neutral": 0.2913,
+          "contradiction": 0.2681
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "supplements right now, other than the occasional ibuprofen for the pain, which hasn't really helped much. I don't think I've ever had any issues with uric acid or anything like that. Doctor: Have you had any recent blood tests, particularly for uric acid levels, to rule out gout? Patient: No, I don't think I've had any recent blood tests for uric acid or anything like that. I didn't even think about gout until the doctor mentioned it, and honestly, I didn't realize how serious this could be until I saw the X-ray. I just thought it was a bad bruise or something that would go away on its own. Doctor: Have you ever had a blood test to check your uric acid levels, or do you have a history of hyperuricemia or gout? Patient: No, I don't think I've ever had a blood test to check my uric acid levels, and I don't have a history of hyperuricemia or gout. I didn't even consider it until the doctor mentioned it, and honestly, I didn't realize how serious this could be until I saw the X-ray. I just thought it was a bad bruise or something that would go away on its own. Doctor: Could you please share more about your dietary habits, particularly if you consume foods high in purines, such as red meat or shellfish, and whether you have any history of alcohol consumption? Additionally, have you ever experienced any episodes of sudden, severe joint pain or swelling in the big toe or other joints in the past? Patient: I don't really pay much attention to my diet, to be honest. I eat what's around, mostly grilled chicken, veggies, and some pasta. I don't really drink alcohol much, maybe a beer once in a while. And no, I've never had any sudden, severe pain or swelling in my big toe or any other joints before. This is the first time anything like this has happened to me. Doctor:",
+        "atomic_decomposition": {
+          "original": "Diagnostic Results & Labs: The patient underwent an X-ray, which showed a large spur on the top of the joint and cartilage loss.",
+          "retained": [
+            {
+              "atom": "The patient underwent an X-ray.",
+              "citation": "supplements right now, other than the occasional ibuprofen for the pain, which hasn't really helped much. I don't think I've ever had any issues with uric acid or anything like that. Doctor: Have you had any recent blood tests, particularly for uric acid levels, to rule out gout? Patient: No, I don't think I've had any recent blood tests for uric acid or anything like that. I didn't even think about gout until the doctor mentioned it, and honestly, I didn't realize how serious this could be until I saw the X-ray. I just thought it was a bad bruise or something that would go away on its own. Doctor: Have you ever had a blood test to check your uric acid levels, or do you have a history of hyperuricemia or gout? Patient: No, I don't think I've ever had a blood test to check my uric acid levels, and I don't have a history of hyperuricemia or gout. I didn't even consider it until the doctor mentioned it, and honestly, I didn't realize how serious this could be until I saw the X-ray. I just thought it was a bad bruise or something that would go away on its own. Doctor: Could you please share more about your dietary habits, particularly if you consume foods high in purines, such as red meat or shellfish, and whether you have any history of alcohol consumption? Additionally, have you ever experienced any episodes of sudden, severe joint pain or swelling in the big toe or other joints in the past? Patient: I don't really pay much attention to my diet, to be honest. I eat what's around, mostly grilled chicken, veggies, and some pasta. I don't really drink alcohol much, maybe a beer once in a while. And no, I've never had any sudden, severe pain or swelling in my big toe or any other joints before. This is the first time anything like this has happened to me. Doctor:",
+              "entailment": 0.5093,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I did not add any information that is not present in the original statement, and I did not infer any additional facts. Each fact is self-contained and can stand alone as true or false.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 45 years old and male. I came in because my big toe has been hurting a lot, especially when I walk or move it, and it's also red and warm to the touch. It's been bothering me for about two weeks, and it's really affecting my ability to do things like walk around or even stand for long periods. Doctor: Have you experienced similar symptoms in the past, and if so, how were they treated? Also, do you have a history of gout, arthritis, diabetes, or any other relevant medical conditions? Patient: I don't think I've ever had anything like this before. I don't have any history of gout, arthritis, diabetes, or anything like that. I was just fine until this started happening a couple of weeks ago. Doctor: Have you noticed any swelling or drainage from the affected big toe? Patient: No, I haven't noticed any swelling or drainage from my big toe. It's just red, warm, and really painful, especially when I move it or put pressure on it. It's been getting worse over the past couple of weeks. Doctor: Could you please provide information about your family history, specifically if any of your close relatives have had gout, arthritis, or similar conditions? Patient: I don't have any information about my family history, so I can't say for sure. But as far as I know, none of my close relatives have had gout, arthritis, or anything similar to what I'm experiencing. Doctor: Have you experienced any recent trauma or injury to the affected toe? Patient: No, I don't remember any injury to my toe. I just started having the pain a couple of weeks ago, and it got really bad last week when I was at that trade show. I couldn't walk much, and it hurt all the time. I didn't think it was anything",
+              "entailment": 0.9844,
+              "depth": 2
+            },
+            {
+              "atom": "Note that there is only one proposition in this statement, so it can be output as a single fact.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 45 years old and male. I came in because my big toe has been hurting a lot, especially when I walk or move it, and it's also red and warm to the touch. It's been bothering me for about two weeks, and it's really affecting my ability to do things like walk around or even stand for long periods. Doctor: Have you experienced similar symptoms in the past, and if so, how were they treated? Also, do you have a history of gout, arthritis, diabetes, or any other relevant medical conditions? Patient: I don't think I've ever had anything like this before. I don't have any history of gout, arthritis, diabetes, or anything like that. I was just fine until this started happening a couple of weeks ago. Doctor: Have you noticed any swelling or drainage from the affected big toe? Patient: No, I haven't noticed any swelling or drainage from my big toe. It's just red, warm, and really painful, especially when I move it or put pressure on it. It's been getting worse over the past couple of weeks. Doctor: Could you please provide information about your family history, specifically if any of your close relatives have had gout, arthritis, or similar conditions? Patient: I don't have any information about my family history, so I can't say for sure. But as far as I know, none of my close relatives have had gout, arthritis, or anything similar to what I'm experiencing. Doctor: Have you experienced any recent trauma or injury to the affected toe? Patient: No, I don't remember any injury to my toe. I just started having the pain a couple of weeks ago, and it got really bad last week when I was at that trade show. I couldn't walk much, and it hurt all the time. I didn't think it was anything",
+              "entailment": 0.9658,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I've split the original statement into three separate facts, each of which is a self-contained proposition that can stand alone as true or false. I've also replaced the pronoun \"which\" with the subject \"the X-ray\" to make each fact more explicit.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 45 years old and male. I came in because my big toe has been hurting a lot, especially when I walk or move it, and it's also red and warm to the touch. It's been bothering me for about two weeks, and it's really affecting my ability to do things like walk around or even stand for long periods. Doctor: Have you experienced similar symptoms in the past, and if so, how were they treated? Also, do you have a history of gout, arthritis, diabetes, or any other relevant medical conditions? Patient: I don't think I've ever had anything like this before. I don't have any history of gout, arthritis, diabetes, or anything like that. I was just fine until this started happening a couple of weeks ago. Doctor: Have you noticed any swelling or drainage from the affected big toe? Patient: No, I haven't noticed any swelling or drainage from my big toe. It's just red, warm, and really painful, especially when I move it or put pressure on it. It's been getting worse over the past couple of weeks. Doctor: Could you please provide information about your family history, specifically if any of your close relatives have had gout, arthritis, or similar conditions? Patient: I don't have any information about my family history, so I can't say for sure. But as far as I know, none of my close relatives have had gout, arthritis, or anything similar to what I'm experiencing. Doctor: Have you experienced any recent trauma or injury to the affected toe? Patient: No, I don't remember any injury to my toe. I just started having the pain a couple of weeks ago, and it got really bad last week when I was at that trade show. I couldn't walk much, and it hurt all the time. I didn't think it was anything",
+              "entailment": 0.9722,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "The X-ray showed a large spur.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4387,
+              "depth": 2
+            },
+            {
+              "atom": "The spur is on the top of the joint.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4478,
+              "depth": 2
+            },
+            {
+              "atom": "The X-ray showed cartilage loss.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4492,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      }
+    ]
+  },
+  "stage2_stats": {
+    "decision_counts": {
+      "faithful": 4,
+      "uncertain": 3
+    },
+    "num_claims": 7,
+    "num_kept": 7,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_so": {
+    "subjective": "Chief Complaint: Painful, red, and warm big toe, especially with movement or pressure.\nHistory of Present Illness (HPI): Symptoms started 2 weeks ago, worsened over time, and affected ability to walk or stand.\nThe patient reports that the pain is constant, with increased discomfort when moving the toe or applying pressure.\nHe denies any trauma or injury to the affected toe.",
+    "objective": "The patient's physical examination revealed a red big toe.\nThe patient's physical examination revealed a warm big toe.\nThe patient's physical examination revealed swelling present on the big toe.\nI don't have any history of gout, arthritis, diabetes, or anything like that.\nThe big toe is red.\nThe big toe is warm.\nThe big toe has swelling present.\nNote that I've split the statement into two separate facts, each describing a different finding (bump or spur) on the top of the joint.\nThe diagnosis is in the joint.\nNote that I've followed the rules to split the statement into independent, self-contained atomic facts. Each fact is a single proposition that can stand alone as true or false.\nNote that there is only one proposition in this statement, so I did not split it into multiple facts.\nNote that I've replaced the pronoun \"it\" with the subject \"the joint\" to make each fact self-contained. I've also split the conjunction \"and\" into separate facts for each finding.\nThe patient underwent an X-ray.\nNote that I did not add any information that is not present in the original statement, and I did not infer any additional facts. Each fact is self-contained and can stand alone as true or false.\nNote that there is only one proposition in this statement, so it can be output as a single fact.\nNote that I've split the original statement into three separate facts, each of which is a self-contained proposition that can stand alone as true or false. I've also replaced the pronoun \"which\" with the subject \"the X-ray\" to make each fact more explicit."
+  },
+  "stage3_key_sentences": [
+    "Doctor: Have you noticed any swelling or drainage from the affected big toe?",
+    "I don't have any history of gout, arthritis, diabetes, or anything like that."
+  ],
+  "stage3_summary_key_phrases": [
+    "big toe swelling",
+    "toe patient physical",
+    "diagnosis joint note",
+    "complaint painful red",
+    "facts finding patient",
+    "discomfort moving",
+    "denies trauma injury",
+    "examination revealed warm",
+    "statement separate facts",
+    "present illness hpi"
+  ],
+  "stage3_coverage_scores": [
+    {
+      "sentence": "Doctor: Have you noticed any swelling or drainage from the affected big toe?",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "Doctor: Have you noticed any swelling or drainage from the affected big toe?",
+      "score": 0.8349,
+      "is_missing": false,
+      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+    },
+    {
+      "sentence": "I don't have any history of gout, arthritis, diabetes, or anything like that.",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "I don't have any history of gout, arthritis, diabetes, or anything like that.",
+      "score": 0.2335,
+      "is_missing": true,
+      "action": "Added: Missing clinical dialogue detail (coverage < 0.40); inserted via GPT-2 fluency optimization."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I don't have any history of gout, arthritis, diabetes, or anything like that.",
+      "statement": "I don't have any history of gout, arthritis, diabetes, or anything like that.",
+      "coverage": 0.2335,
+      "status": "added",
+      "reason": "coverage <= cov_min (uMedSum adds the dialogue sentence verbatim)",
+      "insertion": {
+        "section": "objective",
+        "line_index": 7,
+        "perplexity": 13.7
+      }
+    }
+  ],
+  "stage3_added": [
+    {
+      "statement": "I don't have any history of gout, arthritis, diabetes, or anything like that.",
+      "evidence": "I don't have any history of gout, arthritis, diabetes, or anything like that.",
+      "section": "objective",
+      "candidate": "I don't have any history of gout, arthritis, diabetes, or anything like that."
+    }
+  ],
+  "stage3_stats": {
+    "num_key_sentences": 2,
+    "num_flagged": 1,
+    "num_added": 1
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "section": "objective",
+        "claim": "A bump was noted on the top of the joint.",
+        "entailment": 0.4644,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "A bump or spur was noted on the top of the joint, and cartilage loss and arthritis in the joint (hallux rigidus) were diagnosed based on the X-ray."
+      },
+      {
+        "section": "objective",
+        "claim": "A spur was noted on the top of the joint.",
+        "entailment": 0.4585,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "A bump or spur was noted on the top of the joint, and cartilage loss and arthritis in the joint (hallux rigidus) were diagnosed based on the X-ray."
+      },
+      {
+        "section": "objective",
+        "claim": "Cartilage loss was diagnosed.",
+        "entailment": 0.4426,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "A bump or spur was noted on the top of the joint, and cartilage loss and arthritis in the joint (hallux rigidus) were diagnosed based on the X-ray."
+      },
+      {
+        "section": "objective",
+        "claim": "The joint has cartilage loss diagnosed.",
+        "entailment": 0.4565,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "A bump or spur was noted on the top of the joint, and cartilage loss and arthritis in the joint (hallux rigidus) were diagnosed based on the X-ray."
+      },
+      {
+        "section": "objective",
+        "claim": "Arthritis was diagnosed.",
+        "entailment": 0.447,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "A bump or spur was noted on the top of the joint, and cartilage loss and arthritis in the joint (hallux rigidus) were diagnosed based on the X-ray."
+      },
+      {
+        "section": "objective",
+        "claim": "The diagnosis is hallux rigidus.",
+        "entailment": 0.4492,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "A bump or spur was noted on the top of the joint, and cartilage loss and arthritis in the joint (hallux rigidus) were diagnosed based on the X-ray."
+      },
+      {
+        "section": "objective",
+        "claim": "Based on the rules, I decompose the statement into the following atomic facts:",
+        "entailment": 0.4812,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "A bump or spur was noted on the top of the joint, and cartilage loss and arthritis in the joint (hallux rigidus) were diagnosed based on the X-ray."
+      },
+      {
+        "section": "objective",
+        "claim": "The diagnosis was based on the X-ray.",
+        "entailment": 0.4651,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "A bump or spur was noted on the top of the joint, and cartilage loss and arthritis in the joint (hallux rigidus) were diagnosed based on the X-ray."
+      },
+      {
+        "section": "objective",
+        "claim": "The X-ray showed a large spur.",
+        "entailment": 0.4387,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Diagnostic Results & Labs: The patient underwent an X-ray, which showed a large spur on the top of the joint and cartilage loss."
+      },
+      {
+        "section": "objective",
+        "claim": "The spur is on the top of the joint.",
+        "entailment": 0.4478,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Diagnostic Results & Labs: The patient underwent an X-ray, which showed a large spur on the top of the joint and cartilage loss."
+      },
+      {
+        "section": "objective",
+        "claim": "The X-ray showed cartilage loss.",
+        "entailment": 0.4492,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Diagnostic Results & Labs: The patient underwent an X-ray, which showed a large spur on the top of the joint and cartilage loss."
+      }
+    ]
+  },
+  "final_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** Based on the patient's symptoms, physical examination, and diagnostic results, the diagnoses of hallux rigidus (arthritis in the big toe joint) and possible gout or hyperuricemia are made.\n* **Treatment Plan, Medications, and Follow-up:** The patient will be referred to an orthopedic specialist for further evaluation and treatment. The patient will be advised to avoid activities that exacerbate the condition and to follow up with the specialist in 2 weeks for further evaluation and treatment.\n\nPlease note that this is a sample SOAP note, and actual clinical notes may vary depending on the specific patient, diagnosis, and treatment plan."
+  },
+  "ap_unchanged": true,
+  "thresholds": {
+    "Te": 0.9,
+    "Tc": 0.8,
+    "Ta": 0.5,
+    "cov_min": 0.4,
+    "top_m": 2,
+    "fix_header_bug": true
+  },
+  "models": {
+    "llm": "llama3:8b-instruct-q8_0",
+    "nli": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+    "embedder": "all-MiniLM-L6-v2",
+    "ppl": "gpt2"
+  },
+  "status": "success",
+  "seconds": 16.0,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 45 years old and male. I came in because my big toe has been hurting a lot, especially when I walk or move it, and it's also red and warm to the touch. It's been bothering me for about two weeks, and it's really affecting my ability to do things like walk around or even stand for long periods.\nDoctor: Have you experienced similar symptoms in the past, and if so, how were they treated? Also, do you have a history of gout, arthritis, diabetes, or any other relevant medical conditions?\nPatient: I don't think I've ever had anything like this before. I don't have any history of gout, arthritis, diabetes, or anything like that. I was just fine until this started happening a couple of weeks ago.\nDoctor: Have you noticed any swelling or drainage from the affected big toe?\nPatient: No, I haven't noticed any swelling or drainage from my big toe. It's just red, warm, and really painful, especially when I move it or put pressure on it. It's been getting worse over the past couple of weeks.\nDoctor: Could you please provide information about your family history, specifically if any of your close relatives have had gout, arthritis, or similar conditions?\nPatient: I don't have any information about my family history, so I can't say for sure. But as far as I know, none of my close relatives have had gout, arthritis, or anything similar to what I'm experiencing.\nDoctor: Have you experienced any recent trauma or injury to the affected toe?\nPatient: No, I don't remember any injury to my toe. I just started having the pain a couple of weeks ago, and it got really bad last week when I was at that trade show. I couldn't walk much, and it hurt all the time. I didn't think it was anything serious until it got red and warm to the touch.\nDoctor: Have you had any recent blood tests or imaging studies for this condition?\nPatient: No, I haven't had any recent blood tests or imaging studies for this condition. I just came in because it got so bad and started looking red and feeling warm, which really worried me. I didn't think it was anything serious at first, but it's been getting worse.\nDoctor: Have you noticed any swelling or drainage from the affected toe? Also, have you made any recent dietary changes or consumed alcohol more frequently?\nPatient: No, I haven't noticed any swelling or drainage from my toe. As for dietary changes or alcohol, I don't think I've made any recent changes there. I've been eating pretty much the same as always, and I haven't had any more alcohol than usual.\nDoctor: Has the patient experienced any systemic symptoms such as fever, chills, or fatigue alongside the toe symptoms?\nPatient: No, I haven't had any fever, chills, or fatigue with this. It's just been the pain, redness, and warmth in my big toe. I didn't think it was anything serious until it started getting worse and I couldn't walk properly.\nDoctor: Could you describe the current appearance of the affected big toe, including any swelling, deformity, or skin changes?\nPatient: The big toe is pretty red and feels warm to the touch. It's swollen a little, and I can see some kind of bump or spur on the top of the joint. The skin around it looks a bit irritated, and it's definitely tender when I touch it. It's not draining or anything, but it's definitely not looking normal.\nDoctor: Has the patient undergone any physical examination or imaging studies for the affected toe? If not, could you describe the size and appearance of the bump or spur on the top of the joint?\nPatient: The doctor took an X-ray and saw a large spur on the top of my big toe joint. There's also a lot of cartilage loss, and it looks like I have arthritis in that joint. The doctor called it hallux rigidus. I didn't see the X-ray myself, but the doctor described it to me.\nDoctor: Have you ever been diagnosed with gout or hyperuricemia? Do you currently take any medications or supplements, and if so, what are they?\nPatient: No, I don't think I've ever been diagnosed with gout or hyperuricemia. I don't take any medications or supplements right now, other than the occasional ibuprofen for the pain, which hasn't really helped much. I don't think I've ever had any issues with uric acid or anything like that.\nDoctor: Have you had any recent blood tests, particularly for uric acid levels, to rule out gout?\nPatient: No, I don't think I've had any recent blood tests for uric acid or anything like that. I didn't even think about gout until the doctor mentioned it, and honestly, I didn't realize how serious this could be until I saw the X-ray. I just thought it was a bad bruise or something that would go away on its own.\nDoctor: Have you ever had a blood test to check your uric acid levels, or do you have a history of hyperuricemia or gout?\nPatient: No, I don't think I've ever had a blood test to check my uric acid levels, and I don't have a history of hyperuricemia or gout. I didn't even consider it until the doctor mentioned it, and honestly, I didn't realize how serious this could be until I saw the X-ray. I just thought it was a bad bruise or something that would go away on its own.\nDoctor: Could you please share more about your dietary habits, particularly if you consume foods high in purines, such as red meat or shellfish, and whether you have any history of alcohol consumption? Additionally, have you ever experienced any episodes of sudden, severe joint pain or swelling in the big toe or other joints in the past?\nPatient: I don't really pay much attention to my diet, to be honest. I eat what's around, mostly grilled chicken, veggies, and some pasta. I don't really drink alcohol much, maybe a beer once in a while. And no, I've never had any sudden, severe pain or swelling in my big toe or any other joints before. This is the first time anything like this has happened to me.\nDoctor: Have you ever had a blood test to check your uric acid levels, and do you have a family history of gout or hyperuricemia?\nPatient: No, I don't think I've ever had a blood test to check my uric acid levels, and I don't have a family history of gout or hyperuricemia. I didn't even know this was a possibility until the doctor mentioned it.",
+  "reference_so": {
+    "subjective": "Basic information: 45-year-old male presenting with pain, redness, and warmth in the big toe for approximately two weeks, affecting mobility.\n\nHistory of present illness: Onset two weeks ago, pain exacerbated by walking or movement, associated with redness and warmth. No prior treatment mentioned. No swelling or drainage noted. Symptoms have been worsening over the past couple of weeks. No history of similar episodes. The patient mentioned that the pain worsened last week during a trade show, and it has been red and warm to the touch. No recent blood tests or imaging studies performed. No systemic symptoms reported. No fever, chills, or fatigue reported.\n\nPast history: No history of gout, arthritis, diabetes, or similar conditions. No prior illnesses, operations, trauma, allergies, or personal history reported. Family history: None of the close relatives have had gout, arthritis, or similar conditions.",
+    "objective": "Physical examination: Physical examination: The big toe is red, warm, and tender to touch. There is mild swelling, and a bump or spur is visible on the top of the joint. The skin around the area appears irritated. No drainage is noted. Mobility is affected due to pain.\n\nInvestigations: Auxiliary examination: X-ray of the big toe joint showed a large spur on the top of the joint, significant cartilage loss, and evidence of arthritis, consistent with hallux rigidus. The patient denies a history of gout, hyperuricemia, or related conditions and has not had any blood tests for uric acid levels. No recent trauma or injury to the affected toe was reported."
+  }
+}

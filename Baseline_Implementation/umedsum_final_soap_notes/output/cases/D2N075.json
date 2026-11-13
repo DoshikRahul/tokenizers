@@ -1,0 +1,388 @@
+{
+  "case_id": "D2N075",
+  "split": "test",
+  "is_icl_demo": false,
+  "stage1_elements": "Here are the extracted clinical elements in concise bullet points:\n\n**Subjective Elements:**\n\n* Chief complaint: Chest pain (sharp, located behind breastbone, lasted 4 days, resolved)\n* History of present illness: Esophagitis (referred from ER, no current symptoms)\n* Relevant medical history:\n\t+ Family history of cardiovascular disease: None reported\n\t+ Risk factors for GERD: None reported (non-smoker, non-drinker, trying to lose weight)\n* Medications: None mentioned\n\n**Objective Elements:**\n\n* Physical examination findings: None mentioned\n* Vital signs: None mentioned\n* Diagnostic lab/imaging results:\n\t+ EKG: Normal\n\t+ Blood tests: Normal (no specific results mentioned)\n\t+ Imaging studies: None mentioned\n\n**Assessment Elements:**\n\n* Diagnoses: Esophagitis (referred from ER, no current symptoms)\n* Clinical impressions: None mentioned\n\n**Plan Elements:**\n\n* Medical treatment plan: None mentioned\n* Prescriptions/dosages: None mentioned\n* Tests ordered: Upper endoscopy (EGD) mentioned as an option, but not yet performed\n* Follow-up instructions: Monitoring symptoms, waiting for further testing if symptoms recur",
+  "stage1_raw_note": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:\n\n**SUBJECTIVE:**\n\n* **Chief Complaint:** Chest pain (sharp, located behind breastbone, lasted 4 days, resolved)\n* **History of Present Illness (HPI):** The patient, a 54-year-old female, presents with a history of chest pain that occurred a few months ago. The pain was sharp and located behind her breastbone, lasting for 4 days before resolving. She was referred to our clinic from the emergency room (ER) for further evaluation. The patient reports that she has not experienced any symptoms related to esophagitis since the initial episode.\n\n**OBJECTIVE:**\n\n* **Physical Examination & Vitals:** No physical examination findings or vital signs were mentioned during the patient's visit.\n* **Diagnostic Results & Labs:** The patient underwent an EKG and blood tests during her ER visit, which were normal. No specific results were mentioned.\n\n**ASSESSMENT AND PLAN:**\n\n* **Diagnoses and Clinical Reasoning:** The patient's symptoms are consistent with a possible episode of esophagitis, which was referred from the ER. However, the patient does not currently have any symptoms related to esophagitis.\n* **Treatment Plan, Medications, and Follow-up:** The patient was advised to monitor her symptoms and wait for further testing if symptoms recur. An upper endoscopy (EGD) was mentioned as an option, but not yet performed.\n\n**SOAP NOTE:**\n\nThis patient presents with a history of chest pain that occurred a few months ago, which was referred to our clinic from the ER. The patient does not currently have any symptoms related to esophagitis. The patient underwent an EKG and blood tests during her ER visit, which were normal. An upper endoscopy (EGD) was mentioned as an option, but not yet performed. The patient was advised to monitor her symptoms and wait for further testing if symptoms recur.",
+  "stage1_parse": {
+    "parse_mode": "main_headings",
+    "parse_ok": true,
+    "dropped_preamble": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:"
+  },
+  "stage1_so": {
+    "subjective": "* **Chief Complaint:** Chest pain (sharp, located behind breastbone, lasted 4 days, resolved)\n* **History of Present Illness (HPI):** The patient, a 54-year-old female, presents with a history of chest pain that occurred a few months ago. The pain was sharp and located behind her breastbone, lasting for 4 days before resolving. She was referred to our clinic from the emergency room (ER) for further evaluation. The patient reports that she has not experienced any symptoms related to esophagitis since the initial episode.",
+    "objective": "* **Physical Examination & Vitals:** No physical examination findings or vital signs were mentioned during the patient's visit.\n* **Diagnostic Results & Labs:** The patient underwent an EKG and blood tests during her ER visit, which were normal. No specific results were mentioned."
+  },
+  "stage1_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** The patient's symptoms are consistent with a possible episode of esophagitis, which was referred from the ER. However, the patient does not currently have any symptoms related to esophagitis.\n* **Treatment Plan, Medications, and Follow-up:** The patient was advised to monitor her symptoms and wait for further testing if symptoms recur. An upper endoscopy (EGD) was mentioned as an option, but not yet performed.\n\n**SOAP NOTE:**\n\nThis patient presents with a history of chest pain that occurred a few months ago, which was referred to our clinic from the ER. The patient does not currently have any symptoms related to esophagitis. The patient underwent an EKG and blood tests during her ER visit, which were normal. An upper endoscopy (EGD) was mentioned as an option, but not yet performed. The patient was advised to monitor her symptoms and wait for further testing if symptoms recur."
+  },
+  "stage2_so": {
+    "subjective": "The patient's chief complaint is chest pain.\nThe patient's chest pain is sharp.\nThe patient's chest pain is located behind the breastbone.\nThe patient's chest pain lasted 4 days.\nThe patient's chest pain has resolved.\nHistory of Present Illness (HPI): The patient, a 54-year-old female, presents with a history of chest pain that occurred a few months ago.\nThe pain was sharp and located behind her breastbone, lasting for 4 days before resolving.\nShe was referred to our clinic from the emergency room (ER) for further evaluation.\nThe patient reports that she has not experienced any symptoms related to esophagitis since the initial episode.",
+    "objective": "The patient's visit occurred.\nNote that I did not create a separate fact for \"Physical Examination & Vitals\" as it is a category or heading, not a specific finding or proposition.\nThe patient underwent an EKG during her ER visit.\nThe patient underwent blood tests during her ER visit.\nThe EKG results were normal.\nNote that there is only one proposition in this statement, so it can be output as a single fact.\nNote that I've split the original statement into four separate facts, each of which is self-contained and can stand alone as true or false. I've also replaced the pronoun \"which\" with the subject \"the EKG results\" and \"the blood test results\" to make each fact more explicit.\nNo specific results were mentioned."
+  },
+  "stage2_audit": {
+    "subjective": [
+      {
+        "unit": "Chief Complaint: Chest pain (sharp, located behind breastbone, lasted 4 days, resolved)",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.4819,
+          "neutral": 0.2581,
+          "contradiction": 0.26
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "didn't find anything wrong with my heart. They thought it might be related to my GI system, which is why they referred me here. I didn't have any other tests done at the time, just those basic ones. Doctor: Could you please provide details about the current evaluation for esophagitis, including any endoscopic findings, biopsy results, or other relevant tests that have been performed? Patient: I haven't had any tests for esophagitis done yet. The doctor mentioned doing an EGD, which is an upper endoscopy, but I decided to wait and see if I have more symptoms before having that done. Right now, I don't have any issues, so I'm just monitoring things. Doctor: Has the patient undergone any cardiac stress testing or echocardiography since the initial ER evaluation to further assess for cardiac causes of the prior chest pain? Patient: No, I haven't had any additional cardiac tests since the ER visit. They already ruled out any heart issues with the initial testing, so I didn't need anything else. I'm just focusing on making sure there's nothing else going on with my esophagus or stomach. Doctor: Have you undergone an upper endoscopy (EGD) or any other tests to evaluate for esophagitis, and if so, what were the findings? Patient: No, I haven't had an upper endoscopy or any other tests to evaluate for esophagitis yet. The doctor mentioned it as an option, but I chose to wait and see if I have more symptoms before having that done. Right now, I don't have any issues, so I'm just monitoring things. Doctor: Could you provide the specific results of the EKG and blood tests performed during the ER visit, including the levels of cardiac enzymes such as troponin and creatine kinase-MB? Patient: I don't have the specific results of the EKG or blood tests, but they told me everything was normal and that there was no sign of a heart problem. They didn't find any issues with my heart, so they thought it",
+        "atomic_decomposition": {
+          "original": "Chief Complaint: Chest pain (sharp, located behind breastbone, lasted 4 days, resolved)",
+          "retained": [
+            {
+              "atom": "The patient's chief complaint is chest pain.",
+              "citation": "didn't find anything wrong with my heart. They thought it might be related to my GI system, which is why they referred me here. I didn't have any other tests done at the time, just those basic ones. Doctor: Could you please provide details about the current evaluation for esophagitis, including any endoscopic findings, biopsy results, or other relevant tests that have been performed? Patient: I haven't had any tests for esophagitis done yet. The doctor mentioned doing an EGD, which is an upper endoscopy, but I decided to wait and see if I have more symptoms before having that done. Right now, I don't have any issues, so I'm just monitoring things. Doctor: Has the patient undergone any cardiac stress testing or echocardiography since the initial ER evaluation to further assess for cardiac causes of the prior chest pain? Patient: No, I haven't had any additional cardiac tests since the ER visit. They already ruled out any heart issues with the initial testing, so I didn't need anything else. I'm just focusing on making sure there's nothing else going on with my esophagus or stomach. Doctor: Have you undergone an upper endoscopy (EGD) or any other tests to evaluate for esophagitis, and if so, what were the findings? Patient: No, I haven't had an upper endoscopy or any other tests to evaluate for esophagitis yet. The doctor mentioned it as an option, but I chose to wait and see if I have more symptoms before having that done. Right now, I don't have any issues, so I'm just monitoring things. Doctor: Could you provide the specific results of the EKG and blood tests performed during the ER visit, including the levels of cardiac enzymes such as troponin and creatine kinase-MB? Patient: I don't have the specific results of the EKG or blood tests, but they told me everything was normal and that there was no sign of a heart problem. They didn't find any issues with my heart, so they thought it",
+              "entailment": 0.542,
+              "depth": 1
+            },
+            {
+              "atom": "The patient's chest pain is sharp.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 54 years old, and I'm female. I was referred here from the ER for esophagitis, but I also had chest pain a few months ago that lasted for four days and went away. I wanted to make sure everything is okay. Doctor: Could you please describe the nature, location, duration, and any associated symptoms of the chest pain you experienced a few months ago? Patient: The chest pain was sharp and located right behind my breastbone in the center of my chest. It just came on randomly, and I didn’t wake up with it. It lasted for four days, and I couldn’t relieve it with anything I tried. I ended up going to the ER because it was so bad, and they did a bunch of tests but didn’t find anything. It went away after about three days, and I haven’t had any pain since then. I did have some trouble swallowing at the time, though. Doctor: Could you describe the current symptoms related to your esophagitis? Please include the duration, severity, and any associated symptoms such as difficulty swallowing, heartburn, or regurgitation. Patient: I don't currently have any symptoms related to esophagitis. The issues I had before, like the chest pain and difficulty swallowing, have resolved since the initial episode three months ago. I feel better now, but I still want to make sure there isn't anything else going on. Doctor: Could you provide details about any family history of cardiovascular disease, such as heart attacks, angina, or strokes in close relatives? Patient: I don't think there's any family history of cardiovascular disease that I'm aware of. I don't have any close relatives who've had heart attacks, angina, or strokes that I know of. Doctor: Could you provide details about your current symptoms related to esophagitis, such as the presence of dysphagia, regurgitation, heartburn, or odynophagia",
+              "entailment": 0.9775,
+              "depth": 1
+            },
+            {
+              "atom": "The patient's chest pain is located behind the breastbone.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 54 years old, and I'm female. I was referred here from the ER for esophagitis, but I also had chest pain a few months ago that lasted for four days and went away. I wanted to make sure everything is okay. Doctor: Could you please describe the nature, location, duration, and any associated symptoms of the chest pain you experienced a few months ago? Patient: The chest pain was sharp and located right behind my breastbone in the center of my chest. It just came on randomly, and I didn’t wake up with it. It lasted for four days, and I couldn’t relieve it with anything I tried. I ended up going to the ER because it was so bad, and they did a bunch of tests but didn’t find anything. It went away after about three days, and I haven’t had any pain since then. I did have some trouble swallowing at the time, though. Doctor: Could you describe the current symptoms related to your esophagitis? Please include the duration, severity, and any associated symptoms such as difficulty swallowing, heartburn, or regurgitation. Patient: I don't currently have any symptoms related to esophagitis. The issues I had before, like the chest pain and difficulty swallowing, have resolved since the initial episode three months ago. I feel better now, but I still want to make sure there isn't anything else going on. Doctor: Could you provide details about any family history of cardiovascular disease, such as heart attacks, angina, or strokes in close relatives? Patient: I don't think there's any family history of cardiovascular disease that I'm aware of. I don't have any close relatives who've had heart attacks, angina, or strokes that I know of. Doctor: Could you provide details about your current symptoms related to esophagitis, such as the presence of dysphagia, regurgitation, heartburn, or odynophagia",
+              "entailment": 0.9897,
+              "depth": 1
+            },
+            {
+              "atom": "The patient's chest pain lasted 4 days.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 54 years old, and I'm female. I was referred here from the ER for esophagitis, but I also had chest pain a few months ago that lasted for four days and went away. I wanted to make sure everything is okay. Doctor: Could you please describe the nature, location, duration, and any associated symptoms of the chest pain you experienced a few months ago? Patient: The chest pain was sharp and located right behind my breastbone in the center of my chest. It just came on randomly, and I didn’t wake up with it. It lasted for four days, and I couldn’t relieve it with anything I tried. I ended up going to the ER because it was so bad, and they did a bunch of tests but didn’t find anything. It went away after about three days, and I haven’t had any pain since then. I did have some trouble swallowing at the time, though. Doctor: Could you describe the current symptoms related to your esophagitis? Please include the duration, severity, and any associated symptoms such as difficulty swallowing, heartburn, or regurgitation. Patient: I don't currently have any symptoms related to esophagitis. The issues I had before, like the chest pain and difficulty swallowing, have resolved since the initial episode three months ago. I feel better now, but I still want to make sure there isn't anything else going on. Doctor: Could you provide details about any family history of cardiovascular disease, such as heart attacks, angina, or strokes in close relatives? Patient: I don't think there's any family history of cardiovascular disease that I'm aware of. I don't have any close relatives who've had heart attacks, angina, or strokes that I know of. Doctor: Could you provide details about your current symptoms related to esophagitis, such as the presence of dysphagia, regurgitation, heartburn, or odynophagia",
+              "entailment": 0.999,
+              "depth": 1
+            },
+            {
+              "atom": "The patient's chest pain has resolved.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 54 years old, and I'm female. I was referred here from the ER for esophagitis, but I also had chest pain a few months ago that lasted for four days and went away. I wanted to make sure everything is okay. Doctor: Could you please describe the nature, location, duration, and any associated symptoms of the chest pain you experienced a few months ago? Patient: The chest pain was sharp and located right behind my breastbone in the center of my chest. It just came on randomly, and I didn’t wake up with it. It lasted for four days, and I couldn’t relieve it with anything I tried. I ended up going to the ER because it was so bad, and they did a bunch of tests but didn’t find anything. It went away after about three days, and I haven’t had any pain since then. I did have some trouble swallowing at the time, though. Doctor: Could you describe the current symptoms related to your esophagitis? Please include the duration, severity, and any associated symptoms such as difficulty swallowing, heartburn, or regurgitation. Patient: I don't currently have any symptoms related to esophagitis. The issues I had before, like the chest pain and difficulty swallowing, have resolved since the initial episode three months ago. I feel better now, but I still want to make sure there isn't anything else going on. Doctor: Could you provide details about any family history of cardiovascular disease, such as heart attacks, angina, or strokes in close relatives? Patient: I don't think there's any family history of cardiovascular disease that I'm aware of. I don't have any close relatives who've had heart attacks, angina, or strokes that I know of. Doctor: Could you provide details about your current symptoms related to esophagitis, such as the presence of dysphagia, regurgitation, heartburn, or odynophagia",
+              "entailment": 0.9995,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "History of Present Illness (HPI): The patient, a 54-year-old female, presents with a history of chest pain that occurred a few months ago.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9961,
+          "neutral": 0.0016,
+          "contradiction": 0.0024
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 54 years old, and I'm female. I was referred here from the ER for esophagitis, but I also had chest pain a few months ago that lasted for four days and went away. I wanted to make sure everything is okay. Doctor: Could you please describe the nature, location, duration, and any associated symptoms of the chest pain you experienced a few months ago? Patient: The chest pain was sharp and located right behind my breastbone in the center of my chest. It just came on randomly, and I didn’t wake up with it. It lasted for four days, and I couldn’t relieve it with anything I tried. I ended up going to the ER because it was so bad, and they did a bunch of tests but didn’t find anything. It went away after about three days, and I haven’t had any pain since then. I did have some trouble swallowing at the time, though. Doctor: Could you describe the current symptoms related to your esophagitis? Please include the duration, severity, and any associated symptoms such as difficulty swallowing, heartburn, or regurgitation. Patient: I don't currently have any symptoms related to esophagitis. The issues I had before, like the chest pain and difficulty swallowing, have resolved since the initial episode three months ago. I feel better now, but I still want to make sure there isn't anything else going on. Doctor: Could you provide details about any family history of cardiovascular disease, such as heart attacks, angina, or strokes in close relatives? Patient: I don't think there's any family history of cardiovascular disease that I'm aware of. I don't have any close relatives who've had heart attacks, angina, or strokes that I know of. Doctor: Could you provide details about your current symptoms related to esophagitis, such as the presence of dysphagia, regurgitation, heartburn, or odynophagia",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "The pain was sharp and located behind her breastbone, lasting for 4 days before resolving.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.998,
+          "neutral": 0.0009,
+          "contradiction": 0.0011
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 54 years old, and I'm female. I was referred here from the ER for esophagitis, but I also had chest pain a few months ago that lasted for four days and went away. I wanted to make sure everything is okay. Doctor: Could you please describe the nature, location, duration, and any associated symptoms of the chest pain you experienced a few months ago? Patient: The chest pain was sharp and located right behind my breastbone in the center of my chest. It just came on randomly, and I didn’t wake up with it. It lasted for four days, and I couldn’t relieve it with anything I tried. I ended up going to the ER because it was so bad, and they did a bunch of tests but didn’t find anything. It went away after about three days, and I haven’t had any pain since then. I did have some trouble swallowing at the time, though. Doctor: Could you describe the current symptoms related to your esophagitis? Please include the duration, severity, and any associated symptoms such as difficulty swallowing, heartburn, or regurgitation. Patient: I don't currently have any symptoms related to esophagitis. The issues I had before, like the chest pain and difficulty swallowing, have resolved since the initial episode three months ago. I feel better now, but I still want to make sure there isn't anything else going on. Doctor: Could you provide details about any family history of cardiovascular disease, such as heart attacks, angina, or strokes in close relatives? Patient: I don't think there's any family history of cardiovascular disease that I'm aware of. I don't have any close relatives who've had heart attacks, angina, or strokes that I know of. Doctor: Could you provide details about your current symptoms related to esophagitis, such as the presence of dysphagia, regurgitation, heartburn, or odynophagia",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "She was referred to our clinic from the emergency room (ER) for further evaluation.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.999,
+          "neutral": 0.0006,
+          "contradiction": 0.0002
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 54 years old, and I'm female. I was referred here from the ER for esophagitis, but I also had chest pain a few months ago that lasted for four days and went away. I wanted to make sure everything is okay. Doctor: Could you please describe the nature, location, duration, and any associated symptoms of the chest pain you experienced a few months ago? Patient: The chest pain was sharp and located right behind my breastbone in the center of my chest. It just came on randomly, and I didn’t wake up with it. It lasted for four days, and I couldn’t relieve it with anything I tried. I ended up going to the ER because it was so bad, and they did a bunch of tests but didn’t find anything. It went away after about three days, and I haven’t had any pain since then. I did have some trouble swallowing at the time, though. Doctor: Could you describe the current symptoms related to your esophagitis? Please include the duration, severity, and any associated symptoms such as difficulty swallowing, heartburn, or regurgitation. Patient: I don't currently have any symptoms related to esophagitis. The issues I had before, like the chest pain and difficulty swallowing, have resolved since the initial episode three months ago. I feel better now, but I still want to make sure there isn't anything else going on. Doctor: Could you provide details about any family history of cardiovascular disease, such as heart attacks, angina, or strokes in close relatives? Patient: I don't think there's any family history of cardiovascular disease that I'm aware of. I don't have any close relatives who've had heart attacks, angina, or strokes that I know of. Doctor: Could you provide details about your current symptoms related to esophagitis, such as the presence of dysphagia, regurgitation, heartburn, or odynophagia",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "The patient reports that she has not experienced any symptoms related to esophagitis since the initial episode.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9946,
+          "neutral": 0.0013,
+          "contradiction": 0.0039
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 54 years old, and I'm female. I was referred here from the ER for esophagitis, but I also had chest pain a few months ago that lasted for four days and went away. I wanted to make sure everything is okay. Doctor: Could you please describe the nature, location, duration, and any associated symptoms of the chest pain you experienced a few months ago? Patient: The chest pain was sharp and located right behind my breastbone in the center of my chest. It just came on randomly, and I didn’t wake up with it. It lasted for four days, and I couldn’t relieve it with anything I tried. I ended up going to the ER because it was so bad, and they did a bunch of tests but didn’t find anything. It went away after about three days, and I haven’t had any pain since then. I did have some trouble swallowing at the time, though. Doctor: Could you describe the current symptoms related to your esophagitis? Please include the duration, severity, and any associated symptoms such as difficulty swallowing, heartburn, or regurgitation. Patient: I don't currently have any symptoms related to esophagitis. The issues I had before, like the chest pain and difficulty swallowing, have resolved since the initial episode three months ago. I feel better now, but I still want to make sure there isn't anything else going on. Doctor: Could you provide details about any family history of cardiovascular disease, such as heart attacks, angina, or strokes in close relatives? Patient: I don't think there's any family history of cardiovascular disease that I'm aware of. I don't have any close relatives who've had heart attacks, angina, or strokes that I know of. Doctor: Could you provide details about your current symptoms related to esophagitis, such as the presence of dysphagia, regurgitation, heartburn, or odynophagia",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      }
+    ],
+    "objective": [
+      {
+        "unit": "Physical Examination & Vitals: No physical examination findings or vital signs were mentioned during the patient's visit.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.4822,
+          "neutral": 0.2399,
+          "contradiction": 0.2778
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "didn't find anything wrong with my heart. They thought it might be related to my GI system, which is why they referred me here. I didn't have any other tests done at the time, just those basic ones. Doctor: Could you please provide details about the current evaluation for esophagitis, including any endoscopic findings, biopsy results, or other relevant tests that have been performed? Patient: I haven't had any tests for esophagitis done yet. The doctor mentioned doing an EGD, which is an upper endoscopy, but I decided to wait and see if I have more symptoms before having that done. Right now, I don't have any issues, so I'm just monitoring things. Doctor: Has the patient undergone any cardiac stress testing or echocardiography since the initial ER evaluation to further assess for cardiac causes of the prior chest pain? Patient: No, I haven't had any additional cardiac tests since the ER visit. They already ruled out any heart issues with the initial testing, so I didn't need anything else. I'm just focusing on making sure there's nothing else going on with my esophagus or stomach. Doctor: Have you undergone an upper endoscopy (EGD) or any other tests to evaluate for esophagitis, and if so, what were the findings? Patient: No, I haven't had an upper endoscopy or any other tests to evaluate for esophagitis yet. The doctor mentioned it as an option, but I chose to wait and see if I have more symptoms before having that done. Right now, I don't have any issues, so I'm just monitoring things. Doctor: Could you provide the specific results of the EKG and blood tests performed during the ER visit, including the levels of cardiac enzymes such as troponin and creatine kinase-MB? Patient: I don't have the specific results of the EKG or blood tests, but they told me everything was normal and that there was no sign of a heart problem. They didn't find any issues with my heart, so they thought it",
+        "atomic_decomposition": {
+          "original": "Physical Examination & Vitals: No physical examination findings or vital signs were mentioned during the patient's visit.",
+          "retained": [
+            {
+              "atom": "The patient's visit occurred.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 54 years old, and I'm female. I was referred here from the ER for esophagitis, but I also had chest pain a few months ago that lasted for four days and went away. I wanted to make sure everything is okay. Doctor: Could you please describe the nature, location, duration, and any associated symptoms of the chest pain you experienced a few months ago? Patient: The chest pain was sharp and located right behind my breastbone in the center of my chest. It just came on randomly, and I didn’t wake up with it. It lasted for four days, and I couldn’t relieve it with anything I tried. I ended up going to the ER because it was so bad, and they did a bunch of tests but didn’t find anything. It went away after about three days, and I haven’t had any pain since then. I did have some trouble swallowing at the time, though. Doctor: Could you describe the current symptoms related to your esophagitis? Please include the duration, severity, and any associated symptoms such as difficulty swallowing, heartburn, or regurgitation. Patient: I don't currently have any symptoms related to esophagitis. The issues I had before, like the chest pain and difficulty swallowing, have resolved since the initial episode three months ago. I feel better now, but I still want to make sure there isn't anything else going on. Doctor: Could you provide details about any family history of cardiovascular disease, such as heart attacks, angina, or strokes in close relatives? Patient: I don't think there's any family history of cardiovascular disease that I'm aware of. I don't have any close relatives who've had heart attacks, angina, or strokes that I know of. Doctor: Could you provide details about your current symptoms related to esophagitis, such as the presence of dysphagia, regurgitation, heartburn, or odynophagia",
+              "entailment": 0.999,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I did not create a separate fact for \"Physical Examination & Vitals\" as it is a category or heading, not a specific finding or proposition.",
+              "citation": "didn't find anything wrong with my heart. They thought it might be related to my GI system, which is why they referred me here. I didn't have any other tests done at the time, just those basic ones. Doctor: Could you please provide details about the current evaluation for esophagitis, including any endoscopic findings, biopsy results, or other relevant tests that have been performed? Patient: I haven't had any tests for esophagitis done yet. The doctor mentioned doing an EGD, which is an upper endoscopy, but I decided to wait and see if I have more symptoms before having that done. Right now, I don't have any issues, so I'm just monitoring things. Doctor: Has the patient undergone any cardiac stress testing or echocardiography since the initial ER evaluation to further assess for cardiac causes of the prior chest pain? Patient: No, I haven't had any additional cardiac tests since the ER visit. They already ruled out any heart issues with the initial testing, so I didn't need anything else. I'm just focusing on making sure there's nothing else going on with my esophagus or stomach. Doctor: Have you undergone an upper endoscopy (EGD) or any other tests to evaluate for esophagitis, and if so, what were the findings? Patient: No, I haven't had an upper endoscopy or any other tests to evaluate for esophagitis yet. The doctor mentioned it as an option, but I chose to wait and see if I have more symptoms before having that done. Right now, I don't have any issues, so I'm just monitoring things. Doctor: Could you provide the specific results of the EKG and blood tests performed during the ER visit, including the levels of cardiac enzymes such as troponin and creatine kinase-MB? Patient: I don't have the specific results of the EKG or blood tests, but they told me everything was normal and that there was no sign of a heart problem. They didn't find any issues with my heart, so they thought it",
+              "entailment": 0.5068,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "No physical examination findings were mentioned during the patient's visit.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4697,
+              "depth": 2
+            },
+            {
+              "atom": "Since the statement is a single proposition, it can be output as a single atomic fact.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4827,
+              "depth": 2
+            },
+            {
+              "atom": "No vital signs were mentioned during the patient's visit.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4158,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Diagnostic Results & Labs: The patient underwent an EKG and blood tests during her ER visit, which were normal.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.5425,
+          "neutral": 0.2379,
+          "contradiction": 0.2198
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "didn't find anything wrong with my heart. They thought it might be related to my GI system, which is why they referred me here. I didn't have any other tests done at the time, just those basic ones. Doctor: Could you please provide details about the current evaluation for esophagitis, including any endoscopic findings, biopsy results, or other relevant tests that have been performed? Patient: I haven't had any tests for esophagitis done yet. The doctor mentioned doing an EGD, which is an upper endoscopy, but I decided to wait and see if I have more symptoms before having that done. Right now, I don't have any issues, so I'm just monitoring things. Doctor: Has the patient undergone any cardiac stress testing or echocardiography since the initial ER evaluation to further assess for cardiac causes of the prior chest pain? Patient: No, I haven't had any additional cardiac tests since the ER visit. They already ruled out any heart issues with the initial testing, so I didn't need anything else. I'm just focusing on making sure there's nothing else going on with my esophagus or stomach. Doctor: Have you undergone an upper endoscopy (EGD) or any other tests to evaluate for esophagitis, and if so, what were the findings? Patient: No, I haven't had an upper endoscopy or any other tests to evaluate for esophagitis yet. The doctor mentioned it as an option, but I chose to wait and see if I have more symptoms before having that done. Right now, I don't have any issues, so I'm just monitoring things. Doctor: Could you provide the specific results of the EKG and blood tests performed during the ER visit, including the levels of cardiac enzymes such as troponin and creatine kinase-MB? Patient: I don't have the specific results of the EKG or blood tests, but they told me everything was normal and that there was no sign of a heart problem. They didn't find any issues with my heart, so they thought it",
+        "atomic_decomposition": {
+          "original": "Diagnostic Results & Labs: The patient underwent an EKG and blood tests during her ER visit, which were normal.",
+          "retained": [
+            {
+              "atom": "The patient underwent an EKG during her ER visit.",
+              "citation": "don't have any issues, so I'm just monitoring things. Doctor: Could you provide the specific results of the EKG and blood tests performed during the ER visit, including the levels of cardiac enzymes such as troponin and creatine kinase-MB? Patient: I don't have the specific results of the EKG or blood tests, but they told me everything was normal and that there was no sign of a heart problem. They didn't find any issues with my heart, so they thought it might be something else, like a GI issue. I wasn't given any medications or further tests at the time. Doctor: Have you undergone an upper endoscopy or any other tests to evaluate for esophagitis or GERD? Patient: No, I haven't had an upper endoscopy or any other tests to evaluate for esophagitis or GERD yet. The doctor mentioned it as an option, but I chose to wait and see if I have more symptoms before having that done. Right now, I don't have any issues, so I'm just monitoring things.",
+              "entailment": 0.9761,
+              "depth": 1
+            },
+            {
+              "atom": "The patient underwent blood tests during her ER visit.",
+              "citation": "don't have any issues, so I'm just monitoring things. Doctor: Could you provide the specific results of the EKG and blood tests performed during the ER visit, including the levels of cardiac enzymes such as troponin and creatine kinase-MB? Patient: I don't have the specific results of the EKG or blood tests, but they told me everything was normal and that there was no sign of a heart problem. They didn't find any issues with my heart, so they thought it might be something else, like a GI issue. I wasn't given any medications or further tests at the time. Doctor: Have you undergone an upper endoscopy or any other tests to evaluate for esophagitis or GERD? Patient: No, I haven't had an upper endoscopy or any other tests to evaluate for esophagitis or GERD yet. The doctor mentioned it as an option, but I chose to wait and see if I have more symptoms before having that done. Right now, I don't have any issues, so I'm just monitoring things.",
+              "entailment": 0.8867,
+              "depth": 1
+            },
+            {
+              "atom": "The EKG results were normal.",
+              "citation": "don't have any issues, so I'm just monitoring things. Doctor: Could you provide the specific results of the EKG and blood tests performed during the ER visit, including the levels of cardiac enzymes such as troponin and creatine kinase-MB? Patient: I don't have the specific results of the EKG or blood tests, but they told me everything was normal and that there was no sign of a heart problem. They didn't find any issues with my heart, so they thought it might be something else, like a GI issue. I wasn't given any medications or further tests at the time. Doctor: Have you undergone an upper endoscopy or any other tests to evaluate for esophagitis or GERD? Patient: No, I haven't had an upper endoscopy or any other tests to evaluate for esophagitis or GERD yet. The doctor mentioned it as an option, but I chose to wait and see if I have more symptoms before having that done. Right now, I don't have any issues, so I'm just monitoring things.",
+              "entailment": 0.958,
+              "depth": 1
+            },
+            {
+              "atom": "Note that there is only one proposition in this statement, so it can be output as a single fact.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 54 years old, and I'm female. I was referred here from the ER for esophagitis, but I also had chest pain a few months ago that lasted for four days and went away. I wanted to make sure everything is okay. Doctor: Could you please describe the nature, location, duration, and any associated symptoms of the chest pain you experienced a few months ago? Patient: The chest pain was sharp and located right behind my breastbone in the center of my chest. It just came on randomly, and I didn’t wake up with it. It lasted for four days, and I couldn’t relieve it with anything I tried. I ended up going to the ER because it was so bad, and they did a bunch of tests but didn’t find anything. It went away after about three days, and I haven’t had any pain since then. I did have some trouble swallowing at the time, though. Doctor: Could you describe the current symptoms related to your esophagitis? Please include the duration, severity, and any associated symptoms such as difficulty swallowing, heartburn, or regurgitation. Patient: I don't currently have any symptoms related to esophagitis. The issues I had before, like the chest pain and difficulty swallowing, have resolved since the initial episode three months ago. I feel better now, but I still want to make sure there isn't anything else going on. Doctor: Could you provide details about any family history of cardiovascular disease, such as heart attacks, angina, or strokes in close relatives? Patient: I don't think there's any family history of cardiovascular disease that I'm aware of. I don't have any close relatives who've had heart attacks, angina, or strokes that I know of. Doctor: Could you provide details about your current symptoms related to esophagitis, such as the presence of dysphagia, regurgitation, heartburn, or odynophagia",
+              "entailment": 0.707,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I've split the original statement into four separate facts, each of which is self-contained and can stand alone as true or false. I've also replaced the pronoun \"which\" with the subject \"the EKG results\" and \"the blood test results\" to make each fact more explicit.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 54 years old, and I'm female. I was referred here from the ER for esophagitis, but I also had chest pain a few months ago that lasted for four days and went away. I wanted to make sure everything is okay. Doctor: Could you please describe the nature, location, duration, and any associated symptoms of the chest pain you experienced a few months ago? Patient: The chest pain was sharp and located right behind my breastbone in the center of my chest. It just came on randomly, and I didn’t wake up with it. It lasted for four days, and I couldn’t relieve it with anything I tried. I ended up going to the ER because it was so bad, and they did a bunch of tests but didn’t find anything. It went away after about three days, and I haven’t had any pain since then. I did have some trouble swallowing at the time, though. Doctor: Could you describe the current symptoms related to your esophagitis? Please include the duration, severity, and any associated symptoms such as difficulty swallowing, heartburn, or regurgitation. Patient: I don't currently have any symptoms related to esophagitis. The issues I had before, like the chest pain and difficulty swallowing, have resolved since the initial episode three months ago. I feel better now, but I still want to make sure there isn't anything else going on. Doctor: Could you provide details about any family history of cardiovascular disease, such as heart attacks, angina, or strokes in close relatives? Patient: I don't think there's any family history of cardiovascular disease that I'm aware of. I don't have any close relatives who've had heart attacks, angina, or strokes that I know of. Doctor: Could you provide details about your current symptoms related to esophagitis, such as the presence of dysphagia, regurgitation, heartburn, or odynophagia",
+              "entailment": 0.9785,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "The blood test results were normal.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4919,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "No specific results were mentioned.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.998,
+          "neutral": 0.0008,
+          "contradiction": 0.0012
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 54 years old, and I'm female. I was referred here from the ER for esophagitis, but I also had chest pain a few months ago that lasted for four days and went away. I wanted to make sure everything is okay. Doctor: Could you please describe the nature, location, duration, and any associated symptoms of the chest pain you experienced a few months ago? Patient: The chest pain was sharp and located right behind my breastbone in the center of my chest. It just came on randomly, and I didn’t wake up with it. It lasted for four days, and I couldn’t relieve it with anything I tried. I ended up going to the ER because it was so bad, and they did a bunch of tests but didn’t find anything. It went away after about three days, and I haven’t had any pain since then. I did have some trouble swallowing at the time, though. Doctor: Could you describe the current symptoms related to your esophagitis? Please include the duration, severity, and any associated symptoms such as difficulty swallowing, heartburn, or regurgitation. Patient: I don't currently have any symptoms related to esophagitis. The issues I had before, like the chest pain and difficulty swallowing, have resolved since the initial episode three months ago. I feel better now, but I still want to make sure there isn't anything else going on. Doctor: Could you provide details about any family history of cardiovascular disease, such as heart attacks, angina, or strokes in close relatives? Patient: I don't think there's any family history of cardiovascular disease that I'm aware of. I don't have any close relatives who've had heart attacks, angina, or strokes that I know of. Doctor: Could you provide details about your current symptoms related to esophagitis, such as the presence of dysphagia, regurgitation, heartburn, or odynophagia",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      }
+    ]
+  },
+  "stage2_stats": {
+    "decision_counts": {
+      "uncertain": 3,
+      "faithful": 5
+    },
+    "num_claims": 8,
+    "num_kept": 8,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_so": {
+    "subjective": "The patient's chief complaint is chest pain.\nThe patient's chest pain is sharp.\nThe patient's chest pain is located behind the breastbone.\nThe patient's chest pain lasted 4 days.\nThe patient's chest pain has resolved.\nHistory of Present Illness (HPI): The patient, a 54-year-old female, presents with a history of chest pain that occurred a few months ago.\nThe pain was sharp and located behind her breastbone, lasting for 4 days before resolving.\nShe was referred to our clinic from the emergency room (ER) for further evaluation.\nThe patient reports that she has not experienced any symptoms related to esophagitis since the initial episode.",
+    "objective": "The patient's visit occurred.\nNote that I did not create a separate fact for \"Physical Examination & Vitals\" as it is a category or heading, not a specific finding or proposition.\nThe patient underwent an EKG during her ER visit.\nThe patient underwent blood tests during her ER visit.\nThe EKG results were normal.\nNote that there is only one proposition in this statement, so it can be output as a single fact.\nNote that I've split the original statement into four separate facts, each of which is self-contained and can stand alone as true or false. I've also replaced the pronoun \"which\" with the subject \"the EKG results\" and \"the blood test results\" to make each fact more explicit.\nNo specific results were mentioned.\nPatient: I'm 54 years old, and I'm female."
+  },
+  "stage3_key_sentences": [
+    "I was referred here from the ER for esophagitis, but I also had chest pain a few months ago that lasted for four days and went away.",
+    "Patient: I'm 54 years old, and I'm female."
+  ],
+  "stage3_summary_key_phrases": [
+    "patient chest pain",
+    "symptoms related esophagitis",
+    "ekg er visit",
+    "er visit patient",
+    "patient reports experienced",
+    "pain occurred months",
+    "present illness",
+    "fact physical examination",
+    "proposition patient underwent",
+    "illness hpi patient"
+  ],
+  "stage3_coverage_scores": [
+    {
+      "sentence": "I was referred here from the ER for esophagitis, but I also had chest pain a few months ago that lasted for four days and went away.",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "I was referred here from the ER for esophagitis, but I also had chest pain a few months ago that lasted for four days and went away.",
+      "score": 0.677,
+      "is_missing": false,
+      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+    },
+    {
+      "sentence": "Patient: I'm 54 years old, and I'm female.",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "Patient: I'm 54 years old, and I'm female.",
+      "score": 0.2883,
+      "is_missing": true,
+      "action": "Added: Missing clinical dialogue detail (coverage < 0.40); inserted via GPT-2 fluency optimization."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "Patient: I'm 54 years old, and I'm female.",
+      "statement": "Patient: I'm 54 years old, and I'm female.",
+      "coverage": 0.2883,
+      "status": "added",
+      "reason": "coverage <= cov_min (uMedSum adds the dialogue sentence verbatim)",
+      "insertion": {
+        "section": "objective",
+        "line_index": 17,
+        "perplexity": 18.8
+      }
+    }
+  ],
+  "stage3_added": [
+    {
+      "statement": "Patient: I'm 54 years old, and I'm female.",
+      "evidence": "Patient: I'm 54 years old, and I'm female.",
+      "section": "objective",
+      "candidate": "Patient: I'm 54 years old, and I'm female."
+    }
+  ],
+  "stage3_stats": {
+    "num_key_sentences": 2,
+    "num_flagged": 1,
+    "num_added": 1
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "section": "objective",
+        "claim": "No physical examination findings were mentioned during the patient's visit.",
+        "entailment": 0.4697,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: No physical examination findings or vital signs were mentioned during the patient's visit."
+      },
+      {
+        "section": "objective",
+        "claim": "Since the statement is a single proposition, it can be output as a single atomic fact.",
+        "entailment": 0.4827,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: No physical examination findings or vital signs were mentioned during the patient's visit."
+      },
+      {
+        "section": "objective",
+        "claim": "No vital signs were mentioned during the patient's visit.",
+        "entailment": 0.4158,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: No physical examination findings or vital signs were mentioned during the patient's visit."
+      },
+      {
+        "section": "objective",
+        "claim": "The blood test results were normal.",
+        "entailment": 0.4919,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Diagnostic Results & Labs: The patient underwent an EKG and blood tests during her ER visit, which were normal."
+      }
+    ]
+  },
+  "final_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** The patient's symptoms are consistent with a possible episode of esophagitis, which was referred from the ER. However, the patient does not currently have any symptoms related to esophagitis.\n* **Treatment Plan, Medications, and Follow-up:** The patient was advised to monitor her symptoms and wait for further testing if symptoms recur. An upper endoscopy (EGD) was mentioned as an option, but not yet performed.\n\n**SOAP NOTE:**\n\nThis patient presents with a history of chest pain that occurred a few months ago, which was referred to our clinic from the ER. The patient does not currently have any symptoms related to esophagitis. The patient underwent an EKG and blood tests during her ER visit, which were normal. An upper endoscopy (EGD) was mentioned as an option, but not yet performed. The patient was advised to monitor her symptoms and wait for further testing if symptoms recur."
+  },
+  "ap_unchanged": true,
+  "thresholds": {
+    "Te": 0.9,
+    "Tc": 0.8,
+    "Ta": 0.5,
+    "cov_min": 0.4,
+    "top_m": 2,
+    "fix_header_bug": true
+  },
+  "models": {
+    "llm": "llama3:8b-instruct-q8_0",
+    "nli": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+    "embedder": "all-MiniLM-L6-v2",
+    "ppl": "gpt2"
+  },
+  "status": "success",
+  "seconds": 13.1,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 54 years old, and I'm female. I was referred here from the ER for esophagitis, but I also had chest pain a few months ago that lasted for four days and went away. I wanted to make sure everything is okay.\nDoctor: Could you please describe the nature, location, duration, and any associated symptoms of the chest pain you experienced a few months ago?\nPatient: The chest pain was sharp and located right behind my breastbone in the center of my chest. It just came on randomly, and I didn’t wake up with it. It lasted for four days, and I couldn’t relieve it with anything I tried. I ended up going to the ER because it was so bad, and they did a bunch of tests but didn’t find anything. It went away after about three days, and I haven’t had any pain since then. I did have some trouble swallowing at the time, though.\nDoctor: Could you describe the current symptoms related to your esophagitis? Please include the duration, severity, and any associated symptoms such as difficulty swallowing, heartburn, or regurgitation.\nPatient: I don't currently have any symptoms related to esophagitis. The issues I had before, like the chest pain and difficulty swallowing, have resolved since the initial episode three months ago. I feel better now, but I still want to make sure there isn't anything else going on.\nDoctor: Could you provide details about any family history of cardiovascular disease, such as heart attacks, angina, or strokes in close relatives?\nPatient: I don't think there's any family history of cardiovascular disease that I'm aware of. I don't have any close relatives who've had heart attacks, angina, or strokes that I know of.\nDoctor: Could you provide details about your current symptoms related to esophagitis, such as the presence of dysphagia, regurgitation, heartburn, or odynophagia? Additionally, have you experienced any risk factors for gastroesophageal reflux disease (GERD), such as obesity, smoking, or alcohol consumption?\nPatient: I don't currently have any symptoms related to esophagitis. The issues I had before, like the chest pain and difficulty swallowing, have resolved since the initial episode three months ago. I feel better now, but I still want to make sure there isn't anything else going on. I don't smoke or drink alcohol, and I've been trying to lose weight, so I don't think I have any of the typical risk factors for GERD.\nDoctor: Could you provide details about the results of the tests performed during your ER visit for the chest pain three months ago, including any ECG findings, cardiac enzymes, or imaging studies?\nPatient: They did an EKG and some blood tests, but everything was normal. They didn't find anything wrong with my heart. They thought it might be related to my GI system, which is why they referred me here. I didn't have any other tests done at the time, just those basic ones.\nDoctor: Could you describe any current symptoms related to your esophagitis, such as difficulty swallowing, heartburn, or regurgitation?\nPatient: I don't currently have any symptoms related to esophagitis. The chest pain and difficulty swallowing I had before have resolved, and I haven't had any issues since then. I feel fine now, but I still want to make sure there's nothing else going on.\nDoctor: Could you provide details about the specific blood tests performed during the ER visit, including results for cardiac enzymes such as troponin and creatine kinase-MB?\nPatient: I don't remember the exact names of the blood tests, but they said everything was normal. They didn't find any issues with my heart, so I guess the results were all within the normal range. They didn't mention anything specific about troponin or creatine kinase-MB, just that the heart tests came back okay.\nDoctor: Could you please describe any current symptoms related to your esophagitis, such as difficulty swallowing, heartburn, or regurgitation?\nPatient: I don't currently have any symptoms related to esophagitis. The chest pain and difficulty swallowing I had before have resolved, and I haven't had any issues since then. I feel fine now, but I still want to make sure there's nothing else going on.\nDoctor: What specific tests were performed during the ER visit for the chest pain, and were there any findings related to esophageal or gastric pathology?\nPatient: They did an EKG and some blood tests, but everything was normal. They didn't find anything wrong with my heart. They thought it might be related to my GI system, which is why they referred me here. I didn't have any other tests done at the time, just those basic ones.\nDoctor: Could you please provide details about the current evaluation for esophagitis, including any endoscopic findings, biopsy results, or other relevant tests that have been performed?\nPatient: I haven't had any tests for esophagitis done yet. The doctor mentioned doing an EGD, which is an upper endoscopy, but I decided to wait and see if I have more symptoms before having that done. Right now, I don't have any issues, so I'm just monitoring things.\nDoctor: Has the patient undergone any cardiac stress testing or echocardiography since the initial ER evaluation to further assess for cardiac causes of the prior chest pain?\nPatient: No, I haven't had any additional cardiac tests since the ER visit. They already ruled out any heart issues with the initial testing, so I didn't need anything else. I'm just focusing on making sure there's nothing else going on with my esophagus or stomach.\nDoctor: Have you undergone an upper endoscopy (EGD) or any other tests to evaluate for esophagitis, and if so, what were the findings?\nPatient: No, I haven't had an upper endoscopy or any other tests to evaluate for esophagitis yet. The doctor mentioned it as an option, but I chose to wait and see if I have more symptoms before having that done. Right now, I don't have any issues, so I'm just monitoring things.\nDoctor: Could you provide the specific results of the EKG and blood tests performed during the ER visit, including the levels of cardiac enzymes such as troponin and creatine kinase-MB?\nPatient: I don't have the specific results of the EKG or blood tests, but they told me everything was normal and that there was no sign of a heart problem. They didn't find any issues with my heart, so they thought it might be something else, like a GI issue. I wasn't given any medications or further tests at the time.\nDoctor: Have you undergone an upper endoscopy or any other tests to evaluate for esophagitis or GERD?\nPatient: No, I haven't had an upper endoscopy or any other tests to evaluate for esophagitis or GERD yet. The doctor mentioned it as an option, but I chose to wait and see if I have more symptoms before having that done. Right now, I don't have any issues, so I'm just monitoring things.",
+  "reference_so": {
+    "subjective": "Basic information: 54-year-old female referred from ER for esophagitis; chief complaint: concern for resolution of prior chest pain\n\nHistory of present illness: Chest pain occurred a few months ago, was sharp and located behind the breastbone in the center of the chest, occurred randomly, did not wake the patient up, lasted four days, could not be relieved, led to ER visit where tests were performed but nothing was found, resolved after three days, no chest pain since then, but had some trouble swallowing at the time. Currently being evaluated for esophagitis. The patient does not currently have symptoms related to esophagitis and has no known family history of cardiovascular disease. The patient does not smoke or drink alcohol and has no typical risk factors for GERD.\n\nPast history: No known family history of cardiovascular disease. No known personal history of smoking or alcohol use.",
+    "objective": "Physical examination: Physical examination findings are pending.\n\nInvestigations: The patient underwent an EKG and basic blood tests during the ER visit, which were normal. No imaging studies were performed at that time. The patient does not recall the exact names of the blood tests, but they were reported as normal, with no abnormalities detected in cardiac enzymes such as troponin or creatine kinase-MB."
+  }
+}

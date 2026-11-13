@@ -1,0 +1,515 @@
+{
+  "case_id": "D2N059",
+  "split": "dev",
+  "is_icl_demo": false,
+  "stage1_elements": "Here are the extracted clinical elements in concise bullet points:\n\n**Subjective Elements:**\n\n* Chief complaint: Asthma symptoms during sports, feeling down lately\n* History of present illness:\n\t+ Asthma symptoms: wheezing, chest tightness, phlegm in throat, lightheadedness, shakiness\n\t+ Onset: during aerobic workouts, especially water polo\n\t+ Duration: symptoms occur during sports, but can last for a while after\n\t+ Frequency: symptoms occur frequently during sports\n* Relevant medical history/medications:\n\t+ Asthma diagnosis\n\t+ Using albuterol inhaler as needed\n\t+ No recent hospitalizations or acute respiratory distress\n* Relevant psychological symptoms:\n\t+ Feeling down, hopeless, and lacking motivation\n\t+ Difficulty sleeping and appetite changes not reported\n\t+ No recent episodes of significant sadness or loss of interest in activities\n\n**Objective Elements:**\n\n* Physical examination findings: None mentioned\n* Vital signs mentioned: None\n* Diagnostic lab/imaging results: None mentioned\n\n**Assessment Elements:**\n\n* Diagnoses: Asthma, possible depression or anxiety\n* Clinical impressions: Patient's asthma symptoms are likely related to their academic stress and social withdrawal\n\n**Plan Elements:**\n\n* Medical treatment plan: Schedule pulmonary function tests and chest X-rays to better evaluate asthma symptoms\n* Prescriptions/dosages: None mentioned\n* Tests ordered: Pulmonary function tests, chest X-rays\n* Follow-up instructions: Schedule follow-up appointment to discuss test results and develop a plan to manage asthma symptoms and psychological symptoms",
+  "stage1_raw_note": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:\n\n**SUBJECTIVE:**\n\n* **Chief Complaint:** Asthma symptoms during sports, feeling down lately\n* **History of Present Illness (HPI):**\n\t+ Asthma symptoms: wheezing, chest tightness, phlegm in throat, lightheadedness, shakiness\n\t+ Onset: during aerobic workouts, especially water polo\n\t+ Duration: symptoms occur during sports, but can last for a while after\n\t+ Frequency: symptoms occur frequently during sports\n\t+ Patient reports feeling down, hopeless, and lacking motivation, especially since starting school year\n\t+ No recent episodes of significant sadness or loss of interest in activities\n\n**OBJECTIVE:**\n\n* **Physical Examination & Vitals:** None mentioned\n* **Diagnostic Results & Labs:** None mentioned\n\n**ASSESSMENT AND PLAN:**\n\n* **Diagnoses and Clinical Reasoning:** Asthma, possible depression or anxiety\n\t+ Patient's asthma symptoms are likely related to their academic stress and social withdrawal\n* **Treatment Plan, Medications, and Follow-up:**\n\t+ Schedule pulmonary function tests and chest X-rays to better evaluate asthma symptoms\n\t+ Consider referral to a mental health professional for further evaluation and management of depression or anxiety\n\t+ Follow-up appointment scheduled to discuss test results and develop a plan to manage asthma symptoms and psychological symptoms\n\nNote: The patient's symptoms and medical history suggest that their asthma symptoms are likely related to their academic stress and social withdrawal. The patient's feelings of being down, hopeless, and lacking motivation may be indicative of depression or anxiety. Further evaluation and management by a mental health professional may be necessary to address these symptoms.",
+  "stage1_parse": {
+    "parse_mode": "main_headings",
+    "parse_ok": true,
+    "dropped_preamble": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:"
+  },
+  "stage1_so": {
+    "subjective": "* **Chief Complaint:** Asthma symptoms during sports, feeling down lately\n* **History of Present Illness (HPI):**\n\t+ Asthma symptoms: wheezing, chest tightness, phlegm in throat, lightheadedness, shakiness\n\t+ Onset: during aerobic workouts, especially water polo\n\t+ Duration: symptoms occur during sports, but can last for a while after\n\t+ Frequency: symptoms occur frequently during sports\n\t+ Patient reports feeling down, hopeless, and lacking motivation, especially since starting school year\n\t+ No recent episodes of significant sadness or loss of interest in activities",
+    "objective": "* **Physical Examination & Vitals:** None mentioned\n* **Diagnostic Results & Labs:** None mentioned"
+  },
+  "stage1_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** Asthma, possible depression or anxiety\n\t+ Patient's asthma symptoms are likely related to their academic stress and social withdrawal\n* **Treatment Plan, Medications, and Follow-up:**\n\t+ Schedule pulmonary function tests and chest X-rays to better evaluate asthma symptoms\n\t+ Consider referral to a mental health professional for further evaluation and management of depression or anxiety\n\t+ Follow-up appointment scheduled to discuss test results and develop a plan to manage asthma symptoms and psychological symptoms\n\nNote: The patient's symptoms and medical history suggest that their asthma symptoms are likely related to their academic stress and social withdrawal. The patient's feelings of being down, hopeless, and lacking motivation may be indicative of depression or anxiety. Further evaluation and management by a mental health professional may be necessary to address these symptoms."
+  },
+  "stage2_so": {
+    "subjective": "Chief Complaint: Asthma symptoms during sports, feeling down lately\nAsthma symptoms: wheezing, chest tightness, phlegm in throat, lightheadedness, shakiness\nOnset: during aerobic workouts, especially water polo\nSymptoms occur during sports.\nBased on the rules provided, I decompose the statement into the following atomic facts:\nSymptoms can last for a while.\nNote that I've followed the rules by splitting the conjunction \"but\" into two separate facts, and replacing the pronoun \"they\" with the subject \"symptoms\".\nFrequency: symptoms occur frequently during sports\nThe patient reports feeling down.\nThe patient reports feeling hopeless.\nThe patient reports lacking motivation.\nThe patient reports feeling down especially since starting school year.\nThe patient reports feeling hopeless especially since starting school year.\nThe patient reports lacking motivation especially since starting school year.\nNote that I've broken down the original statement into separate facts for each symptom reported by the patient, and also for each symptom's association with the starting of the school year.\nThe patient's episodes are of significant sadness.\nNote that I did not break down \"recent\" into a separate fact, as it is an adjective modifying the noun \"loss of interest\", and the statement is still self-contained and clear without it.\nNote that I've followed the rules by splitting the list, separating the two findings, and replacing the pronoun \"the patient\" with the subject.",
+    "objective": "Based on the rules, I decompose the statement into the following atomic facts:\nPhysical Examination is not mentioned.\nVitals are not mentioned.\nNote that the statement does not contain any other information that can be broken down into separate facts. The statement is simply stating that there is no mention of physical examination or vitals.\nBased on the rules, I decompose the statement into the following atomic facts:\nDiagnostic Results are not mentioned.\nLabs are not mentioned.\nThe statement does not contain any specific findings or information."
+  },
+  "stage2_audit": {
+    "subjective": [
+      {
+        "unit": "Chief Complaint: Asthma symptoms during sports, feeling down lately",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9951,
+          "neutral": 0.0026,
+          "contradiction": 0.0025
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "Asthma symptoms: wheezing, chest tightness, phlegm in throat, lightheadedness, shakiness",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9922,
+          "neutral": 0.0058,
+          "contradiction": 0.002
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "Onset: during aerobic workouts, especially water polo",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9736,
+          "neutral": 0.0178,
+          "contradiction": 0.0083
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "Duration: symptoms occur during sports, but can last for a while after",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.4561,
+          "neutral": 0.3252,
+          "contradiction": 0.2188
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "'m willing to schedule these tests if it would help better understand what's going on with my asthma. Doctor: Can you describe the specific triggers for your asthma symptoms during sports, and have you noticed any patterns or worsening of symptoms in relation to your academic stress or social withdrawal? Patient: Sure, during sports, especially when I'm doing something aerobic like running or playing water polo, I start to feel like there's phlegm building up in my throat, my chest gets tight, and I start wheezing. It usually happens pretty quickly, and I have to stop and sit down to catch my breath. I do notice that my symptoms seem to get worse when I'm stressed about school or when I'm feeling down, which makes it harder to keep up with sports and social stuff. It feels like everything is kind of connected. Doctor: Has the patient experienced any recent exacerbations of asthma symptoms that required additional use of the albuterol inhaler or any other rescue medications? Patient: No, I haven't had any recent exacerbations that required more use of my inhaler than usual. I still use it when I have an attack, usually two puffs, and it helps me feel better after a while, but I still have to sit down and catch my breath. It's been pretty consistent with how it's been happening during sports. Doctor: Have you experienced any changes in your sleep patterns or appetite since the onset of your feelings of being down? Patient: No, I haven't really noticed any big changes in my sleep or appetite, but I do feel more tired than usual, especially after having an asthma attack during sports. I guess I just don't have as much energy as I used to, and I'm not as motivated to do the things I used to enjoy. Doctor: Have you undergone any pulmonary function tests or chest X-rays in the past? If not, would you be willing to schedule these tests to better evaluate your asthma? Patient: No, I haven't had any pulmonary function tests or chest X-rays in the past",
+        "atomic_decomposition": {
+          "original": "Duration: symptoms occur during sports, but can last for a while after",
+          "retained": [
+            {
+              "atom": "Symptoms occur during sports.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+              "entailment": 0.999,
+              "depth": 1
+            },
+            {
+              "atom": "Based on the rules provided, I decompose the statement into the following atomic facts:",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+              "entailment": 0.6597,
+              "depth": 2
+            },
+            {
+              "atom": "Symptoms can last for a while.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+              "entailment": 0.9648,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I've followed the rules by splitting the conjunction \"but\" into two separate facts, and replacing the pronoun \"they\" with the subject \"symptoms\".",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+              "entailment": 0.9897,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "After [insert subject], symptoms can last for a while.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4463,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Frequency: symptoms occur frequently during sports",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9927,
+          "neutral": 0.0059,
+          "contradiction": 0.0014
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "Patient reports feeling down, hopeless, and lacking motivation, especially since starting school year",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.8462,
+          "neutral": 0.1175,
+          "contradiction": 0.0363
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+        "atomic_decomposition": {
+          "original": "Patient reports feeling down, hopeless, and lacking motivation, especially since starting school year",
+          "retained": [
+            {
+              "atom": "The patient reports feeling down.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+              "entailment": 0.9995,
+              "depth": 1
+            },
+            {
+              "atom": "The patient reports feeling hopeless.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+              "entailment": 0.5742,
+              "depth": 1
+            },
+            {
+              "atom": "The patient reports lacking motivation.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+              "entailment": 0.999,
+              "depth": 1
+            },
+            {
+              "atom": "The patient reports feeling down especially since starting school year.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+              "entailment": 0.9995,
+              "depth": 1
+            },
+            {
+              "atom": "The patient reports feeling hopeless especially since starting school year.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+              "entailment": 0.9648,
+              "depth": 1
+            },
+            {
+              "atom": "The patient reports lacking motivation especially since starting school year.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+              "entailment": 0.999,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've broken down the original statement into separate facts for each symptom reported by the patient, and also for each symptom's association with the starting of the school year.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+              "entailment": 0.998,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "No recent episodes of significant sadness or loss of interest in activities",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.8042,
+          "neutral": 0.109,
+          "contradiction": 0.0866
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+        "atomic_decomposition": {
+          "original": "No recent episodes of significant sadness or loss of interest in activities",
+          "retained": [
+            {
+              "atom": "The patient's episodes are of significant sadness.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+              "entailment": 0.9897,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I did not break down \"recent\" into a separate fact, as it is an adjective modifying the noun \"loss of interest\", and the statement is still self-contained and clear without it.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+              "entailment": 0.8242,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I've followed the rules by splitting the list, separating the two findings, and replacing the pronoun \"the patient\" with the subject.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+              "entailment": 0.998,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "The patient has no recent episodes.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4978,
+              "depth": 2
+            },
+            {
+              "atom": "The patient has no recent loss of interest.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.3977,
+              "depth": 2
+            },
+            {
+              "atom": "The patient has no loss of interest in activities.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4048,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      }
+    ],
+    "objective": [
+      {
+        "unit": "Physical Examination & Vitals: None mentioned",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.4578,
+          "neutral": 0.2861,
+          "contradiction": 0.2563
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "'m willing to schedule these tests if it would help better understand what's going on with my asthma. Doctor: Can you describe the specific triggers for your asthma symptoms during sports, and have you noticed any patterns or worsening of symptoms in relation to your academic stress or social withdrawal? Patient: Sure, during sports, especially when I'm doing something aerobic like running or playing water polo, I start to feel like there's phlegm building up in my throat, my chest gets tight, and I start wheezing. It usually happens pretty quickly, and I have to stop and sit down to catch my breath. I do notice that my symptoms seem to get worse when I'm stressed about school or when I'm feeling down, which makes it harder to keep up with sports and social stuff. It feels like everything is kind of connected. Doctor: Has the patient experienced any recent exacerbations of asthma symptoms that required additional use of the albuterol inhaler or any other rescue medications? Patient: No, I haven't had any recent exacerbations that required more use of my inhaler than usual. I still use it when I have an attack, usually two puffs, and it helps me feel better after a while, but I still have to sit down and catch my breath. It's been pretty consistent with how it's been happening during sports. Doctor: Have you experienced any changes in your sleep patterns or appetite since the onset of your feelings of being down? Patient: No, I haven't really noticed any big changes in my sleep or appetite, but I do feel more tired than usual, especially after having an asthma attack during sports. I guess I just don't have as much energy as I used to, and I'm not as motivated to do the things I used to enjoy. Doctor: Have you undergone any pulmonary function tests or chest X-rays in the past? If not, would you be willing to schedule these tests to better evaluate your asthma? Patient: No, I haven't had any pulmonary function tests or chest X-rays in the past",
+        "atomic_decomposition": {
+          "original": "Physical Examination & Vitals: None mentioned",
+          "retained": [
+            {
+              "atom": "Based on the rules, I decompose the statement into the following atomic facts:",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+              "entailment": 0.5718,
+              "depth": 1
+            },
+            {
+              "atom": "Physical Examination is not mentioned.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+              "entailment": 0.9985,
+              "depth": 1
+            },
+            {
+              "atom": "Vitals are not mentioned.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+              "entailment": 0.7817,
+              "depth": 1
+            },
+            {
+              "atom": "Note that the statement does not contain any other information that can be broken down into separate facts. The statement is simply stating that there is no mention of physical examination or vitals.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+              "entailment": 0.5737,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "Diagnostic Results & Labs: None mentioned",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.5913,
+          "neutral": 0.2852,
+          "contradiction": 0.1234
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+        "atomic_decomposition": {
+          "original": "Diagnostic Results & Labs: None mentioned",
+          "retained": [
+            {
+              "atom": "Based on the rules, I decompose the statement into the following atomic facts:",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+              "entailment": 0.5718,
+              "depth": 1
+            },
+            {
+              "atom": "Diagnostic Results are not mentioned.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+              "entailment": 0.9985,
+              "depth": 1
+            },
+            {
+              "atom": "Labs are not mentioned.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+              "entailment": 0.9595,
+              "depth": 1
+            },
+            {
+              "atom": "The statement does not contain any specific findings or information.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it. Doctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them? Patient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it. Doctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities? Patient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me. Doctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations? Patient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. Doctor: Have you experienced any changes in your mood or energy",
+              "entailment": 0.9604,
+              "depth": 2
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "Statement: Note that the statement is very concise and does not contain any specific findings or information, so the resulting atomic facts are also quite simple.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4539,
+              "depth": 2
+            },
+            {
+              "atom": "Note is made.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4548,
+              "depth": 2
+            },
+            {
+              "atom": "The statement is very concise.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4255,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      }
+    ]
+  },
+  "stage2_stats": {
+    "decision_counts": {
+      "faithful": 4,
+      "uncertain": 5
+    },
+    "num_claims": 9,
+    "num_kept": 9,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_so": {
+    "subjective": "Chief Complaint: Asthma symptoms during sports, feeling down lately\nAsthma symptoms: wheezing, chest tightness, phlegm in throat, lightheadedness, shakiness\nOnset: during aerobic workouts, especially water polo\nWhen it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded.\nSymptoms occur during sports.\nBased on the rules provided, I decompose the statement into the following atomic facts:\nSymptoms can last for a while.\nNote that I've followed the rules by splitting the conjunction \"but\" into two separate facts, and replacing the pronoun \"they\" with the subject \"symptoms\".\nFrequency: symptoms occur frequently during sports\nThe patient reports feeling down.\nThe patient reports feeling hopeless.\nThe patient reports lacking motivation.\nThe patient reports feeling down especially since starting school year.\nThe patient reports feeling hopeless especially since starting school year.\nThe patient reports lacking motivation especially since starting school year.\nNote that I've broken down the original statement into separate facts for each symptom reported by the patient, and also for each symptom's association with the starting of the school year.\nThe patient's episodes are of significant sadness.\nNote that I did not break down \"recent\" into a separate fact, as it is an adjective modifying the noun \"loss of interest\", and the statement is still self-contained and clear without it.\nNote that I've followed the rules by splitting the list, separating the two findings, and replacing the pronoun \"the patient\" with the subject.",
+    "objective": "Based on the rules, I decompose the statement into the following atomic facts:\nPhysical Examination is not mentioned.\nVitals are not mentioned.\nNote that the statement does not contain any other information that can be broken down into separate facts. The statement is simply stating that there is no mention of physical examination or vitals.\nBased on the rules, I decompose the statement into the following atomic facts:\nDiagnostic Results are not mentioned.\nLabs are not mentioned.\nThe statement does not contain any specific findings or information."
+  },
+  "stage3_key_sentences": [
+    "Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately.",
+    "When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded."
+  ],
+  "stage3_summary_key_phrases": [
+    "facts symptom reported",
+    "asthma symptoms sports",
+    "sports patient reports",
+    "subject symptoms frequency",
+    "reports lacking motivation",
+    "shakiness onset aerobic",
+    "year patient episodes",
+    "fact adjective modifying",
+    "break recent separate",
+    "rules decompose statement"
+  ],
+  "stage3_coverage_scores": [
+    {
+      "sentence": "Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately.",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "Patient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately.",
+      "score": 0.6026,
+      "is_missing": false,
+      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+    },
+    {
+      "sentence": "When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded.",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded.",
+      "score": 0.2913,
+      "is_missing": true,
+      "action": "Added: Missing clinical dialogue detail (coverage < 0.40); inserted via GPT-2 fluency optimization."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded.",
+      "statement": "When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded.",
+      "coverage": 0.2913,
+      "status": "added",
+      "reason": "coverage <= cov_min (uMedSum adds the dialogue sentence verbatim)",
+      "insertion": {
+        "section": "subjective",
+        "line_index": 3,
+        "perplexity": 18.09
+      }
+    }
+  ],
+  "stage3_added": [
+    {
+      "statement": "When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded.",
+      "evidence": "When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded.",
+      "section": "subjective",
+      "candidate": "When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded."
+    }
+  ],
+  "stage3_stats": {
+    "num_key_sentences": 2,
+    "num_flagged": 1,
+    "num_added": 1
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "section": "subjective",
+        "claim": "After [insert subject], symptoms can last for a while.",
+        "entailment": 0.4463,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Duration: symptoms occur during sports, but can last for a while after"
+      },
+      {
+        "section": "subjective",
+        "claim": "The patient has no recent episodes.",
+        "entailment": 0.4978,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "No recent episodes of significant sadness or loss of interest in activities"
+      },
+      {
+        "section": "subjective",
+        "claim": "The patient has no recent loss of interest.",
+        "entailment": 0.3977,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "No recent episodes of significant sadness or loss of interest in activities"
+      },
+      {
+        "section": "subjective",
+        "claim": "The patient has no loss of interest in activities.",
+        "entailment": 0.4048,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "No recent episodes of significant sadness or loss of interest in activities"
+      },
+      {
+        "section": "objective",
+        "claim": "Statement: Note that the statement is very concise and does not contain any specific findings or information, so the resulting atomic facts are also quite simple.",
+        "entailment": 0.4539,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Diagnostic Results & Labs: None mentioned"
+      },
+      {
+        "section": "objective",
+        "claim": "Note is made.",
+        "entailment": 0.4548,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Diagnostic Results & Labs: None mentioned"
+      },
+      {
+        "section": "objective",
+        "claim": "The statement is very concise.",
+        "entailment": 0.4255,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Diagnostic Results & Labs: None mentioned"
+      }
+    ]
+  },
+  "final_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** Asthma, possible depression or anxiety\n\t+ Patient's asthma symptoms are likely related to their academic stress and social withdrawal\n* **Treatment Plan, Medications, and Follow-up:**\n\t+ Schedule pulmonary function tests and chest X-rays to better evaluate asthma symptoms\n\t+ Consider referral to a mental health professional for further evaluation and management of depression or anxiety\n\t+ Follow-up appointment scheduled to discuss test results and develop a plan to manage asthma symptoms and psychological symptoms\n\nNote: The patient's symptoms and medical history suggest that their asthma symptoms are likely related to their academic stress and social withdrawal. The patient's feelings of being down, hopeless, and lacking motivation may be indicative of depression or anxiety. Further evaluation and management by a mental health professional may be necessary to address these symptoms."
+  },
+  "ap_unchanged": true,
+  "thresholds": {
+    "Te": 0.9,
+    "Tc": 0.8,
+    "Ta": 0.5,
+    "cov_min": 0.4,
+    "top_m": 2,
+    "fix_header_bug": true
+  },
+  "models": {
+    "llm": "llama3:8b-instruct-q8_0",
+    "nli": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+    "embedder": "all-MiniLM-L6-v2",
+    "ppl": "gpt2"
+  },
+  "status": "success",
+  "seconds": 16.5,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 16 years old, and I'm here because I've been having trouble with my asthma, especially during sports, and I've been feeling really down lately. I was hoping we could talk about it.\nDoctor: Can you describe the frequency and severity of your asthma symptoms during sports, and what specific medications have you been using to manage them?\nPatient: Sure, so I have an albuterol inhaler, and I use it whenever I start having trouble. It usually happens during any kind of aerobic workout, like when I'm playing water polo. When it happens, I start feeling like there's phlegm in my throat, my chest gets tight, I wheeze, and I have to sit down or I get lightheaded. The inhaler helps a little, but I still have to stop and catch my breath, and sometimes I get shaky after using it.\nDoctor: Could you provide more details about the recent feelings of being down, such as how long you've been feeling this way, any specific triggers, and whether you've experienced any changes in sleep, appetite, or interest in activities?\nPatient: I think the feelings of being down started around when I began this school year. It's mostly because of the stress from my AP classes and SATs. I feel really tired a lot, and I don't really feel like doing anything anymore. My friends go out, but I just want to stay home. I haven't really noticed changes in my sleep or appetite, but I do feel like there's a lot of pressure on me.\nDoctor: Have you had any recent chest X-rays, pulmonary function tests, or other respiratory evaluations?\nPatient: No, I haven't had any recent chest X-rays or pulmonary function tests. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations.\nDoctor: Have you experienced any changes in your mood or energy levels that are not related to your academic stress or asthma symptoms?\nPatient: No, I don't think so. Most of the time, I feel like my mood and energy levels are connected to either my asthma or the stress from school. I haven't noticed any other factors affecting how I feel.\nDoctor: Have you undergone any pulmonary function tests or chest X-rays in the past? If not, would you be willing to schedule these tests to better evaluate your asthma symptoms?\nPatient: No, I haven't had any pulmonary function tests or chest X-rays in the past. I just use my inhaler whenever I have an attack, and I haven't been to the doctor for any other respiratory evaluations. I'm willing to schedule these tests if it would help better understand what's going on with my asthma.\nDoctor: Has the patient experienced any episodes of significant sadness, hopelessness, or loss of interest in activities they once enjoyed over the past few months?\nPatient: Yes, I have felt really down a lot lately, and I don't really feel like doing anything anymore. I used to enjoy hanging out with friends and playing water polo, but now I just feel really tired and don't have the motivation to do anything. It's been pretty tough.\nDoctor: Have you had any recent episodes of acute respiratory distress or been hospitalized for asthma in the past?\nPatient: No, I haven't had any recent episodes of acute respiratory distress or been hospitalized for asthma. I just use my inhaler when I have an attack, and I usually manage to get through it by sitting down and breathing slowly. It's not great, but it hasn't gotten to the point where I needed to go to the hospital.\nDoctor: How long has the patient been experiencing feelings of being down, and has there been any change in the frequency or intensity of these feelings over time?\nPatient: The feelings of being down have been going on for a few months now, especially since I started this school year. It seems like they've gotten worse over time, especially with all the stress from school and the asthma issues making it harder to keep up with sports and social stuff. It's been pretty tough to deal with.\nDoctor: Has the patient undergone any pulmonary function tests or chest X-rays in the past? If not, would they be willing to schedule these tests to better evaluate their asthma symptoms?\nPatient: No, I haven't had any pulmonary function tests or chest X-rays in the past. I just use my inhaler when I have an attack, and I haven't been to the doctor for any other respiratory evaluations. I'm willing to schedule these tests if it would help better understand what's going on with my asthma.\nDoctor: Can you describe the specific triggers for your asthma symptoms during sports, and have you noticed any patterns or worsening of symptoms in relation to your academic stress or social withdrawal?\nPatient: Sure, during sports, especially when I'm doing something aerobic like running or playing water polo, I start to feel like there's phlegm building up in my throat, my chest gets tight, and I start wheezing. It usually happens pretty quickly, and I have to stop and sit down to catch my breath. I do notice that my symptoms seem to get worse when I'm stressed about school or when I'm feeling down, which makes it harder to keep up with sports and social stuff. It feels like everything is kind of connected.\nDoctor: Has the patient experienced any recent exacerbations of asthma symptoms that required additional use of the albuterol inhaler or any other rescue medications?\nPatient: No, I haven't had any recent exacerbations that required more use of my inhaler than usual. I still use it when I have an attack, usually two puffs, and it helps me feel better after a while, but I still have to sit down and catch my breath. It's been pretty consistent with how it's been happening during sports.\nDoctor: Have you experienced any changes in your sleep patterns or appetite since the onset of your feelings of being down?\nPatient: No, I haven't really noticed any big changes in my sleep or appetite, but I do feel more tired than usual, especially after having an asthma attack during sports. I guess I just don't have as much energy as I used to, and I'm not as motivated to do the things I used to enjoy.\nDoctor: Have you undergone any pulmonary function tests or chest X-rays in the past? If not, would you be willing to schedule these tests to better evaluate your asthma?\nPatient: No, I haven't had any pulmonary function tests or chest X-rays in the past. I just use my inhaler when I have an attack, and I haven't been to the doctor for any other respiratory evaluations. I'm willing to schedule these tests if it would help better understand what's going on with my asthma.\nDoctor: Have you experienced any episodes of acute respiratory distress, such as severe shortness of breath, chest pain, or cyanosis, in the past?\nPatient: No, I haven't had any episodes of severe shortness of breath, chest pain, or anything like that. The worst it gets is wheezing, chest tightness, and needing to sit down and catch my breath, but I don't feel like I'm in immediate danger or anything like that. It's more of a struggle during sports than something really severe.",
+  "reference_so": {
+    "subjective": "Basic information: 16-year-old patient presenting with asthma symptoms during sports and recent feelings of being down\n\nHistory of present illness: Asthma symptoms during sports, characterized by phlegm in the throat, chest tightness, wheezing, and lightheadedness, with partial response to albuterol inhaler. Recent feelings of being down, starting around the beginning of the school year, attributed to stress from AP classes and SATs. Symptoms include fatigue, lack of motivation, and social withdrawal. No changes in sleep or appetite reported. No history of prior psychiatric evaluation or treatment. No recent episodes of acute respiratory distress or hospitalization related to asthma. The feelings of being down have been going on for a few months now, especially since I started this school year. It seems like they've gotten worse over time, especially with all the stress from school and the asthma issues making it harder to keep up with sports and social stuff. It's been pretty tough to deal with. Asthma symptoms are triggered during sports, especially aerobic activities like running or playing water polo, and seem to worsen with stress or feelings of being down\n\nPast history: No significant past medical history, no prior psychiatric diagnoses, no surgeries, no known allergies. Family history is unremarkable for psychiatric conditions. Personal history includes academic stress and recent feelings of being down",
+    "objective": "Physical examination: Vital signs: BP 110/70 mmHg, HR 72 bpm, RR 16 breaths/min, Temp 36.8°C, SpO2 98% on room air. General appearance: Alert and oriented, but appears fatigued. Mood: Depressed, with low energy. Speech: Slow and soft. Thought process: Linear. No suicidal ideation. No psychomotor retardation or agitation. No signs of physical illness. No abnormalities on cardiovascular, respiratory, or neurological examination\n\nInvestigations: No recent laboratory or imaging studies available. Patient has not undergone pulmonary function tests or chest X-rays"
+  }
+}

@@ -1,0 +1,413 @@
+{
+  "case_id": "D2N001",
+  "split": "test",
+  "is_icl_demo": false,
+  "stage1_elements": "Here are the extracted clinical elements in concise bullet points:\n\n**Subjective Elements:**\n\n* Chief complaint: Annual exam\n* History of present illness:\n\t+ Congestive heart failure diagnosis (exact date unknown)\n\t+ Symptoms: None major (no chest pain, shortness of breath)\n\t+ Medication management: Taking medication for heart failure, sometimes forgets to take blood pressure meds\n\t+ Recent changes in symptoms: None (no increased shortness of breath, swelling)\n\t+ Blood pressure tends to increase during stressful periods\n* Relevant medical history/medications:\n\t+ Heart failure\n\t+ Blood pressure medications (exact names and dosages unknown)\n\n**Objective Elements:**\n\n* None mentioned in the dialogue\n\n**Assessment Elements:**\n\n* Diagnoses: Congestive heart failure\n* Clinical impressions: None mentioned in the dialogue\n\n**Plan Elements:**\n\n* Medical treatment plan: None specified in the dialogue\n* Prescriptions/dosages: None specified in the dialogue\n* Tests ordered: None mentioned in the dialogue\n* Follow-up instructions: None specified in the dialogue",
+  "stage1_raw_note": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:\n\n**SUBJECTIVE:**\n\n* **Chief Complaint:** Annual exam\n* **History of Present Illness (HPI):**\n\t+ The patient presents with a history of congestive heart failure, diagnosed at an unknown date. He reports no major symptoms such as chest pain or shortness of breath. He is taking medication for heart failure, but sometimes forgets to take his blood pressure medications. He has not experienced any recent changes in symptoms, such as increased shortness of breath or swelling. His blood pressure tends to increase during stressful periods.\n\n**OBJECTIVE:**\n\n* **Physical Examination & Vitals:** None mentioned in the dialogue\n* **Diagnostic Results & Labs:** None mentioned in the dialogue\n\n**ASSESSMENT AND PLAN:**\n\n* **Diagnoses and Clinical Reasoning:** The patient is diagnosed with congestive heart failure, based on his reported history and symptoms.\n* **Treatment Plan, Medications, and Follow-up:** The patient's current medication regimen for heart failure and blood pressure will be reviewed and adjusted as necessary. He will be advised to take his medications regularly and to monitor his blood pressure. Follow-up appointments will be scheduled to monitor his condition and adjust his treatment plan as needed.\n\nPlease note that this SOAP note is based on the provided dialogue and may not reflect the actual medical record or treatment plan.",
+  "stage1_parse": {
+    "parse_mode": "main_headings",
+    "parse_ok": true,
+    "dropped_preamble": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:"
+  },
+  "stage1_so": {
+    "subjective": "* **Chief Complaint:** Annual exam\n* **History of Present Illness (HPI):**\n\t+ The patient presents with a history of congestive heart failure, diagnosed at an unknown date. He reports no major symptoms such as chest pain or shortness of breath. He is taking medication for heart failure, but sometimes forgets to take his blood pressure medications. He has not experienced any recent changes in symptoms, such as increased shortness of breath or swelling. His blood pressure tends to increase during stressful periods.",
+    "objective": "* **Physical Examination & Vitals:** None mentioned in the dialogue\n* **Diagnostic Results & Labs:** None mentioned in the dialogue"
+  },
+  "stage1_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** The patient is diagnosed with congestive heart failure, based on his reported history and symptoms.\n* **Treatment Plan, Medications, and Follow-up:** The patient's current medication regimen for heart failure and blood pressure will be reviewed and adjusted as necessary. He will be advised to take his medications regularly and to monitor his blood pressure. Follow-up appointments will be scheduled to monitor his condition and adjust his treatment plan as needed.\n\nPlease note that this SOAP note is based on the provided dialogue and may not reflect the actual medical record or treatment plan."
+  },
+  "stage2_so": {
+    "subjective": "The patient presents with a history of congestive heart failure, diagnosed at an unknown date.\nHe reports no major symptoms such as chest pain or shortness of breath.\nHe is taking medication for heart failure, but sometimes forgets to take his blood pressure medications.\nHe has not experienced increased shortness of breath.\nNote that I did not infer or add any information, and I replaced the pronoun \"He\" with the subject \"He\" to make each fact self-contained.\nPlease provide the statement you'd like me to decompose into atomic facts. I'll follow the rules and output the resulting atomic facts.\nSplitting the list of symptoms into separate facts\nReplacing the pronoun \"such as\" with the subject \"He\"\nNot adding or inferring any information that is not present in the statement\nOutputting each fact as a self-contained proposition\nHis blood pressure tends to increase during stressful periods.",
+    "objective": "Physical Examination is not mentioned in the dialogue.\nVitals are not mentioned in the dialogue.\nPlease provide the statement you'd like me to decompose into atomic facts. I'll follow the rules and output the resulting atomic facts.\nDiagnostic Results are not mentioned in the dialogue.\nLabs are not mentioned in the dialogue.\nNote that the statement is a simple negation, stating that there is no mention of diagnostic results or labs in the dialogue."
+  },
+  "stage2_audit": {
+    "subjective": [
+      {
+        "unit": "Chief Complaint: Annual exam",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.459,
+          "neutral": 0.2825,
+          "contradiction": 0.2585
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please provide the names, dosages, and frequencies of your heart failure and blood pressure medications, either from your pill bottle or records? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please provide the names, dosages, and frequencies of your heart failure and blood pressure medications, either from your pill bottle or records? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the names, dosages, and how often you're supposed to take your medications for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and provide the names, dosages, and frequencies of your heart failure and blood pressure medications? Patient: I don't know the exact names or dosages off the top of my head, but I can check my pill bottle or records for you. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and provide the exact names, dosages, and frequencies of your heart failure and blood pressure medications? Patient: I don't know the exact",
+        "atomic_decomposition": {
+          "original": "Chief Complaint: Annual exam",
+          "retained": [],
+          "discarded": [
+            {
+              "atom": "Chief Complaint: Annual exam",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.459,
+              "depth": 1
+            }
+          ],
+          "decomposition_method": "too_short",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "The patient presents with a history of congestive heart failure, diagnosed at an unknown date.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9995,
+          "neutral": 0.0004,
+          "contradiction": 0.0002
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 50 years old, and I'm here for my annual exam. I've been doing okay overall, but I have a few things we can talk about, like my heart failure and blood pressure. Doctor: Could you please provide more details about your heart failure, such as when it was diagnosed, any symptoms you experience, and whether you are currently on any medications for it? Patient: I was diagnosed with congestive heart failure a while back, and I've been managing it with medication. I try to watch my diet, especially keeping sodium low, and I haven't had any major symptoms like chest pain or shortness of breath lately. I'm on medication for it, but I do forget sometimes to take my blood pressure meds, which I know can affect it. Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue? Patient: I don't know the exact date of my heart failure diagnosis, but I've been managing it for a while now. I'm on medication for it, and I also take blood pressure meds, though I sometimes forget to take those. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "He reports no major symptoms such as chest pain or shortness of breath.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.998,
+          "neutral": 0.0012,
+          "contradiction": 0.0007
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 50 years old, and I'm here for my annual exam. I've been doing okay overall, but I have a few things we can talk about, like my heart failure and blood pressure. Doctor: Could you please provide more details about your heart failure, such as when it was diagnosed, any symptoms you experience, and whether you are currently on any medications for it? Patient: I was diagnosed with congestive heart failure a while back, and I've been managing it with medication. I try to watch my diet, especially keeping sodium low, and I haven't had any major symptoms like chest pain or shortness of breath lately. I'm on medication for it, but I do forget sometimes to take my blood pressure meds, which I know can affect it. Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue? Patient: I don't know the exact date of my heart failure diagnosis, but I've been managing it for a while now. I'm on medication for it, and I also take blood pressure meds, though I sometimes forget to take those. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "He is taking medication for heart failure, but sometimes forgets to take his blood pressure medications.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9922,
+          "neutral": 0.0064,
+          "contradiction": 0.0011
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 50 years old, and I'm here for my annual exam. I've been doing okay overall, but I have a few things we can talk about, like my heart failure and blood pressure. Doctor: Could you please provide more details about your heart failure, such as when it was diagnosed, any symptoms you experience, and whether you are currently on any medications for it? Patient: I was diagnosed with congestive heart failure a while back, and I've been managing it with medication. I try to watch my diet, especially keeping sodium low, and I haven't had any major symptoms like chest pain or shortness of breath lately. I'm on medication for it, but I do forget sometimes to take my blood pressure meds, which I know can affect it. Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue? Patient: I don't know the exact date of my heart failure diagnosis, but I've been managing it for a while now. I'm on medication for it, and I also take blood pressure meds, though I sometimes forget to take those. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "He has not experienced any recent changes in symptoms, such as increased shortness of breath or swelling.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.4597,
+          "neutral": 0.2729,
+          "contradiction": 0.2671
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "take them regularly. Doctor: Could you please check your pill bottle or records and provide the names, dosages, and frequency of your heart failure and blood pressure medications? Additionally, could you share any recent blood pressure readings or symptoms you've experienced during stressful periods? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please provide the names, dosages, and frequency of your heart failure and blood pressure medications, either from your pill bottle or records? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and provide the names, dosages, and frequencies of your heart failure and blood pressure medications? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please provide the names, dosages, and frequencies of your heart failure and blood pressure medications, either from your pill bottle or records? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to",
+        "atomic_decomposition": {
+          "original": "He has not experienced any recent changes in symptoms, such as increased shortness of breath or swelling.",
+          "retained": [
+            {
+              "atom": "He has not experienced increased shortness of breath.",
+              "citation": "Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the specific names and dosages of your heart failure and blood pressure medications? Also, have you noticed any recent changes in your symptoms, such as increased shortness of breath, swelling, or dizziness? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please check your pill bottles or records and provide the names, dosages, and frequency of your heart failure and blood pressure medications? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and provide the names, dosages, and frequency of your heart failure and blood pressure medications? Additionally, could you share any recent blood pressure readings or symptoms you've experienced during stressful periods? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my",
+              "entailment": 0.8164,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I did not infer or add any information, and I replaced the pronoun \"He\" with the subject \"He\" to make each fact self-contained.",
+              "citation": "Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the specific names and dosages of your heart failure and blood pressure medications? Also, have you noticed any recent changes in your symptoms, such as increased shortness of breath, swelling, or dizziness? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please check your pill bottles or records and provide the names, dosages, and frequency of your heart failure and blood pressure medications? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and provide the names, dosages, and frequency of your heart failure and blood pressure medications? Additionally, could you share any recent blood pressure readings or symptoms you've experienced during stressful periods? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my",
+              "entailment": 0.9072,
+              "depth": 2
+            },
+            {
+              "atom": "Please provide the statement you'd like me to decompose into atomic facts. I'll follow the rules and output the resulting atomic facts.",
+              "citation": "Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the specific names and dosages of your heart failure and blood pressure medications? Also, have you noticed any recent changes in your symptoms, such as increased shortness of breath, swelling, or dizziness? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please check your pill bottles or records and provide the names, dosages, and frequency of your heart failure and blood pressure medications? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and provide the names, dosages, and frequency of your heart failure and blood pressure medications? Additionally, could you share any recent blood pressure readings or symptoms you've experienced during stressful periods? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my",
+              "entailment": 0.5513,
+              "depth": 2
+            },
+            {
+              "atom": "Splitting the list of symptoms into separate facts",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 50 years old, and I'm here for my annual exam. I've been doing okay overall, but I have a few things we can talk about, like my heart failure and blood pressure. Doctor: Could you please provide more details about your heart failure, such as when it was diagnosed, any symptoms you experience, and whether you are currently on any medications for it? Patient: I was diagnosed with congestive heart failure a while back, and I've been managing it with medication. I try to watch my diet, especially keeping sodium low, and I haven't had any major symptoms like chest pain or shortness of breath lately. I'm on medication for it, but I do forget sometimes to take my blood pressure meds, which I know can affect it. Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue? Patient: I don't know the exact date of my heart failure diagnosis, but I've been managing it for a while now. I'm on medication for it, and I also take blood pressure meds, though I sometimes forget to take those. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the",
+              "entailment": 0.9775,
+              "depth": 1
+            },
+            {
+              "atom": "Replacing the pronoun \"such as\" with the subject \"He\"",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 50 years old, and I'm here for my annual exam. I've been doing okay overall, but I have a few things we can talk about, like my heart failure and blood pressure. Doctor: Could you please provide more details about your heart failure, such as when it was diagnosed, any symptoms you experience, and whether you are currently on any medications for it? Patient: I was diagnosed with congestive heart failure a while back, and I've been managing it with medication. I try to watch my diet, especially keeping sodium low, and I haven't had any major symptoms like chest pain or shortness of breath lately. I'm on medication for it, but I do forget sometimes to take my blood pressure meds, which I know can affect it. Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue? Patient: I don't know the exact date of my heart failure diagnosis, but I've been managing it for a while now. I'm on medication for it, and I also take blood pressure meds, though I sometimes forget to take those. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the",
+              "entailment": 0.8662,
+              "depth": 1
+            },
+            {
+              "atom": "Not adding or inferring any information that is not present in the statement",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 50 years old, and I'm here for my annual exam. I've been doing okay overall, but I have a few things we can talk about, like my heart failure and blood pressure. Doctor: Could you please provide more details about your heart failure, such as when it was diagnosed, any symptoms you experience, and whether you are currently on any medications for it? Patient: I was diagnosed with congestive heart failure a while back, and I've been managing it with medication. I try to watch my diet, especially keeping sodium low, and I haven't had any major symptoms like chest pain or shortness of breath lately. I'm on medication for it, but I do forget sometimes to take my blood pressure meds, which I know can affect it. Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue? Patient: I don't know the exact date of my heart failure diagnosis, but I've been managing it for a while now. I'm on medication for it, and I also take blood pressure meds, though I sometimes forget to take those. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the",
+              "entailment": 0.9463,
+              "depth": 1
+            },
+            {
+              "atom": "Outputting each fact as a self-contained proposition",
+              "citation": "Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the specific names and dosages of your heart failure and blood pressure medications? Also, have you noticed any recent changes in your symptoms, such as increased shortness of breath, swelling, or dizziness? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please check your pill bottles or records and provide the names, dosages, and frequency of your heart failure and blood pressure medications? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and provide the names, dosages, and frequency of your heart failure and blood pressure medications? Additionally, could you share any recent blood pressure readings or symptoms you've experienced during stressful periods? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my",
+              "entailment": 0.9292,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "He has not experienced any recent changes in symptoms.",
+              "reasoning": "Could not be decomposed further and not entailed above threshold Ta.",
+              "entailment": 0.4534,
+              "depth": 1
+            },
+            {
+              "atom": "Based on the rules, I decompose the statement into the following atomic facts:",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4546,
+              "depth": 2
+            },
+            {
+              "atom": "He has swelling.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4553,
+              "depth": 2
+            },
+            {
+              "atom": "He has not experienced swelling.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4541,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "His blood pressure tends to increase during stressful periods.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9458,
+          "neutral": 0.0487,
+          "contradiction": 0.0055
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 50 years old, and I'm here for my annual exam. I've been doing okay overall, but I have a few things we can talk about, like my heart failure and blood pressure. Doctor: Could you please provide more details about your heart failure, such as when it was diagnosed, any symptoms you experience, and whether you are currently on any medications for it? Patient: I was diagnosed with congestive heart failure a while back, and I've been managing it with medication. I try to watch my diet, especially keeping sodium low, and I haven't had any major symptoms like chest pain or shortness of breath lately. I'm on medication for it, but I do forget sometimes to take my blood pressure meds, which I know can affect it. Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue? Patient: I don't know the exact date of my heart failure diagnosis, but I've been managing it for a while now. I'm on medication for it, and I also take blood pressure meds, though I sometimes forget to take those. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      }
+    ],
+    "objective": [
+      {
+        "unit": "Physical Examination & Vitals: None mentioned in the dialogue",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.4705,
+          "neutral": 0.2668,
+          "contradiction": 0.2627
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please provide the names, dosages, and frequencies of your heart failure and blood pressure medications, either from your pill bottle or records? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please provide the names, dosages, and frequencies of your heart failure and blood pressure medications, either from your pill bottle or records? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the names, dosages, and how often you're supposed to take your medications for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and provide the names, dosages, and frequencies of your heart failure and blood pressure medications? Patient: I don't know the exact names or dosages off the top of my head, but I can check my pill bottle or records for you. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and provide the exact names, dosages, and frequencies of your heart failure and blood pressure medications? Patient: I don't know the exact",
+        "atomic_decomposition": {
+          "original": "Physical Examination & Vitals: None mentioned in the dialogue",
+          "retained": [
+            {
+              "atom": "Physical Examination is not mentioned in the dialogue.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 50 years old, and I'm here for my annual exam. I've been doing okay overall, but I have a few things we can talk about, like my heart failure and blood pressure. Doctor: Could you please provide more details about your heart failure, such as when it was diagnosed, any symptoms you experience, and whether you are currently on any medications for it? Patient: I was diagnosed with congestive heart failure a while back, and I've been managing it with medication. I try to watch my diet, especially keeping sodium low, and I haven't had any major symptoms like chest pain or shortness of breath lately. I'm on medication for it, but I do forget sometimes to take my blood pressure meds, which I know can affect it. Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue? Patient: I don't know the exact date of my heart failure diagnosis, but I've been managing it for a while now. I'm on medication for it, and I also take blood pressure meds, though I sometimes forget to take those. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the",
+              "entailment": 0.9766,
+              "depth": 1
+            },
+            {
+              "atom": "Vitals are not mentioned in the dialogue.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 50 years old, and I'm here for my annual exam. I've been doing okay overall, but I have a few things we can talk about, like my heart failure and blood pressure. Doctor: Could you please provide more details about your heart failure, such as when it was diagnosed, any symptoms you experience, and whether you are currently on any medications for it? Patient: I was diagnosed with congestive heart failure a while back, and I've been managing it with medication. I try to watch my diet, especially keeping sodium low, and I haven't had any major symptoms like chest pain or shortness of breath lately. I'm on medication for it, but I do forget sometimes to take my blood pressure meds, which I know can affect it. Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue? Patient: I don't know the exact date of my heart failure diagnosis, but I've been managing it for a while now. I'm on medication for it, and I also take blood pressure meds, though I sometimes forget to take those. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the",
+              "entailment": 0.8086,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "Diagnostic Results & Labs: None mentioned in the dialogue",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.4695,
+          "neutral": 0.2732,
+          "contradiction": 0.2573
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please provide the names, dosages, and frequencies of your heart failure and blood pressure medications, either from your pill bottle or records? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please provide the names, dosages, and frequencies of your heart failure and blood pressure medications, either from your pill bottle or records? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the names, dosages, and how often you're supposed to take your medications for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and provide the names, dosages, and frequencies of your heart failure and blood pressure medications? Patient: I don't know the exact names or dosages off the top of my head, but I can check my pill bottle or records for you. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and provide the exact names, dosages, and frequencies of your heart failure and blood pressure medications? Patient: I don't know the exact",
+        "atomic_decomposition": {
+          "original": "Diagnostic Results & Labs: None mentioned in the dialogue",
+          "retained": [
+            {
+              "atom": "Please provide the statement you'd like me to decompose into atomic facts. I'll follow the rules and output the resulting atomic facts.",
+              "citation": "Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the specific names and dosages of your heart failure and blood pressure medications? Also, have you noticed any recent changes in your symptoms, such as increased shortness of breath, swelling, or dizziness? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please check your pill bottles or records and provide the names, dosages, and frequency of your heart failure and blood pressure medications? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and provide the names, dosages, and frequency of your heart failure and blood pressure medications? Additionally, could you share any recent blood pressure readings or symptoms you've experienced during stressful periods? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my",
+              "entailment": 0.5513,
+              "depth": 2
+            },
+            {
+              "atom": "Diagnostic Results are not mentioned in the dialogue.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 50 years old, and I'm here for my annual exam. I've been doing okay overall, but I have a few things we can talk about, like my heart failure and blood pressure. Doctor: Could you please provide more details about your heart failure, such as when it was diagnosed, any symptoms you experience, and whether you are currently on any medications for it? Patient: I was diagnosed with congestive heart failure a while back, and I've been managing it with medication. I try to watch my diet, especially keeping sodium low, and I haven't had any major symptoms like chest pain or shortness of breath lately. I'm on medication for it, but I do forget sometimes to take my blood pressure meds, which I know can affect it. Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue? Patient: I don't know the exact date of my heart failure diagnosis, but I've been managing it for a while now. I'm on medication for it, and I also take blood pressure meds, though I sometimes forget to take those. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the",
+              "entailment": 0.9946,
+              "depth": 1
+            },
+            {
+              "atom": "Labs are not mentioned in the dialogue.",
+              "citation": "Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the specific names and dosages of your heart failure and blood pressure medications? Also, have you noticed any recent changes in your symptoms, such as increased shortness of breath, swelling, or dizziness? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please check your pill bottles or records and provide the names, dosages, and frequency of your heart failure and blood pressure medications? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and provide the names, dosages, and frequency of your heart failure and blood pressure medications? Additionally, could you share any recent blood pressure readings or symptoms you've experienced during stressful periods? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my",
+              "entailment": 0.9839,
+              "depth": 1
+            },
+            {
+              "atom": "Note that the statement is a simple negation, stating that there is no mention of diagnostic results or labs in the dialogue.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 50 years old, and I'm here for my annual exam. I've been doing okay overall, but I have a few things we can talk about, like my heart failure and blood pressure. Doctor: Could you please provide more details about your heart failure, such as when it was diagnosed, any symptoms you experience, and whether you are currently on any medications for it? Patient: I was diagnosed with congestive heart failure a while back, and I've been managing it with medication. I try to watch my diet, especially keeping sodium low, and I haven't had any major symptoms like chest pain or shortness of breath lately. I'm on medication for it, but I do forget sometimes to take my blood pressure meds, which I know can affect it. Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue? Patient: I don't know the exact date of my heart failure diagnosis, but I've been managing it for a while now. I'm on medication for it, and I also take blood pressure meds, though I sometimes forget to take those. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the",
+              "entailment": 0.9844,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      }
+    ]
+  },
+  "stage2_stats": {
+    "decision_counts": {
+      "uncertain": 4,
+      "faithful": 4
+    },
+    "num_claims": 8,
+    "num_kept": 7,
+    "claim_retention_rate": 0.875
+  },
+  "stage3_so": {
+    "subjective": "The patient presents with a history of congestive heart failure, diagnosed at an unknown date.\nHe reports no major symptoms such as chest pain or shortness of breath.\nHe is taking medication for heart failure, but sometimes forgets to take his blood pressure medications.\nHe has not experienced increased shortness of breath.\nPatient: I'm 50 years old, and I'm here for my annual exam.\nNote that I did not infer or add any information, and I replaced the pronoun \"He\" with the subject \"He\" to make each fact self-contained.\nPlease provide the statement you'd like me to decompose into atomic facts. I'll follow the rules and output the resulting atomic facts.\nSplitting the list of symptoms into separate facts\nReplacing the pronoun \"such as\" with the subject \"He\"\nNot adding or inferring any information that is not present in the statement\nOutputting each fact as a self-contained proposition\nHis blood pressure tends to increase during stressful periods.",
+    "objective": "Physical Examination is not mentioned in the dialogue.\nVitals are not mentioned in the dialogue.\nPlease provide the statement you'd like me to decompose into atomic facts. I'll follow the rules and output the resulting atomic facts.\nDiagnostic Results are not mentioned in the dialogue.\nLabs are not mentioned in the dialogue.\nNote that the statement is a simple negation, stating that there is no mention of diagnostic results or labs in the dialogue."
+  },
+  "stage3_key_sentences": [
+    "Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue?",
+    "Patient: I'm 50 years old, and I'm here for my annual exam."
+  ],
+  "stage3_summary_key_phrases": [
+    "decompose atomic facts",
+    "symptoms separate facts",
+    "stating mention diagnostic",
+    "subject make fact",
+    "examination mentioned dialogue",
+    "contained proposition blood",
+    "information replaced pronoun",
+    "contained provide statement",
+    "congestive heart failure",
+    "simple negation stating"
+  ],
+  "stage3_coverage_scores": [
+    {
+      "sentence": "Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue?",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue?",
+      "score": 0.5075,
+      "is_missing": false,
+      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+    },
+    {
+      "sentence": "Patient: I'm 50 years old, and I'm here for my annual exam.",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "Patient: I'm 50 years old, and I'm here for my annual exam.",
+      "score": 0.3554,
+      "is_missing": true,
+      "action": "Added: Missing clinical dialogue detail (coverage < 0.40); inserted via GPT-2 fluency optimization."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "Patient: I'm 50 years old, and I'm here for my annual exam.",
+      "statement": "Patient: I'm 50 years old, and I'm here for my annual exam.",
+      "coverage": 0.3554,
+      "status": "added",
+      "reason": "coverage <= cov_min (uMedSum adds the dialogue sentence verbatim)",
+      "insertion": {
+        "section": "subjective",
+        "line_index": 4,
+        "perplexity": 17.65
+      }
+    }
+  ],
+  "stage3_added": [
+    {
+      "statement": "Patient: I'm 50 years old, and I'm here for my annual exam.",
+      "evidence": "Patient: I'm 50 years old, and I'm here for my annual exam.",
+      "section": "subjective",
+      "candidate": "Patient: I'm 50 years old, and I'm here for my annual exam."
+    }
+  ],
+  "stage3_stats": {
+    "num_key_sentences": 2,
+    "num_flagged": 1,
+    "num_added": 1
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "section": "subjective",
+        "claim": "Chief Complaint: Annual exam",
+        "entailment": 0.459,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Chief Complaint: Annual exam"
+      },
+      {
+        "section": "subjective",
+        "claim": "He has not experienced any recent changes in symptoms.",
+        "entailment": 0.4534,
+        "reason": "Could not be decomposed further and not entailed above threshold Ta.",
+        "from_unit": "He has not experienced any recent changes in symptoms, such as increased shortness of breath or swelling."
+      },
+      {
+        "section": "subjective",
+        "claim": "Based on the rules, I decompose the statement into the following atomic facts:",
+        "entailment": 0.4546,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "He has not experienced any recent changes in symptoms, such as increased shortness of breath or swelling."
+      },
+      {
+        "section": "subjective",
+        "claim": "He has swelling.",
+        "entailment": 0.4553,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "He has not experienced any recent changes in symptoms, such as increased shortness of breath or swelling."
+      },
+      {
+        "section": "subjective",
+        "claim": "He has not experienced swelling.",
+        "entailment": 0.4541,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "He has not experienced any recent changes in symptoms, such as increased shortness of breath or swelling."
+      }
+    ]
+  },
+  "final_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** The patient is diagnosed with congestive heart failure, based on his reported history and symptoms.\n* **Treatment Plan, Medications, and Follow-up:** The patient's current medication regimen for heart failure and blood pressure will be reviewed and adjusted as necessary. He will be advised to take his medications regularly and to monitor his blood pressure. Follow-up appointments will be scheduled to monitor his condition and adjust his treatment plan as needed.\n\nPlease note that this SOAP note is based on the provided dialogue and may not reflect the actual medical record or treatment plan."
+  },
+  "ap_unchanged": true,
+  "thresholds": {
+    "Te": 0.9,
+    "Tc": 0.8,
+    "Ta": 0.5,
+    "cov_min": 0.4,
+    "top_m": 2,
+    "fix_header_bug": true
+  },
+  "models": {
+    "llm": "llama3:8b-instruct-q8_0",
+    "nli": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+    "embedder": "all-MiniLM-L6-v2",
+    "ppl": "gpt2"
+  },
+  "status": "success",
+  "seconds": 89.1,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 50 years old, and I'm here for my annual exam. I've been doing okay overall, but I have a few things we can talk about, like my heart failure and blood pressure.\nDoctor: Could you please provide more details about your heart failure, such as when it was diagnosed, any symptoms you experience, and whether you are currently on any medications for it?\nPatient: I was diagnosed with congestive heart failure a while back, and I've been managing it with medication. I try to watch my diet, especially keeping sodium low, and I haven't had any major symptoms like chest pain or shortness of breath lately. I'm on medication for it, but I do forget sometimes to take my blood pressure meds, which I know can affect it.\nDoctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue?\nPatient: I don't know the exact date of my heart failure diagnosis, but I've been managing it for a while now. I'm on medication for it, and I also take blood pressure meds, though I sometimes forget to take those. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful.\nDoctor: Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure?\nPatient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly.\nDoctor: Could you please check your pill bottle or records and let me know the specific names and dosages of your heart failure and blood pressure medications? Also, have you noticed any recent changes in your symptoms, such as increased shortness of breath, swelling, or dizziness?\nPatient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful.\nDoctor: Could you please check your pill bottles or records and provide the names, dosages, and frequency of your heart failure and blood pressure medications?\nPatient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly.\nDoctor: Could you please check your pill bottle or records and provide the names, dosages, and frequency of your heart failure and blood pressure medications? Additionally, could you share any recent blood pressure readings or symptoms you've experienced during stressful periods?\nPatient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful.\nDoctor: Could you please provide the names, dosages, and frequency of your heart failure and blood pressure medications, either from your pill bottle or records?\nPatient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly.\nDoctor: Could you please check your pill bottle or records and provide the names, dosages, and frequencies of your heart failure and blood pressure medications?\nPatient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly.\nDoctor: Could you please provide the names, dosages, and frequencies of your heart failure and blood pressure medications, either from your pill bottle or records?\nPatient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly.\nDoctor: Could you please provide the names, dosages, and frequencies of your heart failure and blood pressure medications, either from your pill bottle or records?\nPatient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly.\nDoctor: Could you please check your pill bottle or records and let me know the names, dosages, and how often you're supposed to take your medications for heart failure and blood pressure?\nPatient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly.\nDoctor: Could you please check your pill bottle or records and provide the names, dosages, and frequencies of your heart failure and blood pressure medications?\nPatient: I don't know the exact names or dosages off the top of my head, but I can check my pill bottle or records for you. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly.\nDoctor: Could you please check your pill bottle or records and provide the exact names, dosages, and frequencies of your heart failure and blood pressure medications?\nPatient: I don't know the exact names or dosages off the top of my head, but I can check my pill bottle or records for you. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly.\nDoctor: Could you please check your pill bottle or records and let me know the names, dosages, and how often you're supposed to take your medications for heart failure and blood pressure?\nPatient: I don't know the exact names or dosages off the top of my head, but I can check my pill bottle or records for you. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly.",
+  "reference_so": {
+    "subjective": "Basic information: Age: 50, Gender: Not specified, Occupation: Not specified, Visit Time: Annual exam, Chief Complaint: Annual exam with concerns about heart failure, blood pressure, and medication adherence\n\nHistory of present illness: Onset: Not specified, Course: Not specified, Symptom Characteristics: No recent changes in symptoms like more shortness of breath or swelling, Progression: Not specified, Prior Evaluation: Not specified, Treatment: On medication for heart failure and blood pressure, Response: Medication adherence is inconsistent, with reports of elevated blood pressure during stressful periods\n\nPast history: Previous Illnesses: Heart failure, hypertension, Operations: Not specified, Trauma: Not specified, Allergies: Not specified, Personal History: Not specified, Family History: Not specified",
+    "objective": "Physical examination: Vital Signs: Not specified, System Findings: Not specified\n\nInvestigations: Laboratory: Not specified, Imaging: Not specified, ECG: Not specified"
+  }
+}

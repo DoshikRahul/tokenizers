@@ -1,0 +1,411 @@
+{
+  "case_id": "D2N038",
+  "split": "test",
+  "is_icl_demo": false,
+  "stage1_elements": "Here are the extracted clinical elements in concise bullet points:\n\n**Subjective Elements:**\n\n* Chief complaint: Positive lab work for hepatitis C (HCV)\n* History of present illness (symptoms, onset, duration): None reported\n* Relevant medical history/medications:\n\t+ No prior illnesses or surgeries\n\t+ No medications or allergies\n\t+ Family history: high blood pressure, diabetes, depression, but no history of hepatitis C or liver disease\n\t+ Past medical history: IV drug use (but clean for over 15 years), no tattoos, no blood transfusions, and no high-risk sexual behaviors\n\n**Objective Elements:**\n\n* Physical examination findings: None mentioned\n* Vital signs: None mentioned\n* Diagnostic lab/imaging results:\n\t+ Positive HCV antibody test\n\t+ No HCV RNA test results mentioned\n\t+ No liver function tests (ALT, AST, bilirubin) mentioned\n\n**Assessment Elements:**\n\n* Diagnoses and clinical impressions: Not explicitly stated, but likely to be a diagnosis of hepatitis C infection (based on positive antibody test)\n\n**Plan Elements:**\n\n* Medical treatment plan: Not explicitly stated, but likely to include further testing (HCV RNA, liver function tests) and potential treatment for hepatitis C infection\n* Prescriptions/dosages: None mentioned\n* Tests ordered: HCV RNA test, liver function tests (ALT, AST, bilirubin)\n* Follow-up instructions: Not explicitly stated, but likely to include further testing and potential treatment for hepatitis C infection",
+  "stage1_raw_note": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:\n\n**SUBJECTIVE:**\n\n* **Chief Complaint:** Positive lab work for hepatitis C (HCV).\n* **History of Present Illness (HPI):** The patient, a 38-year-old male, presents with a positive lab work for HCV, which was discovered during a routine physical examination. He reports no symptoms and no prior illnesses or surgeries. He has a history of IV drug use, but has been clean for over 15 years. He denies any tattoos, blood transfusions, or high-risk sexual behaviors.\n\n**OBJECTIVE:**\n\n* **Physical Examination & Vitals:** No physical examination findings or vital signs were mentioned during the visit.\n* **Diagnostic Results & Labs:** The patient's HCV antibody test was positive, indicating exposure to the virus. However, no HCV RNA test results or liver function tests (ALT, AST, bilirubin) were mentioned.\n\n**ASSESSMENT AND PLAN:**\n\n* **Diagnoses and Clinical Reasoning:** Based on the patient's positive HCV antibody test, it is likely that he has been exposed to the virus. Further testing, including an HCV RNA test and liver function tests (ALT, AST, bilirubin), is necessary to determine the extent of the infection and potential liver damage.\n* **Treatment Plan, Medications, and Follow-up:** The patient will undergo further testing to confirm the diagnosis and assess liver damage. If the HCV RNA test is positive, antiviral therapy may be initiated. The patient will be followed up with to monitor his liver function and response to treatment.\n\n**PLAN:**\n\n* **Tests Ordered:** HCV RNA test, liver function tests (ALT, AST, bilirubin)\n* **Follow-up Instructions:** The patient will be contacted to schedule follow-up appointments to discuss test results and potential treatment options.\n\nPlease note that this is a hypothetical note, and actual patient information and medical decisions should be based on individual patient needs and circumstances.",
+  "stage1_parse": {
+    "parse_mode": "main_headings",
+    "parse_ok": true,
+    "dropped_preamble": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:"
+  },
+  "stage1_so": {
+    "subjective": "* **Chief Complaint:** Positive lab work for hepatitis C (HCV).\n* **History of Present Illness (HPI):** The patient, a 38-year-old male, presents with a positive lab work for HCV, which was discovered during a routine physical examination. He reports no symptoms and no prior illnesses or surgeries. He has a history of IV drug use, but has been clean for over 15 years. He denies any tattoos, blood transfusions, or high-risk sexual behaviors.",
+    "objective": "* **Physical Examination & Vitals:** No physical examination findings or vital signs were mentioned during the visit.\n* **Diagnostic Results & Labs:** The patient's HCV antibody test was positive, indicating exposure to the virus. However, no HCV RNA test results or liver function tests (ALT, AST, bilirubin) were mentioned."
+  },
+  "stage1_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** Based on the patient's positive HCV antibody test, it is likely that he has been exposed to the virus. Further testing, including an HCV RNA test and liver function tests (ALT, AST, bilirubin), is necessary to determine the extent of the infection and potential liver damage.\n* **Treatment Plan, Medications, and Follow-up:** The patient will undergo further testing to confirm the diagnosis and assess liver damage. If the HCV RNA test is positive, antiviral therapy may be initiated. The patient will be followed up with to monitor his liver function and response to treatment.\n\n\n* **Tests Ordered:** HCV RNA test, liver function tests (ALT, AST, bilirubin)\n* **Follow-up Instructions:** The patient will be contacted to schedule follow-up appointments to discuss test results and potential treatment options.\n\nPlease note that this is a hypothetical note, and actual patient information and medical decisions should be based on individual patient needs and circumstances."
+  },
+  "stage2_so": {
+    "subjective": "Chief Complaint: Positive lab work for hepatitis C (HCV).\nHistory of Present Illness (HPI): The patient, a 38-year-old male, presents with a positive lab work for HCV, which was discovered during a routine physical examination.\nHe reports no symptoms and no prior illnesses or surgeries.\nNote that I did not break down \"IV drug use\" into separate facts, as it is a single concept being referred to. Similarly, I did not add any additional information that is not present in the original statement.\nNote that I did not combine the two facts into one, as the statement contains two separate propositions.\nNote that I did not combine the two facts into one, as the conjunction \"but\" is used to contrast two independent clauses, rather than to join them together.\nNote that each fact is self-contained, replacing the pronoun \"He\" with the subject, and not adding or inferring any additional information.",
+    "objective": "The visit occurred.\nNo vital signs were mentioned during the visit.\nNote that I did not add any information that is not present in the original statement, and each fact is self-contained and can stand alone as true or false.\nDiagnostic Results & Labs: The patient's HCV antibody test was positive, indicating exposure to the virus.\nHowever, no HCV RNA test results or liver function tests (ALT, AST, bilirubin) were mentioned."
+  },
+  "stage2_audit": {
+    "subjective": [
+      {
+        "unit": "Chief Complaint: Positive lab work for hepatitis C (HCV).",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9985,
+          "neutral": 0.0008,
+          "contradiction": 0.0005
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 38 years old and male. I came in because I had some positive lab work for hep c, and I'm really worried about it. I've been feeling fine, so it's pretty surprising to me. Doctor: When was the hepatitis C lab work done, and what specific tests were positive (e.g., HCV RNA, anti-HCV antibodies)? Patient: The lab work was done as part of my physical, and they found that I had positive results for hep c. I don't remember the exact test names, but they mentioned something about antibodies. It's all pretty confusing to me, honestly. Doctor: Could you please confirm if you have been tested for HCV RNA to determine if you have an active infection, and if so, what was the result? Additionally, have you ever been diagnosed with hepatitis C or had any prior treatments for it? Patient: I don't think they tested me for HCV RNA yet. They just did the antibody test, and that came back positive. I've never been diagnosed with hep C before or had any treatment for it. This is all new to me. Doctor: Could you please provide information about your past medical history, including any prior illnesses, surgeries, medications, allergies, and whether there is a family history of hepatitis C or liver disease? Patient: I don't have any prior illnesses or surgeries, and I'm not on any medications or allergies. As for family history, there's high blood pressure, diabetes, and depression on my side. I don't think there's a history of hepatitis C or liver disease specifically. Doctor: Has the patient undergone any liver function tests or imaging studies such as an ultrasound of the abdomen to assess for liver damage or cirrhosis? Patient: No, I haven't had any liver function tests or imaging studies yet. The only thing they did was the antibody test for hep c during",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "History of Present Illness (HPI): The patient, a 38-year-old male, presents with a positive lab work for HCV, which was discovered during a routine physical examination.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9966,
+          "neutral": 0.0026,
+          "contradiction": 0.001
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 38 years old and male. I came in because I had some positive lab work for hep c, and I'm really worried about it. I've been feeling fine, so it's pretty surprising to me. Doctor: When was the hepatitis C lab work done, and what specific tests were positive (e.g., HCV RNA, anti-HCV antibodies)? Patient: The lab work was done as part of my physical, and they found that I had positive results for hep c. I don't remember the exact test names, but they mentioned something about antibodies. It's all pretty confusing to me, honestly. Doctor: Could you please confirm if you have been tested for HCV RNA to determine if you have an active infection, and if so, what was the result? Additionally, have you ever been diagnosed with hepatitis C or had any prior treatments for it? Patient: I don't think they tested me for HCV RNA yet. They just did the antibody test, and that came back positive. I've never been diagnosed with hep C before or had any treatment for it. This is all new to me. Doctor: Could you please provide information about your past medical history, including any prior illnesses, surgeries, medications, allergies, and whether there is a family history of hepatitis C or liver disease? Patient: I don't have any prior illnesses or surgeries, and I'm not on any medications or allergies. As for family history, there's high blood pressure, diabetes, and depression on my side. I don't think there's a history of hepatitis C or liver disease specifically. Doctor: Has the patient undergone any liver function tests or imaging studies such as an ultrasound of the abdomen to assess for liver damage or cirrhosis? Patient: No, I haven't had any liver function tests or imaging studies yet. The only thing they did was the antibody test for hep c during",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "He reports no symptoms and no prior illnesses or surgeries.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9883,
+          "neutral": 0.0098,
+          "contradiction": 0.0019
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 38 years old and male. I came in because I had some positive lab work for hep c, and I'm really worried about it. I've been feeling fine, so it's pretty surprising to me. Doctor: When was the hepatitis C lab work done, and what specific tests were positive (e.g., HCV RNA, anti-HCV antibodies)? Patient: The lab work was done as part of my physical, and they found that I had positive results for hep c. I don't remember the exact test names, but they mentioned something about antibodies. It's all pretty confusing to me, honestly. Doctor: Could you please confirm if you have been tested for HCV RNA to determine if you have an active infection, and if so, what was the result? Additionally, have you ever been diagnosed with hepatitis C or had any prior treatments for it? Patient: I don't think they tested me for HCV RNA yet. They just did the antibody test, and that came back positive. I've never been diagnosed with hep C before or had any treatment for it. This is all new to me. Doctor: Could you please provide information about your past medical history, including any prior illnesses, surgeries, medications, allergies, and whether there is a family history of hepatitis C or liver disease? Patient: I don't have any prior illnesses or surgeries, and I'm not on any medications or allergies. As for family history, there's high blood pressure, diabetes, and depression on my side. I don't think there's a history of hepatitis C or liver disease specifically. Doctor: Has the patient undergone any liver function tests or imaging studies such as an ultrasound of the abdomen to assess for liver damage or cirrhosis? Patient: No, I haven't had any liver function tests or imaging studies yet. The only thing they did was the antibody test for hep c during",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "He has a history of IV drug use, but has been clean for over 15 years.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.4883,
+          "neutral": 0.2537,
+          "contradiction": 0.2581
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "AST, or bilirubin levels, to assess for potential liver damage? Patient: No, I haven't had any liver function tests yet. The only thing they did was the antibody test during my physical, and that came back positive. I'm still trying to figure out what this all means and what I need to do next. Doctor: Have you ever used intravenous drugs, had a tattoo, received a blood transfusion before 1992, or engaged in any high-risk sexual behaviors that could increase your risk of hepatitis C infection? Patient: I used to do IV drugs, but I've been clean for over fifteen years now. I don't think I've ever had a tattoo or received a blood transfusion. As for sexual behaviors, I don't think I've done anything that would put me at high risk. Doctor: Have you ever been tested for HCV RNA, and if so, what were the results? Patient: No, I haven't been tested for HCV RNA yet. They just did the antibody test, and that came back positive. I'm still trying to figure out what this all means and what steps I need to take next. Doctor: Have you ever been tested for liver function tests, such as ALT, AST, or bilirubin levels, to assess for potential liver damage? Patient: No, I haven't been tested for liver function tests yet. The only thing they did was the antibody test during my physical, and that came back positive. I'm still trying to figure out what this all means and what I need to do next. Doctor: Could you please provide the results of the HCV RNA test and the liver function tests (ALT, AST, bilirubin) that have been ordered? Patient: I haven't had the HCV RNA test or the liver function tests yet. They just did the antibody test, and that came back positive. I'm still trying to figure out what this all means and what steps I need to take next. Doctor: Have you undergone any liver function tests, such as ALT, AST, or",
+        "atomic_decomposition": {
+          "original": "He has a history of IV drug use, but has been clean for over 15 years.",
+          "retained": [
+            {
+              "atom": "Note that I did not break down \"IV drug use\" into separate facts, as it is a single concept being referred to. Similarly, I did not add any additional information that is not present in the original statement.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 38 years old and male. I came in because I had some positive lab work for hep c, and I'm really worried about it. I've been feeling fine, so it's pretty surprising to me. Doctor: When was the hepatitis C lab work done, and what specific tests were positive (e.g., HCV RNA, anti-HCV antibodies)? Patient: The lab work was done as part of my physical, and they found that I had positive results for hep c. I don't remember the exact test names, but they mentioned something about antibodies. It's all pretty confusing to me, honestly. Doctor: Could you please confirm if you have been tested for HCV RNA to determine if you have an active infection, and if so, what was the result? Additionally, have you ever been diagnosed with hepatitis C or had any prior treatments for it? Patient: I don't think they tested me for HCV RNA yet. They just did the antibody test, and that came back positive. I've never been diagnosed with hep C before or had any treatment for it. This is all new to me. Doctor: Could you please provide information about your past medical history, including any prior illnesses, surgeries, medications, allergies, and whether there is a family history of hepatitis C or liver disease? Patient: I don't have any prior illnesses or surgeries, and I'm not on any medications or allergies. As for family history, there's high blood pressure, diabetes, and depression on my side. I don't think there's a history of hepatitis C or liver disease specifically. Doctor: Has the patient undergone any liver function tests or imaging studies such as an ultrasound of the abdomen to assess for liver damage or cirrhosis? Patient: No, I haven't had any liver function tests or imaging studies yet. The only thing they did was the antibody test for hep c during",
+              "entailment": 0.9727,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I did not combine the two facts into one, as the statement contains two separate propositions.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 38 years old and male. I came in because I had some positive lab work for hep c, and I'm really worried about it. I've been feeling fine, so it's pretty surprising to me. Doctor: When was the hepatitis C lab work done, and what specific tests were positive (e.g., HCV RNA, anti-HCV antibodies)? Patient: The lab work was done as part of my physical, and they found that I had positive results for hep c. I don't remember the exact test names, but they mentioned something about antibodies. It's all pretty confusing to me, honestly. Doctor: Could you please confirm if you have been tested for HCV RNA to determine if you have an active infection, and if so, what was the result? Additionally, have you ever been diagnosed with hepatitis C or had any prior treatments for it? Patient: I don't think they tested me for HCV RNA yet. They just did the antibody test, and that came back positive. I've never been diagnosed with hep C before or had any treatment for it. This is all new to me. Doctor: Could you please provide information about your past medical history, including any prior illnesses, surgeries, medications, allergies, and whether there is a family history of hepatitis C or liver disease? Patient: I don't have any prior illnesses or surgeries, and I'm not on any medications or allergies. As for family history, there's high blood pressure, diabetes, and depression on my side. I don't think there's a history of hepatitis C or liver disease specifically. Doctor: Has the patient undergone any liver function tests or imaging studies such as an ultrasound of the abdomen to assess for liver damage or cirrhosis? Patient: No, I haven't had any liver function tests or imaging studies yet. The only thing they did was the antibody test for hep c during",
+              "entailment": 0.9858,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I did not combine the two facts into one, as the conjunction \"but\" is used to contrast two independent clauses, rather than to join them together.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 38 years old and male. I came in because I had some positive lab work for hep c, and I'm really worried about it. I've been feeling fine, so it's pretty surprising to me. Doctor: When was the hepatitis C lab work done, and what specific tests were positive (e.g., HCV RNA, anti-HCV antibodies)? Patient: The lab work was done as part of my physical, and they found that I had positive results for hep c. I don't remember the exact test names, but they mentioned something about antibodies. It's all pretty confusing to me, honestly. Doctor: Could you please confirm if you have been tested for HCV RNA to determine if you have an active infection, and if so, what was the result? Additionally, have you ever been diagnosed with hepatitis C or had any prior treatments for it? Patient: I don't think they tested me for HCV RNA yet. They just did the antibody test, and that came back positive. I've never been diagnosed with hep C before or had any treatment for it. This is all new to me. Doctor: Could you please provide information about your past medical history, including any prior illnesses, surgeries, medications, allergies, and whether there is a family history of hepatitis C or liver disease? Patient: I don't have any prior illnesses or surgeries, and I'm not on any medications or allergies. As for family history, there's high blood pressure, diabetes, and depression on my side. I don't think there's a history of hepatitis C or liver disease specifically. Doctor: Has the patient undergone any liver function tests or imaging studies such as an ultrasound of the abdomen to assess for liver damage or cirrhosis? Patient: No, I haven't had any liver function tests or imaging studies yet. The only thing they did was the antibody test for hep c during",
+              "entailment": 0.9946,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "He has a history.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.478,
+              "depth": 2
+            },
+            {
+              "atom": "He has a history of IV drug use.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4731,
+              "depth": 2
+            },
+            {
+              "atom": "He has been clean.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4749,
+              "depth": 2
+            },
+            {
+              "atom": "The duration of his clean period is over 15 years.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4993,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "He denies any tattoos, blood transfusions, or high-risk sexual behaviors.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.4619,
+          "neutral": 0.2605,
+          "contradiction": 0.2776
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "AST, or bilirubin levels, to assess for potential liver damage? Patient: No, I haven't had any liver function tests yet. The only thing they did was the antibody test during my physical, and that came back positive. I'm still trying to figure out what this all means and what I need to do next. Doctor: Have you ever used intravenous drugs, had a tattoo, received a blood transfusion before 1992, or engaged in any high-risk sexual behaviors that could increase your risk of hepatitis C infection? Patient: I used to do IV drugs, but I've been clean for over fifteen years now. I don't think I've ever had a tattoo or received a blood transfusion. As for sexual behaviors, I don't think I've done anything that would put me at high risk. Doctor: Have you ever been tested for HCV RNA, and if so, what were the results? Patient: No, I haven't been tested for HCV RNA yet. They just did the antibody test, and that came back positive. I'm still trying to figure out what this all means and what steps I need to take next. Doctor: Have you ever been tested for liver function tests, such as ALT, AST, or bilirubin levels, to assess for potential liver damage? Patient: No, I haven't been tested for liver function tests yet. The only thing they did was the antibody test during my physical, and that came back positive. I'm still trying to figure out what this all means and what I need to do next. Doctor: Could you please provide the results of the HCV RNA test and the liver function tests (ALT, AST, bilirubin) that have been ordered? Patient: I haven't had the HCV RNA test or the liver function tests yet. They just did the antibody test, and that came back positive. I'm still trying to figure out what this all means and what steps I need to take next. Doctor: Have you undergone any liver function tests, such as ALT, AST, or",
+        "atomic_decomposition": {
+          "original": "He denies any tattoos, blood transfusions, or high-risk sexual behaviors.",
+          "retained": [
+            {
+              "atom": "Note that each fact is self-contained, replacing the pronoun \"He\" with the subject, and not adding or inferring any additional information.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 38 years old and male. I came in because I had some positive lab work for hep c, and I'm really worried about it. I've been feeling fine, so it's pretty surprising to me. Doctor: When was the hepatitis C lab work done, and what specific tests were positive (e.g., HCV RNA, anti-HCV antibodies)? Patient: The lab work was done as part of my physical, and they found that I had positive results for hep c. I don't remember the exact test names, but they mentioned something about antibodies. It's all pretty confusing to me, honestly. Doctor: Could you please confirm if you have been tested for HCV RNA to determine if you have an active infection, and if so, what was the result? Additionally, have you ever been diagnosed with hepatitis C or had any prior treatments for it? Patient: I don't think they tested me for HCV RNA yet. They just did the antibody test, and that came back positive. I've never been diagnosed with hep C before or had any treatment for it. This is all new to me. Doctor: Could you please provide information about your past medical history, including any prior illnesses, surgeries, medications, allergies, and whether there is a family history of hepatitis C or liver disease? Patient: I don't have any prior illnesses or surgeries, and I'm not on any medications or allergies. As for family history, there's high blood pressure, diabetes, and depression on my side. I don't think there's a history of hepatitis C or liver disease specifically. Doctor: Has the patient undergone any liver function tests or imaging studies such as an ultrasound of the abdomen to assess for liver damage or cirrhosis? Patient: No, I haven't had any liver function tests or imaging studies yet. The only thing they did was the antibody test for hep c during",
+              "entailment": 0.9897,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "He denies any tattoos.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4548,
+              "depth": 1
+            },
+            {
+              "atom": "He denies blood transfusions.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4358,
+              "depth": 1
+            },
+            {
+              "atom": "He denies high-risk sexual behaviors.",
+              "reasoning": "Could not be decomposed further and not entailed above threshold Ta.",
+              "entailment": 0.4678,
+              "depth": 1
+            }
+          ],
+          "decomposition_method": "unsplit",
+          "max_depth_reached": 1
+        }
+      }
+    ],
+    "objective": [
+      {
+        "unit": "Physical Examination & Vitals: No physical examination findings or vital signs were mentioned during the visit.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.4443,
+          "neutral": 0.2576,
+          "contradiction": 0.2981
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "AST, or bilirubin levels, to assess for potential liver damage? Patient: No, I haven't had any liver function tests yet. The only thing they did was the antibody test during my physical, and that came back positive. I'm still trying to figure out what this all means and what I need to do next. Doctor: Have you ever used intravenous drugs, had a tattoo, received a blood transfusion before 1992, or engaged in any high-risk sexual behaviors that could increase your risk of hepatitis C infection? Patient: I used to do IV drugs, but I've been clean for over fifteen years now. I don't think I've ever had a tattoo or received a blood transfusion. As for sexual behaviors, I don't think I've done anything that would put me at high risk. Doctor: Have you ever been tested for HCV RNA, and if so, what were the results? Patient: No, I haven't been tested for HCV RNA yet. They just did the antibody test, and that came back positive. I'm still trying to figure out what this all means and what steps I need to take next. Doctor: Have you ever been tested for liver function tests, such as ALT, AST, or bilirubin levels, to assess for potential liver damage? Patient: No, I haven't been tested for liver function tests yet. The only thing they did was the antibody test during my physical, and that came back positive. I'm still trying to figure out what this all means and what I need to do next. Doctor: Could you please provide the results of the HCV RNA test and the liver function tests (ALT, AST, bilirubin) that have been ordered? Patient: I haven't had the HCV RNA test or the liver function tests yet. They just did the antibody test, and that came back positive. I'm still trying to figure out what this all means and what steps I need to take next. Doctor: Have you undergone any liver function tests, such as ALT, AST, or",
+        "atomic_decomposition": {
+          "original": "Physical Examination & Vitals: No physical examination findings or vital signs were mentioned during the visit.",
+          "retained": [
+            {
+              "atom": "The visit occurred.",
+              "citation": ". Doctor: Could you please provide the results of the HCV RNA test and the liver function tests (ALT, AST, bilirubin) that have been ordered? Patient: I haven't had the HCV RNA test or the liver function tests yet. They just did the antibody test, and that came back positive. I'm still trying to figure out what this all means and what steps I need to take next. Doctor: Have you undergone any liver function tests, such as ALT, AST, or bilirubin levels, to assess for potential liver damage? Patient: No, I haven't had any liver function tests yet. The only thing they did was the antibody test during my physical, and that came back positive. I'm still trying to figure out what this all means and what I need to do next. Doctor: Have you had any liver function tests, such as ALT, AST, or bilirubin levels, performed recently? Patient: No, I haven't had any liver function tests recently. The only thing they did was the antibody test during my physical, and that came back positive. I'm still trying to figure out what this all means and what I need to do next. Doctor: Have you had an HCV RNA test to confirm active infection, and have you had any liver function tests (such as ALT, AST, and bilirubin) to assess for liver damage? Patient: No, I haven't had an HCV RNA test yet, and I haven't had any liver function tests like ALT, AST, or bilirubin. The only thing they did was the antibody test during my physical, and that came back positive. I'm still trying to figure out what this all means and what steps I need to take next.",
+              "entailment": 0.9961,
+              "depth": 2
+            },
+            {
+              "atom": "No vital signs were mentioned during the visit.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 38 years old and male. I came in because I had some positive lab work for hep c, and I'm really worried about it. I've been feeling fine, so it's pretty surprising to me. Doctor: When was the hepatitis C lab work done, and what specific tests were positive (e.g., HCV RNA, anti-HCV antibodies)? Patient: The lab work was done as part of my physical, and they found that I had positive results for hep c. I don't remember the exact test names, but they mentioned something about antibodies. It's all pretty confusing to me, honestly. Doctor: Could you please confirm if you have been tested for HCV RNA to determine if you have an active infection, and if so, what was the result? Additionally, have you ever been diagnosed with hepatitis C or had any prior treatments for it? Patient: I don't think they tested me for HCV RNA yet. They just did the antibody test, and that came back positive. I've never been diagnosed with hep C before or had any treatment for it. This is all new to me. Doctor: Could you please provide information about your past medical history, including any prior illnesses, surgeries, medications, allergies, and whether there is a family history of hepatitis C or liver disease? Patient: I don't have any prior illnesses or surgeries, and I'm not on any medications or allergies. As for family history, there's high blood pressure, diabetes, and depression on my side. I don't think there's a history of hepatitis C or liver disease specifically. Doctor: Has the patient undergone any liver function tests or imaging studies such as an ultrasound of the abdomen to assess for liver damage or cirrhosis? Patient: No, I haven't had any liver function tests or imaging studies yet. The only thing they did was the antibody test for hep c during",
+              "entailment": 0.9521,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I did not add any information that is not present in the original statement, and each fact is self-contained and can stand alone as true or false.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 38 years old and male. I came in because I had some positive lab work for hep c, and I'm really worried about it. I've been feeling fine, so it's pretty surprising to me. Doctor: When was the hepatitis C lab work done, and what specific tests were positive (e.g., HCV RNA, anti-HCV antibodies)? Patient: The lab work was done as part of my physical, and they found that I had positive results for hep c. I don't remember the exact test names, but they mentioned something about antibodies. It's all pretty confusing to me, honestly. Doctor: Could you please confirm if you have been tested for HCV RNA to determine if you have an active infection, and if so, what was the result? Additionally, have you ever been diagnosed with hepatitis C or had any prior treatments for it? Patient: I don't think they tested me for HCV RNA yet. They just did the antibody test, and that came back positive. I've never been diagnosed with hep C before or had any treatment for it. This is all new to me. Doctor: Could you please provide information about your past medical history, including any prior illnesses, surgeries, medications, allergies, and whether there is a family history of hepatitis C or liver disease? Patient: I don't have any prior illnesses or surgeries, and I'm not on any medications or allergies. As for family history, there's high blood pressure, diabetes, and depression on my side. I don't think there's a history of hepatitis C or liver disease specifically. Doctor: Has the patient undergone any liver function tests or imaging studies such as an ultrasound of the abdomen to assess for liver damage or cirrhosis? Patient: No, I haven't had any liver function tests or imaging studies yet. The only thing they did was the antibody test for hep c during",
+              "entailment": 0.9775,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "No physical examination findings were mentioned during the visit.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4431,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Diagnostic Results & Labs: The patient's HCV antibody test was positive, indicating exposure to the virus.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.979,
+          "neutral": 0.0187,
+          "contradiction": 0.0023
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 38 years old and male. I came in because I had some positive lab work for hep c, and I'm really worried about it. I've been feeling fine, so it's pretty surprising to me. Doctor: When was the hepatitis C lab work done, and what specific tests were positive (e.g., HCV RNA, anti-HCV antibodies)? Patient: The lab work was done as part of my physical, and they found that I had positive results for hep c. I don't remember the exact test names, but they mentioned something about antibodies. It's all pretty confusing to me, honestly. Doctor: Could you please confirm if you have been tested for HCV RNA to determine if you have an active infection, and if so, what was the result? Additionally, have you ever been diagnosed with hepatitis C or had any prior treatments for it? Patient: I don't think they tested me for HCV RNA yet. They just did the antibody test, and that came back positive. I've never been diagnosed with hep C before or had any treatment for it. This is all new to me. Doctor: Could you please provide information about your past medical history, including any prior illnesses, surgeries, medications, allergies, and whether there is a family history of hepatitis C or liver disease? Patient: I don't have any prior illnesses or surgeries, and I'm not on any medications or allergies. As for family history, there's high blood pressure, diabetes, and depression on my side. I don't think there's a history of hepatitis C or liver disease specifically. Doctor: Has the patient undergone any liver function tests or imaging studies such as an ultrasound of the abdomen to assess for liver damage or cirrhosis? Patient: No, I haven't had any liver function tests or imaging studies yet. The only thing they did was the antibody test for hep c during",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "However, no HCV RNA test results or liver function tests (ALT, AST, bilirubin) were mentioned.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.9863,
+          "neutral": 0.0019,
+          "contradiction": 0.0117
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": ". Doctor: Could you please provide the results of the HCV RNA test and the liver function tests (ALT, AST, bilirubin) that have been ordered? Patient: I haven't had the HCV RNA test or the liver function tests yet. They just did the antibody test, and that came back positive. I'm still trying to figure out what this all means and what steps I need to take next. Doctor: Have you undergone any liver function tests, such as ALT, AST, or bilirubin levels, to assess for potential liver damage? Patient: No, I haven't had any liver function tests yet. The only thing they did was the antibody test during my physical, and that came back positive. I'm still trying to figure out what this all means and what I need to do next. Doctor: Have you had any liver function tests, such as ALT, AST, or bilirubin levels, performed recently? Patient: No, I haven't had any liver function tests recently. The only thing they did was the antibody test during my physical, and that came back positive. I'm still trying to figure out what this all means and what I need to do next. Doctor: Have you had an HCV RNA test to confirm active infection, and have you had any liver function tests (such as ALT, AST, and bilirubin) to assess for liver damage? Patient: No, I haven't had an HCV RNA test yet, and I haven't had any liver function tests like ALT, AST, or bilirubin. The only thing they did was the antibody test during my physical, and that came back positive. I'm still trying to figure out what this all means and what steps I need to take next.",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      }
+    ]
+  },
+  "stage2_stats": {
+    "decision_counts": {
+      "faithful": 5,
+      "uncertain": 3
+    },
+    "num_claims": 8,
+    "num_kept": 8,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_so": {
+    "subjective": "Could you tell me your age and gender, and what brings you in today?\nChief Complaint: Positive lab work for hepatitis C (HCV).\nHistory of Present Illness (HPI): The patient, a 38-year-old male, presents with a positive lab work for HCV, which was discovered during a routine physical examination.\nHe reports no symptoms and no prior illnesses or surgeries.\nNote that I did not break down \"IV drug use\" into separate facts, as it is a single concept being referred to. Similarly, I did not add any additional information that is not present in the original statement.\nNote that I did not combine the two facts into one, as the statement contains two separate propositions.\nNote that I did not combine the two facts into one, as the conjunction \"but\" is used to contrast two independent clauses, rather than to join them together.\nNote that each fact is self-contained, replacing the pronoun \"He\" with the subject, and not adding or inferring any additional information.",
+    "objective": "The visit occurred.\nNo vital signs were mentioned during the visit.\nNote that I did not add any information that is not present in the original statement, and each fact is self-contained and can stand alone as true or false.\nDiagnostic Results & Labs: The patient's HCV antibody test was positive, indicating exposure to the virus.\nHowever, no HCV RNA test results or liver function tests (ALT, AST, bilirubin) were mentioned."
+  },
+  "stage3_key_sentences": [
+    "Doctor: Could you please confirm if you have had an HCV RNA test to determine if you currently have an active hepatitis C infection?",
+    "Could you tell me your age and gender, and what brings you in today?"
+  ],
+  "stage3_summary_key_phrases": [
+    "labs patient hcv",
+    "complaint positive lab",
+    "combine facts statement",
+    "work hepatitis",
+    "false diagnostic results",
+    "present illness hpi",
+    "antibody test",
+    "subject adding inferring",
+    "iv drug use",
+    "used contrast independent"
+  ],
+  "stage3_coverage_scores": [
+    {
+      "sentence": "Doctor: Could you please confirm if you have had an HCV RNA test to determine if you currently have an active hepatitis C infection?",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "Doctor: Could you please confirm if you have had an HCV RNA test to determine if you currently have an active hepatitis C infection?",
+      "score": 0.6326,
+      "is_missing": false,
+      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+    },
+    {
+      "sentence": "Could you tell me your age and gender, and what brings you in today?",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "Could you tell me your age and gender, and what brings you in today?",
+      "score": 0.1933,
+      "is_missing": true,
+      "action": "Added: Missing clinical dialogue detail (coverage < 0.40); inserted via GPT-2 fluency optimization."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "Could you tell me your age and gender, and what brings you in today?",
+      "statement": "Could you tell me your age and gender, and what brings you in today?",
+      "coverage": 0.1933,
+      "status": "added",
+      "reason": "coverage <= cov_min (uMedSum adds the dialogue sentence verbatim)",
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 20.82
+      }
+    }
+  ],
+  "stage3_added": [
+    {
+      "statement": "Could you tell me your age and gender, and what brings you in today?",
+      "evidence": "Could you tell me your age and gender, and what brings you in today?",
+      "section": "subjective",
+      "candidate": "Could you tell me your age and gender, and what brings you in today?"
+    }
+  ],
+  "stage3_stats": {
+    "num_key_sentences": 2,
+    "num_flagged": 1,
+    "num_added": 1
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "section": "subjective",
+        "claim": "He has a history.",
+        "entailment": 0.478,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "He has a history of IV drug use, but has been clean for over 15 years."
+      },
+      {
+        "section": "subjective",
+        "claim": "He has a history of IV drug use.",
+        "entailment": 0.4731,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "He has a history of IV drug use, but has been clean for over 15 years."
+      },
+      {
+        "section": "subjective",
+        "claim": "He has been clean.",
+        "entailment": 0.4749,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "He has a history of IV drug use, but has been clean for over 15 years."
+      },
+      {
+        "section": "subjective",
+        "claim": "The duration of his clean period is over 15 years.",
+        "entailment": 0.4993,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "He has a history of IV drug use, but has been clean for over 15 years."
+      },
+      {
+        "section": "subjective",
+        "claim": "He denies any tattoos.",
+        "entailment": 0.4548,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "He denies any tattoos, blood transfusions, or high-risk sexual behaviors."
+      },
+      {
+        "section": "subjective",
+        "claim": "He denies blood transfusions.",
+        "entailment": 0.4358,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "He denies any tattoos, blood transfusions, or high-risk sexual behaviors."
+      },
+      {
+        "section": "subjective",
+        "claim": "He denies high-risk sexual behaviors.",
+        "entailment": 0.4678,
+        "reason": "Could not be decomposed further and not entailed above threshold Ta.",
+        "from_unit": "He denies any tattoos, blood transfusions, or high-risk sexual behaviors."
+      },
+      {
+        "section": "objective",
+        "claim": "No physical examination findings were mentioned during the visit.",
+        "entailment": 0.4431,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: No physical examination findings or vital signs were mentioned during the visit."
+      }
+    ]
+  },
+  "final_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** Based on the patient's positive HCV antibody test, it is likely that he has been exposed to the virus. Further testing, including an HCV RNA test and liver function tests (ALT, AST, bilirubin), is necessary to determine the extent of the infection and potential liver damage.\n* **Treatment Plan, Medications, and Follow-up:** The patient will undergo further testing to confirm the diagnosis and assess liver damage. If the HCV RNA test is positive, antiviral therapy may be initiated. The patient will be followed up with to monitor his liver function and response to treatment.\n\n\n* **Tests Ordered:** HCV RNA test, liver function tests (ALT, AST, bilirubin)\n* **Follow-up Instructions:** The patient will be contacted to schedule follow-up appointments to discuss test results and potential treatment options.\n\nPlease note that this is a hypothetical note, and actual patient information and medical decisions should be based on individual patient needs and circumstances."
+  },
+  "ap_unchanged": true,
+  "thresholds": {
+    "Te": 0.9,
+    "Tc": 0.8,
+    "Ta": 0.5,
+    "cov_min": 0.4,
+    "top_m": 2,
+    "fix_header_bug": true
+  },
+  "models": {
+    "llm": "llama3:8b-instruct-q8_0",
+    "nli": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+    "embedder": "all-MiniLM-L6-v2",
+    "ppl": "gpt2"
+  },
+  "status": "success",
+  "seconds": 13.6,
+  "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 38 years old and male. I came in because I had some positive lab work for hep c, and I'm really worried about it. I've been feeling fine, so it's pretty surprising to me.\nDoctor: When was the hepatitis C lab work done, and what specific tests were positive (e.g., HCV RNA, anti-HCV antibodies)?\nPatient: The lab work was done as part of my physical, and they found that I had positive results for hep c. I don't remember the exact test names, but they mentioned something about antibodies. It's all pretty confusing to me, honestly.\nDoctor: Could you please confirm if you have been tested for HCV RNA to determine if you have an active infection, and if so, what was the result? Additionally, have you ever been diagnosed with hepatitis C or had any prior treatments for it?\nPatient: I don't think they tested me for HCV RNA yet. They just did the antibody test, and that came back positive. I've never been diagnosed with hep C before or had any treatment for it. This is all new to me.\nDoctor: Could you please provide information about your past medical history, including any prior illnesses, surgeries, medications, allergies, and whether there is a family history of hepatitis C or liver disease?\nPatient: I don't have any prior illnesses or surgeries, and I'm not on any medications or allergies. As for family history, there's high blood pressure, diabetes, and depression on my side. I don't think there's a history of hepatitis C or liver disease specifically.\nDoctor: Has the patient undergone any liver function tests or imaging studies such as an ultrasound of the abdomen to assess for liver damage or cirrhosis?\nPatient: No, I haven't had any liver function tests or imaging studies yet. The only thing they did was the antibody test for hep c during my physical. I didn't even know I had it until they told me. I'm just trying to figure out what this all means.\nDoctor: Could you please confirm if you have had an HCV RNA test to determine if you currently have an active hepatitis C infection?\nPatient: No, I haven't had an HCV RNA test yet. They just did the antibody test, and that came back positive. I'm still trying to understand what this all means and what steps I need to take next.\nDoctor: Could you please provide the results of your liver function tests, if available, and confirm whether you have undergone an HCV RNA test to determine if you have an active hepatitis C infection?\nPatient: I haven't had any liver function tests yet, and I definitely haven't had an HCV RNA test. The only thing they did was the antibody test during my physical, and that came back positive. I'm still trying to figure out what this all means and what I need to do next.\nDoctor: Have you undergone any liver function tests, such as ALT, AST, or bilirubin levels, to assess for potential liver damage?\nPatient: No, I haven't had any liver function tests yet. The only thing they did was the antibody test during my physical, and that came back positive. I'm still trying to figure out what this all means and what I need to do next.\nDoctor: Have you ever used intravenous drugs, had a tattoo, received a blood transfusion before 1992, or engaged in any high-risk sexual behaviors that could increase your risk of hepatitis C infection?\nPatient: I used to do IV drugs, but I've been clean for over fifteen years now. I don't think I've ever had a tattoo or received a blood transfusion. As for sexual behaviors, I don't think I've done anything that would put me at high risk.\nDoctor: Have you ever been tested for HCV RNA, and if so, what were the results?\nPatient: No, I haven't been tested for HCV RNA yet. They just did the antibody test, and that came back positive. I'm still trying to figure out what this all means and what steps I need to take next.\nDoctor: Have you ever been tested for liver function tests, such as ALT, AST, or bilirubin levels, to assess for potential liver damage?\nPatient: No, I haven't been tested for liver function tests yet. The only thing they did was the antibody test during my physical, and that came back positive. I'm still trying to figure out what this all means and what I need to do next.\nDoctor: Could you please provide the results of the HCV RNA test and the liver function tests (ALT, AST, bilirubin) that have been ordered?\nPatient: I haven't had the HCV RNA test or the liver function tests yet. They just did the antibody test, and that came back positive. I'm still trying to figure out what this all means and what steps I need to take next.\nDoctor: Have you undergone any liver function tests, such as ALT, AST, or bilirubin levels, to assess for potential liver damage?\nPatient: No, I haven't had any liver function tests yet. The only thing they did was the antibody test during my physical, and that came back positive. I'm still trying to figure out what this all means and what I need to do next.\nDoctor: Have you had any liver function tests, such as ALT, AST, or bilirubin levels, performed recently?\nPatient: No, I haven't had any liver function tests recently. The only thing they did was the antibody test during my physical, and that came back positive. I'm still trying to figure out what this all means and what I need to do next.\nDoctor: Have you had an HCV RNA test to confirm active infection, and have you had any liver function tests (such as ALT, AST, and bilirubin) to assess for liver damage?\nPatient: No, I haven't had an HCV RNA test yet, and I haven't had any liver function tests like ALT, AST, or bilirubin. The only thing they did was the antibody test during my physical, and that came back positive. I'm still trying to figure out what this all means and what steps I need to take next.",
+  "reference_so": {
+    "subjective": "Basic information: 38-year-old male presenting with positive hepatitis C lab work; no current symptoms. Concerned about diagnosis.\n\nHistory of present illness: The patient reported that the lab work was done as part of his physical and that he had positive results for hepatitis C, though he is asymptomatic. He mentioned that the lab work involved testing for antibodies but is unsure of the exact test names. He clarified that he has not been tested for HCV RNA yet and that this is all new to him. He also mentioned a history of IV drug use in the past, but he has been clean for over fifteen years. He denies any history of tattoos, blood transfusions, or high-risk sexual behaviors. He has not had an HCV RNA test or liver function tests (ALT, AST, bilirubin) yet.\n\nPast history: No prior illnesses, surgeries, medications, or allergies. Family history includes hypertension, diabetes, and depression; no known family history of hepatitis C or liver disease.",
+    "objective": "Physical examination: Not yet collected.\n\nInvestigations: Anti-HCV antibodies were positive; HCV RNA status is unknown. No liver function tests (ALT, AST, bilirubin) or imaging studies collected."
+  }
+}
