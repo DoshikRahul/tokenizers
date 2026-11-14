@@ -1,0 +1,462 @@
+{
+  "case_id": "D2N124",
+  "split": "test",
+  "is_icl_demo": false,
+  "stage1_elements": "Here are the extracted clinical elements in concise bullet points:\n\n**Subjective Elements:**\n\n* Chief complaint: Injured ankle while playing basketball with son\n* History of present illness:\n\t+ Symptoms: Swollen, bruised, and painful ankle\n\t+ Onset: A few days ago\n\t+ Duration: Ongoing\n* Relevant medical history/medications:\n\t+ No prior ankle injuries or surgeries\n\t+ No chronic medical conditions like diabetes or hypertension\n\t+ No prior imaging of the affected ankle since the injury\n\n**Objective Elements:**\n\n* Physical examination findings:\n\t+ Swelling on the outside of the ankle\n\t+ Tenderness on the lateral and inner parts of the ankle\n\t+ Pain on pressure on the outside of the ankle\n\t+ Instability and inability to bear weight on the ankle\n\t+ No obvious deformity or skin changes\n* Vital signs mentioned: None\n* Diagnostic lab/imaging results:\n\t+ X-ray: Displaced lateral malleolus fracture at the Weber C level\n\n**Assessment Elements:**\n\n* Diagnoses: Displaced lateral malleolus fracture at the Weber C level\n* Clinical impressions: Unstable ankle due to fracture\n\n**Plan Elements:**\n\n* Medical treatment plan: Not specified in this dialogue\n* Prescriptions/dosages: Not specified in this dialogue\n* Tests ordered: None mentioned in this dialogue\n* Follow-up instructions: Not specified in this dialogue",
+  "stage1_raw_note": "**SUBJECTIVE:**\n\n* **Chief Complaint:** Injured ankle while playing basketball with son\n* **History of Present Illness (HPI):** The patient, a 45-year-old male, presents with a swollen, bruised, and painful ankle after twisting it while playing basketball with his son a few days ago. The pain is worse when he tries to put weight on it, and it has been getting more swollen since the injury.\n\n**OBJECTIVE:**\n\n* **Physical Examination & Vitals:** The patient's ankle is swollen on the outside, with tenderness on the lateral and inner parts. There is pain on pressure on the outside of the ankle, and the ankle feels unstable. The patient is unable to bear weight on the ankle. There is no obvious deformity or skin changes.\n* **Diagnostic Results & Labs:** X-ray of the ankle reveals a displaced lateral malleolus fracture at the Weber C level.\n\n**ASSESSMENT AND PLAN:**\n\n* **Diagnoses and Clinical Reasoning:** The patient has a displaced lateral malleolus fracture at the Weber C level, which is causing ankle instability and pain.\n* **Treatment Plan:** The patient will require further evaluation and management by an orthopedic specialist. A referral will be made for further imaging and possible surgical intervention.\n* **Medications:** None prescribed at this time.\n* **Follow-up:** The patient will be scheduled for a follow-up appointment with the orthopedic specialist to discuss further treatment options and plan for recovery.\n\n**SOAP NOTE:**",
+  "stage1_parse": {
+    "parse_mode": "main_headings",
+    "parse_ok": true,
+    "dropped_preamble": ""
+  },
+  "stage1_so": {
+    "subjective": "* **Chief Complaint:** Injured ankle while playing basketball with son\n* **History of Present Illness (HPI):** The patient, a 45-year-old male, presents with a swollen, bruised, and painful ankle after twisting it while playing basketball with his son a few days ago. The pain is worse when he tries to put weight on it, and it has been getting more swollen since the injury.",
+    "objective": "* **Physical Examination & Vitals:** The patient's ankle is swollen on the outside, with tenderness on the lateral and inner parts. There is pain on pressure on the outside of the ankle, and the ankle feels unstable. The patient is unable to bear weight on the ankle. There is no obvious deformity or skin changes.\n* **Diagnostic Results & Labs:** X-ray of the ankle reveals a displaced lateral malleolus fracture at the Weber C level.",
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** The patient has a displaced lateral malleolus fracture at the Weber C level, which is causing ankle instability and pain.\n* **Treatment Plan:** The patient will require further evaluation and management by an orthopedic specialist. A referral will be made for further imaging and possible surgical intervention.\n* **Medications:** None prescribed at this time.\n* **Follow-up:** The patient will be scheduled for a follow-up appointment with the orthopedic specialist to discuss further treatment options and plan for recovery.\n\n**SOAP NOTE:**"
+  },
+  "stage1_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** The patient has a displaced lateral malleolus fracture at the Weber C level, which is causing ankle instability and pain.\n* **Treatment Plan:** The patient will require further evaluation and management by an orthopedic specialist. A referral will be made for further imaging and possible surgical intervention.\n* **Medications:** None prescribed at this time.\n* **Follow-up:** The patient will be scheduled for a follow-up appointment with the orthopedic specialist to discuss further treatment options and plan for recovery.\n\n**SOAP NOTE:**"
+  },
+  "stage2_so": {
+    "subjective": "Chief Complaint: Injured ankle while playing basketball with son\nHistory of Present Illness (HPI): The patient, a 45-year-old male, presents with a swollen, bruised, and painful ankle after twisting it while playing basketball with his son a few days ago.",
+    "objective": "Physical Examination & Vitals: The patient's ankle is swollen on the outside, with tenderness on the lateral and inner parts.\nThere is pain on pressure on the outside of the ankle, and the ankle feels unstable.\nThe patient is unable to bear weight on the ankle.\nThere is no obvious deformity or skin changes.\nThe X-ray of the ankle reveals a displaced lateral malleolus fracture.\nThe lateral malleolus fracture is at the Weber C level.",
+    "assessment_and_plan": "The patient has a displaced lateral malleolus fracture.\nThe fracture is at the Weber C level.\nThe fracture is causing ankle instability.\nThe fracture is causing pain.\nNote that I've followed the rules to split the statement into individual facts, replacing pronouns with the subject (\"The patient\"), and not adding or inferring any information that is not present in the original statement."
+  },
+  "stage2_audit": {
+    "subjective": [
+      {
+        "unit": "Chief Complaint: Injured ankle while playing basketball with son",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9961,
+          "neutral": 0.0024,
+          "contradiction": 0.0014
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Patient: I'm 45 years old, male. I came in because I injured my ankle while playing basketball with my son. I landed awkwardly and twisted it, and now it's swollen, bruised, and really painful. It doesn't feel stable at all, and I'm having trouble walking on it. Doctor: Could you please provide your age, gender, and a detailed description of your current symptoms, including when they started and any activities that worsen them? Patient: I'm 45 years old, male. I injured my ankle while playing basketball with my son a few days ago. I landed awkwardly and twisted it, and now it's swollen, bruised, and really painful. It doesn't feel stable at all, and I'm having trouble walking on it. The pain is worse when I try to put weight on it, and it's been getting more swollen since the injury. Doctor: Have you had any prior ankle injuries or surgeries? Do you have a history of diabetes, hypertension, or any other chronic medical conditions? Patient: I don't have a history of ankle injuries or surgeries, and I don't have any chronic medical conditions like diabetes or hypertension. I've been pretty healthy overall. Doctor: Have you had any prior imaging, such as X-rays or an MRI, of the affected ankle since the injury? Patient: No, I haven't had any prior imaging of the affected ankle since the injury. This is the first time I'm seeing a doctor about it. Doctor: Can you describe the physical examination findings, including swelling, bruising, pain, instability, and any deformity? Also, please mention if there is any tenderness, range of motion, or crepitus, and whether you can bear weight on the ankle. Patient: The doctor did a physical exam and found that my ankle is swollen on the outside, and there's a lot of tenderness, especially on the lateral side. When he pressed on the outside, it hurt pretty badly, and there was some tenderness on the inner part",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "History of Present Illness (HPI): The patient, a 45-year-old male, presents with a swollen, bruised, and painful ankle after twisting it while playing basketball with his son a few days ago.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9971,
+          "neutral": 0.0022,
+          "contradiction": 0.001
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Patient: I'm 45 years old, male. I came in because I injured my ankle while playing basketball with my son. I landed awkwardly and twisted it, and now it's swollen, bruised, and really painful. It doesn't feel stable at all, and I'm having trouble walking on it. Doctor: Could you please provide your age, gender, and a detailed description of your current symptoms, including when they started and any activities that worsen them? Patient: I'm 45 years old, male. I injured my ankle while playing basketball with my son a few days ago. I landed awkwardly and twisted it, and now it's swollen, bruised, and really painful. It doesn't feel stable at all, and I'm having trouble walking on it. The pain is worse when I try to put weight on it, and it's been getting more swollen since the injury. Doctor: Have you had any prior ankle injuries or surgeries? Do you have a history of diabetes, hypertension, or any other chronic medical conditions? Patient: I don't have a history of ankle injuries or surgeries, and I don't have any chronic medical conditions like diabetes or hypertension. I've been pretty healthy overall. Doctor: Have you had any prior imaging, such as X-rays or an MRI, of the affected ankle since the injury? Patient: No, I haven't had any prior imaging of the affected ankle since the injury. This is the first time I'm seeing a doctor about it. Doctor: Can you describe the physical examination findings, including swelling, bruising, pain, instability, and any deformity? Also, please mention if there is any tenderness, range of motion, or crepitus, and whether you can bear weight on the ankle. Patient: The doctor did a physical exam and found that my ankle is swollen on the outside, and there's a lot of tenderness, especially on the lateral side. When he pressed on the outside, it hurt pretty badly, and there was some tenderness on the inner part",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "The pain is worse when he tries to put weight on it, and it has been getting more swollen since the injury.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.1715,
+          "neutral": 0.7349,
+          "contradiction": 0.0935
+        },
+        "classification": "confabulated",
+        "citation_source": "None (not explicitly in dialogue)",
+        "citation_text": "No supporting dialogue turn found.",
+        "reasoning": "Factual Hallucination Purged: Statement introduces an ungrounded symptom, physical exam finding, or detail that was not stated by the patient or doctor in the dialogue transcript."
+      }
+    ],
+    "objective": [
+      {
+        "unit": "Physical Examination & Vitals: The patient's ankle is swollen on the outside, with tenderness on the lateral and inner parts.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.9448,
+          "neutral": 0.0506,
+          "contradiction": 0.0046
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Patient: I'm 45 years old, male. I came in because I injured my ankle while playing basketball with my son. I landed awkwardly and twisted it, and now it's swollen, bruised, and really painful. It doesn't feel stable at all, and I'm having trouble walking on it. Doctor: Could you please provide your age, gender, and a detailed description of your current symptoms, including when they started and any activities that worsen them? Patient: I'm 45 years old, male. I injured my ankle while playing basketball with my son a few days ago. I landed awkwardly and twisted it, and now it's swollen, bruised, and really painful. It doesn't feel stable at all, and I'm having trouble walking on it. The pain is worse when I try to put weight on it, and it's been getting more swollen since the injury. Doctor: Have you had any prior ankle injuries or surgeries? Do you have a history of diabetes, hypertension, or any other chronic medical conditions? Patient: I don't have a history of ankle injuries or surgeries, and I don't have any chronic medical conditions like diabetes or hypertension. I've been pretty healthy overall. Doctor: Have you had any prior imaging, such as X-rays or an MRI, of the affected ankle since the injury? Patient: No, I haven't had any prior imaging of the affected ankle since the injury. This is the first time I'm seeing a doctor about it. Doctor: Can you describe the physical examination findings, including swelling, bruising, pain, instability, and any deformity? Also, please mention if there is any tenderness, range of motion, or crepitus, and whether you can bear weight on the ankle. Patient: The doctor did a physical exam and found that my ankle is swollen on the outside, and there's a lot of tenderness, especially on the lateral side. When he pressed on the outside, it hurt pretty badly, and there was some tenderness on the inner part",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "There is pain on pressure on the outside of the ankle, and the ankle feels unstable.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.9966,
+          "neutral": 0.0018,
+          "contradiction": 0.0014
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "examination findings, including swelling, bruising, pain, instability, and any deformity? Also, please mention if there is any tenderness, range of motion, or crepitus, and whether you can bear weight on the ankle. Patient: The doctor did a physical exam and found that my ankle is swollen on the outside, and there's a lot of tenderness, especially on the lateral side. When he pressed on the outside, it hurt pretty badly, and there was some tenderness on the inner part too. I can stand on it, but I can't walk on it because it feels unstable and hurts a lot. There's no obvious deformity, and my skin looks normal with good color and capillary refill. Doctor: Have you undergone any imaging studies such as X-rays or MRI for the injured ankle? Patient: Yes, I had an X-ray done when I came in today. The doctor showed me the results on the screen, and it looks like there's a fracture on the lateral side of my ankle. It's a displaced lateral malleolus at the Weber C level, and that's probably why it feels so unstable when I try to walk on it.",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "The patient is unable to bear weight on the ankle.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.96,
+          "neutral": 0.0154,
+          "contradiction": 0.0246
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "examination findings, including swelling, bruising, pain, instability, and any deformity? Also, please mention if there is any tenderness, range of motion, or crepitus, and whether you can bear weight on the ankle. Patient: The doctor did a physical exam and found that my ankle is swollen on the outside, and there's a lot of tenderness, especially on the lateral side. When he pressed on the outside, it hurt pretty badly, and there was some tenderness on the inner part too. I can stand on it, but I can't walk on it because it feels unstable and hurts a lot. There's no obvious deformity, and my skin looks normal with good color and capillary refill. Doctor: Have you undergone any imaging studies such as X-rays or MRI for the injured ankle? Patient: Yes, I had an X-ray done when I came in today. The doctor showed me the results on the screen, and it looks like there's a fracture on the lateral side of my ankle. It's a displaced lateral malleolus at the Weber C level, and that's probably why it feels so unstable when I try to walk on it.",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "There is no obvious deformity or skin changes.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.9824,
+          "neutral": 0.0106,
+          "contradiction": 0.0068
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "examination findings, including swelling, bruising, pain, instability, and any deformity? Also, please mention if there is any tenderness, range of motion, or crepitus, and whether you can bear weight on the ankle. Patient: The doctor did a physical exam and found that my ankle is swollen on the outside, and there's a lot of tenderness, especially on the lateral side. When he pressed on the outside, it hurt pretty badly, and there was some tenderness on the inner part too. I can stand on it, but I can't walk on it because it feels unstable and hurts a lot. There's no obvious deformity, and my skin looks normal with good color and capillary refill. Doctor: Have you undergone any imaging studies such as X-rays or MRI for the injured ankle? Patient: Yes, I had an X-ray done when I came in today. The doctor showed me the results on the screen, and it looks like there's a fracture on the lateral side of my ankle. It's a displaced lateral malleolus at the Weber C level, and that's probably why it feels so unstable when I try to walk on it.",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "Diagnostic Results & Labs: X-ray of the ankle reveals a displaced lateral malleolus fracture at the Weber C level.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.7231,
+          "neutral": 0.1849,
+          "contradiction": 0.0919
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "examination findings, including swelling, bruising, pain, instability, and any deformity? Also, please mention if there is any tenderness, range of motion, or crepitus, and whether you can bear weight on the ankle. Patient: The doctor did a physical exam and found that my ankle is swollen on the outside, and there's a lot of tenderness, especially on the lateral side. When he pressed on the outside, it hurt pretty badly, and there was some tenderness on the inner part too. I can stand on it, but I can't walk on it because it feels unstable and hurts a lot. There's no obvious deformity, and my skin looks normal with good color and capillary refill. Doctor: Have you undergone any imaging studies such as X-rays or MRI for the injured ankle? Patient: Yes, I had an X-ray done when I came in today. The doctor showed me the results on the screen, and it looks like there's a fracture on the lateral side of my ankle. It's a displaced lateral malleolus at the Weber C level, and that's probably why it feels so unstable when I try to walk on it.",
+        "atomic_decomposition": {
+          "original": "Diagnostic Results & Labs: X-ray of the ankle reveals a displaced lateral malleolus fracture at the Weber C level.",
+          "retained": [
+            {
+              "atom": "The X-ray of the ankle reveals a displaced lateral malleolus fracture.",
+              "citation": "examination findings, including swelling, bruising, pain, instability, and any deformity? Also, please mention if there is any tenderness, range of motion, or crepitus, and whether you can bear weight on the ankle. Patient: The doctor did a physical exam and found that my ankle is swollen on the outside, and there's a lot of tenderness, especially on the lateral side. When he pressed on the outside, it hurt pretty badly, and there was some tenderness on the inner part too. I can stand on it, but I can't walk on it because it feels unstable and hurts a lot. There's no obvious deformity, and my skin looks normal with good color and capillary refill. Doctor: Have you undergone any imaging studies such as X-rays or MRI for the injured ankle? Patient: Yes, I had an X-ray done when I came in today. The doctor showed me the results on the screen, and it looks like there's a fracture on the lateral side of my ankle. It's a displaced lateral malleolus at the Weber C level, and that's probably why it feels so unstable when I try to walk on it.",
+              "entailment": 0.9746,
+              "depth": 1
+            },
+            {
+              "atom": "The lateral malleolus fracture is at the Weber C level.",
+              "citation": "examination findings, including swelling, bruising, pain, instability, and any deformity? Also, please mention if there is any tenderness, range of motion, or crepitus, and whether you can bear weight on the ankle. Patient: The doctor did a physical exam and found that my ankle is swollen on the outside, and there's a lot of tenderness, especially on the lateral side. When he pressed on the outside, it hurt pretty badly, and there was some tenderness on the inner part too. I can stand on it, but I can't walk on it because it feels unstable and hurts a lot. There's no obvious deformity, and my skin looks normal with good color and capillary refill. Doctor: Have you undergone any imaging studies such as X-rays or MRI for the injured ankle? Patient: Yes, I had an X-ray done when I came in today. The doctor showed me the results on the screen, and it looks like there's a fracture on the lateral side of my ankle. It's a displaced lateral malleolus at the Weber C level, and that's probably why it feels so unstable when I try to walk on it.",
+              "entailment": 0.9473,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      }
+    ],
+    "assessment_and_plan": [
+      {
+        "unit": "Diagnoses and Clinical Reasoning: The patient has a displaced lateral malleolus fracture at the Weber C level, which is causing ankle instability and pain.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.8486,
+          "neutral": 0.0946,
+          "contradiction": 0.0566
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "examination findings, including swelling, bruising, pain, instability, and any deformity? Also, please mention if there is any tenderness, range of motion, or crepitus, and whether you can bear weight on the ankle. Patient: The doctor did a physical exam and found that my ankle is swollen on the outside, and there's a lot of tenderness, especially on the lateral side. When he pressed on the outside, it hurt pretty badly, and there was some tenderness on the inner part too. I can stand on it, but I can't walk on it because it feels unstable and hurts a lot. There's no obvious deformity, and my skin looks normal with good color and capillary refill. Doctor: Have you undergone any imaging studies such as X-rays or MRI for the injured ankle? Patient: Yes, I had an X-ray done when I came in today. The doctor showed me the results on the screen, and it looks like there's a fracture on the lateral side of my ankle. It's a displaced lateral malleolus at the Weber C level, and that's probably why it feels so unstable when I try to walk on it.",
+        "atomic_decomposition": {
+          "original": "Diagnoses and Clinical Reasoning: The patient has a displaced lateral malleolus fracture at the Weber C level, which is causing ankle instability and pain.",
+          "retained": [
+            {
+              "atom": "The patient has a displaced lateral malleolus fracture.",
+              "citation": "examination findings, including swelling, bruising, pain, instability, and any deformity? Also, please mention if there is any tenderness, range of motion, or crepitus, and whether you can bear weight on the ankle. Patient: The doctor did a physical exam and found that my ankle is swollen on the outside, and there's a lot of tenderness, especially on the lateral side. When he pressed on the outside, it hurt pretty badly, and there was some tenderness on the inner part too. I can stand on it, but I can't walk on it because it feels unstable and hurts a lot. There's no obvious deformity, and my skin looks normal with good color and capillary refill. Doctor: Have you undergone any imaging studies such as X-rays or MRI for the injured ankle? Patient: Yes, I had an X-ray done when I came in today. The doctor showed me the results on the screen, and it looks like there's a fracture on the lateral side of my ankle. It's a displaced lateral malleolus at the Weber C level, and that's probably why it feels so unstable when I try to walk on it.",
+              "entailment": 0.9478,
+              "depth": 1
+            },
+            {
+              "atom": "The fracture is at the Weber C level.",
+              "citation": "examination findings, including swelling, bruising, pain, instability, and any deformity? Also, please mention if there is any tenderness, range of motion, or crepitus, and whether you can bear weight on the ankle. Patient: The doctor did a physical exam and found that my ankle is swollen on the outside, and there's a lot of tenderness, especially on the lateral side. When he pressed on the outside, it hurt pretty badly, and there was some tenderness on the inner part too. I can stand on it, but I can't walk on it because it feels unstable and hurts a lot. There's no obvious deformity, and my skin looks normal with good color and capillary refill. Doctor: Have you undergone any imaging studies such as X-rays or MRI for the injured ankle? Patient: Yes, I had an X-ray done when I came in today. The doctor showed me the results on the screen, and it looks like there's a fracture on the lateral side of my ankle. It's a displaced lateral malleolus at the Weber C level, and that's probably why it feels so unstable when I try to walk on it.",
+              "entailment": 0.9639,
+              "depth": 1
+            },
+            {
+              "atom": "The fracture is causing ankle instability.",
+              "citation": "examination findings, including swelling, bruising, pain, instability, and any deformity? Also, please mention if there is any tenderness, range of motion, or crepitus, and whether you can bear weight on the ankle. Patient: The doctor did a physical exam and found that my ankle is swollen on the outside, and there's a lot of tenderness, especially on the lateral side. When he pressed on the outside, it hurt pretty badly, and there was some tenderness on the inner part too. I can stand on it, but I can't walk on it because it feels unstable and hurts a lot. There's no obvious deformity, and my skin looks normal with good color and capillary refill. Doctor: Have you undergone any imaging studies such as X-rays or MRI for the injured ankle? Patient: Yes, I had an X-ray done when I came in today. The doctor showed me the results on the screen, and it looks like there's a fracture on the lateral side of my ankle. It's a displaced lateral malleolus at the Weber C level, and that's probably why it feels so unstable when I try to walk on it.",
+              "entailment": 0.979,
+              "depth": 1
+            },
+            {
+              "atom": "The fracture is causing pain.",
+              "citation": "examination findings, including swelling, bruising, pain, instability, and any deformity? Also, please mention if there is any tenderness, range of motion, or crepitus, and whether you can bear weight on the ankle. Patient: The doctor did a physical exam and found that my ankle is swollen on the outside, and there's a lot of tenderness, especially on the lateral side. When he pressed on the outside, it hurt pretty badly, and there was some tenderness on the inner part too. I can stand on it, but I can't walk on it because it feels unstable and hurts a lot. There's no obvious deformity, and my skin looks normal with good color and capillary refill. Doctor: Have you undergone any imaging studies such as X-rays or MRI for the injured ankle? Patient: Yes, I had an X-ray done when I came in today. The doctor showed me the results on the screen, and it looks like there's a fracture on the lateral side of my ankle. It's a displaced lateral malleolus at the Weber C level, and that's probably why it feels so unstable when I try to walk on it.",
+              "entailment": 0.9966,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've followed the rules to split the statement into individual facts, replacing pronouns with the subject (\"The patient\"), and not adding or inferring any information that is not present in the original statement.",
+              "citation": "Patient: I'm 45 years old, male. I came in because I injured my ankle while playing basketball with my son. I landed awkwardly and twisted it, and now it's swollen, bruised, and really painful. It doesn't feel stable at all, and I'm having trouble walking on it. Doctor: Could you please provide your age, gender, and a detailed description of your current symptoms, including when they started and any activities that worsen them? Patient: I'm 45 years old, male. I injured my ankle while playing basketball with my son a few days ago. I landed awkwardly and twisted it, and now it's swollen, bruised, and really painful. It doesn't feel stable at all, and I'm having trouble walking on it. The pain is worse when I try to put weight on it, and it's been getting more swollen since the injury. Doctor: Have you had any prior ankle injuries or surgeries? Do you have a history of diabetes, hypertension, or any other chronic medical conditions? Patient: I don't have a history of ankle injuries or surgeries, and I don't have any chronic medical conditions like diabetes or hypertension. I've been pretty healthy overall. Doctor: Have you had any prior imaging, such as X-rays or an MRI, of the affected ankle since the injury? Patient: No, I haven't had any prior imaging of the affected ankle since the injury. This is the first time I'm seeing a doctor about it. Doctor: Can you describe the physical examination findings, including swelling, bruising, pain, instability, and any deformity? Also, please mention if there is any tenderness, range of motion, or crepitus, and whether you can bear weight on the ankle. Patient: The doctor did a physical exam and found that my ankle is swollen on the outside, and there's a lot of tenderness, especially on the lateral side. When he pressed on the outside, it hurt pretty badly, and there was some tenderness on the inner part",
+              "entailment": 0.998,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "Treatment Plan: The patient will require further evaluation and management by an orthopedic specialist.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.119,
+          "neutral": 0.8374,
+          "contradiction": 0.0435
+        },
+        "classification": "confabulated",
+        "citation_source": "None (not explicitly in dialogue)",
+        "citation_text": "No supporting dialogue turn found.",
+        "reasoning": "Clinical Inference Purged: The LLM formulated a diagnostic conclusion or treatment recommendation deduced from patient symptoms and vitals. However, because the doctor did not explicitly utter this diagnostic label verbatim during the dialogue, uMedSum's uniform entailment check classified it as unsupported and discarded it (Fact-Inference Category Error)."
+      },
+      {
+        "unit": "A referral will be made for further imaging and possible surgical intervention.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.0065,
+          "neutral": 0.9912,
+          "contradiction": 0.0024
+        },
+        "classification": "confabulated",
+        "citation_source": "None (not explicitly in dialogue)",
+        "citation_text": "No supporting dialogue turn found.",
+        "reasoning": "Clinical Inference Purged: The LLM formulated a diagnostic conclusion or treatment recommendation deduced from patient symptoms and vitals. However, because the doctor did not explicitly utter this diagnostic label verbatim during the dialogue, uMedSum's uniform entailment check classified it as unsupported and discarded it (Fact-Inference Category Error)."
+      },
+      {
+        "unit": "Medications: None prescribed at this time.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.2893,
+          "neutral": 0.5566,
+          "contradiction": 0.1542
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "examination findings, including swelling, bruising, pain, instability, and any deformity? Also, please mention if there is any tenderness, range of motion, or crepitus, and whether you can bear weight on the ankle. Patient: The doctor did a physical exam and found that my ankle is swollen on the outside, and there's a lot of tenderness, especially on the lateral side. When he pressed on the outside, it hurt pretty badly, and there was some tenderness on the inner part too. I can stand on it, but I can't walk on it because it feels unstable and hurts a lot. There's no obvious deformity, and my skin looks normal with good color and capillary refill. Doctor: Have you undergone any imaging studies such as X-rays or MRI for the injured ankle? Patient: Yes, I had an X-ray done when I came in today. The doctor showed me the results on the screen, and it looks like there's a fracture on the lateral side of my ankle. It's a displaced lateral malleolus at the Weber C level, and that's probably why it feels so unstable when I try to walk on it.",
+        "atomic_decomposition": {
+          "original": "Medications: None prescribed at this time.",
+          "retained": [],
+          "discarded": [
+            {
+              "atom": "Medications are none.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.2629,
+              "depth": 1
+            },
+            {
+              "atom": "Based on the rules provided, I will decompose the statement into independent, self-contained ATOMIC FACTS.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.3647,
+              "depth": 2
+            },
+            {
+              "atom": "Statement: Medications are prescribed at this time (false).",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.2964,
+              "depth": 2
+            },
+            {
+              "atom": "Medications are prescribed.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.0162,
+              "depth": 2
+            },
+            {
+              "atom": "The time is this time.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4705,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Follow-up: The patient will be scheduled for a follow-up appointment with the orthopedic specialist to discuss further treatment options and plan for recovery.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.1897,
+          "neutral": 0.748,
+          "contradiction": 0.062
+        },
+        "classification": "confabulated",
+        "citation_source": "None (not explicitly in dialogue)",
+        "citation_text": "No supporting dialogue turn found.",
+        "reasoning": "Clinical Inference Purged: The LLM formulated a diagnostic conclusion or treatment recommendation deduced from patient symptoms and vitals. However, because the doctor did not explicitly utter this diagnostic label verbatim during the dialogue, uMedSum's uniform entailment check classified it as unsupported and discarded it (Fact-Inference Category Error)."
+      }
+    ]
+  },
+  "stage2_stats": {
+    "decision_counts": {
+      "faithful": 6,
+      "confabulated": 4,
+      "uncertain": 3
+    },
+    "num_claims": 13,
+    "num_kept": 8,
+    "claim_retention_rate": 0.6154
+  },
+  "stage3_so": {
+    "subjective": "Chief Complaint: Injured ankle while playing basketball with son\nHistory of Present Illness (HPI): The patient, a 45-year-old male, presents with a swollen, bruised, and painful ankle after twisting it while playing basketball with his son a few days ago.",
+    "objective": "Physical Examination & Vitals: The patient's ankle is swollen on the outside, with tenderness on the lateral and inner parts.\nThere is pain on pressure on the outside of the ankle, and the ankle feels unstable.\nThe patient is unable to bear weight on the ankle.\nThere is no obvious deformity or skin changes.\nThe X-ray of the ankle reveals a displaced lateral malleolus fracture.\nThe lateral malleolus fracture is at the Weber C level.",
+    "assessment_and_plan": "The patient has a displaced lateral malleolus fracture.\nThe fracture is at the Weber C level.\nThe fracture is causing ankle instability.\nThe fracture is causing pain.\nNote that I've followed the rules to split the statement into individual facts, replacing pronouns with the subject (\"The patient\"), and not adding or inferring any information that is not present in the original statement."
+  },
+  "stage3_key_sentences": [
+    "I injured my ankle while playing basketball with my son a few days ago.",
+    "Doctor: Can you describe the physical examination findings, including swelling, bruising, pain, instability, and any deformity?"
+  ],
+  "stage3_summary_key_phrases": [
+    "ankle instability fracture",
+    "lateral malleolus fracture",
+    "complaint injured ankle",
+    "causing ankle",
+    "patient ankle swollen",
+    "ankle reveals displaced",
+    "ankle playing basketball",
+    "ankle ankle feels",
+    "fracture lateral",
+    "bruised painful"
+  ],
+  "stage3_coverage_scores": [
+    {
+      "sentence": "I injured my ankle while playing basketball with my son a few days ago.",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "I injured my ankle while playing basketball with my son a few days ago.",
+      "score": 0.6777,
+      "is_missing": false,
+      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+    },
+    {
+      "sentence": "Doctor: Can you describe the physical examination findings, including swelling, bruising, pain, instability, and any deformity?",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "Doctor: Can you describe the physical examination findings, including swelling, bruising, pain, instability, and any deformity?",
+      "score": 0.5036,
+      "is_missing": false,
+      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+    }
+  ],
+  "stage3_candidate_log": [],
+  "stage3_added": [],
+  "stage3_stats": {
+    "num_key_sentences": 2,
+    "num_flagged": 0,
+    "num_added": 0
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "section": "subjective",
+        "claim": "The pain is worse when he tries to put weight on it, and it has been getting more swollen since the injury.",
+        "scores": {
+          "entailment": 0.1715,
+          "neutral": 0.7349,
+          "contradiction": 0.0935
+        },
+        "reason": "Factual Hallucination Purged: Statement introduces an ungrounded symptom, physical exam finding, or detail that was not stated by the patient or doctor in the dialogue transcript."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "Treatment Plan: The patient will require further evaluation and management by an orthopedic specialist.",
+        "scores": {
+          "entailment": 0.119,
+          "neutral": 0.8374,
+          "contradiction": 0.0435
+        },
+        "reason": "Clinical Inference Purged: The LLM formulated a diagnostic conclusion or treatment recommendation deduced from patient symptoms and vitals. However, because the doctor did not explicitly utter this diagnostic label verbatim during the dialogue, uMedSum's uniform entailment check classified it as unsupported and discarded it (Fact-Inference Category Error)."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "A referral will be made for further imaging and possible surgical intervention.",
+        "scores": {
+          "entailment": 0.0065,
+          "neutral": 0.9912,
+          "contradiction": 0.0024
+        },
+        "reason": "Clinical Inference Purged: The LLM formulated a diagnostic conclusion or treatment recommendation deduced from patient symptoms and vitals. However, because the doctor did not explicitly utter this diagnostic label verbatim during the dialogue, uMedSum's uniform entailment check classified it as unsupported and discarded it (Fact-Inference Category Error)."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "Medications are none.",
+        "entailment": 0.2629,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Medications: None prescribed at this time."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "Based on the rules provided, I will decompose the statement into independent, self-contained ATOMIC FACTS.",
+        "entailment": 0.3647,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Medications: None prescribed at this time."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "Statement: Medications are prescribed at this time (false).",
+        "entailment": 0.2964,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Medications: None prescribed at this time."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "Medications are prescribed.",
+        "entailment": 0.0162,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Medications: None prescribed at this time."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "The time is this time.",
+        "entailment": 0.4705,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Medications: None prescribed at this time."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "Follow-up: The patient will be scheduled for a follow-up appointment with the orthopedic specialist to discuss further treatment options and plan for recovery.",
+        "scores": {
+          "entailment": 0.1897,
+          "neutral": 0.748,
+          "contradiction": 0.062
+        },
+        "reason": "Clinical Inference Purged: The LLM formulated a diagnostic conclusion or treatment recommendation deduced from patient symptoms and vitals. However, because the doctor did not explicitly utter this diagnostic label verbatim during the dialogue, uMedSum's uniform entailment check classified it as unsupported and discarded it (Fact-Inference Category Error)."
+      }
+    ]
+  },
+  "final_ap": {
+    "assessment_and_plan": "The patient has a displaced lateral malleolus fracture.\nThe fracture is at the Weber C level.\nThe fracture is causing ankle instability.\nThe fracture is causing pain.\nNote that I've followed the rules to split the statement into individual facts, replacing pronouns with the subject (\"The patient\"), and not adding or inferring any information that is not present in the original statement."
+  },
+  "scope": "soap",
+  "ap_changed": true,
+  "thresholds": {
+    "Te": 0.9,
+    "Tc": 0.8,
+    "Ta": 0.5,
+    "cov_min": 0.4,
+    "top_m": 2,
+    "fix_header_bug": true
+  },
+  "models": {
+    "llm": "llama3:8b-instruct-q8_0",
+    "nli": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+    "embedder": "all-MiniLM-L6-v2",
+    "ppl": "gpt2"
+  },
+  "status": "success",
+  "seconds": 11.0,
+  "conversation": "Patient: I'm 45 years old, male. I came in because I injured my ankle while playing basketball with my son. I landed awkwardly and twisted it, and now it's swollen, bruised, and really painful. It doesn't feel stable at all, and I'm having trouble walking on it.\nDoctor: Could you please provide your age, gender, and a detailed description of your current symptoms, including when they started and any activities that worsen them?\nPatient: I'm 45 years old, male. I injured my ankle while playing basketball with my son a few days ago. I landed awkwardly and twisted it, and now it's swollen, bruised, and really painful. It doesn't feel stable at all, and I'm having trouble walking on it. The pain is worse when I try to put weight on it, and it's been getting more swollen since the injury.\nDoctor: Have you had any prior ankle injuries or surgeries? Do you have a history of diabetes, hypertension, or any other chronic medical conditions?\nPatient: I don't have a history of ankle injuries or surgeries, and I don't have any chronic medical conditions like diabetes or hypertension. I've been pretty healthy overall.\nDoctor: Have you had any prior imaging, such as X-rays or an MRI, of the affected ankle since the injury?\nPatient: No, I haven't had any prior imaging of the affected ankle since the injury. This is the first time I'm seeing a doctor about it.\nDoctor: Can you describe the physical examination findings, including swelling, bruising, pain, instability, and any deformity? Also, please mention if there is any tenderness, range of motion, or crepitus, and whether you can bear weight on the ankle.\nPatient: The doctor did a physical exam and found that my ankle is swollen on the outside, and there's a lot of tenderness, especially on the lateral side. When he pressed on the outside, it hurt pretty badly, and there was some tenderness on the inner part too. I can stand on it, but I can't walk on it because it feels unstable and hurts a lot. There's no obvious deformity, and my skin looks normal with good color and capillary refill.\nDoctor: Have you undergone any imaging studies such as X-rays or MRI for the injured ankle?\nPatient: Yes, I had an X-ray done when I came in today. The doctor showed me the results on the screen, and it looks like there's a fracture on the lateral side of my ankle. It's a displaced lateral malleolus at the Weber C level, and that's probably why it feels so unstable when I try to walk on it.",
+  "reference_so": {
+    "subjective": "Basic information: 45 years old, male. Chief complaint: injured ankle while playing basketball with son.\n\nHistory of present illness: Injured ankle while playing basketball, landed awkwardly and twisted it. Symptoms: swelling, bruising, pain, instability, and difficulty walking. The pain is worse when putting weight on it, and it has been getting more swollen since the injury.\n\nPast history: No history of ankle injuries or surgeries. No chronic medical conditions like diabetes or hypertension. Overall, the patient has been healthy.",
+    "objective": "Physical examination: Swelling on the lateral side of the ankle, tenderness on the lateral and medial aspects, inability to bear weight, no deformity, normal skin color and capillary refill.\n\nInvestigations: X-ray confirmed displaced lateral malleolus fracture at Weber C level. No other imaging or lab results available.",
+    "assessment_and_plan": "Preliminary diagnosis:\n1. Displaced lateral malleolus fracture (Weber C). 2. Possible ligamentous injury. 3. Soft tissue swelling.\n\nDiagnostic discussion:\nThe patient is a 45-year-old male who sustained an ankle injury during basketball, presenting with swelling, bruising, pain, instability, and difficulty walking. Physical examination reveals swelling on the lateral side of the ankle, tenderness on both lateral and medial aspects, and inability to bear weight. X-ray findings confirm a displaced lateral malleolus fracture at the Weber C level, which is a high-energy injury often associated with ligamentous damage. The absence of deformity and normal skin color and capillary refill suggests no compartment syndrome or vascular compromise. The patient has no chronic medical conditions or prior ankle injuries, which reduces the likelihood of underlying osteoporosis or chronic instability. Differential diagnoses include: 1) Displaced lateral malleolus fracture (confirmed by X-ray). 2) Ligamentous injury (e.g., lateral collateral ligament tear), which is common in Weber C fractures and may require further evaluation. 3) Soft tissue swelling, which is consistent with the acute injury and may resolve with treatment. The patient's age and activity level increase the risk of such an injury, and the absence of prior ankle issues makes this a primary concern.\n1. Further evaluation: Obtain a stress X-ray or MRI to assess for ligamentous injury or syndesmotic disruption, which may influence surgical decision-making. 2. Medication: Prescribe analgesics (e.g., NSAIDs or acetaminophen) for pain management, with caution for renal function if long-term use is needed. Consider prophylactic antibiotics if there is a risk of open fracture or infection. 3. Non-drug management and education: Immobilize the ankle with a splint or boot, advise non-weight-bearing for 6-8 weeks, and recommend elevation and ice application to reduce swelling. Educate the patient on signs of infection (e.g., increasing redness, warmth, or fever) or compartment syndrome (e.g., severe pain, numbness, or weakness). 4. Follow-up: Schedule a follow-up in 1-2 weeks to reassess the fracture and consider surgical fixation if displacement persists or ligamentous injury is confirmed. Re-evaluate imaging if symptoms worsen or if there is no improvement in swelling or pain."
+  }
+}

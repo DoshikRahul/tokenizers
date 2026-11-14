@@ -1,0 +1,657 @@
+{
+  "case_id": "D2N175",
+  "split": "test",
+  "is_icl_demo": false,
+  "stage1_elements": "Here are the extracted clinical elements in concise bullet points:\n\n**Subjective Elements:**\n\n* Chief complaint: High blood sugar levels\n* History of present illness:\n\t+ Symptoms: None reported\n\t+ Onset: Recent blood work showed elevated blood sugar levels\n\t+ Duration: Unknown\n* Relevant medical history:\n\t+ Previously diagnosed with diabetes\n\t+ Currently taking metformin 1,000 milligrams per day\n\t+ No family history of diabetes\n* Relevant medications: Metformin 1,000 milligrams per day\n\n**Objective Elements:**\n\n* Physical examination findings: None mentioned\n* Vital signs: None mentioned\n* Diagnostic lab/imaging results:\n\t+ HbA1c: 8.1 (elevated)\n\n**Assessment Elements:**\n\n* Diagnoses: None explicitly stated, but likely includes diabetes or prediabetes\n* Clinical impressions: None explicitly stated\n\n**Plan Elements:**\n\n* Medical treatment plan: None explicitly stated, but likely includes further testing and potential adjustments to medication regimen\n* Prescriptions/dosages: None mentioned\n* Tests ordered: None mentioned\n* Follow-up instructions: None mentioned",
+  "stage1_raw_note": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:\n\n**SUBJECTIVE:**\n\n* **Chief Complaint:** High blood sugar levels\n* **History of Present Illness (HPI):** The patient, a 39-year-old female, presents with a recent diagnosis of elevated blood sugar levels on routine blood work. She reports no symptoms other than being surprised by the results. She has been watching her diet and power walking daily, but her blood sugars have been elevated.\n\n**OBJECTIVE:**\n\n* **Physical Examination & Vitals:** None mentioned\n* **Diagnostic Results & Labs:**\n\t+ HbA1c: 8.1 (elevated)\n\n**ASSESSMENT AND PLAN:**\n\n* **Diagnoses and Clinical Reasoning:** The patient's recent blood work shows elevated blood sugar levels, likely indicating diabetes or prediabetes. Further testing is needed to confirm the diagnosis and determine the underlying cause.\n* **Treatment Plan, Medications, and Follow-up:** The patient will undergo further testing, including a fasting glucose, postprandial glucose, lipid profile, and kidney function tests. She will also be referred to a registered dietitian for nutrition counseling and will be prescribed a medication regimen as needed. Follow-up appointments will be scheduled to monitor her progress and adjust her treatment plan as necessary.\n\nNote: The patient's exact weight and height were not provided, so BMI could not be calculated. Further testing and evaluation are needed to determine the underlying cause of the patient's elevated blood sugar levels and to develop an effective treatment plan.",
+  "stage1_parse": {
+    "parse_mode": "main_headings",
+    "parse_ok": true,
+    "dropped_preamble": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:"
+  },
+  "stage1_so": {
+    "subjective": "* **Chief Complaint:** High blood sugar levels\n* **History of Present Illness (HPI):** The patient, a 39-year-old female, presents with a recent diagnosis of elevated blood sugar levels on routine blood work. She reports no symptoms other than being surprised by the results. She has been watching her diet and power walking daily, but her blood sugars have been elevated.",
+    "objective": "* **Physical Examination & Vitals:** None mentioned\n* **Diagnostic Results & Labs:**\n\t+ HbA1c: 8.1 (elevated)",
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** The patient's recent blood work shows elevated blood sugar levels, likely indicating diabetes or prediabetes. Further testing is needed to confirm the diagnosis and determine the underlying cause.\n* **Treatment Plan, Medications, and Follow-up:** The patient will undergo further testing, including a fasting glucose, postprandial glucose, lipid profile, and kidney function tests. She will also be referred to a registered dietitian for nutrition counseling and will be prescribed a medication regimen as needed. Follow-up appointments will be scheduled to monitor her progress and adjust her treatment plan as necessary.\n\nNote: The patient's exact weight and height were not provided, so BMI could not be calculated. Further testing and evaluation are needed to determine the underlying cause of the patient's elevated blood sugar levels and to develop an effective treatment plan."
+  },
+  "stage1_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** The patient's recent blood work shows elevated blood sugar levels, likely indicating diabetes or prediabetes. Further testing is needed to confirm the diagnosis and determine the underlying cause.\n* **Treatment Plan, Medications, and Follow-up:** The patient will undergo further testing, including a fasting glucose, postprandial glucose, lipid profile, and kidney function tests. She will also be referred to a registered dietitian for nutrition counseling and will be prescribed a medication regimen as needed. Follow-up appointments will be scheduled to monitor her progress and adjust her treatment plan as necessary.\n\nNote: The patient's exact weight and height were not provided, so BMI could not be calculated. Further testing and evaluation are needed to determine the underlying cause of the patient's elevated blood sugar levels and to develop an effective treatment plan."
+  },
+  "stage2_so": {
+    "subjective": "Chief Complaint: High blood sugar levels\nHistory of Present Illness (HPI): The patient, a 39-year-old female, presents with a recent diagnosis of elevated blood sugar levels on routine blood work.\nShe reports no symptoms other than being surprised by the results.\nShe has been watching her diet and power walking daily, but her blood sugars have been elevated.",
+    "objective": "Physical Examination is not mentioned.\nBased on the rules provided, I would decompose the statement as follows:\nThere is no mention of physical examination.\nThis is the only atomic fact that can be extracted from the statement, as it is a single proposition stating the absence of information about physical examination or vitals.\nDiagnostic Results & Labs:\nHbA1c: 8.1 (elevated)",
+    "assessment_and_plan": "Diagnoses and Clinical Reasoning: The patient's recent blood work shows elevated blood sugar levels, likely indicating diabetes or prediabetes.\nFurther testing is needed.\nThe underlying cause needs to be determined.\nNote that I've followed the rules by splitting the list, conjunctions, and separate findings into individual facts, and replacing pronouns with the subject (\"Further testing\" instead of \"it\"). Each fact is self-contained and can stand alone as true or false.\nThe patient will undergo further testing.\nNote that I've followed the rules by splitting the list of tests into separate facts, replacing pronouns with the subject (\"The patient\"), and not adding or inferring any information that is not present in the original statement.\nNote that I've split the statement into two separate facts, as the conjunction \"for\" is separating two independent propositions. Each fact is self-contained and can stand alone as true or false.\nNote that I've followed the rules by:\nSplitting the conjunction \"as\" into two separate facts\nReplacing the pronoun \"she\" with the subject \"She\"\nNot adding or inferring any information that is not present in the original statement\nNote that I did not split the statement into more facts for \"and\" because it is a coordinating conjunction connecting two independent clauses, and each clause is already a self-contained proposition.\nNote that I've replaced the pronoun \"her\" with the subject \"her\" to make each fact self-contained."
+  },
+  "stage2_audit": {
+    "subjective": [
+      {
+        "unit": "Chief Complaint: High blood sugar levels",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9941,
+          "neutral": 0.0023,
+          "contradiction": 0.0037
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high. I needed to come in and talk about it and get some more tests done to figure out why. Doctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars? Patient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated. Doctor: Could you share more about your family history of diabetes and any other relevant medical conditions? Also, have you been previously diagnosed with diabetes or prediabetes? Patient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test. Doctor: Could you please share more details about your current diet and exercise routine, and have you experienced any symptoms related to high or low blood sugar levels recently? Patient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated. Doctor: Could you please provide the specific glucose levels from your recent blood work, including your fasting glucose, HbA1c, and any postprandial measurements? Also, have you had any other relevant laboratory tests, such as a lipid profile or kidney function tests? Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "History of Present Illness (HPI): The patient, a 39-year-old female, presents with a recent diagnosis of elevated blood sugar levels on routine blood work.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9897,
+          "neutral": 0.0044,
+          "contradiction": 0.0059
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high. I needed to come in and talk about it and get some more tests done to figure out why. Doctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars? Patient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated. Doctor: Could you share more about your family history of diabetes and any other relevant medical conditions? Also, have you been previously diagnosed with diabetes or prediabetes? Patient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test. Doctor: Could you please share more details about your current diet and exercise routine, and have you experienced any symptoms related to high or low blood sugar levels recently? Patient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated. Doctor: Could you please provide the specific glucose levels from your recent blood work, including your fasting glucose, HbA1c, and any postprandial measurements? Also, have you had any other relevant laboratory tests, such as a lipid profile or kidney function tests? Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "She reports no symptoms other than being surprised by the results.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.999,
+          "neutral": 0.0003,
+          "contradiction": 0.0007
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high. I needed to come in and talk about it and get some more tests done to figure out why. Doctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars? Patient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated. Doctor: Could you share more about your family history of diabetes and any other relevant medical conditions? Also, have you been previously diagnosed with diabetes or prediabetes? Patient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test. Doctor: Could you please share more details about your current diet and exercise routine, and have you experienced any symptoms related to high or low blood sugar levels recently? Patient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated. Doctor: Could you please provide the specific glucose levels from your recent blood work, including your fasting glucose, HbA1c, and any postprandial measurements? Also, have you had any other relevant laboratory tests, such as a lipid profile or kidney function tests? Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "She has been watching her diet and power walking daily, but her blood sugars have been elevated.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.999,
+          "neutral": 0.0003,
+          "contradiction": 0.0007
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high. I needed to come in and talk about it and get some more tests done to figure out why. Doctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars? Patient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated. Doctor: Could you share more about your family history of diabetes and any other relevant medical conditions? Also, have you been previously diagnosed with diabetes or prediabetes? Patient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test. Doctor: Could you please share more details about your current diet and exercise routine, and have you experienced any symptoms related to high or low blood sugar levels recently? Patient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated. Doctor: Could you please provide the specific glucose levels from your recent blood work, including your fasting glucose, HbA1c, and any postprandial measurements? Also, have you had any other relevant laboratory tests, such as a lipid profile or kidney function tests? Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      }
+    ],
+    "objective": [
+      {
+        "unit": "Physical Examination & Vitals: None mentioned",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.4355,
+          "neutral": 0.2776,
+          "contradiction": 0.2869
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "calculate your BMI? Additionally, could you confirm the exact dosage of metformin you are currently taking and whether there have been any recent changes in your medication regimen? Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you provide your current weight and height so we can calculate your BMI? This will help us better understand your diabetes management and overall health. Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you please provide your current weight and height? This will help us calculate your BMI and better understand your overall health status. Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you please provide your current weight and height? This will help us calculate your BMI and better assess your metabolic status. Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you please provide your current weight and height? This information will help us better assess your diabetes management and determine if any adjustments to your treatment plan are needed. Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams",
+        "atomic_decomposition": {
+          "original": "Physical Examination & Vitals: None mentioned",
+          "retained": [
+            {
+              "atom": "Physical Examination is not mentioned.",
+              "citation": "’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you please provide your current weight and height? This information will help us better assess your diabetes management and determine if any adjustments to your treatment plan are needed. Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you please provide your current weight and height so that we can calculate your BMI and assess your overall metabolic status? Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you please provide your current weight and height, or at least your most recent weight measurement? Patient: I don’t have my exact weight or height on me right now, but I’ve been tracking my weight regularly and have been power walking every day as part of my routine. Doctor: Could you please provide your current weight and height so that we can calculate your BMI and better assess your metabolic status? Patient: I don’t have my exact weight or height on me right now, but I’ve been tracking my weight regularly and have been power walking every day as part of my routine.",
+              "entailment": 0.998,
+              "depth": 1
+            },
+            {
+              "atom": "Based on the rules provided, I would decompose the statement as follows:",
+              "citation": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high. I needed to come in and talk about it and get some more tests done to figure out why. Doctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars? Patient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated. Doctor: Could you share more about your family history of diabetes and any other relevant medical conditions? Also, have you been previously diagnosed with diabetes or prediabetes? Patient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test. Doctor: Could you please share more details about your current diet and exercise routine, and have you experienced any symptoms related to high or low blood sugar levels recently? Patient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated. Doctor: Could you please provide the specific glucose levels from your recent blood work, including your fasting glucose, HbA1c, and any postprandial measurements? Also, have you had any other relevant laboratory tests, such as a lipid profile or kidney function tests? Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure",
+              "entailment": 0.9888,
+              "depth": 2
+            },
+            {
+              "atom": "There is no mention of physical examination.",
+              "citation": "’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you please provide your current weight and height? This information will help us better assess your diabetes management and determine if any adjustments to your treatment plan are needed. Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you please provide your current weight and height so that we can calculate your BMI and assess your overall metabolic status? Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you please provide your current weight and height, or at least your most recent weight measurement? Patient: I don’t have my exact weight or height on me right now, but I’ve been tracking my weight regularly and have been power walking every day as part of my routine. Doctor: Could you please provide your current weight and height so that we can calculate your BMI and better assess your metabolic status? Patient: I don’t have my exact weight or height on me right now, but I’ve been tracking my weight regularly and have been power walking every day as part of my routine.",
+              "entailment": 0.9985,
+              "depth": 2
+            },
+            {
+              "atom": "This is the only atomic fact that can be extracted from the statement, as it is a single proposition stating the absence of information about physical examination or vitals.",
+              "citation": "’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you please provide your current weight and height? This information will help us better assess your diabetes management and determine if any adjustments to your treatment plan are needed. Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you please provide your current weight and height so that we can calculate your BMI and assess your overall metabolic status? Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you please provide your current weight and height, or at least your most recent weight measurement? Patient: I don’t have my exact weight or height on me right now, but I’ve been tracking my weight regularly and have been power walking every day as part of my routine. Doctor: Could you please provide your current weight and height so that we can calculate your BMI and better assess your metabolic status? Patient: I don’t have my exact weight or height on me right now, but I’ve been tracking my weight regularly and have been power walking every day as part of my routine.",
+              "entailment": 0.8774,
+              "depth": 2
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "Please provide the statement you'd like me to decompose into atomic facts. I'll follow the rules and output the resulting atomic facts.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4639,
+              "depth": 2
+            },
+            {
+              "atom": "Vitals are not mentioned.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4927,
+              "depth": 1
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Diagnostic Results & Labs:",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.5649,
+          "neutral": 0.3481,
+          "contradiction": 0.0867
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high. I needed to come in and talk about it and get some more tests done to figure out why. Doctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars? Patient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated. Doctor: Could you share more about your family history of diabetes and any other relevant medical conditions? Also, have you been previously diagnosed with diabetes or prediabetes? Patient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test. Doctor: Could you please share more details about your current diet and exercise routine, and have you experienced any symptoms related to high or low blood sugar levels recently? Patient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated. Doctor: Could you please provide the specific glucose levels from your recent blood work, including your fasting glucose, HbA1c, and any postprandial measurements? Also, have you had any other relevant laboratory tests, such as a lipid profile or kidney function tests? Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure",
+        "atomic_decomposition": {
+          "original": "Diagnostic Results & Labs:",
+          "retained": [
+            {
+              "atom": "Diagnostic Results & Labs:",
+              "citation": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high. I needed to come in and talk about it and get some more tests done to figure out why. Doctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars? Patient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated. Doctor: Could you share more about your family history of diabetes and any other relevant medical conditions? Also, have you been previously diagnosed with diabetes or prediabetes? Patient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test. Doctor: Could you please share more details about your current diet and exercise routine, and have you experienced any symptoms related to high or low blood sugar levels recently? Patient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated. Doctor: Could you please provide the specific glucose levels from your recent blood work, including your fasting glucose, HbA1c, and any postprandial measurements? Also, have you had any other relevant laboratory tests, such as a lipid profile or kidney function tests? Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure",
+              "entailment": 0.5649,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "too_short",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "HbA1c: 8.1 (elevated)",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.9448,
+          "neutral": 0.0064,
+          "contradiction": 0.0489
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high. I needed to come in and talk about it and get some more tests done to figure out why. Doctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars? Patient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated. Doctor: Could you share more about your family history of diabetes and any other relevant medical conditions? Also, have you been previously diagnosed with diabetes or prediabetes? Patient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test. Doctor: Could you please share more details about your current diet and exercise routine, and have you experienced any symptoms related to high or low blood sugar levels recently? Patient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated. Doctor: Could you please provide the specific glucose levels from your recent blood work, including your fasting glucose, HbA1c, and any postprandial measurements? Also, have you had any other relevant laboratory tests, such as a lipid profile or kidney function tests? Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      }
+    ],
+    "assessment_and_plan": [
+      {
+        "unit": "Diagnoses and Clinical Reasoning: The patient's recent blood work shows elevated blood sugar levels, likely indicating diabetes or prediabetes.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.9702,
+          "neutral": 0.0172,
+          "contradiction": 0.0128
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high. I needed to come in and talk about it and get some more tests done to figure out why. Doctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars? Patient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated. Doctor: Could you share more about your family history of diabetes and any other relevant medical conditions? Also, have you been previously diagnosed with diabetes or prediabetes? Patient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test. Doctor: Could you please share more details about your current diet and exercise routine, and have you experienced any symptoms related to high or low blood sugar levels recently? Patient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated. Doctor: Could you please provide the specific glucose levels from your recent blood work, including your fasting glucose, HbA1c, and any postprandial measurements? Also, have you had any other relevant laboratory tests, such as a lipid profile or kidney function tests? Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "Further testing is needed to confirm the diagnosis and determine the underlying cause.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.7065,
+          "neutral": 0.2778,
+          "contradiction": 0.0154
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high. I needed to come in and talk about it and get some more tests done to figure out why. Doctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars? Patient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated. Doctor: Could you share more about your family history of diabetes and any other relevant medical conditions? Also, have you been previously diagnosed with diabetes or prediabetes? Patient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test. Doctor: Could you please share more details about your current diet and exercise routine, and have you experienced any symptoms related to high or low blood sugar levels recently? Patient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated. Doctor: Could you please provide the specific glucose levels from your recent blood work, including your fasting glucose, HbA1c, and any postprandial measurements? Also, have you had any other relevant laboratory tests, such as a lipid profile or kidney function tests? Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure",
+        "atomic_decomposition": {
+          "original": "Further testing is needed to confirm the diagnosis and determine the underlying cause.",
+          "retained": [
+            {
+              "atom": "Further testing is needed.",
+              "citation": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high. I needed to come in and talk about it and get some more tests done to figure out why. Doctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars? Patient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated. Doctor: Could you share more about your family history of diabetes and any other relevant medical conditions? Also, have you been previously diagnosed with diabetes or prediabetes? Patient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test. Doctor: Could you please share more details about your current diet and exercise routine, and have you experienced any symptoms related to high or low blood sugar levels recently? Patient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated. Doctor: Could you please provide the specific glucose levels from your recent blood work, including your fasting glucose, HbA1c, and any postprandial measurements? Also, have you had any other relevant laboratory tests, such as a lipid profile or kidney function tests? Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure",
+              "entailment": 0.998,
+              "depth": 1
+            },
+            {
+              "atom": "The underlying cause needs to be determined.",
+              "citation": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high. I needed to come in and talk about it and get some more tests done to figure out why. Doctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars? Patient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated. Doctor: Could you share more about your family history of diabetes and any other relevant medical conditions? Also, have you been previously diagnosed with diabetes or prediabetes? Patient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test. Doctor: Could you please share more details about your current diet and exercise routine, and have you experienced any symptoms related to high or low blood sugar levels recently? Patient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated. Doctor: Could you please provide the specific glucose levels from your recent blood work, including your fasting glucose, HbA1c, and any postprandial measurements? Also, have you had any other relevant laboratory tests, such as a lipid profile or kidney function tests? Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure",
+              "entailment": 0.9888,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've followed the rules by splitting the list, conjunctions, and separate findings into individual facts, and replacing pronouns with the subject (\"Further testing\" instead of \"it\"). Each fact is self-contained and can stand alone as true or false.",
+              "citation": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high. I needed to come in and talk about it and get some more tests done to figure out why. Doctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars? Patient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated. Doctor: Could you share more about your family history of diabetes and any other relevant medical conditions? Also, have you been previously diagnosed with diabetes or prediabetes? Patient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test. Doctor: Could you please share more details about your current diet and exercise routine, and have you experienced any symptoms related to high or low blood sugar levels recently? Patient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated. Doctor: Could you please provide the specific glucose levels from your recent blood work, including your fasting glucose, HbA1c, and any postprandial measurements? Also, have you had any other relevant laboratory tests, such as a lipid profile or kidney function tests? Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure",
+              "entailment": 0.9688,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "The diagnosis needs to be confirmed.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.425,
+              "depth": 2
+            },
+            {
+              "atom": "The diagnosis needs confirmation.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4363,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Treatment Plan, Medications, and Follow-up: The patient will undergo further testing, including a fasting glucose, postprandial glucose, lipid profile, and kidney function tests.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.4363,
+          "neutral": 0.2986,
+          "contradiction": 0.2654
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "calculate your BMI? Additionally, could you confirm the exact dosage of metformin you are currently taking and whether there have been any recent changes in your medication regimen? Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you provide your current weight and height so we can calculate your BMI? This will help us better understand your diabetes management and overall health. Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you please provide your current weight and height? This will help us calculate your BMI and better understand your overall health status. Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you please provide your current weight and height? This will help us calculate your BMI and better assess your metabolic status. Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you please provide your current weight and height? This information will help us better assess your diabetes management and determine if any adjustments to your treatment plan are needed. Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams",
+        "atomic_decomposition": {
+          "original": "Treatment Plan, Medications, and Follow-up: The patient will undergo further testing, including a fasting glucose, postprandial glucose, lipid profile, and kidney function tests.",
+          "retained": [
+            {
+              "atom": "The patient will undergo further testing.",
+              "citation": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high. I needed to come in and talk about it and get some more tests done to figure out why. Doctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars? Patient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated. Doctor: Could you share more about your family history of diabetes and any other relevant medical conditions? Also, have you been previously diagnosed with diabetes or prediabetes? Patient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test. Doctor: Could you please share more details about your current diet and exercise routine, and have you experienced any symptoms related to high or low blood sugar levels recently? Patient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated. Doctor: Could you please provide the specific glucose levels from your recent blood work, including your fasting glucose, HbA1c, and any postprandial measurements? Also, have you had any other relevant laboratory tests, such as a lipid profile or kidney function tests? Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure",
+              "entailment": 0.8477,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've followed the rules by splitting the list of tests into separate facts, replacing pronouns with the subject (\"The patient\"), and not adding or inferring any information that is not present in the original statement.",
+              "citation": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high. I needed to come in and talk about it and get some more tests done to figure out why. Doctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars? Patient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated. Doctor: Could you share more about your family history of diabetes and any other relevant medical conditions? Also, have you been previously diagnosed with diabetes or prediabetes? Patient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test. Doctor: Could you please share more details about your current diet and exercise routine, and have you experienced any symptoms related to high or low blood sugar levels recently? Patient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated. Doctor: Could you please provide the specific glucose levels from your recent blood work, including your fasting glucose, HbA1c, and any postprandial measurements? Also, have you had any other relevant laboratory tests, such as a lipid profile or kidney function tests? Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure",
+              "entailment": 0.9971,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "The patient will undergo a fasting glucose test.",
+              "reasoning": "Could not be decomposed further and not entailed above threshold Ta.",
+              "entailment": 0.4321,
+              "depth": 1
+            },
+            {
+              "atom": "The patient will undergo a postprandial glucose test.",
+              "reasoning": "Could not be decomposed further and not entailed above threshold Ta.",
+              "entailment": 0.4329,
+              "depth": 1
+            },
+            {
+              "atom": "The patient will undergo a lipid profile test.",
+              "reasoning": "Could not be decomposed further and not entailed above threshold Ta.",
+              "entailment": 0.4253,
+              "depth": 1
+            },
+            {
+              "atom": "The patient will undergo a kidney function test.",
+              "reasoning": "Could not be decomposed further and not entailed above threshold Ta.",
+              "entailment": 0.4233,
+              "depth": 1
+            }
+          ],
+          "decomposition_method": "unsplit",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "She will also be referred to a registered dietitian for nutrition counseling and will be prescribed a medication regimen as needed.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.4255,
+          "neutral": 0.3142,
+          "contradiction": 0.2603
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "calculate your BMI? Additionally, could you confirm the exact dosage of metformin you are currently taking and whether there have been any recent changes in your medication regimen? Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you provide your current weight and height so we can calculate your BMI? This will help us better understand your diabetes management and overall health. Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you please provide your current weight and height? This will help us calculate your BMI and better understand your overall health status. Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you please provide your current weight and height? This will help us calculate your BMI and better assess your metabolic status. Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you please provide your current weight and height? This information will help us better assess your diabetes management and determine if any adjustments to your treatment plan are needed. Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams",
+        "atomic_decomposition": {
+          "original": "She will also be referred to a registered dietitian for nutrition counseling and will be prescribed a medication regimen as needed.",
+          "retained": [
+            {
+              "atom": "Note that I've split the statement into two separate facts, as the conjunction \"for\" is separating two independent propositions. Each fact is self-contained and can stand alone as true or false.",
+              "citation": "’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you please provide your current weight and height? This information will help us better assess your diabetes management and determine if any adjustments to your treatment plan are needed. Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you please provide your current weight and height so that we can calculate your BMI and assess your overall metabolic status? Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you please provide your current weight and height, or at least your most recent weight measurement? Patient: I don’t have my exact weight or height on me right now, but I’ve been tracking my weight regularly and have been power walking every day as part of my routine. Doctor: Could you please provide your current weight and height so that we can calculate your BMI and better assess your metabolic status? Patient: I don’t have my exact weight or height on me right now, but I’ve been tracking my weight regularly and have been power walking every day as part of my routine.",
+              "entailment": 0.958,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I've followed the rules by:",
+              "citation": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high. I needed to come in and talk about it and get some more tests done to figure out why. Doctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars? Patient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated. Doctor: Could you share more about your family history of diabetes and any other relevant medical conditions? Also, have you been previously diagnosed with diabetes or prediabetes? Patient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test. Doctor: Could you please share more details about your current diet and exercise routine, and have you experienced any symptoms related to high or low blood sugar levels recently? Patient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated. Doctor: Could you please provide the specific glucose levels from your recent blood work, including your fasting glucose, HbA1c, and any postprandial measurements? Also, have you had any other relevant laboratory tests, such as a lipid profile or kidney function tests? Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure",
+              "entailment": 0.9946,
+              "depth": 2
+            },
+            {
+              "atom": "Splitting the conjunction \"as\" into two separate facts",
+              "citation": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high. I needed to come in and talk about it and get some more tests done to figure out why. Doctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars? Patient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated. Doctor: Could you share more about your family history of diabetes and any other relevant medical conditions? Also, have you been previously diagnosed with diabetes or prediabetes? Patient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test. Doctor: Could you please share more details about your current diet and exercise routine, and have you experienced any symptoms related to high or low blood sugar levels recently? Patient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated. Doctor: Could you please provide the specific glucose levels from your recent blood work, including your fasting glucose, HbA1c, and any postprandial measurements? Also, have you had any other relevant laboratory tests, such as a lipid profile or kidney function tests? Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure",
+              "entailment": 0.9937,
+              "depth": 2
+            },
+            {
+              "atom": "Replacing the pronoun \"she\" with the subject \"She\"",
+              "citation": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high. I needed to come in and talk about it and get some more tests done to figure out why. Doctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars? Patient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated. Doctor: Could you share more about your family history of diabetes and any other relevant medical conditions? Also, have you been previously diagnosed with diabetes or prediabetes? Patient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test. Doctor: Could you please share more details about your current diet and exercise routine, and have you experienced any symptoms related to high or low blood sugar levels recently? Patient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated. Doctor: Could you please provide the specific glucose levels from your recent blood work, including your fasting glucose, HbA1c, and any postprandial measurements? Also, have you had any other relevant laboratory tests, such as a lipid profile or kidney function tests? Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure",
+              "entailment": 0.895,
+              "depth": 2
+            },
+            {
+              "atom": "Not adding or inferring any information that is not present in the original statement",
+              "citation": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high. I needed to come in and talk about it and get some more tests done to figure out why. Doctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars? Patient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated. Doctor: Could you share more about your family history of diabetes and any other relevant medical conditions? Also, have you been previously diagnosed with diabetes or prediabetes? Patient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test. Doctor: Could you please share more details about your current diet and exercise routine, and have you experienced any symptoms related to high or low blood sugar levels recently? Patient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated. Doctor: Could you please provide the specific glucose levels from your recent blood work, including your fasting glucose, HbA1c, and any postprandial measurements? Also, have you had any other relevant laboratory tests, such as a lipid profile or kidney function tests? Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure",
+              "entailment": 0.668,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I did not split the statement into more facts for \"and\" because it is a coordinating conjunction connecting two independent clauses, and each clause is already a self-contained proposition.",
+              "citation": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high. I needed to come in and talk about it and get some more tests done to figure out why. Doctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars? Patient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated. Doctor: Could you share more about your family history of diabetes and any other relevant medical conditions? Also, have you been previously diagnosed with diabetes or prediabetes? Patient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test. Doctor: Could you please share more details about your current diet and exercise routine, and have you experienced any symptoms related to high or low blood sugar levels recently? Patient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated. Doctor: Could you please provide the specific glucose levels from your recent blood work, including your fasting glucose, HbA1c, and any postprandial measurements? Also, have you had any other relevant laboratory tests, such as a lipid profile or kidney function tests? Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure",
+              "entailment": 0.853,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "She will be referred to a registered dietitian.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4102,
+              "depth": 2
+            },
+            {
+              "atom": "A registered dietitian will provide nutrition counseling.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4407,
+              "depth": 2
+            },
+            {
+              "atom": "She will be prescribed a medication regimen.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4373,
+              "depth": 2
+            },
+            {
+              "atom": "The medication regimen is as needed.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4836,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Follow-up appointments will be scheduled to monitor her progress and adjust her treatment plan as necessary.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.4407,
+          "neutral": 0.3103,
+          "contradiction": 0.249
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "calculate your BMI? Additionally, could you confirm the exact dosage of metformin you are currently taking and whether there have been any recent changes in your medication regimen? Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you provide your current weight and height so we can calculate your BMI? This will help us better understand your diabetes management and overall health. Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you please provide your current weight and height? This will help us calculate your BMI and better understand your overall health status. Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you please provide your current weight and height? This will help us calculate your BMI and better assess your metabolic status. Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication. Doctor: Could you please provide your current weight and height? This information will help us better assess your diabetes management and determine if any adjustments to your treatment plan are needed. Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams",
+        "atomic_decomposition": {
+          "original": "Follow-up appointments will be scheduled to monitor her progress and adjust her treatment plan as necessary.",
+          "retained": [
+            {
+              "atom": "Note that I've replaced the pronoun \"her\" with the subject \"her\" to make each fact self-contained.",
+              "citation": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high. I needed to come in and talk about it and get some more tests done to figure out why. Doctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars? Patient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated. Doctor: Could you share more about your family history of diabetes and any other relevant medical conditions? Also, have you been previously diagnosed with diabetes or prediabetes? Patient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test. Doctor: Could you please share more details about your current diet and exercise routine, and have you experienced any symptoms related to high or low blood sugar levels recently? Patient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated. Doctor: Could you please provide the specific glucose levels from your recent blood work, including your fasting glucose, HbA1c, and any postprandial measurements? Also, have you had any other relevant laboratory tests, such as a lipid profile or kidney function tests? Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure",
+              "entailment": 0.9307,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "Follow-up appointments will be scheduled.",
+              "reasoning": "Could not be decomposed further and not entailed above threshold Ta.",
+              "entailment": 0.4285,
+              "depth": 1
+            },
+            {
+              "atom": "Her progress will be monitored.",
+              "reasoning": "Could not be decomposed further and not entailed above threshold Ta.",
+              "entailment": 0.4551,
+              "depth": 1
+            },
+            {
+              "atom": "Her treatment plan will be adjusted.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4131,
+              "depth": 2
+            },
+            {
+              "atom": "As necessary, her treatment plan will be adjusted.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.457,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      }
+    ]
+  },
+  "stage2_stats": {
+    "decision_counts": {
+      "faithful": 6,
+      "uncertain": 6
+    },
+    "num_claims": 12,
+    "num_kept": 12,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_so": {
+    "subjective": "Chief Complaint: High blood sugar levels\nAdditionally, could you confirm the exact dosage of metformin you are currently taking and whether there have been any recent changes in your medication regimen?\nHistory of Present Illness (HPI): The patient, a 39-year-old female, presents with a recent diagnosis of elevated blood sugar levels on routine blood work.\nShe reports no symptoms other than being surprised by the results.\nShe has been watching her diet and power walking daily, but her blood sugars have been elevated.",
+    "objective": "Physical Examination is not mentioned.\nBased on the rules provided, I would decompose the statement as follows:\nThere is no mention of physical examination.\nThis is the only atomic fact that can be extracted from the statement, as it is a single proposition stating the absence of information about physical examination or vitals.\nDiagnostic Results & Labs:\nHbA1c: 8.1 (elevated)",
+    "assessment_and_plan": "Diagnoses and Clinical Reasoning: The patient's recent blood work shows elevated blood sugar levels, likely indicating diabetes or prediabetes.\nFurther testing is needed.\nThe underlying cause needs to be determined.\nNote that I've followed the rules by splitting the list, conjunctions, and separate findings into individual facts, and replacing pronouns with the subject (\"Further testing\" instead of \"it\"). Each fact is self-contained and can stand alone as true or false.\nThe patient will undergo further testing.\nNote that I've followed the rules by splitting the list of tests into separate facts, replacing pronouns with the subject (\"The patient\"), and not adding or inferring any information that is not present in the original statement.\nNote that I've split the statement into two separate facts, as the conjunction \"for\" is separating two independent propositions. Each fact is self-contained and can stand alone as true or false.\nNote that I've followed the rules by:\nSplitting the conjunction \"as\" into two separate facts\nReplacing the pronoun \"she\" with the subject \"She\"\nNot adding or inferring any information that is not present in the original statement\nNote that I did not split the statement into more facts for \"and\" because it is a coordinating conjunction connecting two independent clauses, and each clause is already a self-contained proposition.\nNote that I've replaced the pronoun \"her\" with the subject \"her\" to make each fact self-contained."
+  },
+  "stage3_key_sentences": [
+    "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high.",
+    "Additionally, could you confirm the exact dosage of metformin you are currently taking and whether there have been any recent changes in your medication regimen?"
+  ],
+  "stage3_summary_key_phrases": [
+    "sugars elevated physical",
+    "likely indicating diabetes",
+    "prediabetes testing needed",
+    "hba1c elevated diagnoses",
+    "mention physical examination",
+    "blood work reports",
+    "present illness hpi",
+    "diagnoses clinical reasoning",
+    "conjunctions separate findings",
+    "stating absence information"
+  ],
+  "stage3_coverage_scores": [
+    {
+      "sentence": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high.",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high.",
+      "score": 0.549,
+      "is_missing": false,
+      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+    },
+    {
+      "sentence": "Additionally, could you confirm the exact dosage of metformin you are currently taking and whether there have been any recent changes in your medication regimen?",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "Additionally, could you confirm the exact dosage of metformin you are currently taking and whether there have been any recent changes in your medication regimen?",
+      "score": 0.2248,
+      "is_missing": true,
+      "action": "Added: Missing clinical dialogue detail (coverage < 0.40); inserted via GPT-2 fluency optimization."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "Additionally, could you confirm the exact dosage of metformin you are currently taking and whether there have been any recent changes in your medication regimen?",
+      "statement": "Additionally, could you confirm the exact dosage of metformin you are currently taking and whether there have been any recent changes in your medication regimen?",
+      "coverage": 0.2248,
+      "status": "added",
+      "reason": "coverage <= cov_min (uMedSum adds the dialogue sentence verbatim)",
+      "insertion": {
+        "section": "subjective",
+        "line_index": 1,
+        "perplexity": 19.16
+      }
+    }
+  ],
+  "stage3_added": [
+    {
+      "statement": "Additionally, could you confirm the exact dosage of metformin you are currently taking and whether there have been any recent changes in your medication regimen?",
+      "evidence": "Additionally, could you confirm the exact dosage of metformin you are currently taking and whether there have been any recent changes in your medication regimen?",
+      "section": "subjective",
+      "candidate": "Additionally, could you confirm the exact dosage of metformin you are currently taking and whether there have been any recent changes in your medication regimen?"
+    }
+  ],
+  "stage3_stats": {
+    "num_key_sentences": 2,
+    "num_flagged": 1,
+    "num_added": 1
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "section": "objective",
+        "claim": "Please provide the statement you'd like me to decompose into atomic facts. I'll follow the rules and output the resulting atomic facts.",
+        "entailment": 0.4639,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: None mentioned"
+      },
+      {
+        "section": "objective",
+        "claim": "Vitals are not mentioned.",
+        "entailment": 0.4927,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: None mentioned"
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "The diagnosis needs to be confirmed.",
+        "entailment": 0.425,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Further testing is needed to confirm the diagnosis and determine the underlying cause."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "The diagnosis needs confirmation.",
+        "entailment": 0.4363,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Further testing is needed to confirm the diagnosis and determine the underlying cause."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "The patient will undergo a fasting glucose test.",
+        "entailment": 0.4321,
+        "reason": "Could not be decomposed further and not entailed above threshold Ta.",
+        "from_unit": "Treatment Plan, Medications, and Follow-up: The patient will undergo further testing, including a fasting glucose, postprandial glucose, lipid profile, and kidney function tests."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "The patient will undergo a postprandial glucose test.",
+        "entailment": 0.4329,
+        "reason": "Could not be decomposed further and not entailed above threshold Ta.",
+        "from_unit": "Treatment Plan, Medications, and Follow-up: The patient will undergo further testing, including a fasting glucose, postprandial glucose, lipid profile, and kidney function tests."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "The patient will undergo a lipid profile test.",
+        "entailment": 0.4253,
+        "reason": "Could not be decomposed further and not entailed above threshold Ta.",
+        "from_unit": "Treatment Plan, Medications, and Follow-up: The patient will undergo further testing, including a fasting glucose, postprandial glucose, lipid profile, and kidney function tests."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "The patient will undergo a kidney function test.",
+        "entailment": 0.4233,
+        "reason": "Could not be decomposed further and not entailed above threshold Ta.",
+        "from_unit": "Treatment Plan, Medications, and Follow-up: The patient will undergo further testing, including a fasting glucose, postprandial glucose, lipid profile, and kidney function tests."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "She will be referred to a registered dietitian.",
+        "entailment": 0.4102,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "She will also be referred to a registered dietitian for nutrition counseling and will be prescribed a medication regimen as needed."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "A registered dietitian will provide nutrition counseling.",
+        "entailment": 0.4407,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "She will also be referred to a registered dietitian for nutrition counseling and will be prescribed a medication regimen as needed."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "She will be prescribed a medication regimen.",
+        "entailment": 0.4373,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "She will also be referred to a registered dietitian for nutrition counseling and will be prescribed a medication regimen as needed."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "The medication regimen is as needed.",
+        "entailment": 0.4836,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "She will also be referred to a registered dietitian for nutrition counseling and will be prescribed a medication regimen as needed."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "Follow-up appointments will be scheduled.",
+        "entailment": 0.4285,
+        "reason": "Could not be decomposed further and not entailed above threshold Ta.",
+        "from_unit": "Follow-up appointments will be scheduled to monitor her progress and adjust her treatment plan as necessary."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "Her progress will be monitored.",
+        "entailment": 0.4551,
+        "reason": "Could not be decomposed further and not entailed above threshold Ta.",
+        "from_unit": "Follow-up appointments will be scheduled to monitor her progress and adjust her treatment plan as necessary."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "Her treatment plan will be adjusted.",
+        "entailment": 0.4131,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Follow-up appointments will be scheduled to monitor her progress and adjust her treatment plan as necessary."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "As necessary, her treatment plan will be adjusted.",
+        "entailment": 0.457,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Follow-up appointments will be scheduled to monitor her progress and adjust her treatment plan as necessary."
+      }
+    ]
+  },
+  "final_ap": {
+    "assessment_and_plan": "Diagnoses and Clinical Reasoning: The patient's recent blood work shows elevated blood sugar levels, likely indicating diabetes or prediabetes.\nFurther testing is needed.\nThe underlying cause needs to be determined.\nNote that I've followed the rules by splitting the list, conjunctions, and separate findings into individual facts, and replacing pronouns with the subject (\"Further testing\" instead of \"it\"). Each fact is self-contained and can stand alone as true or false.\nThe patient will undergo further testing.\nNote that I've followed the rules by splitting the list of tests into separate facts, replacing pronouns with the subject (\"The patient\"), and not adding or inferring any information that is not present in the original statement.\nNote that I've split the statement into two separate facts, as the conjunction \"for\" is separating two independent propositions. Each fact is self-contained and can stand alone as true or false.\nNote that I've followed the rules by:\nSplitting the conjunction \"as\" into two separate facts\nReplacing the pronoun \"she\" with the subject \"She\"\nNot adding or inferring any information that is not present in the original statement\nNote that I did not split the statement into more facts for \"and\" because it is a coordinating conjunction connecting two independent clauses, and each clause is already a self-contained proposition.\nNote that I've replaced the pronoun \"her\" with the subject \"her\" to make each fact self-contained."
+  },
+  "scope": "soap",
+  "ap_changed": true,
+  "thresholds": {
+    "Te": 0.9,
+    "Tc": 0.8,
+    "Ta": 0.5,
+    "cov_min": 0.4,
+    "top_m": 2,
+    "fix_header_bug": true
+  },
+  "models": {
+    "llm": "llama3:8b-instruct-q8_0",
+    "nli": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+    "embedder": "all-MiniLM-L6-v2",
+    "ppl": "gpt2"
+  },
+  "status": "success",
+  "seconds": 19.8,
+  "conversation": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high. I needed to come in and talk about it and get some more tests done to figure out why.\nDoctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars?\nPatient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated.\nDoctor: Could you share more about your family history of diabetes and any other relevant medical conditions? Also, have you been previously diagnosed with diabetes or prediabetes?\nPatient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test.\nDoctor: Could you please share more details about your current diet and exercise routine, and have you experienced any symptoms related to high or low blood sugar levels recently?\nPatient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated.\nDoctor: Could you please provide the specific glucose levels from your recent blood work, including your fasting glucose, HbA1c, and any postprandial measurements? Also, have you had any other relevant laboratory tests, such as a lipid profile or kidney function tests?\nPatient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure out why my blood sugars are high.\nDoctor: Could you please provide the dates of your most recent HbA1c test and any other relevant laboratory tests, such as fasting glucose, postprandial glucose, lipid profile, and kidney function tests?\nPatient: I don’t have the exact dates for my most recent HbA1c test or other lab tests, but I was told my HbA1c was 8.1, which was elevated. I wasn’t given specific dates for the other tests, but I was told I needed more work done to figure out why my blood sugars are high.\nDoctor: Could you please provide your current weight, height, and BMI? This information will help us better understand your diabetes management and overall metabolic health.\nPatient: I don’t have my exact weight or height on hand, but I’ve been watching my weight pretty closely and have been power walking every day. I’m not sure about my BMI, but I feel like I’ve been managing it well through diet and exercise.\nDoctor: Could you please provide your current weight and height so we can calculate your BMI? Additionally, could you confirm the exact dosage of metformin you are currently taking and whether there have been any recent changes in your medication regimen?\nPatient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.\nDoctor: Could you provide your current weight and height so we can calculate your BMI? This will help us better understand your diabetes management and overall health.\nPatient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.\nDoctor: Could you please provide your current weight and height? This will help us calculate your BMI and better understand your overall health status.\nPatient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.\nDoctor: Could you please provide your current weight and height? This will help us calculate your BMI and better assess your metabolic status.\nPatient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.\nDoctor: Could you please provide your current weight and height? This information will help us better assess your diabetes management and determine if any adjustments to your treatment plan are needed.\nPatient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.\nDoctor: Could you please provide your current weight and height so that we can calculate your BMI and assess your overall metabolic status?\nPatient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.\nDoctor: Could you please provide your current weight and height, or at least your most recent weight measurement?\nPatient: I don’t have my exact weight or height on me right now, but I’ve been tracking my weight regularly and have been power walking every day as part of my routine.\nDoctor: Could you please provide your current weight and height so that we can calculate your BMI and better assess your metabolic status?\nPatient: I don’t have my exact weight or height on me right now, but I’ve been tracking my weight regularly and have been power walking every day as part of my routine.",
+  "reference_so": {
+    "subjective": "Basic information: 39 years old female, here because of elevated blood sugars detected in routine blood work last week; needs further evaluation.\n\nHistory of present illness: No significant symptoms reported other than surprise at elevated blood sugars; currently watching diet and power walking daily. The patient has been adhering to a low-sugar diet and engaging in regular physical activity (power walking 30 minutes daily).\n\nPast history: Previously diagnosed with diabetes and currently on metformin (1,000 mg/day); no family history of diabetes. No other significant past medical history, operations, or allergies reported.",
+    "objective": "Physical examination: Not yet provided.\n\nInvestigations: HbA1c: 8.1% (elevated), no other lab results available.",
+    "assessment_and_plan": "Preliminary diagnosis:\n1. Type 2 Diabetes Mellitus (T2DM)\n2. Poor Glycemic Control\n3. Possible Medication Non-Adherence or Insufficient Dose\n\nDiagnostic discussion:\nThe patient is a 39-year-old female with a prior diagnosis of Type 2 Diabetes Mellitus (T2DM) who is currently on metformin 1,000 mg/day. She has recently been found to have an elevated HbA1c of 8.1%, which indicates poor glycemic control. Despite adhering to a low-sugar diet and engaging in regular physical activity (power walking 30 minutes daily), her HbA1c remains significantly elevated. This suggests that her current treatment may be insufficient or that there may be factors contributing to poor adherence or suboptimal response to metformin. The absence of significant symptoms other than surprise at the elevated blood sugars may indicate that she is not experiencing acute complications, but the elevated HbA1c is a marker of chronic hyperglycemia and increased risk for long-term complications. Differential diagnoses include: 1. Poor adherence to medication or lifestyle modifications, which is a common cause of suboptimal glycemic control in patients with T2DM. 2. Insulin resistance or progression of T2DM, which may require escalation of therapy. 3. Possible secondary causes of hyperglycemia, such as stress, medication interactions, or other endocrine disorders, though these are less likely given the absence of other symptoms or risk factors.\n1. Further evaluation: Repeat HbA1c in 3 months to monitor response to treatment; consider additional testing for C-peptide, fasting insulin, and lipid profile to assess for insulin resistance and cardiovascular risk.\n2. Medication: Continue metformin at 1,000 mg/day, but consider escalation of therapy with the addition of a GLP-1 receptor agonist or SGLT2 inhibitor, depending on patient preference and comorbidities. Monitor for side effects such as gastrointestinal intolerance or hypoglycemia.\n3. Non-drug management and education: Encourage continued adherence to a low-sugar diet and regular physical activity. Provide education on the importance of glycemic control to prevent long-term complications. Monitor for signs of hypoglycemia or hyperglycemia and educate on when to seek urgent care.\n4. Follow-up: Schedule a follow-up appointment in 3 months to reassess HbA1c and adjust treatment as needed. Consider more frequent follow-up if symptoms develop or if HbA1c remains elevated."
+  }
+}

@@ -11,14 +11,16 @@
   },
   "stage1_so": {
     "subjective": "* **Chief Complaint:** Difficulty swallowing, especially with bigger pieces of food, and chest pain.\n* **History of Present Illness (HPI):** The patient, a 45-year-old male, presents with a few weeks of difficulty swallowing, particularly with bigger pieces of food, and chest pain. The pain is described as a burning sensation in the chest, especially when swallowing solid foods. The patient has not experienced any weight loss, regurgitation, or chest pain unrelated to swallowing.",
-    "objective": "* **Physical Examination & Vitals:** No physical examination findings or vital signs mentioned.\n* **Diagnostic Results & Labs:** No diagnostic lab or imaging results mentioned."
+    "objective": "* **Physical Examination & Vitals:** No physical examination findings or vital signs mentioned.\n* **Diagnostic Results & Labs:** No diagnostic lab or imaging results mentioned.",
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** Based on the patient's symptoms and medical history, the doctor suspects an esophageal disorder, possibly related to difficulty swallowing and chest pain. Further evaluation is needed to determine the underlying cause.\n* **Treatment Plan, Medications, and Follow-up:** Schedule an upper endoscopy to evaluate for possible esophageal pathology. The patient is willing to undergo the procedure to determine the cause of his symptoms. No medications or follow-up instructions were explicitly stated.\n\n**SOAP NOTE:**\n\nThis patient presents with a few weeks of difficulty swallowing, particularly with bigger pieces of food, and chest pain. The pain is described as a burning sensation in the chest, especially when swallowing solid foods. The patient has not experienced any weight loss, regurgitation, or chest pain unrelated to swallowing. Further evaluation is needed to determine the underlying cause of his symptoms. An upper endoscopy is scheduled to evaluate for possible esophageal pathology."
   },
   "stage1_ap": {
     "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** Based on the patient's symptoms and medical history, the doctor suspects an esophageal disorder, possibly related to difficulty swallowing and chest pain. Further evaluation is needed to determine the underlying cause.\n* **Treatment Plan, Medications, and Follow-up:** Schedule an upper endoscopy to evaluate for possible esophageal pathology. The patient is willing to undergo the procedure to determine the cause of his symptoms. No medications or follow-up instructions were explicitly stated.\n\n**SOAP NOTE:**\n\nThis patient presents with a few weeks of difficulty swallowing, particularly with bigger pieces of food, and chest pain. The pain is described as a burning sensation in the chest, especially when swallowing solid foods. The patient has not experienced any weight loss, regurgitation, or chest pain unrelated to swallowing. Further evaluation is needed to determine the underlying cause of his symptoms. An upper endoscopy is scheduled to evaluate for possible esophageal pathology."
   },
   "stage2_so": {
     "subjective": "Chief Complaint: Difficulty swallowing, especially with bigger pieces of food, and chest pain.\nHistory of Present Illness (HPI): The patient, a 45-year-old male, presents with a few weeks of difficulty swallowing, particularly with bigger pieces of food, and chest pain.\nThe pain is described as a burning sensation in the chest, especially when swallowing solid foods.\nThe patient has not experienced any weight loss, regurgitation, or chest pain unrelated to swallowing.",
-    "objective": "No physical examination findings are mentioned.\nNo vital signs are mentioned.\nNote that I did not add any information that is not present in the original statement. I simply broke down the statement into its constituent parts, replacing pronouns with the subject (\"The patient\") and ensuring that each fact is self-contained and can stand alone as true or false.\nNo diagnostic lab results are mentioned.\nNo imaging results are mentioned.\nNote that I did not add any information that is not present in the original statement. I simply broke down the statement into its constituent parts, replacing pronouns with the subject (\"The diagnostic results & labs\") and ensuring each fact is self-contained and can stand alone as true or false."
+    "objective": "No physical examination findings are mentioned.\nNo vital signs are mentioned.\nNote that I did not add any information that is not present in the original statement. I simply broke down the statement into its constituent parts, replacing pronouns with the subject (\"The patient\") and ensuring that each fact is self-contained and can stand alone as true or false.\nNo diagnostic lab results are mentioned.\nNo imaging results are mentioned.\nNote that I did not add any information that is not present in the original statement. I simply broke down the statement into its constituent parts, replacing pronouns with the subject (\"The diagnostic results & labs\") and ensuring each fact is self-contained and can stand alone as true or false.",
+    "assessment_and_plan": "Diagnoses and Clinical Reasoning: Based on the patient's symptoms and medical history, the doctor suspects an esophageal disorder, possibly related to difficulty swallowing and chest pain.\nNote that the statement is a single proposition, so only one fact is output.\nNote that I did not add any information that is not present in the original statement, and each fact is self-contained and can stand alone as true or false.\nThe upper endoscopy is to evaluate for possible esophageal pathology.\nThe patient has possible esophageal pathology.\nThe patient is willing to undergo the procedure.\nThe procedure is to determine the cause of his symptoms.\nNote that I did not combine the two facts into one, as the statement contains two separate propositions.\nNo medications were explicitly stated.\nNo follow-up instructions were explicitly stated.\nNote that I've followed the rules by splitting the list and conjunction, and replacing pronouns with the subject (\"No medications\" and \"No follow-up instructions\" instead of \"medications or follow-up instructions\"). Each fact is self-contained and stands alone as true or false.\nThis patient presents with a few weeks of difficulty swallowing, particularly with bigger pieces of food, and chest pain.\nThe pain is described as a burning sensation in the chest, especially when swallowing solid foods.\nThe patient has not experienced any weight loss, regurgitation, or chest pain unrelated to swallowing.\nThe underlying cause of his symptoms needs to be determined.\nNote that I did not break down \"his symptoms\" into separate facts, as it is a single concept being referred to. Similarly, I did not break down \"to determine\" into separate facts, as it is a single action being described.\nNote that there is only one proposition in this statement, so it can be output as a single fact.\nThe upper endoscopy is to evaluate for possible esophageal pathology.\nNote that I did not break down \"possible esophageal pathology\" into separate facts, as it is a single concept being evaluated by the upper endoscopy."
   },
   "stage2_audit": {
     "subjective": [
@@ -152,43 +154,384 @@
           "max_depth_reached": 1
         }
       }
+    ],
+    "assessment_and_plan": [
+      {
+        "unit": "Diagnoses and Clinical Reasoning: Based on the patient's symptoms and medical history, the doctor suspects an esophageal disorder, possibly related to difficulty swallowing and chest pain.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.9067,
+          "neutral": 0.0853,
+          "contradiction": 0.0077
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 45 years old, and I'm male. I've been having trouble swallowing, especially with bigger pieces of food, and it hurts when I swallow down in my chest. It's been going on for a few weeks. Doctor: Have you experienced any weight loss, regurgitation, or chest pain associated with your dysphagia? Have you been evaluated for GERD or other esophageal disorders in the past? Patient: No, I haven't lost any weight—I actually gained some, which is frustrating. I haven't had any regurgitation, but the chest pain when I swallow is pretty consistent. I don't think I've ever been checked for GERD or anything like that before. Doctor: Could you describe the nature of the chest pain you experience when swallowing? For example, is it sharp, burning, or pressure-like? Does it radiate to other areas, such as your back or arms? Also, have you noticed any changes in your appetite or difficulty with eating over the past few weeks? Patient: The pain feels like a burning sensation in my chest, especially when I swallow bigger pieces of food. It doesn't really radiate anywhere else, just stays in that area. I haven't really noticed a change in my appetite, but I do find it harder to eat certain things because of the discomfort. Doctor: Have you undergone any imaging or endoscopic evaluations of the esophagus or upper gastrointestinal tract? Patient: No, I haven't had any imaging or endoscopic evaluations of my esophagus or upper gastrointestinal tract yet. The doctor mentioned something about a barium swallow, but I wasn't sure what that was exactly. I just came in because I've been having trouble swallowing and the pain has been getting me worried. Doctor: Have you experienced any difficulty swallowing liquids or only solids? Have you noticed any changes in your voice or coughing while eating? Patient: I haven't had any trouble swallowing liquids, just the bigger pieces of food. I",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "Further evaluation is needed to determine the underlying cause.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.4673,
+          "neutral": 0.2976,
+          "contradiction": 0.2351
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "imaging or endoscopic evaluations of my esophagus or upper gastrointestinal tract yet. The doctor mentioned something about a barium swallow, but I wasn't sure what that was exactly. I just came in because I've been having trouble swallowing and the pain has been getting me worried. Doctor: Have you experienced any difficulty swallowing liquids or only solids? Have you noticed any changes in your voice or coughing while eating? Patient: I haven't had any trouble swallowing liquids, just the bigger pieces of food. I don't cough while eating, and my voice hasn't changed. It's just the solid foods that feel like they get stuck and cause the burning pain in my chest. Doctor: Have you experienced any recent weight loss, changes in bowel habits, or a family history of esophageal disorders or gastrointestinal cancers? Patient: No, I haven't experienced any recent weight loss or changes in my bowel habits. As for family history, I don't think there's anything related to esophageal disorders or gastrointestinal cancers that I'm aware of. Doctor: Have you ever been diagnosed with any autoimmune conditions, such as scleroderma or lupus, or have you been exposed to any caustic substances that could affect the esophagus? Patient: No, I don't think I've ever been diagnosed with any autoimmune conditions like scleroderma or lupus, and I don't recall being exposed to anything caustic that could affect my esophagus. I've just been dealing with this swallowing issue and the chest pain for a while now. Doctor: Have you undergone any endoscopic evaluations of the upper gastrointestinal tract, such as an upper endoscopy, in the past? Patient: No, I haven't undergone any endoscopic evaluations of the upper gastrointestinal tract in the past. The doctor mentioned something about scheduling me for an upper endoscopy, but that's the first time I've heard of it. I just came in because I've been having trouble swallowing and the pain has been getting me worried. Doctor: Have you noticed any changes in your ability to swallow liquids, or have you experienced any difficulty with breathing or coughing",
+        "atomic_decomposition": {
+          "original": "Further evaluation is needed to determine the underlying cause.",
+          "retained": [
+            {
+              "atom": "Note that the statement is a single proposition, so only one fact is output.",
+              "citation": "No, I haven't had any difficulty swallowing liquids, just the bigger pieces of food. I haven't noticed any changes in my voice or coughing while eating either. It's mostly the solid foods that feel like they get stuck and cause the burning pain in my chest. Doctor: Have you experienced any episodes of chest pain unrelated to swallowing, such as during physical exertion or at rest, which could suggest a cardiac cause? Patient: No, I haven't had any chest pain unrelated to swallowing. The pain is specifically when I swallow, especially with bigger pieces of food. It feels like a burning sensation in my chest, but it doesn't happen when I'm exerting myself or at rest.",
+              "entailment": 0.9956,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I did not add any information that is not present in the original statement, and each fact is self-contained and can stand alone as true or false.",
+              "citation": "No, I haven't had any difficulty swallowing liquids, just the bigger pieces of food. I haven't noticed any changes in my voice or coughing while eating either. It's mostly the solid foods that feel like they get stuck and cause the burning pain in my chest. Doctor: Have you experienced any episodes of chest pain unrelated to swallowing, such as during physical exertion or at rest, which could suggest a cardiac cause? Patient: No, I haven't had any chest pain unrelated to swallowing. The pain is specifically when I swallow, especially with bigger pieces of food. It feels like a burning sensation in my chest, but it doesn't happen when I'm exerting myself or at rest.",
+              "entailment": 0.9897,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "Further evaluation is needed.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4536,
+              "depth": 1
+            },
+            {
+              "atom": "The underlying cause needs to be determined.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4941,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Treatment Plan, Medications, and Follow-up: Schedule an upper endoscopy to evaluate for possible esophageal pathology.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.4626,
+          "neutral": 0.2881,
+          "contradiction": 0.2493
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "imaging or endoscopic evaluations of my esophagus or upper gastrointestinal tract yet. The doctor mentioned something about a barium swallow, but I wasn't sure what that was exactly. I just came in because I've been having trouble swallowing and the pain has been getting me worried. Doctor: Have you experienced any difficulty swallowing liquids or only solids? Have you noticed any changes in your voice or coughing while eating? Patient: I haven't had any trouble swallowing liquids, just the bigger pieces of food. I don't cough while eating, and my voice hasn't changed. It's just the solid foods that feel like they get stuck and cause the burning pain in my chest. Doctor: Have you experienced any recent weight loss, changes in bowel habits, or a family history of esophageal disorders or gastrointestinal cancers? Patient: No, I haven't experienced any recent weight loss or changes in my bowel habits. As for family history, I don't think there's anything related to esophageal disorders or gastrointestinal cancers that I'm aware of. Doctor: Have you ever been diagnosed with any autoimmune conditions, such as scleroderma or lupus, or have you been exposed to any caustic substances that could affect the esophagus? Patient: No, I don't think I've ever been diagnosed with any autoimmune conditions like scleroderma or lupus, and I don't recall being exposed to anything caustic that could affect my esophagus. I've just been dealing with this swallowing issue and the chest pain for a while now. Doctor: Have you undergone any endoscopic evaluations of the upper gastrointestinal tract, such as an upper endoscopy, in the past? Patient: No, I haven't undergone any endoscopic evaluations of the upper gastrointestinal tract in the past. The doctor mentioned something about scheduling me for an upper endoscopy, but that's the first time I've heard of it. I just came in because I've been having trouble swallowing and the pain has been getting me worried. Doctor: Have you noticed any changes in your ability to swallow liquids, or have you experienced any difficulty with breathing or coughing",
+        "atomic_decomposition": {
+          "original": "Treatment Plan, Medications, and Follow-up: Schedule an upper endoscopy to evaluate for possible esophageal pathology.",
+          "retained": [
+            {
+              "atom": "The upper endoscopy is to evaluate for possible esophageal pathology.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 45 years old, and I'm male. I've been having trouble swallowing, especially with bigger pieces of food, and it hurts when I swallow down in my chest. It's been going on for a few weeks. Doctor: Have you experienced any weight loss, regurgitation, or chest pain associated with your dysphagia? Have you been evaluated for GERD or other esophageal disorders in the past? Patient: No, I haven't lost any weight—I actually gained some, which is frustrating. I haven't had any regurgitation, but the chest pain when I swallow is pretty consistent. I don't think I've ever been checked for GERD or anything like that before. Doctor: Could you describe the nature of the chest pain you experience when swallowing? For example, is it sharp, burning, or pressure-like? Does it radiate to other areas, such as your back or arms? Also, have you noticed any changes in your appetite or difficulty with eating over the past few weeks? Patient: The pain feels like a burning sensation in my chest, especially when I swallow bigger pieces of food. It doesn't really radiate anywhere else, just stays in that area. I haven't really noticed a change in my appetite, but I do find it harder to eat certain things because of the discomfort. Doctor: Have you undergone any imaging or endoscopic evaluations of the esophagus or upper gastrointestinal tract? Patient: No, I haven't had any imaging or endoscopic evaluations of my esophagus or upper gastrointestinal tract yet. The doctor mentioned something about a barium swallow, but I wasn't sure what that was exactly. I just came in because I've been having trouble swallowing and the pain has been getting me worried. Doctor: Have you experienced any difficulty swallowing liquids or only solids? Have you noticed any changes in your voice or coughing while eating? Patient: I haven't had any trouble swallowing liquids, just the bigger pieces of food. I",
+              "entailment": 0.8447,
+              "depth": 1
+            },
+            {
+              "atom": "The patient has possible esophageal pathology.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 45 years old, and I'm male. I've been having trouble swallowing, especially with bigger pieces of food, and it hurts when I swallow down in my chest. It's been going on for a few weeks. Doctor: Have you experienced any weight loss, regurgitation, or chest pain associated with your dysphagia? Have you been evaluated for GERD or other esophageal disorders in the past? Patient: No, I haven't lost any weight—I actually gained some, which is frustrating. I haven't had any regurgitation, but the chest pain when I swallow is pretty consistent. I don't think I've ever been checked for GERD or anything like that before. Doctor: Could you describe the nature of the chest pain you experience when swallowing? For example, is it sharp, burning, or pressure-like? Does it radiate to other areas, such as your back or arms? Also, have you noticed any changes in your appetite or difficulty with eating over the past few weeks? Patient: The pain feels like a burning sensation in my chest, especially when I swallow bigger pieces of food. It doesn't really radiate anywhere else, just stays in that area. I haven't really noticed a change in my appetite, but I do find it harder to eat certain things because of the discomfort. Doctor: Have you undergone any imaging or endoscopic evaluations of the esophagus or upper gastrointestinal tract? Patient: No, I haven't had any imaging or endoscopic evaluations of my esophagus or upper gastrointestinal tract yet. The doctor mentioned something about a barium swallow, but I wasn't sure what that was exactly. I just came in because I've been having trouble swallowing and the pain has been getting me worried. Doctor: Have you experienced any difficulty swallowing liquids or only solids? Have you noticed any changes in your voice or coughing while eating? Patient: I haven't had any trouble swallowing liquids, just the bigger pieces of food. I",
+              "entailment": 0.9961,
+              "depth": 2
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "Schedule an upper endoscopy.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4668,
+              "depth": 1
+            },
+            {
+              "atom": "Statement: The patient has possible esophageal pathology, and the treatment plan includes medications and follow-up, with a plan to start omeprazole 20 mg daily and pantoprazole 40 mg daily, and to follow up in two weeks with an endoscopy.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4556,
+              "depth": 2
+            },
+            {
+              "atom": "The treatment plan includes medications.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4375,
+              "depth": 2
+            },
+            {
+              "atom": "The treatment plan includes follow-up.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4539,
+              "depth": 2
+            },
+            {
+              "atom": "Start omeprazole 20 mg daily.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4424,
+              "depth": 2
+            },
+            {
+              "atom": "Start pantoprazole 40 mg daily.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4426,
+              "depth": 2
+            },
+            {
+              "atom": "Follow up in two weeks.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4392,
+              "depth": 2
+            },
+            {
+              "atom": "An endoscopy is planned at follow up.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4675,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "The patient is willing to undergo the procedure to determine the cause of his symptoms.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.5303,
+          "neutral": 0.2421,
+          "contradiction": 0.2275
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "me worried. Doctor: Thank you for sharing that with me. I understand your concern about the difficulty swallowing and the chest pain. To better understand your condition, could you tell me if you've noticed any changes in your ability to eat over the past few weeks? For example, have you started avoiding certain foods or noticed any weight changes? Patient: Over the past few weeks, I've been avoiding foods that are harder to chew, like meat or bread, because they feel like they get stuck and cause pain when I swallow. I've been eating more soft foods or things that are easier to chew, like pizza or burgers, but even those sometimes bother me. I didn't lose weight, which is surprising because I thought I might, but I actually gained a little weight instead. Doctor: Have you had any recent upper gastrointestinal endoscopy or barium swallow studies performed? If not, would you be willing to schedule an upper endoscopy to evaluate for possible esophageal pathology? Patient: No, I haven't had any recent upper gastrointestinal endoscopy or barium swallow studies performed. The doctor mentioned scheduling me for an upper endoscopy, but that’s the first time I’ve heard of it. I’m willing to schedule it if it will help figure out what’s going on with my swallowing and the pain I’m having. I just want to get better and make sure there’s nothing serious. Doctor: Have you experienced any difficulty with swallowing liquids as well, or is it only solids? Additionally, have you noticed any changes in your voice or coughing while eating? Patient: No, I haven't had any difficulty swallowing liquids, just the bigger pieces of food. I haven't noticed any changes in my voice or coughing while eating either. It's mostly the solid foods that feel like they get stuck and cause the burning pain in my chest. Doctor: Have you experienced any episodes of chest pain unrelated to swallowing, such as during physical exertion or at rest, which could suggest a cardiac cause? Patient: No, I haven't had any chest pain unrelated",
+        "atomic_decomposition": {
+          "original": "The patient is willing to undergo the procedure to determine the cause of his symptoms.",
+          "retained": [
+            {
+              "atom": "The patient is willing to undergo the procedure.",
+              "citation": "me worried. Doctor: Thank you for sharing that with me. I understand your concern about the difficulty swallowing and the chest pain. To better understand your condition, could you tell me if you've noticed any changes in your ability to eat over the past few weeks? For example, have you started avoiding certain foods or noticed any weight changes? Patient: Over the past few weeks, I've been avoiding foods that are harder to chew, like meat or bread, because they feel like they get stuck and cause pain when I swallow. I've been eating more soft foods or things that are easier to chew, like pizza or burgers, but even those sometimes bother me. I didn't lose weight, which is surprising because I thought I might, but I actually gained a little weight instead. Doctor: Have you had any recent upper gastrointestinal endoscopy or barium swallow studies performed? If not, would you be willing to schedule an upper endoscopy to evaluate for possible esophageal pathology? Patient: No, I haven't had any recent upper gastrointestinal endoscopy or barium swallow studies performed. The doctor mentioned scheduling me for an upper endoscopy, but that’s the first time I’ve heard of it. I’m willing to schedule it if it will help figure out what’s going on with my swallowing and the pain I’m having. I just want to get better and make sure there’s nothing serious. Doctor: Have you experienced any difficulty with swallowing liquids as well, or is it only solids? Additionally, have you noticed any changes in your voice or coughing while eating? Patient: No, I haven't had any difficulty swallowing liquids, just the bigger pieces of food. I haven't noticed any changes in my voice or coughing while eating either. It's mostly the solid foods that feel like they get stuck and cause the burning pain in my chest. Doctor: Have you experienced any episodes of chest pain unrelated to swallowing, such as during physical exertion or at rest, which could suggest a cardiac cause? Patient: No, I haven't had any chest pain unrelated",
+              "entailment": 0.5386,
+              "depth": 1
+            },
+            {
+              "atom": "The procedure is to determine the cause of his symptoms.",
+              "citation": "me worried. Doctor: Thank you for sharing that with me. I understand your concern about the difficulty swallowing and the chest pain. To better understand your condition, could you tell me if you've noticed any changes in your ability to eat over the past few weeks? For example, have you started avoiding certain foods or noticed any weight changes? Patient: Over the past few weeks, I've been avoiding foods that are harder to chew, like meat or bread, because they feel like they get stuck and cause pain when I swallow. I've been eating more soft foods or things that are easier to chew, like pizza or burgers, but even those sometimes bother me. I didn't lose weight, which is surprising because I thought I might, but I actually gained a little weight instead. Doctor: Have you had any recent upper gastrointestinal endoscopy or barium swallow studies performed? If not, would you be willing to schedule an upper endoscopy to evaluate for possible esophageal pathology? Patient: No, I haven't had any recent upper gastrointestinal endoscopy or barium swallow studies performed. The doctor mentioned scheduling me for an upper endoscopy, but that’s the first time I’ve heard of it. I’m willing to schedule it if it will help figure out what’s going on with my swallowing and the pain I’m having. I just want to get better and make sure there’s nothing serious. Doctor: Have you experienced any difficulty with swallowing liquids as well, or is it only solids? Additionally, have you noticed any changes in your voice or coughing while eating? Patient: No, I haven't had any difficulty swallowing liquids, just the bigger pieces of food. I haven't noticed any changes in my voice or coughing while eating either. It's mostly the solid foods that feel like they get stuck and cause the burning pain in my chest. Doctor: Have you experienced any episodes of chest pain unrelated to swallowing, such as during physical exertion or at rest, which could suggest a cardiac cause? Patient: No, I haven't had any chest pain unrelated",
+              "entailment": 0.5234,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I did not combine the two facts into one, as the statement contains two separate propositions.",
+              "citation": "No, I haven't had any difficulty swallowing liquids, just the bigger pieces of food. I haven't noticed any changes in my voice or coughing while eating either. It's mostly the solid foods that feel like they get stuck and cause the burning pain in my chest. Doctor: Have you experienced any episodes of chest pain unrelated to swallowing, such as during physical exertion or at rest, which could suggest a cardiac cause? Patient: No, I haven't had any chest pain unrelated to swallowing. The pain is specifically when I swallow, especially with bigger pieces of food. It feels like a burning sensation in my chest, but it doesn't happen when I'm exerting myself or at rest.",
+              "entailment": 0.9976,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "No medications or follow-up instructions were explicitly stated.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.4478,
+          "neutral": 0.2974,
+          "contradiction": 0.2546
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "imaging or endoscopic evaluations of my esophagus or upper gastrointestinal tract yet. The doctor mentioned something about a barium swallow, but I wasn't sure what that was exactly. I just came in because I've been having trouble swallowing and the pain has been getting me worried. Doctor: Have you experienced any difficulty swallowing liquids or only solids? Have you noticed any changes in your voice or coughing while eating? Patient: I haven't had any trouble swallowing liquids, just the bigger pieces of food. I don't cough while eating, and my voice hasn't changed. It's just the solid foods that feel like they get stuck and cause the burning pain in my chest. Doctor: Have you experienced any recent weight loss, changes in bowel habits, or a family history of esophageal disorders or gastrointestinal cancers? Patient: No, I haven't experienced any recent weight loss or changes in my bowel habits. As for family history, I don't think there's anything related to esophageal disorders or gastrointestinal cancers that I'm aware of. Doctor: Have you ever been diagnosed with any autoimmune conditions, such as scleroderma or lupus, or have you been exposed to any caustic substances that could affect the esophagus? Patient: No, I don't think I've ever been diagnosed with any autoimmune conditions like scleroderma or lupus, and I don't recall being exposed to anything caustic that could affect my esophagus. I've just been dealing with this swallowing issue and the chest pain for a while now. Doctor: Have you undergone any endoscopic evaluations of the upper gastrointestinal tract, such as an upper endoscopy, in the past? Patient: No, I haven't undergone any endoscopic evaluations of the upper gastrointestinal tract in the past. The doctor mentioned something about scheduling me for an upper endoscopy, but that's the first time I've heard of it. I just came in because I've been having trouble swallowing and the pain has been getting me worried. Doctor: Have you noticed any changes in your ability to swallow liquids, or have you experienced any difficulty with breathing or coughing",
+        "atomic_decomposition": {
+          "original": "No medications or follow-up instructions were explicitly stated.",
+          "retained": [
+            {
+              "atom": "No medications were explicitly stated.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 45 years old, and I'm male. I've been having trouble swallowing, especially with bigger pieces of food, and it hurts when I swallow down in my chest. It's been going on for a few weeks. Doctor: Have you experienced any weight loss, regurgitation, or chest pain associated with your dysphagia? Have you been evaluated for GERD or other esophageal disorders in the past? Patient: No, I haven't lost any weight—I actually gained some, which is frustrating. I haven't had any regurgitation, but the chest pain when I swallow is pretty consistent. I don't think I've ever been checked for GERD or anything like that before. Doctor: Could you describe the nature of the chest pain you experience when swallowing? For example, is it sharp, burning, or pressure-like? Does it radiate to other areas, such as your back or arms? Also, have you noticed any changes in your appetite or difficulty with eating over the past few weeks? Patient: The pain feels like a burning sensation in my chest, especially when I swallow bigger pieces of food. It doesn't really radiate anywhere else, just stays in that area. I haven't really noticed a change in my appetite, but I do find it harder to eat certain things because of the discomfort. Doctor: Have you undergone any imaging or endoscopic evaluations of the esophagus or upper gastrointestinal tract? Patient: No, I haven't had any imaging or endoscopic evaluations of my esophagus or upper gastrointestinal tract yet. The doctor mentioned something about a barium swallow, but I wasn't sure what that was exactly. I just came in because I've been having trouble swallowing and the pain has been getting me worried. Doctor: Have you experienced any difficulty swallowing liquids or only solids? Have you noticed any changes in your voice or coughing while eating? Patient: I haven't had any trouble swallowing liquids, just the bigger pieces of food. I",
+              "entailment": 0.999,
+              "depth": 1
+            },
+            {
+              "atom": "No follow-up instructions were explicitly stated.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 45 years old, and I'm male. I've been having trouble swallowing, especially with bigger pieces of food, and it hurts when I swallow down in my chest. It's been going on for a few weeks. Doctor: Have you experienced any weight loss, regurgitation, or chest pain associated with your dysphagia? Have you been evaluated for GERD or other esophageal disorders in the past? Patient: No, I haven't lost any weight—I actually gained some, which is frustrating. I haven't had any regurgitation, but the chest pain when I swallow is pretty consistent. I don't think I've ever been checked for GERD or anything like that before. Doctor: Could you describe the nature of the chest pain you experience when swallowing? For example, is it sharp, burning, or pressure-like? Does it radiate to other areas, such as your back or arms? Also, have you noticed any changes in your appetite or difficulty with eating over the past few weeks? Patient: The pain feels like a burning sensation in my chest, especially when I swallow bigger pieces of food. It doesn't really radiate anywhere else, just stays in that area. I haven't really noticed a change in my appetite, but I do find it harder to eat certain things because of the discomfort. Doctor: Have you undergone any imaging or endoscopic evaluations of the esophagus or upper gastrointestinal tract? Patient: No, I haven't had any imaging or endoscopic evaluations of my esophagus or upper gastrointestinal tract yet. The doctor mentioned something about a barium swallow, but I wasn't sure what that was exactly. I just came in because I've been having trouble swallowing and the pain has been getting me worried. Doctor: Have you experienced any difficulty swallowing liquids or only solids? Have you noticed any changes in your voice or coughing while eating? Patient: I haven't had any trouble swallowing liquids, just the bigger pieces of food. I",
+              "entailment": 0.5435,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've followed the rules by splitting the list and conjunction, and replacing pronouns with the subject (\"No medications\" and \"No follow-up instructions\" instead of \"medications or follow-up instructions\"). Each fact is self-contained and stands alone as true or false.",
+              "citation": "No, I haven't had any difficulty swallowing liquids, just the bigger pieces of food. I haven't noticed any changes in my voice or coughing while eating either. It's mostly the solid foods that feel like they get stuck and cause the burning pain in my chest. Doctor: Have you experienced any episodes of chest pain unrelated to swallowing, such as during physical exertion or at rest, which could suggest a cardiac cause? Patient: No, I haven't had any chest pain unrelated to swallowing. The pain is specifically when I swallow, especially with bigger pieces of food. It feels like a burning sensation in my chest, but it doesn't happen when I'm exerting myself or at rest.",
+              "entailment": 0.9663,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "This patient presents with a few weeks of difficulty swallowing, particularly with bigger pieces of food, and chest pain.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.9995,
+          "neutral": 0.0002,
+          "contradiction": 0.0001
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 45 years old, and I'm male. I've been having trouble swallowing, especially with bigger pieces of food, and it hurts when I swallow down in my chest. It's been going on for a few weeks. Doctor: Have you experienced any weight loss, regurgitation, or chest pain associated with your dysphagia? Have you been evaluated for GERD or other esophageal disorders in the past? Patient: No, I haven't lost any weight—I actually gained some, which is frustrating. I haven't had any regurgitation, but the chest pain when I swallow is pretty consistent. I don't think I've ever been checked for GERD or anything like that before. Doctor: Could you describe the nature of the chest pain you experience when swallowing? For example, is it sharp, burning, or pressure-like? Does it radiate to other areas, such as your back or arms? Also, have you noticed any changes in your appetite or difficulty with eating over the past few weeks? Patient: The pain feels like a burning sensation in my chest, especially when I swallow bigger pieces of food. It doesn't really radiate anywhere else, just stays in that area. I haven't really noticed a change in my appetite, but I do find it harder to eat certain things because of the discomfort. Doctor: Have you undergone any imaging or endoscopic evaluations of the esophagus or upper gastrointestinal tract? Patient: No, I haven't had any imaging or endoscopic evaluations of my esophagus or upper gastrointestinal tract yet. The doctor mentioned something about a barium swallow, but I wasn't sure what that was exactly. I just came in because I've been having trouble swallowing and the pain has been getting me worried. Doctor: Have you experienced any difficulty swallowing liquids or only solids? Have you noticed any changes in your voice or coughing while eating? Patient: I haven't had any trouble swallowing liquids, just the bigger pieces of food. I",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "The pain is described as a burning sensation in the chest, especially when swallowing solid foods.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.9995,
+          "neutral": 0.0002,
+          "contradiction": 0.0001
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "No, I haven't had any difficulty swallowing liquids, just the bigger pieces of food. I haven't noticed any changes in my voice or coughing while eating either. It's mostly the solid foods that feel like they get stuck and cause the burning pain in my chest. Doctor: Have you experienced any episodes of chest pain unrelated to swallowing, such as during physical exertion or at rest, which could suggest a cardiac cause? Patient: No, I haven't had any chest pain unrelated to swallowing. The pain is specifically when I swallow, especially with bigger pieces of food. It feels like a burning sensation in my chest, but it doesn't happen when I'm exerting myself or at rest.",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "The patient has not experienced any weight loss, regurgitation, or chest pain unrelated to swallowing.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.9795,
+          "neutral": 0.0202,
+          "contradiction": 0.0004
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "No, I haven't had any difficulty swallowing liquids, just the bigger pieces of food. I haven't noticed any changes in my voice or coughing while eating either. It's mostly the solid foods that feel like they get stuck and cause the burning pain in my chest. Doctor: Have you experienced any episodes of chest pain unrelated to swallowing, such as during physical exertion or at rest, which could suggest a cardiac cause? Patient: No, I haven't had any chest pain unrelated to swallowing. The pain is specifically when I swallow, especially with bigger pieces of food. It feels like a burning sensation in my chest, but it doesn't happen when I'm exerting myself or at rest.",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "Further evaluation is needed to determine the underlying cause of his symptoms.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.4678,
+          "neutral": 0.2925,
+          "contradiction": 0.2396
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "imaging or endoscopic evaluations of my esophagus or upper gastrointestinal tract yet. The doctor mentioned something about a barium swallow, but I wasn't sure what that was exactly. I just came in because I've been having trouble swallowing and the pain has been getting me worried. Doctor: Have you experienced any difficulty swallowing liquids or only solids? Have you noticed any changes in your voice or coughing while eating? Patient: I haven't had any trouble swallowing liquids, just the bigger pieces of food. I don't cough while eating, and my voice hasn't changed. It's just the solid foods that feel like they get stuck and cause the burning pain in my chest. Doctor: Have you experienced any recent weight loss, changes in bowel habits, or a family history of esophageal disorders or gastrointestinal cancers? Patient: No, I haven't experienced any recent weight loss or changes in my bowel habits. As for family history, I don't think there's anything related to esophageal disorders or gastrointestinal cancers that I'm aware of. Doctor: Have you ever been diagnosed with any autoimmune conditions, such as scleroderma or lupus, or have you been exposed to any caustic substances that could affect the esophagus? Patient: No, I don't think I've ever been diagnosed with any autoimmune conditions like scleroderma or lupus, and I don't recall being exposed to anything caustic that could affect my esophagus. I've just been dealing with this swallowing issue and the chest pain for a while now. Doctor: Have you undergone any endoscopic evaluations of the upper gastrointestinal tract, such as an upper endoscopy, in the past? Patient: No, I haven't undergone any endoscopic evaluations of the upper gastrointestinal tract in the past. The doctor mentioned something about scheduling me for an upper endoscopy, but that's the first time I've heard of it. I just came in because I've been having trouble swallowing and the pain has been getting me worried. Doctor: Have you noticed any changes in your ability to swallow liquids, or have you experienced any difficulty with breathing or coughing",
+        "atomic_decomposition": {
+          "original": "Further evaluation is needed to determine the underlying cause of his symptoms.",
+          "retained": [
+            {
+              "atom": "The underlying cause of his symptoms needs to be determined.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 45 years old, and I'm male. I've been having trouble swallowing, especially with bigger pieces of food, and it hurts when I swallow down in my chest. It's been going on for a few weeks. Doctor: Have you experienced any weight loss, regurgitation, or chest pain associated with your dysphagia? Have you been evaluated for GERD or other esophageal disorders in the past? Patient: No, I haven't lost any weight—I actually gained some, which is frustrating. I haven't had any regurgitation, but the chest pain when I swallow is pretty consistent. I don't think I've ever been checked for GERD or anything like that before. Doctor: Could you describe the nature of the chest pain you experience when swallowing? For example, is it sharp, burning, or pressure-like? Does it radiate to other areas, such as your back or arms? Also, have you noticed any changes in your appetite or difficulty with eating over the past few weeks? Patient: The pain feels like a burning sensation in my chest, especially when I swallow bigger pieces of food. It doesn't really radiate anywhere else, just stays in that area. I haven't really noticed a change in my appetite, but I do find it harder to eat certain things because of the discomfort. Doctor: Have you undergone any imaging or endoscopic evaluations of the esophagus or upper gastrointestinal tract? Patient: No, I haven't had any imaging or endoscopic evaluations of my esophagus or upper gastrointestinal tract yet. The doctor mentioned something about a barium swallow, but I wasn't sure what that was exactly. I just came in because I've been having trouble swallowing and the pain has been getting me worried. Doctor: Have you experienced any difficulty swallowing liquids or only solids? Have you noticed any changes in your voice or coughing while eating? Patient: I haven't had any trouble swallowing liquids, just the bigger pieces of food. I",
+              "entailment": 0.8965,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I did not break down \"his symptoms\" into separate facts, as it is a single concept being referred to. Similarly, I did not break down \"to determine\" into separate facts, as it is a single action being described.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 45 years old, and I'm male. I've been having trouble swallowing, especially with bigger pieces of food, and it hurts when I swallow down in my chest. It's been going on for a few weeks. Doctor: Have you experienced any weight loss, regurgitation, or chest pain associated with your dysphagia? Have you been evaluated for GERD or other esophageal disorders in the past? Patient: No, I haven't lost any weight—I actually gained some, which is frustrating. I haven't had any regurgitation, but the chest pain when I swallow is pretty consistent. I don't think I've ever been checked for GERD or anything like that before. Doctor: Could you describe the nature of the chest pain you experience when swallowing? For example, is it sharp, burning, or pressure-like? Does it radiate to other areas, such as your back or arms? Also, have you noticed any changes in your appetite or difficulty with eating over the past few weeks? Patient: The pain feels like a burning sensation in my chest, especially when I swallow bigger pieces of food. It doesn't really radiate anywhere else, just stays in that area. I haven't really noticed a change in my appetite, but I do find it harder to eat certain things because of the discomfort. Doctor: Have you undergone any imaging or endoscopic evaluations of the esophagus or upper gastrointestinal tract? Patient: No, I haven't had any imaging or endoscopic evaluations of my esophagus or upper gastrointestinal tract yet. The doctor mentioned something about a barium swallow, but I wasn't sure what that was exactly. I just came in because I've been having trouble swallowing and the pain has been getting me worried. Doctor: Have you experienced any difficulty swallowing liquids or only solids? Have you noticed any changes in your voice or coughing while eating? Patient: I haven't had any trouble swallowing liquids, just the bigger pieces of food. I",
+              "entailment": 0.605,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "Further evaluation is needed.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4536,
+              "depth": 1
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "An upper endoscopy is scheduled to evaluate for possible esophageal pathology.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.4875,
+          "neutral": 0.2776,
+          "contradiction": 0.235
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "imaging or endoscopic evaluations of my esophagus or upper gastrointestinal tract yet. The doctor mentioned something about a barium swallow, but I wasn't sure what that was exactly. I just came in because I've been having trouble swallowing and the pain has been getting me worried. Doctor: Have you experienced any difficulty swallowing liquids or only solids? Have you noticed any changes in your voice or coughing while eating? Patient: I haven't had any trouble swallowing liquids, just the bigger pieces of food. I don't cough while eating, and my voice hasn't changed. It's just the solid foods that feel like they get stuck and cause the burning pain in my chest. Doctor: Have you experienced any recent weight loss, changes in bowel habits, or a family history of esophageal disorders or gastrointestinal cancers? Patient: No, I haven't experienced any recent weight loss or changes in my bowel habits. As for family history, I don't think there's anything related to esophageal disorders or gastrointestinal cancers that I'm aware of. Doctor: Have you ever been diagnosed with any autoimmune conditions, such as scleroderma or lupus, or have you been exposed to any caustic substances that could affect the esophagus? Patient: No, I don't think I've ever been diagnosed with any autoimmune conditions like scleroderma or lupus, and I don't recall being exposed to anything caustic that could affect my esophagus. I've just been dealing with this swallowing issue and the chest pain for a while now. Doctor: Have you undergone any endoscopic evaluations of the upper gastrointestinal tract, such as an upper endoscopy, in the past? Patient: No, I haven't undergone any endoscopic evaluations of the upper gastrointestinal tract in the past. The doctor mentioned something about scheduling me for an upper endoscopy, but that's the first time I've heard of it. I just came in because I've been having trouble swallowing and the pain has been getting me worried. Doctor: Have you noticed any changes in your ability to swallow liquids, or have you experienced any difficulty with breathing or coughing",
+        "atomic_decomposition": {
+          "original": "An upper endoscopy is scheduled to evaluate for possible esophageal pathology.",
+          "retained": [
+            {
+              "atom": "Note that there is only one proposition in this statement, so it can be output as a single fact.",
+              "citation": "No, I haven't had any difficulty swallowing liquids, just the bigger pieces of food. I haven't noticed any changes in my voice or coughing while eating either. It's mostly the solid foods that feel like they get stuck and cause the burning pain in my chest. Doctor: Have you experienced any episodes of chest pain unrelated to swallowing, such as during physical exertion or at rest, which could suggest a cardiac cause? Patient: No, I haven't had any chest pain unrelated to swallowing. The pain is specifically when I swallow, especially with bigger pieces of food. It feels like a burning sensation in my chest, but it doesn't happen when I'm exerting myself or at rest.",
+              "entailment": 0.9941,
+              "depth": 2
+            },
+            {
+              "atom": "The upper endoscopy is to evaluate for possible esophageal pathology.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 45 years old, and I'm male. I've been having trouble swallowing, especially with bigger pieces of food, and it hurts when I swallow down in my chest. It's been going on for a few weeks. Doctor: Have you experienced any weight loss, regurgitation, or chest pain associated with your dysphagia? Have you been evaluated for GERD or other esophageal disorders in the past? Patient: No, I haven't lost any weight—I actually gained some, which is frustrating. I haven't had any regurgitation, but the chest pain when I swallow is pretty consistent. I don't think I've ever been checked for GERD or anything like that before. Doctor: Could you describe the nature of the chest pain you experience when swallowing? For example, is it sharp, burning, or pressure-like? Does it radiate to other areas, such as your back or arms? Also, have you noticed any changes in your appetite or difficulty with eating over the past few weeks? Patient: The pain feels like a burning sensation in my chest, especially when I swallow bigger pieces of food. It doesn't really radiate anywhere else, just stays in that area. I haven't really noticed a change in my appetite, but I do find it harder to eat certain things because of the discomfort. Doctor: Have you undergone any imaging or endoscopic evaluations of the esophagus or upper gastrointestinal tract? Patient: No, I haven't had any imaging or endoscopic evaluations of my esophagus or upper gastrointestinal tract yet. The doctor mentioned something about a barium swallow, but I wasn't sure what that was exactly. I just came in because I've been having trouble swallowing and the pain has been getting me worried. Doctor: Have you experienced any difficulty swallowing liquids or only solids? Have you noticed any changes in your voice or coughing while eating? Patient: I haven't had any trouble swallowing liquids, just the bigger pieces of food. I",
+              "entailment": 0.8447,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I did not break down \"possible esophageal pathology\" into separate facts, as it is a single concept being evaluated by the upper endoscopy.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 45 years old, and I'm male. I've been having trouble swallowing, especially with bigger pieces of food, and it hurts when I swallow down in my chest. It's been going on for a few weeks. Doctor: Have you experienced any weight loss, regurgitation, or chest pain associated with your dysphagia? Have you been evaluated for GERD or other esophageal disorders in the past? Patient: No, I haven't lost any weight—I actually gained some, which is frustrating. I haven't had any regurgitation, but the chest pain when I swallow is pretty consistent. I don't think I've ever been checked for GERD or anything like that before. Doctor: Could you describe the nature of the chest pain you experience when swallowing? For example, is it sharp, burning, or pressure-like? Does it radiate to other areas, such as your back or arms? Also, have you noticed any changes in your appetite or difficulty with eating over the past few weeks? Patient: The pain feels like a burning sensation in my chest, especially when I swallow bigger pieces of food. It doesn't really radiate anywhere else, just stays in that area. I haven't really noticed a change in my appetite, but I do find it harder to eat certain things because of the discomfort. Doctor: Have you undergone any imaging or endoscopic evaluations of the esophagus or upper gastrointestinal tract? Patient: No, I haven't had any imaging or endoscopic evaluations of my esophagus or upper gastrointestinal tract yet. The doctor mentioned something about a barium swallow, but I wasn't sure what that was exactly. I just came in because I've been having trouble swallowing and the pain has been getting me worried. Doctor: Have you experienced any difficulty swallowing liquids or only solids? Have you noticed any changes in your voice or coughing while eating? Patient: I haven't had any trouble swallowing liquids, just the bigger pieces of food. I",
+              "entailment": 0.9922,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "An upper endoscopy is scheduled.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.49,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      }
     ]
   },
   "stage2_stats": {
     "decision_counts": {
-      "faithful": 4,
-      "uncertain": 2
+      "faithful": 8,
+      "uncertain": 8
     },
-    "num_claims": 6,
-    "num_kept": 6,
+    "num_claims": 16,
+    "num_kept": 16,
     "claim_retention_rate": 1.0
   },
   "stage3_so": {
-    "subjective": "Patient: I'm 45 years old, and I'm male.\nChief Complaint: Difficulty swallowing, especially with bigger pieces of food, and chest pain.\nHistory of Present Illness (HPI): The patient, a 45-year-old male, presents with a few weeks of difficulty swallowing, particularly with bigger pieces of food, and chest pain.\nThe pain is described as a burning sensation in the chest, especially when swallowing solid foods.\nThe patient has not experienced any weight loss, regurgitation, or chest pain unrelated to swallowing.",
-    "objective": "No physical examination findings are mentioned.\nNo vital signs are mentioned.\nNote that I did not add any information that is not present in the original statement. I simply broke down the statement into its constituent parts, replacing pronouns with the subject (\"The patient\") and ensuring that each fact is self-contained and can stand alone as true or false.\nNo diagnostic lab results are mentioned.\nNo imaging results are mentioned.\nNote that I did not add any information that is not present in the original statement. I simply broke down the statement into its constituent parts, replacing pronouns with the subject (\"The diagnostic results & labs\") and ensuring each fact is self-contained and can stand alone as true or false."
+    "subjective": "Chief Complaint: Difficulty swallowing, especially with bigger pieces of food, and chest pain.\nHistory of Present Illness (HPI): The patient, a 45-year-old male, presents with a few weeks of difficulty swallowing, particularly with bigger pieces of food, and chest pain.\nThe pain is described as a burning sensation in the chest, especially when swallowing solid foods.\nThe patient has not experienced any weight loss, regurgitation, or chest pain unrelated to swallowing.",
+    "objective": "No physical examination findings are mentioned.\nNo vital signs are mentioned.\nNote that I did not add any information that is not present in the original statement. I simply broke down the statement into its constituent parts, replacing pronouns with the subject (\"The patient\") and ensuring that each fact is self-contained and can stand alone as true or false.\nNo diagnostic lab results are mentioned.\nNo imaging results are mentioned.\nNote that I did not add any information that is not present in the original statement. I simply broke down the statement into its constituent parts, replacing pronouns with the subject (\"The diagnostic results & labs\") and ensuring each fact is self-contained and can stand alone as true or false.",
+    "assessment_and_plan": "Diagnoses and Clinical Reasoning: Based on the patient's symptoms and medical history, the doctor suspects an esophageal disorder, possibly related to difficulty swallowing and chest pain.\nNote that the statement is a single proposition, so only one fact is output.\nNote that I did not add any information that is not present in the original statement, and each fact is self-contained and can stand alone as true or false.\nThe upper endoscopy is to evaluate for possible esophageal pathology.\nThe patient has possible esophageal pathology.\nThe patient is willing to undergo the procedure.\nThe procedure is to determine the cause of his symptoms.\nNote that I did not combine the two facts into one, as the statement contains two separate propositions.\nNo medications were explicitly stated.\nNo follow-up instructions were explicitly stated.\nNote that I've followed the rules by splitting the list and conjunction, and replacing pronouns with the subject (\"No medications\" and \"No follow-up instructions\" instead of \"medications or follow-up instructions\"). Each fact is self-contained and stands alone as true or false.\nThis patient presents with a few weeks of difficulty swallowing, particularly with bigger pieces of food, and chest pain.\nThe pain is described as a burning sensation in the chest, especially when swallowing solid foods.\nThe patient has not experienced any weight loss, regurgitation, or chest pain unrelated to swallowing.\nThe underlying cause of his symptoms needs to be determined.\nNote that I did not break down \"his symptoms\" into separate facts, as it is a single concept being referred to. Similarly, I did not break down \"to determine\" into separate facts, as it is a single action being described.\nNote that there is only one proposition in this statement, so it can be output as a single fact.\nThe upper endoscopy is to evaluate for possible esophageal pathology.\nPatient: I'm 45 years old, and I'm male.\nNote that I did not break down \"possible esophageal pathology\" into separate facts, as it is a single concept being evaluated by the upper endoscopy."
   },
   "stage3_key_sentences": [
     "Doctor: Could you describe the nature of the chest pain you experience when swallowing?",
     "Patient: I'm 45 years old, and I'm male."
   ],
   "stage3_summary_key_phrases": [
-    "complaint difficulty swallowing",
+    "difficulty swallowing chest",
     "pronouns subject diagnostic",
-    "chest pain unrelated",
-    "patient ensuring fact",
-    "statement constituent parts",
-    "present illness hpi",
+    "symptoms separate facts",
+    "false diagnoses clinical",
+    "reasoning based patient",
     "foods patient experienced",
-    "false diagnostic",
-    "statement simply broke",
-    "weight loss regurgitation"
+    "present illness hpi",
+    "pain note statement",
+    "patient possible esophageal",
+    "propositions medications explicitly"
   ],
   "stage3_coverage_scores": [
     {
       "sentence": "Doctor: Could you describe the nature of the chest pain you experience when swallowing?",
       "citation_source": "src (dialogue key sentence)",
       "citation_text": "Doctor: Could you describe the nature of the chest pain you experience when swallowing?",
-      "score": 0.7062,
+      "score": 0.7774,
       "is_missing": false,
       "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
     },
@@ -196,7 +539,7 @@
       "sentence": "Patient: I'm 45 years old, and I'm male.",
       "citation_source": "src (dialogue key sentence)",
       "citation_text": "Patient: I'm 45 years old, and I'm male.",
-      "score": 0.314,
+      "score": 0.3041,
       "is_missing": true,
       "action": "Added: Missing clinical dialogue detail (coverage < 0.40); inserted via GPT-2 fluency optimization."
     }
@@ -205,13 +548,13 @@
     {
       "candidate": "Patient: I'm 45 years old, and I'm male.",
       "statement": "Patient: I'm 45 years old, and I'm male.",
-      "coverage": 0.314,
+      "coverage": 0.3041,
       "status": "added",
       "reason": "coverage <= cov_min (uMedSum adds the dialogue sentence verbatim)",
       "insertion": {
-        "section": "subjective",
-        "line_index": 0,
-        "perplexity": 13.29
+        "section": "assessment_and_plan",
+        "line_index": 28,
+        "perplexity": 8.56
       }
     }
   ],
@@ -219,7 +562,7 @@
     {
       "statement": "Patient: I'm 45 years old, and I'm male.",
       "evidence": "Patient: I'm 45 years old, and I'm male.",
-      "section": "subjective",
+      "section": "assessment_and_plan",
       "candidate": "Patient: I'm 45 years old, and I'm male."
     }
   ],
@@ -234,12 +577,98 @@
     "num_generated": 0
   },
   "unsupported_claims": {
-    "removed_stage2": []
+    "removed_stage2": [
+      {
+        "section": "assessment_and_plan",
+        "claim": "Further evaluation is needed.",
+        "entailment": 0.4536,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Further evaluation is needed to determine the underlying cause."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "The underlying cause needs to be determined.",
+        "entailment": 0.4941,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Further evaluation is needed to determine the underlying cause."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "Schedule an upper endoscopy.",
+        "entailment": 0.4668,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Treatment Plan, Medications, and Follow-up: Schedule an upper endoscopy to evaluate for possible esophageal pathology."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "Statement: The patient has possible esophageal pathology, and the treatment plan includes medications and follow-up, with a plan to start omeprazole 20 mg daily and pantoprazole 40 mg daily, and to follow up in two weeks with an endoscopy.",
+        "entailment": 0.4556,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Treatment Plan, Medications, and Follow-up: Schedule an upper endoscopy to evaluate for possible esophageal pathology."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "The treatment plan includes medications.",
+        "entailment": 0.4375,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Treatment Plan, Medications, and Follow-up: Schedule an upper endoscopy to evaluate for possible esophageal pathology."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "The treatment plan includes follow-up.",
+        "entailment": 0.4539,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Treatment Plan, Medications, and Follow-up: Schedule an upper endoscopy to evaluate for possible esophageal pathology."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "Start omeprazole 20 mg daily.",
+        "entailment": 0.4424,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Treatment Plan, Medications, and Follow-up: Schedule an upper endoscopy to evaluate for possible esophageal pathology."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "Start pantoprazole 40 mg daily.",
+        "entailment": 0.4426,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Treatment Plan, Medications, and Follow-up: Schedule an upper endoscopy to evaluate for possible esophageal pathology."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "Follow up in two weeks.",
+        "entailment": 0.4392,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Treatment Plan, Medications, and Follow-up: Schedule an upper endoscopy to evaluate for possible esophageal pathology."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "An endoscopy is planned at follow up.",
+        "entailment": 0.4675,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Treatment Plan, Medications, and Follow-up: Schedule an upper endoscopy to evaluate for possible esophageal pathology."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "Further evaluation is needed.",
+        "entailment": 0.4536,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Further evaluation is needed to determine the underlying cause of his symptoms."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "An upper endoscopy is scheduled.",
+        "entailment": 0.49,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "An upper endoscopy is scheduled to evaluate for possible esophageal pathology."
+      }
+    ]
   },
   "final_ap": {
-    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** Based on the patient's symptoms and medical history, the doctor suspects an esophageal disorder, possibly related to difficulty swallowing and chest pain. Further evaluation is needed to determine the underlying cause.\n* **Treatment Plan, Medications, and Follow-up:** Schedule an upper endoscopy to evaluate for possible esophageal pathology. The patient is willing to undergo the procedure to determine the cause of his symptoms. No medications or follow-up instructions were explicitly stated.\n\n**SOAP NOTE:**\n\nThis patient presents with a few weeks of difficulty swallowing, particularly with bigger pieces of food, and chest pain. The pain is described as a burning sensation in the chest, especially when swallowing solid foods. The patient has not experienced any weight loss, regurgitation, or chest pain unrelated to swallowing. Further evaluation is needed to determine the underlying cause of his symptoms. An upper endoscopy is scheduled to evaluate for possible esophageal pathology."
+    "assessment_and_plan": "Diagnoses and Clinical Reasoning: Based on the patient's symptoms and medical history, the doctor suspects an esophageal disorder, possibly related to difficulty swallowing and chest pain.\nNote that the statement is a single proposition, so only one fact is output.\nNote that I did not add any information that is not present in the original statement, and each fact is self-contained and can stand alone as true or false.\nThe upper endoscopy is to evaluate for possible esophageal pathology.\nThe patient has possible esophageal pathology.\nThe patient is willing to undergo the procedure.\nThe procedure is to determine the cause of his symptoms.\nNote that I did not combine the two facts into one, as the statement contains two separate propositions.\nNo medications were explicitly stated.\nNo follow-up instructions were explicitly stated.\nNote that I've followed the rules by splitting the list and conjunction, and replacing pronouns with the subject (\"No medications\" and \"No follow-up instructions\" instead of \"medications or follow-up instructions\"). Each fact is self-contained and stands alone as true or false.\nThis patient presents with a few weeks of difficulty swallowing, particularly with bigger pieces of food, and chest pain.\nThe pain is described as a burning sensation in the chest, especially when swallowing solid foods.\nThe patient has not experienced any weight loss, regurgitation, or chest pain unrelated to swallowing.\nThe underlying cause of his symptoms needs to be determined.\nNote that I did not break down \"his symptoms\" into separate facts, as it is a single concept being referred to. Similarly, I did not break down \"to determine\" into separate facts, as it is a single action being described.\nNote that there is only one proposition in this statement, so it can be output as a single fact.\nThe upper endoscopy is to evaluate for possible esophageal pathology.\nPatient: I'm 45 years old, and I'm male.\nNote that I did not break down \"possible esophageal pathology\" into separate facts, as it is a single concept being evaluated by the upper endoscopy."
   },
-  "ap_unchanged": true,
+  "scope": "soap",
+  "ap_changed": true,
   "thresholds": {
     "Te": 0.9,
     "Tc": 0.8,
@@ -255,10 +684,11 @@
     "ppl": "gpt2"
   },
   "status": "success",
-  "seconds": 9.4,
+  "seconds": 18.9,
   "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 45 years old, and I'm male. I've been having trouble swallowing, especially with bigger pieces of food, and it hurts when I swallow down in my chest. It's been going on for a few weeks.\nDoctor: Have you experienced any weight loss, regurgitation, or chest pain associated with your dysphagia? Have you been evaluated for GERD or other esophageal disorders in the past?\nPatient: No, I haven't lost any weight—I actually gained some, which is frustrating. I haven't had any regurgitation, but the chest pain when I swallow is pretty consistent. I don't think I've ever been checked for GERD or anything like that before.\nDoctor: Could you describe the nature of the chest pain you experience when swallowing? For example, is it sharp, burning, or pressure-like? Does it radiate to other areas, such as your back or arms? Also, have you noticed any changes in your appetite or difficulty with eating over the past few weeks?\nPatient: The pain feels like a burning sensation in my chest, especially when I swallow bigger pieces of food. It doesn't really radiate anywhere else, just stays in that area. I haven't really noticed a change in my appetite, but I do find it harder to eat certain things because of the discomfort.\nDoctor: Have you undergone any imaging or endoscopic evaluations of the esophagus or upper gastrointestinal tract?\nPatient: No, I haven't had any imaging or endoscopic evaluations of my esophagus or upper gastrointestinal tract yet. The doctor mentioned something about a barium swallow, but I wasn't sure what that was exactly. I just came in because I've been having trouble swallowing and the pain has been getting me worried.\nDoctor: Have you experienced any difficulty swallowing liquids or only solids? Have you noticed any changes in your voice or coughing while eating?\nPatient: I haven't had any trouble swallowing liquids, just the bigger pieces of food. I don't cough while eating, and my voice hasn't changed. It's just the solid foods that feel like they get stuck and cause the burning pain in my chest.\nDoctor: Have you experienced any recent weight loss, changes in bowel habits, or a family history of esophageal disorders or gastrointestinal cancers?\nPatient: No, I haven't experienced any recent weight loss or changes in my bowel habits. As for family history, I don't think there's anything related to esophageal disorders or gastrointestinal cancers that I'm aware of.\nDoctor: Have you ever been diagnosed with any autoimmune conditions, such as scleroderma or lupus, or have you been exposed to any caustic substances that could affect the esophagus?\nPatient: No, I don't think I've ever been diagnosed with any autoimmune conditions like scleroderma or lupus, and I don't recall being exposed to anything caustic that could affect my esophagus. I've just been dealing with this swallowing issue and the chest pain for a while now.\nDoctor: Have you undergone any endoscopic evaluations of the upper gastrointestinal tract, such as an upper endoscopy, in the past?\nPatient: No, I haven't undergone any endoscopic evaluations of the upper gastrointestinal tract in the past. The doctor mentioned something about scheduling me for an upper endoscopy, but that's the first time I've heard of it. I just came in because I've been having trouble swallowing and the pain has been getting me worried.\nDoctor: Have you noticed any changes in your ability to swallow liquids, or have you experienced any difficulty with breathing or coughing while eating?\nPatient: No, I haven't noticed any changes in my ability to swallow liquids, and I don't have any difficulty breathing or coughing while eating. It's just the solid foods that feel like they get stuck and cause the burning pain in my chest.\nDoctor: Have you experienced any unintentional weight loss, vomiting, or difficulty swallowing liquids in the past few months?\nPatient: No, I haven't experienced any unintentional weight loss or vomiting in the past few months. I actually mentioned that I've gained some weight, which is the opposite of what I was expecting with these symptoms. I haven't had trouble swallowing liquids, just the bigger pieces of food.\nDoctor: Have you had any recent upper gastrointestinal endoscopy or barium swallow studies scheduled or performed?\nPatient: No, I haven't had any recent upper gastrointestinal endoscopy or barium swallow studies performed. The doctor mentioned scheduling me for an upper endoscopy, but that’s the first time I’ve heard of it. I just came in because I’ve been having trouble swallowing and the pain has been getting me worried.\nDoctor: Thank you for sharing that with me. I understand your concern about the difficulty swallowing and the chest pain. To better understand your condition, could you tell me if you've noticed any changes in your ability to eat over the past few weeks? For example, have you started avoiding certain foods or noticed any weight changes?\nPatient: Over the past few weeks, I've been avoiding foods that are harder to chew, like meat or bread, because they feel like they get stuck and cause pain when I swallow. I've been eating more soft foods or things that are easier to chew, like pizza or burgers, but even those sometimes bother me. I didn't lose weight, which is surprising because I thought I might, but I actually gained a little weight instead.\nDoctor: Have you had any recent upper gastrointestinal endoscopy or barium swallow studies performed? If not, would you be willing to schedule an upper endoscopy to evaluate for possible esophageal pathology?\nPatient: No, I haven't had any recent upper gastrointestinal endoscopy or barium swallow studies performed. The doctor mentioned scheduling me for an upper endoscopy, but that’s the first time I’ve heard of it. I’m willing to schedule it if it will help figure out what’s going on with my swallowing and the pain I’m having. I just want to get better and make sure there’s nothing serious.\nDoctor: Have you experienced any difficulty with swallowing liquids as well, or is it only solids? Additionally, have you noticed any changes in your voice or coughing while eating?\nPatient: No, I haven't had any difficulty swallowing liquids, just the bigger pieces of food. I haven't noticed any changes in my voice or coughing while eating either. It's mostly the solid foods that feel like they get stuck and cause the burning pain in my chest.\nDoctor: Have you experienced any episodes of chest pain unrelated to swallowing, such as during physical exertion or at rest, which could suggest a cardiac cause?\nPatient: No, I haven't had any chest pain unrelated to swallowing. The pain is specifically when I swallow, especially with bigger pieces of food. It feels like a burning sensation in my chest, but it doesn't happen when I'm exerting myself or at rest.",
   "reference_so": {
     "subjective": "Basic information: 45-year-old male with chief complaint of dysphagia, particularly with larger food pieces, and chest pain upon swallowing\n\nHistory of present illness: Onset a few weeks ago, with pain localized to the chest during swallowing. The pain feels like a burning sensation, especially when swallowing larger pieces of food. It does not radiate elsewhere. No weight loss reported. No regurgitation. No prior evaluations or treatments for GERD or esophageal disorders. No change in appetite, but difficulty eating certain foods due to discomfort. No prior imaging or endoscopic evaluations of the esophagus or upper gastrointestinal tract. Patient is not familiar with barium swallow procedure. Dysphagia is more pronounced with solids, not liquids. No coughing while eating, no change in voice. Patient has not had any recent upper gastrointestinal endoscopy or barium swallow studies scheduled or performed. Over the past few weeks, the patient has been avoiding harder-to-chew foods like meat or bread, opting for softer foods like pizza or burgers, though even these sometimes cause discomfort. The patient has not experienced unintentional weight loss or vomiting, and has actually gained some weight;\n\nPast history: No prior history of GERD or esophageal disorders. No known autoimmune conditions or exposure to caustic substances. Family history: No known esophageal disorders or gastrointestinal cancers.",
-    "objective": "Physical examination: Vital signs: BP 120/80 mmHg, HR 72 bpm, RR 16, Temp 36.8°C. No acute distress. Chest examination: no tenderness or abnormal findings. Abdomen: soft, non-tender. No palpable masses. No lymphadenopathy.\n\nInvestigations: No prior laboratory or imaging results available."
+    "objective": "Physical examination: Vital signs: BP 120/80 mmHg, HR 72 bpm, RR 16, Temp 36.8°C. No acute distress. Chest examination: no tenderness or abnormal findings. Abdomen: soft, non-tender. No palpable masses. No lymphadenopathy.\n\nInvestigations: No prior laboratory or imaging results available.",
+    "assessment_and_plan": "Preliminary diagnosis:\n1. Esophageal stricture\n2. Gastroesophageal reflux disease (GERD)\n3. Esophageal motility disorder\n\nDiagnostic discussion:\nA 45-year-old male presents with dysphagia, particularly with larger food pieces, and chest pain upon swallowing. The dysphagia is more pronounced with solids, not liquids, and the pain is described as a burning sensation localized to the chest during swallowing. The absence of weight loss, regurgitation, coughing while eating, or change in voice suggests a mechanical or motility-related cause rather than a neoplastic or inflammatory process. The lack of prior evaluations or treatments for GERD or esophageal disorders, along with no family history of esophageal disorders or gastrointestinal cancers, makes esophageal stricture and motility disorders more likely. GERD is also considered as a differential due to the burning sensation, though the absence of typical GERD symptoms like heartburn or regurgitation makes it less likely. Other differentials include esophageal cancer, though the absence of weight loss and the relatively short duration of symptoms make this less likely. The patient has not undergone any prior imaging or endoscopic evaluations, which would be necessary to confirm the diagnosis. The patient has been avoiding harder-to-chew foods, which is a compensatory behavior for dysphagia. The physical examination is unremarkable, with no signs of acute distress or systemic illness. The absence of prior laboratory or imaging results limits the ability to rule out other causes definitively. The patient’s weight gain is notable and may be due to dietary changes rather than an underlying metabolic disorder.\n1. Further evaluation: An upper gastrointestinal endoscopy (esophagogastroduodenoscopy, EGD) is indicated to visualize the esophagus and identify any structural abnormalities such as strictures or tumors. A barium swallow study may also be considered to assess for motility disorders or structural issues. These investigations should be performed as soon as possible to guide further management.\n2. Medication: If GERD is suspected, a trial of proton pump inhibitors (PPIs) may be initiated to see if symptoms improve. However, given the mechanical nature of the dysphagia, PPIs may not be the first-line treatment. If a motility disorder is suspected, further evaluation with manometry may be required before initiating specific medications.\n3. Non-drug management and education: The patient should be advised to continue avoiding foods that exacerbate symptoms, such as large or hard-to-chew items. A soft diet may be recommended. The patient should be educated on the importance of follow-up and the need for endoscopic evaluation. If symptoms worsen or new symptoms develop, such as weight loss or vomiting, the patient should seek immediate medical attention.\n4. Follow-up: The patient should be scheduled for an upper gastrointestinal endoscopy as soon as possible. A follow-up appointment should be arranged within one to two weeks to discuss the results of the endoscopy and any further management plan. If the endoscopy reveals a stricture, a dilatation procedure may be considered. If a motility disorder is diagnosed, further management with manometry and possibly medication may be required."
   }
 }

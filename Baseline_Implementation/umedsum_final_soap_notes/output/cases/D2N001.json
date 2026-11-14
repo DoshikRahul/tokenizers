@@ -11,14 +11,16 @@
   },
   "stage1_so": {
     "subjective": "* **Chief Complaint:** Annual exam\n* **History of Present Illness (HPI):**\n\t+ The patient presents with a history of congestive heart failure, diagnosed at an unknown date. He reports no major symptoms such as chest pain or shortness of breath. He is taking medication for heart failure, but sometimes forgets to take his blood pressure medications. He has not experienced any recent changes in symptoms, such as increased shortness of breath or swelling. His blood pressure tends to increase during stressful periods.",
-    "objective": "* **Physical Examination & Vitals:** None mentioned in the dialogue\n* **Diagnostic Results & Labs:** None mentioned in the dialogue"
+    "objective": "* **Physical Examination & Vitals:** None mentioned in the dialogue\n* **Diagnostic Results & Labs:** None mentioned in the dialogue",
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** The patient is diagnosed with congestive heart failure, based on his reported history and symptoms.\n* **Treatment Plan, Medications, and Follow-up:** The patient's current medication regimen for heart failure and blood pressure will be reviewed and adjusted as necessary. He will be advised to take his medications regularly and to monitor his blood pressure. Follow-up appointments will be scheduled to monitor his condition and adjust his treatment plan as needed.\n\nPlease note that this SOAP note is based on the provided dialogue and may not reflect the actual medical record or treatment plan."
   },
   "stage1_ap": {
     "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** The patient is diagnosed with congestive heart failure, based on his reported history and symptoms.\n* **Treatment Plan, Medications, and Follow-up:** The patient's current medication regimen for heart failure and blood pressure will be reviewed and adjusted as necessary. He will be advised to take his medications regularly and to monitor his blood pressure. Follow-up appointments will be scheduled to monitor his condition and adjust his treatment plan as needed.\n\nPlease note that this SOAP note is based on the provided dialogue and may not reflect the actual medical record or treatment plan."
   },
   "stage2_so": {
     "subjective": "The patient presents with a history of congestive heart failure, diagnosed at an unknown date.\nHe reports no major symptoms such as chest pain or shortness of breath.\nHe is taking medication for heart failure, but sometimes forgets to take his blood pressure medications.\nHe has not experienced increased shortness of breath.\nNote that I did not infer or add any information, and I replaced the pronoun \"He\" with the subject \"He\" to make each fact self-contained.\nPlease provide the statement you'd like me to decompose into atomic facts. I'll follow the rules and output the resulting atomic facts.\nSplitting the list of symptoms into separate facts\nReplacing the pronoun \"such as\" with the subject \"He\"\nNot adding or inferring any information that is not present in the statement\nOutputting each fact as a self-contained proposition\nHis blood pressure tends to increase during stressful periods.",
-    "objective": "Physical Examination is not mentioned in the dialogue.\nVitals are not mentioned in the dialogue.\nPlease provide the statement you'd like me to decompose into atomic facts. I'll follow the rules and output the resulting atomic facts.\nDiagnostic Results are not mentioned in the dialogue.\nLabs are not mentioned in the dialogue.\nNote that the statement is a simple negation, stating that there is no mention of diagnostic results or labs in the dialogue."
+    "objective": "Physical Examination is not mentioned in the dialogue.\nVitals are not mentioned in the dialogue.\nPlease provide the statement you'd like me to decompose into atomic facts. I'll follow the rules and output the resulting atomic facts.\nDiagnostic Results are not mentioned in the dialogue.\nLabs are not mentioned in the dialogue.\nNote that the statement is a simple negation, stating that there is no mention of diagnostic results or labs in the dialogue.",
+    "assessment_and_plan": "The patient is diagnosed with congestive heart failure.\nThe diagnosis is based on his reported history.\nNote that I've followed the rules to split the statement into independent, self-contained atomic facts. Each fact is a single proposition that can stand alone as true or false.\nThe patient's current medication regimen is for heart failure.\nThe patient's current medication regimen is for blood pressure.\nAs necessary.\nNote that I've followed the rules to split the statement into independent, self-contained atomic facts. The first fact states that the medication regimen will be adjusted, and the second fact specifies the condition under which this adjustment will occur (\"as necessary\").\nNote that I've replaced the pronoun \"he\" with the subject \"He\" to make each fact self-contained.\nNote that I did not combine the two facts into one, as \"He will be advised to monitor his blood pressure\" is a complex sentence with two separate actions. Each fact is self-contained and can stand alone as true or false.\nNote that I did not combine the two clauses into a single fact, as they are separate and independent propositions. Each fact is self-contained and can stand alone as true or false.\nNote that I've replaced the pronoun \"his\" with the subject \"his condition\" and \"his treatment plan\" to make each fact self-contained."
   },
   "stage2_audit": {
     "subjective": [
@@ -265,20 +267,251 @@
           "max_depth_reached": 2
         }
       }
+    ],
+    "assessment_and_plan": [
+      {
+        "unit": "Diagnoses and Clinical Reasoning: The patient is diagnosed with congestive heart failure, based on his reported history and symptoms.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.4636,
+          "neutral": 0.2769,
+          "contradiction": 0.2595
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please provide the names, dosages, and frequencies of your heart failure and blood pressure medications, either from your pill bottle or records? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please provide the names, dosages, and frequencies of your heart failure and blood pressure medications, either from your pill bottle or records? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the names, dosages, and how often you're supposed to take your medications for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and provide the names, dosages, and frequencies of your heart failure and blood pressure medications? Patient: I don't know the exact names or dosages off the top of my head, but I can check my pill bottle or records for you. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and provide the exact names, dosages, and frequencies of your heart failure and blood pressure medications? Patient: I don't know the exact",
+        "atomic_decomposition": {
+          "original": "Diagnoses and Clinical Reasoning: The patient is diagnosed with congestive heart failure, based on his reported history and symptoms.",
+          "retained": [
+            {
+              "atom": "The patient is diagnosed with congestive heart failure.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 50 years old, and I'm here for my annual exam. I've been doing okay overall, but I have a few things we can talk about, like my heart failure and blood pressure. Doctor: Could you please provide more details about your heart failure, such as when it was diagnosed, any symptoms you experience, and whether you are currently on any medications for it? Patient: I was diagnosed with congestive heart failure a while back, and I've been managing it with medication. I try to watch my diet, especially keeping sodium low, and I haven't had any major symptoms like chest pain or shortness of breath lately. I'm on medication for it, but I do forget sometimes to take my blood pressure meds, which I know can affect it. Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue? Patient: I don't know the exact date of my heart failure diagnosis, but I've been managing it for a while now. I'm on medication for it, and I also take blood pressure meds, though I sometimes forget to take those. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the",
+              "entailment": 0.9995,
+              "depth": 1
+            },
+            {
+              "atom": "The diagnosis is based on his reported history.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 50 years old, and I'm here for my annual exam. I've been doing okay overall, but I have a few things we can talk about, like my heart failure and blood pressure. Doctor: Could you please provide more details about your heart failure, such as when it was diagnosed, any symptoms you experience, and whether you are currently on any medications for it? Patient: I was diagnosed with congestive heart failure a while back, and I've been managing it with medication. I try to watch my diet, especially keeping sodium low, and I haven't had any major symptoms like chest pain or shortness of breath lately. I'm on medication for it, but I do forget sometimes to take my blood pressure meds, which I know can affect it. Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue? Patient: I don't know the exact date of my heart failure diagnosis, but I've been managing it for a while now. I'm on medication for it, and I also take blood pressure meds, though I sometimes forget to take those. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the",
+              "entailment": 0.519,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've followed the rules to split the statement into independent, self-contained atomic facts. Each fact is a single proposition that can stand alone as true or false.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 50 years old, and I'm here for my annual exam. I've been doing okay overall, but I have a few things we can talk about, like my heart failure and blood pressure. Doctor: Could you please provide more details about your heart failure, such as when it was diagnosed, any symptoms you experience, and whether you are currently on any medications for it? Patient: I was diagnosed with congestive heart failure a while back, and I've been managing it with medication. I try to watch my diet, especially keeping sodium low, and I haven't had any major symptoms like chest pain or shortness of breath lately. I'm on medication for it, but I do forget sometimes to take my blood pressure meds, which I know can affect it. Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue? Patient: I don't know the exact date of my heart failure diagnosis, but I've been managing it for a while now. I'm on medication for it, and I also take blood pressure meds, though I sometimes forget to take those. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the",
+              "entailment": 0.9712,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "The diagnosis is based on his reported symptoms.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4558,
+              "depth": 2
+            },
+            {
+              "atom": "His reported symptoms are used to make the diagnosis.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4592,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Treatment Plan, Medications, and Follow-up: The patient's current medication regimen for heart failure and blood pressure will be reviewed and adjusted as necessary.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.4626,
+          "neutral": 0.2776,
+          "contradiction": 0.2598
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please provide the names, dosages, and frequencies of your heart failure and blood pressure medications, either from your pill bottle or records? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please provide the names, dosages, and frequencies of your heart failure and blood pressure medications, either from your pill bottle or records? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the names, dosages, and how often you're supposed to take your medications for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and provide the names, dosages, and frequencies of your heart failure and blood pressure medications? Patient: I don't know the exact names or dosages off the top of my head, but I can check my pill bottle or records for you. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and provide the exact names, dosages, and frequencies of your heart failure and blood pressure medications? Patient: I don't know the exact",
+        "atomic_decomposition": {
+          "original": "Treatment Plan, Medications, and Follow-up: The patient's current medication regimen for heart failure and blood pressure will be reviewed and adjusted as necessary.",
+          "retained": [
+            {
+              "atom": "The patient's current medication regimen is for heart failure.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 50 years old, and I'm here for my annual exam. I've been doing okay overall, but I have a few things we can talk about, like my heart failure and blood pressure. Doctor: Could you please provide more details about your heart failure, such as when it was diagnosed, any symptoms you experience, and whether you are currently on any medications for it? Patient: I was diagnosed with congestive heart failure a while back, and I've been managing it with medication. I try to watch my diet, especially keeping sodium low, and I haven't had any major symptoms like chest pain or shortness of breath lately. I'm on medication for it, but I do forget sometimes to take my blood pressure meds, which I know can affect it. Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue? Patient: I don't know the exact date of my heart failure diagnosis, but I've been managing it for a while now. I'm on medication for it, and I also take blood pressure meds, though I sometimes forget to take those. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the",
+              "entailment": 0.998,
+              "depth": 1
+            },
+            {
+              "atom": "The patient's current medication regimen is for blood pressure.",
+              "citation": "Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the specific names and dosages of your heart failure and blood pressure medications? Also, have you noticed any recent changes in your symptoms, such as increased shortness of breath, swelling, or dizziness? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please check your pill bottles or records and provide the names, dosages, and frequency of your heart failure and blood pressure medications? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and provide the names, dosages, and frequency of your heart failure and blood pressure medications? Additionally, could you share any recent blood pressure readings or symptoms you've experienced during stressful periods? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my",
+              "entailment": 0.9966,
+              "depth": 1
+            },
+            {
+              "atom": "As necessary.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 50 years old, and I'm here for my annual exam. I've been doing okay overall, but I have a few things we can talk about, like my heart failure and blood pressure. Doctor: Could you please provide more details about your heart failure, such as when it was diagnosed, any symptoms you experience, and whether you are currently on any medications for it? Patient: I was diagnosed with congestive heart failure a while back, and I've been managing it with medication. I try to watch my diet, especially keeping sodium low, and I haven't had any major symptoms like chest pain or shortness of breath lately. I'm on medication for it, but I do forget sometimes to take my blood pressure meds, which I know can affect it. Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue? Patient: I don't know the exact date of my heart failure diagnosis, but I've been managing it for a while now. I'm on medication for it, and I also take blood pressure meds, though I sometimes forget to take those. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the",
+              "entailment": 0.7407,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I've followed the rules to split the statement into independent, self-contained atomic facts. The first fact states that the medication regimen will be adjusted, and the second fact specifies the condition under which this adjustment will occur (\"as necessary\").",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 50 years old, and I'm here for my annual exam. I've been doing okay overall, but I have a few things we can talk about, like my heart failure and blood pressure. Doctor: Could you please provide more details about your heart failure, such as when it was diagnosed, any symptoms you experience, and whether you are currently on any medications for it? Patient: I was diagnosed with congestive heart failure a while back, and I've been managing it with medication. I try to watch my diet, especially keeping sodium low, and I haven't had any major symptoms like chest pain or shortness of breath lately. I'm on medication for it, but I do forget sometimes to take my blood pressure meds, which I know can affect it. Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue? Patient: I don't know the exact date of my heart failure diagnosis, but I've been managing it for a while now. I'm on medication for it, and I also take blood pressure meds, though I sometimes forget to take those. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the",
+              "entailment": 0.9341,
+              "depth": 2
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "The patient's current medication regimen will be reviewed.",
+              "reasoning": "Could not be decomposed further and not entailed above threshold Ta.",
+              "entailment": 0.4658,
+              "depth": 1
+            },
+            {
+              "atom": "The medication regimen will be adjusted.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4436,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "He will be advised to take his medications regularly and to monitor his blood pressure.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.4668,
+          "neutral": 0.3091,
+          "contradiction": 0.2242
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please provide the names, dosages, and frequencies of your heart failure and blood pressure medications, either from your pill bottle or records? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please provide the names, dosages, and frequencies of your heart failure and blood pressure medications, either from your pill bottle or records? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the names, dosages, and how often you're supposed to take your medications for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and provide the names, dosages, and frequencies of your heart failure and blood pressure medications? Patient: I don't know the exact names or dosages off the top of my head, but I can check my pill bottle or records for you. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and provide the exact names, dosages, and frequencies of your heart failure and blood pressure medications? Patient: I don't know the exact",
+        "atomic_decomposition": {
+          "original": "He will be advised to take his medications regularly and to monitor his blood pressure.",
+          "retained": [
+            {
+              "atom": "Note that I've replaced the pronoun \"he\" with the subject \"He\" to make each fact self-contained.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 50 years old, and I'm here for my annual exam. I've been doing okay overall, but I have a few things we can talk about, like my heart failure and blood pressure. Doctor: Could you please provide more details about your heart failure, such as when it was diagnosed, any symptoms you experience, and whether you are currently on any medications for it? Patient: I was diagnosed with congestive heart failure a while back, and I've been managing it with medication. I try to watch my diet, especially keeping sodium low, and I haven't had any major symptoms like chest pain or shortness of breath lately. I'm on medication for it, but I do forget sometimes to take my blood pressure meds, which I know can affect it. Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue? Patient: I don't know the exact date of my heart failure diagnosis, but I've been managing it for a while now. I'm on medication for it, and I also take blood pressure meds, though I sometimes forget to take those. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the",
+              "entailment": 0.9102,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I did not combine the two facts into one, as \"He will be advised to monitor his blood pressure\" is a complex sentence with two separate actions. Each fact is self-contained and can stand alone as true or false.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 50 years old, and I'm here for my annual exam. I've been doing okay overall, but I have a few things we can talk about, like my heart failure and blood pressure. Doctor: Could you please provide more details about your heart failure, such as when it was diagnosed, any symptoms you experience, and whether you are currently on any medications for it? Patient: I was diagnosed with congestive heart failure a while back, and I've been managing it with medication. I try to watch my diet, especially keeping sodium low, and I haven't had any major symptoms like chest pain or shortness of breath lately. I'm on medication for it, but I do forget sometimes to take my blood pressure meds, which I know can affect it. Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue? Patient: I don't know the exact date of my heart failure diagnosis, but I've been managing it for a while now. I'm on medication for it, and I also take blood pressure meds, though I sometimes forget to take those. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the",
+              "entailment": 0.9888,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I did not combine the two clauses into a single fact, as they are separate and independent propositions. Each fact is self-contained and can stand alone as true or false.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 50 years old, and I'm here for my annual exam. I've been doing okay overall, but I have a few things we can talk about, like my heart failure and blood pressure. Doctor: Could you please provide more details about your heart failure, such as when it was diagnosed, any symptoms you experience, and whether you are currently on any medications for it? Patient: I was diagnosed with congestive heart failure a while back, and I've been managing it with medication. I try to watch my diet, especially keeping sodium low, and I haven't had any major symptoms like chest pain or shortness of breath lately. I'm on medication for it, but I do forget sometimes to take my blood pressure meds, which I know can affect it. Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue? Patient: I don't know the exact date of my heart failure diagnosis, but I've been managing it for a while now. I'm on medication for it, and I also take blood pressure meds, though I sometimes forget to take those. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the",
+              "entailment": 0.9932,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "He will be advised.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4587,
+              "depth": 2
+            },
+            {
+              "atom": "He will take his medications.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4509,
+              "depth": 2
+            },
+            {
+              "atom": "He will take his medications regularly.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4526,
+              "depth": 2
+            },
+            {
+              "atom": "He will be advised.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4587,
+              "depth": 2
+            },
+            {
+              "atom": "He will monitor his blood pressure.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4578,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Follow-up appointments will be scheduled to monitor his condition and adjust his treatment plan as needed.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.4602,
+          "neutral": 0.2874,
+          "contradiction": 0.2524
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please provide the names, dosages, and frequencies of your heart failure and blood pressure medications, either from your pill bottle or records? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please provide the names, dosages, and frequencies of your heart failure and blood pressure medications, either from your pill bottle or records? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the names, dosages, and how often you're supposed to take your medications for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and provide the names, dosages, and frequencies of your heart failure and blood pressure medications? Patient: I don't know the exact names or dosages off the top of my head, but I can check my pill bottle or records for you. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and provide the exact names, dosages, and frequencies of your heart failure and blood pressure medications? Patient: I don't know the exact",
+        "atomic_decomposition": {
+          "original": "Follow-up appointments will be scheduled to monitor his condition and adjust his treatment plan as needed.",
+          "retained": [
+            {
+              "atom": "Note that I've replaced the pronoun \"his\" with the subject \"his condition\" and \"his treatment plan\" to make each fact self-contained.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 50 years old, and I'm here for my annual exam. I've been doing okay overall, but I have a few things we can talk about, like my heart failure and blood pressure. Doctor: Could you please provide more details about your heart failure, such as when it was diagnosed, any symptoms you experience, and whether you are currently on any medications for it? Patient: I was diagnosed with congestive heart failure a while back, and I've been managing it with medication. I try to watch my diet, especially keeping sodium low, and I haven't had any major symptoms like chest pain or shortness of breath lately. I'm on medication for it, but I do forget sometimes to take my blood pressure meds, which I know can affect it. Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue? Patient: I don't know the exact date of my heart failure diagnosis, but I've been managing it for a while now. I'm on medication for it, and I also take blood pressure meds, though I sometimes forget to take those. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful. Doctor: Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure? Patient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. Doctor: Could you please check your pill bottle or records and let me know the",
+              "entailment": 0.8457,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "Follow-up appointments will be scheduled.",
+              "reasoning": "Could not be decomposed further and not entailed above threshold Ta.",
+              "entailment": 0.4573,
+              "depth": 1
+            },
+            {
+              "atom": "His condition will be monitored.",
+              "reasoning": "Could not be decomposed further and not entailed above threshold Ta.",
+              "entailment": 0.4575,
+              "depth": 1
+            },
+            {
+              "atom": "His treatment plan will be adjusted.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4509,
+              "depth": 2
+            },
+            {
+              "atom": "As needed, the treatment plan will be adjusted.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.46,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      }
     ]
   },
   "stage2_stats": {
     "decision_counts": {
-      "uncertain": 4,
+      "uncertain": 8,
       "faithful": 4
     },
-    "num_claims": 8,
-    "num_kept": 7,
-    "claim_retention_rate": 0.875
+    "num_claims": 12,
+    "num_kept": 11,
+    "claim_retention_rate": 0.9167
   },
   "stage3_so": {
-    "subjective": "The patient presents with a history of congestive heart failure, diagnosed at an unknown date.\nHe reports no major symptoms such as chest pain or shortness of breath.\nHe is taking medication for heart failure, but sometimes forgets to take his blood pressure medications.\nHe has not experienced increased shortness of breath.\nPatient: I'm 50 years old, and I'm here for my annual exam.\nNote that I did not infer or add any information, and I replaced the pronoun \"He\" with the subject \"He\" to make each fact self-contained.\nPlease provide the statement you'd like me to decompose into atomic facts. I'll follow the rules and output the resulting atomic facts.\nSplitting the list of symptoms into separate facts\nReplacing the pronoun \"such as\" with the subject \"He\"\nNot adding or inferring any information that is not present in the statement\nOutputting each fact as a self-contained proposition\nHis blood pressure tends to increase during stressful periods.",
-    "objective": "Physical Examination is not mentioned in the dialogue.\nVitals are not mentioned in the dialogue.\nPlease provide the statement you'd like me to decompose into atomic facts. I'll follow the rules and output the resulting atomic facts.\nDiagnostic Results are not mentioned in the dialogue.\nLabs are not mentioned in the dialogue.\nNote that the statement is a simple negation, stating that there is no mention of diagnostic results or labs in the dialogue."
+    "subjective": "The patient presents with a history of congestive heart failure, diagnosed at an unknown date.\nHe reports no major symptoms such as chest pain or shortness of breath.\nHe is taking medication for heart failure, but sometimes forgets to take his blood pressure medications.\nHe has not experienced increased shortness of breath.\nNote that I did not infer or add any information, and I replaced the pronoun \"He\" with the subject \"He\" to make each fact self-contained.\nPlease provide the statement you'd like me to decompose into atomic facts. I'll follow the rules and output the resulting atomic facts.\nSplitting the list of symptoms into separate facts\nReplacing the pronoun \"such as\" with the subject \"He\"\nNot adding or inferring any information that is not present in the statement\nOutputting each fact as a self-contained proposition\nHis blood pressure tends to increase during stressful periods.",
+    "objective": "Physical Examination is not mentioned in the dialogue.\nVitals are not mentioned in the dialogue.\nPatient: I'm 50 years old, and I'm here for my annual exam.\nPlease provide the statement you'd like me to decompose into atomic facts. I'll follow the rules and output the resulting atomic facts.\nDiagnostic Results are not mentioned in the dialogue.\nLabs are not mentioned in the dialogue.\nNote that the statement is a simple negation, stating that there is no mention of diagnostic results or labs in the dialogue.",
+    "assessment_and_plan": "The patient is diagnosed with congestive heart failure.\nThe diagnosis is based on his reported history.\nNote that I've followed the rules to split the statement into independent, self-contained atomic facts. Each fact is a single proposition that can stand alone as true or false.\nThe patient's current medication regimen is for heart failure.\nThe patient's current medication regimen is for blood pressure.\nAs necessary.\nNote that I've followed the rules to split the statement into independent, self-contained atomic facts. The first fact states that the medication regimen will be adjusted, and the second fact specifies the condition under which this adjustment will occur (\"as necessary\").\nNote that I've replaced the pronoun \"he\" with the subject \"He\" to make each fact self-contained.\nNote that I did not combine the two facts into one, as \"He will be advised to monitor his blood pressure\" is a complex sentence with two separate actions. Each fact is self-contained and can stand alone as true or false.\nNote that I did not combine the two clauses into a single fact, as they are separate and independent propositions. Each fact is self-contained and can stand alone as true or false.\nNote that I've replaced the pronoun \"his\" with the subject \"his condition\" and \"his treatment plan\" to make each fact self-contained."
   },
   "stage3_key_sentences": [
     "Doctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue?",
@@ -290,11 +523,11 @@
     "stating mention diagnostic",
     "subject make fact",
     "examination mentioned dialogue",
-    "contained proposition blood",
+    "complex sentence separate",
+    "subject condition treatment",
     "information replaced pronoun",
     "contained provide statement",
-    "congestive heart failure",
-    "simple negation stating"
+    "congestive heart failure"
   ],
   "stage3_coverage_scores": [
     {
@@ -322,9 +555,9 @@
       "status": "added",
       "reason": "coverage <= cov_min (uMedSum adds the dialogue sentence verbatim)",
       "insertion": {
-        "section": "subjective",
-        "line_index": 4,
-        "perplexity": 17.65
+        "section": "objective",
+        "line_index": 13,
+        "perplexity": 10.88
       }
     }
   ],
@@ -332,7 +565,7 @@
     {
       "statement": "Patient: I'm 50 years old, and I'm here for my annual exam.",
       "evidence": "Patient: I'm 50 years old, and I'm here for my annual exam.",
-      "section": "subjective",
+      "section": "objective",
       "candidate": "Patient: I'm 50 years old, and I'm here for my annual exam."
     }
   ],
@@ -382,13 +615,105 @@
         "entailment": 0.4541,
         "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
         "from_unit": "He has not experienced any recent changes in symptoms, such as increased shortness of breath or swelling."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "The diagnosis is based on his reported symptoms.",
+        "entailment": 0.4558,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Diagnoses and Clinical Reasoning: The patient is diagnosed with congestive heart failure, based on his reported history and symptoms."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "His reported symptoms are used to make the diagnosis.",
+        "entailment": 0.4592,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Diagnoses and Clinical Reasoning: The patient is diagnosed with congestive heart failure, based on his reported history and symptoms."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "The patient's current medication regimen will be reviewed.",
+        "entailment": 0.4658,
+        "reason": "Could not be decomposed further and not entailed above threshold Ta.",
+        "from_unit": "Treatment Plan, Medications, and Follow-up: The patient's current medication regimen for heart failure and blood pressure will be reviewed and adjusted as necessary."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "The medication regimen will be adjusted.",
+        "entailment": 0.4436,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Treatment Plan, Medications, and Follow-up: The patient's current medication regimen for heart failure and blood pressure will be reviewed and adjusted as necessary."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "He will be advised.",
+        "entailment": 0.4587,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "He will be advised to take his medications regularly and to monitor his blood pressure."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "He will take his medications.",
+        "entailment": 0.4509,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "He will be advised to take his medications regularly and to monitor his blood pressure."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "He will take his medications regularly.",
+        "entailment": 0.4526,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "He will be advised to take his medications regularly and to monitor his blood pressure."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "He will be advised.",
+        "entailment": 0.4587,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "He will be advised to take his medications regularly and to monitor his blood pressure."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "He will monitor his blood pressure.",
+        "entailment": 0.4578,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "He will be advised to take his medications regularly and to monitor his blood pressure."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "Follow-up appointments will be scheduled.",
+        "entailment": 0.4573,
+        "reason": "Could not be decomposed further and not entailed above threshold Ta.",
+        "from_unit": "Follow-up appointments will be scheduled to monitor his condition and adjust his treatment plan as needed."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "His condition will be monitored.",
+        "entailment": 0.4575,
+        "reason": "Could not be decomposed further and not entailed above threshold Ta.",
+        "from_unit": "Follow-up appointments will be scheduled to monitor his condition and adjust his treatment plan as needed."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "His treatment plan will be adjusted.",
+        "entailment": 0.4509,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Follow-up appointments will be scheduled to monitor his condition and adjust his treatment plan as needed."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "As needed, the treatment plan will be adjusted.",
+        "entailment": 0.46,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Follow-up appointments will be scheduled to monitor his condition and adjust his treatment plan as needed."
       }
     ]
   },
   "final_ap": {
-    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** The patient is diagnosed with congestive heart failure, based on his reported history and symptoms.\n* **Treatment Plan, Medications, and Follow-up:** The patient's current medication regimen for heart failure and blood pressure will be reviewed and adjusted as necessary. He will be advised to take his medications regularly and to monitor his blood pressure. Follow-up appointments will be scheduled to monitor his condition and adjust his treatment plan as needed.\n\nPlease note that this SOAP note is based on the provided dialogue and may not reflect the actual medical record or treatment plan."
+    "assessment_and_plan": "The patient is diagnosed with congestive heart failure.\nThe diagnosis is based on his reported history.\nNote that I've followed the rules to split the statement into independent, self-contained atomic facts. Each fact is a single proposition that can stand alone as true or false.\nThe patient's current medication regimen is for heart failure.\nThe patient's current medication regimen is for blood pressure.\nAs necessary.\nNote that I've followed the rules to split the statement into independent, self-contained atomic facts. The first fact states that the medication regimen will be adjusted, and the second fact specifies the condition under which this adjustment will occur (\"as necessary\").\nNote that I've replaced the pronoun \"he\" with the subject \"He\" to make each fact self-contained.\nNote that I did not combine the two facts into one, as \"He will be advised to monitor his blood pressure\" is a complex sentence with two separate actions. Each fact is self-contained and can stand alone as true or false.\nNote that I did not combine the two clauses into a single fact, as they are separate and independent propositions. Each fact is self-contained and can stand alone as true or false.\nNote that I've replaced the pronoun \"his\" with the subject \"his condition\" and \"his treatment plan\" to make each fact self-contained."
   },
-  "ap_unchanged": true,
+  "scope": "soap",
+  "ap_changed": true,
   "thresholds": {
     "Te": 0.9,
     "Tc": 0.8,
@@ -404,10 +729,11 @@
     "ppl": "gpt2"
   },
   "status": "success",
-  "seconds": 89.1,
+  "seconds": 107.2,
   "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 50 years old, and I'm here for my annual exam. I've been doing okay overall, but I have a few things we can talk about, like my heart failure and blood pressure.\nDoctor: Could you please provide more details about your heart failure, such as when it was diagnosed, any symptoms you experience, and whether you are currently on any medications for it?\nPatient: I was diagnosed with congestive heart failure a while back, and I've been managing it with medication. I try to watch my diet, especially keeping sodium low, and I haven't had any major symptoms like chest pain or shortness of breath lately. I'm on medication for it, but I do forget sometimes to take my blood pressure meds, which I know can affect it.\nDoctor: Could you please provide the date of your heart failure diagnosis, the specific medications you are currently taking for heart failure and blood pressure, and whether you have experienced any recent changes in symptoms such as increased shortness of breath, swelling, or fatigue?\nPatient: I don't know the exact date of my heart failure diagnosis, but I've been managing it for a while now. I'm on medication for it, and I also take blood pressure meds, though I sometimes forget to take those. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful.\nDoctor: Could you please specify the names and dosages of the medications you are currently taking for heart failure and blood pressure?\nPatient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly.\nDoctor: Could you please check your pill bottle or records and let me know the specific names and dosages of your heart failure and blood pressure medications? Also, have you noticed any recent changes in your symptoms, such as increased shortness of breath, swelling, or dizziness?\nPatient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful.\nDoctor: Could you please check your pill bottles or records and provide the names, dosages, and frequency of your heart failure and blood pressure medications?\nPatient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly.\nDoctor: Could you please check your pill bottle or records and provide the names, dosages, and frequency of your heart failure and blood pressure medications? Additionally, could you share any recent blood pressure readings or symptoms you've experienced during stressful periods?\nPatient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly. I haven't had any recent changes in symptoms like more shortness of breath or swelling, but I do notice my blood pressure tends to go up when work is stressful.\nDoctor: Could you please provide the names, dosages, and frequency of your heart failure and blood pressure medications, either from your pill bottle or records?\nPatient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly.\nDoctor: Could you please check your pill bottle or records and provide the names, dosages, and frequencies of your heart failure and blood pressure medications?\nPatient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly.\nDoctor: Could you please provide the names, dosages, and frequencies of your heart failure and blood pressure medications, either from your pill bottle or records?\nPatient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly.\nDoctor: Could you please provide the names, dosages, and frequencies of your heart failure and blood pressure medications, either from your pill bottle or records?\nPatient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly.\nDoctor: Could you please check your pill bottle or records and let me know the names, dosages, and how often you're supposed to take your medications for heart failure and blood pressure?\nPatient: I don't know the exact names or dosages of my medications off the top of my head, but I can check my pill bottle or my records if you need them. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly.\nDoctor: Could you please check your pill bottle or records and provide the names, dosages, and frequencies of your heart failure and blood pressure medications?\nPatient: I don't know the exact names or dosages off the top of my head, but I can check my pill bottle or records for you. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly.\nDoctor: Could you please check your pill bottle or records and provide the exact names, dosages, and frequencies of your heart failure and blood pressure medications?\nPatient: I don't know the exact names or dosages off the top of my head, but I can check my pill bottle or records for you. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly.\nDoctor: Could you please check your pill bottle or records and let me know the names, dosages, and how often you're supposed to take your medications for heart failure and blood pressure?\nPatient: I don't know the exact names or dosages off the top of my head, but I can check my pill bottle or records for you. I do know I'm on something for my heart failure and blood pressure, but I sometimes forget to take them regularly.",
   "reference_so": {
     "subjective": "Basic information: Age: 50, Gender: Not specified, Occupation: Not specified, Visit Time: Annual exam, Chief Complaint: Annual exam with concerns about heart failure, blood pressure, and medication adherence\n\nHistory of present illness: Onset: Not specified, Course: Not specified, Symptom Characteristics: No recent changes in symptoms like more shortness of breath or swelling, Progression: Not specified, Prior Evaluation: Not specified, Treatment: On medication for heart failure and blood pressure, Response: Medication adherence is inconsistent, with reports of elevated blood pressure during stressful periods\n\nPast history: Previous Illnesses: Heart failure, hypertension, Operations: Not specified, Trauma: Not specified, Allergies: Not specified, Personal History: Not specified, Family History: Not specified",
-    "objective": "Physical examination: Vital Signs: Not specified, System Findings: Not specified\n\nInvestigations: Laboratory: Not specified, Imaging: Not specified, ECG: Not specified"
+    "objective": "Physical examination: Vital Signs: Not specified, System Findings: Not specified\n\nInvestigations: Laboratory: Not specified, Imaging: Not specified, ECG: Not specified",
+    "assessment_and_plan": "Preliminary diagnosis:\n1. Heart failure (chronic, unspecified NYHA class). 2. Hypertension. 3. Non-adherence to antihypertensive and heart failure medications.\n\nDiagnostic discussion:\nThe patient is a 50-year-old individual presenting for an annual exam with concerns about heart failure, blood pressure, and medication adherence. The patient has a known history of heart failure and hypertension, and is currently on medication for these conditions. However, the patient reports inconsistent adherence to the medication regimen, with episodes of elevated blood pressure during stressful periods. This suggests that the current treatment plan may not be optimally effective due to non-adherence. The absence of recent changes in symptoms such as increased shortness of breath or swelling indicates that the patient's condition may be stable, but the lack of consistent medication adherence could lead to complications. Differential diagnoses include worsening heart failure due to non-adherence, uncontrolled hypertension, and potential secondary causes of hypertension such as renal disease or endocrine disorders. These differentials are considered based on the patient's history of heart failure and hypertension, and the possibility of non-adherence to medication.\n1. Further evaluation: Obtain a detailed physical examination, including assessment of vital signs, signs of heart failure (e.g., jugular venous pressure, peripheral edema), and cardiac auscultation. Perform a comprehensive laboratory workup, including a complete blood count, renal function tests, electrolytes, and a lipid profile. An echocardiogram may be indicated to assess left ventricular function and identify any structural abnormalities. An ECG should be performed to evaluate for arrhythmias or ischemic changes. 2. Medication: Continue with standard heart failure and hypertension medications, including ACE inhibitors or ARBs, beta-blockers, and diuretics, as appropriate. Address non-adherence by discussing the importance of medication adherence and exploring potential barriers (e.g., cost, side effects, forgetfulness). Consider alternative medications if side effects are a concern. Monitor for adverse effects and adjust dosages as needed. 3. Non-drug management and education: Encourage lifestyle modifications, including a low-sodium diet, regular physical activity, weight management, and stress reduction techniques. Educate the patient on the importance of medication adherence and the potential consequences of non-adherence. Provide clear instructions on recognizing and managing symptoms of heart failure and hypertension, including when to seek medical attention. 4. Follow-up: Schedule a follow-up appointment in one to two weeks to reassess blood pressure, review medication adherence, and evaluate any changes in symptoms. Repeat laboratory tests and imaging studies as indicated based on the initial evaluation and response to treatment."
   }
 }

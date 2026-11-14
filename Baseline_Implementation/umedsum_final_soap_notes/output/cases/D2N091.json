@@ -11,14 +11,16 @@
   },
   "stage1_so": {
     "subjective": "* **Chief Complaint:** Insomnia\n* **History of Present Illness (HPI):** The patient, a 54-year-old male, presents with complaints of insomnia. He reports having trouble sleeping due to stress from traveling and adjusting to new places. He has been experiencing frequent awakenings, difficulty staying asleep, and feeling unrefreshed upon waking. He has tried melatonin and meditation, but has not found relief.",
-    "objective": "* **Physical Examination & Vitals:** None mentioned\n* **Diagnostic Results & Labs:** None mentioned"
+    "objective": "* **Physical Examination & Vitals:** None mentioned\n* **Diagnostic Results & Labs:** None mentioned",
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** The patient's symptoms are consistent with insomnia, likely related to stress from traveling and adjusting to new places. The patient's history of frequent awakenings, difficulty staying asleep, and feeling unrefreshed upon waking support this diagnosis.\n* **Treatment Plan, Medications, and Follow-up:** The patient will be prescribed a sleep aid to help improve the quality of his sleep. He will also be advised to establish a consistent sleep schedule and create a relaxing bedtime routine. Follow-up will be scheduled in two weeks to assess the patient's progress and adjust the treatment plan as needed.\n\nNote: As the patient did not have any physical examination findings or diagnostic results mentioned, there is no objective data to include in the note."
   },
   "stage1_ap": {
     "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** The patient's symptoms are consistent with insomnia, likely related to stress from traveling and adjusting to new places. The patient's history of frequent awakenings, difficulty staying asleep, and feeling unrefreshed upon waking support this diagnosis.\n* **Treatment Plan, Medications, and Follow-up:** The patient will be prescribed a sleep aid to help improve the quality of his sleep. He will also be advised to establish a consistent sleep schedule and create a relaxing bedtime routine. Follow-up will be scheduled in two weeks to assess the patient's progress and adjust the treatment plan as needed.\n\nNote: As the patient did not have any physical examination findings or diagnostic results mentioned, there is no objective data to include in the note."
   },
   "stage2_so": {
     "subjective": "Chief Complaint: Insomnia\nHistory of Present Illness (HPI): The patient, a 54-year-old male, presents with complaints of insomnia.\nHe reports having trouble sleeping due to stress from traveling and adjusting to new places.\nHe has been experiencing frequent awakenings, difficulty staying asleep, and feeling unrefreshed upon waking.\nHe has tried melatonin and meditation, but has not found relief.",
-    "objective": "Physical Examination is not mentioned.\nVitals are not mentioned.\nBased on the rules provided, I would decompose the statement as follows:\nThere is no mention of physical examination.\nThis is the only atomic fact that can be extracted from the statement, as it is a single proposition stating the absence of information about physical examination or vitals.\nDiagnostic Results are not mentioned.\nLabs are not mentioned."
+    "objective": "Physical Examination is not mentioned.\nVitals are not mentioned.\nBased on the rules provided, I would decompose the statement as follows:\nThere is no mention of physical examination.\nThis is the only atomic fact that can be extracted from the statement, as it is a single proposition stating the absence of information about physical examination or vitals.\nDiagnostic Results are not mentioned.\nLabs are not mentioned.",
+    "assessment_and_plan": "Diagnoses and Clinical Reasoning: The patient's symptoms are consistent with insomnia, likely related to stress from traveling and adjusting to new places.\nThe patient's history of frequent awakenings, difficulty staying asleep, and feeling unrefreshed upon waking support this diagnosis.\nThe sleep aid is intended to help improve the quality of the patient's sleep.\nNote that I did not combine the two facts into one, as \"create a relaxing bedtime routine\" is a separate action that can be evaluated independently of the advice being given.\nNote that I did not combine the two findings into a single fact, as they are separate and independent propositions.\nNote that I've followed the rules by splitting the conjunction \"in two weeks\" into a separate fact, and replacing the pronoun \"it\" with the subject \"the follow-up\".\nNote that I did not break down \"as needed\" into separate facts, as it is a single phrase modifying the verb \"will be adjusted\".\nNote that I've followed the rules to split the statement into independent, self-contained atomic facts. Each fact is a single proposition that can stand alone as true or false."
   },
   "stage2_audit": {
     "subjective": [
@@ -209,20 +211,214 @@
           "max_depth_reached": 2
         }
       }
+    ],
+    "assessment_and_plan": [
+      {
+        "unit": "Diagnoses and Clinical Reasoning: The patient's symptoms are consistent with insomnia, likely related to stress from traveling and adjusting to new places.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.9897,
+          "neutral": 0.0088,
+          "contradiction": 0.0014
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 54 years old, male. I'm here for my annual exam. Doctor: Could you please confirm if there are any other details you'd like to include in your basic information, such as occupation, marital status, or any other relevant personal information? Patient: No, I don't think so. I don't have anything else to add to my basic information. Doctor: Could you please describe any symptoms or concerns you've been experiencing recently that you'd like to discuss during this annual exam? Patient: I've been having trouble with insomnia lately. It's been really hard to get a good night's sleep, and it's been kind of stressful with all the traveling we've been doing. I've tried things like melatonin and meditation, but nothing seems to be helping much. Doctor: Could you describe the duration of your insomnia, how often it occurs, and whether it is associated with any specific stressors or psychiatric symptoms such as anxiety or depression? Patient: The insomnia has been going on for a while now, especially since we've been traveling a lot and adjusting to things in the fall. It's been pretty consistent, and I think the stress from all the traveling and the changes have been contributing to it. I haven't really noticed any anxiety or depression, but it's definitely been tough on me. Doctor: Have you experienced any daytime sleepiness, fatigue, or cognitive difficulties due to the insomnia? Have you ever been evaluated for sleep disorders such as sleep apnea or restless legs syndrome? Patient: No, I haven't experienced any daytime sleepiness or cognitive difficulties, and I haven't been evaluated for sleep disorders like sleep apnea or restless legs syndrome. It's just been the insomnia that's been an issue for me. Doctor: Could you describe your typical bedtime routine and sleep environment? Additionally, have you noticed any patterns or triggers that seem to worsen your insomnia? Patient:",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "The patient's history of frequent awakenings, difficulty staying asleep, and feeling unrefreshed upon waking support this diagnosis.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.9541,
+          "neutral": 0.0338,
+          "contradiction": 0.012
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 54 years old, male. I'm here for my annual exam. Doctor: Could you please confirm if there are any other details you'd like to include in your basic information, such as occupation, marital status, or any other relevant personal information? Patient: No, I don't think so. I don't have anything else to add to my basic information. Doctor: Could you please describe any symptoms or concerns you've been experiencing recently that you'd like to discuss during this annual exam? Patient: I've been having trouble with insomnia lately. It's been really hard to get a good night's sleep, and it's been kind of stressful with all the traveling we've been doing. I've tried things like melatonin and meditation, but nothing seems to be helping much. Doctor: Could you describe the duration of your insomnia, how often it occurs, and whether it is associated with any specific stressors or psychiatric symptoms such as anxiety or depression? Patient: The insomnia has been going on for a while now, especially since we've been traveling a lot and adjusting to things in the fall. It's been pretty consistent, and I think the stress from all the traveling and the changes have been contributing to it. I haven't really noticed any anxiety or depression, but it's definitely been tough on me. Doctor: Have you experienced any daytime sleepiness, fatigue, or cognitive difficulties due to the insomnia? Have you ever been evaluated for sleep disorders such as sleep apnea or restless legs syndrome? Patient: No, I haven't experienced any daytime sleepiness or cognitive difficulties, and I haven't been evaluated for sleep disorders like sleep apnea or restless legs syndrome. It's just been the insomnia that's been an issue for me. Doctor: Could you describe your typical bedtime routine and sleep environment? Additionally, have you noticed any patterns or triggers that seem to worsen your insomnia? Patient:",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "Treatment Plan, Medications, and Follow-up: The patient will be prescribed a sleep aid to help improve the quality of his sleep.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.4402,
+          "neutral": 0.3132,
+          "contradiction": 0.2466
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "waking? Patient: Yes, I do wake up frequently during the night, and it's hard to stay asleep. I often feel tired when I wake up, like I didn't get a good rest, even if I did manage to sleep for a few hours. It's been really frustrating. Doctor: How many hours of sleep do you typically get per night, and how does this compare to your usual sleep duration before the insomnia began? Additionally, have you noticed any specific symptoms during the night, such as shortness of breath, leg discomfort, or frequent awakenings? Patient: I typically get around 5 to 6 hours of sleep per night, which is less than what I used to get before the insomnia started. I used to sleep more consistently, maybe 7 or 8 hours. As for symptoms during the night, I don't have shortness of breath or leg discomfort, but I do wake up frequently and have trouble staying asleep. It's been really frustrating. Doctor: Have you experienced any daytime sleepiness, fatigue, or difficulty concentrating due to your insomnia? Patient: Yes, I have been feeling pretty fatigued during the day and it's been harder to concentrate, especially with the lack of good sleep. It's been affecting my overall energy levels and making it harder to keep up with everything. Doctor: Have you noticed any other symptoms that might be related to your sleep issues, such as loud snoring, pauses in breathing during sleep, or excessive daytime sleepiness? Patient: I don't have loud snoring or pauses in breathing during sleep, but I do feel excessively sleepy during the day, which has been really affecting my ability to function normally. It's been tough keeping up with everything because of it. Doctor: Have you noticed any other symptoms that might be related to your sleep issues, such as difficulty concentrating, mood changes, or trouble staying awake during the day? Patient: Yes, I have had trouble concentrating and it's been harder to stay awake during the day. It's affected my mood a bit too, making me feel more irritable than usual",
+        "atomic_decomposition": {
+          "original": "Treatment Plan, Medications, and Follow-up: The patient will be prescribed a sleep aid to help improve the quality of his sleep.",
+          "retained": [
+            {
+              "atom": "The sleep aid is intended to help improve the quality of the patient's sleep.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 54 years old, male. I'm here for my annual exam. Doctor: Could you please confirm if there are any other details you'd like to include in your basic information, such as occupation, marital status, or any other relevant personal information? Patient: No, I don't think so. I don't have anything else to add to my basic information. Doctor: Could you please describe any symptoms or concerns you've been experiencing recently that you'd like to discuss during this annual exam? Patient: I've been having trouble with insomnia lately. It's been really hard to get a good night's sleep, and it's been kind of stressful with all the traveling we've been doing. I've tried things like melatonin and meditation, but nothing seems to be helping much. Doctor: Could you describe the duration of your insomnia, how often it occurs, and whether it is associated with any specific stressors or psychiatric symptoms such as anxiety or depression? Patient: The insomnia has been going on for a while now, especially since we've been traveling a lot and adjusting to things in the fall. It's been pretty consistent, and I think the stress from all the traveling and the changes have been contributing to it. I haven't really noticed any anxiety or depression, but it's definitely been tough on me. Doctor: Have you experienced any daytime sleepiness, fatigue, or cognitive difficulties due to the insomnia? Have you ever been evaluated for sleep disorders such as sleep apnea or restless legs syndrome? Patient: No, I haven't experienced any daytime sleepiness or cognitive difficulties, and I haven't been evaluated for sleep disorders like sleep apnea or restless legs syndrome. It's just been the insomnia that's been an issue for me. Doctor: Could you describe your typical bedtime routine and sleep environment? Additionally, have you noticed any patterns or triggers that seem to worsen your insomnia? Patient:",
+              "entailment": 0.9736,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "The patient will be prescribed a sleep aid.",
+              "reasoning": "Could not be decomposed further and not entailed above threshold Ta.",
+              "entailment": 0.4268,
+              "depth": 1
+            }
+          ],
+          "decomposition_method": "unsplit",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "He will also be advised to establish a consistent sleep schedule and create a relaxing bedtime routine.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.4268,
+          "neutral": 0.3254,
+          "contradiction": 0.2477
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "during the day, which has been really affecting my ability to function normally. It's been tough keeping up with everything because of it. Doctor: Have you noticed any other symptoms that might be related to your sleep issues, such as difficulty concentrating, mood changes, or trouble staying awake during the day? Patient: Yes, I have had trouble concentrating and it's been harder to stay awake during the day. It's affected my mood a bit too, making me feel more irritable than usual. It's been tough keeping up with everything because of it. Doctor: Have you noticed any other symptoms that might be related to your sleep issues, such as loud snoring, pauses in breathing during sleep, or leg discomfort that wakes you up? Patient: I don't have loud snoring or pauses in breathing during sleep, and I don't have leg discomfort that wakes me up. But I do wake up frequently and have trouble staying asleep, which has been really frustrating. It's been affecting my mood and making me feel more irritable than usual. Doctor: Have you experienced any symptoms suggestive of restless legs syndrome, such as an irresistible urge to move your legs, especially during rest or in the evening? Patient: No, I don't have an irresistible urge to move my legs, especially during rest or in the evening. I don't think that's what's going on with my sleep issues. It's more about waking up frequently and not being able to stay asleep through the night. Doctor: Have you noticed any other symptoms that might be related to your sleep issues, such as loud snoring, pauses in breathing during sleep, or excessive daytime sleepiness? Patient: No, I don't have loud snoring or pauses in breathing during sleep, but I do feel excessively sleepy during the day, which has been really affecting my ability to function normally. It's been tough keeping up with everything because of it.",
+        "atomic_decomposition": {
+          "original": "He will also be advised to establish a consistent sleep schedule and create a relaxing bedtime routine.",
+          "retained": [
+            {
+              "atom": "Note that I did not combine the two facts into one, as \"create a relaxing bedtime routine\" is a separate action that can be evaluated independently of the advice being given.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 54 years old, male. I'm here for my annual exam. Doctor: Could you please confirm if there are any other details you'd like to include in your basic information, such as occupation, marital status, or any other relevant personal information? Patient: No, I don't think so. I don't have anything else to add to my basic information. Doctor: Could you please describe any symptoms or concerns you've been experiencing recently that you'd like to discuss during this annual exam? Patient: I've been having trouble with insomnia lately. It's been really hard to get a good night's sleep, and it's been kind of stressful with all the traveling we've been doing. I've tried things like melatonin and meditation, but nothing seems to be helping much. Doctor: Could you describe the duration of your insomnia, how often it occurs, and whether it is associated with any specific stressors or psychiatric symptoms such as anxiety or depression? Patient: The insomnia has been going on for a while now, especially since we've been traveling a lot and adjusting to things in the fall. It's been pretty consistent, and I think the stress from all the traveling and the changes have been contributing to it. I haven't really noticed any anxiety or depression, but it's definitely been tough on me. Doctor: Have you experienced any daytime sleepiness, fatigue, or cognitive difficulties due to the insomnia? Have you ever been evaluated for sleep disorders such as sleep apnea or restless legs syndrome? Patient: No, I haven't experienced any daytime sleepiness or cognitive difficulties, and I haven't been evaluated for sleep disorders like sleep apnea or restless legs syndrome. It's just been the insomnia that's been an issue for me. Doctor: Could you describe your typical bedtime routine and sleep environment? Additionally, have you noticed any patterns or triggers that seem to worsen your insomnia? Patient:",
+              "entailment": 0.5146,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I did not combine the two findings into a single fact, as they are separate and independent propositions.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 54 years old, male. I'm here for my annual exam. Doctor: Could you please confirm if there are any other details you'd like to include in your basic information, such as occupation, marital status, or any other relevant personal information? Patient: No, I don't think so. I don't have anything else to add to my basic information. Doctor: Could you please describe any symptoms or concerns you've been experiencing recently that you'd like to discuss during this annual exam? Patient: I've been having trouble with insomnia lately. It's been really hard to get a good night's sleep, and it's been kind of stressful with all the traveling we've been doing. I've tried things like melatonin and meditation, but nothing seems to be helping much. Doctor: Could you describe the duration of your insomnia, how often it occurs, and whether it is associated with any specific stressors or psychiatric symptoms such as anxiety or depression? Patient: The insomnia has been going on for a while now, especially since we've been traveling a lot and adjusting to things in the fall. It's been pretty consistent, and I think the stress from all the traveling and the changes have been contributing to it. I haven't really noticed any anxiety or depression, but it's definitely been tough on me. Doctor: Have you experienced any daytime sleepiness, fatigue, or cognitive difficulties due to the insomnia? Have you ever been evaluated for sleep disorders such as sleep apnea or restless legs syndrome? Patient: No, I haven't experienced any daytime sleepiness or cognitive difficulties, and I haven't been evaluated for sleep disorders like sleep apnea or restless legs syndrome. It's just been the insomnia that's been an issue for me. Doctor: Could you describe your typical bedtime routine and sleep environment? Additionally, have you noticed any patterns or triggers that seem to worsen your insomnia? Patient:",
+              "entailment": 0.9619,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "He will be advised.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4363,
+              "depth": 2
+            },
+            {
+              "atom": "He will establish a consistent sleep schedule.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4219,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I did not break down \"establish a consistent sleep schedule\" into separate facts, as it is a single proposition that can stand alone as true or false.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4885,
+              "depth": 2
+            },
+            {
+              "atom": "He will be advised.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4363,
+              "depth": 2
+            },
+            {
+              "atom": "He will create a relaxing bedtime routine.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4309,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Follow-up will be scheduled in two weeks to assess the patient's progress and adjust the treatment plan as needed.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.4355,
+          "neutral": 0.3101,
+          "contradiction": 0.2544
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "insomnia? Have you ever been evaluated for sleep disorders such as sleep apnea or restless legs syndrome? Patient: No, I haven't experienced any daytime sleepiness or cognitive difficulties, and I haven't been evaluated for sleep disorders like sleep apnea or restless legs syndrome. It's just been the insomnia that's been an issue for me. Doctor: Could you describe your typical bedtime routine and sleep environment? Additionally, have you noticed any patterns or triggers that seem to worsen your insomnia? Patient: My typical bedtime routine is pretty straightforward—I try to go to bed around the same time each night, but it's been hard to stick to because of the travel. I've been stretching in the morning, but that's about it. As for triggers, I think the stress from traveling and adjusting to new places has definitely made it worse. It's just been really tough to get into a good sleep rhythm. Doctor: Could you describe your typical sleep environment, including factors such as noise, light, and comfort, and whether you have any habits or activities that occur close to bedtime that might interfere with sleep? Patient: My sleep environment is pretty standard—nothing too disruptive in terms of noise or light. I don't have any habits close to bedtime that I think are interfering with sleep, but the travel and changing routines have definitely thrown off my sleep rhythm. It's just been really hard to get into a good pattern. Doctor: Have you noticed any specific symptoms during the night, such as waking up frequently, difficulty staying asleep, or feeling unrefreshed upon waking? Patient: Yes, I do wake up frequently during the night, and it's hard to stay asleep. I often feel tired when I wake up, like I didn't get a good rest, even if I did manage to sleep for a few hours. It's been really frustrating. Doctor: How many hours of sleep do you typically get per night, and how does this compare to your usual sleep duration before the insomnia began? Additionally, have you noticed any specific symptoms during",
+        "atomic_decomposition": {
+          "original": "Follow-up will be scheduled in two weeks to assess the patient's progress and adjust the treatment plan as needed.",
+          "retained": [
+            {
+              "atom": "Note that I've followed the rules by splitting the conjunction \"in two weeks\" into a separate fact, and replacing the pronoun \"it\" with the subject \"the follow-up\".",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 54 years old, male. I'm here for my annual exam. Doctor: Could you please confirm if there are any other details you'd like to include in your basic information, such as occupation, marital status, or any other relevant personal information? Patient: No, I don't think so. I don't have anything else to add to my basic information. Doctor: Could you please describe any symptoms or concerns you've been experiencing recently that you'd like to discuss during this annual exam? Patient: I've been having trouble with insomnia lately. It's been really hard to get a good night's sleep, and it's been kind of stressful with all the traveling we've been doing. I've tried things like melatonin and meditation, but nothing seems to be helping much. Doctor: Could you describe the duration of your insomnia, how often it occurs, and whether it is associated with any specific stressors or psychiatric symptoms such as anxiety or depression? Patient: The insomnia has been going on for a while now, especially since we've been traveling a lot and adjusting to things in the fall. It's been pretty consistent, and I think the stress from all the traveling and the changes have been contributing to it. I haven't really noticed any anxiety or depression, but it's definitely been tough on me. Doctor: Have you experienced any daytime sleepiness, fatigue, or cognitive difficulties due to the insomnia? Have you ever been evaluated for sleep disorders such as sleep apnea or restless legs syndrome? Patient: No, I haven't experienced any daytime sleepiness or cognitive difficulties, and I haven't been evaluated for sleep disorders like sleep apnea or restless legs syndrome. It's just been the insomnia that's been an issue for me. Doctor: Could you describe your typical bedtime routine and sleep environment? Additionally, have you noticed any patterns or triggers that seem to worsen your insomnia? Patient:",
+              "entailment": 0.9233,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I did not break down \"as needed\" into separate facts, as it is a single phrase modifying the verb \"will be adjusted\".",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 54 years old, male. I'm here for my annual exam. Doctor: Could you please confirm if there are any other details you'd like to include in your basic information, such as occupation, marital status, or any other relevant personal information? Patient: No, I don't think so. I don't have anything else to add to my basic information. Doctor: Could you please describe any symptoms or concerns you've been experiencing recently that you'd like to discuss during this annual exam? Patient: I've been having trouble with insomnia lately. It's been really hard to get a good night's sleep, and it's been kind of stressful with all the traveling we've been doing. I've tried things like melatonin and meditation, but nothing seems to be helping much. Doctor: Could you describe the duration of your insomnia, how often it occurs, and whether it is associated with any specific stressors or psychiatric symptoms such as anxiety or depression? Patient: The insomnia has been going on for a while now, especially since we've been traveling a lot and adjusting to things in the fall. It's been pretty consistent, and I think the stress from all the traveling and the changes have been contributing to it. I haven't really noticed any anxiety or depression, but it's definitely been tough on me. Doctor: Have you experienced any daytime sleepiness, fatigue, or cognitive difficulties due to the insomnia? Have you ever been evaluated for sleep disorders such as sleep apnea or restless legs syndrome? Patient: No, I haven't experienced any daytime sleepiness or cognitive difficulties, and I haven't been evaluated for sleep disorders like sleep apnea or restless legs syndrome. It's just been the insomnia that's been an issue for me. Doctor: Could you describe your typical bedtime routine and sleep environment? Additionally, have you noticed any patterns or triggers that seem to worsen your insomnia? Patient:",
+              "entailment": 0.9263,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I've followed the rules to split the statement into independent, self-contained atomic facts. Each fact is a single proposition that can stand alone as true or false.",
+              "citation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today? Patient: I'm 54 years old, male. I'm here for my annual exam. Doctor: Could you please confirm if there are any other details you'd like to include in your basic information, such as occupation, marital status, or any other relevant personal information? Patient: No, I don't think so. I don't have anything else to add to my basic information. Doctor: Could you please describe any symptoms or concerns you've been experiencing recently that you'd like to discuss during this annual exam? Patient: I've been having trouble with insomnia lately. It's been really hard to get a good night's sleep, and it's been kind of stressful with all the traveling we've been doing. I've tried things like melatonin and meditation, but nothing seems to be helping much. Doctor: Could you describe the duration of your insomnia, how often it occurs, and whether it is associated with any specific stressors or psychiatric symptoms such as anxiety or depression? Patient: The insomnia has been going on for a while now, especially since we've been traveling a lot and adjusting to things in the fall. It's been pretty consistent, and I think the stress from all the traveling and the changes have been contributing to it. I haven't really noticed any anxiety or depression, but it's definitely been tough on me. Doctor: Have you experienced any daytime sleepiness, fatigue, or cognitive difficulties due to the insomnia? Have you ever been evaluated for sleep disorders such as sleep apnea or restless legs syndrome? Patient: No, I haven't experienced any daytime sleepiness or cognitive difficulties, and I haven't been evaluated for sleep disorders like sleep apnea or restless legs syndrome. It's just been the insomnia that's been an issue for me. Doctor: Could you describe your typical bedtime routine and sleep environment? Additionally, have you noticed any patterns or triggers that seem to worsen your insomnia? Patient:",
+              "entailment": 0.9224,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "Follow-up will be scheduled.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4368,
+              "depth": 2
+            },
+            {
+              "atom": "The follow-up will be scheduled in two weeks.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4321,
+              "depth": 2
+            },
+            {
+              "atom": "The patient's progress will be assessed.",
+              "reasoning": "Could not be decomposed further and not entailed above threshold Ta.",
+              "entailment": 0.4751,
+              "depth": 1
+            },
+            {
+              "atom": "The treatment plan will be adjusted.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4221,
+              "depth": 2
+            },
+            {
+              "atom": "The treatment plan will be adjusted as needed.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4363,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      }
     ]
   },
   "stage2_stats": {
     "decision_counts": {
-      "faithful": 5,
-      "uncertain": 2
+      "faithful": 7,
+      "uncertain": 5
     },
-    "num_claims": 7,
-    "num_kept": 7,
+    "num_claims": 12,
+    "num_kept": 12,
     "claim_retention_rate": 1.0
   },
   "stage3_so": {
-    "subjective": "Chief Complaint: Insomnia\nHistory of Present Illness (HPI): The patient, a 54-year-old male, presents with complaints of insomnia.\nHe reports having trouble sleeping due to stress from traveling and adjusting to new places.\nHe has been experiencing frequent awakenings, difficulty staying asleep, and feeling unrefreshed upon waking.\nHe has tried melatonin and meditation, but has not found relief.",
-    "objective": "Physical Examination is not mentioned.\nVitals are not mentioned.\nBased on the rules provided, I would decompose the statement as follows:\nThere is no mention of physical examination.\nThis is the only atomic fact that can be extracted from the statement, as it is a single proposition stating the absence of information about physical examination or vitals.\nDiagnostic Results are not mentioned.\nLabs are not mentioned."
+    "subjective": "Chief Complaint: Insomnia\nPatient: I'm 54 years old, male.\nHistory of Present Illness (HPI): The patient, a 54-year-old male, presents with complaints of insomnia.\nHe reports having trouble sleeping due to stress from traveling and adjusting to new places.\nHe has been experiencing frequent awakenings, difficulty staying asleep, and feeling unrefreshed upon waking.\nHe has tried melatonin and meditation, but has not found relief.",
+    "objective": "Physical Examination is not mentioned.\nVitals are not mentioned.\nBased on the rules provided, I would decompose the statement as follows:\nThere is no mention of physical examination.\nThis is the only atomic fact that can be extracted from the statement, as it is a single proposition stating the absence of information about physical examination or vitals.\nDiagnostic Results are not mentioned.\nLabs are not mentioned.",
+    "assessment_and_plan": "Diagnoses and Clinical Reasoning: The patient's symptoms are consistent with insomnia, likely related to stress from traveling and adjusting to new places.\nThe patient's history of frequent awakenings, difficulty staying asleep, and feeling unrefreshed upon waking support this diagnosis.\nThe sleep aid is intended to help improve the quality of the patient's sleep.\nNote that I did not combine the two facts into one, as \"create a relaxing bedtime routine\" is a separate action that can be evaluated independently of the advice being given.\nNote that I did not combine the two findings into a single fact, as they are separate and independent propositions.\nNote that I've followed the rules by splitting the conjunction \"in two weeks\" into a separate fact, and replacing the pronoun \"it\" with the subject \"the follow-up\".\nNote that I did not break down \"as needed\" into separate facts, as it is a single phrase modifying the verb \"will be adjusted\".\nNote that I've followed the rules to split the statement into independent, self-contained atomic facts. Each fact is a single proposition that can stand alone as true or false."
   },
   "stage3_key_sentences": [
     "Doctor: Have you experienced any daytime sleepiness, fatigue, or cognitive difficulties due to the insomnia?",
@@ -230,15 +426,15 @@
   ],
   "stage3_summary_key_phrases": [
     "insomnia reports having",
-    "physical examination mentioned",
-    "present illness hpi",
-    "vitals diagnostic results",
-    "patient 54 year",
-    "examination atomic fact",
-    "stating absence information",
-    "melatonin meditation",
+    "diagnosis sleep aid",
+    "quality patient sleep",
+    "physical examination vitals",
+    "illness hpi patient",
+    "patient history frequent",
+    "diagnoses clinical reasoning",
+    "meditation relief physical",
     "results mentioned labs",
-    "male presents complaints"
+    "stating absence information"
   ],
   "stage3_coverage_scores": [
     {
@@ -253,17 +449,37 @@
       "sentence": "Patient: I'm 54 years old, male.",
       "citation_source": "src (dialogue key sentence)",
       "citation_text": "Patient: I'm 54 years old, male.",
-      "score": 0.6362,
-      "is_missing": false,
-      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+      "score": 0.2956,
+      "is_missing": true,
+      "action": "Added: Missing clinical dialogue detail (coverage < 0.40); inserted via GPT-2 fluency optimization."
     }
   ],
-  "stage3_candidate_log": [],
-  "stage3_added": [],
+  "stage3_candidate_log": [
+    {
+      "candidate": "Patient: I'm 54 years old, male.",
+      "statement": "Patient: I'm 54 years old, male.",
+      "coverage": 0.2956,
+      "status": "added",
+      "reason": "coverage <= cov_min (uMedSum adds the dialogue sentence verbatim)",
+      "insertion": {
+        "section": "subjective",
+        "line_index": 1,
+        "perplexity": 19.93
+      }
+    }
+  ],
+  "stage3_added": [
+    {
+      "statement": "Patient: I'm 54 years old, male.",
+      "evidence": "Patient: I'm 54 years old, male.",
+      "section": "subjective",
+      "candidate": "Patient: I'm 54 years old, male."
+    }
+  ],
   "stage3_stats": {
     "num_key_sentences": 2,
-    "num_flagged": 0,
-    "num_added": 0
+    "num_flagged": 1,
+    "num_added": 1
   },
   "gaps": {
     "gaps": [],
@@ -313,13 +529,91 @@
         "entailment": 0.4712,
         "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
         "from_unit": "Diagnostic Results & Labs: None mentioned"
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "The patient will be prescribed a sleep aid.",
+        "entailment": 0.4268,
+        "reason": "Could not be decomposed further and not entailed above threshold Ta.",
+        "from_unit": "Treatment Plan, Medications, and Follow-up: The patient will be prescribed a sleep aid to help improve the quality of his sleep."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "He will be advised.",
+        "entailment": 0.4363,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "He will also be advised to establish a consistent sleep schedule and create a relaxing bedtime routine."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "He will establish a consistent sleep schedule.",
+        "entailment": 0.4219,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "He will also be advised to establish a consistent sleep schedule and create a relaxing bedtime routine."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "Note that I did not break down \"establish a consistent sleep schedule\" into separate facts, as it is a single proposition that can stand alone as true or false.",
+        "entailment": 0.4885,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "He will also be advised to establish a consistent sleep schedule and create a relaxing bedtime routine."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "He will be advised.",
+        "entailment": 0.4363,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "He will also be advised to establish a consistent sleep schedule and create a relaxing bedtime routine."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "He will create a relaxing bedtime routine.",
+        "entailment": 0.4309,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "He will also be advised to establish a consistent sleep schedule and create a relaxing bedtime routine."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "Follow-up will be scheduled.",
+        "entailment": 0.4368,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Follow-up will be scheduled in two weeks to assess the patient's progress and adjust the treatment plan as needed."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "The follow-up will be scheduled in two weeks.",
+        "entailment": 0.4321,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Follow-up will be scheduled in two weeks to assess the patient's progress and adjust the treatment plan as needed."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "The patient's progress will be assessed.",
+        "entailment": 0.4751,
+        "reason": "Could not be decomposed further and not entailed above threshold Ta.",
+        "from_unit": "Follow-up will be scheduled in two weeks to assess the patient's progress and adjust the treatment plan as needed."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "The treatment plan will be adjusted.",
+        "entailment": 0.4221,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Follow-up will be scheduled in two weeks to assess the patient's progress and adjust the treatment plan as needed."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "The treatment plan will be adjusted as needed.",
+        "entailment": 0.4363,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Follow-up will be scheduled in two weeks to assess the patient's progress and adjust the treatment plan as needed."
       }
     ]
   },
   "final_ap": {
-    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** The patient's symptoms are consistent with insomnia, likely related to stress from traveling and adjusting to new places. The patient's history of frequent awakenings, difficulty staying asleep, and feeling unrefreshed upon waking support this diagnosis.\n* **Treatment Plan, Medications, and Follow-up:** The patient will be prescribed a sleep aid to help improve the quality of his sleep. He will also be advised to establish a consistent sleep schedule and create a relaxing bedtime routine. Follow-up will be scheduled in two weeks to assess the patient's progress and adjust the treatment plan as needed.\n\nNote: As the patient did not have any physical examination findings or diagnostic results mentioned, there is no objective data to include in the note."
+    "assessment_and_plan": "Diagnoses and Clinical Reasoning: The patient's symptoms are consistent with insomnia, likely related to stress from traveling and adjusting to new places.\nThe patient's history of frequent awakenings, difficulty staying asleep, and feeling unrefreshed upon waking support this diagnosis.\nThe sleep aid is intended to help improve the quality of the patient's sleep.\nNote that I did not combine the two facts into one, as \"create a relaxing bedtime routine\" is a separate action that can be evaluated independently of the advice being given.\nNote that I did not combine the two findings into a single fact, as they are separate and independent propositions.\nNote that I've followed the rules by splitting the conjunction \"in two weeks\" into a separate fact, and replacing the pronoun \"it\" with the subject \"the follow-up\".\nNote that I did not break down \"as needed\" into separate facts, as it is a single phrase modifying the verb \"will be adjusted\".\nNote that I've followed the rules to split the statement into independent, self-contained atomic facts. Each fact is a single proposition that can stand alone as true or false."
   },
-  "ap_unchanged": true,
+  "scope": "soap",
+  "ap_changed": true,
   "thresholds": {
     "Te": 0.9,
     "Tc": 0.8,
@@ -335,10 +629,11 @@
     "ppl": "gpt2"
   },
   "status": "success",
-  "seconds": 10.4,
+  "seconds": 17.9,
   "conversation": "Doctor: Hello. Could you tell me your age and gender, and what brings you in today?\nPatient: I'm 54 years old, male. I'm here for my annual exam.\nDoctor: Could you please confirm if there are any other details you'd like to include in your basic information, such as occupation, marital status, or any other relevant personal information?\nPatient: No, I don't think so. I don't have anything else to add to my basic information.\nDoctor: Could you please describe any symptoms or concerns you've been experiencing recently that you'd like to discuss during this annual exam?\nPatient: I've been having trouble with insomnia lately. It's been really hard to get a good night's sleep, and it's been kind of stressful with all the traveling we've been doing. I've tried things like melatonin and meditation, but nothing seems to be helping much.\nDoctor: Could you describe the duration of your insomnia, how often it occurs, and whether it is associated with any specific stressors or psychiatric symptoms such as anxiety or depression?\nPatient: The insomnia has been going on for a while now, especially since we've been traveling a lot and adjusting to things in the fall. It's been pretty consistent, and I think the stress from all the traveling and the changes have been contributing to it. I haven't really noticed any anxiety or depression, but it's definitely been tough on me.\nDoctor: Have you experienced any daytime sleepiness, fatigue, or cognitive difficulties due to the insomnia? Have you ever been evaluated for sleep disorders such as sleep apnea or restless legs syndrome?\nPatient: No, I haven't experienced any daytime sleepiness or cognitive difficulties, and I haven't been evaluated for sleep disorders like sleep apnea or restless legs syndrome. It's just been the insomnia that's been an issue for me.\nDoctor: Could you describe your typical bedtime routine and sleep environment? Additionally, have you noticed any patterns or triggers that seem to worsen your insomnia?\nPatient: My typical bedtime routine is pretty straightforward—I try to go to bed around the same time each night, but it's been hard to stick to because of the travel. I've been stretching in the morning, but that's about it. As for triggers, I think the stress from traveling and adjusting to new places has definitely made it worse. It's just been really tough to get into a good sleep rhythm.\nDoctor: Could you describe your typical sleep environment, including factors such as noise, light, and comfort, and whether you have any habits or activities that occur close to bedtime that might interfere with sleep?\nPatient: My sleep environment is pretty standard—nothing too disruptive in terms of noise or light. I don't have any habits close to bedtime that I think are interfering with sleep, but the travel and changing routines have definitely thrown off my sleep rhythm. It's just been really hard to get into a good pattern.\nDoctor: Have you noticed any specific symptoms during the night, such as waking up frequently, difficulty staying asleep, or feeling unrefreshed upon waking?\nPatient: Yes, I do wake up frequently during the night, and it's hard to stay asleep. I often feel tired when I wake up, like I didn't get a good rest, even if I did manage to sleep for a few hours. It's been really frustrating.\nDoctor: How many hours of sleep do you typically get per night, and how does this compare to your usual sleep duration before the insomnia began? Additionally, have you noticed any specific symptoms during the night, such as shortness of breath, leg discomfort, or frequent awakenings?\nPatient: I typically get around 5 to 6 hours of sleep per night, which is less than what I used to get before the insomnia started. I used to sleep more consistently, maybe 7 or 8 hours. As for symptoms during the night, I don't have shortness of breath or leg discomfort, but I do wake up frequently and have trouble staying asleep. It's been really frustrating.\nDoctor: Have you experienced any daytime sleepiness, fatigue, or difficulty concentrating due to your insomnia?\nPatient: Yes, I have been feeling pretty fatigued during the day and it's been harder to concentrate, especially with the lack of good sleep. It's been affecting my overall energy levels and making it harder to keep up with everything.\nDoctor: Have you noticed any other symptoms that might be related to your sleep issues, such as loud snoring, pauses in breathing during sleep, or excessive daytime sleepiness?\nPatient: I don't have loud snoring or pauses in breathing during sleep, but I do feel excessively sleepy during the day, which has been really affecting my ability to function normally. It's been tough keeping up with everything because of it.\nDoctor: Have you noticed any other symptoms that might be related to your sleep issues, such as difficulty concentrating, mood changes, or trouble staying awake during the day?\nPatient: Yes, I have had trouble concentrating and it's been harder to stay awake during the day. It's affected my mood a bit too, making me feel more irritable than usual. It's been tough keeping up with everything because of it.\nDoctor: Have you noticed any other symptoms that might be related to your sleep issues, such as loud snoring, pauses in breathing during sleep, or leg discomfort that wakes you up?\nPatient: I don't have loud snoring or pauses in breathing during sleep, and I don't have leg discomfort that wakes me up. But I do wake up frequently and have trouble staying asleep, which has been really frustrating. It's been affecting my mood and making me feel more irritable than usual.\nDoctor: Have you experienced any symptoms suggestive of restless legs syndrome, such as an irresistible urge to move your legs, especially during rest or in the evening?\nPatient: No, I don't have an irresistible urge to move my legs, especially during rest or in the evening. I don't think that's what's going on with my sleep issues. It's more about waking up frequently and not being able to stay asleep through the night.\nDoctor: Have you noticed any other symptoms that might be related to your sleep issues, such as loud snoring, pauses in breathing during sleep, or excessive daytime sleepiness?\nPatient: No, I don't have loud snoring or pauses in breathing during sleep, but I do feel excessively sleepy during the day, which has been really affecting my ability to function normally. It's been tough keeping up with everything because of it.",
   "reference_so": {
     "subjective": "Basic information: 54-year-old male here for annual exam with chief complaint of insomnia\n\nHistory of present illness: Onset of insomnia with difficulty getting a good night's sleep, associated with recent travel and stress. Tried melatonin and meditation without significant improvement. The insomnia has been going on for a while now, especially since we've been traveling a lot and adjusting to things in the fall. It's been pretty consistent, and I think the stress from all the traveling and the changes have been contributing to it. I haven't really noticed any anxiety or depression, but it's definitely been tough on me. My typical bedtime routine is pretty straightforward—I try to go to bed around the same time each night, but it's been hard to stick to because of the travel. I've been stretching in the morning, but that's about it. As for triggers, I think the stress from traveling and adjusting to new places has definitely made it worse. It's just been really tough to get into a good sleep rhythm. My sleep environment is pretty standard—nothing too disruptive in terms of noise or light. I don't have any habits close to bedtime that I think are interfering with sleep, but the travel and changing routines have definitely thrown off my sleep rhythm. It's just been really hard to get into a good pattern. I do wake up frequently during the night, and it's hard to stay asleep. I often feel tired when I wake up, like I didn't get a good rest, even if I did manage to sleep for a few hours. It's been really frustrating. I typically get around 5 to 6 hours of sleep per night, which is less than what I used to get before the insomnia started. I used to sleep more consistently, maybe 7 or 8 hours. As for symptoms during the night, I don't have shortness of breath or leg discomfort, but I do wake up frequently and have trouble staying asleep. It's been really frustrating. I have been feeling pretty fatigued during the day and it's been harder to concentrate, especially with the lack of good sleep. It's been affecting my overall energy levels and making it harder to keep up with everything. I don't have loud snoring or pauses in breathing during sleep, but I do feel excessively sleepy during the day, which has been really affecting my ability to function normally. It's been tough keeping up with everything because of it. Yes, I have had trouble concentrating and it's been harder to stay awake during the day. It's affected my mood a bit too, making me feel more irritable than usual. It's been tough keeping up with everything because of it. No, I don't have an irresistible urge to move my legs, especially during rest or in the evening. I don't think that's what's going on with my sleep issues. It's more about waking up frequently and not being able to stay asleep through the night.\n\nPast history: No history of sleep disorders, no prior sleep study or polysomnography. No history of sleep apnea evaluation.",
-    "objective": "Physical examination: Vital signs and general physical examination findings not yet reported\n\nInvestigations: No sleep study or polysomnography results available"
+    "objective": "Physical examination: Vital signs and general physical examination findings not yet reported\n\nInvestigations: No sleep study or polysomnography results available",
+    "assessment_and_plan": "Preliminary diagnosis:\nInsomnia disorder\n\nDiagnostic discussion:\nThe patient is a 54-year-old male presenting with chronic insomnia, characterized by difficulty initiating and maintaining sleep, frequent nighttime awakenings, and non-restorative sleep. The insomnia has been ongoing for several months and is attributed to recent travel, lifestyle changes, and stress. The patient reports daytime fatigue, irritability, and difficulty concentrating, which are consistent with insomnia disorder. There is no history of sleep disorders, sleep apnea, or prior sleep studies. The absence of symptoms such as loud snoring, pauses in breathing, or restless legs syndrome makes sleep apnea or periodic limb movement disorder less likely. The patient's sleep environment is described as standard, with no significant disruptions. The insomnia appears to be primarily psychophysiological in nature, likely exacerbated by stress and disrupted routines due to travel. Differential diagnoses include psychophysiological insomnia, adjustment disorder with sleep disturbance, and major depressive disorder. While the patient denies symptoms of depression, the presence of fatigue, irritability, and difficulty concentrating may warrant further evaluation for depression, as sleep disturbances are a common symptom.\n1. Further evaluation: A sleep diary should be maintained for at least two weeks to assess sleep patterns, duration, and quality. A referral to a sleep specialist for a polysomnography may be considered if symptoms persist or worsen despite initial interventions. 2. Medication: Cognitive-behavioral therapy for insomnia (CBT-I) is the first-line treatment for chronic insomnia. If pharmacologic intervention is needed, short-term use of a low-dose sedating antidepressant (e.g., trazodone) or a non-benzodiazepine hypnotic (e.g., zolpidem) may be considered, with careful monitoring for side effects and dependency. 3. Non-drug management and education: The patient should be advised to maintain a consistent sleep schedule, avoid stimulants (e.g., caffeine, nicotine) close to bedtime, and engage in relaxation techniques such as mindfulness or progressive muscle relaxation. Sleep hygiene education should be provided, emphasizing the importance of a dark, quiet, and cool sleep environment. 4. Follow-up: The patient should be reassessed in two weeks to evaluate the effectiveness of the sleep hygiene measures and CBT-I. If symptoms persist, further evaluation by a sleep specialist should be considered."
   }
 }

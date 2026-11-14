@@ -9,8 +9,8 @@ This is baseline B3 from the proposal ("Aegle intake -> note -> uMedSum filter")
   Stage 3  MMR key sentences + KeyBERT coverage (cov_min=0.4, top_m=2) + GPT-2 perplexity insertion   on S/O only
   Final    Stage 3 S/O + the untouched Stage 1 A/P
 
-Input is the same prepared dataset Verify-and-Ask uses (built from agentic-pipeline-output/soap_notes,
-seed 42, 22 dev / 88 test). Only the consultation is given to the models; the agentic soap_note.md S/O is
+Input is the same prepared dataset Verify-and-Ask uses (built from agentic-pipeline-output/soap_notes
+by verify_and_ask_pipeline/stage1_pipeline/stage1_code/prepare_dataset.py, seed 42; pass it with --dataset). Only the consultation is given to the models; the agentic soap_note.md S/O is
 carried in each record solely for evaluation.
 
 Output records use the Verify-and-Ask record format (stage1_so / stage2_so / stage3_so, stage1_ap,
@@ -218,9 +218,8 @@ def perplexity_insert(merger, units, missing):
     return units, log
 
 
-def units_to_so(units):
-    return {"subjective": "\n".join(t for s, t in units if s == "subjective"),
-            "objective": "\n".join(t for s, t in units if s == "objective")}
+def units_to_so(units, sections=("subjective", "objective")):
+    return {sec: "\n".join(t for s, t in units if s == sec) for sec in sections}
 
 
 # ---------------------------------------------------------------------------------------------
@@ -233,10 +232,21 @@ def run_case(rec, ctx, args):
     conv = rec["conversation"]
     out = {"case_id": rec["case_id"], "split": rec["split"], "is_icl_demo": rec["case_id"] in ctx["icl_ids"]}
 
+    full = args.scope == "soap"
+    sections = ("subjective", "objective", "assessment_and_plan") if full else ("subjective", "objective")
+
     # ---- Stage 1: unchanged baseline generator (Element-Aware 2-step + 1-shot ICL) ----------------
-    s1 = run_stage1_element_aware(ctx["client"], {"src": conv}, icl_prefix=ctx["icl_prefix"])
+    s1 = None
+    cache_p = Path(args.stage1_cache) / f"{rec['case_id']}.json" if args.stage1_cache else None
+    if cache_p and cache_p.exists():
+        prev = json.loads(cache_p.read_text(encoding="utf-8"))
+        if prev.get("status") == "success" and prev.get("stage1_raw_note"):
+            s1 = {"stage1_summary": prev["stage1_raw_note"], "stage1_elements": prev.get("stage1_elements")}
+            out["stage1_reused_from"] = str(cache_p)
+    if s1 is None:
+        s1 = run_stage1_element_aware(ctx["client"], {"src": conv}, icl_prefix=ctx["icl_prefix"])
     parsed = split_umedsum_note(s1["stage1_summary"])
-    stage1_so = {"subjective": parsed["subjective"], "objective": parsed["objective"]}
+    stage1_so = {sec: parsed[sec] for sec in sections}
     stage1_ap = {"assessment_and_plan": parsed["assessment_and_plan"]}
     out.update({
         "stage1_elements": s1["stage1_elements"],
@@ -246,10 +256,10 @@ def run_case(rec, ctx, args):
         "stage1_ap": stage1_ap,
     })
 
-    # ---- Stage 2: RTB-TS on S and O separately (A/P never enters) ---------------------------------
+    # ---- Stage 2: RTB-TS section by section (S, O; plus A/P in --scope soap) ------------------------
     remover = ctx["remover"]
     stage2_units, details, removed, n_claims, n_kept = [], {}, [], 0, 0
-    for section in ("subjective", "objective"):
+    for section in sections:
         text = stage1_so[section]
         if not text.strip():
             details[section] = []
@@ -267,7 +277,7 @@ def run_case(rec, ctx, args):
             for a in d.get("atomic_decomposition", {}).get("discarded", []):
                 removed.append({"section": section, "claim": a["atom"], "entailment": a["entailment"],
                                 "reason": a["reasoning"], "from_unit": d["unit"]})
-    stage2_so = units_to_so(stage2_units)
+    stage2_so = units_to_so(stage2_units, sections)
     counts = {}
     for sec in details.values():
         for d in sec:
@@ -292,7 +302,7 @@ def run_case(rec, ctx, args):
                    for m in missing]
     else:
         final_units, ins_log = perplexity_insert(merger, stage2_units, missing)
-    stage3_so = units_to_so(final_units)
+    stage3_so = units_to_so(final_units, sections)
     cov = {c["sentence"]: c["score"] for c in detection["coverage_scores"]}
     out.update({
         "stage3_so": stage3_so,
@@ -312,27 +322,37 @@ def run_case(rec, ctx, args):
         "unsupported_claims": {"removed_stage2": removed},
     })
 
-    # ---- Final: Stage 3 S/O + untouched Stage 1 A/P ----------------------------------------------
-    final_ap = dict(stage1_ap)
+    # ---- Final note ------------------------------------------------------------------------------
+    if full:   # A/P went through Stages 2-3 like S and O (original uMedSum: the whole note is processed)
+        final_ap = {"assessment_and_plan": stage3_so["assessment_and_plan"]}
+        out.update({"final_ap": final_ap, "scope": "soap",
+                    "ap_changed": final_ap["assessment_and_plan"] != stage1_ap["assessment_and_plan"]})
+        ref = rec.get("reference_soap") or {}
+        reference = {"subjective": ref.get("subjective", ""), "objective": ref.get("objective", ""),
+                     "assessment_and_plan": "\n".join(x for x in (ref.get("assessment", ""), ref.get("plan", "")) if x).strip()}
+    else:      # Stage 3 S/O + untouched Stage 1 A/P
+        final_ap = dict(stage1_ap)
+        out.update({"final_ap": final_ap, "scope": "so",
+                    "ap_unchanged": final_ap == stage1_ap and final_ap["assessment_and_plan"] == parsed["assessment_and_plan"]})
+        reference = rec["reference_so"]
     out.update({
-        "final_ap": final_ap,
-        "ap_unchanged": final_ap == stage1_ap and final_ap["assessment_and_plan"] == parsed["assessment_and_plan"],
         "thresholds": {"Te": args.te, "Tc": args.tc, "Ta": args.ta, "cov_min": args.cov_min, "top_m": args.top_m,
                        "fix_header_bug": not args.reproduce_header_bug},
         "models": {"llm": args.model, "nli": args.nli_model, "embedder": "all-MiniLM-L6-v2", "ppl": args.ppl_model},
         "status": "success",
         "seconds": round(time.time() - t0, 1),
         "conversation": conv,
-        "reference_so": rec["reference_so"],  # evaluation only; never passed to a model
+        "reference_so": reference,  # evaluation only; never passed to a model (full SOAP in --scope soap)
     })
     return out
 
 
 def write_final_note(path, r):
     so, ap = r["stage3_so"], r["final_ap"]["assessment_and_plan"]
+    ap_title = "Assessment and Plan" if r.get("scope") == "soap" else "Assessment and Plan (Stage 1, unchanged)"
     path.write_text(
         f"# {r['case_id']} - uMedSum final note\n\n## Subjective\n{so['subjective'] or '(empty)'}\n\n"
-        f"## Objective\n{so['objective'] or '(empty)'}\n\n## Assessment and Plan (Stage 1, unchanged)\n{ap or '(empty)'}\n",
+        f"## Objective\n{so['objective'] or '(empty)'}\n\n## {ap_title}\n{ap or '(empty)'}\n",
         encoding="utf-8")
 
 
@@ -356,6 +376,14 @@ def main():
     ap.add_argument("--no-gpt2", action="store_true", help="append missing sentences instead of GPT-2 placement")
     ap.add_argument("--reproduce-header-bug", action="store_true",
                     help="use the baseline's original line filter in Stage 2 (drops lines containing EXAM/PLAN/...)")
+    ap.add_argument("--exclude-from-scoring", nargs="*", default=[],
+                    help="case ids that are run but kept out of scoring (their split becomes 'excluded_icl_demo'); "
+                         "use for an ICL demonstration that falls in the test split, e.g. D2N002")
+    ap.add_argument("--scope", choices=["so", "soap"], default="so",
+                    help="so: Stages 2-3 on S/O, A/P passed through (RQ1-matched). "
+                         "soap: Stages 2-3 on S, O and A/P, all scored (original uMedSum)")
+    ap.add_argument("--stage1-cache", default=None,
+                    help="folder of earlier per-case outputs (cases/) whose Stage 1 note is reused instead of regenerated")
     ap.add_argument("--retry-errors", action="store_true")
     ap.add_argument("--overwrite", action="store_true")
     args = ap.parse_args()
@@ -370,18 +398,19 @@ def main():
     n_dev = sum(r["split"] == "dev" for r in records)
     n_test = sum(r["split"] == "test" for r in records)
     print(f"Dataset: {len(records)} cases ({n_dev} dev / {n_test} test), seed {data.get('split_seed')}")
-    if (len(records), n_dev, n_test) != (110, 22, 88):
-        print("[WARN] expected 110 cases (22 dev / 88 test) - check you are using the RQ1 prepared_dataset.json")
 
     # ---- leakage guard: the ICL demonstration must not be a test case ----------------------------
     icl_data = json.loads(Path(args.icl_json).read_text(encoding="utf-8"))["data"][: args.n_shots]
     icl_ids = {d.get("encounter_id") or d.get("file", "").split("-")[0] for d in icl_data}
-    test_ids = {r["case_id"] for r in records if r["split"] == "test"}
-    if icl_ids & test_ids:
-        sys.exit(f"[LEAKAGE] ICL demonstration(s) {sorted(icl_ids & test_ids)} are test cases. "
-                 f"Use --n-shots 1 (D2N002, a dev case) or change icl_examples.json.")
-    print(f"ICL demonstration(s): {sorted(icl_ids)} - none in the test split. "
-          f"Dev cases that are also demos: {sorted(icl_ids & {r['case_id'] for r in records})}")
+    excluded = set(args.exclude_from_scoring)
+    split_of = {r["case_id"]: ("excluded_icl_demo" if r["case_id"] in excluded else r["split"]) for r in records}
+    leaked = {c for c in icl_ids if split_of.get(c) == "test"}
+    if leaked:
+        sys.exit(f"[LEAKAGE] ICL demonstration(s) {sorted(leaked)} are test cases. "
+                 f"Pass --exclude-from-scoring {' '.join(sorted(leaked))} to run them but keep them out of scoring.")
+    print(f"ICL demonstration(s): {sorted(icl_ids)} - none scored in the test split. "
+          f"Excluded from scoring: {sorted(excluded) or 'none'}. "
+          f"Demo cases by split: { {c: split_of.get(c, 'not in dataset') for c in sorted(icl_ids)} }")
 
     if args.split != "all":
         records = [r for r in records if r["split"] == args.split]
@@ -422,6 +451,9 @@ def main():
         cpath = cases_dir / f"{rec['case_id']}.json"
         if cpath.exists() and not args.overwrite:
             prev = json.loads(cpath.read_text(encoding="utf-8"))
+            if prev.get("status") == "success" and prev.get("scope", "so") != args.scope:
+                sys.exit(f"{cpath} was produced with --scope {prev.get('scope', 'so')}; use a different --out-dir "
+                         f"for --scope {args.scope} (pass the old cases/ folder as --stage1-cache to reuse Stage 1).")
             if prev.get("status") == "success" or not args.retry_errors:
                 print(f"[{i}/{len(records)}] {rec['case_id']}: cached ({prev.get('status')})")
                 continue
@@ -440,10 +472,18 @@ def main():
 
     # ---- combine every case checkpoint into one file (the evaluator's input) ----------------------
     all_recs = [json.loads(p.read_text(encoding="utf-8")) for p in sorted(cases_dir.glob("*.json"))]
+    # Split labels always come from the dataset in use (cached cases may carry a label from an older split).
+    all_recs = [r for r in all_recs if r["case_id"] in split_of]
+    for r in all_recs:
+        r["split"] = split_of[r["case_id"]]
     ok = [r for r in all_recs if r.get("status") == "success"]
-    combined = {"system": "uMedSum (Element-Aware+1-shot ICL -> RTB-TS -> MMR/GPT-2), S/O only, A/P passthrough",
+    combined = {"system": "uMedSum (Element-Aware+1-shot ICL -> RTB-TS -> MMR/GPT-2), " + (
+                    "full SOAP: S, O and A/P processed" if args.scope == "soap" else "S/O only, A/P passthrough"),
+                "scope": args.scope,
                 "num_cases": len(all_recs), "num_success": len(ok), "num_errors": len(all_recs) - len(ok),
-                "icl_demo_ids": sorted(icl_ids), "records": all_recs}
+                "icl_demo_ids": sorted(icl_ids), "excluded_from_scoring": sorted(excluded),
+                "split_counts": {k: sum(r["split"] == k for r in all_recs) for k in sorted(set(split_of.values()))},
+                "records": all_recs}
     (out_dir / "umedsum_output.json").write_text(json.dumps(combined, ensure_ascii=False, indent=2), encoding="utf-8")
 
     parse_modes = {}
@@ -452,7 +492,10 @@ def main():
         parse_modes[m] = parse_modes.get(m, 0) + 1
     print(f"\nFinished in {round(time.time() - t_start)}s. {len(ok)}/{len(all_recs)} cases succeeded.")
     print("Stage 1 section parsing:", parse_modes)
-    print("A/P unchanged rate:", round(sum(r["ap_unchanged"] for r in ok) / len(ok), 4) if ok else None)
+    if ok and all("ap_unchanged" in r for r in ok):
+        print("A/P unchanged rate:", round(sum(r["ap_unchanged"] for r in ok) / len(ok), 4))
+    elif ok:
+        print("A/P changed by Stages 2-3 in", sum(bool(r.get("ap_changed")) for r in ok), "of", len(ok), "cases (scope soap)")
     print("Saved", out_dir / "umedsum_output.json")
 
 

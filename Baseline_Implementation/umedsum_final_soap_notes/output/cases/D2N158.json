@@ -1,0 +1,524 @@
+{
+  "case_id": "D2N158",
+  "split": "test",
+  "is_icl_demo": false,
+  "stage1_elements": "Here are the extracted clinical elements in concise bullet points:\n\n**Subjective Elements:**\n\n* Chief complaint: Abdominal pain for the past week\n* History of present illness:\n\t+ Symptoms: Abdominal pain, nausea, vomiting\n\t+ Onset: Gradually worsening over the past week\n\t+ Duration: 1 week\n* Relevant medical history/medications:\n\t+ No prior episodes of abdominal pain\n\t+ No prior medical conditions mentioned\n\t+ No medications mentioned\n\n**Objective Elements:**\n\n* Physical examination findings: Not mentioned\n* Vital signs mentioned: Not mentioned\n* Diagnostic lab/imaging results: Not mentioned\n\n**Assessment Elements:**\n\n* Diagnoses and clinical impressions: Not explicitly stated, but the doctor is considering the patient's symptoms and medical history to determine the cause of the abdominal pain.\n\n**Plan Elements:**\n\n* Medical treatment plan: Not explicitly stated, but the doctor may order diagnostic tests or prescribe medications to evaluate and treat the patient's symptoms.\n* Prescriptions/dosages: Not mentioned\n* Tests ordered: Not mentioned\n* Follow-up instructions: Not mentioned",
+  "stage1_raw_note": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:\n\n**SUBJECTIVE:**\n\n* **Chief Complaint:** Abdominal pain for the past week.\n* **History of Present Illness (HPI):** The patient, a 31-year-old female, presents with a 1-week history of worsening abdominal pain, nausea, and vomiting. She reports that the pain is located in both sides of her upper abdomen and worsens with exercise. She has tried reducing her coffee and spicy food intake, but the pain persists.\n\n**OBJECTIVE:**\n\n* **Physical Examination & Vitals:** Not performed during this visit.\n* **Diagnostic Results & Labs:** Not mentioned.\n\n**ASSESSMENT AND PLAN:**\n\n* **Diagnoses and Clinical Reasoning:** The patient's symptoms are consistent with a possible gastrointestinal issue, possibly related to her coffee and spicy food intake. Further evaluation is needed to determine the underlying cause of her abdominal pain.\n* **Treatment Plan, Medications, and Follow-up:** The doctor may order diagnostic tests, such as blood tests or imaging studies, to evaluate the cause of the patient's symptoms. The patient may be prescribed medications to manage her symptoms and reduce inflammation. Follow-up instructions will be provided once the diagnosis is confirmed and a treatment plan is established.\n\nPlease note that this is a summary of the doctor-patient conversation, and the actual SOAP note may vary depending on the specific clinical setting and the doctor's documentation style.",
+  "stage1_parse": {
+    "parse_mode": "main_headings",
+    "parse_ok": true,
+    "dropped_preamble": "Here is the complete, comprehensive, and faithful clinical SOAP visit note:"
+  },
+  "stage1_so": {
+    "subjective": "* **Chief Complaint:** Abdominal pain for the past week.\n* **History of Present Illness (HPI):** The patient, a 31-year-old female, presents with a 1-week history of worsening abdominal pain, nausea, and vomiting. She reports that the pain is located in both sides of her upper abdomen and worsens with exercise. She has tried reducing her coffee and spicy food intake, but the pain persists.",
+    "objective": "* **Physical Examination & Vitals:** Not performed during this visit.\n* **Diagnostic Results & Labs:** Not mentioned.",
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** The patient's symptoms are consistent with a possible gastrointestinal issue, possibly related to her coffee and spicy food intake. Further evaluation is needed to determine the underlying cause of her abdominal pain.\n* **Treatment Plan, Medications, and Follow-up:** The doctor may order diagnostic tests, such as blood tests or imaging studies, to evaluate the cause of the patient's symptoms. The patient may be prescribed medications to manage her symptoms and reduce inflammation. Follow-up instructions will be provided once the diagnosis is confirmed and a treatment plan is established.\n\nPlease note that this is a summary of the doctor-patient conversation, and the actual SOAP note may vary depending on the specific clinical setting and the doctor's documentation style."
+  },
+  "stage1_ap": {
+    "assessment_and_plan": "* **Diagnoses and Clinical Reasoning:** The patient's symptoms are consistent with a possible gastrointestinal issue, possibly related to her coffee and spicy food intake. Further evaluation is needed to determine the underlying cause of her abdominal pain.\n* **Treatment Plan, Medications, and Follow-up:** The doctor may order diagnostic tests, such as blood tests or imaging studies, to evaluate the cause of the patient's symptoms. The patient may be prescribed medications to manage her symptoms and reduce inflammation. Follow-up instructions will be provided once the diagnosis is confirmed and a treatment plan is established.\n\nPlease note that this is a summary of the doctor-patient conversation, and the actual SOAP note may vary depending on the specific clinical setting and the doctor's documentation style."
+  },
+  "stage2_so": {
+    "subjective": "Chief Complaint: Abdominal pain for the past week.\nHistory of Present Illness (HPI): The patient, a 31-year-old female, presents with a 1-week history of worsening abdominal pain, nausea, and vomiting.\nShe reports that the pain is located in both sides of her upper abdomen and worsens with exercise.\nShe has tried reducing her coffee and spicy food intake, but the pain persists.",
+    "objective": "Note that there is only one proposition in this statement, so it can be output as a single fact.\nNote that I've split the statement into two separate facts, each describing a different aspect of the physical examination (Physical Examination and Vitals). I've also replaced the pronoun \"this visit\" with the subject \"during this visit\" to make each fact self-contained.\nDiagnostic Results & Labs: Not mentioned.",
+    "assessment_and_plan": "Diagnoses and Clinical Reasoning: The patient's symptoms are consistent with a possible gastrointestinal issue, possibly related to her coffee and spicy food intake.\nThe underlying cause of her abdominal pain needs to be determined.\nHer abdominal pain has an underlying cause.\nThe doctor may order diagnostic tests.\nThe diagnostic tests may be blood tests.\nThe diagnostic tests may be imaging studies.\nThe diagnostic tests are to evaluate the cause of the patient's symptoms.\nNote that I've followed the rules to split every list, conjunction, and separate finding into its own fact, and replaced pronouns with the subject (\"The doctor\" and \"The patient\"). I've also not added or inferred any information that is not present in the original statement.\nThe patient may be prescribed medications.\nSince there is only one proposition in the statement, I did not split it into multiple facts.\nThe medications are to reduce inflammation.\nNote that I've followed the rules by splitting the list, conjunctions, and separate findings into individual facts, and replacing pronouns with the subject (\"The patient\").\nA treatment plan is established.\nNote that I've followed the rules by:\nSplitting the conjunction \"and\" into separate facts\nReplacing pronouns (\"once\" and \"a\") with the subject (\"the diagnosis\" and \"a treatment plan\")\nNot adding or inferring any information that is not present in the original statement\nOutputting each fact as a self-contained proposition"
+  },
+  "stage2_audit": {
+    "subjective": [
+      {
+        "unit": "Chief Complaint: Abdominal pain for the past week.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9971,
+          "neutral": 0.0023,
+          "contradiction": 0.0007
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Patient: I'm 31 years old and female. I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately. Doctor: Could you please provide your age, gender, and describe the nature, location, and severity of your abdominal pain? Also, have you noticed any other symptoms such as nausea, vomiting, changes in bowel habits, or fever? Patient: The pain is in both sides of my upper abdomen, and it's been gradually getting worse over the past week. I've had some nausea and vomited a couple of times, but I haven't had a fever. I also noticed the pain gets worse when I work out, like when I try to jog. Doctor: Have you had any prior episodes of abdominal pain, and if so, what was the cause or diagnosis? Patient: I don't recall having any prior episodes of abdominal pain like this before. This seems to be the first time I've experienced pain like this, and I think it might be related to my coffee intake and maybe even the spicy food I've been eating lately. Doctor: Could you please tell me more about your dietary habits, including how much coffee you consume daily and how often you eat spicy food? Also, have you noticed any changes in your bowel habits or any jaundice? Patient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice. Doctor: Have you undergone any abdominal imaging or blood tests in the past week to evaluate the cause of your abdominal pain? Patient: No, I haven't had any abdominal imaging or blood tests in the past week to evaluate the cause of my pain. I'm just here today to talk about it and see what you think might be",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "History of Present Illness (HPI): The patient, a 31-year-old female, presents with a 1-week history of worsening abdominal pain, nausea, and vomiting.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9917,
+          "neutral": 0.0073,
+          "contradiction": 0.0009
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Patient: I'm 31 years old and female. I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately. Doctor: Could you please provide your age, gender, and describe the nature, location, and severity of your abdominal pain? Also, have you noticed any other symptoms such as nausea, vomiting, changes in bowel habits, or fever? Patient: The pain is in both sides of my upper abdomen, and it's been gradually getting worse over the past week. I've had some nausea and vomited a couple of times, but I haven't had a fever. I also noticed the pain gets worse when I work out, like when I try to jog. Doctor: Have you had any prior episodes of abdominal pain, and if so, what was the cause or diagnosis? Patient: I don't recall having any prior episodes of abdominal pain like this before. This seems to be the first time I've experienced pain like this, and I think it might be related to my coffee intake and maybe even the spicy food I've been eating lately. Doctor: Could you please tell me more about your dietary habits, including how much coffee you consume daily and how often you eat spicy food? Also, have you noticed any changes in your bowel habits or any jaundice? Patient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice. Doctor: Have you undergone any abdominal imaging or blood tests in the past week to evaluate the cause of your abdominal pain? Patient: No, I haven't had any abdominal imaging or blood tests in the past week to evaluate the cause of my pain. I'm just here today to talk about it and see what you think might be",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "She reports that the pain is located in both sides of her upper abdomen and worsens with exercise.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9995,
+          "neutral": 0.0002,
+          "contradiction": 0.0002
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Patient: I'm 31 years old and female. I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately. Doctor: Could you please provide your age, gender, and describe the nature, location, and severity of your abdominal pain? Also, have you noticed any other symptoms such as nausea, vomiting, changes in bowel habits, or fever? Patient: The pain is in both sides of my upper abdomen, and it's been gradually getting worse over the past week. I've had some nausea and vomited a couple of times, but I haven't had a fever. I also noticed the pain gets worse when I work out, like when I try to jog. Doctor: Have you had any prior episodes of abdominal pain, and if so, what was the cause or diagnosis? Patient: I don't recall having any prior episodes of abdominal pain like this before. This seems to be the first time I've experienced pain like this, and I think it might be related to my coffee intake and maybe even the spicy food I've been eating lately. Doctor: Could you please tell me more about your dietary habits, including how much coffee you consume daily and how often you eat spicy food? Also, have you noticed any changes in your bowel habits or any jaundice? Patient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice. Doctor: Have you undergone any abdominal imaging or blood tests in the past week to evaluate the cause of your abdominal pain? Patient: No, I haven't had any abdominal imaging or blood tests in the past week to evaluate the cause of my pain. I'm just here today to talk about it and see what you think might be",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "She has tried reducing her coffee and spicy food intake, but the pain persists.",
+        "section": "SUBJECTIVE",
+        "scores": {
+          "entailment": 0.9512,
+          "neutral": 0.0364,
+          "contradiction": 0.0124
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "here today because I've been having this pain for a week and wanted to see what you think might be going on. Doctor: Have you experienced any relief from the abdominal pain after reducing your coffee and spicy food intake this week? Patient: Not really, the pain is still there, though it hasn't gotten worse. I've been trying to cut back, but I think it's going to take a little more time for it to settle down. I'm just hoping this isn't something more serious. Doctor: Have you experienced any relief from the abdominal pain after reducing your coffee and spicy food intake? Patient: Not really, the pain is still there, though it hasn't gotten worse. I've been trying to cut back, but I think it's going to take a little more time for it to settle down. I'm just hoping this isn't something more serious. Doctor: Have you had any recent blood tests or abdominal imaging, such as an ultrasound or CT scan, that could help evaluate the cause of your pain? Patient: No, I haven't had any recent blood tests or abdominal imaging like an ultrasound or CT scan. I'm here today because I've been having this pain for a week and wanted to see what you think might be going on. Doctor: Have you noticed any radiation of the pain to your back, shoulders, or other areas? Additionally, have you experienced any weight loss, changes in bowel habits, or jaundice in the past few weeks? Patient: No, the pain hasn't radiated to my back or shoulders or anywhere else. I haven't had any weight loss or changes in my bowel habits, and I don't have jaundice. I just have this ongoing upper abdominal pain that's been getting gradually worse over the week. Doctor: Have you noticed any changes in your appetite or experienced any episodes of vomiting that are different from your usual pattern? Patient: No, my appetite hasn't changed much, and the vomiting hasn't been any different from what I",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      }
+    ],
+    "objective": [
+      {
+        "unit": "Physical Examination & Vitals: Not performed during this visit.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.4612,
+          "neutral": 0.2959,
+          "contradiction": 0.2429
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "here today because I've been having this pain for a week and wanted to see what you think might be going on. Doctor: Have you experienced any relief from the abdominal pain after reducing your coffee and spicy food intake this week? Patient: Not really, the pain is still there, though it hasn't gotten worse. I've been trying to cut back, but I think it's going to take a little more time for it to settle down. I'm just hoping this isn't something more serious. Doctor: Have you experienced any relief from the abdominal pain after reducing your coffee and spicy food intake? Patient: Not really, the pain is still there, though it hasn't gotten worse. I've been trying to cut back, but I think it's going to take a little more time for it to settle down. I'm just hoping this isn't something more serious. Doctor: Have you had any recent blood tests or abdominal imaging, such as an ultrasound or CT scan, that could help evaluate the cause of your pain? Patient: No, I haven't had any recent blood tests or abdominal imaging like an ultrasound or CT scan. I'm here today because I've been having this pain for a week and wanted to see what you think might be going on. Doctor: Have you noticed any radiation of the pain to your back, shoulders, or other areas? Additionally, have you experienced any weight loss, changes in bowel habits, or jaundice in the past few weeks? Patient: No, the pain hasn't radiated to my back or shoulders or anywhere else. I haven't had any weight loss or changes in my bowel habits, and I don't have jaundice. I just have this ongoing upper abdominal pain that's been getting gradually worse over the week. Doctor: Have you noticed any changes in your appetite or experienced any episodes of vomiting that are different from your usual pattern? Patient: No, my appetite hasn't changed much, and the vomiting hasn't been any different from what I",
+        "atomic_decomposition": {
+          "original": "Physical Examination & Vitals: Not performed during this visit.",
+          "retained": [
+            {
+              "atom": "Note that there is only one proposition in this statement, so it can be output as a single fact.",
+              "citation": "Patient: I'm 31 years old and female. I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately. Doctor: Could you please provide your age, gender, and describe the nature, location, and severity of your abdominal pain? Also, have you noticed any other symptoms such as nausea, vomiting, changes in bowel habits, or fever? Patient: The pain is in both sides of my upper abdomen, and it's been gradually getting worse over the past week. I've had some nausea and vomited a couple of times, but I haven't had a fever. I also noticed the pain gets worse when I work out, like when I try to jog. Doctor: Have you had any prior episodes of abdominal pain, and if so, what was the cause or diagnosis? Patient: I don't recall having any prior episodes of abdominal pain like this before. This seems to be the first time I've experienced pain like this, and I think it might be related to my coffee intake and maybe even the spicy food I've been eating lately. Doctor: Could you please tell me more about your dietary habits, including how much coffee you consume daily and how often you eat spicy food? Also, have you noticed any changes in your bowel habits or any jaundice? Patient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice. Doctor: Have you undergone any abdominal imaging or blood tests in the past week to evaluate the cause of your abdominal pain? Patient: No, I haven't had any abdominal imaging or blood tests in the past week to evaluate the cause of my pain. I'm just here today to talk about it and see what you think might be",
+              "entailment": 0.9927,
+              "depth": 2
+            },
+            {
+              "atom": "Note that I've split the statement into two separate facts, each describing a different aspect of the physical examination (Physical Examination and Vitals). I've also replaced the pronoun \"this visit\" with the subject \"during this visit\" to make each fact self-contained.",
+              "citation": "Patient: I'm 31 years old and female. I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately. Doctor: Could you please provide your age, gender, and describe the nature, location, and severity of your abdominal pain? Also, have you noticed any other symptoms such as nausea, vomiting, changes in bowel habits, or fever? Patient: The pain is in both sides of my upper abdomen, and it's been gradually getting worse over the past week. I've had some nausea and vomited a couple of times, but I haven't had a fever. I also noticed the pain gets worse when I work out, like when I try to jog. Doctor: Have you had any prior episodes of abdominal pain, and if so, what was the cause or diagnosis? Patient: I don't recall having any prior episodes of abdominal pain like this before. This seems to be the first time I've experienced pain like this, and I think it might be related to my coffee intake and maybe even the spicy food I've been eating lately. Doctor: Could you please tell me more about your dietary habits, including how much coffee you consume daily and how often you eat spicy food? Also, have you noticed any changes in your bowel habits or any jaundice? Patient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice. Doctor: Have you undergone any abdominal imaging or blood tests in the past week to evaluate the cause of your abdominal pain? Patient: No, I haven't had any abdominal imaging or blood tests in the past week to evaluate the cause of my pain. I'm just here today to talk about it and see what you think might be",
+              "entailment": 0.8994,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "Physical Examination is not performed.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4163,
+              "depth": 2
+            },
+            {
+              "atom": "Physical Examination is performed during this visit (note: this is an implied fact, as the statement explicitly states \"is not performed\", which implies that it would be performed if not for the negation).",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.3882,
+              "depth": 2
+            },
+            {
+              "atom": "Let me know if you have any further questions or if you'd like me to clarify anything!",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4712,
+              "depth": 2
+            },
+            {
+              "atom": "Vitals are not performed during this visit.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4556,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Diagnostic Results & Labs: Not mentioned.",
+        "section": "OBJECTIVE",
+        "scores": {
+          "entailment": 0.9946,
+          "neutral": 0.0022,
+          "contradiction": 0.003
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Patient: I'm 31 years old and female. I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately. Doctor: Could you please provide your age, gender, and describe the nature, location, and severity of your abdominal pain? Also, have you noticed any other symptoms such as nausea, vomiting, changes in bowel habits, or fever? Patient: The pain is in both sides of my upper abdomen, and it's been gradually getting worse over the past week. I've had some nausea and vomited a couple of times, but I haven't had a fever. I also noticed the pain gets worse when I work out, like when I try to jog. Doctor: Have you had any prior episodes of abdominal pain, and if so, what was the cause or diagnosis? Patient: I don't recall having any prior episodes of abdominal pain like this before. This seems to be the first time I've experienced pain like this, and I think it might be related to my coffee intake and maybe even the spicy food I've been eating lately. Doctor: Could you please tell me more about your dietary habits, including how much coffee you consume daily and how often you eat spicy food? Also, have you noticed any changes in your bowel habits or any jaundice? Patient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice. Doctor: Have you undergone any abdominal imaging or blood tests in the past week to evaluate the cause of your abdominal pain? Patient: No, I haven't had any abdominal imaging or blood tests in the past week to evaluate the cause of my pain. I'm just here today to talk about it and see what you think might be",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      }
+    ],
+    "assessment_and_plan": [
+      {
+        "unit": "Diagnoses and Clinical Reasoning: The patient's symptoms are consistent with a possible gastrointestinal issue, possibly related to her coffee and spicy food intake.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.9741,
+          "neutral": 0.0234,
+          "contradiction": 0.0027
+        },
+        "classification": "faithful",
+        "citation_source": "src (dialogue)",
+        "citation_text": "Patient: I'm 31 years old and female. I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately. Doctor: Could you please provide your age, gender, and describe the nature, location, and severity of your abdominal pain? Also, have you noticed any other symptoms such as nausea, vomiting, changes in bowel habits, or fever? Patient: The pain is in both sides of my upper abdomen, and it's been gradually getting worse over the past week. I've had some nausea and vomited a couple of times, but I haven't had a fever. I also noticed the pain gets worse when I work out, like when I try to jog. Doctor: Have you had any prior episodes of abdominal pain, and if so, what was the cause or diagnosis? Patient: I don't recall having any prior episodes of abdominal pain like this before. This seems to be the first time I've experienced pain like this, and I think it might be related to my coffee intake and maybe even the spicy food I've been eating lately. Doctor: Could you please tell me more about your dietary habits, including how much coffee you consume daily and how often you eat spicy food? Also, have you noticed any changes in your bowel habits or any jaundice? Patient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice. Doctor: Have you undergone any abdominal imaging or blood tests in the past week to evaluate the cause of your abdominal pain? Patient: No, I haven't had any abdominal imaging or blood tests in the past week to evaluate the cause of my pain. I'm just here today to talk about it and see what you think might be",
+        "reasoning": "Verified: claim is directly entailed by doctor/patient statements in the dialogue."
+      },
+      {
+        "unit": "Further evaluation is needed to determine the underlying cause of her abdominal pain.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.5283,
+          "neutral": 0.3594,
+          "contradiction": 0.1123
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "radiated to my back or shoulders or anywhere else. I haven't had any weight loss or changes in my bowel habits, and I don't have jaundice. I just have this ongoing upper abdominal pain that's been getting gradually worse over the week. Doctor: Have you noticed any changes in your appetite or experienced any episodes of vomiting that are different from your usual pattern? Patient: No, my appetite hasn't changed much, and the vomiting hasn't been any different from what I normally experience. It's just been happening more often lately, but nothing out of the ordinary. I'm just worried because the pain is still there and hasn't gone away. Doctor: Have you had any recent blood tests or abdominal imaging, such as an ultrasound or CT scan? Patient: No, I haven't had any recent blood tests or abdominal imaging like an ultrasound or CT scan. I'm here today because I've been having this pain for a week and wanted to see what you think might be going on. Doctor: Have you experienced any relief from over-the-counter medications such as antacids or anti-inflammatory drugs? Patient: No, I haven't tried any over-the-counter medications for the pain yet. I was hoping to see you first before taking anything else, just in case there's something more serious going on. I don't want to mask any symptoms that might be important.",
+        "atomic_decomposition": {
+          "original": "Further evaluation is needed to determine the underlying cause of her abdominal pain.",
+          "retained": [
+            {
+              "atom": "The underlying cause of her abdominal pain needs to be determined.",
+              "citation": "Patient: I'm 31 years old and female. I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately. Doctor: Could you please provide your age, gender, and describe the nature, location, and severity of your abdominal pain? Also, have you noticed any other symptoms such as nausea, vomiting, changes in bowel habits, or fever? Patient: The pain is in both sides of my upper abdomen, and it's been gradually getting worse over the past week. I've had some nausea and vomited a couple of times, but I haven't had a fever. I also noticed the pain gets worse when I work out, like when I try to jog. Doctor: Have you had any prior episodes of abdominal pain, and if so, what was the cause or diagnosis? Patient: I don't recall having any prior episodes of abdominal pain like this before. This seems to be the first time I've experienced pain like this, and I think it might be related to my coffee intake and maybe even the spicy food I've been eating lately. Doctor: Could you please tell me more about your dietary habits, including how much coffee you consume daily and how often you eat spicy food? Also, have you noticed any changes in your bowel habits or any jaundice? Patient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice. Doctor: Have you undergone any abdominal imaging or blood tests in the past week to evaluate the cause of your abdominal pain? Patient: No, I haven't had any abdominal imaging or blood tests in the past week to evaluate the cause of my pain. I'm just here today to talk about it and see what you think might be",
+              "entailment": 0.9976,
+              "depth": 1
+            },
+            {
+              "atom": "Her abdominal pain has an underlying cause.",
+              "citation": "Patient: I'm 31 years old and female. I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately. Doctor: Could you please provide your age, gender, and describe the nature, location, and severity of your abdominal pain? Also, have you noticed any other symptoms such as nausea, vomiting, changes in bowel habits, or fever? Patient: The pain is in both sides of my upper abdomen, and it's been gradually getting worse over the past week. I've had some nausea and vomited a couple of times, but I haven't had a fever. I also noticed the pain gets worse when I work out, like when I try to jog. Doctor: Have you had any prior episodes of abdominal pain, and if so, what was the cause or diagnosis? Patient: I don't recall having any prior episodes of abdominal pain like this before. This seems to be the first time I've experienced pain like this, and I think it might be related to my coffee intake and maybe even the spicy food I've been eating lately. Doctor: Could you please tell me more about your dietary habits, including how much coffee you consume daily and how often you eat spicy food? Also, have you noticed any changes in your bowel habits or any jaundice? Patient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice. Doctor: Have you undergone any abdominal imaging or blood tests in the past week to evaluate the cause of your abdominal pain? Patient: No, I haven't had any abdominal imaging or blood tests in the past week to evaluate the cause of my pain. I'm just here today to talk about it and see what you think might be",
+              "entailment": 0.9849,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "Further evaluation is needed.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4058,
+              "depth": 1
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "Treatment Plan, Medications, and Follow-up: The doctor may order diagnostic tests, such as blood tests or imaging studies, to evaluate the cause of the patient's symptoms.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.8345,
+          "neutral": 0.1599,
+          "contradiction": 0.0058
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "Patient: I'm 31 years old and female. I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately. Doctor: Could you please provide your age, gender, and describe the nature, location, and severity of your abdominal pain? Also, have you noticed any other symptoms such as nausea, vomiting, changes in bowel habits, or fever? Patient: The pain is in both sides of my upper abdomen, and it's been gradually getting worse over the past week. I've had some nausea and vomited a couple of times, but I haven't had a fever. I also noticed the pain gets worse when I work out, like when I try to jog. Doctor: Have you had any prior episodes of abdominal pain, and if so, what was the cause or diagnosis? Patient: I don't recall having any prior episodes of abdominal pain like this before. This seems to be the first time I've experienced pain like this, and I think it might be related to my coffee intake and maybe even the spicy food I've been eating lately. Doctor: Could you please tell me more about your dietary habits, including how much coffee you consume daily and how often you eat spicy food? Also, have you noticed any changes in your bowel habits or any jaundice? Patient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice. Doctor: Have you undergone any abdominal imaging or blood tests in the past week to evaluate the cause of your abdominal pain? Patient: No, I haven't had any abdominal imaging or blood tests in the past week to evaluate the cause of my pain. I'm just here today to talk about it and see what you think might be",
+        "atomic_decomposition": {
+          "original": "Treatment Plan, Medications, and Follow-up: The doctor may order diagnostic tests, such as blood tests or imaging studies, to evaluate the cause of the patient's symptoms.",
+          "retained": [
+            {
+              "atom": "The doctor may order diagnostic tests.",
+              "citation": "Patient: I'm 31 years old and female. I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately. Doctor: Could you please provide your age, gender, and describe the nature, location, and severity of your abdominal pain? Also, have you noticed any other symptoms such as nausea, vomiting, changes in bowel habits, or fever? Patient: The pain is in both sides of my upper abdomen, and it's been gradually getting worse over the past week. I've had some nausea and vomited a couple of times, but I haven't had a fever. I also noticed the pain gets worse when I work out, like when I try to jog. Doctor: Have you had any prior episodes of abdominal pain, and if so, what was the cause or diagnosis? Patient: I don't recall having any prior episodes of abdominal pain like this before. This seems to be the first time I've experienced pain like this, and I think it might be related to my coffee intake and maybe even the spicy food I've been eating lately. Doctor: Could you please tell me more about your dietary habits, including how much coffee you consume daily and how often you eat spicy food? Also, have you noticed any changes in your bowel habits or any jaundice? Patient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice. Doctor: Have you undergone any abdominal imaging or blood tests in the past week to evaluate the cause of your abdominal pain? Patient: No, I haven't had any abdominal imaging or blood tests in the past week to evaluate the cause of my pain. I'm just here today to talk about it and see what you think might be",
+              "entailment": 0.8027,
+              "depth": 1
+            },
+            {
+              "atom": "The diagnostic tests may be blood tests.",
+              "citation": "radiated to my back or shoulders or anywhere else. I haven't had any weight loss or changes in my bowel habits, and I don't have jaundice. I just have this ongoing upper abdominal pain that's been getting gradually worse over the week. Doctor: Have you noticed any changes in your appetite or experienced any episodes of vomiting that are different from your usual pattern? Patient: No, my appetite hasn't changed much, and the vomiting hasn't been any different from what I normally experience. It's just been happening more often lately, but nothing out of the ordinary. I'm just worried because the pain is still there and hasn't gone away. Doctor: Have you had any recent blood tests or abdominal imaging, such as an ultrasound or CT scan? Patient: No, I haven't had any recent blood tests or abdominal imaging like an ultrasound or CT scan. I'm here today because I've been having this pain for a week and wanted to see what you think might be going on. Doctor: Have you experienced any relief from over-the-counter medications such as antacids or anti-inflammatory drugs? Patient: No, I haven't tried any over-the-counter medications for the pain yet. I was hoping to see you first before taking anything else, just in case there's something more serious going on. I don't want to mask any symptoms that might be important.",
+              "entailment": 0.9902,
+              "depth": 1
+            },
+            {
+              "atom": "The diagnostic tests may be imaging studies.",
+              "citation": "radiated to my back or shoulders or anywhere else. I haven't had any weight loss or changes in my bowel habits, and I don't have jaundice. I just have this ongoing upper abdominal pain that's been getting gradually worse over the week. Doctor: Have you noticed any changes in your appetite or experienced any episodes of vomiting that are different from your usual pattern? Patient: No, my appetite hasn't changed much, and the vomiting hasn't been any different from what I normally experience. It's just been happening more often lately, but nothing out of the ordinary. I'm just worried because the pain is still there and hasn't gone away. Doctor: Have you had any recent blood tests or abdominal imaging, such as an ultrasound or CT scan? Patient: No, I haven't had any recent blood tests or abdominal imaging like an ultrasound or CT scan. I'm here today because I've been having this pain for a week and wanted to see what you think might be going on. Doctor: Have you experienced any relief from over-the-counter medications such as antacids or anti-inflammatory drugs? Patient: No, I haven't tried any over-the-counter medications for the pain yet. I was hoping to see you first before taking anything else, just in case there's something more serious going on. I don't want to mask any symptoms that might be important.",
+              "entailment": 0.9932,
+              "depth": 1
+            },
+            {
+              "atom": "The diagnostic tests are to evaluate the cause of the patient's symptoms.",
+              "citation": "Patient: I'm 31 years old and female. I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately. Doctor: Could you please provide your age, gender, and describe the nature, location, and severity of your abdominal pain? Also, have you noticed any other symptoms such as nausea, vomiting, changes in bowel habits, or fever? Patient: The pain is in both sides of my upper abdomen, and it's been gradually getting worse over the past week. I've had some nausea and vomited a couple of times, but I haven't had a fever. I also noticed the pain gets worse when I work out, like when I try to jog. Doctor: Have you had any prior episodes of abdominal pain, and if so, what was the cause or diagnosis? Patient: I don't recall having any prior episodes of abdominal pain like this before. This seems to be the first time I've experienced pain like this, and I think it might be related to my coffee intake and maybe even the spicy food I've been eating lately. Doctor: Could you please tell me more about your dietary habits, including how much coffee you consume daily and how often you eat spicy food? Also, have you noticed any changes in your bowel habits or any jaundice? Patient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice. Doctor: Have you undergone any abdominal imaging or blood tests in the past week to evaluate the cause of your abdominal pain? Patient: No, I haven't had any abdominal imaging or blood tests in the past week to evaluate the cause of my pain. I'm just here today to talk about it and see what you think might be",
+              "entailment": 0.9985,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've followed the rules to split every list, conjunction, and separate finding into its own fact, and replaced pronouns with the subject (\"The doctor\" and \"The patient\"). I've also not added or inferred any information that is not present in the original statement.",
+              "citation": "Patient: I'm 31 years old and female. I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately. Doctor: Could you please provide your age, gender, and describe the nature, location, and severity of your abdominal pain? Also, have you noticed any other symptoms such as nausea, vomiting, changes in bowel habits, or fever? Patient: The pain is in both sides of my upper abdomen, and it's been gradually getting worse over the past week. I've had some nausea and vomited a couple of times, but I haven't had a fever. I also noticed the pain gets worse when I work out, like when I try to jog. Doctor: Have you had any prior episodes of abdominal pain, and if so, what was the cause or diagnosis? Patient: I don't recall having any prior episodes of abdominal pain like this before. This seems to be the first time I've experienced pain like this, and I think it might be related to my coffee intake and maybe even the spicy food I've been eating lately. Doctor: Could you please tell me more about your dietary habits, including how much coffee you consume daily and how often you eat spicy food? Also, have you noticed any changes in your bowel habits or any jaundice? Patient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice. Doctor: Have you undergone any abdominal imaging or blood tests in the past week to evaluate the cause of your abdominal pain? Patient: No, I haven't had any abdominal imaging or blood tests in the past week to evaluate the cause of my pain. I'm just here today to talk about it and see what you think might be",
+              "entailment": 0.9976,
+              "depth": 1
+            }
+          ],
+          "discarded": [],
+          "decomposition_method": "llm",
+          "max_depth_reached": 1
+        }
+      },
+      {
+        "unit": "The patient may be prescribed medications to manage her symptoms and reduce inflammation.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.7031,
+          "neutral": 0.2188,
+          "contradiction": 0.0779
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "radiated to my back or shoulders or anywhere else. I haven't had any weight loss or changes in my bowel habits, and I don't have jaundice. I just have this ongoing upper abdominal pain that's been getting gradually worse over the week. Doctor: Have you noticed any changes in your appetite or experienced any episodes of vomiting that are different from your usual pattern? Patient: No, my appetite hasn't changed much, and the vomiting hasn't been any different from what I normally experience. It's just been happening more often lately, but nothing out of the ordinary. I'm just worried because the pain is still there and hasn't gone away. Doctor: Have you had any recent blood tests or abdominal imaging, such as an ultrasound or CT scan? Patient: No, I haven't had any recent blood tests or abdominal imaging like an ultrasound or CT scan. I'm here today because I've been having this pain for a week and wanted to see what you think might be going on. Doctor: Have you experienced any relief from over-the-counter medications such as antacids or anti-inflammatory drugs? Patient: No, I haven't tried any over-the-counter medications for the pain yet. I was hoping to see you first before taking anything else, just in case there's something more serious going on. I don't want to mask any symptoms that might be important.",
+        "atomic_decomposition": {
+          "original": "The patient may be prescribed medications to manage her symptoms and reduce inflammation.",
+          "retained": [
+            {
+              "atom": "The patient may be prescribed medications.",
+              "citation": "radiated to my back or shoulders or anywhere else. I haven't had any weight loss or changes in my bowel habits, and I don't have jaundice. I just have this ongoing upper abdominal pain that's been getting gradually worse over the week. Doctor: Have you noticed any changes in your appetite or experienced any episodes of vomiting that are different from your usual pattern? Patient: No, my appetite hasn't changed much, and the vomiting hasn't been any different from what I normally experience. It's just been happening more often lately, but nothing out of the ordinary. I'm just worried because the pain is still there and hasn't gone away. Doctor: Have you had any recent blood tests or abdominal imaging, such as an ultrasound or CT scan? Patient: No, I haven't had any recent blood tests or abdominal imaging like an ultrasound or CT scan. I'm here today because I've been having this pain for a week and wanted to see what you think might be going on. Doctor: Have you experienced any relief from over-the-counter medications such as antacids or anti-inflammatory drugs? Patient: No, I haven't tried any over-the-counter medications for the pain yet. I was hoping to see you first before taking anything else, just in case there's something more serious going on. I don't want to mask any symptoms that might be important.",
+              "entailment": 0.8823,
+              "depth": 1
+            },
+            {
+              "atom": "Since there is only one proposition in the statement, I did not split it into multiple facts.",
+              "citation": "Patient: I'm 31 years old and female. I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately. Doctor: Could you please provide your age, gender, and describe the nature, location, and severity of your abdominal pain? Also, have you noticed any other symptoms such as nausea, vomiting, changes in bowel habits, or fever? Patient: The pain is in both sides of my upper abdomen, and it's been gradually getting worse over the past week. I've had some nausea and vomited a couple of times, but I haven't had a fever. I also noticed the pain gets worse when I work out, like when I try to jog. Doctor: Have you had any prior episodes of abdominal pain, and if so, what was the cause or diagnosis? Patient: I don't recall having any prior episodes of abdominal pain like this before. This seems to be the first time I've experienced pain like this, and I think it might be related to my coffee intake and maybe even the spicy food I've been eating lately. Doctor: Could you please tell me more about your dietary habits, including how much coffee you consume daily and how often you eat spicy food? Also, have you noticed any changes in your bowel habits or any jaundice? Patient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice. Doctor: Have you undergone any abdominal imaging or blood tests in the past week to evaluate the cause of your abdominal pain? Patient: No, I haven't had any abdominal imaging or blood tests in the past week to evaluate the cause of my pain. I'm just here today to talk about it and see what you think might be",
+              "entailment": 0.9927,
+              "depth": 2
+            },
+            {
+              "atom": "The medications are to reduce inflammation.",
+              "citation": "radiated to my back or shoulders or anywhere else. I haven't had any weight loss or changes in my bowel habits, and I don't have jaundice. I just have this ongoing upper abdominal pain that's been getting gradually worse over the week. Doctor: Have you noticed any changes in your appetite or experienced any episodes of vomiting that are different from your usual pattern? Patient: No, my appetite hasn't changed much, and the vomiting hasn't been any different from what I normally experience. It's just been happening more often lately, but nothing out of the ordinary. I'm just worried because the pain is still there and hasn't gone away. Doctor: Have you had any recent blood tests or abdominal imaging, such as an ultrasound or CT scan? Patient: No, I haven't had any recent blood tests or abdominal imaging like an ultrasound or CT scan. I'm here today because I've been having this pain for a week and wanted to see what you think might be going on. Doctor: Have you experienced any relief from over-the-counter medications such as antacids or anti-inflammatory drugs? Patient: No, I haven't tried any over-the-counter medications for the pain yet. I was hoping to see you first before taking anything else, just in case there's something more serious going on. I don't want to mask any symptoms that might be important.",
+              "entailment": 0.8174,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've followed the rules by splitting the list, conjunctions, and separate findings into individual facts, and replacing pronouns with the subject (\"The patient\").",
+              "citation": "Patient: I'm 31 years old and female. I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately. Doctor: Could you please provide your age, gender, and describe the nature, location, and severity of your abdominal pain? Also, have you noticed any other symptoms such as nausea, vomiting, changes in bowel habits, or fever? Patient: The pain is in both sides of my upper abdomen, and it's been gradually getting worse over the past week. I've had some nausea and vomited a couple of times, but I haven't had a fever. I also noticed the pain gets worse when I work out, like when I try to jog. Doctor: Have you had any prior episodes of abdominal pain, and if so, what was the cause or diagnosis? Patient: I don't recall having any prior episodes of abdominal pain like this before. This seems to be the first time I've experienced pain like this, and I think it might be related to my coffee intake and maybe even the spicy food I've been eating lately. Doctor: Could you please tell me more about your dietary habits, including how much coffee you consume daily and how often you eat spicy food? Also, have you noticed any changes in your bowel habits or any jaundice? Patient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice. Doctor: Have you undergone any abdominal imaging or blood tests in the past week to evaluate the cause of your abdominal pain? Patient: No, I haven't had any abdominal imaging or blood tests in the past week to evaluate the cause of my pain. I'm just here today to talk about it and see what you think might be",
+              "entailment": 0.9985,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "The medications are to manage her symptoms.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.4587,
+              "depth": 2
+            }
+          ],
+          "decomposition_method": "llm",
+          "max_depth_reached": 2
+        }
+      },
+      {
+        "unit": "Follow-up instructions will be provided once the diagnosis is confirmed and a treatment plan is established.",
+        "section": "ASSESSMENT_AND_PLAN",
+        "scores": {
+          "entailment": 0.4421,
+          "neutral": 0.3186,
+          "contradiction": 0.2391
+        },
+        "classification": "uncertain",
+        "citation_source": "Partial / Ambiguous dialogue grounding",
+        "citation_text": "here today because I've been having this pain for a week and wanted to see what you think might be going on. Doctor: Have you experienced any relief from the abdominal pain after reducing your coffee and spicy food intake this week? Patient: Not really, the pain is still there, though it hasn't gotten worse. I've been trying to cut back, but I think it's going to take a little more time for it to settle down. I'm just hoping this isn't something more serious. Doctor: Have you experienced any relief from the abdominal pain after reducing your coffee and spicy food intake? Patient: Not really, the pain is still there, though it hasn't gotten worse. I've been trying to cut back, but I think it's going to take a little more time for it to settle down. I'm just hoping this isn't something more serious. Doctor: Have you had any recent blood tests or abdominal imaging, such as an ultrasound or CT scan, that could help evaluate the cause of your pain? Patient: No, I haven't had any recent blood tests or abdominal imaging like an ultrasound or CT scan. I'm here today because I've been having this pain for a week and wanted to see what you think might be going on. Doctor: Have you noticed any radiation of the pain to your back, shoulders, or other areas? Additionally, have you experienced any weight loss, changes in bowel habits, or jaundice in the past few weeks? Patient: No, the pain hasn't radiated to my back or shoulders or anywhere else. I haven't had any weight loss or changes in my bowel habits, and I don't have jaundice. I just have this ongoing upper abdominal pain that's been getting gradually worse over the week. Doctor: Have you noticed any changes in your appetite or experienced any episodes of vomiting that are different from your usual pattern? Patient: No, my appetite hasn't changed much, and the vomiting hasn't been any different from what I",
+        "atomic_decomposition": {
+          "original": "Follow-up instructions will be provided once the diagnosis is confirmed and a treatment plan is established.",
+          "retained": [
+            {
+              "atom": "A treatment plan is established.",
+              "citation": "started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice. Doctor: Have you undergone any abdominal imaging or blood tests in the past week to evaluate the cause of your abdominal pain? Patient: No, I haven't had any abdominal imaging or blood tests in the past week to evaluate the cause of my pain. I'm just here today to talk about it and see what you think might be going on. Doctor: Have you experienced any changes in your bowel habits, such as diarrhea, constipation, or blood in the stool, during the course of your symptoms? Patient: No, I haven't had any changes in my bowel habits like diarrhea or constipation, and I haven't noticed any blood in my stool either. The main issues have been the abdominal pain, some nausea, and vomiting. Doctor: Have you experienced any relief from the abdominal pain with antacids or over-the-counter medications for heartburn or indigestion? Patient: No, I haven't tried any antacids or over-the-counter medications for heartburn or indigestion yet because I didn't think about it until today. I just kind of tried to manage it by cutting back on coffee and spicy food this week. Doctor: Have you undergone any abdominal imaging or blood tests in the past month that could help evaluate the cause of your abdominal pain? Patient: No, I haven't had any abdominal imaging or blood tests in the past month that could help evaluate the cause of my pain. I'm here today because I've been having this pain for a week and wanted to see what you think might be going on. Doctor: Have you experienced any relief from the abdominal pain after reducing your coffee and spicy food intake this week? Patient: Not really, the pain is still there, though it hasn't gotten worse. I've been trying to cut back, but I think it's going to take a little more time for it to settle down. I'm just hoping this",
+              "entailment": 0.5029,
+              "depth": 1
+            },
+            {
+              "atom": "Note that I've followed the rules by:",
+              "citation": "radiated to my back or shoulders or anywhere else. I haven't had any weight loss or changes in my bowel habits, and I don't have jaundice. I just have this ongoing upper abdominal pain that's been getting gradually worse over the week. Doctor: Have you noticed any changes in your appetite or experienced any episodes of vomiting that are different from your usual pattern? Patient: No, my appetite hasn't changed much, and the vomiting hasn't been any different from what I normally experience. It's just been happening more often lately, but nothing out of the ordinary. I'm just worried because the pain is still there and hasn't gone away. Doctor: Have you had any recent blood tests or abdominal imaging, such as an ultrasound or CT scan? Patient: No, I haven't had any recent blood tests or abdominal imaging like an ultrasound or CT scan. I'm here today because I've been having this pain for a week and wanted to see what you think might be going on. Doctor: Have you experienced any relief from over-the-counter medications such as antacids or anti-inflammatory drugs? Patient: No, I haven't tried any over-the-counter medications for the pain yet. I was hoping to see you first before taking anything else, just in case there's something more serious going on. I don't want to mask any symptoms that might be important.",
+              "entailment": 0.9937,
+              "depth": 1
+            },
+            {
+              "atom": "Splitting the conjunction \"and\" into separate facts",
+              "citation": "Patient: I'm 31 years old and female. I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately. Doctor: Could you please provide your age, gender, and describe the nature, location, and severity of your abdominal pain? Also, have you noticed any other symptoms such as nausea, vomiting, changes in bowel habits, or fever? Patient: The pain is in both sides of my upper abdomen, and it's been gradually getting worse over the past week. I've had some nausea and vomited a couple of times, but I haven't had a fever. I also noticed the pain gets worse when I work out, like when I try to jog. Doctor: Have you had any prior episodes of abdominal pain, and if so, what was the cause or diagnosis? Patient: I don't recall having any prior episodes of abdominal pain like this before. This seems to be the first time I've experienced pain like this, and I think it might be related to my coffee intake and maybe even the spicy food I've been eating lately. Doctor: Could you please tell me more about your dietary habits, including how much coffee you consume daily and how often you eat spicy food? Also, have you noticed any changes in your bowel habits or any jaundice? Patient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice. Doctor: Have you undergone any abdominal imaging or blood tests in the past week to evaluate the cause of your abdominal pain? Patient: No, I haven't had any abdominal imaging or blood tests in the past week to evaluate the cause of my pain. I'm just here today to talk about it and see what you think might be",
+              "entailment": 0.9985,
+              "depth": 1
+            },
+            {
+              "atom": "Replacing pronouns (\"once\" and \"a\") with the subject (\"the diagnosis\" and \"a treatment plan\")",
+              "citation": "Patient: I'm 31 years old and female. I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately. Doctor: Could you please provide your age, gender, and describe the nature, location, and severity of your abdominal pain? Also, have you noticed any other symptoms such as nausea, vomiting, changes in bowel habits, or fever? Patient: The pain is in both sides of my upper abdomen, and it's been gradually getting worse over the past week. I've had some nausea and vomited a couple of times, but I haven't had a fever. I also noticed the pain gets worse when I work out, like when I try to jog. Doctor: Have you had any prior episodes of abdominal pain, and if so, what was the cause or diagnosis? Patient: I don't recall having any prior episodes of abdominal pain like this before. This seems to be the first time I've experienced pain like this, and I think it might be related to my coffee intake and maybe even the spicy food I've been eating lately. Doctor: Could you please tell me more about your dietary habits, including how much coffee you consume daily and how often you eat spicy food? Also, have you noticed any changes in your bowel habits or any jaundice? Patient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice. Doctor: Have you undergone any abdominal imaging or blood tests in the past week to evaluate the cause of your abdominal pain? Patient: No, I haven't had any abdominal imaging or blood tests in the past week to evaluate the cause of my pain. I'm just here today to talk about it and see what you think might be",
+              "entailment": 0.8618,
+              "depth": 1
+            },
+            {
+              "atom": "Not adding or inferring any information that is not present in the original statement",
+              "citation": "Patient: I'm 31 years old and female. I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately. Doctor: Could you please provide your age, gender, and describe the nature, location, and severity of your abdominal pain? Also, have you noticed any other symptoms such as nausea, vomiting, changes in bowel habits, or fever? Patient: The pain is in both sides of my upper abdomen, and it's been gradually getting worse over the past week. I've had some nausea and vomited a couple of times, but I haven't had a fever. I also noticed the pain gets worse when I work out, like when I try to jog. Doctor: Have you had any prior episodes of abdominal pain, and if so, what was the cause or diagnosis? Patient: I don't recall having any prior episodes of abdominal pain like this before. This seems to be the first time I've experienced pain like this, and I think it might be related to my coffee intake and maybe even the spicy food I've been eating lately. Doctor: Could you please tell me more about your dietary habits, including how much coffee you consume daily and how often you eat spicy food? Also, have you noticed any changes in your bowel habits or any jaundice? Patient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice. Doctor: Have you undergone any abdominal imaging or blood tests in the past week to evaluate the cause of your abdominal pain? Patient: No, I haven't had any abdominal imaging or blood tests in the past week to evaluate the cause of my pain. I'm just here today to talk about it and see what you think might be",
+              "entailment": 0.9805,
+              "depth": 1
+            },
+            {
+              "atom": "Outputting each fact as a self-contained proposition",
+              "citation": "Patient: I'm 31 years old and female. I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately. Doctor: Could you please provide your age, gender, and describe the nature, location, and severity of your abdominal pain? Also, have you noticed any other symptoms such as nausea, vomiting, changes in bowel habits, or fever? Patient: The pain is in both sides of my upper abdomen, and it's been gradually getting worse over the past week. I've had some nausea and vomited a couple of times, but I haven't had a fever. I also noticed the pain gets worse when I work out, like when I try to jog. Doctor: Have you had any prior episodes of abdominal pain, and if so, what was the cause or diagnosis? Patient: I don't recall having any prior episodes of abdominal pain like this before. This seems to be the first time I've experienced pain like this, and I think it might be related to my coffee intake and maybe even the spicy food I've been eating lately. Doctor: Could you please tell me more about your dietary habits, including how much coffee you consume daily and how often you eat spicy food? Also, have you noticed any changes in your bowel habits or any jaundice? Patient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice. Doctor: Have you undergone any abdominal imaging or blood tests in the past week to evaluate the cause of your abdominal pain? Patient: No, I haven't had any abdominal imaging or blood tests in the past week to evaluate the cause of my pain. I'm just here today to talk about it and see what you think might be",
+              "entailment": 0.979,
+              "depth": 1
+            }
+          ],
+          "discarded": [
+            {
+              "atom": "Follow-up instructions will be provided.",
+              "reasoning": "Could not be decomposed further and not entailed above threshold Ta.",
+              "entailment": 0.3918,
+              "depth": 1
+            },
+            {
+              "atom": "The diagnosis is confirmed.",
+              "reasoning": "Sub-proposition not entailed above threshold Ta (0.50).",
+              "entailment": 0.3855,
+              "depth": 1
+            }
+          ],
+          "decomposition_method": "unsplit",
+          "max_depth_reached": 1
+        }
+      }
+    ]
+  },
+  "stage2_stats": {
+    "decision_counts": {
+      "faithful": 6,
+      "uncertain": 5
+    },
+    "num_claims": 11,
+    "num_kept": 11,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_so": {
+    "subjective": "Chief Complaint: Abdominal pain for the past week.\nHistory of Present Illness (HPI): The patient, a 31-year-old female, presents with a 1-week history of worsening abdominal pain, nausea, and vomiting.\nShe reports that the pain is located in both sides of her upper abdomen and worsens with exercise.\nShe has tried reducing her coffee and spicy food intake, but the pain persists.",
+    "objective": "Note that there is only one proposition in this statement, so it can be output as a single fact.\nNote that I've split the statement into two separate facts, each describing a different aspect of the physical examination (Physical Examination and Vitals). I've also replaced the pronoun \"this visit\" with the subject \"during this visit\" to make each fact self-contained.\nDiagnostic Results & Labs: Not mentioned.",
+    "assessment_and_plan": "Diagnoses and Clinical Reasoning: The patient's symptoms are consistent with a possible gastrointestinal issue, possibly related to her coffee and spicy food intake.\nThe underlying cause of her abdominal pain needs to be determined.\nHer abdominal pain has an underlying cause.\nThe doctor may order diagnostic tests.\nThe diagnostic tests may be blood tests.\nThe diagnostic tests may be imaging studies.\nThe diagnostic tests are to evaluate the cause of the patient's symptoms.\nNote that I've followed the rules to split every list, conjunction, and separate finding into its own fact, and replaced pronouns with the subject (\"The doctor\" and \"The patient\"). I've also not added or inferred any information that is not present in the original statement.\nThe patient may be prescribed medications.\nSince there is only one proposition in the statement, I did not split it into multiple facts.\nThe medications are to reduce inflammation.\nNote that I've followed the rules by splitting the list, conjunctions, and separate findings into individual facts, and replacing pronouns with the subject (\"The patient\").\nA treatment plan is established.\nNote that I've followed the rules by:\nSplitting the conjunction \"and\" into separate facts\nReplacing pronouns (\"once\" and \"a\") with the subject (\"the diagnosis\" and \"a treatment plan\")\nNot adding or inferring any information that is not present in the original statement\nOutputting each fact as a self-contained proposition"
+  },
+  "stage3_key_sentences": [
+    "I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately.",
+    "I've had some nausea and vomited a couple of times, but I haven't had a fever."
+  ],
+  "stage3_summary_key_phrases": [
+    "complaint abdominal pain",
+    "subject diagnosis",
+    "present illness hpi",
+    "aspect physical examination",
+    "vomiting reports",
+    "patient symptoms note",
+    "pronoun visit subject",
+    "possible gastrointestinal",
+    "food intake pain",
+    "related coffee spicy"
+  ],
+  "stage3_coverage_scores": [
+    {
+      "sentence": "I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately.",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately.",
+      "score": 0.5008,
+      "is_missing": false,
+      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+    },
+    {
+      "sentence": "I've had some nausea and vomited a couple of times, but I haven't had a fever.",
+      "citation_source": "src (dialogue key sentence)",
+      "citation_text": "I've had some nausea and vomited a couple of times, but I haven't had a fever.",
+      "score": 0.5224,
+      "is_missing": false,
+      "action": "Preserved: Dialogue detail already adequately covered in note (coverage >= 0.40)."
+    }
+  ],
+  "stage3_candidate_log": [],
+  "stage3_added": [],
+  "stage3_stats": {
+    "num_key_sentences": 2,
+    "num_flagged": 0,
+    "num_added": 0
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "section": "objective",
+        "claim": "Physical Examination is not performed.",
+        "entailment": 0.4163,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: Not performed during this visit."
+      },
+      {
+        "section": "objective",
+        "claim": "Physical Examination is performed during this visit (note: this is an implied fact, as the statement explicitly states \"is not performed\", which implies that it would be performed if not for the negation).",
+        "entailment": 0.3882,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: Not performed during this visit."
+      },
+      {
+        "section": "objective",
+        "claim": "Let me know if you have any further questions or if you'd like me to clarify anything!",
+        "entailment": 0.4712,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: Not performed during this visit."
+      },
+      {
+        "section": "objective",
+        "claim": "Vitals are not performed during this visit.",
+        "entailment": 0.4556,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Physical Examination & Vitals: Not performed during this visit."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "Further evaluation is needed.",
+        "entailment": 0.4058,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Further evaluation is needed to determine the underlying cause of her abdominal pain."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "The medications are to manage her symptoms.",
+        "entailment": 0.4587,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "The patient may be prescribed medications to manage her symptoms and reduce inflammation."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "Follow-up instructions will be provided.",
+        "entailment": 0.3918,
+        "reason": "Could not be decomposed further and not entailed above threshold Ta.",
+        "from_unit": "Follow-up instructions will be provided once the diagnosis is confirmed and a treatment plan is established."
+      },
+      {
+        "section": "assessment_and_plan",
+        "claim": "The diagnosis is confirmed.",
+        "entailment": 0.3855,
+        "reason": "Sub-proposition not entailed above threshold Ta (0.50).",
+        "from_unit": "Follow-up instructions will be provided once the diagnosis is confirmed and a treatment plan is established."
+      }
+    ]
+  },
+  "final_ap": {
+    "assessment_and_plan": "Diagnoses and Clinical Reasoning: The patient's symptoms are consistent with a possible gastrointestinal issue, possibly related to her coffee and spicy food intake.\nThe underlying cause of her abdominal pain needs to be determined.\nHer abdominal pain has an underlying cause.\nThe doctor may order diagnostic tests.\nThe diagnostic tests may be blood tests.\nThe diagnostic tests may be imaging studies.\nThe diagnostic tests are to evaluate the cause of the patient's symptoms.\nNote that I've followed the rules to split every list, conjunction, and separate finding into its own fact, and replaced pronouns with the subject (\"The doctor\" and \"The patient\"). I've also not added or inferred any information that is not present in the original statement.\nThe patient may be prescribed medications.\nSince there is only one proposition in the statement, I did not split it into multiple facts.\nThe medications are to reduce inflammation.\nNote that I've followed the rules by splitting the list, conjunctions, and separate findings into individual facts, and replacing pronouns with the subject (\"The patient\").\nA treatment plan is established.\nNote that I've followed the rules by:\nSplitting the conjunction \"and\" into separate facts\nReplacing pronouns (\"once\" and \"a\") with the subject (\"the diagnosis\" and \"a treatment plan\")\nNot adding or inferring any information that is not present in the original statement\nOutputting each fact as a self-contained proposition"
+  },
+  "scope": "soap",
+  "ap_changed": true,
+  "thresholds": {
+    "Te": 0.9,
+    "Tc": 0.8,
+    "Ta": 0.5,
+    "cov_min": 0.4,
+    "top_m": 2,
+    "fix_header_bug": true
+  },
+  "models": {
+    "llm": "llama3:8b-instruct-q8_0",
+    "nli": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+    "embedder": "all-MiniLM-L6-v2",
+    "ppl": "gpt2"
+  },
+  "status": "success",
+  "seconds": 15.2,
+  "conversation": "Patient: I'm 31 years old and female. I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately.\nDoctor: Could you please provide your age, gender, and describe the nature, location, and severity of your abdominal pain? Also, have you noticed any other symptoms such as nausea, vomiting, changes in bowel habits, or fever?\nPatient: The pain is in both sides of my upper abdomen, and it's been gradually getting worse over the past week. I've had some nausea and vomited a couple of times, but I haven't had a fever. I also noticed the pain gets worse when I work out, like when I try to jog.\nDoctor: Have you had any prior episodes of abdominal pain, and if so, what was the cause or diagnosis?\nPatient: I don't recall having any prior episodes of abdominal pain like this before. This seems to be the first time I've experienced pain like this, and I think it might be related to my coffee intake and maybe even the spicy food I've been eating lately.\nDoctor: Could you please tell me more about your dietary habits, including how much coffee you consume daily and how often you eat spicy food? Also, have you noticed any changes in your bowel habits or any jaundice?\nPatient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice.\nDoctor: Have you undergone any abdominal imaging or blood tests in the past week to evaluate the cause of your abdominal pain?\nPatient: No, I haven't had any abdominal imaging or blood tests in the past week to evaluate the cause of my pain. I'm just here today to talk about it and see what you think might be going on.\nDoctor: Have you experienced any changes in your bowel habits, such as diarrhea, constipation, or blood in the stool, during the course of your symptoms?\nPatient: No, I haven't had any changes in my bowel habits like diarrhea or constipation, and I haven't noticed any blood in my stool either. The main issues have been the abdominal pain, some nausea, and vomiting.\nDoctor: Have you experienced any relief from the abdominal pain with antacids or over-the-counter medications for heartburn or indigestion?\nPatient: No, I haven't tried any antacids or over-the-counter medications for heartburn or indigestion yet because I didn't think about it until today. I just kind of tried to manage it by cutting back on coffee and spicy food this week.\nDoctor: Have you undergone any abdominal imaging or blood tests in the past month that could help evaluate the cause of your abdominal pain?\nPatient: No, I haven't had any abdominal imaging or blood tests in the past month that could help evaluate the cause of my pain. I'm here today because I've been having this pain for a week and wanted to see what you think might be going on.\nDoctor: Have you experienced any relief from the abdominal pain after reducing your coffee and spicy food intake this week?\nPatient: Not really, the pain is still there, though it hasn't gotten worse. I've been trying to cut back, but I think it's going to take a little more time for it to settle down. I'm just hoping this isn't something more serious.\nDoctor: Have you experienced any relief from the abdominal pain after reducing your coffee and spicy food intake?\nPatient: Not really, the pain is still there, though it hasn't gotten worse. I've been trying to cut back, but I think it's going to take a little more time for it to settle down. I'm just hoping this isn't something more serious.\nDoctor: Have you had any recent blood tests or abdominal imaging, such as an ultrasound or CT scan, that could help evaluate the cause of your pain?\nPatient: No, I haven't had any recent blood tests or abdominal imaging like an ultrasound or CT scan. I'm here today because I've been having this pain for a week and wanted to see what you think might be going on.\nDoctor: Have you noticed any radiation of the pain to your back, shoulders, or other areas? Additionally, have you experienced any weight loss, changes in bowel habits, or jaundice in the past few weeks?\nPatient: No, the pain hasn't radiated to my back or shoulders or anywhere else. I haven't had any weight loss or changes in my bowel habits, and I don't have jaundice. I just have this ongoing upper abdominal pain that's been getting gradually worse over the week.\nDoctor: Have you noticed any changes in your appetite or experienced any episodes of vomiting that are different from your usual pattern?\nPatient: No, my appetite hasn't changed much, and the vomiting hasn't been any different from what I normally experience. It's just been happening more often lately, but nothing out of the ordinary. I'm just worried because the pain is still there and hasn't gone away.\nDoctor: Have you had any recent blood tests or abdominal imaging, such as an ultrasound or CT scan?\nPatient: No, I haven't had any recent blood tests or abdominal imaging like an ultrasound or CT scan. I'm here today because I've been having this pain for a week and wanted to see what you think might be going on.\nDoctor: Have you experienced any relief from over-the-counter medications such as antacids or anti-inflammatory drugs?\nPatient: No, I haven't tried any over-the-counter medications for the pain yet. I was hoping to see you first before taking anything else, just in case there's something more serious going on. I don't want to mask any symptoms that might be important.",
+  "reference_so": {
+    "subjective": "Basic information: 31-year-old female presenting with abdominal pain for the past week\n\nHistory of present illness: Pain in both sides of upper abdomen, gradually worsening over the past week, associated with nausea and vomiting, no fever, exacerbated by physical activity such as jogging. Patient attributes symptoms to increased coffee and spicy food consumption. Patient consumes nitro cold brew from Starbucks, 2-3 cups daily, and has increased spicy food intake. No changes in bowel habits, no jaundice, no blood in stool. Patient has not experienced significant relief from reducing coffee and spicy food intake. The pain has not radiated to the back or shoulders, and there has been no weight loss. No episodes of severe pain radiating to the back or right shoulder. No changes in bowel movements, pale stools, or dark urine. No significant changes in appetite or vomiting patterns beyond increased frequency.\n\nPast history: No prior history of gallstones, pancreatitis, or peptic ulcer disease. No family history of gastrointestinal conditions reported. No known allergies. No prior use of antacids or proton pump inhibitors reported. No prior use of over-the-counter medications.",
+    "objective": "Physical examination: Vital signs: temperature 36.8°C, heart rate 78 bpm, blood pressure 120/80 mmHg, respiratory rate 16 breaths/min, oxygen saturation 98% on room air. Abdominal examination: tenderness in the upper abdomen bilaterally, no guarding or rebound tenderness, no palpable masses, no hepatosplenomegaly. Bowel sounds normal. No jaundice or peripheral edema.\n\nInvestigations: No recent blood tests or abdominal imaging (e.g., ultrasound or CT scan) have been performed. No evidence of jaundice, weight loss, or changes in bowel habits. No history of gallstones, pancreatitis, or peptic ulcer disease. No known allergies or prior use of antacids or proton pump inhibitors.",
+    "assessment_and_plan": "Preliminary diagnosis:\n1. Functional dyspepsia. 2. Gastritis. 3. Acute cholecystitis (unlikely due to absence of fever, leukocytosis, or gallstone history).\n\nDiagnostic discussion:\nThe patient is a 31-year-old female with a one-week history of gradually worsening upper abdominal pain, associated with nausea and vomiting, exacerbated by physical activity and attributed to increased coffee and spicy food consumption. The absence of fever, jaundice, weight loss, or changes in bowel habits reduces the likelihood of acute cholecystitis or pancreatitis. However, the presence of upper abdominal pain, nausea, and vomiting, along with a history of increased dietary irritants, supports a diagnosis of gastritis or functional dyspepsia. The absence of a history of gallstones, pancreatitis, or peptic ulcer disease, and the lack of typical features such as guarding or rebound tenderness, further supports a non-organic cause. The differential diagnoses include gastritis, functional dyspepsia, and acute cholecystitis, with the latter being less likely due to the absence of fever, leukocytosis, or gallstone history. The patient has no prior history of gastrointestinal conditions, and no prior imaging or blood tests have been performed, so further evaluation is needed to confirm the diagnosis.\n1. Further evaluation: Abdominal ultrasound to assess for gallstones or biliary abnormalities, and complete blood count (CBC) and liver function tests (LFTs) to rule out cholecystitis or hepatitis. Serum lipase/amylase levels to rule out pancreatitis. 2. Medication: Proton pump inhibitors (PPIs) for gastritis or functional dyspepsia, with monitoring for side effects. If symptoms persist, consider H2 receptor antagonists or prokinetic agents. 3. Non-drug management: Advise reduction in coffee and spicy food intake, and recommend a bland diet. Encourage hydration and avoidance of physical activity that exacerbates symptoms. Educate on recognizing warning signs such as fever, jaundice, or severe pain. 4. Follow-up: Reassess in one week if symptoms persist or worsen, or earlier if new symptoms develop. Consider referral to gastroenterology for further evaluation if symptoms do not improve."
+  }
+}
