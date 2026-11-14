@@ -1,0 +1,767 @@
+{
+  "case_id": "D2N178",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient is a 78-year-old female with a history of diabetes mellitus, presenting for a follow-up visit due to uncontrolled blood sugar levels.\n* She reports her A1C was 9.9 in her last test, and she is currently taking 2mg of glimepiride daily.\n* She experiences frequent urination, especially at night, and burning or aching pain in her legs and feet, which is constant and worsens with prolonged sitting or walking.\n* She also reports reduced sensation in her toes and difficulty feeling them.\n* She has not noticed any changes in her vision or symptoms related to her eyes.\n* She has not experienced chest pain, shortness of breath, or dizziness.\n* She has not had any recent physical examination findings or results from imaging or nerve conduction studies.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient is a 78-year-old female with a history of diabetes mellitus, presenting for a follow-up visit due to uncontrolled blood sugar levels.\n* She reports her A1C was 9.9 in her last test, and she is currently taking 2mg of glimepiride daily.\n* She experiences frequent urination, especially at night, and burning or aching pain in her legs and feet, which is constant and worsens with prolonged sitting or walking.\n* She also reports reduced sensation in her toes and difficulty feeling them.\n* She has not noticed any changes in her vision or symptoms related to her eyes.\n* She has not experienced chest pain, shortness of breath, or dizziness.\n* She has not had any recent physical examination findings or results from imaging or nerve conduction studies.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* Patient is a 78-year-old female with a history of diabetes mellitus, presenting for a follow-up visit due to uncontrolled blood sugar levels.\n* The patient reports that they try to eat healthier, but have not significantly reduced their carbohydrate intake.\n* The patient denies experiencing numbness, tingling, or loss of balance in their feet or legs beyond what they initially reported.\n* She reports her A1C was 9.9 in her last test, and she is currently taking 2mg of glimepiride daily.\n* The patient reports consuming two slices of an unspecified food item in the morning.\n* She experiences frequent urination, especially at night, and burning or aching pain in her legs and feet, which is constant and worsens with prolonged sitting or walking.\n* The patient reports preferring seltzer over regular water and soda.\n* She also reports reduced sensation in her toes and difficulty feeling them.\n* She has not noticed any changes in her vision or symptoms related to her eyes.\n* She has not experienced chest pain, shortness of breath, or dizziness.\n* She has not had any recent physical examination findings or results from imaging or nerve conduction studies.\n* The patient is willing to try the four milligrams of medication twice a day as previously suggested.\n* The patient hasn't been checking their fasting or postprandial levels regularly, to be honest.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has uncontrolled blood sugar levels, as evidenced by her A1C of 9.9.\n* She experiences symptoms of diabetic neuropathy, including burning or aching pain in her legs and feet, reduced sensation in her toes, and decreased ability to feel her toes.",
+    "plan": "* The doctor will consider increasing the patient's glimepiride dosage to 4mg twice a day to better control her blood sugar levels.\n* The patient will be referred for nerve conduction studies and imaging to evaluate for diabetic neuropathy.\n* The patient will be advised to monitor her blood sugar levels regularly and to report any changes in her symptoms."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient is a 78-year-old female with a history of diabetes mellitus, presenting for a follow-up visit due to uncontrolled blood sugar levels.",
+      "scores": {
+        "entailment": 0.999,
+        "neutral": 0.0007,
+        "contradiction": 0.0393
+      },
+      "support_evidence": "Patient: I'm 78 years old, and I'm a female. I'm here for a follow-up. My sugars haven't been very well controlled, and I need to talk about adjusting my medication.",
+      "contradiction_evidence": "Patient: I don't have the exact dates of my A1C test, but I know my last one was 9.9. I haven't been tracking my fasting or postprandial levels regularly, to be honest. I just know my sugars aren't where they should be.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient is a 78-year-old female with a history of diabetes mellitus, presenting for a follow-up visit due to uncontrolled blood sugar levels.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 78-year-old female with a history of diabetes mellitus, presenting for a follow-up visit due to uncontrolled blood sugar levels.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She reports her A1C was 9.9 in her last test, and she is currently taking 2mg of glimepiride daily.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0003,
+        "contradiction": 0.2651
+      },
+      "support_evidence": "Patient: Yes, I was diagnosed with diabetes mellitus some time ago. I've been managing it with medication, but my sugars haven't been very well controlled, as you've mentioned. I know my A1C was 9.9 from the last test, and I'm still on the two milligrams of glimepiride. I'm ready to try increasing it to four milligrams twice a day if that's what you recommend.",
+      "contradiction_evidence": "Patient: I don't have the exact dates of my A1C test, but I know my last one was 9.9. I haven't been tracking my fasting or postprandial levels regularly, to be honest. I just know my sugars aren't where they should be.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She reports her A1C was 9.9 in her last test, and she is currently taking 2mg of glimepiride daily.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "She reports her A1C was 9.9 in her last test, and she is currently taking 2mg of glimepiride daily.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She experiences frequent urination.",
+      "scores": {
+        "entailment": 0.999,
+        "neutral": 0.0007,
+        "contradiction": 0.0023
+      },
+      "support_evidence": "Patient: I try to eat healthier, but I haven't really cut down on carbs much. I don't eat pasta or bread often, and when I do, it's wheat bread. I usually have two slices in the morning. I don't drink soda or regular water—I prefer seltzer. As for symptoms, I do pee a lot, especially at night, and my legs and feet hurt a lot, but I haven't lost any weight or had excessive thirst.",
+      "contradiction_evidence": "Doctor: Could you please describe any changes in your vision or any symptoms related to your eyes, such as blurred vision or floaters? Additionally, have you experienced any chest pain, shortness of breath, or dizziness that might suggest cardiovascular involvement?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She experiences frequent urination.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "She experiences frequent urination, especially at night, and burning or aching pain in her legs and feet, which is constant and worsens with prolonged sitting or walking."
+    },
+    {
+      "claim": "She experiences frequent urination especially at night.",
+      "scores": {
+        "entailment": 0.9988,
+        "neutral": 0.0006,
+        "contradiction": 0.0108
+      },
+      "support_evidence": "Patient: I try to eat healthier, but I haven't really cut down on carbs much. I don't eat pasta or bread often, and when I do, it's wheat bread. I usually have two slices in the morning. I don't drink soda or regular water—I prefer seltzer. As for symptoms, I do pee a lot, especially at night, and my legs and feet hurt a lot, but I haven't lost any weight or had excessive thirst.",
+      "contradiction_evidence": "Doctor: Could you please describe any changes in your vision or any symptoms related to your eyes, such as blurred vision or floaters? Additionally, have you experienced any chest pain, shortness of breath, or dizziness that might suggest cardiovascular involvement?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She experiences frequent urination especially at night.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "She experiences frequent urination, especially at night, and burning or aching pain in her legs and feet, which is constant and worsens with prolonged sitting or walking."
+    },
+    {
+      "claim": "She experiences burning pain in her legs.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0002,
+        "contradiction": 0.8474
+      },
+      "support_evidence": "Patient: The pain in my legs and feet has been going on for a while now, and it doesn't really get better. It's been getting worse, especially when I walk or sit for too long. The burning and aching feel like they're always there, and I can't really feel my toes as well as I used to. It's been pretty constant, and I don't really notice it getting better or worse, just always there.",
+      "contradiction_evidence": "Doctor: Could you please describe any changes in your vision or any symptoms related to your eyes, such as blurred vision or floaters? Additionally, have you experienced any chest pain, shortness of breath, or dizziness that might suggest cardiovascular involvement?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She experiences burning pain in her legs.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "She experiences frequent urination, especially at night, and burning or aching pain in her legs and feet, which is constant and worsens with prolonged sitting or walking."
+    },
+    {
+      "claim": "She experiences aching pain in her legs.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0002,
+        "contradiction": 0.7138
+      },
+      "support_evidence": "Patient: The pain in my legs and feet has been going on for a while now, and it doesn't really get better. It's been getting worse, especially when I walk or sit for too long. The burning and aching feel like they're always there, and I can't really feel my toes as well as I used to. It's been pretty constant, and I don't really notice it getting better or worse, just always there.",
+      "contradiction_evidence": "Doctor: Could you please describe any changes in your vision or any symptoms related to your eyes, such as blurred vision or floaters? Additionally, have you experienced any chest pain, shortness of breath, or dizziness that might suggest cardiovascular involvement?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She experiences aching pain in her legs.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "She experiences frequent urination, especially at night, and burning or aching pain in her legs and feet, which is constant and worsens with prolonged sitting or walking."
+    },
+    {
+      "claim": "She experiences burning pain in her feet.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0002,
+        "contradiction": 0.9288
+      },
+      "support_evidence": "Patient: The pain in my legs and feet has been going on for a while now, and it doesn't really get better. It's been getting worse, especially when I walk or sit for too long. The burning and aching feel like they're always there, and I can't really feel my toes as well as I used to. It's been pretty constant, and I don't really notice it getting better or worse, just always there.",
+      "contradiction_evidence": "Doctor: Could you please describe any changes in your vision or any symptoms related to your eyes, such as blurred vision or floaters? Additionally, have you experienced any chest pain, shortness of breath, or dizziness that might suggest cardiovascular involvement?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She experiences burning pain in her feet.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "She experiences frequent urination, especially at night, and burning or aching pain in her legs and feet, which is constant and worsens with prolonged sitting or walking."
+    },
+    {
+      "claim": "She experiences aching pain in her feet.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0002,
+        "contradiction": 0.7595
+      },
+      "support_evidence": "Patient: The pain in my legs and feet has been going on for a while now, and it doesn't really get better. It's been getting worse, especially when I walk or sit for too long. The burning and aching feel like they're always there, and I can't really feel my toes as well as I used to. It's been pretty constant, and I don't really notice it getting better or worse, just always there.",
+      "contradiction_evidence": "Doctor: Could you please describe any changes in your vision or any symptoms related to your eyes, such as blurred vision or floaters? Additionally, have you experienced any chest pain, shortness of breath, or dizziness that might suggest cardiovascular involvement?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She experiences aching pain in her feet.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "She experiences frequent urination, especially at night, and burning or aching pain in her legs and feet, which is constant and worsens with prolonged sitting or walking."
+    },
+    {
+      "claim": "The pain is constant.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0003,
+        "contradiction": 0.9255
+      },
+      "support_evidence": "Patient: The pain in my legs and feet has been going on for a while now, and it doesn't really get better. It's been getting worse, especially when I walk or sit for too long. The burning and aching feel like they're always there, and I can't really feel my toes as well as I used to. It's been pretty constant, and I don't really notice it getting better or worse, just always there.",
+      "contradiction_evidence": "Doctor: Could you please describe any changes in your vision or any symptoms related to your eyes, such as blurred vision or floaters? Additionally, have you experienced any chest pain, shortness of breath, or dizziness that might suggest cardiovascular involvement?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain is constant.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "She experiences frequent urination, especially at night, and burning or aching pain in her legs and feet, which is constant and worsens with prolonged sitting or walking."
+    },
+    {
+      "claim": "The pain worsens with prolonged sitting.",
+      "scores": {
+        "entailment": 0.9992,
+        "neutral": 0.0006,
+        "contradiction": 0.1953
+      },
+      "support_evidence": "Doctor: Could you describe the timeline and progression of your burning or aching leg and foot pain, as well as the reduced sensation in your toes? Have you noticed any changes in the severity or frequency of these symptoms over time?",
+      "contradiction_evidence": "Doctor: Could you please describe any changes in your vision or any symptoms related to your eyes, such as blurred vision or floaters? Additionally, have you experienced any chest pain, shortness of breath, or dizziness that might suggest cardiovascular involvement?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain worsens with prolonged sitting.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "She experiences frequent urination, especially at night, and burning or aching pain in her legs and feet, which is constant and worsens with prolonged sitting or walking."
+    },
+    {
+      "claim": "The pain worsens with prolonged walking.",
+      "scores": {
+        "entailment": 0.9992,
+        "neutral": 0.0006,
+        "contradiction": 0.2567
+      },
+      "support_evidence": "Doctor: Could you describe the timeline and progression of your burning or aching leg and foot pain, as well as the reduced sensation in your toes? Have you noticed any changes in the severity or frequency of these symptoms over time?",
+      "contradiction_evidence": "Doctor: Could you please describe any changes in your vision or any symptoms related to your eyes, such as blurred vision or floaters? Additionally, have you experienced any chest pain, shortness of breath, or dizziness that might suggest cardiovascular involvement?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain worsens with prolonged walking.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "She experiences frequent urination, especially at night, and burning or aching pain in her legs and feet, which is constant and worsens with prolonged sitting or walking."
+    },
+    {
+      "claim": "She also reports reduced sensation in her toes and difficulty feeling them.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.0599
+      },
+      "support_evidence": "Doctor: Could you describe the timeline and progression of your burning or aching leg and foot pain, as well as the reduced sensation in your toes? Have you noticed any changes in the severity or frequency of these symptoms over time?",
+      "contradiction_evidence": "Patient: I don't have any recent physical examination findings or results from imaging or nerve conduction studies. I was told during my last visit that I have some decreased sensation in my toes, but that's about it.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She also reports reduced sensation in her toes and difficulty feeling them.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "She also reports reduced sensation in her toes and difficulty feeling them.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has not noticed any changes in her vision or symptoms related to her eyes.",
+      "scores": {
+        "entailment": 0.9983,
+        "neutral": 0.0009,
+        "contradiction": 0.0107
+      },
+      "support_evidence": "Doctor: Could you please describe any changes in your vision or any symptoms related to your eyes, such as blurred vision or floaters? Additionally, have you experienced any chest pain, shortness of breath, or dizziness that might suggest cardiovascular involvement?",
+      "contradiction_evidence": "Doctor: Could you please describe any changes in your vision or any symptoms related to your eyes, such as blurred vision or floaters? Additionally, have you experienced any chest pain, shortness of breath, or dizziness that might suggest cardiovascular involvement?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has not noticed any changes in her vision or symptoms related to her eyes.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "She has not noticed any changes in her vision or symptoms related to her eyes.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has not experienced chest pain, shortness of breath, or dizziness.",
+      "scores": {
+        "entailment": 0.9692,
+        "neutral": 0.0301,
+        "contradiction": 0.9753
+      },
+      "support_evidence": "Doctor: Have you experienced any numbness, tingling, or loss of balance in your feet or legs in addition to the burning or aching pain?",
+      "contradiction_evidence": "Doctor: Could you please describe any changes in your vision or any symptoms related to your eyes, such as blurred vision or floaters? Additionally, have you experienced any chest pain, shortness of breath, or dizziness that might suggest cardiovascular involvement?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has not experienced chest pain, shortness of breath, or dizziness.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "She has not experienced chest pain, shortness of breath, or dizziness.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has not had any recent physical examination findings or results from imaging or nerve conduction studies.",
+      "scores": {
+        "entailment": 0.9988,
+        "neutral": 0.0005,
+        "contradiction": 0.3941
+      },
+      "support_evidence": "Patient: I don't have any results from nerve conduction studies or imaging for diabetic neuropathy. I was told during my last visit that I have some decreased sensation in my toes, but I haven't had any tests done beyond that.",
+      "contradiction_evidence": "Doctor: Could you please provide the exact date of your most recent A1C test and any recent fasting or postprandial blood glucose measurements you may have?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has not had any recent physical examination findings or results from imaging or nerve conduction studies.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 6,
+      "sentence": "She has not had any recent physical examination findings or results from imaging or nerve conduction studies.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 15,
+      "exempt": 1
+    },
+    "num_claims": 15,
+    "num_kept": 15,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient reports consuming two slices of an unspecified food item in the morning.",
+      "evidence": "Patient: I try to eat healthier, but I haven't really cut down on carbs much. I don't eat pasta or bread often, and when I do, it's wheat bread. I usually have two slices in the morning. I don't drink soda or regular water—I prefer seltzer. As for symptoms, I do pee a lot, especially at night, and my legs and feet hurt a lot, but I haven't lost any weight or had excessive thirst.",
+      "section": "subjective",
+      "candidate": "I usually have two slices in the morning."
+    },
+    {
+      "statement": "The patient reports that they try to eat healthier, but have not significantly reduced their carbohydrate intake.",
+      "evidence": "Patient: I try to eat healthier, but I haven't really cut down on carbs much. I don't eat pasta or bread often, and when I do, it's wheat bread. I usually have two slices in the morning. I don't drink soda or regular water—I prefer seltzer. As for symptoms, I do pee a lot, especially at night, and my legs and feet hurt a lot, but I haven't lost any weight or had excessive thirst.",
+      "section": "subjective",
+      "candidate": "I try to eat healthier, but I haven't really cut down on carbs much."
+    },
+    {
+      "statement": "The patient reports preferring seltzer over regular water and soda.",
+      "evidence": "Patient: I try to eat healthier, but I haven't really cut down on carbs much. I don't eat pasta or bread often, and when I do, it's wheat bread. I usually have two slices in the morning. I don't drink soda or regular water—I prefer seltzer. As for symptoms, I do pee a lot, especially at night, and my legs and feet hurt a lot, but I haven't lost any weight or had excessive thirst.",
+      "section": "subjective",
+      "candidate": "I don't drink soda or regular water—I prefer seltzer."
+    },
+    {
+      "statement": "The patient hasn't been checking their fasting or postprandial levels regularly, to be honest.",
+      "evidence": "Patient: I don't have the exact date of my most recent A1C test, but I know my last one was 9.9. I haven't been checking my fasting or postprandial levels regularly, to be honest. I just know my sugars aren't where they should be.",
+      "section": "subjective",
+      "candidate": "I haven't been checking my fasting or postprandial levels regularly, to be honest."
+    },
+    {
+      "statement": "The patient is willing to try the four milligrams of medication twice a day as previously suggested.",
+      "evidence": "Patient: I haven't been feeling great with my sugars; they're not really under control. I got the results from the last time, and my A1C was 9.9. I'm still on the two milligrams of glimepiride, but I think I need to increase it. I'm open to trying the four milligrams twice a day like you suggested.",
+      "section": "subjective",
+      "candidate": "I'm open to trying the four milligrams twice a day like you suggested."
+    },
+    {
+      "statement": "The patient denies experiencing numbness, tingling, or loss of balance in their feet or legs beyond what they initially reported.",
+      "evidence": "Patient: No, I haven't had any numbness or tingling beyond what I already mentioned, and I don't feel like I'm losing my balance. It's just the burning and aching in my legs and feet, and not being able to feel my toes as well as before.",
+      "section": "subjective",
+      "candidate": "No, I haven't had any numbness or tingling beyond what I already mentioned, and I don't feel like I'm losing my balance."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I'm here for a follow-up.",
+      "speaker": "Patient",
+      "coverage": 0.0961,
+      "nearest_so_sentence": "Patient is a 78-year-old female with a history of diabetes mellitus, presenting for a follow-up visit due to uncontrolled blood sugar levels.",
+      "statement": "The patient is here for a follow-up.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 78 years old, and I'm a female. I'm here for a follow-up. My sugars haven't been very well controlled, and I need to talk about adjusting my medication.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0038
+      },
+      "first_rewrite_rejected": "The patient reports being present for a follow-up.",
+      "duplicate_entailment": 0.9996,
+      "duplicate_similarity": 0.4902
+    },
+    {
+      "candidate": "I don't eat pasta or bread often, and when I do, it's wheat bread.",
+      "speaker": "Patient",
+      "coverage": 0.0987,
+      "nearest_so_sentence": "She experiences frequent urination, especially at night, and burning or aching pain in her legs and feet, which is constant and worsens with prolonged sitting or walking.",
+      "statement": "The patient reports that they do not frequently consume pasta or bread, and when they do, it is usually wheat bread.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I try to eat healthier, but I haven't really cut down on carbs much. I don't eat pasta or bread often, and when I do, it's wheat bread. I usually have two slices in the morning. I don't drink soda or regular water—I prefer seltzer. As for symptoms, I do pee a lot, especially at night, and my legs and feet hurt a lot, but I haven't lost any weight or had excessive thirst.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.1528
+      },
+      "duplicate_entailment": 0.9188,
+      "duplicate_similarity": 0.3256
+    },
+    {
+      "candidate": "I usually have two slices in the morning.",
+      "speaker": "Patient",
+      "coverage": 0.1301,
+      "nearest_so_sentence": "She reports her A1C was 9.9 in her last test, and she is currently taking 2mg of glimepiride daily.",
+      "statement": "The patient reports consuming two slices of an unspecified food item in the morning.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I try to eat healthier, but I haven't really cut down on carbs much. I don't eat pasta or bread often, and when I do, it's wheat bread. I usually have two slices in the morning. I don't drink soda or regular water—I prefer seltzer. As for symptoms, I do pee a lot, especially at night, and my legs and feet hurt a lot, but I haven't lost any weight or had excessive thirst.",
+      "scores_vs_dialogue": {
+        "entailment": 0.999,
+        "contradiction": 0.1274
+      },
+      "duplicate_entailment": 0.0348,
+      "duplicate_similarity": 0.3259,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 2,
+        "perplexity": 18.76,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I try to eat healthier, but I haven't really cut down on carbs much.",
+      "speaker": "Patient",
+      "coverage": 0.1365,
+      "nearest_so_sentence": "She reports her A1C was 9.9 in her last test, and she is currently taking 2mg of glimepiride daily.",
+      "statement": "The patient reports that they try to eat healthier, but have not significantly reduced their carbohydrate intake.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I try to eat healthier, but I haven't really cut down on carbs much. I don't eat pasta or bread often, and when I do, it's wheat bread. I usually have two slices in the morning. I don't drink soda or regular water—I prefer seltzer. As for symptoms, I do pee a lot, especially at night, and my legs and feet hurt a lot, but I haven't lost any weight or had excessive thirst.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.001
+      },
+      "duplicate_entailment": 0.0283,
+      "duplicate_similarity": 0.3614,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 1,
+        "perplexity": 18.03,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don't drink soda or regular water—I prefer seltzer.",
+      "speaker": "Patient",
+      "coverage": 0.1552,
+      "nearest_so_sentence": "She has not noticed any changes in her vision or symptoms related to her eyes.",
+      "statement": "The patient reports preferring seltzer over regular water and soda.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I try to eat healthier, but I haven't really cut down on carbs much. I don't eat pasta or bread often, and when I do, it's wheat bread. I usually have two slices in the morning. I don't drink soda or regular water—I prefer seltzer. As for symptoms, I do pee a lot, especially at night, and my legs and feet hurt a lot, but I haven't lost any weight or had excessive thirst.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0275
+      },
+      "duplicate_entailment": 0.0607,
+      "duplicate_similarity": 0.2884,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 5,
+        "perplexity": 18.04,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "It's been pretty constant, and I don't really notice it getting better or worse, just always there.",
+      "speaker": "Patient",
+      "coverage": 0.1902,
+      "nearest_so_sentence": "She also reports reduced sensation in her toes and difficulty feeling them.",
+      "statement": "The patient reports that the burning or aching leg and foot pain, as well as the reduced sensation in the toes, has been constant and has not shown any noticeable changes in severity or frequency over time.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: The pain in my legs and feet has been going on for a while now, and it doesn't really get better. It's been getting worse, especially when I walk or sit for too long. The burning and aching feel like they're always there, and I can't really feel my toes as well as I used to. It's been pretty constant, and I don't really notice it getting better or worse, just always there.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.9813
+      }
+    },
+    {
+      "candidate": "I'm 78 years old, and I'm a female.",
+      "speaker": "Patient",
+      "coverage": 0.2522,
+      "nearest_so_sentence": "Patient is a 78-year-old female with a history of diabetes mellitus, presenting for a follow-up visit due to uncontrolled blood sugar levels.",
+      "statement": "The patient is a 78-year-old female.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 78 years old, and I'm a female. I'm here for a follow-up. My sugars haven't been very well controlled, and I need to talk about adjusting my medication.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0157
+      },
+      "duplicate_entailment": 0.9992,
+      "duplicate_similarity": 0.6414
+    },
+    {
+      "candidate": "I just know my sugars aren't where they should be.",
+      "speaker": "Patient",
+      "coverage": 0.2996,
+      "nearest_so_sentence": "Patient is a 78-year-old female with a history of diabetes mellitus, presenting for a follow-up visit due to uncontrolled blood sugar levels.",
+      "statement": "The patient reports that their sugars are not where they should be.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't have the exact dates of my A1C test, but I know my last one was 9.9. I haven't been tracking my fasting or postprandial levels regularly, to be honest. I just know my sugars aren't where they should be.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0059
+      },
+      "duplicate_entailment": 0.9995,
+      "duplicate_similarity": 0.5539
+    },
+    {
+      "candidate": "I just know my sugars aren't where they should be.",
+      "speaker": "Patient",
+      "coverage": 0.2996,
+      "nearest_so_sentence": "Patient is a 78-year-old female with a history of diabetes mellitus, presenting for a follow-up visit due to uncontrolled blood sugar levels.",
+      "statement": "The patient reports that their sugars are not where they should be.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't have the exact dates of my A1C test, but I know my last one was 9.9. I haven't been tracking my fasting or postprandial levels regularly, to be honest. I just know my sugars aren't where they should be.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0059
+      },
+      "duplicate_entailment": 0.9995,
+      "duplicate_similarity": 0.5539
+    },
+    {
+      "candidate": "I just know my sugars aren't where they should be.",
+      "speaker": "Patient",
+      "coverage": 0.2996,
+      "nearest_so_sentence": "Patient is a 78-year-old female with a history of diabetes mellitus, presenting for a follow-up visit due to uncontrolled blood sugar levels.",
+      "statement": "The patient reports that their sugars are not where they should be.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't have the exact dates of my A1C test, but I know my last one was 9.9. I haven't been tracking my fasting or postprandial levels regularly, to be honest. I just know my sugars aren't where they should be.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0059
+      },
+      "duplicate_entailment": 0.9995,
+      "duplicate_similarity": 0.5539
+    },
+    {
+      "candidate": "I just know my sugars aren't where they should be.",
+      "speaker": "Patient",
+      "coverage": 0.2996,
+      "nearest_so_sentence": "Patient is a 78-year-old female with a history of diabetes mellitus, presenting for a follow-up visit due to uncontrolled blood sugar levels.",
+      "statement": "The patient reports that their sugars are not where they should be.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't have the exact dates of my A1C test, but I know my last one was 9.9. I haven't been tracking my fasting or postprandial levels regularly, to be honest. I just know my sugars aren't where they should be.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0059
+      },
+      "duplicate_entailment": 0.9995,
+      "duplicate_similarity": 0.5539
+    },
+    {
+      "candidate": "I haven't been tracking my fasting or postprandial levels regularly, to be honest.",
+      "speaker": "Patient",
+      "coverage": 0.3176,
+      "nearest_so_sentence": "She reports her A1C was 9.9 in her last test, and she is currently taking 2mg of glimepiride daily.",
+      "statement": "The patient reports not tracking their fasting or postprandial blood glucose levels regularly.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Doctor: Could you provide the date of your most recent A1C test and any recent blood glucose measurements, such as fasting or postprandial levels?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.7964
+      }
+    },
+    {
+      "candidate": "I haven't been checking my fasting or postprandial levels regularly, to be honest.",
+      "speaker": "Patient",
+      "coverage": 0.3263,
+      "nearest_so_sentence": "She reports her A1C was 9.9 in her last test, and she is currently taking 2mg of glimepiride daily.",
+      "statement": "The patient reports not having checked their fasting or postprandial blood glucose levels regularly.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Doctor: Could you provide the date of your most recent A1C test and any recent blood glucose measurements, such as fasting or postprandial levels?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.8976
+      }
+    },
+    {
+      "candidate": "I haven't been checking my fasting or postprandial levels regularly, to be honest.",
+      "speaker": "Patient",
+      "coverage": 0.3263,
+      "nearest_so_sentence": "She reports her A1C was 9.9 in her last test, and she is currently taking 2mg of glimepiride daily.",
+      "statement": "The patient hasn't been checking their fasting or postprandial levels regularly, to be honest.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't have the exact date of my most recent A1C test, but I know my last one was 9.9. I haven't been checking my fasting or postprandial levels regularly, to be honest. I just know my sugars aren't where they should be.",
+      "scores_vs_dialogue": {
+        "entailment": 0.999,
+        "contradiction": 0.0316
+      },
+      "first_rewrite_rejected": "The patient reports that they have not been regularly checking their fasting or postprandial blood glucose levels.",
+      "duplicate_entailment": 0.0006,
+      "duplicate_similarity": 0.4523,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 10,
+        "perplexity": 18.29,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I haven't been checking my fasting or postprandial levels regularly, to be honest.",
+      "speaker": "Patient",
+      "coverage": 0.3263,
+      "nearest_so_sentence": "She reports her A1C was 9.9 in her last test, and she is currently taking 2mg of glimepiride daily.",
+      "statement": "The patient reports that they have not been regularly checking their fasting or postprandial blood glucose levels.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I don't have the exact date of my most recent A1C test, but I know my last one was 9.9. I haven't been checking my fasting or postprandial levels regularly, to be honest. I just know my sugars aren't where they should be.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.9453
+      }
+    },
+    {
+      "candidate": "I'm open to trying the four milligrams twice a day like you suggested.",
+      "speaker": "Patient",
+      "coverage": 0.3346,
+      "nearest_so_sentence": "She reports her A1C was 9.9 in her last test, and she is currently taking 2mg of glimepiride daily.",
+      "statement": "The patient is willing to try the four milligrams of medication twice a day as previously suggested.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I haven't been feeling great with my sugars; they're not really under control. I got the results from the last time, and my A1C was 9.9. I'm still on the two milligrams of glimepiride, but I think I need to increase it. I'm open to trying the four milligrams twice a day like you suggested.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0012
+      },
+      "duplicate_entailment": 0.0033,
+      "duplicate_similarity": 0.4678,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 10,
+        "perplexity": 18.24,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I'm ready to try increasing it to four milligrams twice a day if that's what you recommend.",
+      "speaker": "Patient",
+      "coverage": 0.3408,
+      "nearest_so_sentence": "She reports her A1C was 9.9 in her last test, and she is currently taking 2mg of glimepiride daily.",
+      "statement": "The patient is willing to increase the medication dosage to four milligrams twice a day if recommended.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: Yes, I was diagnosed with diabetes mellitus some time ago. I've been managing it with medication, but my sugars haven't been very well controlled, as you've mentioned. I know my A1C was 9.9 from the last test, and I'm still on the two milligrams of glimepiride. I'm ready to try increasing it to four milligrams twice a day if that's what you recommend.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0012
+      },
+      "duplicate_entailment": 0.0013,
+      "duplicate_similarity": 0.4425
+    },
+    {
+      "candidate": "No, I haven't had any numbness or tingling beyond what I already mentioned, and I don't feel like I'm losing my balance.",
+      "speaker": "Patient",
+      "coverage": 0.3608,
+      "nearest_so_sentence": "She also reports reduced sensation in her toes and difficulty feeling them.",
+      "statement": "The patient denies experiencing numbness, tingling, or loss of balance in their feet or legs beyond what they initially reported.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: No, I haven't had any numbness or tingling beyond what I already mentioned, and I don't feel like I'm losing my balance. It's just the burning and aching in my legs and feet, and not being able to feel my toes as well as before.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.1235
+      },
+      "duplicate_entailment": 0.3308,
+      "duplicate_similarity": 0.5761,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 2,
+        "perplexity": 17.75,
+        "removed_placeholder": []
+      }
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 46,
+    "num_covered": 28,
+    "num_flagged": 18,
+    "num_not_checked_cap": 0,
+    "num_added": 6
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "It's been pretty constant, and I don't really notice it getting better or worse, just always there.",
+        "statement": "The patient reports that the burning or aching leg and foot pain, as well as the reduced sensation in the toes, has been constant and has not shown any noticeable changes in severity or frequency over time.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9995,
+          "contradiction": 0.9813
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I haven't been tracking my fasting or postprandial levels regularly, to be honest.",
+        "statement": "The patient reports not tracking their fasting or postprandial blood glucose levels regularly.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9995,
+          "contradiction": 0.7964
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I haven't been checking my fasting or postprandial levels regularly, to be honest.",
+        "statement": "The patient reports not having checked their fasting or postprandial blood glucose levels regularly.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.8976
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I haven't been checking my fasting or postprandial levels regularly, to be honest.",
+        "statement": "The patient reports that they have not been regularly checking their fasting or postprandial blood glucose levels.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.9453
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 137.1,
+  "ap_unchanged": true,
+  "conversation": "Patient: I'm 78 years old, and I'm a female. I'm here for a follow-up. My sugars haven't been very well controlled, and I need to talk about adjusting my medication.\nDoctor: Could you please provide more details about your current blood sugar levels and any symptoms you're experiencing related to your diabetes?\nPatient: I haven't been feeling great with my sugars; they're not really under control. I got the results from the last time, and my A1C was 9.9. I'm still on the two milligrams of glimepiride, but I think I need to increase it. I'm open to trying the four milligrams twice a day like you suggested.\nDoctor: Could you provide the dates of your most recent A1C test and any other recent blood glucose measurements, including fasting and postprandial levels?\nPatient: I don't have the exact dates of my A1C test, but I know my last one was 9.9. I haven't been tracking my fasting or postprandial levels regularly, to be honest. I just know my sugars aren't where they should be.\nDoctor: Could you share more about your current diet and physical activity levels? Also, have you experienced any symptoms such as frequent urination, excessive thirst, or unexplained weight loss recently?\nPatient: I try to eat healthier, but I haven't really cut down on carbs much. I don't eat pasta or bread often, and when I do, it's wheat bread. I usually have two slices in the morning. I don't drink soda or regular water—I prefer seltzer. As for symptoms, I do pee a lot, especially at night, and my legs and feet hurt a lot, but I haven't lost any weight or had excessive thirst.\nDoctor: Could you confirm whether you have been diagnosed with diabetes mellitus and, if so, when was that diagnosis made?\nPatient: Yes, I was diagnosed with diabetes mellitus some time ago. I've been managing it with medication, but my sugars haven't been very well controlled, as you've mentioned. I know my A1C was 9.9 from the last test, and I'm still on the two milligrams of glimepiride. I'm ready to try increasing it to four milligrams twice a day if that's what you recommend.\nDoctor: Could you provide the date of your most recent A1C test and any recent blood glucose measurements, such as fasting or postprandial levels?\nPatient: I don't have the exact date of my most recent A1C test, but I know my last one was 9.9. I haven't been checking my fasting or postprandial levels regularly, to be honest. I just know my sugars aren't where they should be.\nDoctor: Could you please provide the exact date of your most recent A1C test and any recent fasting or postprandial blood glucose measurements you may have?\nPatient: I don't have the exact date of my most recent A1C test, but I know my last one was 9.9. I haven't been checking my fasting or postprandial levels regularly, to be honest. I just know my sugars aren't where they should be.\nDoctor: Could you please provide the exact date of your most recent A1C test and any recent fasting or postprandial blood glucose measurements?\nPatient: I don't have the exact date of my most recent A1C test, but I know my last one was 9.9. I haven't been checking my fasting or postprandial levels regularly, to be honest. I just know my sugars aren't where they should be.\nDoctor: Could you please describe the nature of the pain in your legs and feet? Is it tingling, burning, sharp, or dull? Have you noticed any numbness or changes in sensation in those areas?\nPatient: The pain in my legs and feet is more like a burning or aching feeling, and it's been going on a lot. I can't really feel my toes very well sometimes, and it's been bothering me when I walk or even sit for too long. I don't really notice numbness, but I do feel like my feet are always uncomfortable.\nDoctor: Could you please describe any changes in your vision or any symptoms related to your eyes, such as blurred vision or floaters? Additionally, have you experienced any chest pain, shortness of breath, or dizziness that might suggest cardiovascular involvement?\nPatient: I haven't noticed any changes in my vision or symptoms like blurred vision or floaters. As for chest pain or shortness of breath, I don't have those issues. I do feel some dizziness sometimes, but not too bad.\nDoctor: Could you please describe any recent physical examination findings, such as the presence of neuropathy signs (e.g., decreased reflexes, loss of vibration sense, or diminished ankle reflexes), and whether you have had any imaging or nerve conduction studies to evaluate for diabetic neuropathy?\nPatient: I don't have any recent physical examination findings or results from imaging or nerve conduction studies. I was told during my last visit that I have some decreased sensation in my toes, but that's about it.\nDoctor: Could you please provide the exact date of your most recent A1C test and confirm whether you have undergone any nerve conduction studies or imaging to evaluate for diabetic neuropathy?\nPatient: I don't have the exact date of my most recent A1C test, but I know my last one was 9.9. I was told during my last visit that I have some decreased sensation in my toes, but I don't have any results from nerve conduction studies or imaging.\nDoctor: Could you describe the timeline and progression of your burning or aching leg and foot pain, as well as the reduced sensation in your toes? Have you noticed any changes in the severity or frequency of these symptoms over time?\nPatient: The pain in my legs and feet has been going on for a while now, and it doesn't really get better. It's been getting worse, especially when I walk or sit for too long. The burning and aching feel like they're always there, and I can't really feel my toes as well as I used to. It's been pretty constant, and I don't really notice it getting better or worse, just always there.\nDoctor: Could you confirm whether you have had any nerve conduction studies or imaging for diabetic neuropathy, and if not, whether you are planning to undergo such tests in the near future?\nPatient: I don't have any results from nerve conduction studies or imaging for diabetic neuropathy. I was told during my last visit that I have some decreased sensation in my toes, but I haven't had any tests done beyond that.\nDoctor: Have you experienced any numbness, tingling, or loss of balance in your feet or legs in addition to the burning or aching pain?\nPatient: No, I haven't had any numbness or tingling beyond what I already mentioned, and I don't feel like I'm losing my balance. It's just the burning and aching in my legs and feet, and not being able to feel my toes as well as before.",
+  "reference_so": {
+    "subjective": "Basic information: 78-year-old female presenting for follow-up regarding poorly controlled sugars and medication adjustment.\n\nHistory of present illness: Patient reports poorly controlled sugars, with an A1C of 9.9% from the last test. She is currently on 2 mg of glimepiride and is considering increasing to 4 mg twice daily. She does not track her fasting or postprandial levels regularly and is unsure of the exact dates of her A1C test. She reports increased urination, especially at night, and pain in her legs and feet. She mentions she tries to eat healthier but has not significantly reduced her carbohydrate intake, consuming two slices of wheat bread in the morning. The pain in her legs and feet is described as burning or aching, and she has reduced sensation in her toes, which impacts her mobility and comfort during walking or prolonged sitting. The burning/aching leg and foot pain and reduced sensation in the toes have been present for an unspecified duration and are described as constant, worsening with walking or prolonged sitting.\n\nPast history: No known history of diabetes-related complications such as neuropathy, retinopathy, or cardiovascular issues (awaiting confirmation). No known history of hypertension, hyperlipidemia, or cardiovascular disease (awaiting confirmation). Family history of cardiovascular disease is unknown. No known history of diabetic neuropathy (awaiting confirmation via nerve conduction studies). The patient has not undergone nerve conduction studies or imaging to evaluate for diabetic neuropathy, as per her own report.",
+    "objective": "Physical examination: Physical examination findings are pending. The patient reports burning or aching leg and foot pain with reduced sensation in the toes, impacting mobility and comfort. No specific physical findings have been documented yet.\n\nInvestigations: Auxiliary examination findings are pending. The patient's most recent A1C was 9.9%, but fasting and postprandial glucose levels are not regularly monitored. No nerve conduction studies or imaging have been performed to evaluate for diabetic neuropathy. No recent imaging or other diagnostic tests have been reported."
+  }
+}

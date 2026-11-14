@@ -1,0 +1,417 @@
+{
+  "case_id": "D2N129",
+  "split": "dev",
+  "stage1_so": {
+    "subjective": "* The patient is a 24-year-old female with a history of type 2 diabetes, currently working at a bakery, which has been challenging for her diabetes management due to increased snacking on sweets.\n* She is taking metformin twice a day as prescribed and has been checking her blood sugars, but her levels have been up and down lately.\n* She has not experienced any diabetes-related complications such as neuropathy, retinopathy, or kidney issues.\n* She does not know the exact date of her diagnosis or her most recent HbA1c value.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* The patient is a 24-year-old female with a history of type 2 diabetes, currently working at a bakery, which has been challenging for her diabetes management due to increased snacking on sweets.\n* She is taking metformin twice a day as prescribed and has been checking her blood sugars, but her levels have been up and down lately.\n* She has not experienced any diabetes-related complications such as neuropathy, retinopathy, or kidney issues.\n* She does not know the exact date of her diagnosis or her most recent HbA1c value.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* The patient reports that their blood pressure has been good despite fluctuations in their diabetes.\n* The patient is a 24-year-old female with a history of type 2 diabetes, currently working at a bakery, which has been challenging for her diabetes management due to increased snacking on sweets.\n* She is taking metformin twice a day as prescribed and has been checking her blood sugars, but her levels have been up and down lately.\n* She has not experienced any diabetes-related complications such as neuropathy, retinopathy, or kidney issues.\n* The patient reports being 24 years old and is present for a yearly exam.\n* The patient reports having regular check-ups and being on medication as prescribed.\n* She does not know the exact date of her diagnosis or her most recent HbA1c value.\n* The patient reports that the doctor mentioned the most recent HbA1c value was elevated, but the exact number was not provided.\n* The patient reports that the HbA1c test result is not at the desired level.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has type 2 diabetes, which is not well-controlled due to her new job at a bakery, leading to increased snacking and fluctuating blood sugar levels.",
+    "plan": "* The doctor will need to review the patient's medication regimen and provide guidance on how to better manage her diabetes in her new work environment.\n* The patient will need to keep track of her blood sugar levels and report any changes to her doctor.\n* The doctor will need to schedule a follow-up appointment to monitor the patient's progress and adjust her treatment plan as necessary."
+  },
+  "stage2_audit": [
+    {
+      "claim": "The patient is a 24-year-old female.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.0005
+      },
+      "support_evidence": "Patient: I'm 24 years old, and I'm here for my yearly exam. I've been doing well overall, but I've been snacking a lot more at my new job, which has been challenging for my diabetes management.",
+      "contradiction_evidence": "Patient: I don't know the exact date I was diagnosed with type 2 diabetes. I've been managing it for a while now, but I don't have the specific date on hand.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient is a 24-year-old female.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 24-year-old female with a history of type 2 diabetes, currently working at a bakery, which has been challenging for her diabetes management due to increased snacking on sweets."
+    },
+    {
+      "claim": "The patient has a history of type 2 diabetes.",
+      "scores": {
+        "entailment": 0.999,
+        "neutral": 0.0007,
+        "contradiction": 0.0008
+      },
+      "support_evidence": "Patient: I don't know the exact date I was diagnosed with type 2 diabetes. I've been managing it for a while now, but I don't have the specific date on hand.",
+      "contradiction_evidence": "Patient: I don't know the exact date I was diagnosed with type 2 diabetes. I've been managing it for a while now, but I don't have the specific date on hand.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has a history of type 2 diabetes.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 24-year-old female with a history of type 2 diabetes, currently working at a bakery, which has been challenging for her diabetes management due to increased snacking on sweets."
+    },
+    {
+      "claim": "The patient is currently working at a bakery.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0001,
+        "contradiction": 0.0002
+      },
+      "support_evidence": "Patient: I'm a female, and I've been working at a bakery, which has made it really hard to resist snacking on the desserts available there. I've been eating a lot more sweets during my shifts, and it's been affecting my blood sugar levels even though I'm still taking my medication as prescribed.",
+      "contradiction_evidence": "Patient: I'm a female, and I've been working at a bakery, which has made it really hard to resist snacking on the desserts available there. I've been eating a lot more sweets during my shifts, and it's been affecting my blood sugar levels even though I'm still taking my medication as prescribed.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient is currently working at a bakery.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 24-year-old female with a history of type 2 diabetes, currently working at a bakery, which has been challenging for her diabetes management due to increased snacking on sweets."
+    },
+    {
+      "claim": "The patient's diabetes management has been challenging due to increased snacking on sweets.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0003,
+        "contradiction": 0.0019
+      },
+      "support_evidence": "Patient: I'm a female, and I've been working at a bakery, which has made it really hard to resist snacking on the desserts available there. I've been eating a lot more sweets during my shifts, and it's been affecting my blood sugar levels even though I'm still taking my medication as prescribed.",
+      "contradiction_evidence": "Patient: I'm on metformin, and I take it twice a day. I've been checking my blood sugars, but they've been up and down a lot lately, especially since starting this new job. It's been really hard to keep them in check with all the snacking.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient's diabetes management has been challenging due to increased snacking on sweets.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 24-year-old female with a history of type 2 diabetes, currently working at a bakery, which has been challenging for her diabetes management due to increased snacking on sweets."
+    },
+    {
+      "claim": "She is taking metformin twice a day as prescribed and has been checking her blood sugars, but her levels have been up and down lately.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0004,
+        "contradiction": 0.0011
+      },
+      "support_evidence": "Patient: I'm on metformin, and I take it twice a day. I've been checking my blood sugars, but they've been up and down a lot lately, especially since starting this new job. It's been really hard to keep them in check with all the snacking.",
+      "contradiction_evidence": "Patient: I'm on metformin, and I take it twice a day. I've been checking my blood sugars, but they've been up and down a lot lately, especially since starting this new job. It's been really hard to keep them in check with all the snacking.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She is taking metformin twice a day as prescribed and has been checking her blood sugars, but her levels have been up and down lately.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "She is taking metformin twice a day as prescribed and has been checking her blood sugars, but her levels have been up and down lately.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has not experienced any diabetes-related complications such as neuropathy, retinopathy, or kidney issues.",
+      "scores": {
+        "entailment": 0.9975,
+        "neutral": 0.0017,
+        "contradiction": 0.0052
+      },
+      "support_evidence": "Doctor: What is your most recent HbA1c level, and have you experienced any diabetes-related complications such as neuropathy, retinopathy, or kidney issues?",
+      "contradiction_evidence": "Doctor: Could you please share the date when you were diagnosed with diabetes, and have you experienced any symptoms such as frequent urination, blurred vision, or numbness in your hands or feet?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has not experienced any diabetes-related complications such as neuropathy, retinopathy, or kidney issues.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "She has not experienced any diabetes-related complications such as neuropathy, retinopathy, or kidney issues.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She does not know the exact date of her diagnosis or her most recent HbA1c value.",
+      "scores": {
+        "entailment": 0.9992,
+        "neutral": 0.0005,
+        "contradiction": 0.0068
+      },
+      "support_evidence": "Patient: I don't know the exact number or date of my most recent HbA1c test. The doctor mentioned it was elevated, but I didn't get the specifics.",
+      "contradiction_evidence": "Doctor: Could you please provide details about your current diabetes medications, including the names, dosages, and frequency of use? Additionally, could you share your typical blood sugar monitoring practices, such as how often you check your levels and what your usual readings are?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She does not know the exact date of her diagnosis or her most recent HbA1c value.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "She does not know the exact date of her diagnosis or her most recent HbA1c value.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 7,
+      "exempt": 1
+    },
+    "num_claims": 7,
+    "num_kept": 7,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient reports being 24 years old and is present for a yearly exam.",
+      "evidence": "Patient: I'm 24 years old, and I'm here for my yearly exam. I've been doing well overall, but I've been snacking a lot more at my new job, which has been challenging for my diabetes management.",
+      "section": "subjective",
+      "candidate": "I'm 24 years old, and I'm here for my yearly exam."
+    },
+    {
+      "statement": "The patient reports that the HbA1c test result is not at the desired level.",
+      "evidence": "Patient: I don't know the exact date of my most recent HbA1c test, but the doctor mentioned it was elevated. I didn't get the specific number, but I know it's not where it should be.",
+      "section": "subjective",
+      "candidate": "I didn't get the specific number, but I know it's not where it should be."
+    },
+    {
+      "statement": "The patient reports that the doctor mentioned the most recent HbA1c value was elevated, but the exact number was not provided.",
+      "evidence": "Patient: I don't know the exact date of my most recent HbA1c test, but the doctor mentioned it was elevated. I didn't get the specific number, but I know it's not where it should be.",
+      "section": "subjective",
+      "candidate": "The doctor mentioned it was elevated, but I didn't get the specifics."
+    },
+    {
+      "statement": "The patient reports having regular check-ups and being on medication as prescribed.",
+      "evidence": "Patient: I don't know the exact date I was diagnosed with diabetes, but I've been managing it for a while now. I've had regular check-ups and have been on medication as prescribed. My blood pressure has been good despite the ups and downs with my diabetes lately.",
+      "section": "subjective",
+      "candidate": "I've had regular check-ups and have been on medication as prescribed."
+    },
+    {
+      "statement": "The patient reports that their blood pressure has been good despite fluctuations in their diabetes.",
+      "evidence": "Patient: I don't know the exact date I was diagnosed with diabetes, but I've been managing it for a while now. I've had regular check-ups and have been on medication as prescribed. My blood pressure has been good despite the ups and downs with my diabetes lately.",
+      "section": "subjective",
+      "candidate": "My blood pressure has been good despite the ups and downs with my diabetes lately."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I'm 24 years old, and I'm here for my yearly exam.",
+      "speaker": "Patient",
+      "coverage": 0.144,
+      "nearest_so_sentence": "The patient is a 24-year-old female with a history of type 2 diabetes, currently working at a bakery, which has been challenging for her diabetes management due to increased snacking on sweets.",
+      "statement": "The patient reports being 24 years old and is present for a yearly exam.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I'm 24 years old, and I'm here for my yearly exam. I've been doing well overall, but I've been snacking a lot more at my new job, which has been challenging for my diabetes management.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.002
+      },
+      "duplicate_entailment": 0.0479,
+      "duplicate_similarity": 0.4024,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 3,
+        "perplexity": 18.39,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I didn't get the specific number, but I know it's not where it should be.",
+      "speaker": "Patient",
+      "coverage": 0.1689,
+      "nearest_so_sentence": "She does not know the exact date of her diagnosis or her most recent HbA1c value.",
+      "statement": "The patient reports that the HbA1c test result is not at the desired level.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't know the exact date of my most recent HbA1c test, but the doctor mentioned it was elevated. I didn't get the specific number, but I know it's not where it should be.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9991,
+        "contradiction": 0.0038
+      },
+      "duplicate_entailment": 0.3838,
+      "duplicate_similarity": 0.6426,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 5,
+        "perplexity": 16.63,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I've been managing it for a while now, but I don't have the specific date on hand.",
+      "speaker": "Patient",
+      "coverage": 0.2272,
+      "nearest_so_sentence": "She does not know the exact date of her diagnosis or her most recent HbA1c value.",
+      "statement": "The patient reports that they have been managing their type 2 diabetes for a while, but do not have the exact date of diagnosis available.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't know the exact date I was diagnosed with type 2 diabetes. I've been managing it for a while now, but I don't have the specific date on hand.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9983,
+        "contradiction": 0.0044
+      },
+      "duplicate_entailment": 0.9901,
+      "duplicate_similarity": 0.6085
+    },
+    {
+      "candidate": "I've been managing it for a while now, but I don't have the specific date on hand.",
+      "speaker": "Patient",
+      "coverage": 0.2272,
+      "nearest_so_sentence": "She does not know the exact date of her diagnosis or her most recent HbA1c value.",
+      "statement": "The patient reports that they have been managing their type 2 diabetes for a while, but do not have the specific date of diagnosis readily available.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't know the exact date I was diagnosed with type 2 diabetes. I've been managing it for a while now, but I don't have the specific date on hand.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9979,
+        "contradiction": 0.0071
+      },
+      "duplicate_entailment": 0.9937,
+      "duplicate_similarity": 0.5834
+    },
+    {
+      "candidate": "It's been really hard to keep them in check with all the snacking.",
+      "speaker": "Patient",
+      "coverage": 0.326,
+      "nearest_so_sentence": "The patient is a 24-year-old female with a history of type 2 diabetes, currently working at a bakery, which has been challenging for her diabetes management due to increased snacking on sweets.",
+      "statement": "The patient reports that it has been challenging to manage their diabetes medications due to frequent snacking.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm a female, and I've been working at a bakery, which has made it really hard to resist snacking on the desserts available there. I've been eating a lot more sweets during my shifts, and it's been affecting my blood sugar levels even though I'm still taking my medication as prescribed.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0301
+      },
+      "duplicate_entailment": 0.9988,
+      "duplicate_similarity": 0.7409
+    },
+    {
+      "candidate": "The doctor mentioned it was elevated, but I didn't get the specifics.",
+      "speaker": "Patient",
+      "coverage": 0.3465,
+      "nearest_so_sentence": "She does not know the exact date of her diagnosis or her most recent HbA1c value.",
+      "statement": "The patient reports that the doctor mentioned the most recent HbA1c value was elevated, but the exact number was not provided.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't know the exact date of my most recent HbA1c test, but the doctor mentioned it was elevated. I didn't get the specific number, but I know it's not where it should be.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.173
+      },
+      "duplicate_entailment": 0.1173,
+      "duplicate_similarity": 0.6888,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 5,
+        "perplexity": 15.25,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I've had regular check-ups and have been on medication as prescribed.",
+      "speaker": "Patient",
+      "coverage": 0.3536,
+      "nearest_so_sentence": "She is taking metformin twice a day as prescribed and has been checking her blood sugars, but her levels have been up and down lately.",
+      "statement": "The patient reports having regular check-ups and being on medication as prescribed.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't know the exact date I was diagnosed with diabetes, but I've been managing it for a while now. I've had regular check-ups and have been on medication as prescribed. My blood pressure has been good despite the ups and downs with my diabetes lately.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9977,
+        "contradiction": 0.0016
+      },
+      "duplicate_entailment": 0.0615,
+      "duplicate_similarity": 0.413,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 4,
+        "perplexity": 14.6,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I've been managing it for a while now, and I haven't experienced any new or worsening symptoms like frequent urination, blurred vision, or numbness in my hands or feet.",
+      "speaker": "Patient",
+      "coverage": 0.3704,
+      "nearest_so_sentence": "She has not experienced any diabetes-related complications such as neuropathy, retinopathy, or kidney issues.",
+      "statement": "The patient reports having managed their diabetes for a while and denies experiencing any new or worsening symptoms such as frequent urination, blurred vision, or numbness in their hands or feet.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't know the exact date I was diagnosed with diabetes. I've been managing it for a while now, and I haven't experienced any new or worsening symptoms like frequent urination, blurred vision, or numbness in my hands or feet.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.0368
+      },
+      "duplicate_entailment": 0.9967,
+      "duplicate_similarity": 0.6713
+    },
+    {
+      "candidate": "My blood pressure has been good despite the ups and downs with my diabetes lately.",
+      "speaker": "Patient",
+      "coverage": 0.3784,
+      "nearest_so_sentence": "The patient is a 24-year-old female with a history of type 2 diabetes, currently working at a bakery, which has been challenging for her diabetes management due to increased snacking on sweets.",
+      "statement": "The patient reports that their blood pressure has been good despite fluctuations in their diabetes.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't know the exact date I was diagnosed with diabetes, but I've been managing it for a while now. I've had regular check-ups and have been on medication as prescribed. My blood pressure has been good despite the ups and downs with my diabetes lately.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9988,
+        "contradiction": 0.002
+      },
+      "duplicate_entailment": 0.0021,
+      "duplicate_similarity": 0.4836,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 14.51,
+        "removed_placeholder": []
+      }
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 32,
+    "num_covered": 23,
+    "num_flagged": 9,
+    "num_not_checked_cap": 0,
+    "num_added": 5
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": []
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 64.3,
+  "ap_unchanged": true,
+  "conversation": "Patient: I'm 24 years old, and I'm here for my yearly exam. I've been doing well overall, but I've been snacking a lot more at my new job, which has been challenging for my diabetes management.\nDoctor: Could you please confirm your gender and provide more details about your diabetes management challenges at your new job?\nPatient: I'm a female, and I've been working at a bakery, which has made it really hard to resist snacking on the desserts available there. I've been eating a lot more sweets during my shifts, and it's been affecting my blood sugar levels even though I'm still taking my medication as prescribed.\nDoctor: Could you please provide details about your current diabetes medications, including the names, dosages, and frequency of use? Additionally, could you share your typical blood sugar monitoring practices, such as how often you check your levels and what your usual readings are?\nPatient: I'm on metformin, and I take it twice a day. I've been checking my blood sugars, but they've been up and down a lot lately, especially since starting this new job. It's been really hard to keep them in check with all the snacking.\nDoctor: Could you provide details about when you were diagnosed with diabetes and any prior evaluations or treatments you've had for it?\nPatient: I don't know the exact date I was diagnosed with diabetes, but I've been managing it for a while now. I've had regular check-ups and have been on medication as prescribed. My blood pressure has been good despite the ups and downs with my diabetes lately.\nDoctor: What is your most recent HbA1c level, and have you experienced any diabetes-related complications such as neuropathy, retinopathy, or kidney issues?\nPatient: I don't know my most recent HbA1c level, but the doctor mentioned it was elevated. I haven't experienced any diabetes-related complications like neuropathy, retinopathy, or kidney issues.\nDoctor: Could you please share the exact date when you were diagnosed with type 2 diabetes?\nPatient: I don't know the exact date I was diagnosed with type 2 diabetes. I've been managing it for a while now, but I don't have the specific date on hand.\nDoctor: What is your most recent HbA1c value, and when was it measured?\nPatient: I don't know my most recent HbA1c value or when it was measured. The doctor mentioned it was elevated, but I didn't get the exact number or date.\nDoctor: Could you clarify when you were diagnosed with type 2 diabetes and whether you have experienced any complications such as frequent urination, blurred vision, or numbness in your hands or feet?\nPatient: I don't know the exact date I was diagnosed with type 2 diabetes. I've been managing it for a while now, and I haven't experienced any complications like frequent urination, blurred vision, or numbness in my hands or feet.\nDoctor: What is your most recent HbA1c value and when was it measured?\nPatient: I don't know my most recent HbA1c value or when it was measured. The doctor mentioned it was elevated, but I didn't get the exact number or date.\nDoctor: Could you please provide the date when you were diagnosed with type 2 diabetes?\nPatient: I don't know the exact date I was diagnosed with type 2 diabetes. I've been managing it for a while now, but I don't have the specific date on hand.\nDoctor: Could you please provide your most recent HbA1c value and the date it was measured?\nPatient: I don't know my most recent HbA1c value or when it was measured. The doctor mentioned it was elevated, but I didn't get the exact number or date.\nDoctor: Could you please share the date when you were diagnosed with diabetes, and have you experienced any symptoms such as frequent urination, blurred vision, or numbness in your hands or feet?\nPatient: I don't know the exact date I was diagnosed with diabetes. I've been managing it for a while now, and I haven't experienced any complications like frequent urination, blurred vision, or numbness in my hands or feet.\nDoctor: Could you please provide the most recent HbA1c value and the date it was measured, even if you don't have the exact number?\nPatient: I don't know the exact number or date of my most recent HbA1c test. The doctor mentioned it was elevated, but I didn't get the specifics.\nDoctor: Could you tell me when you were first diagnosed with diabetes and if you've noticed any new or worsening symptoms, such as frequent urination, blurred vision, or numbness in your hands or feet?\nPatient: I don't know the exact date I was diagnosed with diabetes. I've been managing it for a while now, and I haven't experienced any new or worsening symptoms like frequent urination, blurred vision, or numbness in my hands or feet.\nDoctor: Could you please provide the date of your most recent HbA1c test and the value obtained?\nPatient: I don't know the exact date of my most recent HbA1c test, but the doctor mentioned it was elevated. I didn't get the specific number, but I know it's not where it should be.",
+  "reference_so": {
+    "subjective": "Basic information: 24-year-old female here for yearly exam; mentions increased snacking at new job affecting diabetes management.\n\nHistory of present illness: Onset and course of diabetes not specified; increased snacking at new job affecting diabetes management. Symptom characteristics: Increased snacking, difficulty resisting desserts at work, affecting blood sugar levels. Prior evaluation and treatment: Taking metformin twice a day as prescribed. Response: Blood sugar levels have been up and down a lot lately, especially since starting this new job.\n\nPast history: No known prior illnesses, operations, or allergies. Family history not specified. Personal history: Diabetes mellitus type 2, managed with metformin. Occupation: Bakery worker, which has influenced dietary habits and blood sugar control.",
+    "objective": "Physical examination: Vital signs not yet recorded. System examination findings not yet recorded.\n\nInvestigations: HbA1c level not yet specified. No prior complications reported."
+  }
+}

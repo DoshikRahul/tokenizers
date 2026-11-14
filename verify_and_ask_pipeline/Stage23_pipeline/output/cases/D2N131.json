@@ -1,0 +1,278 @@
+{
+  "case_id": "D2N131",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient is a 26-year-old female who presents with a complaint of high blood pressure and headaches.\n* She has been experiencing headaches, which she attributes to stress at work or high blood pressure, and has been taking Norvasc 10mg daily.\n* She has no family history of hypertension or cardiovascular conditions.\n* She has had a kidney transplant a few years ago, and her kidney function is good.\n* She has not had any recent blood tests or imaging studies related to hypertension or kidney function beyond what was discussed earlier.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient is a 26-year-old female who presents with a complaint of high blood pressure and headaches.\n* She has been experiencing headaches, which she attributes to stress at work or high blood pressure, and has been taking Norvasc 10mg daily.\n* She has no family history of hypertension or cardiovascular conditions.\n* She has had a kidney transplant a few years ago, and her kidney function is good.\n* She has not had any recent blood tests or imaging studies related to hypertension or kidney function beyond what was discussed earlier.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* Patient is a 26-year-old female who presents with a complaint of high blood pressure and headaches.\n* The patient, Susan, is 26 years old.\n* She has been experiencing headaches, which she attributes to stress at work or high blood pressure, and has been taking Norvasc 10mg daily.\n* She has no family history of hypertension or cardiovascular conditions.\n* She has had a kidney transplant a few years ago, and her kidney function is good.\n* She has not had any recent blood tests or imaging studies related to hypertension or kidney function beyond what was discussed earlier.\n* The patient states that they have not been tracking their blood pressure readings as consistently as they should.\n* The patient reports that their most recent blood pressure readings have been over 150, but they do not have the exact numbers or dates.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has hypertension, which is not well-controlled despite taking Norvasc 10mg daily.\n* She has headaches, which may be related to stress or high blood pressure.",
+    "plan": "* The doctor will consider increasing the dose of Norvasc or adding another medication to help control the patient's blood pressure.\n* The patient will be advised to track her blood pressure readings more consistently and to report any changes in her symptoms or medication regimen.\n* The doctor will also consider referring the patient to a specialist for further evaluation and management of her hypertension."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient is a 26-year-old female who presents with a complaint of high blood pressure and headaches.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0001,
+        "contradiction": 0.0017
+      },
+      "support_evidence": "Patient: I'm 26 years old, and I'm here because my blood pressure has been really high lately. It's been getting worse, and I've been having some headaches, though I'm not sure if that's from the stress at work or the high blood pressure. I wanted to see if there's a new medication or diet changes that can help get it under control.",
+      "contradiction_evidence": "Patient: The headaches happen more in the afternoon, and they feel like a tight pressure around my head, not really throbbing. I don't know if it's because of the stress at work or the blood pressure, but they've been happening more often lately.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient is a 26-year-old female who presents with a complaint of high blood pressure and headaches.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 26-year-old female who presents with a complaint of high blood pressure and headaches.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has been experiencing headaches, which she attributes to stress at work or high blood pressure, and has been taking Norvasc 10mg daily.",
+      "scores": {
+        "entailment": 0.9826,
+        "neutral": 0.0032,
+        "contradiction": 0.0142
+      },
+      "support_evidence": "Patient: I'm 26 years old, and I'm here because my blood pressure has been really high lately. It's been getting worse, and I've been having some headaches, though I'm not sure if that's from the stress at work or the high blood pressure. I wanted to see if there's a new medication or diet changes that can help get it under control.",
+      "contradiction_evidence": "Patient: I'm 26 years old, and I'm here because my blood pressure has been really high lately. It's been getting worse, and I've been having some headaches, though I'm not sure if that's from the stress at work or the high blood pressure. I wanted to see if there's a new medication or diet changes that can help get it under control.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has been experiencing headaches, which she attributes to stress at work or high blood pressure, and has been taking Norvasc 10mg daily.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "She has been experiencing headaches, which she attributes to stress at work or high blood pressure, and has been taking Norvasc 10mg daily.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has no family history of hypertension or cardiovascular conditions.",
+      "scores": {
+        "entailment": 0.9803,
+        "neutral": 0.0155,
+        "contradiction": 0.1503
+      },
+      "support_evidence": "Doctor: Could you provide more details about your family history of hypertension or other cardiovascular conditions? Additionally, have you been previously diagnosed with hypertension, and if so, what medications have you been prescribed?",
+      "contradiction_evidence": "Doctor: Could you provide more details about your family history of hypertension or other cardiovascular conditions? Additionally, have you been previously diagnosed with hypertension, and if so, what medications have you been prescribed?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has no family history of hypertension or cardiovascular conditions.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "She has no family history of hypertension or cardiovascular conditions.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has had a kidney transplant a few years ago, and her kidney function is good.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0005,
+        "contradiction": 0.5859
+      },
+      "support_evidence": "Patient: I don't have any recent blood tests or imaging studies done specifically for secondary causes of hypertension. I do know that my kidney function is good since I had a transplant a few years ago, and everything has been solid since then.",
+      "contradiction_evidence": "Patient: Hi, I'm Susan, and I'm 26 years old. I'm here because my blood pressure has been really high lately, and I want to see if there's a new medication or diet changes that can help get it under control.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has had a kidney transplant a few years ago, and her kidney function is good.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "She has had a kidney transplant a few years ago, and her kidney function is good.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has not had any recent blood tests or imaging studies related to hypertension or kidney function beyond what was discussed earlier.",
+      "scores": {
+        "entailment": 0.9976,
+        "neutral": 0.0017,
+        "contradiction": 0.002
+      },
+      "support_evidence": "Patient: My blood pressure is high right now, and I haven't had any recent physical examination findings or laboratory tests related to my hypertension or kidney function beyond what was discussed earlier. I was told my kidney function is good, and my EKG was normal.",
+      "contradiction_evidence": "Patient: I don't have a current blood pressure reading with me, but I know it's been high when I've checked it. I haven't had any recent blood tests or imaging related to my kidney function or headaches beyond what was already discussed. I was told my kidney function is good, and my EKG was normal.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has not had any recent blood tests or imaging studies related to hypertension or kidney function beyond what was discussed earlier.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "She has not had any recent blood tests or imaging studies related to hypertension or kidney function beyond what was discussed earlier.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 5,
+      "exempt": 1
+    },
+    "num_claims": 5,
+    "num_kept": 5,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient states that they have not been tracking their blood pressure readings as consistently as they should.",
+      "evidence": "Patient: I haven't been measuring my blood pressure very regularly, just when I feel like it or when I'm worried about it. The headaches happen more in the afternoon, and they feel like a tight pressure around my head, not really throbbing. I don't know if it's because of the stress at work or the blood pressure, but they've been happening more often lately.",
+      "section": "subjective",
+      "candidate": "I haven't been tracking them as consistently as I should."
+    },
+    {
+      "statement": "The patient, Susan, is 26 years old.",
+      "evidence": "Patient: Hi, I'm Susan, and I'm 26 years old. I'm here because my blood pressure has been really high lately, and I want to see if there's a new medication or diet changes that can help get it under control.",
+      "section": "subjective",
+      "candidate": "Hi, I'm Susan, and I'm 26 years old."
+    },
+    {
+      "statement": "The patient reports that their most recent blood pressure readings have been over 150, but they do not have the exact numbers or dates.",
+      "evidence": "Patient: I don't have the exact numbers or dates for my most recent blood pressure readings, but I know they've been over 150 when I've checked them lately. I haven't been tracking them as consistently as I should.",
+      "section": "subjective",
+      "candidate": "I don't have the exact numbers or dates for my most recent blood pressure readings, but I know they've been over 150 when I've checked them lately."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "That's why I came in to see if there's something else we can do.",
+      "speaker": "Patient",
+      "coverage": 0.0457,
+      "nearest_so_sentence": "She has had a kidney transplant a few years ago, and her kidney function is good.",
+      "statement": "The patient reports seeking medical attention to explore alternative options.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: My blood pressure has been over 150, and I've been checking it at home regularly, but it's not been under control even with the Norvasc. That's why I came in to see if there's something else we can do.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0148
+      },
+      "duplicate_entailment": 0.8421,
+      "duplicate_similarity": 0.3547
+    },
+    {
+      "candidate": "I haven't been tracking them as consistently as I should.",
+      "speaker": "Patient",
+      "coverage": 0.0638,
+      "nearest_so_sentence": "She has not had any recent blood tests or imaging studies related to hypertension or kidney function beyond what was discussed earlier.",
+      "statement": "The patient states that they have not been tracking their blood pressure readings as consistently as they should.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I haven't been measuring my blood pressure very regularly, just when I feel like it or when I'm worried about it. The headaches happen more in the afternoon, and they feel like a tight pressure around my head, not really throbbing. I don't know if it's because of the stress at work or the blood pressure, but they've been happening more often lately.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0315
+      },
+      "first_rewrite_rejected": "The patient reports not tracking blood pressure readings consistently.",
+      "duplicate_entailment": 0.0024,
+      "duplicate_similarity": 0.5957,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 5,
+        "perplexity": 16.51,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "Hi, I'm Susan, and I'm 26 years old.",
+      "speaker": "Patient",
+      "coverage": 0.2016,
+      "nearest_so_sentence": "Patient is a 26-year-old female who presents with a complaint of high blood pressure and headaches.",
+      "statement": "The patient, Susan, is 26 years old.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: Hi, I'm Susan, and I'm 26 years old. I'm here because my blood pressure has been really high lately, and I want to see if there's a new medication or diet changes that can help get it under control.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0003
+      },
+      "duplicate_entailment": 0.0138,
+      "duplicate_similarity": 0.5602,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 1,
+        "perplexity": 15.46,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don't have the exact numbers or dates for my most recent blood pressure readings, but I know they've been over 150 when I've checked them lately.",
+      "speaker": "Patient",
+      "coverage": 0.3699,
+      "nearest_so_sentence": "She has not had any recent blood tests or imaging studies related to hypertension or kidney function beyond what was discussed earlier.",
+      "statement": "The patient reports that their most recent blood pressure readings have been over 150, but they do not have the exact numbers or dates.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't have the exact numbers or dates for my most recent blood pressure readings, but I know they've been over 150 when I've checked them lately. I haven't been tracking them as consistently as I should.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0312
+      },
+      "duplicate_entailment": 0.5236,
+      "duplicate_similarity": 0.4543,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 7,
+        "perplexity": 14.43,
+        "removed_placeholder": []
+      }
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 34,
+    "num_covered": 30,
+    "num_flagged": 4,
+    "num_not_checked_cap": 0,
+    "num_added": 3
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": []
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 35.5,
+  "ap_unchanged": true,
+  "conversation": "Patient: Hi, I'm Susan, and I'm 26 years old. I'm here because my blood pressure has been really high lately, and I want to see if there's a new medication or diet changes that can help get it under control.\nDoctor: Could you please provide your age, gender, and a detailed description of your current symptoms or concerns?\nPatient: I'm 26 years old, and I'm here because my blood pressure has been really high lately. It's been getting worse, and I've been having some headaches, though I'm not sure if that's from the stress at work or the high blood pressure. I wanted to see if there's a new medication or diet changes that can help get it under control.\nDoctor: Could you provide more details about your family history of hypertension or other cardiovascular conditions? Additionally, have you been previously diagnosed with hypertension, and if so, what medications have you been prescribed?\nPatient: I don't have any family history of hypertension or other cardiovascular conditions that I'm aware of. I was previously diagnosed with high blood pressure, and I've been on Norvasc, which I've had to increase to 10 milligrams a day. But it doesn't seem to be controlling my blood pressure as well as it should.\nDoctor: Could you please share your current blood pressure readings and how frequently you have been measuring it?\nPatient: My blood pressure has been over 150, and I've been checking it at home regularly, but it's not been under control even with the Norvasc. That's why I came in to see if there's something else we can do.\nDoctor: Could you share the results of any recent blood tests or imaging studies you've had done to check for secondary causes of hypertension?\nPatient: I don't have any recent blood tests or imaging studies done specifically for secondary causes of hypertension. I do know that my kidney function is good since I had a transplant a few years ago, and everything has been solid since then.\nDoctor: Could you please share your current blood pressure reading, and have you experienced any other symptoms such as chest pain, shortness of breath, or dizziness recently?\nPatient: My blood pressure is high right now, and I've been having some headaches, but I haven't had chest pain, shortness of breath, or dizziness. I'm not sure if the headaches are from stress or the high blood pressure.\nDoctor: Could you please provide your current blood pressure reading, and have you had any recent physical examination findings or laboratory tests related to your hypertension or kidney function?\nPatient: My blood pressure is high right now, and I haven't had any recent physical examination findings or laboratory tests related to my hypertension or kidney function beyond what was discussed earlier. I was told my kidney function is good, and my EKG was normal.\nDoctor: Could you describe the frequency and severity of your headaches, and have you noticed any patterns or triggers associated with them?\nPatient: The headaches have been occasional, not too severe, but they've been happening more frequently lately. I'm not sure if they're related to my blood pressure or just stress from work, but they've been bothering me enough that I wanted to come in and check everything.\nDoctor: Could you please share your current blood pressure reading, and have you had any recent blood tests or imaging related to your kidney function or headaches?\nPatient: My blood pressure is high right now, and I haven't had any recent blood tests or imaging related to my kidney function or headaches beyond what was already discussed. I was told my kidney function is good, and my EKG was normal.\nDoctor: Could you please provide your current blood pressure reading, and have you experienced any other symptoms such as dizziness, chest pain, or shortness of breath?\nPatient: My blood pressure is high right now, and I haven't experienced any dizziness, chest pain, or shortness of breath. I've only had some headaches, which I'm not sure are from stress or the high blood pressure.\nDoctor: Could you please provide your current blood pressure reading, and have you had any recent blood tests or imaging related to your kidney function or headaches?\nPatient: My blood pressure is high right now, and I haven't had any recent blood tests or imaging related to my kidney function or headaches beyond what was already discussed. I was told my kidney function is good, and my EKG was normal.\nDoctor: Could you please provide your current blood pressure reading, and how often you have been measuring it recently? Also, could you describe the frequency and severity of your headaches, and whether they are associated with any specific activities or times of day?\nPatient: I haven't been measuring my blood pressure very regularly, just when I feel like it or when I'm worried about it. The headaches happen more in the afternoon, and they feel like a tight pressure around my head, not really throbbing. I don't know if it's because of the stress at work or the blood pressure, but they've been happening more often lately.\nDoctor: Could you please provide your current blood pressure reading, if you have one available? Also, have you had any recent blood tests or imaging related to your kidney function or headaches?\nPatient: I don't have a current blood pressure reading with me, but I know it's been high when I've checked it. I haven't had any recent blood tests or imaging related to my kidney function or headaches beyond what was already discussed. I was told my kidney function is good, and my EKG was normal.\nDoctor: Could you please describe the frequency and severity of your headaches, and have you noticed any specific triggers or patterns associated with them?\nPatient: The headaches happen more in the afternoon, and they feel like a tight pressure around my head, not really throbbing. I don't know if it's because of the stress at work or the blood pressure, but they've been happening more often lately.\nDoctor: Could you provide your most recent blood pressure readings, including both systolic and diastolic values, and the dates when they were measured?\nPatient: I don't have the exact numbers or dates for my most recent blood pressure readings, but I know they've been over 150 when I've checked them lately. I haven't been tracking them as consistently as I should.",
+  "reference_so": {
+    "subjective": "Basic information: Susan, 26 years old, chief complaint: high blood pressure\n\nHistory of present illness: Onset of high blood pressure recently, worsening over time, associated with headaches; uncertain if related to stress or hypertension. Headaches occur more in the afternoon, described as a tight pressure around the head, not throbbing, and have been happening more often lately.\n\nPast history: Previously diagnosed with hypertension, currently on Norvasc 10 mg/day. Kidney transplant a few years ago with good function since then.",
+    "objective": "Physical examination: [Not yet collected]\n\nInvestigations: [Not yet collected]"
+  }
+}

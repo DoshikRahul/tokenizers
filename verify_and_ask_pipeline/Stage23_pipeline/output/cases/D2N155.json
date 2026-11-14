@@ -1,0 +1,886 @@
+{
+  "case_id": "D2N155",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient is a 58-year-old female with a 1-year-old foot ulcer on the top of her right foot, near the fifth toe, approximately 1 inch in size, with yellow discharge and increased drainage.\n* The ulcer is not painful, but the patient reports feeling more tired lately.\n* Patient has a history of type 2 diabetes, with an A1C of 10, and is currently taking insulin and metformin.\n* Patient has not had any major infections or cardiovascular conditions.\n* Patient has not had any prior episodes of foot ulcers or infections.\n* Patient has not been on any antibiotics recently, but was on some antibiotics 5 months ago.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient is a 58-year-old female with a 1-year-old foot ulcer on the top of her right foot, near the fifth toe, approximately 1 inch in size, with yellow discharge and increased drainage.\n* The ulcer is not painful, but the patient reports feeling more tired lately.\n* Patient has a history of type 2 diabetes, with an A1C of 10, and is currently taking insulin and metformin.\n* Patient has not had any major infections or cardiovascular conditions.\n* Patient has not been on any antibiotics recently, but was on some antibiotics 5 months ago.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* The patient reports that a wound culture was not performed.\n* Patient is a 58-year-old female with a 1-year-old foot ulcer on the top of her right foot, near the fifth toe, approximately 1 inch in size, with yellow discharge and increased drainage.\n* The patient reports being unaware that vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, are typically performed to assess peripheral arterial disease in the context of wound care.\n* The patient denies having undergone any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound.\n* The ulcer is not painful, but the patient reports feeling more tired lately.\n* Patient has a history of type 2 diabetes, with an A1C of 10, and is currently taking insulin and metformin.\n* The patient reports that they try to eat better, but acknowledge that they are not doing enough.\n* The patient reports that the foot ulcer does not cause pain, but notes that they do not feel much sensation in their foot anyway.\n* Patient has not had any major infections or cardiovascular conditions.\n* The patient suggests that a wound culture may be necessary to identify any potential bacterial infection.\n* Patient has not been on any antibiotics recently, but was on some antibiotics 5 months ago.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has a non-healing foot ulcer on the top of her right foot, near the fifth toe, with yellow discharge and increased drainage.\n* The patient has a history of poorly controlled type 2 diabetes, with an A1C of 10.\n* The patient has not had any vascular studies to assess peripheral arterial disease.",
+    "plan": "* The patient will undergo a wound culture to check for infection.\n* The patient will be referred for vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, to assess blood flow to her feet.\n* The patient will be advised to continue taking her current medications and to improve her foot care."
+  },
+  "stage2_audit": [
+    {
+      "claim": "The patient is a 58-year-old female.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0001,
+        "contradiction": 0.0161
+      },
+      "support_evidence": "Patient: I'm 58 years old and female. I'm here because I have this foot ulcer that just won't heal, and I'm worried about it. It's been going on for about a year now.",
+      "contradiction_evidence": "Doctor: Has the patient had any prior episodes of foot ulcers or infections, and is she currently on any antibiotics or wound care regimen?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient is a 58-year-old female.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 58-year-old female with a 1-year-old foot ulcer on the top of her right foot, near the fifth toe, approximately 1 inch in size, with yellow discharge and increased drainage."
+    },
+    {
+      "claim": "The patient has a 1-year-old foot ulcer.",
+      "scores": {
+        "entailment": 0.999,
+        "neutral": 0.0004,
+        "contradiction": 0.4514
+      },
+      "support_evidence": "Patient: I'm 58 years old and female. I'm here because I have this foot ulcer that just won't heal, and I'm worried about it. It's been going on for about a year now.",
+      "contradiction_evidence": "Patient: The ulcer isn't very deep as far as I can tell, and there's some yellow stuff in there, but I don't think there's any dead tissue exposed. The skin around it doesn't look red or swollen, and it doesn't feel different to the touch. It just looks kind of open and has that yellowish stuff in it.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has a 1-year-old foot ulcer.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 58-year-old female with a 1-year-old foot ulcer on the top of her right foot, near the fifth toe, approximately 1 inch in size, with yellow discharge and increased drainage."
+    },
+    {
+      "claim": "The foot ulcer is located on the top of the patient's right foot.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0003,
+        "contradiction": 0.0112
+      },
+      "support_evidence": "Patient: It's on the top of my right foot, near the fifth toe, and it's about an inch in size. It's got some yellow stuff in it, and there's been more drainage lately. It doesn't hurt, but I don't feel much in my foot anyway. I've noticed it hasn't been getting better, and it seems to be getting more draining over time.",
+      "contradiction_evidence": "Doctor: Has the patient had any prior episodes of foot ulcers or infections, and is she currently on any antibiotics or wound care regimen?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The foot ulcer is located on the top of the patient's right foot.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 58-year-old female with a 1-year-old foot ulcer on the top of her right foot, near the fifth toe, approximately 1 inch in size, with yellow discharge and increased drainage."
+    },
+    {
+      "claim": "The foot ulcer is near the fifth toe.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.0009
+      },
+      "support_evidence": "Patient: It's on the top of my right foot, near the fifth toe, and it's about an inch in size. It's got some yellow stuff in it, and there's been more drainage lately. It doesn't hurt, but I don't feel much in my foot anyway. I've noticed it hasn't been getting better, and it seems to be getting more draining over time.",
+      "contradiction_evidence": "Doctor: Has the patient had any prior episodes of foot ulcers or infections, and is she currently on any antibiotics or wound care regimen?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The foot ulcer is near the fifth toe.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 58-year-old female with a 1-year-old foot ulcer on the top of her right foot, near the fifth toe, approximately 1 inch in size, with yellow discharge and increased drainage."
+    },
+    {
+      "claim": "The foot ulcer is approximately 1 inch in size.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.0003
+      },
+      "support_evidence": "Doctor: Could you describe the location, size, appearance, and any associated symptoms (e.g., pain, drainage, odor) of the foot ulcer? Have you noticed any changes in its appearance over the past year?",
+      "contradiction_evidence": "Patient: It's on the top of my right foot, near the fifth toe, and it's about an inch in size. It's got some yellow stuff in it, and there's been more drainage lately. It doesn't hurt, but I don't feel much in my foot anyway. I've noticed it hasn't been getting better, and it seems to be getting more draining over time.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The foot ulcer is approximately 1 inch in size.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 58-year-old female with a 1-year-old foot ulcer on the top of her right foot, near the fifth toe, approximately 1 inch in size, with yellow discharge and increased drainage."
+    },
+    {
+      "claim": "The foot ulcer has yellow discharge.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0003,
+        "contradiction": 0.0007
+      },
+      "support_evidence": "Doctor: Could you describe the location, size, appearance, and any associated symptoms (e.g., pain, drainage, odor) of the foot ulcer? Have you noticed any changes in its appearance over the past year?",
+      "contradiction_evidence": "Patient: The ulcer isn't very deep as far as I can tell, and there's some yellow stuff in there, but I don't think there's any dead tissue exposed. The skin around it doesn't look red or swollen, and it doesn't feel different to the touch. It just looks kind of open and has that yellowish stuff in it.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The foot ulcer has yellow discharge.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 58-year-old female with a 1-year-old foot ulcer on the top of her right foot, near the fifth toe, approximately 1 inch in size, with yellow discharge and increased drainage."
+    },
+    {
+      "claim": "The foot ulcer has increased drainage.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.0005
+      },
+      "support_evidence": "Patient: It's on the top of my right foot, near the fifth toe, and it's about an inch in size. It's got some yellow stuff in it, and there's been more drainage lately. It doesn't hurt, but I don't feel much in my foot anyway. I've noticed it hasn't been getting better, and it seems to be getting more draining over time.",
+      "contradiction_evidence": "Doctor: Has the patient had any prior episodes of foot ulcers or infections, and is she currently on any antibiotics or wound care regimen?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The foot ulcer has increased drainage.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 58-year-old female with a 1-year-old foot ulcer on the top of her right foot, near the fifth toe, approximately 1 inch in size, with yellow discharge and increased drainage."
+    },
+    {
+      "claim": "The ulcer is not painful, but the patient reports feeling more tired lately.",
+      "scores": {
+        "entailment": 0.9989,
+        "neutral": 0.0007,
+        "contradiction": 0.03
+      },
+      "support_evidence": "Patient: I haven't had any fever or chills, but I have been feeling more tired lately. As for imaging, I think they did an x-ray before I came in, and it showed no bone infection, if I remember right. I don't think they did a wound culture.",
+      "contradiction_evidence": "Doctor: Has the patient had any prior episodes of foot ulcers or infections, and is she currently on any antibiotics or wound care regimen?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The ulcer is not painful, but the patient reports feeling more tired lately.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The ulcer is not painful, but the patient reports feeling more tired lately.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient has a history of type 2 diabetes.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0001,
+        "contradiction": 0.0033
+      },
+      "support_evidence": "Patient: I was diagnosed with type two diabetes a few years back, and my blood sugars have been running in the two hundreds, which my doctor doesn't like. My last A1C was about ten, so I know it's not well-controlled. I haven't had any major infections or heart issues that I'm aware of.",
+      "contradiction_evidence": "Doctor: Has the patient had any prior episodes of foot ulcers or infections, and is she currently on any antibiotics or wound care regimen?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has a history of type 2 diabetes.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Patient has a history of type 2 diabetes, with an A1C of 10, and is currently taking insulin and metformin."
+    },
+    {
+      "claim": "The patient's A1C is 10.",
+      "scores": {
+        "entailment": 0.9807,
+        "neutral": 0.0161,
+        "contradiction": 0.1115
+      },
+      "support_evidence": "Patient: My diabetes is still not great, my blood sugars are still running around two hundred, and my last A1c was about ten. I'm on insulin and metformin, but it's not where my doctor wants it to be. I try to eat better, but I know I'm not doing enough. I also don't take good care of my feet like I should, which is probably making this ulcer worse.",
+      "contradiction_evidence": "Doctor: Has the patient had any prior episodes of foot ulcers or infections, and is she currently on any antibiotics or wound care regimen?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient's A1C is 10.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Patient has a history of type 2 diabetes, with an A1C of 10, and is currently taking insulin and metformin."
+    },
+    {
+      "claim": "The patient is taking insulin.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.0218
+      },
+      "support_evidence": "Patient: My diabetes is still not great, my blood sugars are still running around two hundred, and my last A1c was about ten. I'm on insulin and metformin, but it's not where my doctor wants it to be. I try to eat better, but I know I'm not doing enough. I also don't take good care of my feet like I should, which is probably making this ulcer worse.",
+      "contradiction_evidence": "Doctor: Has the patient had a wound culture performed on the ulcer to identify any potential bacterial infection?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient is taking insulin.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Patient has a history of type 2 diabetes, with an A1C of 10, and is currently taking insulin and metformin."
+    },
+    {
+      "claim": "The patient is taking metformin.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0003,
+        "contradiction": 0.0883
+      },
+      "support_evidence": "Patient: My diabetes is still not great, my blood sugars are still running around two hundred, and my last A1c was about ten. I'm on insulin and metformin, but it's not where my doctor wants it to be. I try to eat better, but I know I'm not doing enough. I also don't take good care of my feet like I should, which is probably making this ulcer worse.",
+      "contradiction_evidence": "Doctor: Has the patient had any prior episodes of foot ulcers or infections, and is she currently on any antibiotics or wound care regimen?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient is taking metformin.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Patient has a history of type 2 diabetes, with an A1C of 10, and is currently taking insulin and metformin."
+    },
+    {
+      "claim": "Patient has not had any major infections or cardiovascular conditions.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0003,
+        "contradiction": 0.2008
+      },
+      "support_evidence": "Patient: I was diagnosed with type two diabetes a few years back, and my blood sugars have been running in the two hundreds, which my doctor doesn't like. My last A1C was about ten, so I know it's not well-controlled. I haven't had any major infections or heart issues that I'm aware of.",
+      "contradiction_evidence": "Doctor: Has the patient undergone any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, to assess for peripheral arterial disease?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient has not had any major infections or cardiovascular conditions.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Patient has not had any major infections or cardiovascular conditions.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient has not had any prior episodes of foot ulcers.",
+      "scores": {
+        "entailment": 0.0724,
+        "neutral": 0.0315,
+        "contradiction": 0.9733
+      },
+      "support_evidence": "Doctor: Has the patient had any prior episodes of foot ulcers or infections, and is she currently on any antibiotics or wound care regimen?",
+      "contradiction_evidence": "Doctor: Has the patient had any prior episodes of foot ulcers or infections, and is she currently on any antibiotics or wound care regimen?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "removed_contradicted",
+      "keep": false,
+      "output": "",
+      "reason": "Contradicted by the conversation and no evidence-based correction was possible.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Patient has not had any prior episodes of foot ulcers or infections."
+    },
+    {
+      "claim": "The patient has not had any prior episodes of infections.",
+      "scores": {
+        "entailment": 0.3677,
+        "neutral": 0.0169,
+        "contradiction": 0.9888
+      },
+      "support_evidence": "Patient: I was diagnosed with type two diabetes a few years back, and my blood sugars have been running in the two hundreds, which my doctor doesn't like. My last A1C was about ten, so I know it's not well-controlled. I haven't had any major infections or heart issues that I'm aware of.",
+      "contradiction_evidence": "Doctor: Has the patient had any prior episodes of foot ulcers or infections, and is she currently on any antibiotics or wound care regimen?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "removed_contradicted",
+      "keep": false,
+      "output": "",
+      "reason": "Contradicted by the conversation and no evidence-based correction was possible.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Patient has not had any prior episodes of foot ulcers or infections."
+    },
+    {
+      "claim": "Patient has not been on any antibiotics recently, but was on some antibiotics 5 months ago.",
+      "scores": {
+        "entailment": 0.9978,
+        "neutral": 0.0018,
+        "contradiction": 0.0009
+      },
+      "support_evidence": "Patient: I don't think I've had any other foot ulcers before, just this one. I was on some antibiotics a while back, maybe five months ago, but I don't think I'm on anything now. I've been trying to take care of it, but nothing really seems to be working.",
+      "contradiction_evidence": "Patient: I was diagnosed with type two diabetes a few years back, and my blood sugars have been running in the two hundreds, which my doctor doesn't like. My last A1C was about ten, so I know it's not well-controlled. I haven't had any major infections or heart issues that I'm aware of.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient has not been on any antibiotics recently, but was on some antibiotics 5 months ago.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "Patient has not been on any antibiotics recently, but was on some antibiotics 5 months ago.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 14,
+      "removed_contradicted": 2,
+      "exempt": 1
+    },
+    "num_claims": 16,
+    "num_kept": 14,
+    "claim_retention_rate": 0.875
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient suggests that a wound culture may be necessary to identify any potential bacterial infection.",
+      "evidence": "Doctor: Has the patient had a wound culture performed on the ulcer to check for infection?",
+      "section": "subjective",
+      "candidate": "I guess that's something they might need to do now."
+    },
+    {
+      "statement": "The patient reports that they try to eat better, but acknowledge that they are not doing enough.",
+      "evidence": "Patient: My diabetes is still not great, my blood sugars are still running around two hundred, and my last A1c was about ten. I'm on insulin and metformin, but it's not where my doctor wants it to be. I try to eat better, but I know I'm not doing enough. I also don't take good care of my feet like I should, which is probably making this ulcer worse.",
+      "section": "subjective",
+      "candidate": "I try to eat better, but I know I'm not doing enough."
+    },
+    {
+      "statement": "The patient reports that a wound culture was not performed.",
+      "evidence": "Patient: I haven't had any fever or chills, but I have been feeling more tired lately. As for imaging, I think they did an x-ray before I came in, and it showed no bone infection, if I remember right. I don't think they did a wound culture.",
+      "section": "subjective",
+      "candidate": "I don't think they did a wound culture."
+    },
+    {
+      "statement": "The patient reports that the foot ulcer does not cause pain, but notes that they do not feel much sensation in their foot anyway.",
+      "evidence": "Patient: It's on the top of my right foot, near the fifth toe, and it's about an inch in size. It's got some yellow stuff in it, and there's been more drainage lately. It doesn't hurt, but I don't feel much in my foot anyway. I've noticed it hasn't been getting better, and it seems to be getting more draining over time.",
+      "section": "subjective",
+      "candidate": "It doesn't hurt, but I don't feel much in my foot anyway."
+    },
+    {
+      "statement": "The patient denies having undergone any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound.",
+      "evidence": "Doctor: Has the patient undergone any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, to assess for peripheral arterial disease?",
+      "section": "subjective",
+      "candidate": "No, I don't think I've had any vascular studies done before."
+    },
+    {
+      "statement": "The patient reports being unaware that vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, are typically performed to assess peripheral arterial disease in the context of wound care.",
+      "evidence": "Doctor: Has the patient undergone any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, to assess peripheral arterial disease?",
+      "section": "subjective",
+      "candidate": "I wasn't really aware that was something they would check for this kind of wound."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I'm 58 years old and female.",
+      "speaker": "Patient",
+      "coverage": 0.0574,
+      "nearest_so_sentence": "Patient has a history of type 2 diabetes, with an A1C of 10, and is currently taking insulin and metformin.",
+      "statement": "The patient is 58 years old and female.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 58 years old and female. I'm here because I have this foot ulcer that just won't heal, and I'm worried about it. It's been going on for about a year now.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.0019
+      },
+      "duplicate_entailment": 0.9996,
+      "duplicate_similarity": 0.5097
+    },
+    {
+      "candidate": "I guess that's something they might need to do now.",
+      "speaker": "Patient",
+      "coverage": 0.0849,
+      "nearest_so_sentence": "Patient has not been on any antibiotics recently, but was on some antibiotics 5 months ago.",
+      "statement": "The patient suggests that a wound culture may be necessary to identify any potential bacterial infection.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Doctor: Has the patient had a wound culture performed on the ulcer to check for infection?",
+      "scores_vs_dialogue": {
+        "entailment": 0.999,
+        "contradiction": 0.0013
+      },
+      "duplicate_entailment": 0.0035,
+      "duplicate_similarity": 0.4961,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 4,
+        "perplexity": 18.95,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I guess that's something they might need to do now.",
+      "speaker": "Patient",
+      "coverage": 0.0849,
+      "nearest_so_sentence": "Patient has not been on any antibiotics recently, but was on some antibiotics 5 months ago.",
+      "statement": "The patient suggests that a wound culture may be necessary to check for infection.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Has the patient had a wound culture performed on the ulcer to check for infection?",
+      "scores_vs_dialogue": {
+        "entailment": 0.999,
+        "contradiction": 0.0009
+      },
+      "duplicate_entailment": 0.0013,
+      "duplicate_similarity": 0.4576
+    },
+    {
+      "candidate": "I guess that's something they might need to do now.",
+      "speaker": "Patient",
+      "coverage": 0.0849,
+      "nearest_so_sentence": "Patient has not been on any antibiotics recently, but was on some antibiotics 5 months ago.",
+      "statement": "The patient reports that a wound culture may be necessary to check for infection.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Has the patient had a wound culture performed on the ulcer to check for infection?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9986,
+        "contradiction": 0.0019
+      },
+      "duplicate_entailment": 0.026,
+      "duplicate_similarity": 0.4687
+    },
+    {
+      "candidate": "I try to eat better, but I know I'm not doing enough.",
+      "speaker": "Patient",
+      "coverage": 0.1226,
+      "nearest_so_sentence": "The ulcer is not painful, but the patient reports feeling more tired lately.",
+      "statement": "The patient reports that they try to eat better, but acknowledge that they are not doing enough.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: My diabetes is still not great, my blood sugars are still running around two hundred, and my last A1c was about ten. I'm on insulin and metformin, but it's not where my doctor wants it to be. I try to eat better, but I know I'm not doing enough. I also don't take good care of my feet like I should, which is probably making this ulcer worse.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.1539
+      },
+      "duplicate_entailment": 0.0034,
+      "duplicate_similarity": 0.3821,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 3,
+        "perplexity": 18.35,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "It just looks kind of open and has that yellowish stuff in it.",
+      "speaker": "Patient",
+      "coverage": 0.1605,
+      "nearest_so_sentence": "Patient is a 58-year-old female with a 1-year-old foot ulcer on the top of her right foot, near the fifth toe, approximately 1 inch in size, with yellow discharge and increased drainage.",
+      "statement": "The patient reports that the ulcer appears open and contains yellowish material.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The ulcer isn't very deep as far as I can tell, and there's some yellow stuff in there, but I don't think there's any dead tissue exposed. The skin around it doesn't look red or swollen, and it doesn't feel different to the touch. It just looks kind of open and has that yellowish stuff in it.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0325
+      },
+      "duplicate_entailment": 0.9994,
+      "duplicate_similarity": 0.6304
+    },
+    {
+      "candidate": "I've been trying to take care of it, but nothing really seems to be working.",
+      "speaker": "Patient",
+      "coverage": 0.2119,
+      "nearest_so_sentence": "The ulcer is not painful, but the patient reports feeling more tired lately.",
+      "statement": "The patient reports that despite efforts to manage the foot condition, the symptoms have not improved.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The ulcer isn't very deep as far as I can tell, and there's some yellow stuff in there, but I don't think there's any dead tissue exposed. The skin around it doesn't look red or swollen, and it doesn't feel different to the touch. It just looks kind of open and has that yellowish stuff in it.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.0033
+      },
+      "duplicate_entailment": 0.85,
+      "duplicate_similarity": 0.5213
+    },
+    {
+      "candidate": "I don't think they did a wound culture.",
+      "speaker": "Patient",
+      "coverage": 0.219,
+      "nearest_so_sentence": "Patient has not had any major infections or cardiovascular conditions.",
+      "statement": "The patient reports that a wound culture was not performed.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I haven't had any fever or chills, but I have been feeling more tired lately. As for imaging, I think they did an x-ray before I came in, and it showed no bone infection, if I remember right. I don't think they did a wound culture.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0314
+      },
+      "duplicate_entailment": 0.0033,
+      "duplicate_similarity": 0.6318,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 17.18,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I've noticed it hasn't been getting better, and it seems to be getting more draining over time.",
+      "speaker": "Patient",
+      "coverage": 0.2348,
+      "nearest_so_sentence": "The ulcer is not painful, but the patient reports feeling more tired lately.",
+      "statement": "The patient reports that the foot ulcer has not improved over time and has become more draining.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: It's on the top of my right foot, near the fifth toe, and it's about an inch in size. It's got some yellow stuff in it, and there's been more drainage lately. It doesn't hurt, but I don't feel much in my foot anyway. I've noticed it hasn't been getting better, and it seems to be getting more draining over time.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.1036
+      },
+      "duplicate_entailment": 0.9978,
+      "duplicate_similarity": 0.6894
+    },
+    {
+      "candidate": "It's been going on for about a year now.",
+      "speaker": "Patient",
+      "coverage": 0.246,
+      "nearest_so_sentence": "Patient has not been on any antibiotics recently, but was on some antibiotics 5 months ago.",
+      "statement": "The patient reports that the symptoms have been present for approximately one year.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 58 years old and female. I'm here because I have this foot ulcer that just won't heal, and I'm worried about it. It's been going on for about a year now.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.2054
+      },
+      "duplicate_entailment": 0.9992,
+      "duplicate_similarity": 0.545
+    },
+    {
+      "candidate": "I haven't had any fever or chills, but I have been feeling more tired lately.",
+      "speaker": "Patient",
+      "coverage": 0.2602,
+      "nearest_so_sentence": "The ulcer is not painful, but the patient reports feeling more tired lately.",
+      "statement": "The patient reports no fever or chills, but notes feeling more tired lately.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I haven't had any fever or chills, but I have been feeling more tired lately. As for imaging, I think they did an x-ray before I came in, and it showed no bone infection, if I remember right. I don't think they did a wound culture.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.1423
+      },
+      "duplicate_entailment": 0.9922,
+      "duplicate_similarity": 0.5285
+    },
+    {
+      "candidate": "The skin around it doesn't look red or swollen, and it doesn't feel different to the touch.",
+      "speaker": "Patient",
+      "coverage": 0.264,
+      "nearest_so_sentence": "The ulcer is not painful, but the patient reports feeling more tired lately.",
+      "statement": "The patient reports that the skin around the ulcer does not appear red or swollen, and it does not feel different to the touch.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The ulcer isn't very deep as far as I can tell, and there's some yellow stuff in there, but I don't think there's any dead tissue exposed. The skin around it doesn't look red or swollen, and it doesn't feel different to the touch. It just looks kind of open and has that yellowish stuff in it.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9931,
+        "contradiction": 0.1427
+      },
+      "duplicate_entailment": 0.8605,
+      "duplicate_similarity": 0.616
+    },
+    {
+      "candidate": "No, I don't think they've done a wound culture on it.",
+      "speaker": "Patient",
+      "coverage": 0.2682,
+      "nearest_so_sentence": "Patient has not been on any antibiotics recently, but was on some antibiotics 5 months ago.",
+      "statement": "The patient reports that a wound culture has not been performed on the ulcer.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Has the patient had a wound culture performed on the ulcer to check for infection?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0057
+      },
+      "duplicate_entailment": 0.1624,
+      "duplicate_similarity": 0.5771
+    },
+    {
+      "candidate": "No, I don't think they've done a wound culture on it.",
+      "speaker": "Patient",
+      "coverage": 0.2682,
+      "nearest_so_sentence": "Patient has not been on any antibiotics recently, but was on some antibiotics 5 months ago.",
+      "statement": "The patient reports that a wound culture has not been performed on the ulcer.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Has the patient had a wound culture performed on the ulcer to check for infection?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0057
+      },
+      "duplicate_entailment": 0.1624,
+      "duplicate_similarity": 0.5771
+    },
+    {
+      "candidate": "No, I don't think they've done a wound culture on it.",
+      "speaker": "Patient",
+      "coverage": 0.2682,
+      "nearest_so_sentence": "Patient has not been on any antibiotics recently, but was on some antibiotics 5 months ago.",
+      "statement": "The patient reports that a wound culture has not been performed on the ulcer.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Has the patient had a wound culture performed on the ulcer to check for infection?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0057
+      },
+      "duplicate_entailment": 0.1624,
+      "duplicate_similarity": 0.5771
+    },
+    {
+      "candidate": "It's got some yellow stuff in it, and there's been more drainage lately.",
+      "speaker": "Patient",
+      "coverage": 0.293,
+      "nearest_so_sentence": "Patient is a 58-year-old female with a 1-year-old foot ulcer on the top of her right foot, near the fifth toe, approximately 1 inch in size, with yellow discharge and increased drainage.",
+      "statement": "The patient reports that the foot ulcer contains yellow discharge and has increased drainage recently.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: It's on the top of my right foot, near the fifth toe, and it's about an inch in size. It's got some yellow stuff in it, and there's been more drainage lately. It doesn't hurt, but I don't feel much in my foot anyway. I've noticed it hasn't been getting better, and it seems to be getting more draining over time.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0523
+      },
+      "duplicate_entailment": 0.9988,
+      "duplicate_similarity": 0.7911
+    },
+    {
+      "candidate": "It doesn't hurt, but I don't feel much in my foot anyway.",
+      "speaker": "Patient",
+      "coverage": 0.3253,
+      "nearest_so_sentence": "The ulcer is not painful, but the patient reports feeling more tired lately.",
+      "statement": "The patient reports that the foot ulcer does not cause pain, but notes that they do not feel much sensation in their foot anyway.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: It's on the top of my right foot, near the fifth toe, and it's about an inch in size. It's got some yellow stuff in it, and there's been more drainage lately. It doesn't hurt, but I don't feel much in my foot anyway. I've noticed it hasn't been getting better, and it seems to be getting more draining over time.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0688
+      },
+      "duplicate_entailment": 0.0241,
+      "duplicate_similarity": 0.6669,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 5,
+        "perplexity": 15.56,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "No, I don't think I've had any vascular studies done before.",
+      "speaker": "Patient",
+      "coverage": 0.3312,
+      "nearest_so_sentence": "Patient has not had any major infections or cardiovascular conditions.",
+      "statement": "The patient denies having undergone any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Doctor: Has the patient undergone any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, to assess for peripheral arterial disease?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.0218
+      },
+      "duplicate_entailment": 0.1015,
+      "duplicate_similarity": 0.559,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 2,
+        "perplexity": 16.18,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "No, I don't think I've had any vascular studies done before.",
+      "speaker": "Patient",
+      "coverage": 0.3312,
+      "nearest_so_sentence": "Patient has not had any major infections or cardiovascular conditions.",
+      "statement": "The patient denies having undergone any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Has the patient undergone any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, to assess for peripheral arterial disease?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.0218
+      },
+      "duplicate_entailment": 0.1015,
+      "duplicate_similarity": 0.559
+    },
+    {
+      "candidate": "No, I don't think I've had any vascular studies done before.",
+      "speaker": "Patient",
+      "coverage": 0.3312,
+      "nearest_so_sentence": "Patient has not had any major infections or cardiovascular conditions.",
+      "statement": "The patient denies having had any vascular studies, such as an ankle-brachial index or Doppler ultrasound, to assess blood flow to their feet.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Have you had any vascular studies, such as an ankle-brachial index or Doppler ultrasound, to assess blood flow to your feet?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9987,
+        "contradiction": 0.0295
+      },
+      "duplicate_entailment": 0.3491,
+      "duplicate_similarity": 0.5293
+    },
+    {
+      "candidate": "No, I don't think I've had any vascular studies done before.",
+      "speaker": "Patient",
+      "coverage": 0.3312,
+      "nearest_so_sentence": "Patient has not had any major infections or cardiovascular conditions.",
+      "statement": "The patient denies having had any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, to assess blood flow to their feet.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Have you had any vascular studies, such as an ankle-brachial index or Doppler ultrasound, to assess blood flow to your feet?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9978,
+        "contradiction": 0.0297
+      },
+      "duplicate_entailment": 0.3359,
+      "duplicate_similarity": 0.4809
+    },
+    {
+      "candidate": "No, I don't think I've had any vascular studies done before.",
+      "speaker": "Patient",
+      "coverage": 0.3312,
+      "nearest_so_sentence": "Patient has not had any major infections or cardiovascular conditions.",
+      "statement": "The patient denies having undergone any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Has the patient undergone any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, to assess for peripheral arterial disease?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.0218
+      },
+      "duplicate_entailment": 0.1015,
+      "duplicate_similarity": 0.559
+    },
+    {
+      "candidate": "I wasn't really aware that was something they would check for this kind of wound.",
+      "speaker": "Patient",
+      "coverage": 0.3534,
+      "nearest_so_sentence": "Patient is a 58-year-old female with a 1-year-old foot ulcer on the top of her right foot, near the fifth toe, approximately 1 inch in size, with yellow discharge and increased drainage.",
+      "statement": "The patient reports being unaware that vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, are typically performed to assess peripheral arterial disease in the context of wound care.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Doctor: Has the patient undergone any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, to assess peripheral arterial disease?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.026
+      },
+      "duplicate_entailment": 0.0029,
+      "duplicate_similarity": 0.3722,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 2,
+        "perplexity": 13.69,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I wasn't really aware that was something they would check for this kind of wound.",
+      "speaker": "Patient",
+      "coverage": 0.3534,
+      "nearest_so_sentence": "Patient is a 58-year-old female with a 1-year-old foot ulcer on the top of her right foot, near the fifth toe, approximately 1 inch in size, with yellow discharge and increased drainage.",
+      "statement": "The patient reports being unaware that vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, are typically performed to assess for peripheral arterial disease in the context of wound care.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Has the patient undergone any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, to assess peripheral arterial disease?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0331
+      },
+      "duplicate_entailment": 0.003,
+      "duplicate_similarity": 0.3688
+    },
+    {
+      "candidate": "I wasn't really aware that was something they would check for this kind of wound.",
+      "speaker": "Patient",
+      "coverage": 0.3534,
+      "nearest_so_sentence": "Patient is a 58-year-old female with a 1-year-old foot ulcer on the top of her right foot, near the fifth toe, approximately 1 inch in size, with yellow discharge and increased drainage.",
+      "statement": "The patient reports being unaware that vascular studies, such as an ankle-brachial index or Doppler ultrasound, are typically performed to assess blood flow to the feet in the context of wound care.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Has the patient undergone any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, to assess peripheral arterial disease?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9989,
+        "contradiction": 0.0262
+      },
+      "duplicate_entailment": 0.0028,
+      "duplicate_similarity": 0.3962
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 47,
+    "num_covered": 18,
+    "num_flagged": 25,
+    "num_not_checked_cap": 4,
+    "num_added": 6
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "stage": "stage2",
+        "section": "subjective",
+        "claim": "The patient has not had any prior episodes of foot ulcers.",
+        "source_sentence": "Patient has not had any prior episodes of foot ulcers or infections.",
+        "decision": "removed_contradicted",
+        "scores": {
+          "entailment": 0.0724,
+          "neutral": 0.0315,
+          "contradiction": 0.9733
+        },
+        "reason": "Contradicted by the conversation and no evidence-based correction was possible.",
+        "nearest_evidence": "Doctor: Has the patient had any prior episodes of foot ulcers or infections, and is she currently on any antibiotics or wound care regimen?"
+      },
+      {
+        "stage": "stage2",
+        "section": "subjective",
+        "claim": "The patient has not had any prior episodes of infections.",
+        "source_sentence": "Patient has not had any prior episodes of foot ulcers or infections.",
+        "decision": "removed_contradicted",
+        "scores": {
+          "entailment": 0.3677,
+          "neutral": 0.0169,
+          "contradiction": 0.9888
+        },
+        "reason": "Contradicted by the conversation and no evidence-based correction was possible.",
+        "nearest_evidence": "Doctor: Has the patient had any prior episodes of foot ulcers or infections, and is she currently on any antibiotics or wound care regimen?"
+      }
+    ],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": []
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 159.8,
+  "ap_unchanged": true,
+  "conversation": "Patient: I'm 58 years old and female. I'm here because I have this foot ulcer that just won't heal, and I'm worried about it. It's been going on for about a year now.\nDoctor: Could you please provide more details about your diabetes status, including whether you have been diagnosed with diabetes, the type of diabetes, and how long you have had it? Additionally, have you had any history of infections or cardiovascular conditions?\nPatient: I was diagnosed with type two diabetes a few years back, and my blood sugars have been running in the two hundreds, which my doctor doesn't like. My last A1C was about ten, so I know it's not well-controlled. I haven't had any major infections or heart issues that I'm aware of.\nDoctor: Could you describe the location, size, appearance, and any associated symptoms (e.g., pain, drainage, odor) of the foot ulcer? Have you noticed any changes in its appearance over the past year?\nPatient: It's on the top of my right foot, near the fifth toe, and it's about an inch in size. It's got some yellow stuff in it, and there's been more drainage lately. It doesn't hurt, but I don't feel much in my foot anyway. I've noticed it hasn't been getting better, and it seems to be getting more draining over time.\nDoctor: Have you had any recent fever, chills, or signs of systemic infection such as malaise or weight loss? Have you had any prior wound cultures or imaging of the foot ulcer?\nPatient: I haven't had any fever or chills, but I have been feeling more tired lately. As for imaging, I think they did an x-ray before I came in, and it showed no bone infection, if I remember right. I don't think they did a wound culture.\nDoctor: Could you please describe the depth of the ulcer and whether there is any necrotic tissue present? Additionally, have you noticed any changes in the color or texture of the surrounding skin?\nPatient: The ulcer isn't very deep as far as I can tell, and there's some yellow stuff in there, but I don't think there's any dead tissue exposed. The skin around it doesn't look red or swollen, and it doesn't feel different to the touch. It just looks kind of open and has that yellowish stuff in it.\nDoctor: Has the patient had any prior episodes of foot ulcers or infections, and is she currently on any antibiotics or wound care regimen?\nPatient: I don't think I've had any other foot ulcers before, just this one. I was on some antibiotics a while back, maybe five months ago, but I don't think I'm on anything now. I've been trying to take care of it, but nothing really seems to be working.\nDoctor: Has the patient undergone any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, to assess peripheral arterial disease?\nPatient: No, I don't think I've had any vascular studies done before. I wasn't really aware that was something they would check for this kind of wound. I just thought it was a regular ulcer that wasn't healing.\nDoctor: Could you please share more details about your current diabetes management, including any medications you are taking, your diet, and whether you have experienced any complications related to your diabetes?\nPatient: My diabetes is still not great, my blood sugars are still running around two hundred, and my last A1c was about ten. I'm on insulin and metformin, but it's not where my doctor wants it to be. I try to eat better, but I know I'm not doing enough. I also don't take good care of my feet like I should, which is probably making this ulcer worse.\nDoctor: Has the patient undergone any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, to assess for peripheral arterial disease?\nPatient: No, I don't think I've had any vascular studies done before. I wasn't really aware that was something they would check for this kind of wound. I just thought it was a regular ulcer that wasn't healing.\nDoctor: Has the patient had a wound culture performed on the ulcer to identify any potential bacterial infection?\nPatient: No, I don't think they've done a wound culture on it. I just know that I was on some antibiotics before, but I don't know if they checked for specific bacteria or anything like that. I guess that's something they might need to do now.\nDoctor: Have you had any vascular studies, such as an ankle-brachial index or Doppler ultrasound, to assess blood flow to your feet?\nPatient: No, I don't think I've had any vascular studies done before. I wasn't really aware that was something they would check for this kind of wound. I just thought it was a regular ulcer that wasn't healing.\nDoctor: Has the patient had a wound culture performed on the ulcer to check for infection?\nPatient: No, I don't think they've done a wound culture on it. I just know that I was on some antibiotics before, but I don't know if they checked for specific bacteria or anything like that. I guess that's something they might need to do now.\nDoctor: Have you had any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, to assess blood flow to your feet?\nPatient: No, I don't think I've had any vascular studies done before. I wasn't really aware that was something they would check for this kind of wound. I just thought it was a regular ulcer that wasn't healing.\nDoctor: Has the patient undergone any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, to assess for peripheral arterial disease?\nPatient: No, I don't think I've had any vascular studies done before. I wasn't really aware that was something they would check for this kind of wound. I just thought it was a regular ulcer that wasn't healing.\nDoctor: Have you had a wound culture performed on this ulcer to check for infection?\nPatient: No, I don't think they've done a wound culture on it. I just know that I was on some antibiotics before, but I don't know if they checked for specific bacteria or anything like that. I guess that's something they might need to do now.",
+  "reference_so": {
+    "subjective": "Basic information: 58-year-old female presenting with a non-healing foot ulcer for approximately one year.\n\nHistory of present illness: The patient has a non-healing foot ulcer located on the top of her right foot, near the fifth toe, measuring approximately one inch in size. The ulcer has yellow drainage and increased drainage over time. The patient reports no pain but has diminished sensation in her foot. She has a history of type 2 diabetes with poorly controlled blood sugar levels, with recent blood glucose readings in the 200s and an A1C of approximately 10. She has not reported any major infections or cardiovascular issues. The ulcer is not very deep, and there is no necrotic tissue exposed. The surrounding skin is not erythematous or swollen. The patient reports fatigue but no fever or chills. She confirms no prior foot ulcers and no current antibiotic use. She states no erythema, warmth, or systemic signs of infection. She confirms no necrotic tissue exposed and no prior wound culture performed. Patient acknowledges lack of awareness regarding vascular studies for foot ulcers and poor diabetes management with suboptimal glycemic control (blood glucose in 200s, A1C ~10) and inadequate foot care.\n\nPast history: Type 2 diabetes mellitus, poorly controlled; prior antibiotic use five months ago, unspecified antibiotic; no vascular studies performed for peripheral arterial disease.",
+    "objective": "Physical examination: The patient has a non-healing ulcer on the top of the right foot near the fifth toe, approximately 1 inch in size. The ulcer has yellow drainage and increased drainage over time. The patient reports decreased sensation in the foot. No pain is reported at the ulcer site. No erythema, warmth, or systemic signs of infection are noted. The ulcer is not very deep, and there is no exposed necrotic tissue. The surrounding skin is not erythematous or swollen. No evidence of peripheral arterial disease on physical examination.\n\nInvestigations: Auxiliary examination includes an X-ray that showed no evidence of osteomyelitis. Recent blood glucose levels are in the 200s, and A1C is approximately 10, indicating poorly controlled diabetes. No vascular studies performed to assess peripheral arterial disease. No wound culture has been performed."
+  }
+}

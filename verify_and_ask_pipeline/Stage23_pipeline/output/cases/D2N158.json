@@ -1,0 +1,470 @@
+{
+  "case_id": "D2N158",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* The patient is a 31-year-old female who presents with a week-long history of abdominal pain, which she attributes to her increased coffee consumption and spicy food intake.\n* The pain is located in both sides of her upper abdomen and has been gradually worsening over the past week.\n* She has experienced nausea and vomiting, but no fever.\n* The pain worsens with exercise, such as jogging.\n* She has not had any prior episodes of abdominal pain like this before.\n* She has been drinking a lot of coffee, especially nitro cold brew, and eating spicy food daily.\n* She has not noticed any changes in her bowel habits or jaundice.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* The patient is a 31-year-old female who presents with a week-long history of abdominal pain, which she attributes to her increased coffee consumption and spicy food intake.\n* The pain is located in both sides of her upper abdomen and has been gradually worsening over the past week.\n* She has experienced nausea and vomiting, but no fever.\n* The pain worsens with exercise, such as jogging.\n* She has not had any prior episodes of abdominal pain like this before.\n* She has been drinking a lot of coffee. She has been drinking nitro cold brew. She has been eating spicy food.\n* She has not noticed any changes in her bowel habits or jaundice.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* The patient expresses hope that the abdominal pain is not something serious.\n* The patient reports that it may take more time for their abdominal pain to settle down after reducing their coffee and spicy food intake.\n* The patient states that they were hoping to see the doctor first before taking any over-the-counter medications.\n* The patient is a 31-year-old female who presents with a week-long history of abdominal pain, which she attributes to her increased coffee consumption and spicy food intake.\n* The pain is located in both sides of her upper abdomen and has been gradually worsening over the past week.\n* She has experienced nausea and vomiting, but no fever.\n* The pain worsens with exercise, such as jogging.\n* She has not had any prior episodes of abdominal pain like this before.\n* She has been drinking a lot of coffee. She has been drinking nitro cold brew. She has been eating spicy food.\n* She has not noticed any changes in her bowel habits or jaundice.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient presents with a week-long history of abdominal pain, which is likely related to her increased coffee consumption and spicy food intake.\n* The pain is located in both sides of her upper abdomen and has been gradually worsening over the past week.\n* The patient has experienced nausea and vomiting, but no fever.",
+    "plan": "* The doctor will likely recommend reducing the patient's coffee and spicy food intake to see if the symptoms improve.\n* The patient will be advised to monitor her symptoms and return for follow-up if the pain persists or worsens.\n* The doctor may consider ordering abdominal imaging or blood tests in the future if the patient's symptoms do not improve with dietary changes."
+  },
+  "stage2_audit": [
+    {
+      "claim": "The patient is a 31-year-old female who presents with a week-long history of abdominal pain, which she attributes to her increased coffee consumption and spicy food intake.",
+      "scores": {
+        "entailment": 0.9991,
+        "neutral": 0.0005,
+        "contradiction": 0.9676
+      },
+      "support_evidence": "Patient: I'm 31 years old and female. I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately.",
+      "contradiction_evidence": "Patient: No, I haven't had any abdominal imaging or blood tests in the past month that could help evaluate the cause of my pain. I'm here today because I've been having this pain for a week and wanted to see what you think might be going on.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient is a 31-year-old female who presents with a week-long history of abdominal pain, which she attributes to her increased coffee consumption and spicy food intake.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 31-year-old female who presents with a week-long history of abdominal pain, which she attributes to her increased coffee consumption and spicy food intake.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The pain is located in both sides of her upper abdomen and has been gradually worsening over the past week.",
+      "scores": {
+        "entailment": 0.9985,
+        "neutral": 0.0005,
+        "contradiction": 0.0875
+      },
+      "support_evidence": "Patient: The pain is in both sides of my upper abdomen, and it's been gradually getting worse over the past week. I've had some nausea and vomited a couple of times, but I haven't had a fever. I also noticed the pain gets worse when I work out, like when I try to jog.",
+      "contradiction_evidence": "Patient: No, I haven't had any abdominal imaging or blood tests in the past month that could help evaluate the cause of my pain. I'm here today because I've been having this pain for a week and wanted to see what you think might be going on.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain is located in both sides of her upper abdomen and has been gradually worsening over the past week.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The pain is located in both sides of her upper abdomen and has been gradually worsening over the past week.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has experienced nausea and vomiting, but no fever.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0001,
+        "contradiction": 0.0057
+      },
+      "support_evidence": "Doctor: Could you please provide your age, gender, and describe the nature, location, and severity of your abdominal pain? Also, have you noticed any other symptoms such as nausea, vomiting, changes in bowel habits, or fever?",
+      "contradiction_evidence": "Patient: No, I haven't had any changes in my bowel habits like diarrhea or constipation, and I haven't noticed any blood in my stool either. The main issues have been the abdominal pain, some nausea, and vomiting.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has experienced nausea and vomiting, but no fever.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "She has experienced nausea and vomiting, but no fever.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The pain worsens with exercise, such as jogging.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0002,
+        "contradiction": 0.0004
+      },
+      "support_evidence": "Doctor: Could you please provide your age, gender, and describe the nature, location, and severity of your abdominal pain? Also, have you noticed any other symptoms such as nausea, vomiting, changes in bowel habits, or fever?",
+      "contradiction_evidence": "Doctor: Have you had any recent blood tests or abdominal imaging, such as an ultrasound or CT scan, that could help evaluate the cause of your pain?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain worsens with exercise, such as jogging.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "The pain worsens with exercise, such as jogging.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has not had any prior episodes of abdominal pain like this before.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0003,
+        "contradiction": 0.0006
+      },
+      "support_evidence": "Patient: I don't recall having any prior episodes of abdominal pain like this before. This seems to be the first time I've experienced pain like this, and I think it might be related to my coffee intake and maybe even the spicy food I've been eating lately.",
+      "contradiction_evidence": "Patient: I don't recall having any prior episodes of abdominal pain like this before. This seems to be the first time I've experienced pain like this, and I think it might be related to my coffee intake and maybe even the spicy food I've been eating lately.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has not had any prior episodes of abdominal pain like this before.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "She has not had any prior episodes of abdominal pain like this before.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has been drinking a lot of coffee.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0003,
+        "contradiction": 0.0069
+      },
+      "support_evidence": "Patient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice.",
+      "contradiction_evidence": "Patient: No, I haven't had any abdominal imaging or blood tests in the past month that could help evaluate the cause of my pain. I'm here today because I've been having this pain for a week and wanted to see what you think might be going on.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has been drinking a lot of coffee.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "She has been drinking a lot of coffee, especially nitro cold brew, and eating spicy food daily."
+    },
+    {
+      "claim": "She has been drinking nitro cold brew.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0003,
+        "contradiction": 0.002
+      },
+      "support_evidence": "Patient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice.",
+      "contradiction_evidence": "Patient: No, I haven't had any abdominal imaging or blood tests in the past month that could help evaluate the cause of my pain. I'm here today because I've been having this pain for a week and wanted to see what you think might be going on.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has been drinking nitro cold brew.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "She has been drinking a lot of coffee, especially nitro cold brew, and eating spicy food daily."
+    },
+    {
+      "claim": "She has been eating spicy food.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0002,
+        "contradiction": 0.0017
+      },
+      "support_evidence": "Patient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice.",
+      "contradiction_evidence": "Doctor: Have you experienced any relief from the abdominal pain after reducing your coffee and spicy food intake this week?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has been eating spicy food.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "She has been drinking a lot of coffee, especially nitro cold brew, and eating spicy food daily."
+    },
+    {
+      "claim": "She eats spicy food daily.",
+      "scores": {
+        "entailment": 0.0064,
+        "neutral": 0.9874,
+        "contradiction": 0.0339
+      },
+      "support_evidence": "Patient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice.",
+      "contradiction_evidence": "Doctor: Could you please tell me more about your dietary habits, including how much coffee you consume daily and how often you eat spicy food? Also, have you noticed any changes in your bowel habits or any jaundice?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "removed_unsupported",
+      "keep": false,
+      "output": "",
+      "reason": "No supporting evidence in the conversation (not asserted to be false).",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "She has been drinking a lot of coffee, especially nitro cold brew, and eating spicy food daily."
+    },
+    {
+      "claim": "She has not noticed any changes in her bowel habits or jaundice.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0005,
+        "contradiction": 0.0012
+      },
+      "support_evidence": "Doctor: Could you please tell me more about your dietary habits, including how much coffee you consume daily and how often you eat spicy food? Also, have you noticed any changes in your bowel habits or any jaundice?",
+      "contradiction_evidence": "Patient: No, I haven't had any changes in my bowel habits like diarrhea or constipation, and I haven't noticed any blood in my stool either. The main issues have been the abdominal pain, some nausea, and vomiting.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has not noticed any changes in her bowel habits or jaundice.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 6,
+      "sentence": "She has not noticed any changes in her bowel habits or jaundice.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 9,
+      "removed_unsupported": 1,
+      "exempt": 1
+    },
+    "num_claims": 10,
+    "num_kept": 9,
+    "claim_retention_rate": 0.9
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient reports that it may take more time for their abdominal pain to settle down after reducing their coffee and spicy food intake.",
+      "evidence": "Patient: Not really, the pain is still there, though it hasn't gotten worse. I've been trying to cut back, but I think it's going to take a little more time for it to settle down. I'm just hoping this isn't something more serious.",
+      "section": "subjective",
+      "candidate": "I've been trying to cut back, but I think it's going to take a little more time for it to settle down."
+    },
+    {
+      "statement": "The patient states that they were hoping to see the doctor first before taking any over-the-counter medications.",
+      "evidence": "Patient: No, I haven't tried any over-the-counter medications for the pain yet. I was hoping to see you first before taking anything else, just in case there's something more serious going on. I don't want to mask any symptoms that might be important.",
+      "section": "subjective",
+      "candidate": "I was hoping to see you first before taking anything else, just in case there's something more serious going on."
+    },
+    {
+      "statement": "The patient expresses hope that the abdominal pain is not something serious.",
+      "evidence": "Patient: Not really, the pain is still there, though it hasn't gotten worse. I've been trying to cut back, but I think it's going to take a little more time for it to settle down. I'm just hoping this isn't something more serious.",
+      "section": "subjective",
+      "candidate": "I'm just hoping this isn't something more serious."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I'm just here today to talk about it and see what you think might be going on.",
+      "speaker": "Patient",
+      "coverage": 0.155,
+      "nearest_so_sentence": "The pain is located in both sides of her upper abdomen and has been gradually worsening over the past week.",
+      "statement": "The patient reports being present for a consultation to discuss their abdominal pain and seek the doctor's opinion on its cause.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I haven't had any abdominal imaging or blood tests in the past week to evaluate the cause of my pain. I'm just here today to talk about it and see what you think might be going on.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0003
+      },
+      "duplicate_entailment": 0.9965,
+      "duplicate_similarity": 0.5514
+    },
+    {
+      "candidate": "I'm 31 years old and female.",
+      "speaker": "Patient",
+      "coverage": 0.1775,
+      "nearest_so_sentence": "The patient is a 31-year-old female who presents with a week-long history of abdominal pain, which she attributes to her increased coffee consumption and spicy food intake.",
+      "statement": "The patient is 31 years old and female.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 31 years old and female. I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0004
+      },
+      "duplicate_entailment": 0.9996,
+      "duplicate_similarity": 0.4976
+    },
+    {
+      "candidate": "I've been trying to cut back, but I think it's going to take a little more time for it to settle down.",
+      "speaker": "Patient",
+      "coverage": 0.1977,
+      "nearest_so_sentence": "The pain worsens with exercise, such as jogging.",
+      "statement": "The patient reports that it may take more time for their abdominal pain to settle down after reducing their coffee and spicy food intake.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: Not really, the pain is still there, though it hasn't gotten worse. I've been trying to cut back, but I think it's going to take a little more time for it to settle down. I'm just hoping this isn't something more serious.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9988,
+        "contradiction": 0.0015
+      },
+      "duplicate_entailment": 0.083,
+      "duplicate_similarity": 0.7979,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 12.48,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I've been trying to cut back, but I think it's going to take a little more time for it to settle down.",
+      "speaker": "Patient",
+      "coverage": 0.1977,
+      "nearest_so_sentence": "The pain worsens with exercise, such as jogging.",
+      "statement": "The patient reports that it may take more time for their abdominal pain to settle down after reducing their coffee and spicy food intake.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: Not really, the pain is still there, though it hasn't gotten worse. I've been trying to cut back, but I think it's going to take a little more time for it to settle down. I'm just hoping this isn't something more serious.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9988,
+        "contradiction": 0.0015
+      },
+      "duplicate_entailment": 0.083,
+      "duplicate_similarity": 0.7979
+    },
+    {
+      "candidate": "I was hoping to see you first before taking anything else, just in case there's something more serious going on.",
+      "speaker": "Patient",
+      "coverage": 0.2046,
+      "nearest_so_sentence": "She has experienced nausea and vomiting, but no fever.",
+      "statement": "The patient states that they were hoping to see the doctor first before taking any over-the-counter medications.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: No, I haven't tried any over-the-counter medications for the pain yet. I was hoping to see you first before taking anything else, just in case there's something more serious going on. I don't want to mask any symptoms that might be important.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0049
+      },
+      "first_rewrite_rejected": "The patient reports that they were hesitant to take over-the-counter medications before seeking medical attention.",
+      "duplicate_entailment": 0.1413,
+      "duplicate_similarity": 0.3047,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 1,
+        "perplexity": 11.75,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "It's just been happening more often lately, but nothing out of the ordinary.",
+      "speaker": "Patient",
+      "coverage": 0.2358,
+      "nearest_so_sentence": "She has not had any prior episodes of abdominal pain like this before.",
+      "statement": "The patient reports that appetite changes and episodes of vomiting have been occurring more frequently lately, but are not out of the ordinary.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, my appetite hasn't changed much, and the vomiting hasn't been any different from what I normally experience. It's just been happening more often lately, but nothing out of the ordinary. I'm just worried because the pain is still there and hasn't gone away.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9987,
+        "contradiction": 0.1803
+      },
+      "duplicate_entailment": 0.8536,
+      "duplicate_similarity": 0.5462
+    },
+    {
+      "candidate": "I'm just hoping this isn't something more serious.",
+      "speaker": "Patient",
+      "coverage": 0.2799,
+      "nearest_so_sentence": "She has experienced nausea and vomiting, but no fever.",
+      "statement": "The patient expresses hope that the abdominal pain is not something serious.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: Not really, the pain is still there, though it hasn't gotten worse. I've been trying to cut back, but I think it's going to take a little more time for it to settle down. I'm just hoping this isn't something more serious.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0071
+      },
+      "duplicate_entailment": 0.0198,
+      "duplicate_similarity": 0.5648,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 11.62,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I'm just hoping this isn't something more serious.",
+      "speaker": "Patient",
+      "coverage": 0.2799,
+      "nearest_so_sentence": "She has experienced nausea and vomiting, but no fever.",
+      "statement": "The patient expresses concern that the abdominal pain may be something more serious.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: Not really, the pain is still there, though it hasn't gotten worse. I've been trying to cut back, but I think it's going to take a little more time for it to settle down. I'm just hoping this isn't something more serious.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.1007
+      },
+      "duplicate_entailment": 0.0439,
+      "duplicate_similarity": 0.5876
+    },
+    {
+      "candidate": "No, I haven't tried any antacids or over-the-counter medications for heartburn or indigestion yet because I didn't think about it until today.",
+      "speaker": "Patient",
+      "coverage": 0.2966,
+      "nearest_so_sentence": "The patient is a 31-year-old female who presents with a week-long history of abdominal pain, which she attributes to her increased coffee consumption and spicy food intake.",
+      "statement": "The patient has not tried any antacids or over-the-counter medications for heartburn or indigestion prior to this visit.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I haven't tried any antacids or over-the-counter medications for heartburn or indigestion yet because I didn't think about it until today. I just kind of tried to manage it by cutting back on coffee and spicy food this week.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0014
+      },
+      "duplicate_entailment": 0.0292,
+      "duplicate_similarity": 0.4012
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 37,
+    "num_covered": 28,
+    "num_flagged": 9,
+    "num_not_checked_cap": 0,
+    "num_added": 3
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [
+      {
+        "stage": "stage2",
+        "section": "subjective",
+        "claim": "She eats spicy food daily.",
+        "source_sentence": "She has been drinking a lot of coffee, especially nitro cold brew, and eating spicy food daily.",
+        "decision": "removed_unsupported",
+        "scores": {
+          "entailment": 0.0064,
+          "neutral": 0.9874,
+          "contradiction": 0.0339
+        },
+        "reason": "No supporting evidence in the conversation (not asserted to be false).",
+        "nearest_evidence": "Patient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice."
+      }
+    ],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": []
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 85.0,
+  "ap_unchanged": true,
+  "conversation": "Patient: I'm 31 years old and female. I'm here because I've been having abdominal pain for the past week, and I think it might be related to drinking too much coffee lately.\nDoctor: Could you please provide your age, gender, and describe the nature, location, and severity of your abdominal pain? Also, have you noticed any other symptoms such as nausea, vomiting, changes in bowel habits, or fever?\nPatient: The pain is in both sides of my upper abdomen, and it's been gradually getting worse over the past week. I've had some nausea and vomited a couple of times, but I haven't had a fever. I also noticed the pain gets worse when I work out, like when I try to jog.\nDoctor: Have you had any prior episodes of abdominal pain, and if so, what was the cause or diagnosis?\nPatient: I don't recall having any prior episodes of abdominal pain like this before. This seems to be the first time I've experienced pain like this, and I think it might be related to my coffee intake and maybe even the spicy food I've been eating lately.\nDoctor: Could you please tell me more about your dietary habits, including how much coffee you consume daily and how often you eat spicy food? Also, have you noticed any changes in your bowel habits or any jaundice?\nPatient: I've been drinking a lot of coffee, especially the nitro cold brew from Starbucks, and I've been having it pretty much every day, sometimes even two or three cups. I also started eating more spicy food lately, which I think might be contributing to the pain. I haven't noticed any changes in my bowel habits or any jaundice.\nDoctor: Have you undergone any abdominal imaging or blood tests in the past week to evaluate the cause of your abdominal pain?\nPatient: No, I haven't had any abdominal imaging or blood tests in the past week to evaluate the cause of my pain. I'm just here today to talk about it and see what you think might be going on.\nDoctor: Have you experienced any changes in your bowel habits, such as diarrhea, constipation, or blood in the stool, during the course of your symptoms?\nPatient: No, I haven't had any changes in my bowel habits like diarrhea or constipation, and I haven't noticed any blood in my stool either. The main issues have been the abdominal pain, some nausea, and vomiting.\nDoctor: Have you experienced any relief from the abdominal pain with antacids or over-the-counter medications for heartburn or indigestion?\nPatient: No, I haven't tried any antacids or over-the-counter medications for heartburn or indigestion yet because I didn't think about it until today. I just kind of tried to manage it by cutting back on coffee and spicy food this week.\nDoctor: Have you undergone any abdominal imaging or blood tests in the past month that could help evaluate the cause of your abdominal pain?\nPatient: No, I haven't had any abdominal imaging or blood tests in the past month that could help evaluate the cause of my pain. I'm here today because I've been having this pain for a week and wanted to see what you think might be going on.\nDoctor: Have you experienced any relief from the abdominal pain after reducing your coffee and spicy food intake this week?\nPatient: Not really, the pain is still there, though it hasn't gotten worse. I've been trying to cut back, but I think it's going to take a little more time for it to settle down. I'm just hoping this isn't something more serious.\nDoctor: Have you experienced any relief from the abdominal pain after reducing your coffee and spicy food intake?\nPatient: Not really, the pain is still there, though it hasn't gotten worse. I've been trying to cut back, but I think it's going to take a little more time for it to settle down. I'm just hoping this isn't something more serious.\nDoctor: Have you had any recent blood tests or abdominal imaging, such as an ultrasound or CT scan, that could help evaluate the cause of your pain?\nPatient: No, I haven't had any recent blood tests or abdominal imaging like an ultrasound or CT scan. I'm here today because I've been having this pain for a week and wanted to see what you think might be going on.\nDoctor: Have you noticed any radiation of the pain to your back, shoulders, or other areas? Additionally, have you experienced any weight loss, changes in bowel habits, or jaundice in the past few weeks?\nPatient: No, the pain hasn't radiated to my back or shoulders or anywhere else. I haven't had any weight loss or changes in my bowel habits, and I don't have jaundice. I just have this ongoing upper abdominal pain that's been getting gradually worse over the week.\nDoctor: Have you noticed any changes in your appetite or experienced any episodes of vomiting that are different from your usual pattern?\nPatient: No, my appetite hasn't changed much, and the vomiting hasn't been any different from what I normally experience. It's just been happening more often lately, but nothing out of the ordinary. I'm just worried because the pain is still there and hasn't gone away.\nDoctor: Have you had any recent blood tests or abdominal imaging, such as an ultrasound or CT scan?\nPatient: No, I haven't had any recent blood tests or abdominal imaging like an ultrasound or CT scan. I'm here today because I've been having this pain for a week and wanted to see what you think might be going on.\nDoctor: Have you experienced any relief from over-the-counter medications such as antacids or anti-inflammatory drugs?\nPatient: No, I haven't tried any over-the-counter medications for the pain yet. I was hoping to see you first before taking anything else, just in case there's something more serious going on. I don't want to mask any symptoms that might be important.",
+  "reference_so": {
+    "subjective": "Basic information: 31-year-old female presenting with abdominal pain for the past week\n\nHistory of present illness: Pain in both sides of upper abdomen, gradually worsening over the past week, associated with nausea and vomiting, no fever, exacerbated by physical activity such as jogging. Patient attributes symptoms to increased coffee and spicy food consumption. Patient consumes nitro cold brew from Starbucks, 2-3 cups daily, and has increased spicy food intake. No changes in bowel habits, no jaundice, no blood in stool. Patient has not experienced significant relief from reducing coffee and spicy food intake. The pain has not radiated to the back or shoulders, and there has been no weight loss. No episodes of severe pain radiating to the back or right shoulder. No changes in bowel movements, pale stools, or dark urine. No significant changes in appetite or vomiting patterns beyond increased frequency.\n\nPast history: No prior history of gallstones, pancreatitis, or peptic ulcer disease. No family history of gastrointestinal conditions reported. No known allergies. No prior use of antacids or proton pump inhibitors reported. No prior use of over-the-counter medications.",
+    "objective": "Physical examination: Vital signs: temperature 36.8°C, heart rate 78 bpm, blood pressure 120/80 mmHg, respiratory rate 16 breaths/min, oxygen saturation 98% on room air. Abdominal examination: tenderness in the upper abdomen bilaterally, no guarding or rebound tenderness, no palpable masses, no hepatosplenomegaly. Bowel sounds normal. No jaundice or peripheral edema.\n\nInvestigations: No recent blood tests or abdominal imaging (e.g., ultrasound or CT scan) have been performed. No evidence of jaundice, weight loss, or changes in bowel habits. No history of gallstones, pancreatitis, or peptic ulcer disease. No known allergies or prior use of antacids or proton pump inhibitors."
+  }
+}

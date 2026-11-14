@@ -1,0 +1,358 @@
+{
+  "case_id": "D2N187",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* The patient reports sudden visual distortions and blurring of vision, with straight lines appearing crooked and difficulty adjusting to dim lights, such as in restaurants.\n* The patient has been experiencing these symptoms for a few months, with the frequency and severity increasing over time.\n* The patient reports no eye pain or headaches and no changes in color perception.\n* The patient has trouble seeing straight lines clearly, especially in dim lighting, which is frustrating.\n* The patient smokes a pack of cigarettes a day and has trouble with blood pressure.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* The patient reports sudden visual distortions and blurring of vision, with straight lines appearing crooked and difficulty adjusting to dim lights, such as in restaurants.\n* The patient has been experiencing these symptoms for a few months, with the frequency and severity increasing over time.\n* The patient reports no eye pain. The patient reports no headaches. The patient reports that their color perception is not affected, but they do experience vision changes in dim lighting, such as when reading or looking at straight lines.\n* The patient has trouble seeing straight lines clearly, especially in dim lighting, which is frustrating.\n* The patient smokes a pack of cigarettes a day and has trouble with blood pressure.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* The patient reports sudden visual distortions and blurring of vision, with straight lines appearing crooked and difficulty adjusting to dim lights, such as in restaurants.\n* The patient has been experiencing these symptoms for a few months, with the frequency and severity increasing over time.\n* The patient reports no eye pain. The patient reports no headaches. The patient reports that their color perception is not affected, but they do experience vision changes in dim lighting, such as when reading or looking at straight lines.\n* The patient has trouble seeing straight lines clearly, especially in dim lighting, which is frustrating.\n* The patient reports not having their age with them and does not have the script.\n* The patient smokes a pack of cigarettes a day and has trouble with blood pressure.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient is experiencing visual distortions and blurring, with difficulty adjusting to dim lights, which is a concerning symptom.",
+    "plan": "* The patient will be referred for further evaluation to determine the cause of the visual distortions and blurring.\n* The patient will be advised to stop smoking and to manage their blood pressure.\n* The patient will be scheduled for a follow-up appointment to reassess their symptoms and provide further guidance."
+  },
+  "stage2_audit": [
+    {
+      "claim": "The patient reports sudden visual distortions and blurring of vision, with straight lines appearing crooked and difficulty adjusting to dim lights, such as in restaurants.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.0028
+      },
+      "support_evidence": "Patient: I don't know my age, and I don't have that script with me. I'm here because I've been having sudden visual distortions and blurring, straight lines look crooked, and I have trouble adjusting to dim lights, like in restaurants.",
+      "contradiction_evidence": "Patient: I don't know my age, and I don't have that script with me. I'm here because I've been having sudden visual distortions and blurring, straight lines look crooked, and I have trouble adjusting to dim lights, like in restaurants. I haven't had any eye pain or headaches, and it's happening in both eyes.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient reports sudden visual distortions and blurring of vision, with straight lines appearing crooked and difficulty adjusting to dim lights, such as in restaurants.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient reports sudden visual distortions and blurring of vision, with straight lines appearing crooked and difficulty adjusting to dim lights, such as in restaurants.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient has been experiencing symptoms for a few months.",
+      "scores": {
+        "entailment": 0.8487,
+        "neutral": 0.1463,
+        "contradiction": 0.4849
+      },
+      "support_evidence": "Patient: The visual distortions and blurring started a while back, maybe a few months ago, and they’ve been getting worse. They’re pretty constant, but sometimes they feel like they get a little better, and other times they’re really bad, especially when I’m trying to read or look at straight lines. The crooked lines and trouble with dim lights have been happening more often lately.",
+      "contradiction_evidence": "Patient: I don't have any eye pain or headaches, and I haven't noticed any other changes in my vision besides the blurring, distortions, and trouble with straight lines and dim lighting. It's been happening in both eyes, and it's been bothering me especially when I'm reading or in places like restaurants.",
+      "corrected_text": null,
+      "flagged": true,
+      "decision": "uncertain",
+      "keep": true,
+      "output": "The patient has been experiencing symptoms for a few months.",
+      "reason": "Partially supported; kept and flagged for review (neutral is not proof of falsehood).",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The patient has been experiencing these symptoms for a few months, with the frequency and severity increasing over time."
+    },
+    {
+      "claim": "The frequency of the symptoms has been increasing over time.",
+      "scores": {
+        "entailment": 0.9967,
+        "neutral": 0.003,
+        "contradiction": 0.0138
+      },
+      "support_evidence": "Doctor: Could you describe when the visual distortions and blurring started, how long they have been present, and whether they are constant or intermittent?",
+      "contradiction_evidence": "Patient: I don't know my age, and I don't have that script with me. I'm here because I've been having sudden visual distortions and blurring, straight lines look crooked, and I have trouble adjusting to dim lights, like in restaurants. I don't know if I have diabetes or any autoimmune conditions, but I do know I've been having trouble with my blood pressure and I still smoke a pack of cigarettes a day.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The frequency of the symptoms has been increasing over time.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The patient has been experiencing these symptoms for a few months, with the frequency and severity increasing over time."
+    },
+    {
+      "claim": "The severity of the symptoms has been increasing over time.",
+      "scores": {
+        "entailment": 0.9968,
+        "neutral": 0.0028,
+        "contradiction": 0.8401
+      },
+      "support_evidence": "Doctor: Could you describe when the visual distortions and blurring started, how long they have been present, and whether they are constant or intermittent?",
+      "contradiction_evidence": "Patient: I don't know my age, and I don't have that script with me. I'm here because I've been having sudden visual distortions and blurring, straight lines look crooked, and I have trouble adjusting to dim lights, like in restaurants. I don't know if I have diabetes or any autoimmune conditions, but I do know I've been having trouble with my blood pressure and I still smoke a pack of cigarettes a day.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The severity of the symptoms has been increasing over time.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The patient has been experiencing these symptoms for a few months, with the frequency and severity increasing over time."
+    },
+    {
+      "claim": "The patient reports no eye pain.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.0012
+      },
+      "support_evidence": "Patient: I don't have any eye pain or headaches, and I haven't noticed any other changes in my vision besides the blurring, distortions, and trouble with straight lines and dim lighting. It's been happening in both eyes, and it's been bothering me especially when I'm reading or in places like restaurants.",
+      "contradiction_evidence": "Patient: I don't have any floaters or flashes of light, and my color perception doesn't seem off. The vision changes happen more when I'm in dim lighting, like in restaurants, and they bother me the most when I'm reading or looking at straight lines.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient reports no eye pain.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "The patient reports no eye pain or headaches and no changes in color perception."
+    },
+    {
+      "claim": "The patient reports no headaches.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.0009
+      },
+      "support_evidence": "Patient: I don't have any eye pain or headaches, and I haven't noticed any other changes in my vision besides the blurring, distortions, and trouble with straight lines and dim lighting. It's been happening in both eyes, and it's been bothering me especially when I'm reading or in places like restaurants.",
+      "contradiction_evidence": "Patient: I don't know my age, and I don't have that script with me. I'm here because I've been having sudden visual distortions and blurring, straight lines look crooked, and I have trouble adjusting to dim lights, like in restaurants. I haven't had any eye pain or headaches, and it's happening in both eyes.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient reports no headaches.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "The patient reports no eye pain or headaches and no changes in color perception."
+    },
+    {
+      "claim": "The patient reports no changes in color perception.",
+      "scores": {
+        "entailment": 0.788,
+        "neutral": 0.081,
+        "contradiction": 0.9959
+      },
+      "support_evidence": "Patient: I don't have any floaters or flashes of light, and my color perception doesn't seem off. The vision changes happen more when I'm in dim lighting, like in restaurants, and they bother me the most when I'm reading or looking at straight lines.",
+      "contradiction_evidence": "Patient: I don't have any floaters or flashes of light, and my color perception doesn't seem off. The vision changes happen more when I'm in dim lighting, like in restaurants, and they bother me the most when I'm reading or looking at straight lines.",
+      "corrected_text": "The patient reports that their color perception is not affected, but they do experience vision changes in dim lighting, such as when reading or looking at straight lines.",
+      "flagged": false,
+      "decision": "corrected",
+      "keep": true,
+      "output": "The patient reports that their color perception is not affected, but they do experience vision changes in dim lighting, such as when reading or looking at straight lines.",
+      "reason": "Contradicted by the conversation; rewritten from the cited evidence.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "The patient reports no eye pain or headaches and no changes in color perception."
+    },
+    {
+      "claim": "The patient has trouble seeing straight lines clearly, especially in dim lighting, which is frustrating.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0003,
+        "contradiction": 0.0024
+      },
+      "support_evidence": "Patient: The distortions and blurring haven't gotten worse exactly, but they're always there, especially when I'm reading or in dim lighting. It's been making it harder to see straight lines clearly, like door frames or things on the page, and it's been pretty frustrating.",
+      "contradiction_evidence": "Patient: The visual distortions and blurring started a while back, maybe a few months ago, and they’ve been getting worse. They’re pretty constant, but sometimes they feel like they get a little better, and other times they’re really bad, especially when I’m trying to read or look at straight lines. The crooked lines and trouble with dim lights have been happening more often lately.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has trouble seeing straight lines clearly, especially in dim lighting, which is frustrating.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "The patient has trouble seeing straight lines clearly, especially in dim lighting, which is frustrating.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient smokes a pack of cigarettes a day and has trouble with blood pressure.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0003,
+        "contradiction": 0.0141
+      },
+      "support_evidence": "Patient: I don't know my age, and I don't have that script with me. I'm here because I've been having sudden visual distortions and blurring, straight lines look crooked, and I have trouble adjusting to dim lights, like in restaurants. I don't know if I have diabetes or any autoimmune conditions, but I do know I've been having trouble with my blood pressure and I still smoke a pack of cigarettes a day.",
+      "contradiction_evidence": "Patient: I don't know my age, and I don't have that script with me. I'm here because I've been having sudden visual distortions and blurring, straight lines look crooked, and I have trouble adjusting to dim lights, like in restaurants. I haven't had any eye pain or headaches, and it's happening in both eyes.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient smokes a pack of cigarettes a day and has trouble with blood pressure.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "The patient smokes a pack of cigarettes a day and has trouble with blood pressure.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 7,
+      "uncertain": 1,
+      "corrected": 1,
+      "exempt": 1
+    },
+    "num_claims": 9,
+    "num_kept": 9,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient reports not having their age with them and does not have the script.",
+      "evidence": "Patient: I don't know my age, and I don't have that script with me. I'm here because I've been having sudden visual distortions and blurring, straight lines look crooked, and I have trouble adjusting to dim lights, like in restaurants. I don't know if I have diabetes or any autoimmune conditions, but I do know I've been having trouble with my blood pressure and I still smoke a pack of cigarettes a day.",
+      "section": "subjective",
+      "candidate": "I'm sorry, but I don't have my age with me, and I don't think I have that script."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I'm sorry, but I don't have my age with me, and I don't think I have that script.",
+      "speaker": "Patient",
+      "coverage": 0.0191,
+      "nearest_so_sentence": "The patient reports no headaches.",
+      "statement": "The patient reports not having their age with them and does not have the script.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't know my age, and I don't have that script with me. I'm here because I've been having sudden visual distortions and blurring, straight lines look crooked, and I have trouble adjusting to dim lights, like in restaurants. I don't know if I have diabetes or any autoimmune conditions, but I do know I've been having trouble with my blood pressure and I still smoke a pack of cigarettes a day.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0028
+      },
+      "duplicate_entailment": 0.0071,
+      "duplicate_similarity": 0.4861,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 4,
+        "perplexity": 19.44,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don't have my age with me, and I don't think I have that script.",
+      "speaker": "Patient",
+      "coverage": 0.0751,
+      "nearest_so_sentence": "The patient reports no headaches.",
+      "statement": "The patient reports not having their age with them and does not believe they have a script with their age.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I don't have my age with me, and I don't think I have that script. I'm here because I've been having some sudden visual distortions and blurring of my vision. Straight lines look crooked, and I have trouble adjusting to dim lights, like in restaurants. I don't know if there's a family history of similar issues, and I don't think I've had any prior eye conditions or treatments.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9988,
+        "contradiction": 0.0042
+      },
+      "duplicate_entailment": 0.1175,
+      "duplicate_similarity": 0.4819
+    },
+    {
+      "candidate": "I don't have my age with me, and I don't think I have that script.",
+      "speaker": "Patient",
+      "coverage": 0.0751,
+      "nearest_so_sentence": "The patient reports no headaches.",
+      "statement": "The patient reports not having their age with them and does not recall having a script with their age.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I don't know my age, and I don't have that script with me. I'm here because I've been having sudden visual distortions and blurring, straight lines look crooked, and I have trouble adjusting to dim lights, like in restaurants. I don't know if I have diabetes or any autoimmune conditions, but I do know I've been having trouble with my blood pressure and I still smoke a pack of cigarettes a day.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9988,
+        "contradiction": 0.0018
+      },
+      "duplicate_entailment": 0.03,
+      "duplicate_similarity": 0.4451
+    },
+    {
+      "candidate": "I don't have my age with me, and I don't think I have that script.",
+      "speaker": "Patient",
+      "coverage": 0.0751,
+      "nearest_so_sentence": "The patient reports no headaches.",
+      "statement": "The patient reports not having their age with them and does not recall having a script with their age.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I don't know my age, and I don't have that script with me. I'm here because I've been having sudden visual distortions and blurring, straight lines look crooked, and I have trouble adjusting to dim lights, like in restaurants. I don't know if I have diabetes or any autoimmune conditions, but I do know I've been having trouble with my blood pressure and I still smoke a pack of cigarettes a day.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9988,
+        "contradiction": 0.0018
+      },
+      "duplicate_entailment": 0.03,
+      "duplicate_similarity": 0.4451
+    },
+    {
+      "candidate": "I don't have my age with me, and I don't think I have that script.",
+      "speaker": "Patient",
+      "coverage": 0.0751,
+      "nearest_so_sentence": "The patient reports no headaches.",
+      "statement": "The patient reports not having their age with them and does not have the script.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I don't know my age, and I don't have that script with me. I'm here because I've been having sudden visual distortions and blurring, straight lines look crooked, and I have trouble adjusting to dim lights, like in restaurants. I don't know if I have diabetes or any autoimmune conditions, but I do know I've been having trouble with my blood pressure and I still smoke a pack of cigarettes a day.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0028
+      },
+      "duplicate_entailment": 0.0071,
+      "duplicate_similarity": 0.4861
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 33,
+    "num_covered": 28,
+    "num_flagged": 5,
+    "num_not_checked_cap": 0,
+    "num_added": 1
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [
+      {
+        "stage": "stage2",
+        "section": "subjective",
+        "claim": "The patient has been experiencing symptoms for a few months.",
+        "decision": "uncertain",
+        "scores": {
+          "entailment": 0.8487,
+          "neutral": 0.1463,
+          "contradiction": 0.4849
+        },
+        "reason": "Partially supported; kept and flagged for review (neutral is not proof of falsehood)."
+      }
+    ],
+    "rejected_stage3": []
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 50.5,
+  "ap_unchanged": true,
+  "conversation": "Patient: Hello. I'm sorry, but I don't have my age with me, and I don't think I have that script. I'm here because I've been having some sudden visual distortions and blurring of my vision. Straight lines look crooked, and I have trouble adjusting to dim lights, like in restaurants.\nDoctor: Could you please provide your age, gender, and occupation? Additionally, have you had any prior eye conditions, treatments, or family history of similar issues?\nPatient: I don't have my age with me, and I don't think I have that script. I'm here because I've been having some sudden visual distortions and blurring of my vision. Straight lines look crooked, and I have trouble adjusting to dim lights, like in restaurants. I don't know if there's a family history of similar issues, and I don't think I've had any prior eye conditions or treatments.\nDoctor: Could you please provide your age, gender, and occupation?\nPatient: I don't have my age with me, and I don't think I have that script. I'm here because I've been having some sudden visual distortions and blurring of my vision. Straight lines look crooked, and I have trouble adjusting to dim lights, like in restaurants.\nDoctor: Could you please provide your age, gender, and occupation?\nPatient: I don't have my age with me, and I don't think I have that script. I'm here because I've been having some sudden visual distortions and blurring of my vision. Straight lines look crooked, and I have trouble adjusting to dim lights, like in restaurants.\nDoctor: Could you please provide your gender and occupation? This information will help us better understand your condition and guide further evaluation.\nPatient: I don't have my age with me, and I don't think I have that script. I'm here because I've been having some sudden visual distortions and blurring of my vision. Straight lines look crooked, and I have trouble adjusting to dim lights, like in restaurants.\nDoctor: Could you please provide your age, gender, and occupation?\nPatient: I don't know my age, and I don't have that script with me. I'm here because I've been having sudden visual distortions and blurring, straight lines look crooked, and I have trouble adjusting to dim lights, like in restaurants.\nDoctor: Could you describe when the visual distortions and blurring started, how long they have been present, and whether they are constant or intermittent?\nPatient: The visual distortions and blurring started a while back, maybe a few months ago, and they’ve been getting worse. They’re pretty constant, but sometimes they feel like they get a little better, and other times they’re really bad, especially when I’m trying to read or look at straight lines. The crooked lines and trouble with dim lights have been happening more often lately.\nDoctor: Could you please provide your age, gender, and occupation? Additionally, have you experienced any eye pain, headaches, or changes in vision in one or both eyes?\nPatient: I don't know my age, and I don't have that script with me. I'm here because I've been having sudden visual distortions and blurring, straight lines look crooked, and I have trouble adjusting to dim lights, like in restaurants. I haven't had any eye pain or headaches, and it's happening in both eyes.\nDoctor: Could you please describe any other symptoms you might be experiencing, such as floaters, flashes of light, or changes in color perception? Additionally, have you noticed any changes in your vision that occur more frequently at certain times of the day or under specific lighting conditions?\nPatient: I don't have any floaters or flashes of light, and my color perception doesn't seem off. The vision changes happen more when I'm in dim lighting, like in restaurants, and they bother me the most when I'm reading or looking at straight lines.\nDoctor: Could you please provide your age, gender, and occupation?\nPatient: I don't know my age, and I don't have that script with me. I'm here because I've been having sudden visual distortions and blurring, straight lines look crooked, and I have trouble adjusting to dim lights, like in restaurants.\nDoctor: Could you please provide your age, gender, and occupation? This will help us better understand your situation.\nPatient: I don't know my age, and I don't have that script with me. I'm here because I've been having sudden visual distortions and blurring, straight lines look crooked, and I have trouble adjusting to dim lights, like in restaurants.\nDoctor: Could you please provide your age, gender, and occupation? This information will help us better understand your condition.\nPatient: I don't know my age, and I don't have that script with me. I'm here because I've been having sudden visual distortions and blurring, straight lines look crooked, and I have trouble adjusting to dim lights, like in restaurants.\nDoctor: Could you please describe any other symptoms you're experiencing, such as eye pain, headaches, or changes in your vision that you haven't mentioned yet?\nPatient: I don't have any eye pain or headaches, and I haven't noticed any other changes in my vision besides the blurring, distortions, and trouble with straight lines and dim lighting. It's been happening in both eyes, and it's been bothering me especially when I'm reading or in places like restaurants.\nDoctor: Could you please provide your age, gender, and occupation? Additionally, have you been diagnosed with diabetes, hypertension, or any autoimmune conditions in the past?\nPatient: I don't know my age, and I don't have that script with me. I'm here because I've been having sudden visual distortions and blurring, straight lines look crooked, and I have trouble adjusting to dim lights, like in restaurants. I don't know if I have diabetes or any autoimmune conditions, but I do know I've been having trouble with my blood pressure and I still smoke a pack of cigarettes a day.\nDoctor: Could you please describe any recent changes in your vision, such as whether the distortions or blurring have gotten worse, or if there are any specific activities that make them better or worse?\nPatient: The distortions and blurring haven't gotten worse exactly, but they're always there, especially when I'm reading or in dim lighting. It's been making it harder to see straight lines clearly, like door frames or things on the page, and it's been pretty frustrating.",
+  "reference_so": {
+    "subjective": "Basic information: Patient reports sudden visual distortions and blurring of vision, with straight lines appearing crooked and difficulty adjusting to dim lights. Age, gender, and occupation not yet provided.\n\nHistory of present illness: The visual distortions and blurring started a few months ago and have been progressively worsening. They are constant but fluctuate in severity, particularly when reading or looking at straight lines. The crooked lines and trouble with dim lights have been occurring more frequently lately. Symptoms occur in both eyes, without associated eye pain or headaches. The patient denies floaters, flashes of light, or changes in color perception. Symptoms are more pronounced in dim lighting and during activities such as reading.\n\nPast history: Patient has a history of hypertension and smokes a pack of cigarettes a day.",
+    "objective": "Physical examination: Not yet performed.\n\nInvestigations: Not yet performed."
+  }
+}

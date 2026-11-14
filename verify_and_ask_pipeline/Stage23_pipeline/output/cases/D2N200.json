@@ -1,0 +1,365 @@
+{
+  "case_id": "D2N200",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient is a 58-year-old female who presents with headaches on the top of her head, which come and go, and are accompanied by dizziness and blurry vision. She has a history of high blood pressure and diabetes. She is not taking her medication regularly due to stomachache.\n* The patient reports that the headaches are throbbing and are worse when her blood pressure is high. She has tried taking Tylenol, which provides some relief.\n* She experiences chest pain, which is described as a pressure feeling, not sharp or dull, and does not have a specific trigger.\n* The patient has not had her blood pressure checked recently, but knows it has been high for a while.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient is a 58-year-old female who presents with headaches on the top of her head, which come and go, and are accompanied by dizziness and blurry vision. She has a history of high blood pressure and diabetes. She is not taking her medication regularly due to stomachache.\n* The patient reports that the headaches are throbbing and are worse when her blood pressure is high. She has tried taking Tylenol, which provides some relief.\n* She experiences chest pain, which is described as a pressure feeling, not sharp or dull, and does not have a specific trigger.\n* The patient has not had her blood pressure checked recently, but knows it has been high for a while.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* Patient is a 58-year-old female who presents with headaches on the top of her head, which come and go, and are accompanied by dizziness and blurry vision. She has a history of high blood pressure and diabetes. She is not taking her medication regularly due to stomachache.\n* The patient reports that the headaches are throbbing and are worse when her blood pressure is high. She has tried taking Tylenol, which provides some relief.\n* She experiences chest pain, which is described as a pressure feeling, not sharp or dull, and does not have a specific trigger.\n* The patient has not had her blood pressure checked recently, but knows it has been high for a while.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has a history of high blood pressure and diabetes, and is experiencing headaches on the top of her head, which are accompanied by dizziness and blurry vision.\n* The patient's blood pressure is not well-controlled, and she is not taking her medication regularly due to side effects.",
+    "plan": "* The patient will be referred to a specialist for further evaluation and management of her high blood pressure and headaches.\n* The patient will be advised to take her medication regularly and to keep track of her blood pressure readings.\n* The patient will be instructed to return for follow-up appointments to monitor her blood pressure and headache symptoms."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient is a 58-year-old female who presents with headaches on the top of her head, which come and go, and are accompanied by dizziness and blurry vision.",
+      "scores": {
+        "entailment": 0.9948,
+        "neutral": 0.0007,
+        "contradiction": 0.0049
+      },
+      "support_evidence": "Patient: I'm 58 years old and female. I'm here because I've been having these headaches on the top of my head that come and go, and I've also been having high blood pressure for a while. I'm not taking my medication regularly because it gives me a stomachache.",
+      "contradiction_evidence": "Patient: The chest pain is more like a pressure feeling, not sharp or dull really. It doesn't last too long, maybe a few minutes, and I don't really notice any specific triggers for it. It doesn't happen all the time, just sometimes when I have the headaches.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient is a 58-year-old female who presents with headaches on the top of her head, which come and go, and are accompanied by dizziness and blurry vision.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 58-year-old female who presents with headaches on the top of her head, which come and go, and are accompanied by dizziness and blurry vision.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has a history of high blood pressure and diabetes.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.069
+      },
+      "support_evidence": "Patient: I don't know about my family history. I just know that I have high blood pressure and diabetes, and I've been having these headaches on the top of my head for about a month. They come and go, and they're worse when my blood pressure is up. I also sometimes feel dizzy and my vision gets a little blurry with them.",
+      "contradiction_evidence": "Patient: I'm 58 years old and female. I'm here because I've been having these headaches on the top of my head that come and go, and I've also been having high blood pressure for a while. I'm not taking my medication regularly because it gives me a stomachache.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has a history of high blood pressure and diabetes.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "She has a history of high blood pressure and diabetes.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She is not taking her medication regularly due to stomachache.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0001,
+        "contradiction": 0.0005
+      },
+      "support_evidence": "Patient: I'm 58 years old and female. I'm here because I've been having these headaches on the top of my head that come and go, and I've also been having high blood pressure for a while. I'm not taking my medication regularly because it gives me a stomachache.",
+      "contradiction_evidence": "Doctor: Could you please provide your most recent blood pressure reading, and have you experienced any other symptoms such as shortness of breath, palpitations, or chest discomfort that are not related to your headaches?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She is not taking her medication regularly due to stomachache.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "She is not taking her medication regularly due to stomachache.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient reports that the headaches are throbbing and are worse when her blood pressure is high.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.0331
+      },
+      "support_evidence": "Patient: I don't know about my family history, but I do know that I have high blood pressure and diabetes, and I've been having these headaches on the top of my head for about a month. They come and go, and they're worse when my blood pressure is up. I also sometimes feel dizzy and my vision gets a little blurry with them.",
+      "contradiction_evidence": "Patient: I don't know about my family history. I just know that I have high blood pressure and diabetes, and I've been having these headaches on the top of my head for about a month. They come and go, and they're worse when my blood pressure is up. I also sometimes feel dizzy and my vision gets a little blurry with them.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient reports that the headaches are throbbing and are worse when her blood pressure is high.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The patient reports that the headaches are throbbing and are worse when her blood pressure is high.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has tried taking Tylenol, which provides some relief.",
+      "scores": {
+        "entailment": 0.9989,
+        "neutral": 0.001,
+        "contradiction": 0.0004
+      },
+      "support_evidence": "Patient: I'm 58 years old and female. I'm here because I've been having these headaches on the top of my head that come and go, and I've also been having high blood pressure for a while. I'm not taking my medication regularly because it gives me a stomachache.",
+      "contradiction_evidence": "Patient: I haven't had my blood pressure checked recently, but I know it's been high for a while. My provider gave me chlorthalidone, but I don't take it every day because it gives me a stomachache. I do have some chest pain sometimes, but not always when I have the headaches.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has tried taking Tylenol, which provides some relief.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "She has tried taking Tylenol, which provides some relief.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She experiences chest pain, which is described as a pressure feeling, not sharp or dull, and does not have a specific trigger.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0002,
+        "contradiction": 0.8231
+      },
+      "support_evidence": "Patient: The chest pain is more like a pressure feeling, not sharp or dull really. It doesn't last too long, maybe a few minutes, and I don't really notice any specific triggers for it. It doesn't happen all the time, just sometimes when I have the headaches.",
+      "contradiction_evidence": "Patient: I don't know about my family history. I just know that I have high blood pressure and diabetes, and I've been having these headaches on the top of my head for about a month. They come and go, and they're worse when my blood pressure is up. I also sometimes feel dizzy and my vision gets a little blurry with them.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She experiences chest pain, which is described as a pressure feeling, not sharp or dull, and does not have a specific trigger.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "She experiences chest pain, which is described as a pressure feeling, not sharp or dull, and does not have a specific trigger.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient has not had her blood pressure checked recently, but knows it has been high for a while.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.9874
+      },
+      "support_evidence": "Patient: I haven't had my blood pressure checked recently, but I know it's been high for a while. My provider gave me chlorthalidone, but I don't take it every day because it gives me a stomachache. I do have some chest pain sometimes, but not always when I have the headaches.",
+      "contradiction_evidence": "Patient: I don't know about my family history, but I do know that I have high blood pressure and diabetes, and I've been having these headaches on the top of my head for about a month. They come and go, and they're worse when my blood pressure is up. I also sometimes feel dizzy and my vision gets a little blurry with them.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has not had her blood pressure checked recently, but knows it has been high for a while.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "The patient has not had her blood pressure checked recently, but knows it has been high for a while.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 7,
+      "exempt": 1
+    },
+    "num_claims": 7,
+    "num_kept": 7,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I don't know about my family history.",
+      "speaker": "Patient",
+      "coverage": 0.1598,
+      "nearest_so_sentence": "She has a history of high blood pressure and diabetes.",
+      "statement": "The patient reports that they are unaware of their family history.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I don't know about my family history. I just know that I have high blood pressure and diabetes, and I've been having these headaches on the top of my head for about a month. They come and go, and they're worse when my blood pressure is up. I also sometimes feel dizzy and my vision gets a little blurry with them.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.8757
+      }
+    },
+    {
+      "candidate": "I don't know about my family history.",
+      "speaker": "Patient",
+      "coverage": 0.1598,
+      "nearest_so_sentence": "She has a history of high blood pressure and diabetes.",
+      "statement": "The patient reports that they are unaware of their family history.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I don't know about my family history. I just know that I have high blood pressure and diabetes, and I've been having these headaches on the top of my head for about a month. They come and go, and they're worse when my blood pressure is up. I also sometimes feel dizzy and my vision gets a little blurry with them.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.8757
+      }
+    },
+    {
+      "candidate": "I'm 58 years old and female.",
+      "speaker": "Patient",
+      "coverage": 0.1765,
+      "nearest_so_sentence": "She has tried taking Tylenol, which provides some relief.",
+      "statement": "The patient is 58 years old and female.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 58 years old and female. I'm here because I've been having these headaches on the top of my head that come and go, and I've also been having high blood pressure for a while. I'm not taking my medication regularly because it gives me a stomachache.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.001
+      },
+      "duplicate_entailment": 0.9995,
+      "duplicate_similarity": 0.5255
+    },
+    {
+      "candidate": "I was told this morning it was like 172 over 98.",
+      "speaker": "Patient",
+      "coverage": 0.1838,
+      "nearest_so_sentence": "The patient has not had her blood pressure checked recently, but knows it has been high for a while.",
+      "statement": "The patient reports that their most recent blood pressure reading was 172 over 98.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I don't have my blood pressure reading with me, but I was told this morning it was like 172 over 98. And no, I don't have shortness of breath or chest discomfort that's not related to the headaches. The chest pain I mentioned earlier is when I have the headaches, not separate from them.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9832,
+        "contradiction": 0.9913
+      }
+    },
+    {
+      "candidate": "It doesn't last too long, maybe a few minutes, and I don't really notice any specific triggers for it.",
+      "speaker": "Patient",
+      "coverage": 0.2369,
+      "nearest_so_sentence": "She experiences chest pain, which is described as a pressure feeling, not sharp or dull, and does not have a specific trigger.",
+      "statement": "The patient reports that the chest pain typically lasts for a few minutes and does not appear to be triggered by any specific factors.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: The chest pain is more like a pressure feeling, not sharp or dull really. It doesn't last too long, maybe a few minutes, and I don't really notice any specific triggers for it. It doesn't happen all the time, just sometimes when I have the headaches.",
+      "scores_vs_dialogue": {
+        "entailment": 0.999,
+        "contradiction": 0.8181
+      }
+    },
+    {
+      "candidate": "My vision just gets a little blurry sometimes, but it doesn't go away completely.",
+      "speaker": "Patient",
+      "coverage": 0.3706,
+      "nearest_so_sentence": "Patient is a 58-year-old female who presents with headaches on the top of her head, which come and go, and are accompanied by dizziness and blurry vision.",
+      "statement": "The patient reports that their vision becomes blurry at times, but the blurriness is not persistent.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't know about my family history. I just know that I have high blood pressure and diabetes, and I've been having these headaches on the top of my head for about a month. They come and go, and they're worse when my blood pressure is up. I also sometimes feel dizzy and my vision gets a little blurry with them.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0386
+      },
+      "duplicate_entailment": 0.9975,
+      "duplicate_similarity": 0.5119
+    },
+    {
+      "candidate": "My vision just gets a little blurry sometimes, but it doesn't go away completely.",
+      "speaker": "Patient",
+      "coverage": 0.3706,
+      "nearest_so_sentence": "Patient is a 58-year-old female who presents with headaches on the top of her head, which come and go, and are accompanied by dizziness and blurry vision.",
+      "statement": "The patient reports experiencing occasional blurring of vision that is not persistent.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 58 years old and female. I'm here because I've been having these headaches on the top of my head that come and go, and I've also been having high blood pressure for a while. I'm not taking my medication regularly because it gives me a stomachache.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0955
+      },
+      "duplicate_entailment": 0.9987,
+      "duplicate_similarity": 0.5826
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 45,
+    "num_covered": 38,
+    "num_flagged": 7,
+    "num_not_checked_cap": 0,
+    "num_added": 0
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "I don't know about my family history.",
+        "statement": "The patient reports that they are unaware of their family history.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.8757
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I don't know about my family history.",
+        "statement": "The patient reports that they are unaware of their family history.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.8757
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I was told this morning it was like 172 over 98.",
+        "statement": "The patient reports that their most recent blood pressure reading was 172 over 98.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9832,
+          "contradiction": 0.9913
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "It doesn't last too long, maybe a few minutes, and I don't really notice any specific triggers for it.",
+        "statement": "The patient reports that the chest pain typically lasts for a few minutes and does not appear to be triggered by any specific factors.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.999,
+          "contradiction": 0.8181
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 64.4,
+  "ap_unchanged": true,
+  "conversation": "Patient: I'm 58 years old and female. I'm here because I've been having these headaches on the top of my head that come and go, and I've also been having high blood pressure for a while. I'm not taking my medication regularly because it gives me a stomachache.\nDoctor: Could you describe the headaches in more detail, such as their intensity, any specific triggers, and whether they are accompanied by other symptoms like nausea, dizziness, or visual changes?\nPatient: They’re throbbing and they come and go, mostly on the top of my head. Sometimes I feel dizzy and my vision gets a little blurry with them, but they don’t usually come with nausea. Tylenol helps a little, but it doesn’t get rid of them completely.\nDoctor: Could you provide details about your blood pressure readings, including the highest recorded value and when you last had them checked? Additionally, have you experienced any chest pain, shortness of breath, or palpitations recently?\nPatient: I haven't had my blood pressure checked recently, but I know it's been high for a while. My provider gave me chlorthalidone, but I don't take it every day because it gives me a stomachache. I do have some chest pain sometimes, but not always when I have the headaches.\nDoctor: Could you describe the chest pain you sometimes experience? Is it sharp, dull, or pressure-like? Does it last for a few minutes or longer? Have you noticed any patterns or triggers?\nPatient: The chest pain is more like a pressure feeling, not sharp or dull really. It doesn't last too long, maybe a few minutes, and I don't really notice any specific triggers for it. It doesn't happen all the time, just sometimes when I have the headaches.\nDoctor: Could you please provide details about the frequency and duration of your headaches, as well as any specific triggers or patterns you've noticed?\nPatient: The headaches have been coming and going for about a month, mostly on the top of my head. They’re throbbing, and sometimes they’re worse than others. I don’t really have any specific triggers, but they do seem to happen more when my blood pressure is up.\nDoctor: Could you provide details about your family history, particularly regarding cardiovascular or neurological conditions?\nPatient: I don't know about my family history, but I do know that I have high blood pressure and diabetes, and I've been having these headaches on the top of my head for about a month. They come and go, and they're worse when my blood pressure is up. I also sometimes feel dizzy and my vision gets a little blurry with them.\nDoctor: Could you please clarify if you have been experiencing any other symptoms along with the headaches and chest pain, such as shortness of breath, palpitations, or changes in consciousness? Additionally, have you had any recent episodes of fainting or dizziness that might be related?\nPatient: I don't really have any shortness of breath or palpitations, but I do sometimes feel dizzy and my vision gets a little blurry when I have the headaches. I haven't had any fainting episodes, but the dizziness does happen more when my blood pressure is high.\nDoctor: Could you provide details about your current blood pressure readings, including when they were measured and the values recorded?\nPatient: I haven't had my blood pressure checked recently, but I know it's been high for a while. My provider gave me chlorthalidone, but I don't take it every day because it gives me a stomachache. I do have some chest pain sometimes, but not always when I have the headaches.\nDoctor: Could you please describe any changes in your vision, such as seeing spots or losing vision in one eye, during the headaches?\nPatient: No, I don't see spots or lose vision in one eye during the headaches. My vision just gets a little blurry sometimes, but it doesn't go away completely. It usually goes away when the headache starts to ease up.\nDoctor: Could you provide details about your family history, particularly regarding hypertension, stroke, or other neurological conditions?\nPatient: I don't know about my family history. I just know that I have high blood pressure and diabetes, and I've been having these headaches on the top of my head for about a month. They come and go, and they're worse when my blood pressure is up. I also sometimes feel dizzy and my vision gets a little blurry with them.\nDoctor: Could you please provide your most recent blood pressure reading, if available? Additionally, have you experienced any changes in your vision, such as seeing spots or losing vision in one eye, during or after the headaches?\nPatient: I don't have my blood pressure reading with me, but I know it's been high. I was told this morning it was like 172 over 98. And no, I don't see spots or lose vision in one eye during the headaches, just a little blurry vision that usually goes away when the headache eases up.\nDoctor: Could you please provide more details about your family history, including any history of hypertension, diabetes, or cardiovascular disease in your immediate family members?\nPatient: I don't know about my family history. I just know that I have high blood pressure and diabetes, and I've been having these headaches on the top of my head for about a month. They come and go, and they're worse when my blood pressure is up. I also sometimes feel dizzy and my vision gets a little blurry with them.\nDoctor: Could you please provide your most recent blood pressure reading, and have you experienced any other symptoms such as shortness of breath, palpitations, or chest discomfort that are not related to your headaches?\nPatient: I don't have my blood pressure reading with me, but I was told this morning it was like 172 over 98. And no, I don't have shortness of breath or chest discomfort that's not related to the headaches. The chest pain I mentioned earlier is when I have the headaches, not separate from them.\nDoctor: Have you experienced any changes in your vision, such as seeing spots, losing vision in one eye, or experiencing double vision during or after the headaches?\nPatient: No, I don't see spots or lose vision in one eye during the headaches. My vision just gets a little blurry sometimes, but it doesn't go away completely. It usually goes away when the headache starts to ease up.\nDoctor: Could you please describe any other symptoms you experience during or after the headaches, such as weakness, numbness, speech difficulties, or changes in your balance?\nPatient: No, I don't have weakness, numbness, or trouble speaking during the headaches. I do feel a little off-balance sometimes when the dizziness hits, but it doesn't last long.",
+  "reference_so": {
+    "subjective": "Basic information: 58-year-old female presenting with headaches on the top of the head and a history of hypertension not managed regularly due to stomachaches\n\nHistory of present illness: Headaches on the top of the head that come and go, described as throbbing, with associated dizziness and transient visual blurring. No nausea. Tylenol provides partial relief. History of hypertension not managed regularly due to stomachaches. Chest pain sometimes, not always related to headaches. The chest pain is more like a pressure feeling, not sharp or dull really. It doesn't last too long, maybe a few minutes, and I don't really notice any specific triggers for it. It doesn't happen all the time, just sometimes when I have the headaches. The headaches have been coming and going for about a month, mostly on the top of my head. They’re throbbing, and sometimes they’re worse than others. I don’t really have any specific triggers, but they do seem to happen more when my blood pressure is up. I don't really have any shortness of breath or palpitations, but I do sometimes feel dizzy and my vision gets a little blurry when I have the headaches. I haven't had any fainting episodes, but the dizziness does happen more when my blood pressure is high. I haven't had my blood pressure checked recently, but I know it's been high for a while. My provider gave me chlorthalidone, but I don't take it every day because it gives me a stomachache. I do have some chest pain sometimes, but not always when I have the headaches. No, I don't see spots or lose vision in one eye during the headaches. My vision just gets a little blurry sometimes, but it doesn't go away completely. It usually goes away when the headache starts to ease up. I don't have my blood pressure reading with me, but I was told this morning it was like 172 over 98. And no, I don't see spots or lose vision in one eye during the headaches, just a little blurry vision that usually goes away when the headache eases up. No, I don't have weakness, numbness, or trouble speaking during the headaches. I do feel a little off-balance sometimes when the dizziness hits, but it doesn't last long.\n\nPast history: Hypertension, diabetes, stomachaches",
+    "objective": "Physical examination: Not yet available\n\nInvestigations: Not yet available"
+  }
+}

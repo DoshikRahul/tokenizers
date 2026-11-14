@@ -1,0 +1,497 @@
+{
+  "case_id": "D2N175",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient is a 39-year-old female with a history of diabetes, currently taking 1,000 milligrams of metformin daily.\n* She was previously diagnosed with diabetes and has been managing her condition well until recent blood work showed elevated blood sugars.\n* She has been watching her diet and power walking daily, but has not experienced any symptoms of high or low blood sugar.\n* Her HbA1c was 8.1, which is elevated.\n* She was not provided with specific dates for her most recent HbA1c test or other laboratory tests.\n* She has no family history of diabetes that she is aware of.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient is a 39-year-old female with a history of diabetes, currently taking 1,000 milligrams of metformin daily.\n* She was previously diagnosed with diabetes and has been managing her condition well until recent blood work showed elevated blood sugars.\n* She has been watching her diet and power walking daily, but has not experienced any symptoms of high or low blood sugar.\n* Her HbA1c was 8.1, which is elevated.\n* She was not provided with specific dates for her most recent HbA1c test or other laboratory tests.\n* She has no family history of diabetes that she is aware of.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* The patient reports needing to discuss their concerns and undergo additional testing to determine the underlying cause.\n* Patient is a 39-year-old female with a history of diabetes, currently taking 1,000 milligrams of metformin daily.\n* She was previously diagnosed with diabetes and has been managing her condition well until recent blood work showed elevated blood sugars.\n* She has been watching her diet and power walking daily, but has not experienced any symptoms of high or low blood sugar.\n* Her HbA1c was 8.1, which is elevated.\n* She was not provided with specific dates for her most recent HbA1c test or other laboratory tests.\n* The patient reports that they were not given specific dates for the other tests, but were informed that additional testing is needed to investigate elevated blood sugars.\n* She has no family history of diabetes that she is aware of.\n* The patient reports engaging in power walking for 30 minutes daily.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has a history of diabetes and is currently taking metformin.\n* Her HbA1c is elevated, indicating poor glycemic control.\n* The patient's diet and exercise routine have been consistent, but the exact details of her diet and exercise habits are unknown.\n* The patient's weight and height are unknown.",
+    "plan": "* The patient will need further investigation to determine the cause of her elevated blood sugars.\n* The doctor will request the patient's most recent laboratory test results, including fasting glucose, postprandial glucose, lipid profile, and kidney function tests.\n* The patient will need to provide her current weight and height so that her BMI can be calculated and her metabolic status assessed.\n* The doctor will review the patient's medication regimen and consider adjusting her treatment plan as necessary."
+  },
+  "stage2_audit": [
+    {
+      "claim": "The patient is a 39-year-old female.",
+      "scores": {
+        "entailment": 0.9959,
+        "neutral": 0.0003,
+        "contradiction": 0.0079
+      },
+      "support_evidence": "Patient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated.",
+      "contradiction_evidence": "Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure out why my blood sugars are high.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient is a 39-year-old female.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 39-year-old female with a history of diabetes, currently taking 1,000 milligrams of metformin daily."
+    },
+    {
+      "claim": "The patient has a history of diabetes.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0002,
+        "contradiction": 0.6453
+      },
+      "support_evidence": "Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.",
+      "contradiction_evidence": "Patient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has a history of diabetes.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 39-year-old female with a history of diabetes, currently taking 1,000 milligrams of metformin daily."
+    },
+    {
+      "claim": "The patient is taking 1,000 milligrams of metformin daily.",
+      "scores": {
+        "entailment": 0.9991,
+        "neutral": 0.0005,
+        "contradiction": 0.0046
+      },
+      "support_evidence": "Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.",
+      "contradiction_evidence": "Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure out why my blood sugars are high.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient is taking 1,000 milligrams of metformin daily.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 39-year-old female with a history of diabetes, currently taking 1,000 milligrams of metformin daily."
+    },
+    {
+      "claim": "She was previously diagnosed with diabetes and has been managing her condition well until recent blood work showed elevated blood sugars.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0002,
+        "contradiction": 0.002
+      },
+      "support_evidence": "Patient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test.",
+      "contradiction_evidence": "Patient: I don’t have the exact dates for my most recent HbA1c test or other lab tests, but I was told my HbA1c was 8.1, which was elevated. I wasn’t given specific dates for the other tests, but I was told I needed more work done to figure out why my blood sugars are high.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She was previously diagnosed with diabetes and has been managing her condition well until recent blood work showed elevated blood sugars.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "She was previously diagnosed with diabetes and has been managing her condition well until recent blood work showed elevated blood sugars.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has been watching her diet and power walking daily, but has not experienced any symptoms of high or low blood sugar.",
+      "scores": {
+        "entailment": 0.9957,
+        "neutral": 0.0005,
+        "contradiction": 0.9971
+      },
+      "support_evidence": "Patient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated.",
+      "contradiction_evidence": "Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure out why my blood sugars are high.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has been watching her diet and power walking daily, but has not experienced any symptoms of high or low blood sugar.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "She has been watching her diet and power walking daily, but has not experienced any symptoms of high or low blood sugar.",
+      "level": "sentence"
+    },
+    {
+      "claim": "Her HbA1c was 8.1, which is elevated.",
+      "scores": {
+        "entailment": 0.999,
+        "neutral": 0.0003,
+        "contradiction": 0.0101
+      },
+      "support_evidence": "Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure out why my blood sugars are high.",
+      "contradiction_evidence": "Patient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure out why my blood sugars are high.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Her HbA1c was 8.1, which is elevated.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Her HbA1c was 8.1, which is elevated.",
+      "level": "sentence"
+    },
+    {
+      "section": "subjective",
+      "line": 4,
+      "sentence": "She was not provided with specific dates for her most recent HbA1c test or other laboratory tests.",
+      "claim": "She was not provided with specific dates for her most recent HbA1c test or other laboratory tests.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    },
+    {
+      "claim": "She has no family history of diabetes that she is aware of.",
+      "scores": {
+        "entailment": 0.9988,
+        "neutral": 0.0003,
+        "contradiction": 0.0075
+      },
+      "support_evidence": "Patient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test.",
+      "contradiction_evidence": "Doctor: Could you please provide the dates of your most recent HbA1c test and any other relevant laboratory tests, such as fasting glucose, postprandial glucose, lipid profile, and kidney function tests?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has no family history of diabetes that she is aware of.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "She has no family history of diabetes that she is aware of.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 7,
+      "exempt": 2
+    },
+    "num_claims": 7,
+    "num_kept": 7,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient reports needing to discuss their concerns and undergo additional testing to determine the underlying cause.",
+      "evidence": "Doctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars?",
+      "section": "subjective",
+      "candidate": "I needed to come in and talk about it and get some more tests done to figure out why."
+    },
+    {
+      "statement": "The patient reports engaging in power walking for 30 minutes daily.",
+      "evidence": "Patient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated.",
+      "section": "subjective",
+      "candidate": "I’ve also been power walking about 30 minutes every day."
+    },
+    {
+      "statement": "The patient reports that they were not given specific dates for the other tests, but were informed that additional testing is needed to investigate elevated blood sugars.",
+      "evidence": "Patient: I don’t have the exact dates for my most recent HbA1c test or other lab tests, but I was told my HbA1c was 8.1, which was elevated. I wasn’t given specific dates for the other tests, but I was told I needed more work done to figure out why my blood sugars are high.",
+      "section": "subjective",
+      "candidate": "I wasn’t given specific dates for the other tests, but I was told I needed more work done to figure out why my blood sugars are high."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I'm female.",
+      "speaker": "Patient",
+      "coverage": 0.0247,
+      "nearest_so_sentence": "Her HbA1c was 8.1, which is elevated.",
+      "statement": "The patient is female.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.0027
+      },
+      "duplicate_entailment": 0.9997,
+      "duplicate_similarity": 0.3995
+    },
+    {
+      "candidate": "I needed to come in and talk about it and get some more tests done to figure out why.",
+      "speaker": "Patient",
+      "coverage": 0.1537,
+      "nearest_so_sentence": "Her HbA1c was 8.1, which is elevated.",
+      "statement": "The patient reports needing to discuss their concerns and undergo additional testing to determine the underlying cause.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Doctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0052
+      },
+      "duplicate_entailment": 0.0187,
+      "duplicate_similarity": 0.2739,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 15.5,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I’m not sure about my BMI, but I feel like I’ve been managing it well through diet and exercise.",
+      "speaker": "Patient",
+      "coverage": 0.2522,
+      "nearest_so_sentence": "She was previously diagnosed with diabetes and has been managing her condition well until recent blood work showed elevated blood sugars.",
+      "statement": "The patient reports managing their weight through diet and exercise, but is unsure about their current BMI.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I don’t have my exact weight or height on hand, but I’ve been watching my weight pretty closely and have been power walking every day. I’m not sure about my BMI, but I feel like I’ve been managing it well through diet and exercise.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.7446
+      }
+    },
+    {
+      "candidate": "I’ve also been power walking about 30 minutes every day.",
+      "speaker": "Patient",
+      "coverage": 0.3046,
+      "nearest_so_sentence": "She has been watching her diet and power walking daily, but has not experienced any symptoms of high or low blood sugar.",
+      "statement": "The patient reports engaging in power walking for 30 minutes daily.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated.",
+      "scores_vs_dialogue": {
+        "entailment": 0.999,
+        "contradiction": 0.0574
+      },
+      "duplicate_entailment": 0.0027,
+      "duplicate_similarity": 0.3844,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 7,
+        "perplexity": 15.31,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I wasn’t given specific dates for the other tests, but I was told I needed more work done to figure out why my blood sugars are high.",
+      "speaker": "Patient",
+      "coverage": 0.3365,
+      "nearest_so_sentence": "She has been watching her diet and power walking daily, but has not experienced any symptoms of high or low blood sugar.",
+      "statement": "The patient reports that they were not given specific dates for the other tests, but were informed that additional testing is needed to investigate elevated blood sugars.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don’t have the exact dates for my most recent HbA1c test or other lab tests, but I was told my HbA1c was 8.1, which was elevated. I wasn’t given specific dates for the other tests, but I was told I needed more work done to figure out why my blood sugars are high.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0011
+      },
+      "first_rewrite_rejected": "The patient reports that they were not provided with specific dates for recent laboratory tests, including fasting glucose, postprandial glucose, lipid profile, and kidney function tests, but were informed that additional testing is needed to investigate elevated blood sugars.",
+      "duplicate_entailment": 0.0361,
+      "duplicate_similarity": 0.4332,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 6,
+        "perplexity": 14.37,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily.",
+      "speaker": "Patient",
+      "coverage": 0.3658,
+      "nearest_so_sentence": "She has been watching her diet and power walking daily, but has not experienced any symptoms of high or low blood sugar.",
+      "statement": "The patient reports keeping track of their weight and engaging in daily power walking.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.2011
+      },
+      "duplicate_entailment": 0.9654,
+      "duplicate_similarity": 0.4114
+    },
+    {
+      "candidate": "I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily.",
+      "speaker": "Patient",
+      "coverage": 0.3658,
+      "nearest_so_sentence": "She has been watching her diet and power walking daily, but has not experienced any symptoms of high or low blood sugar.",
+      "statement": "The patient reports keeping track of their weight and engaging in daily power walking.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.2011
+      },
+      "duplicate_entailment": 0.9654,
+      "duplicate_similarity": 0.4114
+    },
+    {
+      "candidate": "I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily.",
+      "speaker": "Patient",
+      "coverage": 0.3658,
+      "nearest_so_sentence": "She has been watching her diet and power walking daily, but has not experienced any symptoms of high or low blood sugar.",
+      "statement": "The patient reports keeping track of their weight and engaging in daily power walking.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.2011
+      },
+      "duplicate_entailment": 0.9654,
+      "duplicate_similarity": 0.4114
+    },
+    {
+      "candidate": "I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily.",
+      "speaker": "Patient",
+      "coverage": 0.3658,
+      "nearest_so_sentence": "She has been watching her diet and power walking daily, but has not experienced any symptoms of high or low blood sugar.",
+      "statement": "The patient reports keeping track of their weight and engaging in daily power walking.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.2011
+      },
+      "duplicate_entailment": 0.9654,
+      "duplicate_similarity": 0.4114
+    },
+    {
+      "candidate": "I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily.",
+      "speaker": "Patient",
+      "coverage": 0.3658,
+      "nearest_so_sentence": "She has been watching her diet and power walking daily, but has not experienced any symptoms of high or low blood sugar.",
+      "statement": "The patient reports keeping track of their weight and engaging in daily power walking.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.2011
+      },
+      "duplicate_entailment": 0.9654,
+      "duplicate_similarity": 0.4114
+    },
+    {
+      "candidate": "I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily.",
+      "speaker": "Patient",
+      "coverage": 0.3658,
+      "nearest_so_sentence": "She has been watching her diet and power walking daily, but has not experienced any symptoms of high or low blood sugar.",
+      "statement": "The patient reports keeping track of their weight and engaging in daily power walking.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.2011
+      },
+      "duplicate_entailment": 0.9654,
+      "duplicate_similarity": 0.4114
+    },
+    {
+      "candidate": "I don’t have my exact weight or height on me right now, but I’ve been tracking my weight regularly and have been power walking every day as part of my routine.",
+      "speaker": "Patient",
+      "coverage": 0.3958,
+      "nearest_so_sentence": "She has been watching her diet and power walking daily, but has not experienced any symptoms of high or low blood sugar.",
+      "statement": "The patient reports that they have been tracking their weight regularly and have been power walking daily as part of their routine, but do not have their exact weight or height measurement available.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.9858
+      }
+    },
+    {
+      "candidate": "I don’t have my exact weight or height on me right now, but I’ve been tracking my weight regularly and have been power walking every day as part of my routine.",
+      "speaker": "Patient",
+      "coverage": 0.3958,
+      "nearest_so_sentence": "She has been watching her diet and power walking daily, but has not experienced any symptoms of high or low blood sugar.",
+      "statement": "The patient reports that they have been tracking their weight regularly and have been power walking daily as part of their routine, but do not have their exact weight or height available.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.9898
+      }
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 31,
+    "num_covered": 18,
+    "num_flagged": 13,
+    "num_not_checked_cap": 0,
+    "num_added": 3
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "I’m not sure about my BMI, but I feel like I’ve been managing it well through diet and exercise.",
+        "statement": "The patient reports managing their weight through diet and exercise, but is unsure about their current BMI.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9993,
+          "contradiction": 0.7446
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I don’t have my exact weight or height on me right now, but I’ve been tracking my weight regularly and have been power walking every day as part of my routine.",
+        "statement": "The patient reports that they have been tracking their weight regularly and have been power walking daily as part of their routine, but do not have their exact weight or height measurement available.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9995,
+          "contradiction": 0.9858
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I don’t have my exact weight or height on me right now, but I’ve been tracking my weight regularly and have been power walking every day as part of my routine.",
+        "statement": "The patient reports that they have been tracking their weight regularly and have been power walking daily as part of their routine, but do not have their exact weight or height available.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9995,
+          "contradiction": 0.9898
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 86.4,
+  "ap_unchanged": true,
+  "conversation": "Patient: I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high. I needed to come in and talk about it and get some more tests done to figure out why.\nDoctor: Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars?\nPatient: I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated.\nDoctor: Could you share more about your family history of diabetes and any other relevant medical conditions? Also, have you been previously diagnosed with diabetes or prediabetes?\nPatient: I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test.\nDoctor: Could you please share more details about your current diet and exercise routine, and have you experienced any symptoms related to high or low blood sugar levels recently?\nPatient: My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated.\nDoctor: Could you please provide the specific glucose levels from your recent blood work, including your fasting glucose, HbA1c, and any postprandial measurements? Also, have you had any other relevant laboratory tests, such as a lipid profile or kidney function tests?\nPatient: I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure out why my blood sugars are high.\nDoctor: Could you please provide the dates of your most recent HbA1c test and any other relevant laboratory tests, such as fasting glucose, postprandial glucose, lipid profile, and kidney function tests?\nPatient: I don’t have the exact dates for my most recent HbA1c test or other lab tests, but I was told my HbA1c was 8.1, which was elevated. I wasn’t given specific dates for the other tests, but I was told I needed more work done to figure out why my blood sugars are high.\nDoctor: Could you please provide your current weight, height, and BMI? This information will help us better understand your diabetes management and overall metabolic health.\nPatient: I don’t have my exact weight or height on hand, but I’ve been watching my weight pretty closely and have been power walking every day. I’m not sure about my BMI, but I feel like I’ve been managing it well through diet and exercise.\nDoctor: Could you please provide your current weight and height so we can calculate your BMI? Additionally, could you confirm the exact dosage of metformin you are currently taking and whether there have been any recent changes in your medication regimen?\nPatient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.\nDoctor: Could you provide your current weight and height so we can calculate your BMI? This will help us better understand your diabetes management and overall health.\nPatient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.\nDoctor: Could you please provide your current weight and height? This will help us calculate your BMI and better understand your overall health status.\nPatient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.\nDoctor: Could you please provide your current weight and height? This will help us calculate your BMI and better assess your metabolic status.\nPatient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.\nDoctor: Could you please provide your current weight and height? This information will help us better assess your diabetes management and determine if any adjustments to your treatment plan are needed.\nPatient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.\nDoctor: Could you please provide your current weight and height so that we can calculate your BMI and assess your overall metabolic status?\nPatient: I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.\nDoctor: Could you please provide your current weight and height, or at least your most recent weight measurement?\nPatient: I don’t have my exact weight or height on me right now, but I’ve been tracking my weight regularly and have been power walking every day as part of my routine.\nDoctor: Could you please provide your current weight and height so that we can calculate your BMI and better assess your metabolic status?\nPatient: I don’t have my exact weight or height on me right now, but I’ve been tracking my weight regularly and have been power walking every day as part of my routine.",
+  "reference_so": {
+    "subjective": "Basic information: 39 years old female, here because of elevated blood sugars detected in routine blood work last week; needs further evaluation.\n\nHistory of present illness: No significant symptoms reported other than surprise at elevated blood sugars; currently watching diet and power walking daily. The patient has been adhering to a low-sugar diet and engaging in regular physical activity (power walking 30 minutes daily).\n\nPast history: Previously diagnosed with diabetes and currently on metformin (1,000 mg/day); no family history of diabetes. No other significant past medical history, operations, or allergies reported.",
+    "objective": "Physical examination: Not yet provided.\n\nInvestigations: HbA1c: 8.1% (elevated), no other lab results available."
+  }
+}

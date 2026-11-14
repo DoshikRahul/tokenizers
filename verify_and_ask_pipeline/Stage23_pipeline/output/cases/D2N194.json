@@ -1,0 +1,463 @@
+{
+  "case_id": "D2N194",
+  "split": "dev",
+  "stage1_so": {
+    "subjective": "* Patient is a 58-year-old female who presents with left shoulder pain that started a few weeks ago.\n* The pain is constant, dull, and aching, and is exacerbated by movement, lifting, or sleeping on the left side.\n* The patient has been taking Tylenol, which provides some relief, but the pain is still present.\n* No swelling, redness, numbness, or tingling is reported.\n* No prior trauma or injury to the shoulder, and no prior treatments for this issue.\n* No stiffness in the morning or after periods of inactivity.\n* The pain does not improve with rest or specific positions.\n* No recent upper respiratory infections or systemic symptoms.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient is a 58-year-old female who presents with left shoulder pain that started a few weeks ago.\n* The pain is constant, dull, and aching, and is exacerbated by movement, lifting, or sleeping on the left side.\n* The patient has been taking Tylenol, which provides some relief, but the pain is still present.\n* No swelling, redness, numbness, or tingling is reported.\n* No prior trauma or injury to the shoulder, and no prior treatments for this issue.\n* No stiffness in the morning or after periods of inactivity.\n* The pain does not improve with rest or specific positions.\n* No recent upper respiratory infections or systemic symptoms.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* Patient is a 58-year-old female who presents with left shoulder pain that started a few weeks ago.\n* The pain is constant, dull, and aching, and is exacerbated by movement, lifting, or sleeping on the left side.\n* The patient reports engaging in recent basement renovation activities, but denies experiencing any direct injury or trauma to the left shoulder.\n* The patient has been taking Tylenol, which provides some relief, but the pain is still present.\n* No swelling, redness, numbness, or tingling is reported.\n* No prior trauma or injury to the shoulder, and no prior treatments for this issue.\n* No stiffness in the morning or after periods of inactivity.\n* The pain does not improve with rest or specific positions.\n* No recent upper respiratory infections or systemic symptoms.",
+    "objective": "* The patient will undergo an MRI to further evaluate the left shoulder."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient presents with chronic left shoulder pain, which is constant, dull, and aching, and is exacerbated by movement, lifting, or sleeping on the left side.",
+    "plan": "* The doctor will order an MRI to further evaluate the patient's left shoulder pain.\n* The patient will continue taking Tylenol as needed for pain relief.\n* The doctor will review the patient's medication and medical history, and will discuss the results of the MRI with the patient."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient is a 58-year-old female who presents with left shoulder pain that started a few weeks ago.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.0014
+      },
+      "support_evidence": "Patient: I'm 58 and female. The pain started a few weeks ago, and it's been constant. It really hurts when I try to move my arm or lift anything, and I can't even raise it over my head. It's especially bad when I try to sleep on my left side, and it's always there, even when I'm not doing anything. I've been taking Tylenol, and that helps a little, but the pain is still pretty bad most of the time.",
+      "contradiction_evidence": "Patient: I'm 58 and female. The pain started a few weeks ago, and it's been constant. It really hurts when I try to move my arm or lift anything, and I can't even raise it over my head. It's especially bad when I try to sleep on my left side, and it's always there, even when I'm not doing anything. I've been taking Tylenol, and that helps a little, but the pain is still pretty bad most of the time.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient is a 58-year-old female who presents with left shoulder pain that started a few weeks ago.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 58-year-old female who presents with left shoulder pain that started a few weeks ago.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The pain is constant.",
+      "scores": {
+        "entailment": 0.9991,
+        "neutral": 0.0007,
+        "contradiction": 0.0048
+      },
+      "support_evidence": "Patient: No, I don't really have stiffness in the morning or after being inactive, but the pain is always there no matter what I do. It doesn't get better with rest or anything like that.",
+      "contradiction_evidence": "Patient: No, I don't think I've had any recent upper respiratory infections or illnesses, and I haven't had any systemic symptoms like fatigue, weight loss, fever, or night sweats. It's just been this constant shoulder pain, nothing else.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain is constant.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The pain is constant, dull, and aching, and is exacerbated by movement, lifting, or sleeping on the left side."
+    },
+    {
+      "claim": "The pain is dull.",
+      "scores": {
+        "entailment": 0.9992,
+        "neutral": 0.0004,
+        "contradiction": 0.0046
+      },
+      "support_evidence": "Patient: The pain is more of a dull, aching sensation, and it doesn't really radiate anywhere else. I don't have any swelling, redness, numbness, or tingling. I haven't had any recent trauma or injury to the shoulder, and I haven't had any prior treatments for this specific issue before today.",
+      "contradiction_evidence": "Doctor: Has the patient experienced any recent upper respiratory infections or systemic symptoms such as fatigue, weight loss, fever, or night sweats that could suggest an inflammatory or autoimmune etiology?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain is dull.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The pain is constant, dull, and aching, and is exacerbated by movement, lifting, or sleeping on the left side."
+    },
+    {
+      "claim": "The pain is aching.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0003,
+        "contradiction": 0.0334
+      },
+      "support_evidence": "Patient: The pain is more of a dull, aching sensation, and it doesn't really radiate anywhere else. I don't have any swelling, redness, numbness, or tingling. I haven't had any recent trauma or injury to the shoulder, and I haven't had any prior treatments for this specific issue before today.",
+      "contradiction_evidence": "Patient: I'm 58 and female. The pain started a few weeks ago, and it's been constant. It really hurts when I try to move my arm or lift anything, and I can't even raise it over my head. It's especially bad when I try to sleep on my left side, and it's always there, even when I'm not doing anything. I've been taking Tylenol, and that helps a little, but the pain is still pretty bad most of the time.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain is aching.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The pain is constant, dull, and aching, and is exacerbated by movement, lifting, or sleeping on the left side."
+    },
+    {
+      "claim": "The pain is exacerbated by movement.",
+      "scores": {
+        "entailment": 0.9974,
+        "neutral": 0.0021,
+        "contradiction": 0.9722
+      },
+      "support_evidence": "Patient: I'm 58 and female. The pain started a few weeks ago, and it's been constant. It really hurts when I try to move my arm or lift anything, and I can't even raise it over my head. It's especially bad when I try to sleep on my left side, and it's always there, even when I'm not doing anything. I've been taking Tylenol, and that helps a little, but the pain is still pretty bad most of the time.",
+      "contradiction_evidence": "Doctor: Has the patient noticed any specific activities or positions that make the pain better or worse? For example, does the pain improve when the arm is resting or when using the shoulder in certain ways?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain is exacerbated by movement.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The pain is constant, dull, and aching, and is exacerbated by movement, lifting, or sleeping on the left side."
+    },
+    {
+      "claim": "The pain is exacerbated by lifting.",
+      "scores": {
+        "entailment": 0.9956,
+        "neutral": 0.0037,
+        "contradiction": 0.7462
+      },
+      "support_evidence": "Patient: I'm 58 and female. The pain started a few weeks ago, and it's been constant. It really hurts when I try to move my arm or lift anything, and I can't even raise it over my head. It's especially bad when I try to sleep on my left side, and it's always there, even when I'm not doing anything. I've been taking Tylenol, and that helps a little, but the pain is still pretty bad most of the time.",
+      "contradiction_evidence": "Doctor: Has the patient noticed any specific activities or positions that make the pain better or worse? For example, does the pain improve when the arm is resting or when using the shoulder in certain ways?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain is exacerbated by lifting.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The pain is constant, dull, and aching, and is exacerbated by movement, lifting, or sleeping on the left side."
+    },
+    {
+      "claim": "The pain is exacerbated by sleeping on the left side.",
+      "scores": {
+        "entailment": 0.999,
+        "neutral": 0.0006,
+        "contradiction": 0.0148
+      },
+      "support_evidence": "Patient: I'm 58 and female. The pain started a few weeks ago, and it's been constant. It really hurts when I try to move my arm or lift anything, and I can't even raise it over my head. It's especially bad when I try to sleep on my left side, and it's always there, even when I'm not doing anything. I've been taking Tylenol, and that helps a little, but the pain is still pretty bad most of the time.",
+      "contradiction_evidence": "Doctor: Could you please describe if there is any numbness, tingling, or weakness in your arm or hand? Also, have you noticed any changes in your ability to grip objects or perform daily tasks with your left hand?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain is exacerbated by sleeping on the left side.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The pain is constant, dull, and aching, and is exacerbated by movement, lifting, or sleeping on the left side."
+    },
+    {
+      "claim": "The patient has been taking Tylenol, which provides some relief, but the pain is still present.",
+      "scores": {
+        "entailment": 0.9992,
+        "neutral": 0.0006,
+        "contradiction": 0.0022
+      },
+      "support_evidence": "Patient: I'm 58 and female. The pain started a few weeks ago, and it's been constant. It really hurts when I try to move my arm or lift anything, and I can't even raise it over my head. It's especially bad when I try to sleep on my left side, and it's always there, even when I'm not doing anything. I've been taking Tylenol, and that helps a little, but the pain is still pretty bad most of the time.",
+      "contradiction_evidence": "Doctor: Has the patient experienced any recent upper respiratory infections or systemic symptoms such as fatigue, weight loss, fever, or night sweats that could suggest an inflammatory or autoimmune etiology?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has been taking Tylenol, which provides some relief, but the pain is still present.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "The patient has been taking Tylenol, which provides some relief, but the pain is still present.",
+      "level": "sentence"
+    },
+    {
+      "claim": "No swelling, redness, numbness, or tingling is reported.",
+      "scores": {
+        "entailment": 0.9991,
+        "neutral": 0.0002,
+        "contradiction": 0.9777
+      },
+      "support_evidence": "Patient: The pain is more of a dull, aching sensation, and it doesn't really radiate anywhere else. I don't have any swelling, redness, numbness, or tingling. I haven't had any recent trauma or injury to the shoulder, and I haven't had any prior treatments for this specific issue before today.",
+      "contradiction_evidence": "Doctor: Could you describe the nature of the shoulder pain (e.g., sharp, dull, burning) and whether it radiates to other areas? Have you noticed any swelling, redness, numbness, or tingling in the shoulder or arm? Have you had any recent trauma or injury to the shoulder, and have you undergone any prior treatments or interventions for this issue?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "No swelling, redness, numbness, or tingling is reported.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "No swelling, redness, numbness, or tingling is reported.",
+      "level": "sentence"
+    },
+    {
+      "claim": "No prior trauma or injury to the shoulder, and no prior treatments for this issue.",
+      "scores": {
+        "entailment": 0.9944,
+        "neutral": 0.0021,
+        "contradiction": 0.5582
+      },
+      "support_evidence": "Doctor: Could you describe the nature of the shoulder pain (e.g., sharp, dull, burning) and whether it radiates to other areas? Have you noticed any swelling, redness, numbness, or tingling in the shoulder or arm? Have you had any recent trauma or injury to the shoulder, and have you undergone any prior treatments or interventions for this issue?",
+      "contradiction_evidence": "Patient: The pain is more of a dull, aching sensation, and it doesn't really radiate anywhere else. I don't have any swelling, redness, numbness, or tingling. I haven't had any recent trauma or injury to the shoulder, and I haven't had any prior treatments for this specific issue before today.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "No prior trauma or injury to the shoulder, and no prior treatments for this issue.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "No prior trauma or injury to the shoulder, and no prior treatments for this issue.",
+      "level": "sentence"
+    },
+    {
+      "claim": "No stiffness in the morning or after periods of inactivity.",
+      "scores": {
+        "entailment": 0.9991,
+        "neutral": 0.0004,
+        "contradiction": 0.9816
+      },
+      "support_evidence": "Doctor: Have you noticed any stiffness in the shoulder, especially in the morning or after periods of inactivity?",
+      "contradiction_evidence": "Patient: No, there hasn't been any recent repetitive overhead activities or trauma to my left shoulder that I can think of. I’ve been doing a lot with renovating my basement, but I don’t remember hitting it or doing anything that would cause direct injury. It just started hurting a few weeks ago, and I can’t figure out exactly what caused it.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "No stiffness in the morning or after periods of inactivity.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "No stiffness in the morning or after periods of inactivity.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The pain does not improve with rest or specific positions.",
+      "scores": {
+        "entailment": 0.9988,
+        "neutral": 0.0009,
+        "contradiction": 0.0679
+      },
+      "support_evidence": "Patient: The pain doesn't really get better with rest or any specific position—it's just always there. The only thing that helps a little is taking Tylenol, but even then, it's still uncomfortable, especially when I try to sleep on my side or reach for something.",
+      "contradiction_evidence": "Doctor: Has the patient experienced any recent upper respiratory infections or systemic symptoms such as fatigue, weight loss, fever, or night sweats that could suggest an inflammatory or autoimmune etiology?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain does not improve with rest or specific positions.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 6,
+      "sentence": "The pain does not improve with rest or specific positions.",
+      "level": "sentence"
+    },
+    {
+      "claim": "No recent upper respiratory infections or systemic symptoms.",
+      "scores": {
+        "entailment": 0.9981,
+        "neutral": 0.0013,
+        "contradiction": 0.0564
+      },
+      "support_evidence": "Patient: No, I don't think I've had any recent upper respiratory infections or illnesses, and I haven't had any systemic symptoms like fatigue, weight loss, fever, or night sweats. It's just been this constant shoulder pain, nothing else.",
+      "contradiction_evidence": "Patient: The pain is more of a dull, aching sensation, and it doesn't really radiate anywhere else. I don't have any swelling, redness, numbness, or tingling. I haven't had any recent trauma or injury to the shoulder, and I haven't had any prior treatments for this specific issue before today.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "No recent upper respiratory infections or systemic symptoms.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 7,
+      "sentence": "No recent upper respiratory infections or systemic symptoms.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 13,
+      "exempt": 1
+    },
+    "num_claims": 13,
+    "num_kept": 13,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient reports engaging in recent basement renovation activities, but denies experiencing any direct injury or trauma to the left shoulder.",
+      "evidence": "Patient: No, there hasn't been any recent repetitive overhead activities or trauma to my left shoulder that I can think of. I’ve been doing a lot with renovating my basement, but I don’t remember hitting it or doing anything that would cause direct injury. It just started hurting a few weeks ago, and I can’t figure out exactly what caused it.",
+      "section": "subjective",
+      "candidate": "I’ve been doing a lot with renovating my basement, but I don’t remember hitting it or doing anything that would cause direct injury."
+    },
+    {
+      "statement": "The patient will undergo an MRI to further evaluate the left shoulder.",
+      "evidence": "Patient: I haven't had any imaging studies done yet, but the doctor mentioned that the X-ray didn't show any fractures or bone issues. They're going to order an MRI to check further, though.",
+      "section": "objective",
+      "candidate": "They're going to order an MRI to check further, though."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I'm 58 and female.",
+      "speaker": "Patient",
+      "coverage": 0.188,
+      "nearest_so_sentence": "No stiffness in the morning or after periods of inactivity.",
+      "statement": "The patient is a 58-year-old female.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 58 and female. The pain started a few weeks ago, and it's been constant. It really hurts when I try to move my arm or lift anything, and I can't even raise it over my head. It's especially bad when I try to sleep on my left side, and it's always there, even when I'm not doing anything. I've been taking Tylenol, and that helps a little, but the pain is still pretty bad most of the time.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0007
+      },
+      "duplicate_entailment": 0.999,
+      "duplicate_similarity": 0.6679
+    },
+    {
+      "candidate": "I'm 58 years old and female.",
+      "speaker": "Patient",
+      "coverage": 0.201,
+      "nearest_so_sentence": "No stiffness in the morning or after periods of inactivity.",
+      "statement": "The patient is 58 years old and female.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 58 years old and female. I'm here because I've been having left shoulder pain for a few weeks now. It's been really bothering me, especially when I try to move my arm or sleep on my side.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.008
+      },
+      "duplicate_entailment": 0.9993,
+      "duplicate_similarity": 0.6519
+    },
+    {
+      "candidate": "This feels different.",
+      "speaker": "Patient",
+      "coverage": 0.2659,
+      "nearest_so_sentence": "The pain does not improve with rest or specific positions.",
+      "statement": "The patient reports that the current episode of shoulder pain feels different from any previous episodes.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: No, I don't think I've had any previous episodes of shoulder pain like this before. I've had aches and pains here and there because I'm active, but nothing like this—nothing that's been this constant or this limiting. This feels different.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.3395
+      }
+    },
+    {
+      "candidate": "It's making everyday tasks harder, especially reaching or lifting anything.",
+      "speaker": "Patient",
+      "coverage": 0.3532,
+      "nearest_so_sentence": "The pain does not improve with rest or specific positions.",
+      "statement": "The patient reports that everyday tasks, particularly reaching or lifting, have become more challenging due to the condition.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The pain is more of a dull, aching sensation, and it doesn't really radiate anywhere else. I don't have any swelling, redness, numbness, or tingling. I haven't had any recent trauma or injury to the shoulder, and I haven't had any prior treatments for this specific issue before today.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.0016
+      },
+      "duplicate_entailment": 0.998,
+      "duplicate_similarity": 0.4495
+    },
+    {
+      "candidate": "I’ve been doing a lot with renovating my basement, but I don’t remember hitting it or doing anything that would cause direct injury.",
+      "speaker": "Patient",
+      "coverage": 0.3572,
+      "nearest_so_sentence": "No prior trauma or injury to the shoulder, and no prior treatments for this issue.",
+      "statement": "The patient reports engaging in recent basement renovation activities, but denies experiencing any direct injury or trauma to the left shoulder.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: No, there hasn't been any recent repetitive overhead activities or trauma to my left shoulder that I can think of. I’ve been doing a lot with renovating my basement, but I don’t remember hitting it or doing anything that would cause direct injury. It just started hurting a few weeks ago, and I can’t figure out exactly what caused it.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.2113
+      },
+      "duplicate_entailment": 0.0048,
+      "duplicate_similarity": 0.6477,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 2,
+        "perplexity": 19.0,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "They're going to order an MRI to check further, though.",
+      "speaker": "Patient",
+      "coverage": 0.3978,
+      "nearest_so_sentence": "No swelling, redness, numbness, or tingling is reported.",
+      "statement": "The patient will undergo an MRI to further evaluate the left shoulder.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I haven't had any imaging studies done yet, but the doctor mentioned that the X-ray didn't show any fractures or bone issues. They're going to order an MRI to check further, though.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9951,
+        "contradiction": 0.001
+      },
+      "duplicate_entailment": 0.0024,
+      "duplicate_similarity": 0.7138,
+      "insertion": {
+        "section": "objective",
+        "line_index": 0,
+        "perplexity": null,
+        "removed_placeholder": [
+          "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+        ]
+      }
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 38,
+    "num_covered": 32,
+    "num_flagged": 6,
+    "num_not_checked_cap": 0,
+    "num_added": 2
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "This feels different.",
+        "statement": "The patient reports that the current episode of shoulder pain feels different from any previous episodes.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9997,
+          "contradiction": 0.3395
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 55.1,
+  "ap_unchanged": true,
+  "conversation": "Patient: I'm 58 years old and female. I'm here because I've been having left shoulder pain for a few weeks now. It's been really bothering me, especially when I try to move my arm or sleep on my side.\nDoctor: Could you please provide your age, gender, and describe the nature of your left shoulder pain, including when it started, its intensity, and any associated symptoms?\nPatient: I'm 58 and female. The pain started a few weeks ago, and it's been constant. It really hurts when I try to move my arm or lift anything, and I can't even raise it over my head. It's especially bad when I try to sleep on my left side, and it's always there, even when I'm not doing anything. I've been taking Tylenol, and that helps a little, but the pain is still pretty bad most of the time.\nDoctor: Could you describe the nature of the shoulder pain (e.g., sharp, dull, burning) and whether it radiates to other areas? Have you noticed any swelling, redness, numbness, or tingling in the shoulder or arm? Have you had any recent trauma or injury to the shoulder, and have you undergone any prior treatments or interventions for this issue?\nPatient: The pain is more of a dull, aching sensation, and it doesn't really radiate anywhere else. I don't have any swelling, redness, numbness, or tingling. I haven't had any recent trauma or injury to the shoulder, and I haven't had any prior treatments for this specific issue before today.\nDoctor: Have you experienced any stiffness in the shoulder, particularly in the morning or after periods of inactivity? If so, how long does it last?\nPatient: I don't really have stiffness in the morning or after being inactive, but the pain is always there no matter what I do. It doesn't get better with rest or anything like that.\nDoctor: Could you please describe any physical examination findings related to your shoulder, such as range of motion, strength, or signs of inflammation?\nPatient: I can't really describe the physical exam findings because I wasn't there for it, but the doctor said there's some tenderness on my shoulder and I have limited movement. I can't raise my arm over my head at all because it hurts too much.\nDoctor: Have you undergone any imaging studies such as X-rays, MRI, or ultrasound of the left shoulder? If so, please provide the results or a summary of what was found.\nPatient: I haven't had any imaging studies done yet, but the doctor mentioned that the X-ray didn't show any fractures or bone issues. They're going to order an MRI to check further, though.\nDoctor: Have you experienced any systemic symptoms such as fatigue, weight loss, or fever alongside the shoulder pain?\nPatient: No, I haven't experienced any fatigue, weight loss, or fever with the shoulder pain. It's just been the pain in my left shoulder, nothing else.\nDoctor: Has the patient experienced any previous episodes of shoulder pain or injury, and if so, what was the nature and outcome of those episodes?\nPatient: No, I don't think I've had any previous episodes of shoulder pain like this before. I've had aches and pains here and there because I'm active, but nothing like this—nothing that's been this constant or this limiting. This feels different.\nDoctor: Have you noticed any stiffness in the shoulder, especially in the morning or after periods of inactivity?\nPatient: No, I don't really have stiffness in the morning or after being inactive, but the pain is always there no matter what I do. It doesn't get better with rest or anything like that.\nDoctor: Has the patient experienced any recent repetitive overhead activities or trauma to the left shoulder that could contribute to musculoskeletal pathology?\nPatient: No, there hasn't been any recent repetitive overhead activities or trauma to my left shoulder that I can think of. I’ve been doing a lot with renovating my basement, but I don’t remember hitting it or doing anything that would cause direct injury. It just started hurting a few weeks ago, and I can’t figure out exactly what caused it.\nDoctor: Has the patient noticed any specific activities or positions that make the pain better or worse? For example, does the pain improve when the arm is resting or when using the shoulder in certain ways?\nPatient: The pain doesn't really get better with rest or any specific position—it's just always there. The only thing that helps a little is taking Tylenol, but even then, it's still uncomfortable, especially when I try to sleep on my side or reach for something.\nDoctor: Have you had any recent upper respiratory infections or illnesses, or any systemic symptoms like fatigue, weight loss, fever, or night sweats?\nPatient: No, I don't think I've had any recent upper respiratory infections or illnesses, and I haven't had any systemic symptoms like fatigue, weight loss, fever, or night sweats. It's just been this constant shoulder pain, nothing else.\nDoctor: Has the patient experienced any clicking, popping, or catching sensations in the shoulder during movement?\nPatient: No, I haven't noticed any clicking, popping, or catching sensations in my shoulder during movement. It just hurts when I try to move it or put pressure on it, but there's no weird sounds or feelings like that.\nDoctor: Has the patient experienced any recent upper respiratory infections or systemic symptoms such as fatigue, weight loss, fever, or night sweats that could suggest an inflammatory or autoimmune etiology?\nPatient: No, I don't think I've had any recent upper respiratory infections or illnesses, and I haven't had any systemic symptoms like fatigue, weight loss, fever, or night sweats. It's just been this constant shoulder pain, nothing else.\nDoctor: Could you please describe if there is any numbness, tingling, or weakness in your arm or hand? Also, have you noticed any changes in your ability to grip objects or perform daily tasks with your left hand?\nPatient: No, I haven't had any numbness, tingling, or weakness in my arm or hand. I can still grip things okay, but it's just really painful when I try to use my left arm for anything. It's making everyday tasks harder, especially reaching or lifting anything.",
+  "reference_so": {
+    "subjective": "Basic information: 58 years old, female, chief complaint: left shoulder pain for a few weeks, especially when moving the arm or sleeping on the side.\n\nHistory of present illness: The patient is a 58-year-old female with a chief complaint of left shoulder pain for a few weeks. The pain is constant and worsens with arm movement or sleeping on the left side. The patient reports difficulty raising the arm over the head and lifting objects. The pain is partially relieved by Tylenol but remains significant most of the time. The pain is more of a dull, aching sensation, and it doesn't really radiate anywhere else. The patient also mentions that the pain is always present, regardless of activity or rest, and there is no improvement with rest. The patient has not experienced any previous episodes of shoulder pain like this before. She has had aches and pains here and there because she is active, but nothing like this—nothing that's been this constant or this limiting. This feels different. The patient denies morning stiffness or stiffness after periods of inactivity. The pain is constant and does not improve with rest. The patient has been renovating her basement but does not recall any direct injury or repetitive overhead activities that could have caused the pain. The patient also denies clicking, popping, or catching sensations in the shoulder during movement. The patient denies systemic symptoms such as fatigue, weight loss, fever, or night sweats. The patient also denies numbness, tingling, or weakness in the arm or hand, though it is painful when using the left arm for tasks such as reaching or lifting.\n\nPast history: No recent trauma or injury to the shoulder; no prior treatments for this specific issue. No history of systemic autoimmune diseases or rheumatologic conditions in the patient or first-degree relatives.",
+    "objective": "Physical examination: Physical examination reveals tenderness over the left shoulder, with limited range of motion, particularly in abduction and elevation of the arm. The patient is unable to raise the arm over the head due to pain. No signs of swelling, redness, numbness, or tingling are present. No clicking, popping, or catching sensations are noted during movement.\n\nInvestigations: No laboratory or imaging results available at this time. The patient has not had any imaging studies done yet, but the doctor mentioned that the X-ray didn't show any fractures or bone issues. They're going to order an MRI to check further, though."
+  }
+}

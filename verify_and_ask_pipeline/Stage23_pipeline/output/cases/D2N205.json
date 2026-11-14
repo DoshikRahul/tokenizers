@@ -1,0 +1,725 @@
+{
+  "case_id": "D2N205",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient is a 58-year-old female with a history of lung cancer, currently undergoing chemotherapy with cisplatin and etoposide.\n* She reports worsening shortness of breath over the weekend, which is severe and interferes with her daily activities.\n* She also reports pain when swallowing, which is constant and worsens in her chest area.\n* She has experienced weight loss and fatigue, but no chest pain.\n* She has been taking Zofran for nausea and has had some relief.\n* She has not had an endoscopic evaluation of the esophagus or esophageal imaging studies such as a barium swallow.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient is a 58-year-old female with a history of lung cancer, currently undergoing chemotherapy with cisplatin and etoposide.\n* She reports worsening shortness of breath over the weekend, which is severe and interferes with her daily activities.\n* She also reports pain when swallowing, which is constant and worsens in her chest area.\n* She has experienced weight loss and fatigue, but no chest pain.\n* She has been taking Zofran for nausea and has had some relief.\n* She has not had an endoscopic evaluation of the esophagus or esophageal imaging studies such as a barium swallow.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* Patient is a 58-year-old female with a history of lung cancer, currently undergoing chemotherapy with cisplatin and etoposide.\n* The patient reports no swelling in their legs.\n* The patient reports that they are unaware of a family history of cancer or respiratory conditions.\n* She reports worsening shortness of breath over the weekend, which is severe and interferes with her daily activities.\n* She also reports pain when swallowing, which is constant and worsens in her chest area.\n* She has experienced weight loss and fatigue, but no chest pain.\n* She has been taking Zofran for nausea and has had some relief.\n* She has not had an endoscopic evaluation of the esophagus or esophageal imaging studies such as a barium swallow.\n* The patient expresses hope that lidocaine will help with the issue.",
+    "objective": "* The patient's lung examination revealed crackles, which may be indicative of fluid.\n* The patient's neck examination revealed no swollen lymph nodes."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has worsening shortness of breath and pain when swallowing, which may be related to radiation-induced lung injury and esophagitis.\n* The patient has not had an endoscopic evaluation or esophageal imaging studies to confirm the presence of esophagitis or other structural abnormalities.",
+    "plan": "* The doctor will consider ordering an endoscopic evaluation of the esophagus and esophageal imaging studies such as a barium swallow to assess for structural abnormalities or confirm the presence of esophagitis.\n* The patient will continue to take lidocaine for pain relief and will be monitored for further worsening of symptoms.\n* The doctor will consider adjusting the chemotherapy regimen or adding other medications to manage the patient's symptoms."
+  },
+  "stage2_audit": [
+    {
+      "claim": "The patient is a 58-year-old female.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.0006
+      },
+      "support_evidence": "Patient: I'm 58 years old, and I'm female. I'm here because I've been having some shortness of breath and pain when I swallow, and I wanted to check in about how I'm doing with my treatment for lung cancer.",
+      "contradiction_evidence": "Patient: The shortness of breath has been getting worse over the weekend, and it's pretty bad now—I can't even walk down the street without feeling out of breath. The swallowing pain started more recently, and it hurts every time I swallow, but food doesn't get stuck. I don't have chest pain, but I have been losing some weight and feeling more tired than usual. I'm on chemotherapy with a combination of drugs, and my last dose was a few days ago. I had some nausea and fatigue from it, but the medicine you gave me helped with the nausea.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient is a 58-year-old female.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 58-year-old female with a history of lung cancer, currently undergoing chemotherapy with cisplatin and etoposide."
+    },
+    {
+      "claim": "The patient has a history of lung cancer.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0002,
+        "contradiction": 0.0051
+      },
+      "support_evidence": "Patient: I don't have any significant past medical history other than the lung cancer diagnosis. I don't have any allergies, and I don't recall any surgeries. I don't know much about my family history, but I don't think there's a history of cancer or respiratory issues on my side.",
+      "contradiction_evidence": "Patient: The shortness of breath has been getting worse over the weekend, and it's pretty bad now—I can't even walk down the street without feeling out of breath. The swallowing pain started more recently, and it hurts every time I swallow, but food doesn't get stuck. I don't have chest pain, but I have been losing some weight and feeling more tired than usual. I'm on chemotherapy with a combination of drugs, and my last dose was a few days ago. I had some nausea and fatigue from it, but the medicine you gave me helped with the nausea.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has a history of lung cancer.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 58-year-old female with a history of lung cancer, currently undergoing chemotherapy with cisplatin and etoposide."
+    },
+    {
+      "claim": "The patient is currently undergoing chemotherapy.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0003,
+        "contradiction": 0.9869
+      },
+      "support_evidence": "Patient: The shortness of breath has been getting worse over the weekend, and it's pretty bad now—I can't even walk down the street without feeling out of breath. The swallowing pain started more recently, and it hurts every time I swallow, but food doesn't get stuck. I don't have chest pain, but I have been losing some weight and feeling more tired than usual. I'm on chemotherapy with a combination of drugs, and my last dose was a few days ago. I had some nausea and fatigue from it, but the medicine you gave me helped with the nausea.",
+      "contradiction_evidence": "Patient: The chest X-ray showed mild radiation pneumonitis, which is inflammation of the lungs from the radiation treatment. The doctor mentioned there might be some fluid in my lungs, but he didn't specifically say there was a pleural effusion. I don't know the exact details of the imaging, but he said it's causing some of the shortness of breath and the pain when I swallow.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient is currently undergoing chemotherapy.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 58-year-old female with a history of lung cancer, currently undergoing chemotherapy with cisplatin and etoposide."
+    },
+    {
+      "claim": "The patient is undergoing chemotherapy with cisplatin.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.8613
+      },
+      "support_evidence": "Patient: I'm on a combination of cisplatin and etoposide. I don't know the exact dosages, but I had my last dose a few days ago. I had some nausea and fatigue from it, but the Zofran you prescribed helped with the nausea.",
+      "contradiction_evidence": "Patient: My vitals are normal, and my pulse ox is okay. The doctor checked my neck and didn't find any swollen lymph nodes. My heart sounds were normal, and when he listened to my lungs, he heard some crackles, which he said might be from fluid. On my chest, he saw some redness, maybe from the radiation. I didn't have any swelling in my legs. He mentioned I have some inflammation in my lungs from the radiation, which is causing the shortness of breath and the pain when I swallow.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient is undergoing chemotherapy with cisplatin.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 58-year-old female with a history of lung cancer, currently undergoing chemotherapy with cisplatin and etoposide."
+    },
+    {
+      "claim": "The patient is undergoing chemotherapy with etoposide.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.8616
+      },
+      "support_evidence": "Patient: I'm on a combination of cisplatin and etoposide. I don't know the exact dosages, but I had my last dose a few days ago. I had some nausea and fatigue from it, but the Zofran you prescribed helped with the nausea.",
+      "contradiction_evidence": "Patient: My vitals are normal, and my pulse ox is okay. The doctor checked my neck and didn't find any swollen lymph nodes. My heart sounds were normal, and when he listened to my lungs, he heard some crackles, which he said might be from fluid. On my chest, he saw some redness, maybe from the radiation. I didn't have any swelling in my legs. He mentioned I have some inflammation in my lungs from the radiation, which is causing the shortness of breath and the pain when I swallow.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient is undergoing chemotherapy with etoposide.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 58-year-old female with a history of lung cancer, currently undergoing chemotherapy with cisplatin and etoposide."
+    },
+    {
+      "claim": "She reports worsening shortness of breath over the weekend, which is severe and interferes with her daily activities.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0004,
+        "contradiction": 0.9975
+      },
+      "support_evidence": "Patient: The shortness of breath has been getting worse over the weekend, and it's pretty bad now—I can't even walk down the street without feeling out of breath. The swallowing pain started more recently, and it hurts every time I swallow, but food doesn't get stuck. I don't have chest pain, but I have been losing some weight and feeling more tired than usual. I'm on chemotherapy with a combination of drugs, and my last dose was a few days ago. I had some nausea and fatigue from it, but the medicine you gave me helped with the nausea.",
+      "contradiction_evidence": "Patient: No, I haven't noticed any changes in my voice or hoarseness, and I don't have trouble breathing when lying down. The main issue is the pain when I swallow, which is pretty uncomfortable but hasn't gotten worse in that way. I just hope it's something that the lidocaine can help with.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She reports worsening shortness of breath over the weekend, which is severe and interferes with her daily activities.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "She reports worsening shortness of breath over the weekend, which is severe and interferes with her daily activities.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She also reports pain when swallowing, which is constant and worsens in her chest area.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0002,
+        "contradiction": 0.9956
+      },
+      "support_evidence": "Patient: The chest X-ray showed mild radiation pneumonitis, which is inflammation of the lungs from the radiation treatment. The doctor mentioned there might be some fluid in my lungs, but he didn't specifically say there was a pleural effusion. I don't know the exact details of the imaging, but he said it's causing some of the shortness of breath and the pain when I swallow.",
+      "contradiction_evidence": "Patient: The shortness of breath has been getting worse over the weekend, and it's pretty bad now—I can't even walk down the street without feeling out of breath. The swallowing pain started more recently, and it hurts every time I swallow, but food doesn't get stuck. I don't have chest pain, but I have been losing some weight and feeling more tired than usual. I'm on chemotherapy with a combination of drugs, and my last dose was a few days ago. I had some nausea and fatigue from it, but the medicine you gave me helped with the nausea.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She also reports pain when swallowing, which is constant and worsens in her chest area.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "She also reports pain when swallowing, which is constant and worsens in her chest area.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has experienced weight loss and fatigue, but no chest pain.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.9987
+      },
+      "support_evidence": "Patient: The shortness of breath has been getting worse over the weekend, and it's pretty bad now—I can't even walk down the street without feeling out of breath. The swallowing pain started more recently, and it hurts every time I swallow, but food doesn't get stuck. I don't have chest pain, but I have been losing some weight and feeling more tired than usual. I'm on chemotherapy with a combination of drugs, and my last dose was a few days ago. I had some nausea and fatigue from it, but the medicine you gave me helped with the nausea.",
+      "contradiction_evidence": "Patient: The dysphagia has definitely gotten worse since starting the radiation therapy. The pain is constant every time I swallow, no matter what I eat or drink. It hurts more in my chest area, and it doesn't feel like it's getting better. It's been really hard to eat and drink because of it.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has experienced weight loss and fatigue, but no chest pain.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "She has experienced weight loss and fatigue, but no chest pain.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has been taking Zofran for nausea and has had some relief.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0005,
+        "contradiction": 0.0036
+      },
+      "support_evidence": "Patient: I'm on a combination of cisplatin and etoposide. I don't know the exact dosages, but I had my last dose a few days ago. I had some nausea and fatigue from it, but the Zofran you prescribed helped with the nausea.",
+      "contradiction_evidence": "Patient: No, I don't think an endoscopic evaluation has been done yet. The doctor hasn't mentioned anything about looking inside my esophagus, so I guess that's something that might need to be done if the pain doesn't get better with the lidocaine. I just hope it's not something more serious.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has been taking Zofran for nausea and has had some relief.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "She has been taking Zofran for nausea and has had some relief.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has not had an endoscopic evaluation of the esophagus or esophageal imaging studies such as a barium swallow.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0005,
+        "contradiction": 0.0082
+      },
+      "support_evidence": "Doctor: Has the patient undergone any endoscopic evaluation or esophageal imaging studies, such as a barium swallow or esophagram, to evaluate for structural abnormalities or signs of esophagitis?",
+      "contradiction_evidence": "Doctor: Has an endoscopic evaluation of the esophagus been performed to confirm the presence of esophagitis or other structural abnormalities?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has not had an endoscopic evaluation of the esophagus or esophageal imaging studies such as a barium swallow.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "She has not had an endoscopic evaluation of the esophagus or esophageal imaging studies such as a barium swallow.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 10,
+      "exempt": 1
+    },
+    "num_claims": 10,
+    "num_kept": 10,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient reports no swelling in their legs.",
+      "evidence": "Patient: My vitals are normal, and my pulse ox is okay. The doctor checked my neck and didn't find any swollen lymph nodes. My heart sounds were normal, and when he listened to my lungs, he heard some crackles, which he said might be from fluid. On my chest, he saw some redness, maybe from the radiation. I didn't have any swelling in my legs. He mentioned I have some inflammation in my lungs from the radiation, which is causing the shortness of breath and the pain when I swallow.",
+      "section": "subjective",
+      "candidate": "I didn't have any swelling in my legs."
+    },
+    {
+      "statement": "The patient expresses hope that lidocaine will help with the issue.",
+      "evidence": "Patient: No, I haven't noticed any changes in my voice or hoarseness, and I don't have trouble breathing when lying down. The main issue is the pain when I swallow, which is pretty uncomfortable but hasn't gotten worse in that way. I just hope it's something that the lidocaine can help with.",
+      "section": "subjective",
+      "candidate": "I just hope it's something that the lidocaine can help with."
+    },
+    {
+      "statement": "The patient reports that they are unaware of a family history of cancer or respiratory conditions.",
+      "evidence": "Patient: I don't have any significant past medical history other than the lung cancer diagnosis. I don't have any allergies, and I don't recall any surgeries. I don't know much about my family history, but I don't think there's a history of cancer or respiratory issues on my side.",
+      "section": "subjective",
+      "candidate": "I don't know much about my family history, but I don't think there's a history of cancer or respiratory issues on my side."
+    },
+    {
+      "statement": "The patient's neck examination revealed no swollen lymph nodes.",
+      "evidence": "Patient: My vitals are normal, and my pulse ox is okay. The doctor checked my neck and didn't find any swollen lymph nodes. My heart sounds were normal, and when he listened to my lungs, he heard some crackles, which he said might be from fluid. On my chest, he saw some redness, maybe from the radiation. I didn't have any swelling in my legs. He mentioned I have some inflammation in my lungs from the radiation, which is causing the shortness of breath and the pain when I swallow.",
+      "section": "objective",
+      "candidate": "The doctor checked my neck and didn't find any swollen lymph nodes."
+    },
+    {
+      "statement": "The patient's lung examination revealed crackles, which may be indicative of fluid.",
+      "evidence": "Patient: My vitals are normal, and my pulse ox is okay. The doctor checked my neck and didn't find any swollen lymph nodes. My heart sounds were normal, and when he listened to my lungs, he heard some crackles, which he said might be from fluid. On my chest, he saw some redness, maybe from the radiation. I didn't have any swelling in my legs. He mentioned I have some inflammation in my lungs from the radiation, which is causing the shortness of breath and the pain when I swallow.",
+      "section": "objective",
+      "candidate": "My heart sounds were normal, and when he listened to my lungs, he heard some crackles, which he said might be from fluid."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I'm 58 years old, and I'm female.",
+      "speaker": "Patient",
+      "coverage": 0.1454,
+      "nearest_so_sentence": "Patient is a 58-year-old female with a history of lung cancer, currently undergoing chemotherapy with cisplatin and etoposide.",
+      "statement": "The patient is 58 years old and female.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 58 years old, and I'm female. I'm here because I've been having some shortness of breath and pain when I swallow, and I wanted to check in about how I'm doing with my treatment for lung cancer.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9973,
+        "contradiction": 0.0012
+      },
+      "duplicate_entailment": 0.9991,
+      "duplicate_similarity": 0.5089
+    },
+    {
+      "candidate": "My vitals are normal, and my pulse ox is okay.",
+      "speaker": "Patient",
+      "coverage": 0.2165,
+      "nearest_so_sentence": "She also reports pain when swallowing, which is constant and worsens in her chest area.",
+      "statement": "The patient reports that their vital signs are normal, and their pulse oximetry reading is within normal limits.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: My vitals are normal, and my pulse ox is okay. The doctor checked my neck and didn't find any swollen lymph nodes. My heart sounds were normal, and when he listened to my lungs, he heard some crackles, which he said might be from fluid. On my chest, he saw some redness, maybe from the radiation. I didn't have any swelling in my legs. He mentioned I have some inflammation in my lungs from the radiation, which is causing the shortness of breath and the pain when I swallow.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.9967
+      }
+    },
+    {
+      "candidate": "I just hope it's not something more serious.",
+      "speaker": "Patient",
+      "coverage": 0.267,
+      "nearest_so_sentence": "She reports worsening shortness of breath over the weekend, which is severe and interferes with her daily activities.",
+      "statement": "The patient expresses concern that the diagnosis may be more serious.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I don't think any endoscopic evaluation or esophageal imaging studies like a barium swallow have been done yet. The doctor hasn't mentioned anything about looking inside my esophagus or doing any imaging for it, so I guess that's something that might need to be done if the pain doesn't get better with the lidocaine. I just hope it's not something more serious.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.034
+      },
+      "duplicate_entailment": 0.9808,
+      "duplicate_similarity": 0.4223
+    },
+    {
+      "candidate": "I just hope it's not something more serious.",
+      "speaker": "Patient",
+      "coverage": 0.267,
+      "nearest_so_sentence": "She reports worsening shortness of breath over the weekend, which is severe and interferes with her daily activities.",
+      "statement": "The patient expresses concern that the condition may be more serious.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I don't think any endoscopic evaluation or esophageal imaging studies like a barium swallow have been done yet. The doctor hasn't mentioned anything about looking inside my esophagus or doing any imaging for it, so I guess that's something that might need to be done if the pain doesn't get better with the lidocaine. I just hope it's not something more serious.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9989,
+        "contradiction": 0.06
+      },
+      "duplicate_entailment": 0.9885,
+      "duplicate_similarity": 0.4106
+    },
+    {
+      "candidate": "I just hope it's not something more serious.",
+      "speaker": "Patient",
+      "coverage": 0.267,
+      "nearest_so_sentence": "She reports worsening shortness of breath over the weekend, which is severe and interferes with her daily activities.",
+      "statement": "The patient expresses concern that the condition may be more serious.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I don't think any endoscopic evaluation or esophageal imaging studies like a barium swallow have been done yet. The doctor hasn't mentioned anything about looking inside my esophagus or doing any imaging for it, so I guess that's something that might need to be done if the pain doesn't get better with the lidocaine. I just hope it's not something more serious.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9989,
+        "contradiction": 0.06
+      },
+      "duplicate_entailment": 0.9885,
+      "duplicate_similarity": 0.4106
+    },
+    {
+      "candidate": "I just hope it's not something more serious.",
+      "speaker": "Patient",
+      "coverage": 0.267,
+      "nearest_so_sentence": "She reports worsening shortness of breath over the weekend, which is severe and interferes with her daily activities.",
+      "statement": "The patient expresses concern that the condition may be more serious.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I don't think any endoscopic evaluation or esophageal imaging studies like a barium swallow have been done yet. The doctor hasn't mentioned anything about looking inside my esophagus or doing any imaging for it, so I guess that's something that might need to be done if the pain doesn't get better with the lidocaine. I just hope it's not something more serious.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9989,
+        "contradiction": 0.06
+      },
+      "duplicate_entailment": 0.9885,
+      "duplicate_similarity": 0.4106
+    },
+    {
+      "candidate": "I just hope it's not something more serious.",
+      "speaker": "Patient",
+      "coverage": 0.267,
+      "nearest_so_sentence": "She reports worsening shortness of breath over the weekend, which is severe and interferes with her daily activities.",
+      "statement": "The patient expresses concern that the condition may be more serious.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I don't think any endoscopic evaluation or esophageal imaging studies like a barium swallow have been done yet. The doctor hasn't mentioned anything about looking inside my esophagus or doing any imaging for it, so I guess that's something that might need to be done if the pain doesn't get better with the lidocaine. I just hope it's not something more serious.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9989,
+        "contradiction": 0.06
+      },
+      "duplicate_entailment": 0.9885,
+      "duplicate_similarity": 0.4106
+    },
+    {
+      "candidate": "I just hope it's not something more serious.",
+      "speaker": "Patient",
+      "coverage": 0.267,
+      "nearest_so_sentence": "She reports worsening shortness of breath over the weekend, which is severe and interferes with her daily activities.",
+      "statement": "The patient expresses concern that the condition may be more serious.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I don't think any endoscopic evaluation or esophageal imaging studies like a barium swallow have been done yet. The doctor hasn't mentioned anything about looking inside my esophagus or doing any imaging for it, so I guess that's something that might need to be done if the pain doesn't get better with the lidocaine. I just hope it's not something more serious.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9989,
+        "contradiction": 0.06
+      },
+      "duplicate_entailment": 0.9885,
+      "duplicate_similarity": 0.4106
+    },
+    {
+      "candidate": "I just hope it's not something more serious.",
+      "speaker": "Patient",
+      "coverage": 0.267,
+      "nearest_so_sentence": "She reports worsening shortness of breath over the weekend, which is severe and interferes with her daily activities.",
+      "statement": "The patient expresses concern that the condition may be more serious.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I don't think any endoscopic evaluation or esophageal imaging studies like a barium swallow have been done yet. The doctor hasn't mentioned anything about looking inside my esophagus or doing any imaging for it, so I guess that's something that might need to be done if the pain doesn't get better with the lidocaine. I just hope it's not something more serious.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9989,
+        "contradiction": 0.06
+      },
+      "duplicate_entailment": 0.9885,
+      "duplicate_similarity": 0.4106
+    },
+    {
+      "candidate": "I didn't have any swelling in my legs.",
+      "speaker": "Patient",
+      "coverage": 0.2674,
+      "nearest_so_sentence": "She has experienced weight loss and fatigue, but no chest pain.",
+      "statement": "The patient reports no swelling in their legs.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: My vitals are normal, and my pulse ox is okay. The doctor checked my neck and didn't find any swollen lymph nodes. My heart sounds were normal, and when he listened to my lungs, he heard some crackles, which he said might be from fluid. On my chest, he saw some redness, maybe from the radiation. I didn't have any swelling in my legs. He mentioned I have some inflammation in my lungs from the radiation, which is causing the shortness of breath and the pain when I swallow.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0536
+      },
+      "duplicate_entailment": 0.6127,
+      "duplicate_similarity": 0.4398,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 1,
+        "perplexity": 19.39,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don't know the exact dosages, but I had my last dose a few days ago.",
+      "speaker": "Patient",
+      "coverage": 0.302,
+      "nearest_so_sentence": "She has been taking Zofran for nausea and has had some relief.",
+      "statement": "The patient reports having received chemotherapy recently, but is unable to provide exact dosages.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I'm on a combination of cisplatin and etoposide. I don't know the exact dosages, but I had my last dose a few days ago. I had some nausea and fatigue from it, but the Zofran you prescribed helped with the nausea.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.9418
+      }
+    },
+    {
+      "candidate": "I don't have any allergies, and I don't recall any surgeries.",
+      "speaker": "Patient",
+      "coverage": 0.3296,
+      "nearest_so_sentence": "She has not had an endoscopic evaluation of the esophagus or esophageal imaging studies such as a barium swallow.",
+      "statement": "The patient denies having any allergies and reports no prior surgeries.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't have any significant past medical history other than the lung cancer diagnosis. I don't have any allergies, and I don't recall any surgeries. I don't know much about my family history, but I don't think there's a history of cancer or respiratory issues on my side.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0133
+      },
+      "duplicate_entailment": 0.7297,
+      "duplicate_similarity": 0.5094
+    },
+    {
+      "candidate": "I just hope it's something that the lidocaine can help with.",
+      "speaker": "Patient",
+      "coverage": 0.34,
+      "nearest_so_sentence": "She has been taking Zofran for nausea and has had some relief.",
+      "statement": "The patient expresses hope that lidocaine will help with the issue.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: No, I haven't noticed any changes in my voice or hoarseness, and I don't have trouble breathing when lying down. The main issue is the pain when I swallow, which is pretty uncomfortable but hasn't gotten worse in that way. I just hope it's something that the lidocaine can help with.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0009
+      },
+      "duplicate_entailment": 0.0019,
+      "duplicate_similarity": 0.3974,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 7,
+        "perplexity": 18.84,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don't know much about my family history, but I don't think there's a history of cancer or respiratory issues on my side.",
+      "speaker": "Patient",
+      "coverage": 0.3405,
+      "nearest_so_sentence": "Patient is a 58-year-old female with a history of lung cancer, currently undergoing chemotherapy with cisplatin and etoposide.",
+      "statement": "The patient reports that they are unaware of a family history of cancer or respiratory conditions.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't have any significant past medical history other than the lung cancer diagnosis. I don't have any allergies, and I don't recall any surgeries. I don't know much about my family history, but I don't think there's a history of cancer or respiratory issues on my side.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.2013
+      },
+      "duplicate_entailment": 0.0006,
+      "duplicate_similarity": 0.3973,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 2,
+        "perplexity": 17.49,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "It's been really hard to eat and drink because of it.",
+      "speaker": "Patient",
+      "coverage": 0.3445,
+      "nearest_so_sentence": "She also reports pain when swallowing, which is constant and worsens in her chest area.",
+      "statement": "The patient reports that eating and drinking have been difficult due to dysphagia.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The dysphagia has definitely gotten worse since starting the radiation therapy. The pain is constant every time I swallow, no matter what I eat or drink. It hurts more in my chest area, and it doesn't feel like it's getting better. It's been really hard to eat and drink because of it.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0057
+      },
+      "duplicate_entailment": 0.9951,
+      "duplicate_similarity": 0.4781
+    },
+    {
+      "candidate": "On my chest, he saw some redness, maybe from the radiation.",
+      "speaker": "Patient",
+      "coverage": 0.3471,
+      "nearest_so_sentence": "She also reports pain when swallowing, which is constant and worsens in her chest area.",
+      "statement": "The patient reports that the doctor saw some redness on his chest, which the patient attributes to radiation.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: My vitals are normal, and my pulse ox is okay. The doctor checked my neck and didn't find any swollen lymph nodes. My heart sounds were normal, and when he listened to my lungs, he heard some crackles, which he said might be from fluid. On my chest, he saw some redness, maybe from the radiation. I didn't have any swelling in my legs. He mentioned I have some inflammation in my lungs from the radiation, which is causing the shortness of breath and the pain when I swallow.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9982,
+        "contradiction": 0.9147
+      }
+    },
+    {
+      "candidate": "No, I haven't noticed any changes in my voice or hoarseness, and I don't have trouble breathing when lying down.",
+      "speaker": "Patient",
+      "coverage": 0.3539,
+      "nearest_so_sentence": "She also reports pain when swallowing, which is constant and worsens in her chest area.",
+      "statement": "The patient denies experiencing any changes in her voice or hoarseness, and reports no difficulty breathing when lying down.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: No, I haven't noticed any changes in my voice or hoarseness, and I don't have trouble breathing when lying down. The main issue is the pain when I swallow, which is pretty uncomfortable but hasn't gotten worse in that way. I just hope it's something that the lidocaine can help with.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.9903
+      }
+    },
+    {
+      "candidate": "The doctor checked my neck and didn't find any swollen lymph nodes.",
+      "speaker": "Patient",
+      "coverage": 0.3668,
+      "nearest_so_sentence": "She also reports pain when swallowing, which is constant and worsens in her chest area.",
+      "statement": "The patient's neck examination revealed no swollen lymph nodes.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: My vitals are normal, and my pulse ox is okay. The doctor checked my neck and didn't find any swollen lymph nodes. My heart sounds were normal, and when he listened to my lungs, he heard some crackles, which he said might be from fluid. On my chest, he saw some redness, maybe from the radiation. I didn't have any swelling in my legs. He mentioned I have some inflammation in my lungs from the radiation, which is causing the shortness of breath and the pain when I swallow.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0593
+      },
+      "duplicate_entailment": 0.0023,
+      "duplicate_similarity": 0.4562,
+      "insertion": {
+        "section": "objective",
+        "line_index": 0,
+        "perplexity": null,
+        "removed_placeholder": [
+          "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+        ]
+      }
+    },
+    {
+      "candidate": "My heart sounds were normal, and when he listened to my lungs, he heard some crackles, which he said might be from fluid.",
+      "speaker": "Patient",
+      "coverage": 0.3788,
+      "nearest_so_sentence": "She also reports pain when swallowing, which is constant and worsens in her chest area.",
+      "statement": "The patient's lung examination revealed crackles, which may be indicative of fluid.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: My vitals are normal, and my pulse ox is okay. The doctor checked my neck and didn't find any swollen lymph nodes. My heart sounds were normal, and when he listened to my lungs, he heard some crackles, which he said might be from fluid. On my chest, he saw some redness, maybe from the radiation. I didn't have any swelling in my legs. He mentioned I have some inflammation in my lungs from the radiation, which is causing the shortness of breath and the pain when I swallow.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0023
+      },
+      "duplicate_entailment": 0.0015,
+      "duplicate_similarity": 0.4378,
+      "insertion": {
+        "section": "objective",
+        "line_index": 0,
+        "perplexity": 54.42,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don't have any significant past medical history other than the lung cancer diagnosis.",
+      "speaker": "Patient",
+      "coverage": 0.3937,
+      "nearest_so_sentence": "Patient is a 58-year-old female with a history of lung cancer, currently undergoing chemotherapy with cisplatin and etoposide.",
+      "statement": "The patient reports having a history of lung cancer diagnosis.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I don't have any significant past medical history other than the lung cancer diagnosis. I don't have any allergies, and I don't recall any surgeries. I don't know much about my family history, but I don't think there's a history of cancer or respiratory issues on my side.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.5721
+      }
+    },
+    {
+      "candidate": "The doctor mentioned there might be some fluid in my lungs, but he didn't specifically say there was a pleural effusion.",
+      "speaker": "Patient",
+      "coverage": 0.397,
+      "nearest_so_sentence": "She also reports pain when swallowing, which is constant and worsens in her chest area.",
+      "statement": "The patient reports that the doctor mentioned the possibility of fluid in the lungs, but did not specifically confirm the presence of a pleural effusion.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: The chest X-ray showed mild radiation pneumonitis, which is inflammation of the lungs from the radiation treatment. The doctor mentioned there might be some fluid in my lungs, but he didn't specifically say there was a pleural effusion. I don't know the exact details of the imaging, but he said it's causing some of the shortness of breath and the pain when I swallow.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.3898
+      }
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 50,
+    "num_covered": 29,
+    "num_flagged": 21,
+    "num_not_checked_cap": 0,
+    "num_added": 5
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "My vitals are normal, and my pulse ox is okay.",
+        "statement": "The patient reports that their vital signs are normal, and their pulse oximetry reading is within normal limits.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9992,
+          "contradiction": 0.9967
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I don't know the exact dosages, but I had my last dose a few days ago.",
+        "statement": "The patient reports having received chemotherapy recently, but is unable to provide exact dosages.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9995,
+          "contradiction": 0.9418
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "On my chest, he saw some redness, maybe from the radiation.",
+        "statement": "The patient reports that the doctor saw some redness on his chest, which the patient attributes to radiation.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9982,
+          "contradiction": 0.9147
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "No, I haven't noticed any changes in my voice or hoarseness, and I don't have trouble breathing when lying down.",
+        "statement": "The patient denies experiencing any changes in her voice or hoarseness, and reports no difficulty breathing when lying down.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9994,
+          "contradiction": 0.9903
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I don't have any significant past medical history other than the lung cancer diagnosis.",
+        "statement": "The patient reports having a history of lung cancer diagnosis.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9995,
+          "contradiction": 0.5721
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "The doctor mentioned there might be some fluid in my lungs, but he didn't specifically say there was a pleural effusion.",
+        "statement": "The patient reports that the doctor mentioned the possibility of fluid in the lungs, but did not specifically confirm the presence of a pleural effusion.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9995,
+          "contradiction": 0.3898
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 130.5,
+  "ap_unchanged": true,
+  "conversation": "Patient: I'm 58 years old, and I'm female. I'm here because I've been having some shortness of breath and pain when I swallow, and I wanted to check in about how I'm doing with my treatment for lung cancer.\nDoctor: Could you please provide more details about the duration and severity of your shortness of breath and dysphagia, any associated symptoms such as chest pain, weight loss, or fatigue, and specifics about your lung cancer treatment, including the type, duration, and how well you have responded to it?\nPatient: The shortness of breath has been getting worse over the weekend, and it's pretty bad now—I can't even walk down the street without feeling out of breath. The swallowing pain started more recently, and it hurts every time I swallow, but food doesn't get stuck. I don't have chest pain, but I have been losing some weight and feeling more tired than usual. I'm on chemotherapy with a combination of drugs, and my last dose was a few days ago. I had some nausea and fatigue from it, but the medicine you gave me helped with the nausea.\nDoctor: Could you provide details about your past medical history, including any previous illnesses, surgeries, allergies, or family history of cancer or respiratory conditions?\nPatient: I don't have any significant past medical history other than the lung cancer diagnosis. I don't have any allergies, and I don't recall any surgeries. I don't know much about my family history, but I don't think there's a history of cancer or respiratory issues on my side.\nDoctor: Could you provide details about the specific chemotherapy regimen you are currently receiving, including the names of the drugs and their dosages?\nPatient: I'm on a combination of cisplatin and etoposide. I don't know the exact dosages, but I had my last dose a few days ago. I had some nausea and fatigue from it, but the Zofran you prescribed helped with the nausea.\nDoctor: Could you please provide your current vital signs, including your blood pressure, heart rate, respiratory rate, and oxygen saturation? Additionally, could you describe any findings from your respiratory, cardiovascular, and gastrointestinal examinations?\nPatient: My vitals are normal, and my pulse ox is okay. The doctor checked my neck and didn't find any swollen lymph nodes. My heart sounds were normal, and when he listened to my lungs, he heard some crackles, which he said might be from fluid. On my chest, he saw some redness, maybe from the radiation. I didn't have any swelling in my legs. He mentioned I have some inflammation in my lungs from the radiation, which is causing the shortness of breath and the pain when I swallow.\nDoctor: Could you provide the specific results of the chest imaging, including whether there is evidence of pleural effusion or radiation-induced lung injury?\nPatient: The chest X-ray showed mild radiation pneumonitis, which is inflammation of the lungs from the radiation treatment. The doctor mentioned there might be some fluid in my lungs, but he didn't specifically say there was a pleural effusion. I don't know the exact details of the imaging, but he said it's causing some of the shortness of breath and the pain when I swallow.\nDoctor: Could you clarify whether the dysphagia has worsened since the start of radiation therapy, and whether the pain on swallowing is more pronounced at certain times or with certain foods?\nPatient: The dysphagia has definitely gotten worse since starting the radiation therapy. The pain is constant every time I swallow, no matter what I eat or drink. It hurts more in my chest area, and it doesn't feel like it's getting better. It's been really hard to eat and drink because of it.\nDoctor: Has an endoscopic evaluation of the esophagus been performed to confirm the presence of esophagitis or other structural abnormalities?\nPatient: No, I don't think an endoscopic evaluation has been done yet. The doctor hasn't mentioned anything about looking inside my esophagus, so I guess that's something that might need to be done if the pain doesn't get better with the lidocaine. I just hope it's not something more serious.\nDoctor: Has the patient undergone any upper endoscopic evaluation to assess for esophagitis or other structural abnormalities in the esophagus?\nPatient: No, I don't think an endoscopic evaluation has been done yet. The doctor hasn't mentioned anything about looking inside my esophagus, so I guess that's something that might need to be done if the pain doesn't get better with the lidocaine. I just hope it's not something more serious.\nDoctor: Has the patient undergone any endoscopic evaluation of the esophagus to confirm the presence of esophagitis or other structural abnormalities?\nPatient: No, I don't think an endoscopic evaluation has been done yet. The doctor hasn't mentioned anything about looking inside my esophagus, so I guess that's something that might need to be done if the pain doesn't get better with the lidocaine. I just hope it's not something more serious.\nDoctor: Has the patient undergone any imaging studies of the esophagus, such as a barium swallow or esophagram, to evaluate for structural abnormalities or signs of esophagitis?\nPatient: No, I don't think any imaging studies of the esophagus have been done yet. The doctor hasn't mentioned anything about a barium swallow or anything like that, so I guess that's something that might need to be done if the pain doesn't get better with the lidocaine. I just hope it's not something more serious.\nDoctor: Has the patient undergone any endoscopic evaluation of the esophagus or esophageal imaging studies (e.g., barium swallow or esophagram) to evaluate for structural abnormalities or signs of esophagitis?\nPatient: No, I don't think any endoscopic evaluation of the esophagus or imaging studies like a barium swallow have been done yet. The doctor hasn't mentioned anything about looking inside my esophagus or doing any imaging for it, so I guess that's something that might need to be done if the pain doesn't get better with the lidocaine. I just hope it's not something more serious.\nDoctor: Has the patient undergone any endoscopic evaluation or esophageal imaging studies, such as a barium swallow, to assess for structural abnormalities or confirm the presence of esophagitis?\nPatient: No, I don't think any endoscopic evaluation or esophageal imaging studies like a barium swallow have been done yet. The doctor hasn't mentioned anything about looking inside my esophagus or doing any imaging for it, so I guess that's something that might need to be done if the pain doesn't get better with the lidocaine. I just hope it's not something more serious.\nDoctor: Has the patient experienced any changes in her voice, such as hoarseness, or difficulty breathing that worsens when lying down?\nPatient: No, I haven't noticed any changes in my voice or hoarseness, and I don't have trouble breathing when lying down. The main issue is the pain when I swallow, which is pretty uncomfortable but hasn't gotten worse in that way. I just hope it's something that the lidocaine can help with.\nDoctor: Has the patient undergone any endoscopic evaluation or esophageal imaging studies, such as a barium swallow or esophagram, to evaluate for structural abnormalities or signs of esophagitis?\nPatient: No, I don't think any endoscopic evaluation or esophageal imaging studies like a barium swallow have been done yet. The doctor hasn't mentioned anything about looking inside my esophagus or doing any imaging for it, so I guess that's something that might need to be done if the pain doesn't get better with the lidocaine. I just hope it's not something more serious.",
+  "reference_so": {
+    "subjective": "Basic information: 58-year-old female presenting with shortness of breath and dysphagia related to lung cancer treatment\n\nHistory of present illness: Shortness of breath has worsened over the weekend, making it difficult to walk without feeling out of breath. Dysphagia started more recently, with pain on swallowing but no food retention. No chest pain, but there is weight loss and increased fatigue. Currently undergoing chemotherapy with cisplatin and etoposide, last dose a few days ago. Experienced nausea and fatigue from chemotherapy, which was partially managed with Zofran. Dysphagia has progressed over the past week, with increasing pain on swallowing and difficulty with solid foods. No regurgitation or food retention. The dysphagia is suspected to be related to radiation pneumonitis or chemotherapy-induced esophagitis. The patient has not yet undergone an endoscopic evaluation to confirm the cause of dysphagia. The patient reports that the dysphagia has worsened since starting radiation therapy, with constant pain on swallowing, particularly in the chest area, and no improvement in symptoms. The patient is concerned about the possibility of a more serious underlying condition and is awaiting further evaluation.\n\nPast history: No significant past medical history other than lung cancer diagnosis. No allergies. No surgeries. Limited family history, no known history of cancer or respiratory issues.",
+    "objective": "Physical examination: Vital signs: Normal. Respiratory: Crackles heard on auscultation, possibly due to radiation pneumonitis. Cardiovascular: Normal heart sounds, no peripheral edema. Gastrointestinal: Dysphagia with pain on swallowing, no food retention. General: Weight loss, fatigue.\n\nInvestigations: Imaging: Chest imaging shows redness on the chest, possibly from radiation, and signs of inflammation in the lungs, possibly radiation-induced lung injury. Mild radiation pneumonitis confirmed. No specific details on pleural effusion yet. No endoscopic evaluation or esophageal imaging studies (e.g., barium swallow or esophagram) have been performed to evaluate for structural abnormalities or signs of esophagitis."
+  }
+}

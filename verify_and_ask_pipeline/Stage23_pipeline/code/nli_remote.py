@@ -15,7 +15,8 @@ class RemoteNLIScorer:
                  overlap_lines: int = 2, timeout: int = 120):
         import requests
         self.url = base_url.rstrip("/")
-        self.headers = {"X-API-Key": api_key} if api_key else {}
+        # Bearer (current server) plus X-API-Key (older servers); a server ignores the one it does not use.
+        self.headers = {"Authorization": f"Bearer {api_key}", "X-API-Key": api_key} if api_key else {}
         self.max_words, self.overlap_lines, self.timeout = max_words, overlap_lines, timeout
         self.session = requests.Session()
         self._chunk_cache: Dict[str, List[str]] = {}

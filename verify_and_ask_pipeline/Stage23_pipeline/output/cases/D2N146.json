@@ -1,0 +1,509 @@
+{
+  "case_id": "D2N146",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* The patient is a 45-year-old male who has been experiencing right upper quadrant (RUQ) abdominal pain for several weeks, which is described as a squeezing, severe pain that is worsened by eating and is not associated with fever, chills, or changes in bowel habits.\n* The patient has a family history of gallbladder disease, with both parents having had their gallbladders removed.\n* The patient has been advised to avoid high-fat foods, but the pain persists.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* The patient is a 45-year-old male who has been experiencing right upper quadrant (RUQ) abdominal pain for several weeks, which is described as a squeezing, severe pain that is worsened by eating and is not associated with fever, chills, or changes in bowel habits.\n* The patient has a family history of gallbladder disease, with both parents having had their gallbladders removed.\n* The patient has been advised to avoid high-fat foods, but the pain persists.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* The patient reports experiencing nausea, but denies vomiting.\n* The patient is a 45-year-old male who has been experiencing right upper quadrant (RUQ) abdominal pain for several weeks, which is described as a squeezing, severe pain that is worsened by eating and is not associated with fever, chills, or changes in bowel habits.\n* The patient has a family history of gallbladder disease, with both parents having had their gallbladders removed.\n* The patient reports no recent weight loss and no changes in bowel habits.\n* The patient has been advised to avoid high-fat foods, but the pain persists.\n* The patient reports that they are unaware of any blood tests performed since their gallstones were diagnosed.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has a history of gallstones, diagnosed by ultrasound, and has been experiencing persistent RUQ abdominal pain despite dietary changes.",
+    "plan": "* The patient will be referred for further evaluation and management of his gallstones, including consideration of cholecystectomy or other treatment options."
+  },
+  "stage2_audit": [
+    {
+      "claim": "The patient is a 45-year-old male who has been experiencing right upper quadrant (RUQ) abdominal pain for several weeks, which is described as a squeezing, severe pain that is worsened by eating and is not associated with fever, chills, or changes in bowel habits.",
+      "scores": {
+        "entailment": 0.9915,
+        "neutral": 0.0075,
+        "contradiction": 0.001
+      },
+      "support_evidence": "Patient: I'm 45 years old and male. I'm here because I've been having this pain on the right side of my belly under my ribs for several weeks, and even after changing my diet to avoid high-fat foods, the pain is still really bad sometimes.",
+      "contradiction_evidence": "Patient: I'm 45 years old and male. I'm here because I've been having this pain on the right side of my belly under my ribs for several weeks, and even after changing my diet to avoid high-fat foods, the pain is still really bad sometimes.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient is a 45-year-old male who has been experiencing right upper quadrant (RUQ) abdominal pain for several weeks, which is described as a squeezing, severe pain that is worsened by eating and is not associated with fever, chills, or changes in bowel habits.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 45-year-old male who has been experiencing right upper quadrant (RUQ) abdominal pain for several weeks, which is described as a squeezing, severe pain that is worsened by eating and is not associated with fever, chills, or changes in bowel habits.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient has a family history of gallbladder disease, with both parents having had their gallbladders removed.",
+      "scores": {
+        "entailment": 0.9731,
+        "neutral": 0.0163,
+        "contradiction": 0.0106
+      },
+      "support_evidence": "Patient: The pain doesn't radiate to my back or shoulder, just stays right under my ribs on the right side. Both my mom and dad had gallbladder issues and had their gallbladders removed, so there's a family history of it.",
+      "contradiction_evidence": "Patient: The pain doesn't radiate to my back or shoulder, just stays right under my ribs on the right side. Both my mom and dad had gallbladder issues and had their gallbladders removed, so there's a family history of it.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has a family history of gallbladder disease, with both parents having had their gallbladders removed.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The patient has a family history of gallbladder disease, with both parents having had their gallbladders removed.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient has been advised to avoid high-fat foods, but the pain persists.",
+      "scores": {
+        "entailment": 0.9991,
+        "neutral": 0.0005,
+        "contradiction": 0.0409
+      },
+      "support_evidence": "Patient: Yes, I had an ultrasound done, and they found gallstones in my gallbladder. The doctor who did that recommended avoiding high-fat foods, but I'm still having a lot of pain, which is why I came to see you.",
+      "contradiction_evidence": "Patient: Yes, I had an ultrasound done, and they found gallstones in my gallbladder. The doctor who did that recommended avoiding high-fat foods, but I'm still having a lot of pain, which is why I came to see you.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has been advised to avoid high-fat foods, but the pain persists.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "The patient has been advised to avoid high-fat foods, but the pain persists.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 3,
+      "exempt": 1
+    },
+    "num_claims": 3,
+    "num_kept": 3,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient reports experiencing nausea, but denies vomiting.",
+      "evidence": "Patient: I haven't had any fever or chills with the pain, and my bowel habits haven't really changed. I do get nauseated sometimes, but I haven't vomited.",
+      "section": "subjective",
+      "candidate": "I do get nauseated sometimes, but I haven't vomited."
+    },
+    {
+      "statement": "The patient reports no recent weight loss and no changes in bowel habits.",
+      "evidence": "Doctor: Have you experienced any episodes of jaundice, dark urine, or pale stools during this time? Have you had any recent weight loss or changes in bowel habits?",
+      "section": "subjective",
+      "candidate": "I haven't lost any weight recently, and my bowel habits haven't changed much."
+    },
+    {
+      "statement": "The patient reports that they are unaware of any blood tests performed since their gallstones were diagnosed.",
+      "evidence": "Patient: I don't know about any blood tests I've had since my gallstones were diagnosed. I was just told about the gallstones from the ultrasound, and the doctor recommended avoiding high-fat foods, but I'm still having a lot of pain. That's why I came to see you.",
+      "section": "subjective",
+      "candidate": "I don't know about any blood tests I've had since my gallstones were diagnosed."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "That's why I came to see you.",
+      "speaker": "Patient",
+      "coverage": 0.0114,
+      "nearest_so_sentence": "The patient has been advised to avoid high-fat foods, but the pain persists.",
+      "statement": "The patient reports that they came to see the doctor.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't know about any blood tests I've had, but I was told I had gallstones from an ultrasound, and the doctor recommended avoiding high-fat foods. I still have a lot of pain, so that's why I came to see you.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9998,
+        "contradiction": 0.0002
+      },
+      "duplicate_entailment": 0.979,
+      "duplicate_similarity": 0.3536
+    },
+    {
+      "candidate": "That's why I came to see you.",
+      "speaker": "Patient",
+      "coverage": 0.0114,
+      "nearest_so_sentence": "The patient has been advised to avoid high-fat foods, but the pain persists.",
+      "statement": "The patient reports that they came to see the doctor.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't know about any blood tests I've had, but I was told I had gallstones from an ultrasound, and the doctor recommended avoiding high-fat foods. I still have a lot of pain, so that's why I came to see you.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9998,
+        "contradiction": 0.0002
+      },
+      "duplicate_entailment": 0.979,
+      "duplicate_similarity": 0.3536
+    },
+    {
+      "candidate": "That's why I came to see you.",
+      "speaker": "Patient",
+      "coverage": 0.0114,
+      "nearest_so_sentence": "The patient has been advised to avoid high-fat foods, but the pain persists.",
+      "statement": "The patient reports that they came to see the doctor.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't know about any blood tests I've had, but I was told I had gallstones from an ultrasound, and the doctor recommended avoiding high-fat foods. I still have a lot of pain, so that's why I came to see you.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9998,
+        "contradiction": 0.0002
+      },
+      "duplicate_entailment": 0.979,
+      "duplicate_similarity": 0.3536
+    },
+    {
+      "candidate": "That's why I came to see you.",
+      "speaker": "Patient",
+      "coverage": 0.0114,
+      "nearest_so_sentence": "The patient has been advised to avoid high-fat foods, but the pain persists.",
+      "statement": "The patient reports that they came to see the doctor.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't know about any blood tests I've had, but I was told I had gallstones from an ultrasound, and the doctor recommended avoiding high-fat foods. I still have a lot of pain, so that's why I came to see you.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9998,
+        "contradiction": 0.0002
+      },
+      "duplicate_entailment": 0.979,
+      "duplicate_similarity": 0.3536
+    },
+    {
+      "candidate": "That's why I came to see you.",
+      "speaker": "Patient",
+      "coverage": 0.0114,
+      "nearest_so_sentence": "The patient has been advised to avoid high-fat foods, but the pain persists.",
+      "statement": "The patient reports that they came to see the doctor.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't know about any blood tests I've had, but I was told I had gallstones from an ultrasound, and the doctor recommended avoiding high-fat foods. I still have a lot of pain, so that's why I came to see you.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9998,
+        "contradiction": 0.0002
+      },
+      "duplicate_entailment": 0.979,
+      "duplicate_similarity": 0.3536
+    },
+    {
+      "candidate": "That's why I came to see you.",
+      "speaker": "Patient",
+      "coverage": 0.0114,
+      "nearest_so_sentence": "The patient has been advised to avoid high-fat foods, but the pain persists.",
+      "statement": "The patient reports that they came to see the doctor.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't know about any blood tests I've had, but I was told I had gallstones from an ultrasound, and the doctor recommended avoiding high-fat foods. I still have a lot of pain, so that's why I came to see you.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9998,
+        "contradiction": 0.0002
+      },
+      "duplicate_entailment": 0.979,
+      "duplicate_similarity": 0.3536
+    },
+    {
+      "candidate": "I'm 45 years old and male.",
+      "speaker": "Patient",
+      "coverage": 0.0976,
+      "nearest_so_sentence": "The patient is a 45-year-old male who has been experiencing right upper quadrant (RUQ) abdominal pain for several weeks, which is described as a squeezing, severe pain that is worsened by eating and is not associated with fever, chills, or changes in bowel habits.",
+      "statement": "The patient is 45 years old and male.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 45 years old and male. I'm here because I've been having this pain on the right side of my belly under my ribs for several weeks, and even after changing my diet to avoid high-fat foods, the pain is still really bad sometimes.",
+      "scores_vs_dialogue": {
+        "entailment": 0.999,
+        "contradiction": 0.0005
+      },
+      "duplicate_entailment": 0.9993,
+      "duplicate_similarity": 0.4338
+    },
+    {
+      "candidate": "I do get nauseated sometimes, but I haven't vomited.",
+      "speaker": "Patient",
+      "coverage": 0.1497,
+      "nearest_so_sentence": "The patient is a 45-year-old male who has been experiencing right upper quadrant (RUQ) abdominal pain for several weeks, which is described as a squeezing, severe pain that is worsened by eating and is not associated with fever, chills, or changes in bowel habits.",
+      "statement": "The patient reports experiencing nausea, but denies vomiting.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I haven't had any fever or chills with the pain, and my bowel habits haven't really changed. I do get nauseated sometimes, but I haven't vomited.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9989,
+        "contradiction": 0.0644
+      },
+      "duplicate_entailment": 0.0123,
+      "duplicate_similarity": 0.4055,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 17.05,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "It comes and goes, but when it does come, it's really bad and I get nauseated.",
+      "speaker": "Patient",
+      "coverage": 0.1689,
+      "nearest_so_sentence": "The patient is a 45-year-old male who has been experiencing right upper quadrant (RUQ) abdominal pain for several weeks, which is described as a squeezing, severe pain that is worsened by eating and is not associated with fever, chills, or changes in bowel habits.",
+      "statement": "The patient reports that the pain comes and goes, but when it occurs, it is severe and is accompanied by nausea.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The pain feels like a squeezing, severe pain, and it's right under my ribs on the right side. It comes and goes, but when it does come, it's really bad and I get nauseated. It usually happens after I eat, either right away or a couple of hours later.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0034
+      },
+      "duplicate_entailment": 0.7399,
+      "duplicate_similarity": 0.5003
+    },
+    {
+      "candidate": "It usually happens after I eat, either right away or a couple of hours later.",
+      "speaker": "Patient",
+      "coverage": 0.1915,
+      "nearest_so_sentence": "The patient has been advised to avoid high-fat foods, but the pain persists.",
+      "statement": "The patient reports that the pain usually occurs after eating, either immediately or a couple of hours later.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The pain feels like a squeezing, severe pain, and it's right under my ribs on the right side. It comes and goes, but when it does come, it's really bad and I get nauseated. It usually happens after I eat, either right away or a couple of hours later.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0007
+      },
+      "duplicate_entailment": 0.9222,
+      "duplicate_similarity": 0.6049
+    },
+    {
+      "candidate": "No, I haven't had any jaundice, dark urine, or pale stools.",
+      "speaker": "Patient",
+      "coverage": 0.2637,
+      "nearest_so_sentence": "The patient is a 45-year-old male who has been experiencing right upper quadrant (RUQ) abdominal pain for several weeks, which is described as a squeezing, severe pain that is worsened by eating and is not associated with fever, chills, or changes in bowel habits.",
+      "statement": "The patient denies experiencing episodes of jaundice, dark urine, or pale stools.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I haven't had any jaundice, dark urine, or pale stools. I haven't lost any weight recently, and my bowel habits haven't changed much.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0011
+      },
+      "duplicate_entailment": 0.9493,
+      "duplicate_similarity": 0.3918
+    },
+    {
+      "candidate": "I still have a lot of pain, so that's why I came to see you.",
+      "speaker": "Patient",
+      "coverage": 0.285,
+      "nearest_so_sentence": "The patient has been advised to avoid high-fat foods, but the pain persists.",
+      "statement": "The patient reports experiencing ongoing pain as the reason for seeking medical attention.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 45 years old and male. I'm here because I've been having this pain on the right side of my belly under my ribs for several weeks, and even after changing my diet to avoid high-fat foods, the pain is still really bad sometimes.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0005
+      },
+      "duplicate_entailment": 0.9976,
+      "duplicate_similarity": 0.5406
+    },
+    {
+      "candidate": "I haven't lost any weight recently, and my bowel habits haven't changed much.",
+      "speaker": "Patient",
+      "coverage": 0.3082,
+      "nearest_so_sentence": "The patient has been advised to avoid high-fat foods, but the pain persists.",
+      "statement": "The patient reports no recent weight loss and no changes in bowel habits.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Doctor: Have you experienced any episodes of jaundice, dark urine, or pale stools during this time? Have you had any recent weight loss or changes in bowel habits?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.0028
+      },
+      "duplicate_entailment": 0.1592,
+      "duplicate_similarity": 0.3875,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 3,
+        "perplexity": 14.67,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I haven't had any diarrhea or constipation related to it.",
+      "speaker": "Patient",
+      "coverage": 0.3636,
+      "nearest_so_sentence": "The patient has been advised to avoid high-fat foods, but the pain persists.",
+      "statement": "The patient denies experiencing diarrhea or constipation related to the abdominal pain.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, my bowel habits haven't changed much since the pain started. I haven't had any diarrhea or constipation related to it.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.028
+      },
+      "duplicate_entailment": 0.9937,
+      "duplicate_similarity": 0.5175
+    },
+    {
+      "candidate": "I've been managing it with dietary changes, but they haven't really helped much.",
+      "speaker": "Patient",
+      "coverage": 0.3669,
+      "nearest_so_sentence": "The patient has been advised to avoid high-fat foods, but the pain persists.",
+      "statement": "The patient reports managing their recent episodes of severe pain with dietary changes, but notes that these changes have not provided significant relief.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I haven't had any recent episodes of severe pain that required me to seek medical attention or take medication for it. I've been managing it with dietary changes, but they haven't really helped much.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9989,
+        "contradiction": 0.0516
+      },
+      "duplicate_entailment": 0.9947,
+      "duplicate_similarity": 0.7015
+    },
+    {
+      "candidate": "I don't know about any blood tests I've had since my gallstones were diagnosed.",
+      "speaker": "Patient",
+      "coverage": 0.3778,
+      "nearest_so_sentence": "The patient has a family history of gallbladder disease, with both parents having had their gallbladders removed.",
+      "statement": "The patient reports that they are unaware of any blood tests performed since their gallstones were diagnosed.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't know about any blood tests I've had since my gallstones were diagnosed. I was just told about the gallstones from the ultrasound, and the doctor recommended avoiding high-fat foods, but I'm still having a lot of pain. That's why I came to see you.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0186
+      },
+      "duplicate_entailment": 0.027,
+      "duplicate_similarity": 0.4713,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 5,
+        "perplexity": 14.56,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don't know about any blood tests I've had since my gallstones were diagnosed.",
+      "speaker": "Patient",
+      "coverage": 0.3778,
+      "nearest_so_sentence": "The patient has a family history of gallbladder disease, with both parents having had their gallbladders removed.",
+      "statement": "The patient reports that they are unaware of any blood tests performed since their gallstones were diagnosed.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I don't know about any blood tests I've had since my gallstones were diagnosed. I was just told about the gallstones from the ultrasound, and the doctor recommended avoiding high-fat foods, but I'm still having a lot of pain. That's why I came to see you.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0186
+      },
+      "duplicate_entailment": 0.027,
+      "duplicate_similarity": 0.4713
+    },
+    {
+      "candidate": "I don't know about any blood tests I've had since my gallstones were diagnosed.",
+      "speaker": "Patient",
+      "coverage": 0.3778,
+      "nearest_so_sentence": "The patient has a family history of gallbladder disease, with both parents having had their gallbladders removed.",
+      "statement": "The patient reports that they are unaware of any blood tests performed since their gallstones were diagnosed.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I don't know about any blood tests I've had since my gallstones were diagnosed. I was just told about the gallstones from the ultrasound, and the doctor recommended avoiding high-fat foods, but I'm still having a lot of pain. That's why I came to see you.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0186
+      },
+      "duplicate_entailment": 0.027,
+      "duplicate_similarity": 0.4713
+    },
+    {
+      "candidate": "I don't know about any blood tests I've had since my gallstones were diagnosed.",
+      "speaker": "Patient",
+      "coverage": 0.3778,
+      "nearest_so_sentence": "The patient has a family history of gallbladder disease, with both parents having had their gallbladders removed.",
+      "statement": "The patient reports that they are unaware of any blood tests, including liver function tests, complete blood count, or inflammatory markers, performed since their gallstone diagnosis.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Have you had any recent blood tests, such as liver function tests (LFTs), complete blood count (CBC), or inflammatory markers (e.g., CRP, amylase, lipase), since your gallstone diagnosis?",
+      "scores_vs_dialogue": {
+        "entailment": 0.999,
+        "contradiction": 0.0044
+      },
+      "duplicate_entailment": 0.147,
+      "duplicate_similarity": 0.4047
+    },
+    {
+      "candidate": "I don't know about any blood tests I've had since my gallstones were diagnosed.",
+      "speaker": "Patient",
+      "coverage": 0.3778,
+      "nearest_so_sentence": "The patient has a family history of gallbladder disease, with both parents having had their gallbladders removed.",
+      "statement": "The patient reports that they are unaware of any blood tests performed since their gallstone diagnosis.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I don't know about any blood tests I've had since my gallstones were diagnosed. I was just told about the gallstones from the ultrasound, and the doctor recommended avoiding high-fat foods, but I'm still having a lot of pain. That's why I came to see you.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0034
+      },
+      "duplicate_entailment": 0.0539,
+      "duplicate_similarity": 0.4424
+    },
+    {
+      "candidate": "I don't know about any blood tests I've had since my gallstones were diagnosed.",
+      "speaker": "Patient",
+      "coverage": 0.3778,
+      "nearest_so_sentence": "The patient has a family history of gallbladder disease, with both parents having had their gallbladders removed.",
+      "statement": "The patient reports that they are unaware of any blood tests performed since their gallstone diagnosis.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I don't know about any blood tests I've had since my gallstones were diagnosed. I was just told about the gallstones from the ultrasound, and the doctor recommended avoiding high-fat foods, but I'm still having a lot of pain. That's why I came to see you.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0034
+      },
+      "duplicate_entailment": 0.0539,
+      "duplicate_similarity": 0.4424
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 37,
+    "num_covered": 16,
+    "num_flagged": 21,
+    "num_not_checked_cap": 0,
+    "num_added": 3
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": []
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 91.3,
+  "ap_unchanged": true,
+  "conversation": "Patient: I'm 45 years old and male. I'm here because I've been having this pain on the right side of my belly under my ribs for several weeks, and even after changing my diet to avoid high-fat foods, the pain is still really bad sometimes.\nDoctor: Can you describe the nature of the pain (e.g., sharp, dull, burning), its radiation (e.g., to the back or shoulder), and whether it is associated with any specific activities or meals?\nPatient: The pain feels like a squeezing, severe pain, and it's right under my ribs on the right side. It comes and goes, but when it does come, it's really bad and I get nauseated. It usually happens after I eat, either right away or a couple of hours later.\nDoctor: Have you experienced any episodes of jaundice, dark urine, or pale stools during this time? Have you had any recent weight loss or changes in bowel habits?\nPatient: No, I haven't had any jaundice, dark urine, or pale stools. I haven't lost any weight recently, and my bowel habits haven't changed much.\nDoctor: Have you experienced any fever, chills, or changes in bowel habits such as diarrhea or constipation associated with the pain?\nPatient: I haven't had any fever or chills with the pain, and my bowel habits haven't really changed. I do get nauseated sometimes, but I haven't vomited.\nDoctor: Has the patient experienced any radiation of the pain to the back, shoulder, or right shoulder? Additionally, has there been any history of similar episodes or family history of gallbladder disease?\nPatient: The pain doesn't radiate to my back or shoulder, just stays right under my ribs on the right side. Both my mom and dad had gallbladder issues and had their gallbladders removed, so there's a family history of it.\nDoctor: Have you undergone any imaging studies or blood tests to evaluate the cause of your right upper quadrant pain?\nPatient: Yes, I had an ultrasound done, and they found gallstones in my gallbladder. The doctor who did that recommended avoiding high-fat foods, but I'm still having a lot of pain, which is why I came to see you.\nDoctor: Have you had any recent episodes of severe pain that required you to seek medical attention or take medication to manage it?\nPatient: No, I haven't had any recent episodes of severe pain that required me to seek medical attention or take medication for it. I've been managing it with dietary changes, but they haven't really helped much.\nDoctor: Has the patient experienced any changes in bowel habits, such as diarrhea or constipation, since the onset of the abdominal pain?\nPatient: No, my bowel habits haven't changed much since the pain started. I haven't had any diarrhea or constipation related to it.\nDoctor: Has the patient undergone any blood tests, such as a complete blood count (CBC), liver function tests (LFTs), or inflammatory markers (e.g., CRP or amylase/lipase), to assess for signs of cholecystitis or other biliary pathology?\nPatient: I don't know about any blood tests I've had, but I was told I had gallstones from an ultrasound, and the doctor recommended avoiding high-fat foods. I still have a lot of pain, so that's why I came to see you.\nDoctor: Have you had any blood tests, such as a complete blood count or liver function tests, since your gallstones were diagnosed?\nPatient: I don't know about any blood tests I've had since my gallstones were diagnosed. I was just told about the gallstones from the ultrasound, and the doctor recommended avoiding high-fat foods, but I'm still having a lot of pain. That's why I came to see you.\nDoctor: Have you had any blood tests, such as a complete blood count or liver function tests, since your gallstones were diagnosed?\nPatient: I don't know about any blood tests I've had since my gallstones were diagnosed. I was just told about the gallstones from the ultrasound, and the doctor recommended avoiding high-fat foods, but I'm still having a lot of pain. That's why I came to see you.\nDoctor: Have you had any blood tests, such as a complete blood count or liver function tests, since your gallstones were diagnosed?\nPatient: I don't know about any blood tests I've had since my gallstones were diagnosed. I was just told about the gallstones from the ultrasound, and the doctor recommended avoiding high-fat foods, but I'm still having a lot of pain. That's why I came to see you.\nDoctor: Have you had any recent blood tests, specifically liver function tests (LFTs), complete blood count (CBC), or inflammatory markers (e.g., CRP, amylase, lipase) since your gallstone diagnosis?\nPatient: I don't know about any blood tests I've had since my gallstones were diagnosed. I was just told about the gallstones from the ultrasound, and the doctor recommended avoiding high-fat foods, but I'm still having a lot of pain. That's why I came to see you.\nDoctor: Have you had any recent blood tests, such as liver function tests (LFTs), complete blood count (CBC), or inflammatory markers (e.g., CRP, amylase, lipase), since your gallstone diagnosis?\nPatient: I don't know about any blood tests I've had since my gallstones were diagnosed. I was just told about the gallstones from the ultrasound, and the doctor recommended avoiding high-fat foods, but I'm still having a lot of pain. That's why I came to see you.\nDoctor: Have you had any recent blood tests, such as liver function tests (LFTs), complete blood count (CBC), or inflammatory markers (e.g., CRP, amylase, lipase), since your gallstone diagnosis?\nPatient: I don't know about any blood tests I've had since my gallstones were diagnosed. I was just told about the gallstones from the ultrasound, and the doctor recommended avoiding high-fat foods, but I'm still having a lot of pain. That's why I came to see you.",
+  "reference_so": {
+    "subjective": "Basic information: 45-year-old male presenting with right upper quadrant abdominal pain for several weeks, unresponsive to dietary changes\n\nHistory of present illness: Onset several weeks ago, localized to the right upper quadrant under the ribs, persistent despite dietary modifications to avoid high-fat foods. The pain feels like a squeezing, severe pain, and it is right under the ribs on the right side. It comes and goes, but when it does come, it is really bad and the patient gets nauseated. It usually happens after eating, either right away or a couple of hours later. No jaundice, dark urine, or pale stools. No weight loss or change in bowel habits. No fever or chills. Nauseation present but no vomiting. The pain does not radiate to the back or shoulder. The patient has gallstones confirmed by ultrasound and a family history of gallbladder disease. The patient has not experienced any episodes of severe pain that required hospitalization or the use of pain medication in the past.\n\nPast history: Family history of gallbladder disease (both parents had gallbladder issues and had their gallbladders removed); No relevant past medical history, surgeries, or allergies reported.",
+    "objective": "Physical examination: Physical examination findings: Vital signs within normal limits. Abdominal examination reveals tenderness in the right upper quadrant, no rebound tenderness or guarding. No palpable mass. Bowel sounds normal. No jaundice or scleral icterus. No hepatomegaly or splenomegaly detected.\n\nInvestigations: Ultrasound findings: gallstones present. No mention of cholecystitis or obstruction in the ultrasound report. No recent blood tests available; patient is unaware of any laboratory results since gallstone diagnosis."
+  }
+}

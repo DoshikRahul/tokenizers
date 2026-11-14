@@ -1,0 +1,484 @@
+{
+  "case_id": "D2N118",
+  "split": "dev",
+  "stage1_so": {
+    "subjective": "* Patient is a 45-year-old female who presented with a history of kidney stone and hypertension, and diabetes.\n* She reported symptoms of intense side pain, which resolved after passing the kidney stone, and no blood in the urine.\n* She is currently taking Norvasc 2.5 mg for hypertension and metformin 500 mg daily for diabetes.\n* She does not regularly check her blood sugars, but thinks they have been okay.\n* She has no history of diabetic complications such as neuropathy or retinopathy.\n* She does not have her most recent HbA1c level or blood pressure readings available.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient is a 45-year-old female who presented with a history of kidney stone and hypertension, and diabetes.\n* She reported symptoms of intense side pain, which resolved after passing the kidney stone, and no blood in the urine.\n* She is currently taking Norvasc 2.5 mg for hypertension and metformin 500 mg daily for diabetes.\n* She does not regularly check her blood sugars, but thinks they have been okay.\n* She has no history of diabetic complications such as neuropathy or retinopathy.\n* She does not have her most recent HbA1c level or blood pressure readings available.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* The patient reports that they can arrange to have their blood sugar reading and recent urine analysis results, including calcium, oxalate, and uric acid levels, available for their next appointment.\n* The patient reports that they will bring the requested urine analysis results and serum creatinine test results to their next appointment.\n* Patient is a 45-year-old female who presented with a history of kidney stone and hypertension, and diabetes.\n* She reported symptoms of intense side pain, which resolved after passing the kidney stone, and no blood in the urine.\n* She is currently taking Norvasc 2.5 mg for hypertension and metformin 500 mg daily for diabetes.\n* She does not regularly check her blood sugars, but thinks they have been okay.\n* She has no history of diabetic complications such as neuropathy or retinopathy.\n* She does not have her most recent HbA1c level or blood pressure readings available.\n* The patient reports that their blood pressure at home is usually around 130 to 140 over 60 to 70.",
+    "objective": "* The patient agrees to arrange for urine analysis, including calcium, oxalate, and uric acid levels, and will bring the results to the next appointment."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has a history of kidney stone and hypertension, and diabetes.\n* The patient's blood sugars are not well-controlled, and she does not regularly check them.\n* The patient's blood pressure is not well-controlled, and she does not have her most recent readings available.\n* The patient's urine analysis and serum creatinine levels are pending.",
+    "plan": "* The patient will arrange for a urine analysis to check calcium, oxalate, and uric acid levels, as well as a recent serum creatinine test.\n* The patient will start checking her blood sugars more frequently and bring a recent reading to her next appointment.\n* The patient will bring the results of the urine analysis and serum creatinine test to her next appointment."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient is a 45-year-old female who presented with a history of kidney stone and hypertension, and diabetes.",
+      "scores": {
+        "entailment": 0.9988,
+        "neutral": 0.0006,
+        "contradiction": 0.0271
+      },
+      "support_evidence": "Patient: I'm 45 years old and female. I'm here because I think I might have a kidney stone again, and I also wanted to check in on my hypertension and diabetes.",
+      "contradiction_evidence": "Patient: I don't have my most recent serum creatinine level with me, but I was told that everything seems to be cleared up since the kidney stone passed. I don't have any history of uncontrolled hypertension or diabetic complications like neuropathy or retinopathy that I'm aware of.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient is a 45-year-old female who presented with a history of kidney stone and hypertension, and diabetes.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 45-year-old female who presented with a history of kidney stone and hypertension, and diabetes.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She reported symptoms of intense side pain, which resolved after passing the kidney stone, and no blood in the urine.",
+      "scores": {
+        "entailment": 0.9991,
+        "neutral": 0.0002,
+        "contradiction": 0.9619
+      },
+      "support_evidence": "Patient: The pain was in my side and came and went, and it was pretty intense at times. I went to the ER last week, but I think the stone passed about three days ago. There's no blood in my urine anymore, and the pain is gone now. I was on some pain medication called Percocet while I was there.",
+      "contradiction_evidence": "Patient: I check my blood sugars pretty infrequently, maybe once in a while, but I think they've been okay. Since the kidney stone passed, I haven't had any changes in my urinary habits or symptoms—no pain, no blood in the urine, and everything seems to be back to normal.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She reported symptoms of intense side pain, which resolved after passing the kidney stone, and no blood in the urine.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "She reported symptoms of intense side pain, which resolved after passing the kidney stone, and no blood in the urine.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She is currently taking Norvasc 2.5 mg for hypertension and metformin 500 mg daily for diabetes.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0004,
+        "contradiction": 0.3747
+      },
+      "support_evidence": "Patient: I'm on 2.5 mg of Norvasc for my hypertension, and I've been taking that regularly. For my diabetes, I'm on 500 mg of metformin daily. I take my metformin as prescribed, but I don't check my blood sugars very often. I think they've been pretty good, though.",
+      "contradiction_evidence": "Patient: I don't have the results of my most recent urine analysis with me, but I was told that everything is cleared up since the kidney stone passed. I don't have specific numbers on calcium, oxalate, or uric acid levels, but I think the doctor is going to run some tests to check for any issues. I can arrange to have them done and bring the results to my next appointment.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She is currently taking Norvasc 2.5 mg for hypertension and metformin 500 mg daily for diabetes.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "She is currently taking Norvasc 2.5 mg for hypertension and metformin 500 mg daily for diabetes.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She does not regularly check her blood sugars, but thinks they have been okay.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.6753
+      },
+      "support_evidence": "Patient: I check my blood sugars pretty infrequently, maybe once in a while, but I think they've been okay. Since the kidney stone passed, I haven't had any changes in my urinary habits or symptoms—no pain, no blood in the urine, and everything seems to be back to normal.",
+      "contradiction_evidence": "Patient: I'll make sure to bring the results of the urine analysis and the serum creatinine test to my next appointment. As for my blood sugars, I'll start checking them more regularly and bring a recent reading with me too.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She does not regularly check her blood sugars, but thinks they have been okay.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "She does not regularly check her blood sugars, but thinks they have been okay.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has no history of diabetic complications such as neuropathy or retinopathy.",
+      "scores": {
+        "entailment": 0.9531,
+        "neutral": 0.0401,
+        "contradiction": 0.6456
+      },
+      "support_evidence": "Doctor: Could you please provide your current blood sugar levels and how often you check them? Also, have you ever been diagnosed with any diabetic complications such as neuropathy or retinopathy?",
+      "contradiction_evidence": "Doctor: Could you provide your most recent HbA1c level and any history of diabetic complications such as neuropathy or retinopathy?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has no history of diabetic complications such as neuropathy or retinopathy.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "She has no history of diabetic complications such as neuropathy or retinopathy.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She does not have her most recent HbA1c level or blood pressure readings available.",
+      "scores": {
+        "entailment": 0.9992,
+        "neutral": 0.0003,
+        "contradiction": 0.0882
+      },
+      "support_evidence": "Patient: I don't have my most recent blood pressure readings with me, but at home, my blood pressure is usually around 130 to 140 over 60 to 70. I don't have my serum creatinine or urine analysis results on hand, but I was told everything seems to be cleared up since the kidney stone passed.",
+      "contradiction_evidence": "Patient: I don't have my most recent serum creatinine level with me, but I was told that everything seems to be cleared up since the kidney stone passed. I don't have any history of uncontrolled hypertension or diabetic complications like neuropathy or retinopathy that I'm aware of.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She does not have her most recent HbA1c level or blood pressure readings available.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "She does not have her most recent HbA1c level or blood pressure readings available.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 6,
+      "exempt": 1
+    },
+    "num_claims": 6,
+    "num_kept": 6,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient agrees to arrange for urine analysis, including calcium, oxalate, and uric acid levels, and will bring the results to the next appointment.",
+      "evidence": "Doctor: Could you please arrange for a urine analysis to check calcium, oxalate, and uric acid levels, as well as a recent serum creatinine test, and bring the results to your next appointment? Additionally, could you start checking your blood sugars more frequently and bring a recent reading to your next visit?",
+      "section": "objective",
+      "candidate": "I can arrange to have them done and bring the results to my next appointment."
+    },
+    {
+      "statement": "The patient reports that they can arrange to have their blood sugar reading and recent urine analysis results, including calcium, oxalate, and uric acid levels, available for their next appointment.",
+      "evidence": "Doctor: Could you please arrange for a urine analysis to check calcium, oxalate, and uric acid levels, as well as a recent serum creatinine test, and bring the results to your next appointment? Additionally, could you start checking your blood sugars more frequently and bring a recent reading to your next visit?",
+      "section": "subjective",
+      "candidate": "I can arrange to have it done and bring the results to my next appointment."
+    },
+    {
+      "statement": "The patient reports that they will bring the requested urine analysis results and serum creatinine test results to their next appointment.",
+      "evidence": "Doctor: Could you please arrange for a urine analysis to check calcium, oxalate, and uric acid levels, as well as a recent serum creatinine test, and bring the results to your next appointment? Additionally, could you start checking your blood sugars more frequently and bring a recent reading to your next visit?",
+      "section": "subjective",
+      "candidate": "I’ll make sure to bring those results to my next appointment."
+    },
+    {
+      "statement": "The patient reports that their blood pressure at home is usually around 130 to 140 over 60 to 70.",
+      "evidence": "Patient: I don't have my most recent blood pressure readings with me, but at home, my blood pressure is usually around 130 to 140 over 60 to 70. I don't have my serum creatinine or urine analysis results on hand, but I was told everything seems to be cleared up since the kidney stone passed.",
+      "section": "subjective",
+      "candidate": "I don't have my most recent blood pressure readings with me, but at home, my blood pressure is usually around 130 to 140 over 60 to 70."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I think they've been pretty good, though.",
+      "speaker": "Patient",
+      "coverage": 0.144,
+      "nearest_so_sentence": "She does not regularly check her blood sugars, but thinks they have been okay.",
+      "statement": "The patient states that their medications have been \"pretty good\".",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm on 2.5 mg of Norvasc for my hypertension, and I've been taking that regularly. For my diabetes, I'm on 500 mg of metformin daily. I take my metformin as prescribed, but I don't check my blood sugars very often. I think they've been pretty good, though.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.1655
+      },
+      "first_rewrite_rejected": "The patient reports that their medications for hypertension and diabetes have been effective.",
+      "duplicate_entailment": 0.9903,
+      "duplicate_similarity": 0.3948
+    },
+    {
+      "candidate": "I can arrange to have them done and bring the results to my next appointment.",
+      "speaker": "Patient",
+      "coverage": 0.1581,
+      "nearest_so_sentence": "She does not have her most recent HbA1c level or blood pressure readings available.",
+      "statement": "The patient agrees to arrange for urine analysis, including calcium, oxalate, and uric acid levels, and will bring the results to the next appointment.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Doctor: Could you please arrange for a urine analysis to check calcium, oxalate, and uric acid levels, as well as a recent serum creatinine test, and bring the results to your next appointment? Additionally, could you start checking your blood sugars more frequently and bring a recent reading to your next visit?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.279
+      },
+      "duplicate_entailment": 0.0167,
+      "duplicate_similarity": 0.385,
+      "insertion": {
+        "section": "objective",
+        "line_index": 0,
+        "perplexity": null,
+        "removed_placeholder": [
+          "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+        ]
+      }
+    },
+    {
+      "candidate": "I can arrange to have it done and bring the results to my next appointment.",
+      "speaker": "Patient",
+      "coverage": 0.1711,
+      "nearest_so_sentence": "She does not have her most recent HbA1c level or blood pressure readings available.",
+      "statement": "The patient reports that they can arrange to have their blood sugar reading and recent urine analysis results, including calcium, oxalate, and uric acid levels, available for their next appointment.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Doctor: Could you please arrange for a urine analysis to check calcium, oxalate, and uric acid levels, as well as a recent serum creatinine test, and bring the results to your next appointment? Additionally, could you start checking your blood sugars more frequently and bring a recent reading to your next visit?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0064
+      },
+      "duplicate_entailment": 0.0033,
+      "duplicate_similarity": 0.4836,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 22.44,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I'm 45 years old and female.",
+      "speaker": "Patient",
+      "coverage": 0.221,
+      "nearest_so_sentence": "Patient is a 45-year-old female who presented with a history of kidney stone and hypertension, and diabetes.",
+      "statement": "The patient is a 45-year-old female.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 45 years old and female. I'm here because I think I might have a kidney stone again, and I also wanted to check in on my hypertension and diabetes.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0448
+      },
+      "duplicate_entailment": 0.9995,
+      "duplicate_similarity": 0.6117
+    },
+    {
+      "candidate": "I’ll make sure to bring those results to my next appointment.",
+      "speaker": "Patient",
+      "coverage": 0.2227,
+      "nearest_so_sentence": "She does not have her most recent HbA1c level or blood pressure readings available.",
+      "statement": "The patient reports that they will bring the requested urine analysis results and serum creatinine test results to their next appointment.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Doctor: Could you please arrange for a urine analysis to check calcium, oxalate, and uric acid levels, as well as a recent serum creatinine test, and bring the results to your next appointment? Additionally, could you start checking your blood sugars more frequently and bring a recent reading to your next visit?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0871
+      },
+      "duplicate_entailment": 0.0823,
+      "duplicate_similarity": 0.3541,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 1,
+        "perplexity": 19.55,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "Sure, I can arrange to have a urine analysis done to check for calcium, oxalate, and uric acid levels, and I can also get a serum creatinine test.",
+      "speaker": "Patient",
+      "coverage": 0.2939,
+      "nearest_so_sentence": "Patient is a 45-year-old female who presented with a history of kidney stone and hypertension, and diabetes.",
+      "statement": "The patient reports arranging for a urine analysis to check calcium, oxalate, and uric acid levels, as well as a serum creatinine test.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Could you please arrange for a urine analysis to check calcium, oxalate, and uric acid levels, as well as a recent serum creatinine test, and bring the results to your next appointment? Additionally, could you start checking your blood sugars more frequently and bring a recent reading to your next visit?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.1138
+      },
+      "duplicate_entailment": 0.0139,
+      "duplicate_similarity": 0.455
+    },
+    {
+      "candidate": "I was on some pain medication called Percocet while I was there.",
+      "speaker": "Patient",
+      "coverage": 0.3027,
+      "nearest_so_sentence": "She reported symptoms of intense side pain, which resolved after passing the kidney stone, and no blood in the urine.",
+      "statement": "The patient reports taking Percocet while experiencing symptoms related to the kidney stone.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Doctor: Could you please describe the symptoms you are experiencing related to the kidney stone, such as pain location, severity, duration, and any associated symptoms like blood in the urine or nausea?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.8787
+      }
+    },
+    {
+      "candidate": "I don't have a specific recent reading with me, but I was told my A1c was 6.7 at my last visit.",
+      "speaker": "Patient",
+      "coverage": 0.3062,
+      "nearest_so_sentence": "She does not have her most recent HbA1c level or blood pressure readings available.",
+      "statement": "The patient reports that their most recent A1c level was 6.7 at their last visit.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I check my blood sugars pretty infrequently, maybe once in a while, but I think they've been okay. I don't have a specific recent reading with me, but I was told my A1c was 6.7 at my last visit. As for a urine analysis, I don't have the results with me, but I was told everything is cleared up since the kidney stone passed. I can arrange to have it done and bring the results to my next appointment.",
+      "scores_vs_dialogue": {
+        "entailment": 0.99,
+        "contradiction": 0.8778
+      }
+    },
+    {
+      "candidate": "I don't have my most recent blood pressure readings with me, but at home, my blood pressure is usually around 130 to 140 over 60 to 70.",
+      "speaker": "Patient",
+      "coverage": 0.3411,
+      "nearest_so_sentence": "She does not have her most recent HbA1c level or blood pressure readings available.",
+      "statement": "The patient reports that their blood pressure at home is usually around 130 to 140 over 60 to 70.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't have my most recent blood pressure readings with me, but at home, my blood pressure is usually around 130 to 140 over 60 to 70. I don't have my serum creatinine or urine analysis results on hand, but I was told everything seems to be cleared up since the kidney stone passed.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.2263
+      },
+      "duplicate_entailment": 0.0526,
+      "duplicate_similarity": 0.3637,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 8,
+        "perplexity": 19.43,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I'll make sure to bring the results of the urine analysis and the serum creatinine test to my next appointment.",
+      "speaker": "Patient",
+      "coverage": 0.3538,
+      "nearest_so_sentence": "She reported symptoms of intense side pain, which resolved after passing the kidney stone, and no blood in the urine.",
+      "statement": "The patient agrees to bring the results of the urine analysis and serum creatinine test to the next appointment.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Could you please arrange for a urine analysis to check calcium, oxalate, and uric acid levels, as well as a recent serum creatinine test, and bring the results to your next appointment? Additionally, could you start checking your blood sugars more frequently and bring a recent reading to your next visit?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0064
+      },
+      "duplicate_entailment": 0.0302,
+      "duplicate_similarity": 0.3356
+    },
+    {
+      "candidate": "I'll make sure to bring the results of the urine analysis and the serum creatinine test to my next appointment.",
+      "speaker": "Patient",
+      "coverage": 0.3538,
+      "nearest_so_sentence": "She reported symptoms of intense side pain, which resolved after passing the kidney stone, and no blood in the urine.",
+      "statement": "The patient reports that they will bring the results of the urine analysis and serum creatinine test to their next appointment.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Could you please arrange for a urine analysis to check calcium, oxalate, and uric acid levels, as well as a recent serum creatinine test, and bring the results to your next appointment? Additionally, could you start checking your blood sugars more frequently and bring a recent reading to your next visit?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0256
+      },
+      "duplicate_entailment": 0.0161,
+      "duplicate_similarity": 0.3724
+    },
+    {
+      "candidate": "I'll make sure to bring the results of the urine analysis and the serum creatinine test to my next appointment.",
+      "speaker": "Patient",
+      "coverage": 0.3538,
+      "nearest_so_sentence": "She reported symptoms of intense side pain, which resolved after passing the kidney stone, and no blood in the urine.",
+      "statement": "The patient reports that they will bring the results of the urine analysis and the serum creatinine test to their next appointment.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Could you please arrange for a urine analysis to check calcium, oxalate, and uric acid levels, as well as a recent serum creatinine test, and bring the results to your next appointment? Additionally, could you start checking your blood sugars more frequently and bring a recent reading to your next visit?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0653
+      },
+      "duplicate_entailment": 0.0274,
+      "duplicate_similarity": 0.3799
+    },
+    {
+      "candidate": "The pain was in my side and came and went, and it was pretty intense at times.",
+      "speaker": "Patient",
+      "coverage": 0.3907,
+      "nearest_so_sentence": "She reported symptoms of intense side pain, which resolved after passing the kidney stone, and no blood in the urine.",
+      "statement": "The patient reports experiencing intermittent, intense pain in the side.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: The pain was in my side and came and went, and it was pretty intense at times. I went to the ER last week, but I think the stone passed about three days ago. There's no blood in my urine anymore, and the pain is gone now. I was on some pain medication called Percocet while I was there.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.9949
+      }
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 38,
+    "num_covered": 25,
+    "num_flagged": 13,
+    "num_not_checked_cap": 0,
+    "num_added": 4
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "I was on some pain medication called Percocet while I was there.",
+        "statement": "The patient reports taking Percocet while experiencing symptoms related to the kidney stone.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9995,
+          "contradiction": 0.8787
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I don't have a specific recent reading with me, but I was told my A1c was 6.7 at my last visit.",
+        "statement": "The patient reports that their most recent A1c level was 6.7 at their last visit.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.99,
+          "contradiction": 0.8778
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "The pain was in my side and came and went, and it was pretty intense at times.",
+        "statement": "The patient reports experiencing intermittent, intense pain in the side.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9995,
+          "contradiction": 0.9949
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 94.1,
+  "ap_unchanged": true,
+  "conversation": "Patient: I'm 45 years old and female. I'm here because I think I might have a kidney stone again, and I also wanted to check in on my hypertension and diabetes.\nDoctor: Could you please describe the symptoms you are experiencing related to the kidney stone, such as pain location, severity, duration, and any associated symptoms like blood in the urine or nausea?\nPatient: The pain was in my side and came and went, and it was pretty intense at times. I went to the ER last week, but I think the stone passed about three days ago. There's no blood in my urine anymore, and the pain is gone now. I was on some pain medication called Percocet while I was there.\nDoctor: Could you please provide details about your current medications for hypertension and diabetes, including the names, dosages, and how long you've been taking them?\nPatient: I'm on 2.5 mg of Norvasc for my hypertension, and I've been taking that regularly. For my diabetes, I'm on 500 mg of metformin daily. I take my metformin as prescribed, but I don't check my blood sugars very often. I think they've been pretty good, though.\nDoctor: Could you provide your most recent HbA1c level and any history of diabetic complications such as neuropathy or retinopathy?\nPatient: I don't have my most recent HbA1c level with me, but I think it was around 6.7 last time I checked. I don't have any complications from my diabetes that I'm aware of.\nDoctor: Could you please provide your most recent blood pressure readings and any episodes of uncontrolled hypertension? Additionally, could you share your most recent serum creatinine, electrolytes, and urine analysis results?\nPatient: I don't have my most recent blood pressure readings with me, but at home, my blood pressure is usually around 130 to 140 over 60 to 70. I don't have my serum creatinine or urine analysis results on hand, but I was told everything seems to be cleared up since the kidney stone passed.\nDoctor: Could you please provide more details about your current blood sugar levels and how often you check them? Additionally, have you experienced any changes in your urinary habits or symptoms since the kidney stone passed?\nPatient: I check my blood sugars pretty infrequently, maybe once in a while, but I think they've been okay. Since the kidney stone passed, I haven't had any changes in my urinary habits or symptoms—no pain, no blood in the urine, and everything seems to be back to normal.\nDoctor: Could you provide the results of your most recent urine analysis, including any findings related to calcium, oxalate, or uric acid levels?\nPatient: I don't have the results of my most recent urine analysis with me, but I was told that everything is cleared up since the kidney stone passed. I don't have specific numbers on calcium, oxalate, or uric acid levels, but I think the doctor is going to run some tests to check for any issues.\nDoctor: Could you provide the most recent serum creatinine level and any history of uncontrolled hypertension or diabetic complications such as neuropathy or retinopathy?\nPatient: I don't have my most recent serum creatinine level with me, but I was told that everything seems to be cleared up since the kidney stone passed. I don't have any history of uncontrolled hypertension or diabetic complications like neuropathy or retinopathy that I'm aware of.\nDoctor: Could you provide the results of your most recent urine analysis, including calcium, oxalate, and uric acid levels? If you don't have them on hand, could you arrange to have them done and bring the results to your next appointment?\nPatient: I don't have the results of my most recent urine analysis with me, but I was told that everything is cleared up since the kidney stone passed. I don't have specific numbers on calcium, oxalate, or uric acid levels, but I think the doctor is going to run some tests to check for any issues. I can arrange to have them done and bring the results to my next appointment.\nDoctor: Could you please provide your current blood sugar levels and how often you check them? Also, have you ever been diagnosed with any diabetic complications such as neuropathy or retinopathy?\nPatient: I check my blood sugars pretty infrequently, maybe once in a while, but I think they've been okay. I don't think I've ever been diagnosed with any diabetic complications like neuropathy or retinopathy.\nDoctor: Could you please provide your most recent blood sugar reading and the date it was taken? Additionally, have you had a urine analysis done recently that includes calcium, oxalate, and uric acid levels? If so, could you share those results with me?\nPatient: I check my blood sugars pretty infrequently, maybe once in a while, but I think they've been okay. I don't have a specific recent reading with me, but I was told my A1c was 6.7 at my last visit. As for a urine analysis, I don't have the results with me, but I was told everything is cleared up since the kidney stone passed. I can arrange to have it done and bring the results to my next appointment.\nDoctor: Could you please arrange for a urine analysis to check calcium, oxalate, and uric acid levels, as well as a recent serum creatinine test, and bring the results to your next appointment? Additionally, could you start checking your blood sugars more frequently and bring a recent reading to your next visit?\nPatient: Sure, I can arrange to have a urine analysis done to check for calcium, oxalate, and uric acid levels, and I can also get a serum creatinine test. I’ll make sure to bring those results to my next appointment. As for my blood sugars, I’ll start checking them more regularly and bring a recent reading with me too.\nDoctor: Thank you for your cooperation. Could you please provide the results of the urine analysis (calcium, oxalate, uric acid levels) and the serum creatinine test once you have them? Additionally, could you share a recent blood sugar reading that you've taken?\nPatient: I'll make sure to bring the results of the urine analysis and the serum creatinine test to my next appointment. As for my blood sugars, I'll start checking them more regularly and bring a recent reading with me too.\nDoctor: Thank you for your cooperation. Could you please share the results of your urine analysis, including calcium, oxalate, and uric acid levels, as well as your most recent serum creatinine and blood sugar readings?\nPatient: I'll make sure to bring the results of the urine analysis and the serum creatinine test to my next appointment. As for my blood sugars, I'll start checking them more regularly and bring a recent reading with me too.\nDoctor: Thank you for your commitment to managing your health. Could you please provide the results of the urine analysis (calcium, oxalate, uric acid levels), the serum creatinine test, and a recent blood sugar reading at your next appointment?\nPatient: I'll make sure to bring the results of the urine analysis and the serum creatinine test to my next appointment. As for my blood sugars, I'll start checking them more regularly and bring a recent reading with me too.",
+  "reference_so": {
+    "subjective": "Basic information: 45-year-old female presenting with concern for recurrent kidney stone, hypertension, and diabetes.\n\nHistory of present illness: The patient reports recurrent kidney stone symptoms, with the most recent episode involving intense flank pain that came and went, leading to an ER visit three days ago. The stone is believed to have passed, with resolution of pain and hematuria. The patient was prescribed Percocet for pain management during this episode. The patient also mentions concerns about hypertension and diabetes. The patient has no current urinary symptoms or changes in urinary habits post-stone passage.\n\nPast history: Hypertension managed with Norvasc (amlodipine) 2.5 mg; Diabetes mellitus type 2 managed with metformin 500 mg daily. Patient reports not checking blood sugars frequently.",
+    "objective": "Physical examination: Vital signs not yet recorded. No specific findings related to kidney stones, hypertension, or diabetes reported.\n\nInvestigations: HbA1c: 6.7% (last check). Blood pressure: 130-140/60-70 mmHg (home monitoring). Urine analysis results (including calcium, oxalate, uric acid levels): Pending. Serum creatinine: Pending. History of uncontrolled hypertension or diabetic complications: None reported."
+  }
+}

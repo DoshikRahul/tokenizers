@@ -1,0 +1,66 @@
+{
+  "case_id": "D2N128",
+  "removed_stage2": [
+    {
+      "stage": "stage2",
+      "section": "subjective",
+      "claim": "The patient has not undergone any blood tests.",
+      "source_sentence": "The patient has not had any previous injuries to her elbows and has not undergone any imaging studies or blood tests for her condition.",
+      "decision": "removed_contradicted",
+      "scores": {
+        "entailment": 0.8305,
+        "neutral": 0.0381,
+        "contradiction": 0.9342
+      },
+      "reason": "Contradicted by the conversation and no evidence-based correction was possible.",
+      "nearest_evidence": "Patient: I don't remember having any recent blood tests for inflammatory markers or joint health, but I know the doctor mentioned looking at some labs earlier, like an autoimmune panel, ESR, and uric acid. I wasn't told the results, just that everything looked good."
+    }
+  ],
+  "flagged_kept_stage2": [],
+  "rejected_stage3": [
+    {
+      "stage": "stage3",
+      "candidate": "I wasn't told the results, just that everything looked good.",
+      "statement": "The patient reports that they were informed that their recent blood tests or laboratory investigations appeared normal, but were not provided with specific results.",
+      "decision": "rejected_unsupported",
+      "scores": {
+        "entailment": 0.9988,
+        "contradiction": 0.9977
+      },
+      "reason": "Rewritten statement is not entailed by the conversation."
+    },
+    {
+      "stage": "stage3",
+      "candidate": "I wasn't told the results, just that everything looked good.",
+      "statement": "The patient reports that they were not informed of the results of recent blood tests for inflammatory markers or autoimmune conditions, but were told that everything looked good.",
+      "decision": "rejected_unsupported",
+      "scores": {
+        "entailment": 0.9986,
+        "contradiction": 0.9894
+      },
+      "reason": "Rewritten statement is not entailed by the conversation."
+    },
+    {
+      "stage": "stage3",
+      "candidate": "I don't remember having any recent blood tests for inflammatory markers or autoimmune conditions, but I know the doctor mentioned looking at some labs earlier, like an autoimmune panel, ESR, and uric acid.",
+      "statement": "The patient reports not recalling recent blood tests for inflammatory markers or autoimmune conditions, but mentions that the doctor previously mentioned reviewing an autoimmune panel, ESR, and uric acid.",
+      "decision": "rejected_unsupported",
+      "scores": {
+        "entailment": 0.996,
+        "contradiction": 0.5797
+      },
+      "reason": "Rewritten statement is not entailed by the conversation."
+    },
+    {
+      "stage": "stage3",
+      "candidate": "The doctor ordered it, but I haven't had it done or seen the results.",
+      "statement": "The patient reports that the ordered X-ray for the elbows has not been performed or reviewed.",
+      "decision": "rejected_unsupported",
+      "scores": {
+        "entailment": 0.9996,
+        "contradiction": 0.8308
+      },
+      "reason": "Rewritten statement is not entailed by the conversation."
+    }
+  ]
+}

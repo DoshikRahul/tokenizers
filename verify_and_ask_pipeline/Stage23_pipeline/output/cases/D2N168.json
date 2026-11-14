@@ -1,0 +1,636 @@
+{
+  "case_id": "D2N168",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient is a 28-year-old female who presented with a recent episode of hypertension, feeling light-headed, and almost falling. She has been taking lisinopril for hypertension.\n* She reports no chest pain, palpitations, or visual disturbances during the episode.\n* She has a history of high blood pressure, which is usually triggered by traveling for work and not eating well.\n* She has no family history of hypertension, migraines, or neurological conditions.\n* She has not had similar episodes before, but her blood pressure has been running high once a month or so.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient is a 28-year-old female who presented with a recent episode of hypertension, feeling light-headed, and almost falling. She has been taking lisinopril for hypertension.\n* She reports no chest pain, palpitations, or visual disturbances during the episode.\n* She has a history of high blood pressure, which is usually triggered by traveling for work and not eating well.\n* She has no family history of hypertension, migraines, or neurological conditions.\n* She has not had similar episodes before, but her blood pressure has been running high once a month or so.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* Patient is a 28-year-old female who presented with a recent episode of hypertension, feeling light-headed, and almost falling. She has been taking lisinopril for hypertension.\n* The patient reports that her boyfriend was present when she experienced the episode.\n* She reports no chest pain, palpitations, or visual disturbances during the episode.\n* The patient reports that her boyfriend discovered her and she was taken directly to the emergency department.\n* The patient reports that the information about undergoing imaging studies is not available to them.\n* The patient reports that information regarding plasma aldosterone-to-renin ratio, cortisol levels, or adrenal imaging is not available.\n* The patient reports that the results of the most recent physical examination are unknown.\n* The patient reports that the blood pressure reading from the ER was not recorded, but the patient was informed that it was approximately 200 mmHg.\n* The patient reports that the headache was intense, but it resolved after arrival at the emergency room.\n* She has a history of high blood pressure, which is usually triggered by traveling for work and not eating well.\n* She has no family history of hypertension, migraines, or neurological conditions.\n* She has not had similar episodes before, but her blood pressure has been running high once a month or so.",
+    "objective": "* The patient reports having a slightly leaky heart valve, as shown on an echocardiogram performed a few months ago.\n* The patient's cardiovascular examination revealed a slight murmur.\n* The patient exhibited trace pitting edema in their lower extremities."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has a history of hypertension, which is currently uncontrolled.\n* She has experienced an episode of light-headedness and almost falling, which may be related to her hypertension.\n* The patient has a slightly leaky heart valve, but no other structural heart disease was found.",
+    "plan": "* The patient will continue taking lisinopril as prescribed.\n* The doctor will consider further evaluation for secondary causes of hypertension, including endocrine evaluations and imaging studies.\n* The patient will be advised to monitor her blood pressure regularly and to report any further episodes or changes in her condition."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient is a 28-year-old female who presented with a recent episode of hypertension, feeling light-headed, and almost falling.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0001,
+        "contradiction": 0.0013
+      },
+      "support_evidence": "Patient: I'm 28 years old and female. I came in because my blood pressure was really high, and I felt light-headed and almost fell yesterday. My boyfriend caught me and we went straight to the ER.",
+      "contradiction_evidence": "Patient: I don't have the exact blood pressure reading from the ER, and I don't have the results of serum creatinine, eGFR, or urine albumin-to-creatinine ratio tests. That information isn't available to me.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient is a 28-year-old female who presented with a recent episode of hypertension, feeling light-headed, and almost falling.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 28-year-old female who presented with a recent episode of hypertension, feeling light-headed, and almost falling.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has been taking lisinopril for hypertension.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0002,
+        "contradiction": 0.0003
+      },
+      "support_evidence": "Patient: My blood pressure was really high in the ER, like almost 200, but I don't have the exact number now. I'm taking lisinopril, which I've been on for a while.",
+      "contradiction_evidence": "Doctor: Could you provide the exact blood pressure reading from the ER and confirm whether an echocardiogram has been performed to evaluate the heart murmur and assess for structural heart disease?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has been taking lisinopril for hypertension.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "She has been taking lisinopril for hypertension.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She reports no chest pain, palpitations, or visual disturbances during the episode.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.9845
+      },
+      "support_evidence": "Patient: No, I haven't had chest pain or palpitations, and I didn't have any visual disturbances. The main things were the light-headedness and the feeling like I was going to fall. It was pretty scary, but my boyfriend was there to catch me.",
+      "contradiction_evidence": "Patient: I don't have the exact blood pressure reading from the ER, and I don't have the results of serum creatinine, eGFR, or urine albumin-to-creatinine ratio tests. That information isn't available to me.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She reports no chest pain, palpitations, or visual disturbances during the episode.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "She reports no chest pain, palpitations, or visual disturbances during the episode.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has a history of high blood pressure, which is usually triggered by traveling for work and not eating well.",
+      "scores": {
+        "entailment": 0.9953,
+        "neutral": 0.003,
+        "contradiction": 0.0043
+      },
+      "support_evidence": "Patient: I don't have a family history of hypertension, migraines, or neurological conditions. I haven't had similar episodes before, but my blood pressure has been running high once a month or so, usually when I'm traveling for work and not eating as well.",
+      "contradiction_evidence": "Patient: I don't have a family history of hypertension, migraines, or neurological conditions. I haven't had similar episodes before, but my blood pressure has been running high once a month or so, usually when I'm traveling for work and not eating as well.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has a history of high blood pressure, which is usually triggered by traveling for work and not eating well.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "She has a history of high blood pressure, which is usually triggered by traveling for work and not eating well.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has no family history of hypertension, migraines, or neurological conditions.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0003,
+        "contradiction": 0.0008
+      },
+      "support_evidence": "Doctor: Has there been a family history of hypertension, migraines, or neurological conditions such as seizures or stroke? Have you experienced similar episodes in the past?",
+      "contradiction_evidence": "Doctor: Have you undergone any imaging studies such as an echocardiogram, head CT, or MRI to evaluate for potential neurological or cardiac causes of your symptoms?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has no family history of hypertension, migraines, or neurological conditions.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "She has no family history of hypertension, migraines, or neurological conditions.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has not had similar episodes before, but her blood pressure has been running high once a month or so.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0004,
+        "contradiction": 0.0021
+      },
+      "support_evidence": "Patient: I don't have a family history of hypertension, migraines, or neurological conditions. I haven't had similar episodes before, but my blood pressure has been running high once a month or so, usually when I'm traveling for work and not eating as well.",
+      "contradiction_evidence": "Patient: I don't have the exact blood pressure reading from the ER, but it was really high, like almost 200. I don't have any results from previous blood pressure monitoring or ambulatory measurements, but I do check it sometimes when I'm home, though not as consistently as I should.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has not had similar episodes before, but her blood pressure has been running high once a month or so.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "She has not had similar episodes before, but her blood pressure has been running high once a month or so.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 6,
+      "exempt": 1
+    },
+    "num_claims": 6,
+    "num_kept": 6,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient reports that her boyfriend discovered her and she was taken directly to the emergency department.",
+      "evidence": "Patient: I'm 28 years old and female. I came in because my blood pressure was really high, and I felt light-headed and almost fell yesterday. My boyfriend caught me and we went straight to the ER.",
+      "section": "subjective",
+      "candidate": "My boyfriend caught me and we went straight to the ER."
+    },
+    {
+      "statement": "The patient reports that her boyfriend was present when she experienced the episode.",
+      "evidence": "Patient: No, I didn't experience any vision changes, speech difficulties, weakness, or numbness during the episode. The main thing was just feeling light-headed and like I was going to fall. It was pretty scary, but my boyfriend was there to catch me.",
+      "section": "subjective",
+      "candidate": "It was pretty scary, but my boyfriend was there to catch me."
+    },
+    {
+      "statement": "The patient reports that the results of the most recent physical examination are unknown.",
+      "evidence": "Patient: I don't have the results of my most recent physical examination, but the doctor mentioned during the visit that my blood pressure was still a little elevated. He listened to my heart and found a slight murmur, and he said my lungs were clear. He also noted some trace pitting edema in my lower extremities. That's all I know about the exam.",
+      "section": "subjective",
+      "candidate": "That's all I know about the exam."
+    },
+    {
+      "statement": "The patient reports that the information about undergoing imaging studies is not available to them.",
+      "evidence": "Patient: I don't have any information about renal function tests like serum creatinine, eGFR, or urine albumin-to-creatinine ratio. That information isn't available to me.",
+      "section": "subjective",
+      "candidate": "That information isn't available to me."
+    },
+    {
+      "statement": "The patient reports that information regarding plasma aldosterone-to-renin ratio, cortisol levels, or adrenal imaging is not available.",
+      "evidence": "Patient: No, I haven't had any endocrine evaluations like a plasma aldosterone-to-renin ratio, cortisol levels, or imaging of the adrenal glands. That information isn't available to me.",
+      "section": "subjective",
+      "candidate": "As for endocrine evaluations like plasma aldosterone-to-renin ratio, cortisol levels, or adrenal imaging, that information isn't available to me."
+    },
+    {
+      "statement": "The patient's cardiovascular examination revealed a slight murmur.",
+      "evidence": "Patient: I don't have the results of my most recent physical examination, but the doctor mentioned during the visit that my blood pressure was still a little elevated. He listened to my heart and found a slight murmur, and he said my lungs were clear. He also noted some trace pitting edema in my lower extremities. That's all I know about the exam.",
+      "section": "objective",
+      "candidate": "He listened to my heart and found a slight murmur, and he said my lungs were clear."
+    },
+    {
+      "statement": "The patient exhibited trace pitting edema in their lower extremities.",
+      "evidence": "Patient: I don't have the results of my most recent physical examination, but the doctor mentioned during the visit that my blood pressure was still a little elevated. He listened to my heart and found a slight murmur, and he said my lungs were clear. He also noted some trace pitting edema in my lower extremities. That's all I know about the exam.",
+      "section": "objective",
+      "candidate": "He also noted some trace pitting edema in my lower extremities."
+    },
+    {
+      "statement": "The patient reports that the headache was intense, but it resolved after arrival at the emergency room.",
+      "evidence": "Patient: I did have a headache during the episode, but no chest pain, palpitations, or visual changes. The headache was pretty intense, but it went away after I got to the ER.",
+      "section": "subjective",
+      "candidate": "The headache was pretty intense, but it went away after I got to the ER."
+    },
+    {
+      "statement": "The patient reports having a slightly leaky heart valve, as shown on an echocardiogram performed a few months ago.",
+      "evidence": "Patient: I don't have the exact blood pressure reading from the ER, but I was told that it was really high, almost 200. As for the echocardiogram, the doctor showed me the results from a few months ago, which showed that I have a slightly leaky heart valve, but nothing else was found.",
+      "section": "objective",
+      "candidate": "As for the echocardiogram, the doctor showed me the results from a few months ago, which showed that I have a slightly leaky heart valve, but nothing else was found."
+    },
+    {
+      "statement": "The patient reports that the blood pressure reading from the ER was not recorded, but the patient was informed that it was approximately 200 mmHg.",
+      "evidence": "Patient: I don't have the exact blood pressure reading from the ER, but I was told that it was really high, almost 200. As for the echocardiogram, the doctor showed me the results from a few months ago, which showed that I have a slightly leaky heart valve, but nothing else was found.",
+      "section": "subjective",
+      "candidate": "I don't have the exact blood pressure reading from the ER, but I was told that it was really high, almost 200."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "My boyfriend caught me and we went straight to the ER.",
+      "speaker": "Patient",
+      "coverage": 0.0616,
+      "nearest_so_sentence": "She has been taking lisinopril for hypertension.",
+      "statement": "The patient reports that her boyfriend discovered her and she was taken directly to the emergency department.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I'm 28 years old and female. I came in because my blood pressure was really high, and I felt light-headed and almost fell yesterday. My boyfriend caught me and we went straight to the ER.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9988,
+        "contradiction": 0.0062
+      },
+      "duplicate_entailment": 0.0391,
+      "duplicate_similarity": 0.369,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 2,
+        "perplexity": 17.08,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "It was pretty scary, but my boyfriend was there to catch me.",
+      "speaker": "Patient",
+      "coverage": 0.0657,
+      "nearest_so_sentence": "She reports no chest pain, palpitations, or visual disturbances during the episode.",
+      "statement": "The patient reports that her boyfriend was present when she experienced the episode.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: No, I didn't experience any vision changes, speech difficulties, weakness, or numbness during the episode. The main thing was just feeling light-headed and like I was going to fall. It was pretty scary, but my boyfriend was there to catch me.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0007
+      },
+      "duplicate_entailment": 0.0009,
+      "duplicate_similarity": 0.4962,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 1,
+        "perplexity": 14.93,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "It was pretty scary, but my boyfriend was there to catch me.",
+      "speaker": "Patient",
+      "coverage": 0.0657,
+      "nearest_so_sentence": "She reports no chest pain, palpitations, or visual disturbances during the episode.",
+      "statement": "The patient reports that her boyfriend was present during the episode and assisted in catching her.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I'm 28 years old and female. I came in because my blood pressure was really high, and I felt light-headed and almost fell yesterday. My boyfriend caught me and we went straight to the ER.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0021
+      },
+      "duplicate_entailment": 0.0039,
+      "duplicate_similarity": 0.4382
+    },
+    {
+      "candidate": "That's all I know about the exam.",
+      "speaker": "Patient",
+      "coverage": 0.0698,
+      "nearest_so_sentence": "She has been taking lisinopril for hypertension.",
+      "statement": "The patient reports that the results of the most recent physical examination are unknown.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't have the results of my most recent physical examination, but the doctor mentioned during the visit that my blood pressure was still a little elevated. He listened to my heart and found a slight murmur, and he said my lungs were clear. He also noted some trace pitting edema in my lower extremities. That's all I know about the exam.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.2709
+      },
+      "duplicate_entailment": 0.1855,
+      "duplicate_similarity": 0.371,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 4,
+        "perplexity": 14.4,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I'm 28 years old and female.",
+      "speaker": "Patient",
+      "coverage": 0.1406,
+      "nearest_so_sentence": "Patient is a 28-year-old female who presented with a recent episode of hypertension, feeling light-headed, and almost falling.",
+      "statement": "The patient is 28 years old and female.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 28 years old and female. I came in because my blood pressure was really high, and I felt light-headed and almost fell yesterday. My boyfriend caught me and we went straight to the ER.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.001
+      },
+      "duplicate_entailment": 0.9995,
+      "duplicate_similarity": 0.5729
+    },
+    {
+      "candidate": "That information isn't available to me.",
+      "speaker": "Patient",
+      "coverage": 0.1445,
+      "nearest_so_sentence": "She has no family history of hypertension, migraines, or neurological conditions.",
+      "statement": "The patient reports that the information about renal function tests is not available to them.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I don't have any information about renal function tests like serum creatinine, eGFR, or urine albumin-to-creatinine ratio. That information isn't available to me.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.8768
+      }
+    },
+    {
+      "candidate": "That information isn't available to me.",
+      "speaker": "Patient",
+      "coverage": 0.1445,
+      "nearest_so_sentence": "She has no family history of hypertension, migraines, or neurological conditions.",
+      "statement": "The patient reports that the information about endocrine evaluations is not available to them.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: No, I haven't had any endocrine evaluations like a plasma aldosterone-to-renin ratio, cortisol levels, or imaging of the adrenal glands. That information isn't available to me.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.9431
+      }
+    },
+    {
+      "candidate": "That information isn't available to me.",
+      "speaker": "Patient",
+      "coverage": 0.1445,
+      "nearest_so_sentence": "She has no family history of hypertension, migraines, or neurological conditions.",
+      "statement": "The patient reports that the information about blood pressure reading recorded in the ER, as well as the results of serum creatinine, eGFR, and urine albumin-to-creatinine ratio tests, is not available to them.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I don't have any information about renal function tests like serum creatinine, eGFR, or urine albumin-to-creatinine ratio. That information isn't available to me.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.9632
+      }
+    },
+    {
+      "candidate": "That information isn't available to me.",
+      "speaker": "Patient",
+      "coverage": 0.1445,
+      "nearest_so_sentence": "She has no family history of hypertension, migraines, or neurological conditions.",
+      "statement": "The patient reports that the information about undergoing imaging studies is not available to them.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't have any information about renal function tests like serum creatinine, eGFR, or urine albumin-to-creatinine ratio. That information isn't available to me.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.1733
+      },
+      "duplicate_entailment": 0.0082,
+      "duplicate_similarity": 0.5,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 4,
+        "perplexity": 14.46,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "As for endocrine evaluations like plasma aldosterone-to-renin ratio, cortisol levels, or adrenal imaging, that information isn't available to me.",
+      "speaker": "Patient",
+      "coverage": 0.1824,
+      "nearest_so_sentence": "Patient is a 28-year-old female who presented with a recent episode of hypertension, feeling light-headed, and almost falling.",
+      "statement": "The patient reports that information regarding plasma aldosterone-to-renin ratio, cortisol levels, or adrenal imaging is not available.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: No, I haven't had any endocrine evaluations like a plasma aldosterone-to-renin ratio, cortisol levels, or imaging of the adrenal glands. That information isn't available to me.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.1653
+      },
+      "duplicate_entailment": 0.2388,
+      "duplicate_similarity": 0.344,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 5,
+        "perplexity": 14.92,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don't have any information about renal function tests like serum creatinine, eGFR, or urine albumin-to-creatinine ratio.",
+      "speaker": "Patient",
+      "coverage": 0.2103,
+      "nearest_so_sentence": "She has not had similar episodes before, but her blood pressure has been running high once a month or so.",
+      "statement": "The patient reports no information about renal function tests such as serum creatinine, eGFR, or urine albumin-to-creatinine ratio.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't have any information about renal function tests like serum creatinine, eGFR, or urine albumin-to-creatinine ratio. That information isn't available to me.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0275
+      },
+      "duplicate_entailment": 0.9714,
+      "duplicate_similarity": 0.419
+    },
+    {
+      "candidate": "No, I haven't had any endocrine evaluations like a plasma aldosterone-to-renin ratio, cortisol levels, or imaging of the adrenal glands.",
+      "speaker": "Patient",
+      "coverage": 0.214,
+      "nearest_so_sentence": "She has been taking lisinopril for hypertension.",
+      "statement": "The patient reports that they have not had any endocrine evaluations, such as a plasma aldosterone-to-renin ratio, cortisol levels, or imaging of the adrenal glands.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Have you undergone any endocrine evaluations, such as a plasma aldosterone-to-renin ratio, cortisol levels, or imaging of the adrenal glands, to rule out secondary causes of hypertension?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.1049
+      },
+      "first_rewrite_rejected": "The patient denies having undergone any endocrine evaluations, including plasma aldosterone-to-renin ratio, cortisol levels, or imaging of the adrenal glands.",
+      "duplicate_entailment": 0.572,
+      "duplicate_similarity": 0.4428
+    },
+    {
+      "candidate": "He listened to my heart and found a slight murmur, and he said my lungs were clear.",
+      "speaker": "Patient",
+      "coverage": 0.2514,
+      "nearest_so_sentence": "She reports no chest pain, palpitations, or visual disturbances during the episode.",
+      "statement": "The patient's cardiovascular examination revealed a slight murmur.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't have the results of my most recent physical examination, but the doctor mentioned during the visit that my blood pressure was still a little elevated. He listened to my heart and found a slight murmur, and he said my lungs were clear. He also noted some trace pitting edema in my lower extremities. That's all I know about the exam.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.0037
+      },
+      "duplicate_entailment": 0.0003,
+      "duplicate_similarity": 0.5063,
+      "insertion": {
+        "section": "objective",
+        "line_index": 0,
+        "perplexity": null,
+        "removed_placeholder": [
+          "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+        ]
+      }
+    },
+    {
+      "candidate": "He also noted some trace pitting edema in my lower extremities.",
+      "speaker": "Patient",
+      "coverage": 0.264,
+      "nearest_so_sentence": "Patient is a 28-year-old female who presented with a recent episode of hypertension, feeling light-headed, and almost falling.",
+      "statement": "The patient exhibited trace pitting edema in their lower extremities.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't have the results of my most recent physical examination, but the doctor mentioned during the visit that my blood pressure was still a little elevated. He listened to my heart and found a slight murmur, and he said my lungs were clear. He also noted some trace pitting edema in my lower extremities. That's all I know about the exam.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0004
+      },
+      "duplicate_entailment": 0.0004,
+      "duplicate_similarity": 0.2968,
+      "insertion": {
+        "section": "objective",
+        "line_index": 1,
+        "perplexity": 86.89,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "The headache was pretty intense, but it went away after I got to the ER.",
+      "speaker": "Patient",
+      "coverage": 0.3037,
+      "nearest_so_sentence": "Patient is a 28-year-old female who presented with a recent episode of hypertension, feeling light-headed, and almost falling.",
+      "statement": "The patient reports that the headache was intense, but it resolved after arrival at the emergency room.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I did have a headache during the episode, but no chest pain, palpitations, or visual changes. The headache was pretty intense, but it went away after I got to the ER.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.143
+      },
+      "duplicate_entailment": 0.5238,
+      "duplicate_similarity": 0.4561,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 7,
+        "perplexity": 14.35,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "As for the echocardiogram, the doctor showed me the results from a few months ago, which showed that I have a slightly leaky heart valve, but nothing else was found.",
+      "speaker": "Patient",
+      "coverage": 0.3673,
+      "nearest_so_sentence": "Patient is a 28-year-old female who presented with a recent episode of hypertension, feeling light-headed, and almost falling.",
+      "statement": "The patient reports having a slightly leaky heart valve, as shown on an echocardiogram performed a few months ago.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't have the exact blood pressure reading from the ER, but I was told that it was really high, almost 200. As for the echocardiogram, the doctor showed me the results from a few months ago, which showed that I have a slightly leaky heart valve, but nothing else was found.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9984,
+        "contradiction": 0.1059
+      },
+      "duplicate_entailment": 0.0013,
+      "duplicate_similarity": 0.4929,
+      "insertion": {
+        "section": "objective",
+        "line_index": 0,
+        "perplexity": 36.19,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don't have the exact blood pressure reading from the ER, but I was told that it was really high, almost 200.",
+      "speaker": "Patient",
+      "coverage": 0.3808,
+      "nearest_so_sentence": "Patient is a 28-year-old female who presented with a recent episode of hypertension, feeling light-headed, and almost falling.",
+      "statement": "The patient reports that the blood pressure reading from the ER was not recorded, but the patient was informed that it was approximately 200 mmHg.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't have the exact blood pressure reading from the ER, but I was told that it was really high, almost 200. As for the echocardiogram, the doctor showed me the results from a few months ago, which showed that I have a slightly leaky heart valve, but nothing else was found.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9925,
+        "contradiction": 0.1643
+      },
+      "duplicate_entailment": 0.001,
+      "duplicate_similarity": 0.3941,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 7,
+        "perplexity": 13.56,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don't have the exact blood pressure reading from the ER, but I was told it was really high, almost 200.",
+      "speaker": "Patient",
+      "coverage": 0.3835,
+      "nearest_so_sentence": "Patient is a 28-year-old female who presented with a recent episode of hypertension, feeling light-headed, and almost falling.",
+      "statement": "The patient reports that the blood pressure reading from the ER was not recorded, but the patient was informed that it was approximately 200 mmHg.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I don't have the exact blood pressure reading from the ER, but I was told that it was really high, almost 200. As for the echocardiogram, the doctor showed me the results from a few months ago, which showed that I have a slightly leaky heart valve, but nothing else was found.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9925,
+        "contradiction": 0.1643
+      },
+      "duplicate_entailment": 0.001,
+      "duplicate_similarity": 0.3941
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 35,
+    "num_covered": 17,
+    "num_flagged": 18,
+    "num_not_checked_cap": 0,
+    "num_added": 10
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "That information isn't available to me.",
+        "statement": "The patient reports that the information about renal function tests is not available to them.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9997,
+          "contradiction": 0.8768
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "That information isn't available to me.",
+        "statement": "The patient reports that the information about endocrine evaluations is not available to them.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9997,
+          "contradiction": 0.9431
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "That information isn't available to me.",
+        "statement": "The patient reports that the information about blood pressure reading recorded in the ER, as well as the results of serum creatinine, eGFR, and urine albumin-to-creatinine ratio tests, is not available to them.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.9632
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 120.1,
+  "ap_unchanged": true,
+  "conversation": "Patient: I'm 28 years old and female. I came in because my blood pressure was really high, and I felt light-headed and almost fell yesterday. My boyfriend caught me and we went straight to the ER.\nDoctor: Could you please confirm your current blood pressure reading and any medications you are taking?\nPatient: My blood pressure was really high in the ER, like almost 200, but I don't have the exact number now. I'm taking lisinopril, which I've been on for a while.\nDoctor: Have you experienced any chest pain, palpitations, or visual disturbances alongside the hypertension?\nPatient: No, I haven't had chest pain or palpitations, and I didn't have any visual disturbances. The main things were the light-headedness and the feeling like I was going to fall. It was pretty scary, but my boyfriend was there to catch me.\nDoctor: Has there been a family history of hypertension, migraines, or neurological conditions such as seizures or stroke? Have you experienced similar episodes in the past?\nPatient: I don't have a family history of hypertension, migraines, or neurological conditions. I haven't had similar episodes before, but my blood pressure has been running high once a month or so, usually when I'm traveling for work and not eating as well.\nDoctor: Could you describe any neurological symptoms you experienced during the episode, such as vision changes, speech difficulties, weakness, or numbness?\nPatient: No, I didn't experience any vision changes, speech difficulties, weakness, or numbness during the episode. The main thing was just feeling light-headed and like I was going to fall. It was pretty scary, but my boyfriend was there to catch me.\nDoctor: Could you provide the exact blood pressure reading from the ER and any results from previous blood pressure monitoring or ambulatory blood pressure measurements?\nPatient: I don't have the exact blood pressure reading from the ER, but it was really high, like almost 200. I don't have any results from previous blood pressure monitoring or ambulatory measurements, but I do check it sometimes when I'm home, though not as consistently as I should.\nDoctor: Could you describe any other symptoms you experience during these episodes, such as chest pain, palpitations, or visual disturbances? Additionally, have you had any imaging studies like a head CT, MRI, or echocardiogram to evaluate for secondary causes of hypertension or neurological involvement?\nPatient: I don't have any other symptoms during these episodes besides the light-headedness and feeling like I'm going to fall. I haven't had any imaging studies like a head CT, MRI, or echocardiogram to evaluate for secondary causes of hypertension or neurological involvement.\nDoctor: Have you undergone any renal function tests, such as serum creatinine, estimated glomerular filtration rate (eGFR), or urine albumin-to-creatinine ratio, to evaluate for renal causes of secondary hypertension?\nPatient: I don't have any information about renal function tests like serum creatinine, eGFR, or urine albumin-to-creatinine ratio. That information isn't available to me.\nDoctor: Have you experienced any other symptoms during these episodes, such as chest pain, palpitations, visual changes, or headaches?\nPatient: I did have a headache during the episode, but no chest pain, palpitations, or visual changes. The headache was pretty intense, but it went away after I got to the ER.\nDoctor: Have you undergone any endocrine evaluations, such as a plasma aldosterone-to-renin ratio, cortisol levels, or imaging of the adrenal glands, to rule out secondary causes of hypertension?\nPatient: No, I haven't had any endocrine evaluations like a plasma aldosterone-to-renin ratio, cortisol levels, or imaging of the adrenal glands. That information isn't available to me.\nDoctor: Could you please provide the results of your most recent physical examination, particularly focusing on cardiovascular and neurological findings?\nPatient: I don't have the results of my most recent physical examination, but the doctor mentioned during the visit that my blood pressure was still a little elevated. He listened to my heart and found a slight murmur, and he said my lungs were clear. He also noted some trace pitting edema in my lower extremities. That's all I know about the exam.\nDoctor: Could you provide the exact blood pressure reading recorded in the ER during the episode, as well as the results of your most recent serum creatinine, eGFR, and urine albumin-to-creatinine ratio tests?\nPatient: I don't have the exact blood pressure reading from the ER, and I don't have the results of serum creatinine, eGFR, or urine albumin-to-creatinine ratio tests. That information isn't available to me.\nDoctor: Have you undergone any imaging studies such as an echocardiogram, head CT, or MRI to evaluate for potential neurological or cardiac causes of your symptoms?\nPatient: I don't have the results of imaging studies like an echocardiogram, head CT, or MRI. That information isn't available to me.\nDoctor: Could you provide the exact blood pressure reading from the ER and confirm whether an echocardiogram has been performed to evaluate the heart murmur and assess for structural heart disease?\nPatient: I don't have the exact blood pressure reading from the ER, but I was told that it was really high, almost 200. As for the echocardiogram, the doctor showed me the results from a few months ago, which showed that I have a slightly leaky heart valve, but nothing else was found.\nDoctor: Could you provide the exact blood pressure reading from the ER and confirm if any endocrine evaluations, such as plasma aldosterone-to-renin ratio, cortisol levels, or adrenal imaging, have been performed?\nPatient: I don't have the exact blood pressure reading from the ER, but I was told it was really high, almost 200. As for endocrine evaluations like plasma aldosterone-to-renin ratio, cortisol levels, or adrenal imaging, that information isn't available to me.",
+  "reference_so": {
+    "subjective": "Basic information: 28-year-old female presenting with high blood pressure, light-headedness, and a near-fall incident.\n\nHistory of present illness: The patient reports experiencing high blood pressure, light-headedness, and a near-fall incident yesterday. She was caught by her boyfriend and taken to the ER. She is currently on lisinopril for hypertension. The episodes occur approximately once a month, often when she is traveling for work and not eating as well. She also reports experiencing a headache during these episodes, which was intense but resolved after arriving at the ER.\n\nPast history: Family history: No known family history of hypertension, migraines, or neurological conditions. History of migraines or neurological conditions: None. History of similar episodes: No prior similar episodes. No endocrine evaluations (plasma aldosterone-to-renin ratio, cortisol levels, adrenal imaging) have been performed to evaluate for secondary hypertension. No neurological evaluations (head CT, MRI, EEG) have been performed to assess for potential neurological involvement. Medication history: Currently on lisinopril for hypertension. No recent changes in medication regimen or dose adjustments.",
+    "objective": "Physical examination: Heart murmur noted, trace pitting edema in lower extremities, lungs clear.\n\nInvestigations: Blood pressure in the ER was almost 200 mmHg (exact value not provided). No renal function tests (serum creatinine, eGFR, urine albumin-to-creatinine ratio) have been performed to evaluate for secondary hypertension. No endocrine evaluations (plasma aldosterone-to-renin ratio, cortisol levels, adrenal imaging) have been performed to evaluate for secondary causes of hypertension. No imaging studies (head CT, MRI, echocardiogram) have been performed to evaluate for secondary causes of hypertension or neurological involvement. The patient mentioned that an echocardiogram from a few months ago showed a slightly leaky heart valve."
+  }
+}

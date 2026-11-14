@@ -1,0 +1,650 @@
+{
+  "case_id": "D2N167",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient is a 35-year-old female who presents with a left knee injury sustained while running with her niece a week ago. She reports hearing a pop and experiencing pain, swelling, and instability in the knee.\n* The pain is located on the medial side of the knee, with some swelling and warmth to the touch.\n* She has difficulty bearing weight on the knee and has been limping.\n* No prior knee injuries or surgeries are reported.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient is a 35-year-old female who presents with a left knee injury sustained while running with her niece a week ago. She reports hearing a pop and experiencing pain, swelling, and instability in the knee.\n* The pain is located on the medial side of the knee, with some swelling and warmth to the touch.\n* She has difficulty bearing weight on the knee and has been limping.\n* No prior knee injuries or surgeries are reported.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* Patient is a 35-year-old female who presents with a left knee injury sustained while running with her niece a week ago. She reports hearing a pop and experiencing pain, swelling, and instability in the knee.\n* The pain is located on the medial side of the knee, with some swelling and warmth to the touch.\n* She has difficulty bearing weight on the knee and has been limping.\n* The patient reports that they are unsure if imaging studies, such as X-rays or an MRI, will be performed for their left knee injury.\n* The patient reports experiencing worsening limping.\n* The patient reports that they are unsure if imaging studies, including X-rays, will be performed today.\n* No prior knee injuries or surgeries are reported.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient presents with a recent left knee injury, characterized by pain, swelling, and instability.",
+    "plan": "* The patient will undergo further evaluation, including imaging studies such as X-rays or MRI, to determine the extent of the injury and guide further management.\n* The patient will be advised to follow up with the doctor for further instructions and to report any changes in her symptoms."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient is a 35-year-old female who presents with a left knee injury sustained while running with her niece a week ago.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.0003
+      },
+      "support_evidence": "Patient: I'm 35 and female. I came in because I hurt my left knee about a week ago while running with my niece, who's learning to ride her bike. I think I twisted my knee in a weird way and heard a pop, and it's been hurting ever since. I've been limping and it's gotten worse, so I wanted to come in and check it out.",
+      "contradiction_evidence": "Doctor: Have you undergone any imaging studies such as X-rays or MRI for your left knee injury?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient is a 35-year-old female who presents with a left knee injury sustained while running with her niece a week ago.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 35-year-old female who presents with a left knee injury sustained while running with her niece a week ago.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She reports hearing a pop and experiencing pain, swelling, and instability in the knee.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0002,
+        "contradiction": 0.0007
+      },
+      "support_evidence": "Doctor: Can you describe the exact location of the pain in your left knee, and have you noticed any swelling, bruising, or instability in the knee since the injury?",
+      "contradiction_evidence": "Patient: The swelling is around the knee joint, and it feels a bit warm to the touch. I haven't noticed any changes in the alignment of my knee, but I definitely have trouble bearing weight on it without limping. It's been really hard to walk normally since it happened.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She reports hearing a pop and experiencing pain, swelling, and instability in the knee.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "She reports hearing a pop and experiencing pain, swelling, and instability in the knee.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The pain is located on the medial side of the knee.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.0006
+      },
+      "support_evidence": "Patient: The pain is mostly on the inside of my knee, more on the medial side than the outside. I haven’t noticed any bruising, but there is some swelling, and it feels a little unstable when I try to put weight on it. It’s been hurting pretty consistently since it happened.",
+      "contradiction_evidence": "Patient: The swelling is around the knee joint, and it feels a bit warm to the touch. I haven't noticed any changes in the alignment of my knee, but I definitely have trouble bearing weight on it without limping. It's been really hard to walk normally since it happened.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain is located on the medial side of the knee.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The pain is located on the medial side of the knee, with some swelling and warmth to the touch."
+    },
+    {
+      "claim": "The pain has swelling.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.0008
+      },
+      "support_evidence": "Doctor: Can you describe the exact location of the pain in your left knee, and have you noticed any swelling, bruising, or instability in the knee since the injury?",
+      "contradiction_evidence": "Doctor: Could you describe the specific location of the swelling and whether it is accompanied by warmth or redness? Additionally, have you noticed any changes in the alignment of your knee or difficulty bearing weight?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain has swelling.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The pain is located on the medial side of the knee, with some swelling and warmth to the touch."
+    },
+    {
+      "claim": "The pain has warmth to the touch.",
+      "scores": {
+        "entailment": 0.9923,
+        "neutral": 0.0026,
+        "contradiction": 0.0391
+      },
+      "support_evidence": "Patient: The swelling is around the knee joint, and it feels a bit warm to the touch. I haven't noticed any changes in the alignment of my knee, but I definitely have trouble bearing weight on it without limping. It's been really hard to walk normally since it happened.",
+      "contradiction_evidence": "Patient: The swelling is around the knee joint, and it feels a bit warm to the touch. I haven't noticed any changes in the alignment of my knee, but I definitely have trouble bearing weight on it without limping. It's been really hard to walk normally since it happened.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain has warmth to the touch.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The pain is located on the medial side of the knee, with some swelling and warmth to the touch."
+    },
+    {
+      "claim": "She has difficulty bearing weight on the knee and has been limping.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.0004
+      },
+      "support_evidence": "Patient: The pain is mostly on the inside of my knee, more on the medial side than the outside. I haven’t noticed any bruising, but there is some swelling, and it feels a little unstable when I try to put weight on it. It’s been hurting pretty consistently since it happened.",
+      "contradiction_evidence": "Patient: The swelling is around the knee joint, and it feels a bit warm to the touch. I haven't noticed any changes in the alignment of my knee, but I definitely have trouble bearing weight on it without limping. It's been really hard to walk normally since it happened.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has difficulty bearing weight on the knee and has been limping.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "She has difficulty bearing weight on the knee and has been limping.",
+      "level": "sentence"
+    },
+    {
+      "claim": "No prior knee injuries or surgeries are reported.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0004,
+        "contradiction": 0.013
+      },
+      "support_evidence": "Patient: No, I haven't experienced any locking or catching in my knee, and it hasn't given way completely, but it does feel a little unstable. I don't have any prior knee injuries or surgeries that I'm aware of.",
+      "contradiction_evidence": "Patient: No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "No prior knee injuries or surgeries are reported.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "No prior knee injuries or surgeries are reported.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 7,
+      "exempt": 1
+    },
+    "num_claims": 7,
+    "num_kept": 7,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient reports experiencing worsening limping.",
+      "evidence": "Patient: I'm 35 and female. I came in because I hurt my left knee about a week ago while running with my niece, who's learning to ride her bike. I think I twisted my knee in a weird way and heard a pop, and it's been hurting ever since. I've been limping and it's gotten worse, so I wanted to come in and check it out.",
+      "section": "subjective",
+      "candidate": "I've been limping and it's gotten worse, so I wanted to come in and check it out."
+    },
+    {
+      "statement": "The patient reports that they are unsure if imaging studies, such as X-rays or an MRI, will be performed for their left knee injury.",
+      "evidence": "Doctor: Have you undergone any imaging studies, such as X-rays or an MRI, for your left knee injury?",
+      "section": "subjective",
+      "candidate": "I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else."
+    },
+    {
+      "statement": "The patient reports that they are unsure if imaging studies, including X-rays, will be performed today.",
+      "evidence": "Patient: No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.",
+      "section": "subjective",
+      "candidate": "I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I'm 35 and female.",
+      "speaker": "Patient",
+      "coverage": 0.0615,
+      "nearest_so_sentence": "She has difficulty bearing weight on the knee and has been limping.",
+      "statement": "The patient is a 35-year-old female.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 35 and female. I came in because I hurt my left knee about a week ago while running with my niece, who's learning to ride her bike. I think I twisted my knee in a weird way and heard a pop, and it's been hurting ever since. I've been limping and it's gotten worse, so I wanted to come in and check it out.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0002
+      },
+      "duplicate_entailment": 0.9996,
+      "duplicate_similarity": 0.5353
+    },
+    {
+      "candidate": "No, I haven't had any imaging studies done yet.",
+      "speaker": "Patient",
+      "coverage": 0.2346,
+      "nearest_so_sentence": "No prior knee injuries or surgeries are reported.",
+      "statement": "The patient denies having undergone any imaging studies, such as X-rays or an MRI, for their left knee injury.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Have you undergone any imaging studies, such as X-rays or an MRI, for your left knee injury?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0919
+      },
+      "duplicate_entailment": 0.9024,
+      "duplicate_similarity": 0.6042
+    },
+    {
+      "candidate": "No, I haven't had any imaging studies done yet.",
+      "speaker": "Patient",
+      "coverage": 0.2346,
+      "nearest_so_sentence": "No prior knee injuries or surgeries are reported.",
+      "statement": "The patient denies having undergone any imaging studies, including X-rays or MRI, for their left knee injury.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Have you undergone any imaging studies, such as X-rays or an MRI, for your left knee injury?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0345
+      },
+      "duplicate_entailment": 0.864,
+      "duplicate_similarity": 0.6107
+    },
+    {
+      "candidate": "No, I haven't had any imaging studies done yet.",
+      "speaker": "Patient",
+      "coverage": 0.2346,
+      "nearest_so_sentence": "No prior knee injuries or surgeries are reported.",
+      "statement": "The patient denies having undergone any imaging studies, including X-rays or MRI, for their left knee injury.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Have you undergone any imaging studies, such as X-rays or an MRI, for your left knee injury?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0345
+      },
+      "duplicate_entailment": 0.864,
+      "duplicate_similarity": 0.6107
+    },
+    {
+      "candidate": "No, I haven't had any imaging studies done yet.",
+      "speaker": "Patient",
+      "coverage": 0.2346,
+      "nearest_so_sentence": "No prior knee injuries or surgeries are reported.",
+      "statement": "The patient denies having undergone any imaging studies, including X-ray, MRI, or ultrasound, for their left knee injury.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Have you undergone any imaging studies such as X-rays, MRI, or ultrasound for your left knee injury?",
+      "scores_vs_dialogue": {
+        "entailment": 0.995,
+        "contradiction": 0.0126
+      },
+      "duplicate_entailment": 0.8354,
+      "duplicate_similarity": 0.6176
+    },
+    {
+      "candidate": "No, I haven't had any imaging studies done yet.",
+      "speaker": "Patient",
+      "coverage": 0.2346,
+      "nearest_so_sentence": "No prior knee injuries or surgeries are reported.",
+      "statement": "The patient denies having undergone any previous imaging studies for this injury.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Have you undergone any imaging studies, such as X-rays or an MRI, for your left knee injury?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0097
+      },
+      "duplicate_entailment": 0.9926,
+      "duplicate_similarity": 0.5383
+    },
+    {
+      "candidate": "No, I haven't had any imaging studies done yet.",
+      "speaker": "Patient",
+      "coverage": 0.2346,
+      "nearest_so_sentence": "No prior knee injuries or surgeries are reported.",
+      "statement": "The patient denies having undergone any imaging studies, including X-rays, MRI, or ultrasound, for their left knee injury.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Can you describe the exact location of the pain in your left knee, and have you noticed any swelling, bruising, or instability in the knee since the injury?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9957,
+        "contradiction": 0.0269
+      },
+      "duplicate_entailment": 0.8739,
+      "duplicate_similarity": 0.6162
+    },
+    {
+      "candidate": "No, I haven't had any imaging studies done yet.",
+      "speaker": "Patient",
+      "coverage": 0.2346,
+      "nearest_so_sentence": "No prior knee injuries or surgeries are reported.",
+      "statement": "The patient denies having undergone any imaging studies, including X-rays, MRI, or ultrasound, for their knee injury.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Have you undergone any imaging studies such as X-rays, MRI, or ultrasound for your knee injury?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9987,
+        "contradiction": 0.0068
+      },
+      "duplicate_entailment": 0.8912,
+      "duplicate_similarity": 0.6304
+    },
+    {
+      "candidate": "No, I haven't had any imaging studies done yet.",
+      "speaker": "Patient",
+      "coverage": 0.2346,
+      "nearest_so_sentence": "No prior knee injuries or surgeries are reported.",
+      "statement": "The patient denies having undergone any imaging studies, including X-rays, MRI, or ultrasound, for their left knee injury.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Can you describe the exact location of the pain in your left knee, and have you noticed any swelling, bruising, or instability in the knee since the injury?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9957,
+        "contradiction": 0.0269
+      },
+      "duplicate_entailment": 0.8739,
+      "duplicate_similarity": 0.6162
+    },
+    {
+      "candidate": "No, I haven't had any imaging studies done yet.",
+      "speaker": "Patient",
+      "coverage": 0.2346,
+      "nearest_so_sentence": "No prior knee injuries or surgeries are reported.",
+      "statement": "The patient denies having undergone any imaging studies, including X-rays, MRI, or ultrasound, for their left knee injury.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Can you describe the exact location of the pain in your left knee, and have you noticed any swelling, bruising, or instability in the knee since the injury?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9957,
+        "contradiction": 0.0269
+      },
+      "duplicate_entailment": 0.8739,
+      "duplicate_similarity": 0.6162
+    },
+    {
+      "candidate": "No, I haven't had any imaging studies done yet.",
+      "speaker": "Patient",
+      "coverage": 0.2346,
+      "nearest_so_sentence": "No prior knee injuries or surgeries are reported.",
+      "statement": "The patient denies having undergone any imaging studies, including X-rays, MRI, or ultrasound, for their knee injury.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Have you undergone any imaging studies such as X-rays, MRI, or ultrasound for your knee injury?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9987,
+        "contradiction": 0.0068
+      },
+      "duplicate_entailment": 0.8912,
+      "duplicate_similarity": 0.6304
+    },
+    {
+      "candidate": "I've been limping and it's gotten worse, so I wanted to come in and check it out.",
+      "speaker": "Patient",
+      "coverage": 0.3346,
+      "nearest_so_sentence": "She has difficulty bearing weight on the knee and has been limping.",
+      "statement": "The patient reports experiencing worsening limping.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I'm 35 and female. I came in because I hurt my left knee about a week ago while running with my niece, who's learning to ride her bike. I think I twisted my knee in a weird way and heard a pop, and it's been hurting ever since. I've been limping and it's gotten worse, so I wanted to come in and check it out.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0095
+      },
+      "duplicate_entailment": 0.0023,
+      "duplicate_similarity": 0.6154,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 3,
+        "perplexity": 23.65,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I haven’t noticed any bruising, but there is some swelling, and it feels a little unstable when I try to put weight on it.",
+      "speaker": "Patient",
+      "coverage": 0.3513,
+      "nearest_so_sentence": "She has difficulty bearing weight on the knee and has been limping.",
+      "statement": "The patient reports swelling in the left knee and experiences instability when attempting to bear weight on it.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The pain is mostly on the inside of my knee, more on the medial side than the outside. I haven’t noticed any bruising, but there is some swelling, and it feels a little unstable when I try to put weight on it. It’s been hurting pretty consistently since it happened.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0016
+      },
+      "duplicate_entailment": 0.9992,
+      "duplicate_similarity": 0.6891
+    },
+    {
+      "candidate": "I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else.",
+      "speaker": "Patient",
+      "coverage": 0.3627,
+      "nearest_so_sentence": "No prior knee injuries or surgeries are reported.",
+      "statement": "The patient reports that they are unsure if imaging studies, such as X-rays or an MRI, will be performed for their left knee injury.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Doctor: Have you undergone any imaging studies, such as X-rays or an MRI, for your left knee injury?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.1086
+      },
+      "duplicate_entailment": 0.1757,
+      "duplicate_similarity": 0.5065,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 3,
+        "perplexity": 20.68,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else.",
+      "speaker": "Patient",
+      "coverage": 0.3627,
+      "nearest_so_sentence": "No prior knee injuries or surgeries are reported.",
+      "statement": "The patient reports that they are unsure if imaging studies, including X-rays, will be performed today.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9989,
+        "contradiction": 0.0308
+      },
+      "duplicate_entailment": 0.0227,
+      "duplicate_similarity": 0.3287,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 5,
+        "perplexity": 16.14,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else.",
+      "speaker": "Patient",
+      "coverage": 0.3627,
+      "nearest_so_sentence": "No prior knee injuries or surgeries are reported.",
+      "statement": "The patient reports that they are unsure if imaging studies, including X-rays, will be performed today.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9989,
+        "contradiction": 0.0308
+      },
+      "duplicate_entailment": 0.0227,
+      "duplicate_similarity": 0.3287
+    },
+    {
+      "candidate": "I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else.",
+      "speaker": "Patient",
+      "coverage": 0.3627,
+      "nearest_so_sentence": "No prior knee injuries or surgeries are reported.",
+      "statement": "The patient reports that they are unsure if imaging studies, including X-ray, MRI, or ultrasound, will be performed today.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.",
+      "scores_vs_dialogue": {
+        "entailment": 0.998,
+        "contradiction": 0.0236
+      },
+      "duplicate_entailment": 0.03,
+      "duplicate_similarity": 0.3229
+    },
+    {
+      "candidate": "I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else.",
+      "speaker": "Patient",
+      "coverage": 0.3627,
+      "nearest_so_sentence": "No prior knee injuries or surgeries are reported.",
+      "statement": "The patient reports that they do not know if imaging studies, including X-rays, will be performed today.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9989,
+        "contradiction": 0.0572
+      },
+      "duplicate_entailment": 0.027,
+      "duplicate_similarity": 0.4626
+    },
+    {
+      "candidate": "I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else.",
+      "speaker": "Patient",
+      "coverage": 0.3627,
+      "nearest_so_sentence": "No prior knee injuries or surgeries are reported.",
+      "statement": "The patient reports that they are unsure if imaging studies, including X-rays, will be performed today.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9989,
+        "contradiction": 0.0308
+      },
+      "duplicate_entailment": 0.0227,
+      "duplicate_similarity": 0.3287
+    },
+    {
+      "candidate": "I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else.",
+      "speaker": "Patient",
+      "coverage": 0.3627,
+      "nearest_so_sentence": "No prior knee injuries or surgeries are reported.",
+      "statement": "The patient reports that they are unsure if imaging studies, such as X-rays, will be performed today.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.",
+      "scores_vs_dialogue": {
+        "entailment": 0.999,
+        "contradiction": 0.0498
+      },
+      "duplicate_entailment": 0.0215,
+      "duplicate_similarity": 0.3244
+    },
+    {
+      "candidate": "I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else.",
+      "speaker": "Patient",
+      "coverage": 0.3627,
+      "nearest_so_sentence": "No prior knee injuries or surgeries are reported.",
+      "statement": "The patient reports that they are unsure if imaging studies, including X-rays, will be performed today.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9989,
+        "contradiction": 0.0308
+      },
+      "duplicate_entailment": 0.0227,
+      "duplicate_similarity": 0.3287
+    },
+    {
+      "candidate": "I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else.",
+      "speaker": "Patient",
+      "coverage": 0.3627,
+      "nearest_so_sentence": "No prior knee injuries or surgeries are reported.",
+      "statement": "The patient reports that they are unsure if imaging studies, including X-rays, will be performed today.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9989,
+        "contradiction": 0.0308
+      },
+      "duplicate_entailment": 0.0227,
+      "duplicate_similarity": 0.3287
+    },
+    {
+      "candidate": "I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else.",
+      "speaker": "Patient",
+      "coverage": 0.3627,
+      "nearest_so_sentence": "No prior knee injuries or surgeries are reported.",
+      "statement": "The patient reports that they are unsure if imaging studies, such as X-rays, will be performed today.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.",
+      "scores_vs_dialogue": {
+        "entailment": 0.999,
+        "contradiction": 0.0498
+      },
+      "duplicate_entailment": 0.0215,
+      "duplicate_similarity": 0.3244
+    },
+    {
+      "candidate": "It's been really hard to walk normally since it happened.",
+      "speaker": "Patient",
+      "coverage": 0.3672,
+      "nearest_so_sentence": "She has difficulty bearing weight on the knee and has been limping.",
+      "statement": "The patient reports that it has been hard to walk normally since the incident.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The swelling is around the knee joint, and it feels a bit warm to the touch. I haven't noticed any changes in the alignment of my knee, but I definitely have trouble bearing weight on it without limping. It's been really hard to walk normally since it happened.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0012
+      },
+      "duplicate_entailment": 0.9994,
+      "duplicate_similarity": 0.5254
+    },
+    {
+      "candidate": "I haven't had any numbness, tingling, or weakness in my leg.",
+      "speaker": "Patient",
+      "coverage": 0.3719,
+      "nearest_so_sentence": "She has difficulty bearing weight on the knee and has been limping.",
+      "statement": "The patient denies experiencing numbness, tingling, or weakness in their leg.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I can move my knee, but not all the way. It hurts when I try to bend or straighten it fully. I haven't had any numbness, tingling, or weakness in my leg.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.014
+      },
+      "duplicate_entailment": 0.802,
+      "duplicate_similarity": 0.4583
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 45,
+    "num_covered": 19,
+    "num_flagged": 25,
+    "num_not_checked_cap": 1,
+    "num_added": 3
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": []
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 121.3,
+  "ap_unchanged": true,
+  "conversation": "Patient: I'm 35 and female. I came in because I hurt my left knee about a week ago while running with my niece, who's learning to ride her bike. I think I twisted my knee in a weird way and heard a pop, and it's been hurting ever since. I've been limping and it's gotten worse, so I wanted to come in and check it out.\nDoctor: Can you describe the exact location of the pain in your left knee, and have you noticed any swelling, bruising, or instability in the knee since the injury?\nPatient: The pain is mostly on the inside of my knee, more on the medial side than the outside. I haven’t noticed any bruising, but there is some swelling, and it feels a little unstable when I try to put weight on it. It’s been hurting pretty consistently since it happened.\nDoctor: Have you experienced any locking, catching, or giving way of the knee since the injury? Have you had any prior knee injuries or surgeries?\nPatient: No, I haven't experienced any locking or catching in my knee, and it hasn't given way completely, but it does feel a little unstable. I don't have any prior knee injuries or surgeries that I'm aware of.\nDoctor: Could you describe the range of motion of your left knee? Have you noticed any locking, catching, or giving way of the knee? Additionally, have you experienced any numbness, tingling, or weakness in your leg?\nPatient: I can move my knee, but not all the way. It hurts when I try to bend or straighten it fully. I haven't had any numbness, tingling, or weakness in my leg.\nDoctor: Could you describe the specific location of the swelling and whether it is accompanied by warmth or redness? Additionally, have you noticed any changes in the alignment of your knee or difficulty bearing weight?\nPatient: The swelling is around the knee joint, and it feels a bit warm to the touch. I haven't noticed any changes in the alignment of my knee, but I definitely have trouble bearing weight on it without limping. It's been really hard to walk normally since it happened.\nDoctor: Have you undergone any imaging studies, such as X-rays or an MRI, for your left knee injury?\nPatient: No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.\nDoctor: Have you undergone any imaging studies such as X-rays or MRI for your left knee injury?\nPatient: No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.\nDoctor: Have you undergone any imaging studies such as X-rays or MRI for your left knee injury?\nPatient: No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.\nDoctor: Have you undergone any imaging studies such as X-ray, MRI, or ultrasound for your left knee injury?\nPatient: No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.\nDoctor: Have you undergone any previous imaging studies for this injury, such as X-rays, MRI, or ultrasound?\nPatient: No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.\nDoctor: Have you undergone any imaging studies such as X-rays, MRI, or ultrasound for your left knee injury?\nPatient: No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.\nDoctor: Have you undergone any imaging studies such as X-rays, MRI, or ultrasound for your knee injury?\nPatient: No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.\nDoctor: Have you undergone any imaging studies such as X-rays, MRI, or ultrasound for your left knee injury?\nPatient: No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.\nDoctor: Have you undergone any imaging studies such as X-rays, MRI, or ultrasound for your left knee injury?\nPatient: No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.\nDoctor: Have you undergone any imaging studies such as X-rays, MRI, or ultrasound for your knee injury?\nPatient: No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.",
+  "reference_so": {
+    "subjective": "Basic information: 35-year-old female presenting with left knee pain following a twisting injury during running with her niece a week ago. Chief complaint: pain, limping, and worsening symptoms.\n\nHistory of present illness: The patient sustained a twisting injury to her left knee during running with her niece a week ago. She heard a pop at the time of injury and has experienced persistent pain, primarily on the medial side of the knee, along with swelling and a sensation of instability. Symptoms have progressively worsened, and she has been limping since the injury. There is no reported bruising. She has not experienced any locking or catching in her knee, and it has not given way completely, though it feels a little unstable. She can move her knee, but not all the way. It hurts when she tries to bend or straighten it fully. She has not had any numbness, tingling, or weakness in her leg. The swelling is around the knee joint, and it feels a bit warm to the touch. She hasn't noticed any changes in the alignment of her knee, but she definitely has trouble bearing weight on it without limping. It's been really hard to walk normally since it happened.\n\nPast history: No prior knee injuries or surgeries reported.",
+    "objective": "Physical examination: The patient reports swelling on the medial side of the left knee, with pain upon full bending or straightening. There is no bruising, but the knee feels unstable when bearing weight. No numbness, tingling, or weakness in the leg. Range of motion is limited.\n\nInvestigations: Imaging studies: None reported yet."
+  }
+}

@@ -1,0 +1,383 @@
+{
+  "case_id": "D2N135",
+  "split": "dev",
+  "stage1_so": {
+    "subjective": "* Patient reported a recent episode of high blood sugar, which led to an emergency room visit.\n* Patient reported feeling light-headed and dizzy, with a history of eating sweets, especially during the holidays.\n* Patient reported no history of diabetes or other endocrine-related conditions.\n* Patient reported no family history of diabetes or other endocrine-related conditions, but mentioned that her mom and grandmother are big bakers.\n* Patient reported no allergies, surgeries, or trauma.\n* Patient reported feeling concerned about her blood sugar levels and wanting to get them under control.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient reported a recent episode of high blood sugar, which led to an emergency room visit.\n* Patient reported feeling light-headed and dizzy, with a history of eating sweets, especially during the holidays.\n* Patient reported no history of diabetes or other endocrine-related conditions.\n* Patient reported no family history of diabetes or other endocrine-related conditions, but mentioned that her mom and grandmother are big bakers.\n* Patient reported no allergies, surgeries, or trauma.\n* Patient reported feeling concerned about her blood sugar levels and wanting to get them under control.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* The patient, Hannah, is 52 years old.\n* The patient reports having no new symptoms since the emergency room visit, but expresses ongoing concern about their condition.\n* Patient reported a recent episode of high blood sugar, which led to an emergency room visit.\n* The patient reports that they decided to come in for a follow-up after the high blood sugar episode.\n* Patient reported feeling light-headed and dizzy, with a history of eating sweets, especially during the holidays.\n* Patient reported no history of diabetes or other endocrine-related conditions.\n* The patient denies experiencing unexplained weight loss.\n* Patient reported no family history of diabetes or other endocrine-related conditions, but mentioned that her mom and grandmother are big bakers.\n* Patient reported no allergies, surgeries, or trauma.\n* Patient reported feeling concerned about her blood sugar levels and wanting to get them under control.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has a history of high blood sugar, which was not specified in terms of exact blood sugar levels or fasting blood glucose and HbA1c tests.\n* The patient has no established history of diabetes or other endocrine-related conditions.\n* The patient's family history is unclear, but her mom and grandmother are big bakers.",
+    "plan": "* The patient will start monitoring her blood sugar levels at home.\n* The patient will work on managing her sugar intake, especially with the help of her family.\n* The patient will follow up with her healthcare provider to discuss further management and monitoring of her blood sugar levels."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient reported a recent episode of high blood sugar, which led to an emergency room visit.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0001,
+        "contradiction": 0.0238
+      },
+      "support_evidence": "Patient: Hi, I'm Hannah, and I'm 52 years old. I'm here because I had a high blood sugar and was in the emergency room recently. I wanted to come in and follow up with you to get checked out.",
+      "contradiction_evidence": "Patient: I don't have the results of the fasting blood glucose and HbA1c tests conducted during my ER visit. They told me my blood sugar was high, but they didn't give me the exact numbers or any test results to take home with me.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient reported a recent episode of high blood sugar, which led to an emergency room visit.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient reported a recent episode of high blood sugar, which led to an emergency room visit.",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient reported feeling light-headed and dizzy, with a history of eating sweets, especially during the holidays.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.8342
+      },
+      "support_evidence": "Patient: I'm 52 years old, and I was in the emergency room because I had a high blood sugar. I've been eating a lot of sweets recently, especially during the holidays, and I started feeling light-headed and dizzy, so I went in for checkup.",
+      "contradiction_evidence": "Patient: I don't have the results of the fasting blood glucose and HbA1c tests conducted during my ER visit. They told me my blood sugar was high, but they didn't give me the exact numbers or any test results to take home with me.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient reported feeling light-headed and dizzy, with a history of eating sweets, especially during the holidays.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "Patient reported feeling light-headed and dizzy, with a history of eating sweets, especially during the holidays.",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient reported no history of diabetes or other endocrine-related conditions.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.9976
+      },
+      "support_evidence": "Patient: I don't have a history of diabetes or any other endocrine-related conditions. I'm not sure about my family history in terms of diabetes or other endocrine issues. I don't have any allergies, and I haven't had any surgeries or trauma that I'm aware of.",
+      "contradiction_evidence": "Patient: I don't know the details about my family history of diabetes or other endocrine-related conditions. I know my mom and grandmother are big bakers, but I don't have any specific information about whether they've been diagnosed with diabetes or other endocrine issues.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient reported no history of diabetes or other endocrine-related conditions.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Patient reported no history of diabetes or other endocrine-related conditions.",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient reported no family history of diabetes or other endocrine-related conditions, but mentioned that her mom and grandmother are big bakers.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0004,
+        "contradiction": 0.9944
+      },
+      "support_evidence": "Patient: I don't have a history of diabetes or any other endocrine-related conditions. I'm not sure about my family history in terms of diabetes or other endocrine issues. I don't have any allergies, and I haven't had any surgeries or trauma that I'm aware of.",
+      "contradiction_evidence": "Patient: I don't know the details about my family history of diabetes or other endocrine-related conditions. I know my mom and grandmother are big bakers, but I don't have any specific information about whether they've been diagnosed with diabetes or other endocrine issues.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient reported no family history of diabetes or other endocrine-related conditions, but mentioned that her mom and grandmother are big bakers.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Patient reported no family history of diabetes or other endocrine-related conditions, but mentioned that her mom and grandmother are big bakers.",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient reported no allergies, surgeries, or trauma.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.012
+      },
+      "support_evidence": "Patient: I don't have a history of diabetes or any other endocrine-related conditions. I'm not sure about my family history in terms of diabetes or other endocrine issues. I don't have any allergies, and I haven't had any surgeries or trauma that I'm aware of.",
+      "contradiction_evidence": "Patient: I don't know the exact blood sugar level they recorded, but they told me it was high. Since then, I haven't had any follow-up blood tests or consultations with a healthcare provider, but I wanted to come in for a checkup to make sure I'm on the right track.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient reported no allergies, surgeries, or trauma.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Patient reported no allergies, surgeries, or trauma.",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient reported feeling concerned about her blood sugar levels and wanting to get them under control.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.0012
+      },
+      "support_evidence": "Patient: I don't know the exact blood sugar level they recorded, but they told me it was high. Since then, I haven't had any new symptoms, but I'm still feeling a bit concerned about it and want to make sure I get it under control.",
+      "contradiction_evidence": "Patient: I don't have the results of any recent blood tests, like fasting blood glucose or HbA1c levels, done during or after my ER visit. I was told my blood sugar was high, but they didn't give me the exact numbers or any test results to take home with me.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient reported feeling concerned about her blood sugar levels and wanting to get them under control.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "Patient reported feeling concerned about her blood sugar levels and wanting to get them under control.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 6,
+      "exempt": 1
+    },
+    "num_claims": 6,
+    "num_kept": 6,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient, Hannah, is 52 years old.",
+      "evidence": "Patient: Hi, I'm Hannah, and I'm 52 years old. I'm here because I had a high blood sugar and was in the emergency room recently. I wanted to come in and follow up with you to get checked out.",
+      "section": "subjective",
+      "candidate": "Hi, I'm Hannah, and I'm 52 years old."
+    },
+    {
+      "statement": "The patient reports that they decided to come in for a follow-up after the high blood sugar episode.",
+      "evidence": "Patient: Sure. It happened this past week, and I had been eating a lot of sweets over the past couple of weeks, especially during the holidays. I didn't know my exact blood sugar level, but the ER told me it was high, and I felt really light-headed and dizzy, even seeing spots. That's when I decided to come in for a follow-up.",
+      "section": "subjective",
+      "candidate": "That's when I decided to come in for a follow-up."
+    },
+    {
+      "statement": "The patient denies experiencing unexplained weight loss.",
+      "evidence": "Patient: I haven't had any frequent urination or increased thirst since the ER visit, but I have been feeling light-headed and saw spots, which is what led me to go in. I haven't noticed any unexplained weight loss, though.",
+      "section": "subjective",
+      "candidate": "I haven't noticed any unexplained weight loss, though."
+    },
+    {
+      "statement": "The patient reports having no new symptoms since the emergency room visit, but expresses ongoing concern about their condition.",
+      "evidence": "Doctor: Could you please provide the exact blood sugar level that was recorded during your emergency room visit, and have you experienced any new symptoms or complications since that time?",
+      "section": "subjective",
+      "candidate": "Since then, I haven't had any new symptoms, but I'm still feeling a bit concerned about it and want to make sure I get it under control."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "Hi, I'm Hannah, and I'm 52 years old.",
+      "speaker": "Patient",
+      "coverage": 0.1436,
+      "nearest_so_sentence": "Patient reported no family history of diabetes or other endocrine-related conditions, but mentioned that her mom and grandmother are big bakers.",
+      "statement": "The patient, Hannah, is 52 years old.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: Hi, I'm Hannah, and I'm 52 years old. I'm here because I had a high blood sugar and was in the emergency room recently. I wanted to come in and follow up with you to get checked out.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0009
+      },
+      "duplicate_entailment": 0.0025,
+      "duplicate_similarity": 0.3842,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 13.27,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "That's when I decided to come in for a follow-up.",
+      "speaker": "Patient",
+      "coverage": 0.1494,
+      "nearest_so_sentence": "Patient reported a recent episode of high blood sugar, which led to an emergency room visit.",
+      "statement": "The patient reports that they decided to come in for a follow-up after the high blood sugar episode.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: Sure. It happened this past week, and I had been eating a lot of sweets over the past couple of weeks, especially during the holidays. I didn't know my exact blood sugar level, but the ER told me it was high, and I felt really light-headed and dizzy, even seeing spots. That's when I decided to come in for a follow-up.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0039
+      },
+      "duplicate_entailment": 0.2656,
+      "duplicate_similarity": 0.7382,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 2,
+        "perplexity": 12.97,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I just want to make sure I get this under control before it becomes a bigger issue.",
+      "speaker": "Patient",
+      "coverage": 0.2467,
+      "nearest_so_sentence": "Patient reported feeling concerned about her blood sugar levels and wanting to get them under control.",
+      "statement": "The patient reports wanting to ensure the current situation is under control before it becomes a bigger issue.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: They gave me some IV fluids and told me to cut out eating extra sweets and get back into my normal routine and diet. I'm still with my family, and it's been hard because my mom and grandmother are big bakers, so I'm trying to be careful but it's a challenge. I just want to make sure I get this under control before it becomes a bigger issue.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0021
+      },
+      "duplicate_entailment": 0.9987,
+      "duplicate_similarity": 0.4803
+    },
+    {
+      "candidate": "I haven't noticed any unexplained weight loss, though.",
+      "speaker": "Patient",
+      "coverage": 0.2846,
+      "nearest_so_sentence": "Patient reported feeling concerned about her blood sugar levels and wanting to get them under control.",
+      "statement": "The patient denies experiencing unexplained weight loss.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I haven't had any frequent urination or increased thirst since the ER visit, but I have been feeling light-headed and saw spots, which is what led me to go in. I haven't noticed any unexplained weight loss, though.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.1135
+      },
+      "duplicate_entailment": 0.2891,
+      "duplicate_similarity": 0.4999,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 5,
+        "perplexity": 13.3,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I wanted to come in and follow up with you to get checked out.",
+      "speaker": "Patient",
+      "coverage": 0.301,
+      "nearest_so_sentence": "Patient reported a recent episode of high blood sugar, which led to an emergency room visit.",
+      "statement": "The patient reports wanting to follow up with the doctor to get checked out.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: Hi, I'm Hannah, and I'm 52 years old. I'm here because I had a high blood sugar and was in the emergency room recently. I wanted to come in and follow up with you to get checked out.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0325
+      },
+      "duplicate_entailment": 0.5991,
+      "duplicate_similarity": 0.5432
+    },
+    {
+      "candidate": "There's always something sweet around, and it's been challenging to stick to a routine or avoid eating them.",
+      "speaker": "Patient",
+      "coverage": 0.358,
+      "nearest_so_sentence": "Patient reported feeling light-headed and dizzy, with a history of eating sweets, especially during the holidays.",
+      "statement": "The patient reports that it has been challenging to stick to a routine or avoid eating sweet treats due to their constant presence in the household.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I haven't had any fatigue, frequent urination, or increased thirst since the ER visit. As for my diet, it's been really hard to manage my sugar intake because I'm staying with my family, and my mom and grandmother are big bakers. There's always something sweet around, and it's been challenging to stick to a routine or avoid eating them. I want to do better, though, and I'm ready to start monitoring my blood sugar at home if that helps.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0245
+      },
+      "duplicate_entailment": 0.9225,
+      "duplicate_similarity": 0.472
+    },
+    {
+      "candidate": "Since then, I haven't had any new symptoms, but I'm still feeling a bit concerned about it and want to make sure I get it under control.",
+      "speaker": "Patient",
+      "coverage": 0.368,
+      "nearest_so_sentence": "Patient reported feeling concerned about her blood sugar levels and wanting to get them under control.",
+      "statement": "The patient reports having no new symptoms since the emergency room visit, but expresses ongoing concern about their condition.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Doctor: Could you please provide the exact blood sugar level that was recorded during your emergency room visit, and have you experienced any new symptoms or complications since that time?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.018
+      },
+      "duplicate_entailment": 0.3604,
+      "duplicate_similarity": 0.636,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 1,
+        "perplexity": 12.74,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "Since then, I haven't had any follow-up blood tests or consultations with a healthcare provider, but I wanted to come in for a checkup to make sure I'm on the right track.",
+      "speaker": "Patient",
+      "coverage": 0.3959,
+      "nearest_so_sentence": "Patient reported feeling concerned about her blood sugar levels and wanting to get them under control.",
+      "statement": "The patient reports having had no follow-up blood tests or consultations with a healthcare provider since the ER visit.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I don't know the exact blood sugar level they recorded, but they told me it was high. Since then, I haven't had any follow-up blood tests or consultations with a healthcare provider, but I wanted to come in for a checkup to make sure I'm on the right track.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.9979
+      }
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 36,
+    "num_covered": 28,
+    "num_flagged": 8,
+    "num_not_checked_cap": 0,
+    "num_added": 4
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "Since then, I haven't had any follow-up blood tests or consultations with a healthcare provider, but I wanted to come in for a checkup to make sure I'm on the right track.",
+        "statement": "The patient reports having had no follow-up blood tests or consultations with a healthcare provider since the ER visit.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9994,
+          "contradiction": 0.9979
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 62.1,
+  "ap_unchanged": true,
+  "conversation": "Patient: Hi, I'm Hannah, and I'm 52 years old. I'm here because I had a high blood sugar and was in the emergency room recently. I wanted to come in and follow up with you to get checked out.\nDoctor: Could you confirm your age, gender, and the reason you were in the emergency room recently?\nPatient: I'm 52 years old, and I was in the emergency room because I had a high blood sugar. I've been eating a lot of sweets recently, especially during the holidays, and I started feeling light-headed and dizzy, so I went in for checkup.\nDoctor: Could you provide more details about the timeline of your high blood sugar episode, including when it occurred, how long it lasted, and what your blood sugar level was when you were in the emergency room?\nPatient: Sure. It happened this past week, and I had been eating a lot of sweets over the past couple of weeks, especially during the holidays. I didn't know my exact blood sugar level, but the ER told me it was high, and I felt really light-headed and dizzy, even seeing spots. That's when I decided to come in for a follow-up.\nDoctor: Could you please share any history of diabetes or other endocrine-related conditions, including any medications you have taken in the past? Also, could you provide information about your family history, any surgeries, trauma, or allergies?\nPatient: I don't have a history of diabetes or any other endocrine-related conditions. I'm not sure about my family history in terms of diabetes or other endocrine issues. I don't have any allergies, and I haven't had any surgeries or trauma that I'm aware of.\nDoctor: Could you please provide the exact blood sugar level that was recorded during your emergency room visit, and have you experienced any new symptoms or complications since that time?\nPatient: I don't know the exact blood sugar level they recorded, but they told me it was high. Since then, I haven't had any new symptoms, but I'm still feeling a bit concerned about it and want to make sure I get it under control.\nDoctor: Could you please share any medications or treatments you received during your emergency room visit, as well as any follow-up actions taken since then?\nPatient: They gave me some IV fluids and told me to cut out eating extra sweets and get back into my normal routine and diet. I'm still with my family, and it's been hard because my mom and grandmother are big bakers, so I'm trying to be careful but it's a challenge. I just want to make sure I get this under control before it becomes a bigger issue.\nDoctor: Could you provide the exact blood sugar level recorded during your ER visit, and have you had any follow-up blood tests or consultations with a healthcare provider since then?\nPatient: I don't know the exact blood sugar level they recorded, but they told me it was high. Since then, I haven't had any follow-up blood tests or consultations with a healthcare provider, but I wanted to come in for a checkup to make sure I'm on the right track.\nDoctor: Could you please provide details about your family history of diabetes or other endocrine-related conditions, including whether your mother, grandmother, or other close relatives have been diagnosed with diabetes?\nPatient: I don't know the details about my family history of diabetes or other endocrine-related conditions. I know my mom and grandmother are big bakers, but I don't have any specific information about whether they've been diagnosed with diabetes or other endocrine issues.\nDoctor: Could you please provide the exact blood sugar level recorded during your ER visit, and have you been monitoring your blood sugar levels at home since then?\nPatient: I don't know the exact blood sugar level they recorded, but they told me it was high. Since then, I haven't been monitoring my blood sugar levels at home, but I'm ready to start doing that if you think it would help.\nDoctor: Could you please share more about your family history, specifically if any of your close relatives, such as your mother, grandmother, or siblings, have been diagnosed with diabetes or other endocrine-related conditions?\nPatient: I don't know if any of my close relatives have been diagnosed with diabetes or other endocrine-related conditions. I know my mom and grandmother are big bakers, but I don't have specific information about their health histories.\nDoctor: Could you please provide the results of any recent blood tests, such as fasting blood glucose or HbA1c levels, that you may have had done during or after your ER visit?\nPatient: I don't have the results of any recent blood tests, like fasting blood glucose or HbA1c levels, done during or after my ER visit. I was told my blood sugar was high, but they didn't give me the exact numbers or any test results to take home with me.\nDoctor: Could you please describe any other symptoms you've experienced since your ER visit, such as frequent urination, increased thirst, or unexplained weight loss? This will help us better understand your condition.\nPatient: I haven't had any frequent urination or increased thirst since the ER visit, but I have been feeling light-headed and saw spots, which is what led me to go in. I haven't noticed any unexplained weight loss, though.\nDoctor: Could you please provide the results of the fasting blood glucose and HbA1c tests conducted during your ER visit, if available?\nPatient: I don't have the results of the fasting blood glucose and HbA1c tests conducted during my ER visit. They told me my blood sugar was high, but they didn't give me the exact numbers or any test results to take home with me.\nDoctor: Could you please describe any other symptoms you've experienced since your ER visit, such as fatigue, frequent urination, or increased thirst? Additionally, could you share more about your current diet and any challenges you face in managing your sugar intake, especially with your family's baking habits?\nPatient: I haven't had any fatigue, frequent urination, or increased thirst since the ER visit. As for my diet, it's been really hard to manage my sugar intake because I'm staying with my family, and my mom and grandmother are big bakers. There's always something sweet around, and it's been challenging to stick to a routine or avoid eating them. I want to do better, though, and I'm ready to start monitoring my blood sugar at home if that helps.\nDoctor: Could you please provide the results of the fasting blood glucose and HbA1c tests that were conducted during your ER visit? These results are essential for assessing your current blood sugar control and determining the next steps in your care.\nPatient: I don't have the results of the fasting blood glucose and HbA1c tests conducted during my ER visit. They told me my blood sugar was high, but they didn't give me the exact numbers or any test results to take home with me.",
+  "reference_so": {
+    "subjective": "Basic information: Patient name: Hannah, age: 52, gender: female, reason for visit: high blood sugar and recent emergency room visit. family history of diabetes: unknown\n\nHistory of present illness: The patient reported a recent episode of high blood sugar, which occurred after consuming a significant amount of sweets during the holidays. She experienced symptoms of light-headedness and seeing spots, which prompted her to visit the emergency room. She is now seeking follow-up care. She received IV fluids during the ER visit and was advised to cut out eating extra sweets and return to her normal routine and diet. She is currently with her family, and it is challenging because her mother and grandmother are big bakers, so she is trying to be careful but finds it difficult. She wants to ensure she gets this under control before it becomes a bigger issue. She does not know the exact blood sugar level recorded during her ER visit and has not been monitoring her blood sugar levels at home since then.\n\nPast history: No prior history of diabetes or endocrine-related conditions reported. No history of surgeries, trauma, or allergies. Family history: unknown (patient is unsure about family history of diabetes or other endocrine issues).",
+    "objective": "Physical examination: Physical examination findings are pending.\n\nInvestigations: Auxiliary examination results are pending. pending blood tests (fasting blood glucose, HbA1c). Fasting blood glucose and HbA1c tests were performed during the ER visit, but results were not provided to the patient. Patient is currently without specific numerical values for these tests."
+  }
+}

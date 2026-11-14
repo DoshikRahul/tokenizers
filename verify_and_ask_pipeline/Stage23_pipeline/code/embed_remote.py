@@ -9,11 +9,14 @@ import config as C
 
 
 class RemoteEmbedder:
-    def __init__(self, base_url: str, model: str = "all-MiniLM-L6-v2", batch_size: int = 32, timeout: int = 120):
+    def __init__(self, base_url: str, model: str = "all-MiniLM-L6-v2", batch_size: int = 32, timeout: int = 120,
+                 api_key: str = ""):
         import requests
         self.url = base_url.rstrip("/") + "/v1/embeddings"
         self.model, self.batch_size, self.timeout = model, batch_size, timeout
         self.session = requests.Session()
+        if api_key:
+            self.session.headers["Authorization"] = f"Bearer {api_key}"
         health = self.session.get(base_url.rstrip("/") + "/health", timeout=15)
         health.raise_for_status()
         print(f"Remote embedder: {base_url} {health.text.strip()[:80]}")
@@ -46,6 +49,6 @@ class RemoteEmbedder:
 def make_embedder():
     """Remote API when EMBED_BASE_URL is set, otherwise load MiniLM on this machine."""
     if C.EMBED_BACKEND == "remote":
-        return RemoteEmbedder(C.EMBED_BASE_URL)
+        return RemoteEmbedder(C.EMBED_BASE_URL, api_key=C.EMBED_API_KEY)
     from sentence_transformers import SentenceTransformer
     return SentenceTransformer(C.EMBED_MODEL)

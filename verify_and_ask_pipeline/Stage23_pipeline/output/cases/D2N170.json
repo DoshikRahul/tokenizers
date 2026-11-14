@@ -1,0 +1,468 @@
+{
+  "case_id": "D2N170",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient is a 50-year-old female who presented with fatigue and low hemoglobin levels.\n* She has been experiencing fatigue for the past couple of months, which has worsened over time.\n* She has not noticed any dizziness, shortness of breath, or changes in bowel habits.\n* She has had a little weight loss, but attributes it to increased exercise.\n* She has a history of COPD and congestive heart failure, and used to smoke but quit several years ago.\n* She does not have any family history of anemia or blood disorders.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient is a 50-year-old female who presented with fatigue and low hemoglobin levels.\n* She has been experiencing fatigue for the past couple of months, which has worsened over time.\n* She has not noticed any dizziness, shortness of breath, or changes in bowel habits.\n* She has had a little weight loss, but attributes it to increased exercise.\n* She has a history of COPD and congestive heart failure, and used to smoke but quit several years ago.\n* She does not have any family history of anemia or blood disorders.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* The patient reports that their appetite has not changed much.\n* The patient reports that their fatigue has worsened, affecting their ability to maintain their usual exercise routine.\n* The patient reports that their skin does not appear pale, but they have not closely examined it.\n* The patient is here to discuss their recent blood tests.\n* Patient is a 50-year-old female who presented with fatigue and low hemoglobin levels.\n* She has been experiencing fatigue for the past couple of months, which has worsened over time.\n* She has not noticed any dizziness, shortness of breath, or changes in bowel habits.\n* She has had a little weight loss, but attributes it to increased exercise.\n* She has a history of COPD and congestive heart failure, and used to smoke but quit several years ago.\n* She does not have any family history of anemia or blood disorders.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient's hemoglobin level was reported as low, but the exact value was not provided.\n* The patient's fatigue, weight loss, and history of COPD and congestive heart failure may be related to her low hemoglobin level.",
+    "plan": "* The doctor requested that the patient return for a follow-up appointment to discuss the results of the blood tests and to further evaluate the patient's symptoms and medical history."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient is a 50-year-old female who presented with fatigue and low hemoglobin levels.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0002,
+        "contradiction": 0.0046
+      },
+      "support_evidence": "Patient: I'm 50 years old, and I'm a female. The lab results showed that my hemoglobin was low, and I've been feeling really tired and exhausted for the past couple of months. It's been getting worse, and I haven't been able to keep up with my usual exercise routine.",
+      "contradiction_evidence": "Patient: I don't have the exact numbers for my hemoglobin or the other blood tests you mentioned. I was told my hemoglobin was low, and they scheduled a follow-up with you because of that. I don't remember the other details, but I'm here to talk about it with you.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient is a 50-year-old female who presented with fatigue and low hemoglobin levels.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 50-year-old female who presented with fatigue and low hemoglobin levels.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has been experiencing fatigue for the past couple of months, which has worsened over time.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0003,
+        "contradiction": 0.0115
+      },
+      "support_evidence": "Patient: I'm 50 years old, and I'm a female. The lab results showed that my hemoglobin was low, and I've been feeling really tired and exhausted for the past couple of months. It's been getting worse, and I haven't been able to keep up with my usual exercise routine.",
+      "contradiction_evidence": "Patient: I haven't had any dizziness or shortness of breath, just the fatigue. My energy levels have been really low over the past couple of months, and I've noticed a little weight loss, but I think it might be because I've been trying to stay active, though I'm not sure if that's the real reason. My appetite hasn't changed much.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has been experiencing fatigue for the past couple of months, which has worsened over time.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "She has been experiencing fatigue for the past couple of months, which has worsened over time.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has not noticed any dizziness, shortness of breath, or changes in bowel habits.",
+      "scores": {
+        "entailment": 0.9991,
+        "neutral": 0.0005,
+        "contradiction": 0.2232
+      },
+      "support_evidence": "Patient: I haven't noticed any blood in my stool or urine, and I don't have any changes in bowel habits. I did mention that I've had a little weight loss, but I think it's because I've been exercising more, though I'm not sure if that's the real reason. I haven't had any dizziness or shortness of breath, just the fatigue.",
+      "contradiction_evidence": "Doctor: Thank you for sharing that. Since you mentioned your hemoglobin was low but you don't have the exact numbers or other blood test results, could you let me know if you've had any other symptoms such as dizziness, shortness of breath, or changes in your usual energy levels? Also, have you noticed any changes in your appetite or weight recently?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has not noticed any dizziness, shortness of breath, or changes in bowel habits.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "She has not noticed any dizziness, shortness of breath, or changes in bowel habits.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has had a little weight loss, but attributes it to increased exercise.",
+      "scores": {
+        "entailment": 0.9992,
+        "neutral": 0.0006,
+        "contradiction": 0.0366
+      },
+      "support_evidence": "Patient: I haven't noticed any blood in my stool or urine, and I don't have any changes in bowel habits. I did mention that I've had a little weight loss, but I think it's because I've been exercising more, though I'm not sure if that's the real reason. I haven't had any dizziness or shortness of breath, just the fatigue.",
+      "contradiction_evidence": "Patient: I don't have the exact numbers for my hemoglobin or the other blood tests you mentioned. I was told my hemoglobin was low, and they scheduled a follow-up with you because of that. I don't remember the other details, but I'm here to talk about it with you.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has had a little weight loss, but attributes it to increased exercise.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "She has had a little weight loss, but attributes it to increased exercise.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has a history of COPD and congestive heart failure, and used to smoke but quit several years ago.",
+      "scores": {
+        "entailment": 0.9968,
+        "neutral": 0.0016,
+        "contradiction": 0.0275
+      },
+      "support_evidence": "Patient: I have a history of COPD and congestive heart failure. I used to smoke, but I quit several years ago. I don't have any other major illnesses or surgeries, and I don't know of any family history of anemia or blood disorders.",
+      "contradiction_evidence": "Patient: I have a history of COPD and congestive heart failure. I used to smoke, but I quit several years ago. I don't have any other major illnesses or surgeries, and I don't know of any family history of anemia or blood disorders.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has a history of COPD and congestive heart failure, and used to smoke but quit several years ago.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "She has a history of COPD and congestive heart failure, and used to smoke but quit several years ago.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She does not have any family history of anemia or blood disorders.",
+      "scores": {
+        "entailment": 0.9989,
+        "neutral": 0.0007,
+        "contradiction": 0.0043
+      },
+      "support_evidence": "Patient: I have a history of COPD and congestive heart failure. I used to smoke, but I quit several years ago. I don't have any other major illnesses or surgeries, and I don't know of any family history of anemia or blood disorders.",
+      "contradiction_evidence": "Patient: I have a history of COPD and congestive heart failure. I used to smoke, but I quit several years ago. I don't have any other major illnesses or surgeries, and I don't know of any family history of anemia or blood disorders.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She does not have any family history of anemia or blood disorders.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "She does not have any family history of anemia or blood disorders.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 6,
+      "exempt": 1
+    },
+    "num_claims": 6,
+    "num_kept": 6,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient is here to discuss their recent blood tests.",
+      "evidence": "Patient: I don't have the exact numbers for my hemoglobin or the other blood tests you mentioned. I was told my hemoglobin was low, and they scheduled a follow-up with you because of that. I don't remember the other details, but I'm here to talk about it with you.",
+      "section": "subjective",
+      "candidate": "I don't remember the other details, but I'm here to talk about it with you."
+    },
+    {
+      "statement": "The patient reports that their skin does not appear pale, but they have not closely examined it.",
+      "evidence": "Patient: I haven't noticed any dizziness or shortness of breath, just the fatigue. My skin doesn't feel particularly pale, but I haven't really looked at it closely. It's mostly the exhaustion that's been affecting me.",
+      "section": "subjective",
+      "candidate": "My skin doesn't feel particularly pale, but I haven't really looked at it closely."
+    },
+    {
+      "statement": "The patient reports that their appetite has not changed much.",
+      "evidence": "Patient: I haven't had any dizziness or shortness of breath, just the fatigue. My energy levels have been really low over the past couple of months, and I've noticed a little weight loss, but I think it might be because I've been trying to stay active, though I'm not sure if that's the real reason. My appetite hasn't changed much.",
+      "section": "subjective",
+      "candidate": "My appetite hasn't changed much."
+    },
+    {
+      "statement": "The patient reports that their fatigue has worsened, affecting their ability to maintain their usual exercise routine.",
+      "evidence": "Patient: I'm 50 years old, and I'm a female. The lab results showed that my hemoglobin was low, and I've been feeling really tired and exhausted for the past couple of months. It's been getting worse, and I haven't been able to keep up with my usual exercise routine.",
+      "section": "subjective",
+      "candidate": "It's been getting worse, and I haven't been able to keep up with my usual exercise routine."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I don't remember the other details, but I'm here to talk about it with you.",
+      "speaker": "Patient",
+      "coverage": 0.1174,
+      "nearest_so_sentence": "She has a history of COPD and congestive heart failure, and used to smoke but quit several years ago.",
+      "statement": "The patient reports being unable to recall the details of their recent lab results.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I don't have the exact numbers for my hemoglobin or the other blood tests you mentioned. I was told my hemoglobin was low, and they scheduled a follow-up with you because of that. I don't remember the other details, but I'm here to talk about it with you.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.9992
+      }
+    },
+    {
+      "candidate": "I don't remember the other details, but I'm here to talk about it with you.",
+      "speaker": "Patient",
+      "coverage": 0.1174,
+      "nearest_so_sentence": "She has a history of COPD and congestive heart failure, and used to smoke but quit several years ago.",
+      "statement": "The patient is here to discuss their recent blood tests.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't have the exact numbers for my hemoglobin or the other blood tests you mentioned. I was told my hemoglobin was low, and they scheduled a follow-up with you because of that. I don't remember the other details, but I'm here to talk about it with you.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0074
+      },
+      "first_rewrite_rejected": "The patient reports being unable to recall the details of their recent blood tests.",
+      "duplicate_entailment": 0.0324,
+      "duplicate_similarity": 0.5394,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 13.52,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don't remember the other details, but I'm here to talk about it with you.",
+      "speaker": "Patient",
+      "coverage": 0.1174,
+      "nearest_so_sentence": "She has a history of COPD and congestive heart failure, and used to smoke but quit several years ago.",
+      "statement": "The patient is here to discuss their recent blood tests.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I don't have the exact numbers for my hemoglobin or the other blood tests you mentioned. I was told my hemoglobin was low, and they scheduled a follow-up with you because of that. I don't remember the other details, but I'm here to talk about it with you.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0074
+      },
+      "first_rewrite_rejected": "The patient reports being unable to recall the details of their recent blood tests.",
+      "duplicate_entailment": 0.0324,
+      "duplicate_similarity": 0.5394
+    },
+    {
+      "candidate": "I don't remember the other details, but I'm here to talk about it with you.",
+      "speaker": "Patient",
+      "coverage": 0.1174,
+      "nearest_so_sentence": "She has a history of COPD and congestive heart failure, and used to smoke but quit several years ago.",
+      "statement": "The patient states that they are present to discuss their laboratory test results.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I'm 50 years old, and I'm a female. The lab results showed that my hemoglobin was low, and I've been feeling really tired and exhausted for the past couple of months. It's been getting worse, and I haven't been able to keep up with my usual exercise routine.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0277
+      },
+      "first_rewrite_rejected": "The patient reports being unable to recall the details of their recent laboratory test results.",
+      "duplicate_entailment": 0.5413,
+      "duplicate_similarity": 0.3538
+    },
+    {
+      "candidate": "I don't remember the other details, but I'm here to talk about it with you.",
+      "speaker": "Patient",
+      "coverage": 0.1174,
+      "nearest_so_sentence": "She has a history of COPD and congestive heart failure, and used to smoke but quit several years ago.",
+      "statement": "The patient states that they are present to discuss their laboratory test results.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I'm 50 years old, and I'm a female. The lab results showed that my hemoglobin was low, and I've been feeling really tired and exhausted for the past couple of months. It's been getting worse, and I haven't been able to keep up with my usual exercise routine.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0277
+      },
+      "first_rewrite_rejected": "The patient reports being unable to recall the details of their recent laboratory test results.",
+      "duplicate_entailment": 0.5413,
+      "duplicate_similarity": 0.3538
+    },
+    {
+      "candidate": "I don't remember the other details, but I'm here to talk about it with you.",
+      "speaker": "Patient",
+      "coverage": 0.1174,
+      "nearest_so_sentence": "She has a history of COPD and congestive heart failure, and used to smoke but quit several years ago.",
+      "statement": "The patient is present to discuss their laboratory results.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 50 years old, and I'm a female. The lab results showed that my hemoglobin was low, and I've been feeling really tired and exhausted for the past couple of months. It's been getting worse, and I haven't been able to keep up with my usual exercise routine.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0094
+      },
+      "first_rewrite_rejected": "The patient reports being unable to recall the details of their recent laboratory results.",
+      "duplicate_entailment": 0.8995,
+      "duplicate_similarity": 0.495
+    },
+    {
+      "candidate": "I'm 50 years old, and I'm a female.",
+      "speaker": "Patient",
+      "coverage": 0.1908,
+      "nearest_so_sentence": "Patient is a 50-year-old female who presented with fatigue and low hemoglobin levels.",
+      "statement": "The patient is a 50-year-old female.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 50 years old, and I'm a female. The lab results showed that my hemoglobin was low, and I've been feeling really tired and exhausted for the past couple of months. It's been getting worse, and I haven't been able to keep up with my usual exercise routine.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0012
+      },
+      "duplicate_entailment": 0.9994,
+      "duplicate_similarity": 0.5765
+    },
+    {
+      "candidate": "I'm 50 years old, and I'm a female.",
+      "speaker": "Patient",
+      "coverage": 0.1908,
+      "nearest_so_sentence": "Patient is a 50-year-old female who presented with fatigue and low hemoglobin levels.",
+      "statement": "The patient reports being 50 years old and identifying as a female.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 50 years old, and I'm a female. The lab results showed that my hemoglobin was low, and I've been feeling really tired and exhausted for the past couple of months. It's been getting worse, and I haven't been able to keep up with my usual exercise routine.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0418
+      },
+      "duplicate_entailment": 0.9995,
+      "duplicate_similarity": 0.4812
+    },
+    {
+      "candidate": "My skin doesn't feel particularly pale, but I haven't really looked at it closely.",
+      "speaker": "Patient",
+      "coverage": 0.2075,
+      "nearest_so_sentence": "She has not noticed any dizziness, shortness of breath, or changes in bowel habits.",
+      "statement": "The patient reports that their skin does not appear pale, but they have not closely examined it.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I haven't noticed any dizziness or shortness of breath, just the fatigue. My skin doesn't feel particularly pale, but I haven't really looked at it closely. It's mostly the exhaustion that's been affecting me.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9989,
+        "contradiction": 0.0268
+      },
+      "duplicate_entailment": 0.0039,
+      "duplicate_similarity": 0.4502,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 13.5,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "It's been going on for a couple of months now.",
+      "speaker": "Patient",
+      "coverage": 0.3082,
+      "nearest_so_sentence": "She has been experiencing fatigue for the past couple of months, which has worsened over time.",
+      "statement": "The patient reports that the symptoms have been ongoing for a couple of months.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 50 years old, and I'm a female. The lab results showed that my hemoglobin was low, and I've been feeling really tired and exhausted for the past couple of months. It's been getting worse, and I haven't been able to keep up with my usual exercise routine.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0202
+      },
+      "duplicate_entailment": 0.9992,
+      "duplicate_similarity": 0.5277
+    },
+    {
+      "candidate": "I've just been really tired and exhausted, but nothing else seems off.",
+      "speaker": "Patient",
+      "coverage": 0.3609,
+      "nearest_so_sentence": "She has been experiencing fatigue for the past couple of months, which has worsened over time.",
+      "statement": "The patient reports experiencing fatigue and exhaustion.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I haven't noticed any blood in my stool or urine, and I don't have any changes in bowel habits. I did mention that I've had a little weight loss, but I think it's because I've been exercising more, though I'm not sure if that's the real reason. I haven't had any dizziness or shortness of breath, just the fatigue.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0025
+      },
+      "duplicate_entailment": 0.9834,
+      "duplicate_similarity": 0.6216
+    },
+    {
+      "candidate": "My appetite hasn't changed much.",
+      "speaker": "Patient",
+      "coverage": 0.3656,
+      "nearest_so_sentence": "She has had a little weight loss, but attributes it to increased exercise.",
+      "statement": "The patient reports that their appetite has not changed much.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I haven't had any dizziness or shortness of breath, just the fatigue. My energy levels have been really low over the past couple of months, and I've noticed a little weight loss, but I think it might be because I've been trying to stay active, though I'm not sure if that's the real reason. My appetite hasn't changed much.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0052
+      },
+      "duplicate_entailment": 0.0153,
+      "duplicate_similarity": 0.506,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 12.8,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "It's been getting worse, and I haven't been able to keep up with my usual exercise routine.",
+      "speaker": "Patient",
+      "coverage": 0.3849,
+      "nearest_so_sentence": "She has been experiencing fatigue for the past couple of months, which has worsened over time.",
+      "statement": "The patient reports that their fatigue has worsened, affecting their ability to maintain their usual exercise routine.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I'm 50 years old, and I'm a female. The lab results showed that my hemoglobin was low, and I've been feeling really tired and exhausted for the past couple of months. It's been getting worse, and I haven't been able to keep up with my usual exercise routine.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0347
+      },
+      "duplicate_entailment": 0.0024,
+      "duplicate_similarity": 0.6093,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 1,
+        "perplexity": 12.03,
+        "removed_placeholder": []
+      }
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 44,
+    "num_covered": 31,
+    "num_flagged": 13,
+    "num_not_checked_cap": 0,
+    "num_added": 4
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "I don't remember the other details, but I'm here to talk about it with you.",
+        "statement": "The patient reports being unable to recall the details of their recent lab results.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9997,
+          "contradiction": 0.9992
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 94.6,
+  "ap_unchanged": true,
+  "conversation": "Patient: I'm 50 years old, and I'm a female. I'm here because I had some abnormal lab results, specifically my hemoglobin was low, and I've been feeling really tired and exhausted lately.\nDoctor: Could you please confirm your age, gender, and the specific lab results you received? Also, could you describe the duration and severity of your fatigue?\nPatient: I'm 50 years old, and I'm a female. The lab results showed that my hemoglobin was low, and I've been feeling really tired and exhausted for the past couple of months. It's been getting worse, and I haven't been able to keep up with my usual exercise routine.\nDoctor: Could you please describe any other symptoms you've been experiencing, such as dizziness, shortness of breath, pallor, or changes in bowel habits? Additionally, have you noticed any blood in your stool or urine, or have you experienced any recent weight loss?\nPatient: I haven't noticed any blood in my stool or urine, and I don't have any changes in bowel habits. I did mention that I've had a little weight loss, but I think it's because I've been exercising more, though I'm not sure if that's the real reason. I haven't had any dizziness or shortness of breath, just the fatigue.\nDoctor: Could you please provide information about your past medical history, including any previous illnesses, surgeries, or chronic conditions, as well as any family history of anemia or blood disorders?\nPatient: I have a history of COPD and congestive heart failure. I used to smoke, but I quit several years ago. I don't have any other major illnesses or surgeries, and I don't know of any family history of anemia or blood disorders.\nDoctor: Could you please provide the exact hemoglobin level from the recent lab results, as well as any other relevant blood test results such as MCV, MCH, RDW, ferritin, B12, folate, and peripheral blood smear findings?\nPatient: I don't have the exact numbers for my hemoglobin or the other blood tests you mentioned. I was told my hemoglobin was low, and they scheduled a follow-up with you because of that. I don't remember the other details, but I'm here to talk about it with you.\nDoctor: Thank you for sharing that with me. Since you mentioned that your hemoglobin was low, could you tell me if you've noticed any other symptoms such as dizziness, shortness of breath, or pale skin? These can sometimes be associated with low hemoglobin levels.\nPatient: I haven't noticed any dizziness or shortness of breath, just the fatigue. My skin doesn't feel particularly pale, but I haven't really looked at it closely. It's mostly the exhaustion that's been affecting me.\nDoctor: Could you please provide the specific hemoglobin level, along with MCV, MCH, RDW, ferritin, B12, folate, and peripheral blood smear findings from your recent blood tests?\nPatient: I don't have the exact numbers for my hemoglobin or the other blood tests you mentioned. I was told my hemoglobin was low, and they scheduled a follow-up with you because of that. I don't remember the other details, but I'm here to talk about it with you.\nDoctor: Thank you for sharing that. Since you mentioned your hemoglobin was low but you don't have the exact numbers or other blood test results, could you let me know if you've had any other symptoms such as dizziness, shortness of breath, or changes in your usual energy levels? Also, have you noticed any changes in your appetite or weight recently?\nPatient: I haven't had any dizziness or shortness of breath, just the fatigue. My energy levels have been really low over the past couple of months, and I've noticed a little weight loss, but I think it might be because I've been trying to stay active, though I'm not sure if that's the real reason. My appetite hasn't changed much.\nDoctor: Could you please provide the specific hemoglobin level, along with MCV, MCH, RDW, ferritin, B12, folate, and peripheral blood smear findings from your recent blood tests?\nPatient: I don't have the exact numbers for my hemoglobin or the other blood tests you mentioned. I was told my hemoglobin was low, and they scheduled a follow-up with you because of that. I don't remember the other details, but I'm here to talk about it with you.\nDoctor: I understand that you don't have the exact numbers for your hemoglobin or the other blood tests. Could you let me know if you have any other symptoms you've noticed recently, such as changes in appetite, bowel habits, or any unusual bleeding, like heavy menstrual flow or nosebleeds?\nPatient: I don't have any changes in my appetite or bowel habits. I haven't noticed any unusual bleeding, and my periods haven't been heavy. I've just been really tired and exhausted, but nothing else seems off.\nDoctor: Could you please provide the exact hemoglobin value and the results of the MCV, MCH, RDW, ferritin, B12, folate, and peripheral blood smear tests?\nPatient: I don't have the exact numbers for my hemoglobin or the other blood tests you mentioned. I was told my hemoglobin was low, and they scheduled a follow-up with you because of that. I don't remember the other details, but I'm here to talk about it with you.\nDoctor: Thank you for coming in. I understand that you were told your hemoglobin is low, but we need more details to better understand what might be causing this. Could you let me know if you've noticed any changes in your urine color, appetite, or if you've been feeling more tired than usual recently?\nPatient: I haven't noticed any changes in my urine color or appetite. I've been feeling more tired than usual, and it's been really hard to keep up with my exercise routine because of it. I just feel exhausted most of the time.\nDoctor: Could you please provide the exact hemoglobin level and the results of the MCV, MCH, RDW, ferritin, B12, folate, and peripheral blood smear tests?\nPatient: I don't have the exact numbers for my hemoglobin or the other blood tests you mentioned. I was told my hemoglobin was low, and they scheduled a follow-up with you because of that. I don't remember the other details, but I'm here to talk about it with you.\nDoctor: I understand that you don't have the exact numbers for your blood tests, but could you let me know if you've had any other symptoms related to your fatigue, such as changes in appetite, bowel habits, or unusual bleeding?\nPatient: I haven't had any changes in my appetite or bowel habits, and I haven't noticed any unusual bleeding. The only thing I've been experiencing is this overwhelming tiredness that's made it really hard to keep up with my usual exercise routine. It's been going on for a couple of months now.\nDoctor: Could you please provide the exact hemoglobin value, along with the results for MCV, MCH, RDW, ferritin, B12, folate, and the findings from the peripheral blood smear?\nPatient: I don't have the exact numbers for my hemoglobin or the other blood tests you mentioned. I was told my hemoglobin was low, and they scheduled a follow-up with you because of that. I don't remember the other details, but I'm here to talk about it with you.",
+  "reference_so": {
+    "subjective": "Basic information: 50-year-old female presenting with abnormal lab results, specifically low hemoglobin, and reporting fatigue and exhaustion.\n\nHistory of present illness: The patient reports fatigue and exhaustion for the past couple of months, which has been worsening and affecting her ability to keep up with her usual exercise routine. She denies dizziness, shortness of breath, or pallor. She also mentions a little weight loss, though she is unsure if it is related to her activity levels. She has not noticed any changes in her appetite or bowel habits, nor has she experienced any unusual bleeding.\n\nPast history: The patient has a history of COPD and congestive heart failure. She is a former smoker who quit several years ago. No other major illnesses, surgeries, or chronic conditions have been reported. Family history of anemia or blood disorders is unknown.",
+    "objective": "Physical examination: Physical examination findings are pending.\n\nInvestigations: Hemoglobin level is low (exact value pending). MCV, MCH, RDW, ferritin, B12, folate, and peripheral blood smear results are pending."
+  }
+}

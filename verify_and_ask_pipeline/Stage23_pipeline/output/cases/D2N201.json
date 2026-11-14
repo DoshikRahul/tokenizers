@@ -1,0 +1,777 @@
+{
+  "case_id": "D2N201",
+  "split": "dev",
+  "stage1_so": {
+    "subjective": "* Patient reports a 2-year history of back pain, which started after a fall playing basketball. The pain is currently 7-8/10 and radiates down the leg, causing numbness in the toes.\n* Patient reports numbness in the toes, which is random and intermittent, with a tingling or pins-and-needles sensation.\n* Patient reports weakness in the legs, specifically on the left side, which is exacerbated by standing for prolonged periods.\n* Patient reports a single episode of bowel incontinence, which was likely related to dehydration or standing up too fast.\n* Patient reports that the numbness and tingling in the toes and left leg radiate from the back, especially on the left side.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient reports a 2-year history of back pain, which started after a fall playing basketball. The pain is currently 7-8/10 and radiates down the leg, causing numbness in the toes.\n* Patient reports numbness in the toes, which is random and intermittent, with a tingling or pins-and-needles sensation.\n* Patient reports weakness in the legs, specifically on the left side, which is exacerbated by standing for prolonged periods.\n* Patient reports a single episode of bowel incontinence, which was likely related to dehydration or standing up too fast.\n* Patient reports that the numbness and tingling in the toes and left leg radiate from the back, especially on the left side.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* The patient reports having received injections for their back pain, but is unsure of the specific type or purpose of the injections.\n* The patient reports taking white pills for pain, but is unable to recall the name or type of medication.\n* The patient reports that the injections did not provide significant relief for their back pain.\n* The patient reports that the prescribed pain medication did not provide significant relief.\n* Patient reports a 2-year history of back pain, which started after a fall playing basketball. The pain is currently 7-8/10 and radiates down the leg, causing numbness in the toes.\n* Patient reports numbness in the toes, which is random and intermittent, with a tingling or pins-and-needles sensation.\n* The patient reports that the numbness episodes in their toes can last a few minutes or longer, and they do not notice any specific activities or positions that trigger or alleviate the symptoms.\n* Patient reports weakness in the legs, specifically on the left side, which is exacerbated by standing for prolonged periods.\n* Patient reports a single episode of bowel incontinence, which was likely related to dehydration or standing up too fast.\n* Patient reports that the numbness and tingling in the toes and left leg radiate from the back, especially on the left side.",
+    "objective": "* The patient is 35 years old and male."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has a history of back pain, disk desiccation, and herniation at L4-L5 with radiculopathy, as confirmed by MRI.\n* The patient reports numbness and tingling in the toes and left leg, which radiates from the back, and weakness in the legs, specifically on the left side.\n* The patient reports a single episode of bowel incontinence, which was likely related to dehydration or standing up too fast.",
+    "plan": "* No explicit management or follow-up plan was documented in the conversation."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient reports a 2-year history of back pain, which started after a fall playing basketball.",
+      "scores": {
+        "entailment": 0.998,
+        "neutral": 0.0011,
+        "contradiction": 0.8995
+      },
+      "support_evidence": "Patient: I'm 35, male. I've been having back pain for a couple of years, and it's been really bothering me. It started after I fell on my back playing basketball, and it just hasn't gotten better since. It's been hurting pretty bad, like a seven or eight on the pain scale, and it sometimes goes down my leg and makes my toes numb. I'm really worried about it.",
+      "contradiction_evidence": "Patient: The numbness in my toes is kind of random, sometimes it happens and sometimes it doesn't. It feels like a tingling or a pins-and-needles sensation. And the weakness is mostly when I stand for too long, like I get shaky or feel like I might fall. As for the accident, I had a moment where I lost control of my bowels, but it wasn't something that happened often. I think it was because I stood up too fast or maybe I was dehydrated. It's not something that's been consistent.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient reports a 2-year history of back pain, which started after a fall playing basketball.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient reports a 2-year history of back pain, which started after a fall playing basketball.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The pain is currently 7-8/10.",
+      "scores": {
+        "entailment": 0.9572,
+        "neutral": 0.041,
+        "contradiction": 0.0018
+      },
+      "support_evidence": "Patient: I'm 35, male. I've been having back pain for a couple of years, and it's been really bothering me. It started after I fell on my back playing basketball, and it just hasn't gotten better since. It's been hurting pretty bad, like a seven or eight on the pain scale, and it sometimes goes down my leg and makes my toes numb. I'm really worried about it.",
+      "contradiction_evidence": "Patient: I'm 35, male. I've been having back pain for a couple of years, and it's been really bothering me. It started after I fell on my back playing basketball, and it just hasn't gotten better since. It's been hurting pretty bad, like a seven or eight on the pain scale, and it sometimes goes down my leg and makes my toes numb. I'm really worried about it.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain is currently 7-8/10.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The pain is currently 7-8/10 and radiates down the leg, causing numbness in the toes."
+    },
+    {
+      "claim": "The pain radiates down the leg.",
+      "scores": {
+        "entailment": 0.9983,
+        "neutral": 0.001,
+        "contradiction": 0.2
+      },
+      "support_evidence": "Patient: I'm 35, male. I've been having back pain for a couple of years, and it's been really bothering me. It started after I fell on my back playing basketball, and it just hasn't gotten better since. It's been hurting pretty bad, like a seven or eight on the pain scale, and it sometimes goes down my leg and makes my toes numb. I'm really worried about it.",
+      "contradiction_evidence": "Patient: The numbness in my toes comes and goes, sometimes it feels like a tingling or pins-and-needles, and other times I don’t feel anything at all. As for the bowel issue, it only happened once, and I haven’t had it again since. I think it was because I stood up too fast or maybe I was dehydrated. It’s not something that’s been consistent.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain radiates down the leg.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The pain is currently 7-8/10 and radiates down the leg, causing numbness in the toes."
+    },
+    {
+      "claim": "The pain causes numbness in the toes.",
+      "scores": {
+        "entailment": 0.9967,
+        "neutral": 0.0016,
+        "contradiction": 0.0121
+      },
+      "support_evidence": "Patient: Yeah, I had an MRI done, and the results showed something about a disk desiccation and a bulge with a herniation causing some nerve issues. The doctor mentioned something about a herniated disk at L4-L5 with radiculopathy, but I didn't really understand all the words. I just know it's been causing me a lot of pain and some numbness in my leg.",
+      "contradiction_evidence": "Patient: I had some injections before, but I don't know what they were for exactly. They didn't really help much, honestly. Since the MRI, my pain has stayed about the same, and I still have the numbness in my toes and weakness sometimes when I stand up for too long. I also had an accident once where I pooped myself, but that wasn't consistent.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain causes numbness in the toes.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The pain is currently 7-8/10 and radiates down the leg, causing numbness in the toes."
+    },
+    {
+      "claim": "Patient reports numbness in the toes, which is random and intermittent, with a tingling or pins-and-needles sensation.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0003,
+        "contradiction": 0.0083
+      },
+      "support_evidence": "Patient: The numbness in my toes doesn't happen all the time, but when it does, it feels like a tingling or pins-and-needles. It can last a few minutes or sometimes longer, and I don't really notice anything specific that triggers it. Lying on my side seems to help my back pain, but I'm not sure if that affects the numbness in my toes.",
+      "contradiction_evidence": "Patient: The numbness and tingling in my toes and left leg don't happen all the time, but when they do, they can last a while and feel pretty uncomfortable. It's not something that's constant, but it's definitely connected to my back pain. I don't really notice anything specific that triggers it, but lying on my side seems to help my back pain, though I'm not sure if that affects the numbness in my toes.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient reports numbness in the toes, which is random and intermittent, with a tingling or pins-and-needles sensation.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "Patient reports numbness in the toes, which is random and intermittent, with a tingling or pins-and-needles sensation.",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient reports weakness in the legs, specifically on the left side, which is exacerbated by standing for prolonged periods.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0003,
+        "contradiction": 0.9286
+      },
+      "support_evidence": "Patient: The weakness is mostly in my legs, especially on the left side, and it feels like my legs give out under me when I stand for too long. It’s not the same every time, but it happens more often when I’m up for a while. I don’t think it’s on both sides, just the left one more than the right.",
+      "contradiction_evidence": "Patient: The numbness in my toes doesn't happen all the time, but when it does, it feels like a tingling or pins-and-needles. It can last a few minutes or sometimes longer, and I don't really notice anything specific that triggers it. Lying on my side seems to help my back pain, but I'm not sure if that affects the numbness in my toes.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient reports weakness in the legs, specifically on the left side, which is exacerbated by standing for prolonged periods.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Patient reports weakness in the legs, specifically on the left side, which is exacerbated by standing for prolonged periods.",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient reports a single episode of bowel incontinence, which was likely related to dehydration or standing up too fast.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0004,
+        "contradiction": 0.7204
+      },
+      "support_evidence": "Patient: The numbness in my toes is kind of random, sometimes it happens and sometimes it doesn't. It feels like a tingling or a pins-and-needles sensation. And the weakness is mostly when I stand for too long, like I get shaky or feel like I might fall. As for the accident, I had a moment where I lost control of my bowels, but it wasn't something that happened often. I think it was because I stood up too fast or maybe I was dehydrated. It's not something that's been consistent.",
+      "contradiction_evidence": "Doctor: Could you describe the frequency and duration of the numbness and tingling in your toes and left leg? Also, are there any specific activities or positions that seem to trigger or alleviate these symptoms?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient reports a single episode of bowel incontinence, which was likely related to dehydration or standing up too fast.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Patient reports a single episode of bowel incontinence, which was likely related to dehydration or standing up too fast.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient reports numbness in the toes.",
+      "scores": {
+        "entailment": 0.9998,
+        "neutral": 0.0001,
+        "contradiction": 0.9662
+      },
+      "support_evidence": "Patient: The numbness and tingling in my toes and left leg don't happen all the time, but when they do, they can last a while and feel pretty uncomfortable. It's not something that's constant, but it's definitely connected to my back pain. I don't really notice anything specific that triggers it, but lying on my side seems to help my back pain, though I'm not sure if that affects the numbness in my toes.",
+      "contradiction_evidence": "Patient: Yeah, I had an MRI done, and the results showed something about a disk desiccation and a bulge with a herniation causing some nerve issues. The doctor mentioned something about a herniated disk at L4-L5 with radiculopathy, but I didn't really understand all the words. I just know it's been causing me a lot of pain and some numbness in my leg.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient reports numbness in the toes.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Patient reports that the numbness and tingling in the toes and left leg radiate from the back, especially on the left side."
+    },
+    {
+      "claim": "The patient reports tingling in the toes.",
+      "scores": {
+        "entailment": 0.9998,
+        "neutral": 0.0001,
+        "contradiction": 0.989
+      },
+      "support_evidence": "Patient: The numbness and tingling in my toes and left leg don't happen all the time, but when they do, they can last a while and feel pretty uncomfortable. It's not something that's constant, but it's definitely connected to my back pain. I don't really notice anything specific that triggers it, but lying on my side seems to help my back pain, though I'm not sure if that affects the numbness in my toes.",
+      "contradiction_evidence": "Patient: I had some injections before, but I don't know what they were for exactly. They didn't really help much, honestly. Since the MRI, my pain has stayed about the same, and I still have the numbness in my toes and weakness sometimes when I stand up for too long. I also had an accident once where I pooped myself, but that wasn't consistent.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient reports tingling in the toes.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Patient reports that the numbness and tingling in the toes and left leg radiate from the back, especially on the left side."
+    },
+    {
+      "claim": "The patient reports numbness in the left leg.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0001,
+        "contradiction": 0.9954
+      },
+      "support_evidence": "Patient: The numbness and tingling in my toes and left leg don't happen all the time, but when they do, they can last a while and feel pretty uncomfortable. It's not something that's constant, but it's definitely connected to my back pain. I don't really notice anything specific that triggers it, but lying on my side seems to help my back pain, though I'm not sure if that affects the numbness in my toes.",
+      "contradiction_evidence": "Patient: The numbness in my toes is still kind of random, it doesn't happen all the time, but when it does, it feels like a tingling or pins-and-needles. As for the weakness in my legs, it's been pretty much the same—mostly on the left side, and it happens when I stand for too long. I don't think it's gotten worse, just kind of stays the same.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient reports numbness in the left leg.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Patient reports that the numbness and tingling in the toes and left leg radiate from the back, especially on the left side."
+    },
+    {
+      "claim": "The patient reports tingling in the left leg.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0001,
+        "contradiction": 0.9984
+      },
+      "support_evidence": "Patient: The numbness and tingling in my toes and left leg don't happen all the time, but when they do, they can last a while and feel pretty uncomfortable. It's not something that's constant, but it's definitely connected to my back pain. I don't really notice anything specific that triggers it, but lying on my side seems to help my back pain, though I'm not sure if that affects the numbness in my toes.",
+      "contradiction_evidence": "Patient: The numbness in my toes is still kind of random, it doesn't happen all the time, but when it does, it feels like a tingling or pins-and-needles. As for the weakness in my legs, it's been pretty much the same—mostly on the left side, and it happens when I stand for too long. I don't think it's gotten worse, just kind of stays the same.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient reports tingling in the left leg.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Patient reports that the numbness and tingling in the toes and left leg radiate from the back, especially on the left side."
+    },
+    {
+      "claim": "The numbness and tingling in the toes and left leg radiate from the back.",
+      "scores": {
+        "entailment": 0.9942,
+        "neutral": 0.0037,
+        "contradiction": 0.0021
+      },
+      "support_evidence": "Patient: Yeah, the numbness and tingling in my toes and leg do radiate from my back, especially on the left side. It doesn't happen all the time, but when it does, it can last a while and feels pretty uncomfortable. It's not something that's constant, but it's definitely connected to my back pain.",
+      "contradiction_evidence": "Patient: Yeah, the numbness and tingling in my toes and leg do radiate from my back, especially on the left side. It doesn't happen all the time, but when it does, it can last a while and feels pretty uncomfortable. It's not something that's constant, but it's definitely connected to my back pain.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The numbness and tingling in the toes and left leg radiate from the back.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Patient reports that the numbness and tingling in the toes and left leg radiate from the back, especially on the left side."
+    },
+    {
+      "claim": "The radiated numbness and tingling radiate more on the left side than on the right side.",
+      "scores": {
+        "entailment": 0.9217,
+        "neutral": 0.0734,
+        "contradiction": 0.0265
+      },
+      "support_evidence": "Patient: The weakness is mostly in my legs, especially on the left side, and it feels like my legs give out under me when I stand for too long. It’s not the same every time, but it happens more often when I’m up for a while. I don’t think it’s on both sides, just the left one more than the right.",
+      "contradiction_evidence": "Patient: Yeah, the numbness and tingling in my toes and leg do radiate from my back, especially on the left side. It doesn't happen all the time, but when it does, it can last a while and feels pretty uncomfortable. It's not something that's constant, but it's definitely connected to my back pain.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The radiated numbness and tingling radiate more on the left side than on the right side.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Patient reports that the numbness and tingling in the toes and left leg radiate from the back, especially on the left side."
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 13,
+      "exempt": 1
+    },
+    "num_claims": 13,
+    "num_kept": 13,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient reports that the prescribed pain medication did not provide significant relief.",
+      "evidence": "Patient: I had some injections before, but I don't know what they were for exactly. They didn't really help much, honestly. Since the MRI, my pain has stayed about the same, and I still have the numbness in my toes and weakness sometimes when I stand up for too long. I also had an accident once where I pooped myself, but that wasn't consistent.",
+      "section": "subjective",
+      "candidate": "They didn't really help much, honestly."
+    },
+    {
+      "statement": "The patient reports that the injections did not provide significant relief for their back pain.",
+      "evidence": "Patient: I had some injections before, but I don't know what they were for exactly. They didn't really help much, honestly. Since the MRI, my pain has stayed about the same, and I still have the numbness in my toes and weakness sometimes when I stand up for too long. I also had an accident once where I pooped myself, but that wasn't consistent.",
+      "section": "subjective",
+      "candidate": "They didn't really help much, honestly."
+    },
+    {
+      "statement": "The patient is 35 years old and male.",
+      "evidence": "Patient: I'm 35, male. I've been having back pain for a couple of years, and it's been really bothering me. It started after I fell on my back playing basketball, and it just hasn't gotten better since. It's been hurting pretty bad, like a seven or eight on the pain scale, and it sometimes goes down my leg and makes my toes numb. I'm really worried about it.",
+      "section": "objective",
+      "candidate": "I'm 35, male."
+    },
+    {
+      "statement": "The patient reports having received injections for their back pain, but is unsure of the specific type or purpose of the injections.",
+      "evidence": "Doctor: Could you clarify the type of injections you received for your back pain and whether you have experienced any worsening of symptoms or new neurological deficits since the MRI?",
+      "section": "subjective",
+      "candidate": "I had some injections before, but I don't know what they were for exactly."
+    },
+    {
+      "statement": "The patient reports that the numbness episodes in their toes can last a few minutes or longer, and they do not notice any specific activities or positions that trigger or alleviate the symptoms.",
+      "evidence": "Patient: The numbness and tingling in my toes and left leg don't happen all the time, but when they do, they can last a while and feel pretty uncomfortable. It's not something that's constant, but it's definitely connected to my back pain. I don't really notice anything specific that triggers it, but lying on my side seems to help my back pain, though I'm not sure if that affects the numbness in my toes.",
+      "section": "subjective",
+      "candidate": "It can last a few minutes or sometimes longer, and I don't really notice anything specific that triggers it."
+    },
+    {
+      "statement": "The patient reports taking white pills for pain, but is unable to recall the name or type of medication.",
+      "evidence": "Patient: I took some white pills for the pain, but I don't remember the name or what kind they were. I also had some injections before, but I don't know what they were for exactly. They didn't really help much, honestly.",
+      "section": "subjective",
+      "candidate": "I took some white pills for the pain, but I don't remember the name or what kind they were."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "They didn't really help much, honestly.",
+      "speaker": "Patient",
+      "coverage": 0.0355,
+      "nearest_so_sentence": "The pain is currently 7-8/10 and radiates down the leg, causing numbness in the toes.",
+      "statement": "The patient reports that the prescribed pain medication did not provide significant relief.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I had some injections before, but I don't know what they were for exactly. They didn't really help much, honestly. Since the MRI, my pain has stayed about the same, and I still have the numbness in my toes and weakness sometimes when I stand up for too long. I also had an accident once where I pooped myself, but that wasn't consistent.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.1791
+      },
+      "duplicate_entailment": 0.0079,
+      "duplicate_similarity": 0.3601,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 16.1,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "They didn't really help much, honestly.",
+      "speaker": "Patient",
+      "coverage": 0.0355,
+      "nearest_so_sentence": "The pain is currently 7-8/10 and radiates down the leg, causing numbness in the toes.",
+      "statement": "The patient reports that the injections did not provide significant relief for their back pain.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I had some injections before, but I don't know what they were for exactly. They didn't really help much, honestly. Since the MRI, my pain has stayed about the same, and I still have the numbness in my toes and weakness sometimes when I stand up for too long. I also had an accident once where I pooped myself, but that wasn't consistent.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.1335
+      },
+      "duplicate_entailment": 0.0022,
+      "duplicate_similarity": 0.4188,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 14.52,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I'm 35, male.",
+      "speaker": "Patient",
+      "coverage": 0.1015,
+      "nearest_so_sentence": "Patient reports a single episode of bowel incontinence, which was likely related to dehydration or standing up too fast.",
+      "statement": "The patient is 35 years old and male.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I'm 35, male. I've been having back pain for a couple of years, and it's been really bothering me. It started after I fell on my back playing basketball, and it just hasn't gotten better since. It's been hurting pretty bad, like a seven or eight on the pain scale, and it sometimes goes down my leg and makes my toes numb. I'm really worried about it.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9913,
+        "contradiction": 0.0033
+      },
+      "duplicate_entailment": 0.0005,
+      "duplicate_similarity": 0.3696,
+      "insertion": {
+        "section": "objective",
+        "line_index": 0,
+        "perplexity": null,
+        "removed_placeholder": [
+          "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+        ]
+      }
+    },
+    {
+      "candidate": "I don't think it's gotten worse, just kind of stays the same.",
+      "speaker": "Patient",
+      "coverage": 0.1437,
+      "nearest_so_sentence": "Patient reports weakness in the legs, specifically on the left side, which is exacerbated by standing for prolonged periods.",
+      "statement": "The patient reports that the numbness in their toes has not worsened, but remains stable over time.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: The numbness in my toes comes and goes, sometimes it feels like a tingling or pins-and-needles, and other times I don’t feel anything at all. As for the bowel issue, it only happened once, and I haven’t had it again since. I think it was because I stood up too fast or maybe I was dehydrated. It’s not something that’s been consistent.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9988,
+        "contradiction": 0.9399
+      }
+    },
+    {
+      "candidate": "It's not something that's been consistent.",
+      "speaker": "Patient",
+      "coverage": 0.1642,
+      "nearest_so_sentence": "Patient reports a single episode of bowel incontinence, which was likely related to dehydration or standing up too fast.",
+      "statement": "The patient reports that the numbness in their toes is not something that has been consistent.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: Yeah, the numbness and tingling in my toes and leg do radiate from my back, especially on the left side. It doesn't happen all the time, but when it does, it can last a while and feels pretty uncomfortable. It's not something that's constant, but it's definitely connected to my back pain.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0004
+      },
+      "duplicate_entailment": 0.9995,
+      "duplicate_similarity": 0.7264
+    },
+    {
+      "candidate": "It’s not something that’s been consistent.",
+      "speaker": "Patient",
+      "coverage": 0.1704,
+      "nearest_so_sentence": "Patient reports a single episode of bowel incontinence, which was likely related to dehydration or standing up too fast.",
+      "statement": "The patient reports that the numbness in their toes is not something that has been consistent.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: Yeah, the numbness and tingling in my toes and leg do radiate from my back, especially on the left side. It doesn't happen all the time, but when it does, it can last a while and feels pretty uncomfortable. It's not something that's constant, but it's definitely connected to my back pain.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0004
+      },
+      "duplicate_entailment": 0.9995,
+      "duplicate_similarity": 0.7264
+    },
+    {
+      "candidate": "I had some injections before, but I don't know what they were for exactly.",
+      "speaker": "Patient",
+      "coverage": 0.1828,
+      "nearest_so_sentence": "The pain is currently 7-8/10 and radiates down the leg, causing numbness in the toes.",
+      "statement": "The patient reports having received injections for their back pain, but is unsure of the specific type or purpose of the injections.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Doctor: Could you clarify the type of injections you received for your back pain and whether you have experienced any worsening of symptoms or new neurological deficits since the MRI?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0265
+      },
+      "duplicate_entailment": 0.0065,
+      "duplicate_similarity": 0.505,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 13.11,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I also had some injections, but I don't remember what they were for exactly.",
+      "speaker": "Patient",
+      "coverage": 0.1922,
+      "nearest_so_sentence": "The pain is currently 7-8/10 and radiates down the leg, causing numbness in the toes.",
+      "statement": "The patient reports having had some injections, but does not recall the specific reason for them.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I had some injections before, but I don't know what they were for exactly. They didn't really help much, honestly. Since the MRI, my pain has stayed about the same, and I still have the numbness in my toes and weakness sometimes when I stand up for too long. I also had an accident once where I pooped myself, but that wasn't consistent.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.1417
+      },
+      "duplicate_entailment": 0.0031,
+      "duplicate_similarity": 0.4285
+    },
+    {
+      "candidate": "I'm really worried about it.",
+      "speaker": "Patient",
+      "coverage": 0.1976,
+      "nearest_so_sentence": "Patient reports numbness in the toes, which is random and intermittent, with a tingling or pins-and-needles sensation.",
+      "statement": "The patient expresses concern.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 35, male. I've been having back pain for a couple of years, and it's been really bothering me. It started after I fell on my back playing basketball, and it just hasn't gotten better since. It's been hurting pretty bad, like a seven or eight on the pain scale, and it sometimes goes down my leg and makes my toes numb. I'm really worried about it.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9998,
+        "contradiction": 0.0784
+      },
+      "duplicate_entailment": 0.9971,
+      "duplicate_similarity": 0.4211
+    },
+    {
+      "candidate": "I also had some injections before, but I don't know what they were for exactly.",
+      "speaker": "Patient",
+      "coverage": 0.2021,
+      "nearest_so_sentence": "The pain is currently 7-8/10 and radiates down the leg, causing numbness in the toes.",
+      "statement": "The patient reports having had some injections before, but is unsure of their purpose.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I had some injections before, but I don't know what they were for exactly. They didn't really help much, honestly. Since the MRI, my pain has stayed about the same, and I still have the numbness in my toes and weakness sometimes when I stand up for too long. I also had an accident once where I pooped myself, but that wasn't consistent.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.02
+      },
+      "duplicate_entailment": 0.002,
+      "duplicate_similarity": 0.3626
+    },
+    {
+      "candidate": "It can last a few minutes or sometimes longer, and I don't really notice anything specific that triggers it.",
+      "speaker": "Patient",
+      "coverage": 0.2558,
+      "nearest_so_sentence": "The pain is currently 7-8/10 and radiates down the leg, causing numbness in the toes.",
+      "statement": "The patient reports that the numbness episodes in their toes can last a few minutes or longer, and they do not notice any specific activities or positions that trigger or alleviate the symptoms.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: The numbness and tingling in my toes and left leg don't happen all the time, but when they do, they can last a while and feel pretty uncomfortable. It's not something that's constant, but it's definitely connected to my back pain. I don't really notice anything specific that triggers it, but lying on my side seems to help my back pain, though I'm not sure if that affects the numbness in my toes.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.2966
+      },
+      "duplicate_entailment": 0.6727,
+      "duplicate_similarity": 0.6949,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 5,
+        "perplexity": 13.8,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don’t think it’s on both sides, just the left one more than the right.",
+      "speaker": "Patient",
+      "coverage": 0.2954,
+      "nearest_so_sentence": "Patient reports that the numbness and tingling in the toes and left leg radiate from the back, especially on the left side.",
+      "statement": "The patient reports experiencing weakness on the left side more than the right when standing for prolonged periods.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The weakness is mostly in my legs, especially on the left side, and it feels like my legs give out under me when I stand for too long. It’s not the same every time, but it happens more often when I’m up for a while. I don’t think it’s on both sides, just the left one more than the right.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.2141
+      },
+      "duplicate_entailment": 0.9981,
+      "duplicate_similarity": 0.893
+    },
+    {
+      "candidate": "It doesn't happen all the time, but when it does, it can last a while and feels pretty uncomfortable.",
+      "speaker": "Patient",
+      "coverage": 0.3378,
+      "nearest_so_sentence": "Patient reports a single episode of bowel incontinence, which was likely related to dehydration or standing up too fast.",
+      "statement": "The patient reports experiencing occasional episodes of numbness or tingling in the legs or feet that radiate from the back, which can last for a while and feel uncomfortable.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The numbness and tingling in my toes and left leg don't happen all the time, but when they do, they can last a while and feel pretty uncomfortable. It's not something that's constant, but it's definitely connected to my back pain. I don't really notice anything specific that triggers it, but lying on my side seems to help my back pain, though I'm not sure if that affects the numbness in my toes.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9989,
+        "contradiction": 0.2047
+      },
+      "duplicate_entailment": 0.9321,
+      "duplicate_similarity": 0.8284
+    },
+    {
+      "candidate": "The symptoms come and go, and I haven't really noticed a clear pattern over the past few months.",
+      "speaker": "Patient",
+      "coverage": 0.3421,
+      "nearest_so_sentence": "Patient reports numbness in the toes, which is random and intermittent, with a tingling or pins-and-needles sensation.",
+      "statement": "The patient reports that the symptoms of numbness and tingling in the toes and left leg come and go, and they have not noticed a clear pattern over the past few months.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Could you describe any specific activities or positions that seem to make the numbness or tingling in your toes and left leg worse or better? Also, have you noticed any changes in the pattern of your symptoms over the past few months?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0219
+      },
+      "duplicate_entailment": 0.993,
+      "duplicate_similarity": 0.8182
+    },
+    {
+      "candidate": "It’s not the same every time, but it happens more often when I’m up for a while.",
+      "speaker": "Patient",
+      "coverage": 0.3617,
+      "nearest_so_sentence": "Patient reports a single episode of bowel incontinence, which was likely related to dehydration or standing up too fast.",
+      "statement": "The patient reports that the pattern of weakness when standing for prolonged periods is not consistent, but tends to occur more frequently when standing for extended periods.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: The weakness is mostly in my legs, especially on the left side, and it feels like my legs give out under me when I stand for too long. It’s not the same every time, but it happens more often when I’m up for a while. I don’t think it’s on both sides, just the left one more than the right.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9991,
+        "contradiction": 0.7824
+      }
+    },
+    {
+      "candidate": "As for the accident, I had a moment where I lost control of my bowels, but it wasn't something that happened often.",
+      "speaker": "Patient",
+      "coverage": 0.3811,
+      "nearest_so_sentence": "Patient reports a single episode of bowel incontinence, which was likely related to dehydration or standing up too fast.",
+      "statement": "The patient states that after the accident, they experienced a moment where they lost control of their bowels, but it was not a frequent occurrence.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The numbness in my toes is kind of random, sometimes it happens and sometimes it doesn't. It feels like a tingling or a pins-and-needles sensation. And the weakness is mostly when I stand for too long, like I get shaky or feel like I might fall. As for the accident, I had a moment where I lost control of my bowels, but it wasn't something that happened often. I think it was because I stood up too fast or maybe I was dehydrated. It's not something that's been consistent.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.2834
+      },
+      "first_rewrite_rejected": "The patient reports having experienced an occasional loss of bowel control following the accident.",
+      "duplicate_entailment": 0.9989,
+      "duplicate_similarity": 0.5222
+    },
+    {
+      "candidate": "It just happens randomly, and I can't really tell what causes it.",
+      "speaker": "Patient",
+      "coverage": 0.3873,
+      "nearest_so_sentence": "Patient reports a single episode of bowel incontinence, which was likely related to dehydration or standing up too fast.",
+      "statement": "The patient reports that the numbness or tingling in their toes and left leg occurs randomly and they are unable to identify any specific activities or positions that worsen or improve the symptoms.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Doctor: Could you describe the frequency and duration of the numbness and tingling in your toes and left leg? Also, are there any specific activities or positions that seem to trigger or alleviate these symptoms?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.9816
+      }
+    },
+    {
+      "candidate": "I took some white pills for the pain, but I don't remember the name or what kind they were.",
+      "speaker": "Patient",
+      "coverage": 0.391,
+      "nearest_so_sentence": "The pain is currently 7-8/10 and radiates down the leg, causing numbness in the toes.",
+      "statement": "The patient reports taking white pills for pain, but is unable to recall the name or type of medication.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I took some white pills for the pain, but I don't remember the name or what kind they were. I also had some injections before, but I don't know what they were for exactly. They didn't really help much, honestly.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.1134
+      },
+      "duplicate_entailment": 0.0842,
+      "duplicate_similarity": 0.2994,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 1,
+        "perplexity": 13.28,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "As for medications, I took some white pills before for the pain, but I'm not sure what they were.",
+      "speaker": "Patient",
+      "coverage": 0.3916,
+      "nearest_so_sentence": "The pain is currently 7-8/10 and radiates down the leg, causing numbness in the toes.",
+      "statement": "The patient reports taking some white pills before for the pain, but is unsure what they were.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I don't have any surgeries, and I don't have any chronic conditions other than the back pain. As for medications, I took some white pills before for the pain, but I'm not sure what they were. I also had some injections, but I don't remember what they were for exactly.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.1241
+      },
+      "first_rewrite_rejected": "The patient reports taking white pills for pain relief, but is unsure of the medication's identity.",
+      "duplicate_entailment": 0.002,
+      "duplicate_similarity": 0.3728
+    },
+    {
+      "candidate": "It's not something that's constant, but it's definitely connected to my back pain.",
+      "speaker": "Patient",
+      "coverage": 0.3956,
+      "nearest_so_sentence": "Patient reports a 2-year history of back pain, which started after a fall playing basketball.",
+      "statement": "The patient reports that episodes of numbness or tingling in the legs or feet, radiating from the back, are not constant but are connected to back pain.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: Yeah, I had an MRI done, and the results showed something about a disk desiccation and a bulge with a herniation causing some nerve issues. The doctor mentioned something about a herniated disk at L4-L5 with radiculopathy, but I didn't really understand all the words. I just know it's been causing me a lot of pain and some numbness in my leg.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.3165
+      }
+    },
+    {
+      "candidate": "It's not something that's constant, but it's definitely connected to my back pain.",
+      "speaker": "Patient",
+      "coverage": 0.3956,
+      "nearest_so_sentence": "Patient reports a 2-year history of back pain, which started after a fall playing basketball.",
+      "statement": "The patient reports that the numbness and tingling in their toes and left leg are not constant, but are related to their back pain.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The numbness and tingling in my toes and left leg don't happen all the time, but when they do, they can last a while and feel pretty uncomfortable. It's not something that's constant, but it's definitely connected to my back pain. I don't really notice anything specific that triggers it, but lying on my side seems to help my back pain, though I'm not sure if that affects the numbness in my toes.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0371
+      },
+      "duplicate_entailment": 0.9991,
+      "duplicate_similarity": 0.8904
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 52,
+    "num_covered": 31,
+    "num_flagged": 21,
+    "num_not_checked_cap": 0,
+    "num_added": 6
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "I don't think it's gotten worse, just kind of stays the same.",
+        "statement": "The patient reports that the numbness in their toes has not worsened, but remains stable over time.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9988,
+          "contradiction": 0.9399
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "It’s not the same every time, but it happens more often when I’m up for a while.",
+        "statement": "The patient reports that the pattern of weakness when standing for prolonged periods is not consistent, but tends to occur more frequently when standing for extended periods.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9991,
+          "contradiction": 0.7824
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "It just happens randomly, and I can't really tell what causes it.",
+        "statement": "The patient reports that the numbness or tingling in their toes and left leg occurs randomly and they are unable to identify any specific activities or positions that worsen or improve the symptoms.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9995,
+          "contradiction": 0.9816
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "It's not something that's constant, but it's definitely connected to my back pain.",
+        "statement": "The patient reports that episodes of numbness or tingling in the legs or feet, radiating from the back, are not constant but are connected to back pain.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9992,
+          "contradiction": 0.3165
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 188.1,
+  "ap_unchanged": true,
+  "conversation": "Patient: I'm 35, male. I've been having back pain for a couple of years, and it's been really bothering me. It started after I fell on my back playing basketball, and it just hasn't gotten better since. It's been hurting pretty bad, like a seven or eight on the pain scale, and it sometimes goes down my leg and makes my toes numb. I'm really worried about it.\nDoctor: Have you undergone any imaging studies, such as an MRI or X-ray, for your back pain? If so, could you provide the results or details of those examinations?\nPatient: Yeah, I had an MRI done, and the results showed something about a disk desiccation and a bulge with a herniation causing some nerve issues. The doctor mentioned something about a herniated disk at L4-L5 with radiculopathy, but I didn't really understand all the words. I just know it's been causing me a lot of pain and some numbness in my leg.\nDoctor: Could you please provide details about any prior surgeries, chronic conditions, or medications you have had?\nPatient: I don't have any surgeries, and I don't have any chronic conditions other than the back pain. As for medications, I took some white pills before for the pain, but I'm not sure what they were. I also had some injections, but I don't remember what they were for exactly.\nDoctor: Could you please clarify what type of pain medication you were prescribed (e.g., NSAIDs, opioids, muscle relaxants) and whether you had epidural steroid injections or another type of injection for your back pain?\nPatient: I took some white pills for the pain, but I don't remember the name or what kind they were. I also had some injections before, but I don't know what they were for exactly. They didn't really help much, honestly.\nDoctor: Could you clarify the type of injections you received for your back pain and whether you have experienced any worsening of symptoms or new neurological deficits since the MRI?\nPatient: I had some injections before, but I don't know what they were for exactly. They didn't really help much, honestly. Since the MRI, my pain has stayed about the same, and I still have the numbness in my toes and weakness sometimes when I stand up for too long. I also had an accident once where I pooped myself, but that wasn't consistent.\nDoctor: Could you describe the specific nature of the numbness in your toes and any associated weakness or changes in bowel/bladder function?\nPatient: The numbness in my toes is kind of random, sometimes it happens and sometimes it doesn't. It feels like a tingling or a pins-and-needles sensation. And the weakness is mostly when I stand for too long, like I get shaky or feel like I might fall. As for the accident, I had a moment where I lost control of my bowels, but it wasn't something that happened often. I think it was because I stood up too fast or maybe I was dehydrated. It's not something that's been consistent.\nDoctor: Could you describe the specific pattern of weakness you experience when standing for prolonged periods, such as which muscles are affected and whether it is bilateral or unilateral?\nPatient: The weakness is mostly in my legs, especially on the left side, and it feels like my legs give out under me when I stand for too long. It’s not the same every time, but it happens more often when I’m up for a while. I don’t think it’s on both sides, just the left one more than the right.\nDoctor: Could you please describe the pattern of numbness in your toes? Is it constant or does it come and go? Also, have you noticed any changes in the frequency or severity of the bowel incontinence incident over time?\nPatient: The numbness in my toes comes and goes, sometimes it feels like a tingling or pins-and-needles, and other times I don’t feel anything at all. As for the bowel issue, it only happened once, and I haven’t had it again since. I think it was because I stood up too fast or maybe I was dehydrated. It’s not something that’s been consistent.\nDoctor: Thank you for sharing that. To better understand your condition, could you describe if the numbness in your toes is more frequent now compared to before, and whether you've noticed any changes in the pattern of weakness in your legs over time?\nPatient: The numbness in my toes is still kind of random, it doesn't happen all the time, but when it does, it feels like a tingling or pins-and-needles. As for the weakness in my legs, it's been pretty much the same—mostly on the left side, and it happens when I stand for too long. I don't think it's gotten worse, just kind of stays the same.\nDoctor: Could you describe the exact timing and duration of the numbness episodes in your toes, and have you noticed any specific activities or positions that trigger or alleviate the symptoms?\nPatient: The numbness in my toes doesn't happen all the time, but when it does, it feels like a tingling or pins-and-needles. It can last a few minutes or sometimes longer, and I don't really notice anything specific that triggers it. Lying on my side seems to help my back pain, but I'm not sure if that affects the numbness in my toes.\nDoctor: Could you describe any specific activities or positions that seem to trigger or alleviate the numbness in your toes? Additionally, have you noticed any changes in bowel or bladder function since the initial incident?\nPatient: I don't really notice anything specific that triggers the numbness in my toes, it just happens randomly. As for the bowel issue, it only happened once and I haven't had any problems with it since. I don't think there have been any changes in my bladder or bowel function since that incident.\nDoctor: Have you experienced any episodes of numbness or tingling in your legs or feet that radiate from your back, and if so, how frequently do these episodes occur?\nPatient: Yeah, the numbness and tingling in my toes and leg do radiate from my back, especially on the left side. It doesn't happen all the time, but when it does, it can last a while and feels pretty uncomfortable. It's not something that's constant, but it's definitely connected to my back pain.\nDoctor: Have you experienced any changes in bowel or bladder function since the initial incident of bowel incontinence? If so, please describe them.\nPatient: No, I haven't experienced any changes in my bowel or bladder function since that one time. The incontinence only happened once, and I haven't had any issues with either my bladder or bowels since then. I think it was just a one-time thing, probably because I stood up too fast or something.\nDoctor: Could you describe the frequency and duration of the numbness and tingling in your toes and left leg? Also, are there any specific activities or positions that seem to trigger or alleviate these symptoms?\nPatient: The numbness and tingling in my toes and left leg don't happen all the time, but when they do, they can last a while and feel pretty uncomfortable. It's not something that's constant, but it's definitely connected to my back pain. I don't really notice anything specific that triggers it, but lying on my side seems to help my back pain, though I'm not sure if that affects the numbness in my toes.\nDoctor: Could you describe any specific activities or positions that seem to make the numbness or tingling in your toes and left leg worse or better? Also, have you noticed any changes in the pattern of your symptoms over the past few months?\nPatient: I don't really notice anything specific that makes the numbness or tingling worse, but lying on my side helps with the back pain. The symptoms come and go, and I haven't really noticed a clear pattern over the past few months. It just happens randomly, and I can't really tell what causes it.",
+  "reference_so": {
+    "subjective": "Basic information: 35-year-old male with chief complaint of back pain for several years following a basketball injury\n\nHistory of present illness: Onset of back pain after a fall during basketball, persistent pain rated 7-8/10, radiation to the leg, and numbness in the toes. The patient also reports intermittent weakness when standing for prolonged periods and mentions an incident of bowel incontinence, though it was not consistent. The numbness in the toes is described as random, with a tingling or pins-and-needles sensation. The weakness occurs when standing for too long, causing shakiness or a feeling of falling. The bowel incontinence incident was occasional and possibly related to standing up too fast or dehydration. The weakness is mostly in the legs, especially on the left side, and it feels like the legs give out under the patient when standing for too long. It’s not the same every time, but it happens more often when the patient is up for a while. It’s not on both sides, just the left one more than the right. The numbness in the toes comes and goes, sometimes it feels like a tingling or pins-and-needles, and other times I don’t feel anything at all. As for the bowel issue, it only happened once, and I haven’t had it again since. I think it was because I stood up too fast or maybe I was dehydrated. It’s not something that’s consistent. The numbness in my toes is still kind of random, it doesn't happen all the time, but when it does, it feels like a tingling or pins-and-needles. As for the weakness in my legs, it's been pretty much the same—mostly on the left side, and it happens when I stand for too long. I don't think it's gotten worse, just kind of stays the same. The numbness and tingling in my toes and leg do radiate from my back, especially on the left side. It doesn't happen all the time, but when it does, it can last a while and feels pretty uncomfortable. It's not something that's constant, but it's definitely connected to my back pain.\n\nPast history: No chronic conditions or surgeries. Medications: Unknown type of white pills for pain; Injections: Unknown type, previously administered for back pain but with limited efficacy. Allergies: None. Family history: Not available. Patient reports intermittent bowel incontinence, though it was not consistent and occurred only once, possibly related to rapid standing or dehydration. No changes in bowel or bladder function since the initial incident.",
+    "objective": "Physical examination: Physical examination findings: Normal vital signs. Neurological examination reveals decreased sensation to light touch and pinprick in the left lateral foot and dorsum of the left foot, consistent with L5 radiculopathy. Motor examination shows mild weakness in left dorsiflexion (4/5), with normal strength in other lower extremity muscles. Reflexes are symmetric and normal. No signs of bowel or bladder dysfunction on examination.\n\nInvestigations: MRI findings: Disk desiccation and bulge with herniation at L4-L5 causing radiculopathy. No evidence of spinal stenosis or cauda equina syndrome."
+  }
+}

@@ -1,0 +1,642 @@
+{
+  "case_id": "D2N136",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* The patient is a 33-year-old female who presents with knee pain, primarily in both knees, especially the left one, which started after she began doing stair workouts.\n* The pain is constant, worsens with activity, and is accompanied by swelling, redness, and stiffness.\n* The patient has not experienced morning stiffness, and the pain does not improve with rest.\n* She has a history of rotator cuff repair on her right shoulder two years ago but no other joint issues.\n* The patient has not experienced fatigue, weight loss, or skin rashes related to her knee pain.\n* She has not been tested for autoimmune labs, but the doctor mentioned ordering them.",
+    "objective": "* The patient's blood pressure was mentioned to be a little high, but specific readings were not provided.\n* The doctor observed redness and swelling, especially on the left knee, and noted fluid buildup.\n* The patient had x-rays of her left knee, which showed normal results."
+  },
+  "stage2_so": {
+    "subjective": "* The patient is a 33-year-old female who presents with knee pain, primarily in both knees, especially the left one, which started after she began doing stair workouts.\n* The pain is constant, worsens with activity, and is accompanied by swelling, redness, and stiffness.\n* The patient has not experienced morning stiffness, and the pain does not improve with rest.\n* She has a history of rotator cuff repair on her right shoulder two years ago but no other joint issues.\n* The patient has not experienced fatigue, weight loss, or skin rashes related to her knee pain.\n* She has not been tested for autoimmune labs, but the doctor mentioned ordering them.",
+    "objective": "* The patient's blood pressure was mentioned to be a little high, but specific readings were not provided.\n* The doctor observed redness and swelling, especially on the left knee, and noted fluid buildup.\n* The patient had x-rays of her left knee, which showed normal results."
+  },
+  "stage3_so": {
+    "subjective": "* The patient is a 33-year-old female who presents with knee pain, primarily in both knees, especially the left one, which started after she began doing stair workouts.\n* The patient reports that they have not experienced any locking, clicking, or instability in their knees during the workouts or otherwise.\n* The patient reports that the knee pain has been constant and has not improved with rest, although it has not worsened significantly over time.\n* The pain is constant, worsens with activity, and is accompanied by swelling, redness, and stiffness.\n* The patient reports that morning stiffness in the knees has been constant.\n* The patient has not experienced morning stiffness, and the pain does not improve with rest.\n* She has a history of rotator cuff repair on her right shoulder two years ago but no other joint issues.\n* The patient reports taking metformin as prescribed, twice a day, and has not made any changes to their medication regimen.\n* The patient has not experienced fatigue, weight loss, or skin rashes related to her knee pain.\n* She has not been tested for autoimmune labs, but the doctor mentioned ordering them.",
+    "objective": "* The patient's blood pressure was mentioned to be a little high, but specific readings were not provided.\n* The doctor observed redness and swelling, especially on the left knee, and noted fluid buildup.\n* The patient had x-rays of her left knee, which showed normal results."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient presents with knee pain, swelling, and redness, which is likely related to her stair workouts.\n* The patient has not been tested for autoimmune labs, but the doctor mentioned ordering them.",
+    "plan": "* The doctor will order autoimmune labs to help determine the cause of the patient's knee pain.\n* The patient will continue to monitor her blood pressure and report any changes to her doctor.\n* The doctor will reassess the patient's knee pain and swelling in the future to monitor for any changes or progression."
+  },
+  "stage2_audit": [
+    {
+      "claim": "The patient is a 33-year-old female who presents with knee pain, primarily in both knees, especially the left one, which started after she began doing stair workouts.",
+      "scores": {
+        "entailment": 0.9983,
+        "neutral": 0.0007,
+        "contradiction": 0.0027
+      },
+      "support_evidence": "Patient: I'm 33 and female. The knee pain started a while back, and it's been bothering me pretty much ever since I started doing those stair workouts. It's both knees, and they feel sore and a bit swollen, especially the left one. There's some redness too, and it's been making it hard to bend or straighten my legs fully.",
+      "contradiction_evidence": "Patient: My blood pressure was a little high today, which the doctor mentioned, but I’ve been monitoring it at home and it’s been okay otherwise. The doctor checked my knees and saw some redness and swelling, especially on the left one, and there was a little fluid buildup. My knees feel stiff and sore, and it’s been hard to bend or straighten them fully, but I don’t have any other physical issues or symptoms.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient is a 33-year-old female who presents with knee pain, primarily in both knees, especially the left one, which started after she began doing stair workouts.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 33-year-old female who presents with knee pain, primarily in both knees, especially the left one, which started after she began doing stair workouts.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The pain is constant.",
+      "scores": {
+        "entailment": 0.9981,
+        "neutral": 0.0015,
+        "contradiction": 0.0036
+      },
+      "support_evidence": "Doctor: Could you please provide the duration of the knee pain and any prior history of joint issues? Additionally, have you experienced any systemic symptoms such as fatigue or weight loss? Lastly, is there a family history of autoimmune or inflammatory conditions?",
+      "contradiction_evidence": "Patient: My blood pressure was a little high today, which the doctor mentioned, but I’ve been monitoring it at home and it’s been okay otherwise. The doctor checked my knees and saw some redness and swelling, especially on the left one, and there was a little fluid buildup. My knees feel stiff and sore, and it’s been hard to bend or straighten them fully, but I don’t have any other physical issues or symptoms.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain is constant.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The pain is constant, worsens with activity, and is accompanied by swelling, redness, and stiffness."
+    },
+    {
+      "claim": "The pain worsens with activity.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.0106
+      },
+      "support_evidence": "Patient: I don't have morning stiffness in my knees. The pain seems to get worse when I'm active, especially when I'm doing those stair workouts, but it doesn't really get better with rest. It's just been pretty constant.",
+      "contradiction_evidence": "Patient: The knee pain has been going on for a while now, probably since I started doing those stair workouts. It hasn't gotten much worse, but it's been pretty constant and hasn't improved with rest.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain worsens with activity.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The pain is constant, worsens with activity, and is accompanied by swelling, redness, and stiffness."
+    },
+    {
+      "claim": "The pain is accompanied by swelling.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.0011
+      },
+      "support_evidence": "Patient: I haven't been tested for autoimmune labs yet, but the doctor mentioned ordering them. I haven't noticed any other symptoms like fatigue, weight loss, or skin rashes related to my knee pain. It's just been the swelling, redness, and discomfort in my knees, especially when I'm active.",
+      "contradiction_evidence": "Doctor: Could you please provide the duration of the knee pain and any prior history of joint issues? Additionally, have you experienced any systemic symptoms such as fatigue or weight loss? Lastly, is there a family history of autoimmune or inflammatory conditions?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain is accompanied by swelling.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The pain is constant, worsens with activity, and is accompanied by swelling, redness, and stiffness."
+    },
+    {
+      "claim": "The pain is accompanied by redness.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0003,
+        "contradiction": 0.001
+      },
+      "support_evidence": "Patient: The swelling and redness in my left knee have been there for a while now, probably since the knee pain started. It hasn't really gotten bigger or changed much, just stayed the same. It's been a constant issue, especially when I'm doing my workouts or even just walking around.",
+      "contradiction_evidence": "Patient: My blood pressure was a little high today, which the doctor mentioned, but I’ve been monitoring it at home and it’s been okay otherwise. The doctor checked my knees and saw some redness and swelling, especially on the left one, and there was a little fluid buildup. My knees feel stiff and sore, and it’s been hard to bend or straighten them fully, but I don’t have any other physical issues or symptoms.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain is accompanied by redness.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The pain is constant, worsens with activity, and is accompanied by swelling, redness, and stiffness."
+    },
+    {
+      "claim": "The pain is accompanied by stiffness.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0003,
+        "contradiction": 0.9985
+      },
+      "support_evidence": "Doctor: Could you clarify how long you've been experiencing the knee pain and whether it has progressively worsened over time?",
+      "contradiction_evidence": "Doctor: Could you please confirm your age, gender, and describe the nature of your knee pain, including when it started, how long it lasts, and whether it is accompanied by any swelling, redness, or stiffness?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain is accompanied by stiffness.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The pain is constant, worsens with activity, and is accompanied by swelling, redness, and stiffness."
+    },
+    {
+      "claim": "The patient has not experienced morning stiffness, and the pain does not improve with rest.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0003,
+        "contradiction": 0.0085
+      },
+      "support_evidence": "Doctor: Have you experienced any morning stiffness in your knees, and if so, how long does it last? Have you noticed any improvement or worsening of symptoms with rest or activity?",
+      "contradiction_evidence": "Patient: I haven't been tracking my blood pressure with specific numbers at home, just making sure it's under control with my medication. As for tests, the doctor did some x-rays of my left knee when I came in, and there was some swelling and redness, but the x-ray looked normal. I haven't had any other tests done yet.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has not experienced morning stiffness, and the pain does not improve with rest.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "The patient has not experienced morning stiffness, and the pain does not improve with rest.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has a history of rotator cuff repair on her right shoulder two years ago but no other joint issues.",
+      "scores": {
+        "entailment": 0.995,
+        "neutral": 0.0032,
+        "contradiction": 0.0025
+      },
+      "support_evidence": "Patient: The knee pain has been going on for a while now, probably since I started doing those stair workouts. I had a rotator cuff repair on my right shoulder about two years ago, but I haven't had any other joint issues since then. I don't have any fatigue or weight loss, and I don't think there's a family history of autoimmune or inflammatory conditions — I'm not sure about that.",
+      "contradiction_evidence": "Patient: I haven't been tested for autoimmune labs yet, but the doctor mentioned ordering them. I haven't noticed any other symptoms like fatigue, weight loss, or skin rashes related to my knee pain. It's just been the swelling, redness, and discomfort in my knees, especially when I'm active.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has a history of rotator cuff repair on her right shoulder two years ago but no other joint issues.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "She has a history of rotator cuff repair on her right shoulder two years ago but no other joint issues.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient has not experienced fatigue, weight loss, or skin rashes related to her knee pain.",
+      "scores": {
+        "entailment": 0.9991,
+        "neutral": 0.0004,
+        "contradiction": 0.003
+      },
+      "support_evidence": "Patient: I haven't been tested for autoimmune labs yet, but the doctor mentioned ordering them. I haven't noticed any other symptoms like fatigue, weight loss, or skin rashes related to my knee pain. It's just been the swelling, redness, and discomfort in my knees, especially when I'm active.",
+      "contradiction_evidence": "Doctor: Could you please provide the duration of the knee pain and any prior history of joint issues? Additionally, have you experienced any systemic symptoms such as fatigue or weight loss? Lastly, is there a family history of autoimmune or inflammatory conditions?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has not experienced fatigue, weight loss, or skin rashes related to her knee pain.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "The patient has not experienced fatigue, weight loss, or skin rashes related to her knee pain.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She has not been tested for autoimmune labs, but the doctor mentioned ordering them.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0002,
+        "contradiction": 0.003
+      },
+      "support_evidence": "Patient: I haven't been tested for autoimmune labs yet, but the doctor mentioned ordering them. I haven't noticed any other symptoms like fatigue, weight loss, or skin rashes related to my knee pain. It's just been the swelling, redness, and discomfort in my knees, especially when I'm active.",
+      "contradiction_evidence": "Patient: My blood pressure was a little high today, which the doctor mentioned, but I’ve been monitoring it at home and it’s been okay otherwise. The doctor checked my knees and saw some redness and swelling, especially on the left one, and there was a little fluid buildup. My knees feel stiff and sore, and it’s been hard to bend or straighten them fully, but I don’t have any other physical issues or symptoms.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She has not been tested for autoimmune labs, but the doctor mentioned ordering them.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "She has not been tested for autoimmune labs, but the doctor mentioned ordering them.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "The patient's blood pressure was mentioned to be a little high, but specific readings were not provided.",
+      "claim": "The patient's blood pressure was mentioned to be a little high, but specific readings were not provided.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    },
+    {
+      "claim": "The doctor observed redness and swelling, especially on the left knee, and noted fluid buildup.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0004,
+        "contradiction": 0.0315
+      },
+      "support_evidence": "Patient: My blood pressure was a little high today, which the doctor mentioned, but I’ve been monitoring it at home and it’s been okay otherwise. The doctor checked my knees and saw some redness and swelling, especially on the left one, and there was a little fluid buildup. My knees feel stiff and sore, and it’s been hard to bend or straighten them fully, but I don’t have any other physical issues or symptoms.",
+      "contradiction_evidence": "Patient: I don't think I've had any of those specific blood tests recently. The doctor mentioned checking my diabetes labs, and my A1C was a little high but not too bad. Other than that, I don't recall any tests for inflammation or infection.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The doctor observed redness and swelling, especially on the left knee, and noted fluid buildup.",
+      "reason": "Entailed by the conversation.",
+      "section": "objective",
+      "line": 1,
+      "sentence": "The doctor observed redness and swelling, especially on the left knee, and noted fluid buildup.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient had x-rays of her left knee, which showed normal results.",
+      "scores": {
+        "entailment": 0.9978,
+        "neutral": 0.0006,
+        "contradiction": 0.3321
+      },
+      "support_evidence": "Patient: I haven't been tracking my blood pressure with specific numbers at home, just making sure it's under control with my medication. As for tests, the doctor did some x-rays of my left knee when I came in, and there was some swelling and redness, but the x-ray looked normal. I haven't had any other tests done yet.",
+      "contradiction_evidence": "Patient: My blood pressure was a little high today, which the doctor mentioned, but I’ve been monitoring it at home and it’s been okay otherwise. The doctor checked my knees and saw some redness and swelling, especially on the left one, and there was a little fluid buildup. My knees feel stiff and sore, and it’s been hard to bend or straighten them fully, but I don’t have any other physical issues or symptoms.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient had x-rays of her left knee, which showed normal results.",
+      "reason": "Entailed by the conversation.",
+      "section": "objective",
+      "line": 2,
+      "sentence": "The patient had x-rays of her left knee, which showed normal results.",
+      "level": "sentence"
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 12,
+      "exempt": 1
+    },
+    "num_claims": 12,
+    "num_kept": 12,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient reports that morning stiffness in the knees has been constant.",
+      "evidence": "Patient: I don't have morning stiffness in my knees. The pain seems to get worse when I'm active, especially when I'm doing those stair workouts, but it doesn't really get better with rest. It's just been pretty constant.",
+      "section": "subjective",
+      "candidate": "It's just been pretty constant."
+    },
+    {
+      "statement": "The patient reports taking metformin as prescribed, twice a day, and has not made any changes to their medication regimen.",
+      "evidence": "Patient: No, I haven't had any recent changes in my diabetes management. I've been taking my metformin as prescribed, twice a day, and my blood sugars have been under control, so I don't think there's been any need to adjust my medication.",
+      "section": "subjective",
+      "candidate": "I've been taking my metformin as prescribed, twice a day, and my blood sugars have been under control, so I don't think there's been any need to adjust my medication."
+    },
+    {
+      "statement": "The patient reports that the knee pain has been constant and has not improved with rest, although it has not worsened significantly over time.",
+      "evidence": "Patient: The knee pain has been going on for a while now, probably since I started doing those stair workouts. It hasn't gotten much worse, but it's been pretty constant and hasn't improved with rest.",
+      "section": "subjective",
+      "candidate": "It hasn't gotten much worse, but it's been pretty constant and hasn't improved with rest."
+    },
+    {
+      "statement": "The patient reports that they have not experienced any locking, clicking, or instability in their knees during the workouts or otherwise.",
+      "evidence": "Patient: No, I haven't experienced any locking, clicking, or instability in my knees during the workouts or otherwise. It's just been a constant soreness and some difficulty with bending and straightening my legs, especially in the left knee.",
+      "section": "subjective",
+      "candidate": "No, I haven't experienced any locking, clicking, or instability in my knees during the workouts or otherwise."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I'm 33 and female.",
+      "speaker": "Patient",
+      "coverage": 0.0835,
+      "nearest_so_sentence": "The patient is a 33-year-old female who presents with knee pain, primarily in both knees, especially the left one, which started after she began doing stair workouts.",
+      "statement": "The patient reports her age to be 33 years and her gender to be female.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 33 and female. The knee pain started a while back, and it's been bothering me pretty much ever since I started doing those stair workouts. It's both knees, and they feel sore and a bit swollen, especially the left one. There's some redness too, and it's been making it hard to bend or straighten my legs fully.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9998,
+        "contradiction": 0.0047
+      },
+      "duplicate_entailment": 0.9995,
+      "duplicate_similarity": 0.487
+    },
+    {
+      "candidate": "I'm 33 years old, and I'm a female.",
+      "speaker": "Patient",
+      "coverage": 0.095,
+      "nearest_so_sentence": "The patient is a 33-year-old female who presents with knee pain, primarily in both knees, especially the left one, which started after she began doing stair workouts.",
+      "statement": "The patient is a 33-year-old female.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 33 years old, and I'm a female. I'm here because I've been having joint pain, mostly in my knees. I've been doing more stair workouts, thinking it would help build muscle, but it's actually been making my knees hurt a lot.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0003
+      },
+      "duplicate_entailment": 0.9982,
+      "duplicate_similarity": 0.6042
+    },
+    {
+      "candidate": "It's just been pretty constant.",
+      "speaker": "Patient",
+      "coverage": 0.1469,
+      "nearest_so_sentence": "The pain is constant, worsens with activity, and is accompanied by swelling, redness, and stiffness.",
+      "statement": "The patient reports that morning stiffness in the knees has been constant.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I don't have morning stiffness in my knees. The pain seems to get worse when I'm active, especially when I'm doing those stair workouts, but it doesn't really get better with rest. It's just been pretty constant.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9989,
+        "contradiction": 0.1805
+      },
+      "duplicate_entailment": 0.0003,
+      "duplicate_similarity": 0.7624,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 2,
+        "perplexity": 19.51,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I haven't been tracking my blood pressure with specific numbers at home, just making sure it's under control with my medication.",
+      "speaker": "Patient",
+      "coverage": 0.1552,
+      "nearest_so_sentence": "She has not been tested for autoimmune labs, but the doctor mentioned ordering them.",
+      "statement": "The patient reports not tracking specific blood pressure readings at home, but is aware of maintaining control with medication.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I haven't been tracking my blood pressure with specific numbers at home, just making sure it's under control with my medication. As for tests, the doctor did some x-rays of my left knee when I came in, and there was some swelling and redness, but the x-ray looked normal. I haven't had any other tests done yet.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.999
+      }
+    },
+    {
+      "candidate": "It hasn't really gotten bigger or changed much, just stayed the same.",
+      "speaker": "Patient",
+      "coverage": 0.1818,
+      "nearest_so_sentence": "She has a history of rotator cuff repair on her right shoulder two years ago but no other joint issues.",
+      "statement": "The patient reports that the swelling and redness in their left knee has remained stable in size and appearance over time.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Doctor: Could you describe the swelling and redness in your left knee in more detail? For example, how long has it been present, and has it changed in size or appearance over time?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.9298
+      }
+    },
+    {
+      "candidate": "I've been taking my metformin as prescribed, twice a day, and my blood sugars have been under control, so I don't think there's been any need to adjust my medication.",
+      "speaker": "Patient",
+      "coverage": 0.2011,
+      "nearest_so_sentence": "She has not been tested for autoimmune labs, but the doctor mentioned ordering them.",
+      "statement": "The patient reports taking metformin as prescribed, twice a day, and has not made any changes to their medication regimen.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: No, I haven't had any recent changes in my diabetes management. I've been taking my metformin as prescribed, twice a day, and my blood sugars have been under control, so I don't think there's been any need to adjust my medication.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0145
+      },
+      "duplicate_entailment": 0.0015,
+      "duplicate_similarity": 0.3849,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 5,
+        "perplexity": 18.01,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "No, I haven't had any recent changes in my diabetes management.",
+      "speaker": "Patient",
+      "coverage": 0.2466,
+      "nearest_so_sentence": "The patient has not experienced fatigue, weight loss, or skin rashes related to her knee pain.",
+      "statement": "The patient denies having made any recent changes to their diabetes management.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: No, I haven't had any recent changes in my diabetes management. I've been taking my metformin as prescribed, twice a day, and my blood sugars have been under control, so I don't think there's been any need to adjust my medication.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.7528
+      }
+    },
+    {
+      "candidate": "I don't have any information about my family's medical history, so I can't confirm or deny that.",
+      "speaker": "Patient",
+      "coverage": 0.2766,
+      "nearest_so_sentence": "She has a history of rotator cuff repair on her right shoulder two years ago but no other joint issues.",
+      "statement": "The patient reports that they do not have information about their family's medical history and therefore cannot confirm or deny a family history of autoimmune or rheumatic conditions.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I don't think there's any family history of autoimmune or rheumatic conditions that I'm aware of. I don't have any information about my family's medical history, so I can't confirm or deny that.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.9932
+      }
+    },
+    {
+      "candidate": "The doctor mentioned checking my diabetes labs, and my A1C was a little high but not too bad.",
+      "speaker": "Patient",
+      "coverage": 0.3078,
+      "nearest_so_sentence": "She has not been tested for autoimmune labs, but the doctor mentioned ordering them.",
+      "statement": "The patient reports that their A1C was noted to be slightly elevated during a recent diabetes lab check.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I don't think I've had any of those specific blood tests recently. The doctor mentioned checking my diabetes labs, and my A1C was a little high but not too bad. Other than that, I don't recall any tests for inflammation or infection.",
+      "scores_vs_dialogue": {
+        "entailment": 0.999,
+        "contradiction": 0.9337
+      }
+    },
+    {
+      "candidate": "I haven't had any other tests done yet.",
+      "speaker": "Patient",
+      "coverage": 0.3177,
+      "nearest_so_sentence": "She has not been tested for autoimmune labs, but the doctor mentioned ordering them.",
+      "statement": "The patient states that no recent laboratory tests have been performed.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I haven't been tested for autoimmune labs yet, but the doctor mentioned ordering them. I haven't noticed any other symptoms like fatigue, weight loss, or skin rashes related to my knee pain. It's just been the swelling, redness, and discomfort in my knees, especially when I'm active.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0344
+      },
+      "first_rewrite_rejected": "The patient reports that no recent laboratory tests or imaging studies have been performed for the knees.",
+      "duplicate_entailment": 0.9988,
+      "duplicate_similarity": 0.4647
+    },
+    {
+      "candidate": "It's been a constant issue, especially when I'm doing my workouts or even just walking around.",
+      "speaker": "Patient",
+      "coverage": 0.3489,
+      "nearest_so_sentence": "The pain is constant, worsens with activity, and is accompanied by swelling, redness, and stiffness.",
+      "statement": "The patient states that the swelling and redness in their left knee have been a constant issue, especially when they are doing their workouts or even just walking around.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The swelling and redness in my left knee have been there for a while now, probably since the knee pain started. It hasn't really gotten bigger or changed much, just stayed the same. It's been a constant issue, especially when I'm doing my workouts or even just walking around.",
+      "scores_vs_dialogue": {
+        "entailment": 0.999,
+        "contradiction": 0.1621
+      },
+      "first_rewrite_rejected": "The patient reports that the swelling and redness in their left knee have been a constant issue, particularly during physical activity such as workouts or walking.",
+      "duplicate_entailment": 0.9701,
+      "duplicate_similarity": 0.8437
+    },
+    {
+      "candidate": "It hasn't gotten much worse, but it's been pretty constant and hasn't improved with rest.",
+      "speaker": "Patient",
+      "coverage": 0.355,
+      "nearest_so_sentence": "The patient has not experienced morning stiffness, and the pain does not improve with rest.",
+      "statement": "The patient reports that the knee pain has been constant and has not improved with rest, although it has not worsened significantly over time.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: The knee pain has been going on for a while now, probably since I started doing those stair workouts. It hasn't gotten much worse, but it's been pretty constant and hasn't improved with rest.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0077
+      },
+      "duplicate_entailment": 0.6339,
+      "duplicate_similarity": 0.6643,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 1,
+        "perplexity": 15.48,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "No, I haven't experienced any locking, clicking, or instability in my knees during the workouts or otherwise.",
+      "speaker": "Patient",
+      "coverage": 0.3595,
+      "nearest_so_sentence": "The patient has not experienced fatigue, weight loss, or skin rashes related to her knee pain.",
+      "statement": "The patient reports that they have not experienced any locking, clicking, or instability in their knees during the workouts or otherwise.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: No, I haven't experienced any locking, clicking, or instability in my knees during the workouts or otherwise. It's just been a constant soreness and some difficulty with bending and straightening my legs, especially in the left knee.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.2965
+      },
+      "first_rewrite_rejected": "The patient denies experiencing locking, clicking, or instability in their knees during workouts or otherwise.",
+      "duplicate_entailment": 0.5393,
+      "duplicate_similarity": 0.6657,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 1,
+        "perplexity": 15.71,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "My blood pressure was a little high today, which the doctor mentioned, but I’ve been monitoring it at home and it’s been okay otherwise.",
+      "speaker": "Patient",
+      "coverage": 0.3657,
+      "nearest_so_sentence": "The doctor observed redness and swelling, especially on the left knee, and noted fluid buildup.",
+      "statement": "The patient reports that their blood pressure was elevated at the doctor's office, but they have been monitoring it at home and have not noted any issues otherwise.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: My blood pressure was a little high today, which the doctor mentioned, but I’ve been monitoring it at home and it’s been okay otherwise. The doctor checked my knees and saw some redness and swelling, especially on the left one, and there was a little fluid buildup. My knees feel stiff and sore, and it’s been hard to bend or straighten them fully, but I don’t have any other physical issues or symptoms.",
+      "scores_vs_dialogue": {
+        "entailment": 0.999,
+        "contradiction": 0.9881
+      }
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 40,
+    "num_covered": 26,
+    "num_flagged": 14,
+    "num_not_checked_cap": 0,
+    "num_added": 4
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "I haven't been tracking my blood pressure with specific numbers at home, just making sure it's under control with my medication.",
+        "statement": "The patient reports not tracking specific blood pressure readings at home, but is aware of maintaining control with medication.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.999
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "It hasn't really gotten bigger or changed much, just stayed the same.",
+        "statement": "The patient reports that the swelling and redness in their left knee has remained stable in size and appearance over time.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9993,
+          "contradiction": 0.9298
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "No, I haven't had any recent changes in my diabetes management.",
+        "statement": "The patient denies having made any recent changes to their diabetes management.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9995,
+          "contradiction": 0.7528
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I don't have any information about my family's medical history, so I can't confirm or deny that.",
+        "statement": "The patient reports that they do not have information about their family's medical history and therefore cannot confirm or deny a family history of autoimmune or rheumatic conditions.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.9932
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "The doctor mentioned checking my diabetes labs, and my A1C was a little high but not too bad.",
+        "statement": "The patient reports that their A1C was noted to be slightly elevated during a recent diabetes lab check.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.999,
+          "contradiction": 0.9337
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "My blood pressure was a little high today, which the doctor mentioned, but I’ve been monitoring it at home and it’s been okay otherwise.",
+        "statement": "The patient reports that their blood pressure was elevated at the doctor's office, but they have been monitoring it at home and have not noted any issues otherwise.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.999,
+          "contradiction": 0.9881
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 118.7,
+  "ap_unchanged": true,
+  "conversation": "Patient: I'm 33 years old, and I'm a female. I'm here because I've been having joint pain, mostly in my knees. I've been doing more stair workouts, thinking it would help build muscle, but it's actually been making my knees hurt a lot.\nDoctor: Could you please confirm your age, gender, and describe the nature of your knee pain, including when it started, how long it lasts, and whether it is accompanied by any swelling, redness, or stiffness?\nPatient: I'm 33 and female. The knee pain started a while back, and it's been bothering me pretty much ever since I started doing those stair workouts. It's both knees, and they feel sore and a bit swollen, especially the left one. There's some redness too, and it's been making it hard to bend or straighten my legs fully.\nDoctor: Have you experienced any morning stiffness in your knees, and if so, how long does it last? Have you noticed any improvement or worsening of symptoms with rest or activity?\nPatient: I don't have morning stiffness in my knees. The pain seems to get worse when I'm active, especially when I'm doing those stair workouts, but it doesn't really get better with rest. It's just been pretty constant.\nDoctor: Have you experienced any locking, clicking, or instability in your knees during the workouts or otherwise?\nPatient: No, I haven't experienced any locking, clicking, or instability in my knees during the workouts or otherwise. It's just been a constant soreness and some difficulty with bending and straightening my legs, especially in the left knee.\nDoctor: Could you please provide the duration of the knee pain and any prior history of joint issues? Additionally, have you experienced any systemic symptoms such as fatigue or weight loss? Lastly, is there a family history of autoimmune or inflammatory conditions?\nPatient: The knee pain has been going on for a while now, probably since I started doing those stair workouts. I had a rotator cuff repair on my right shoulder about two years ago, but I haven't had any other joint issues since then. I don't have any fatigue or weight loss, and I don't think there's a family history of autoimmune or inflammatory conditions — I'm not sure about that.\nDoctor: Could you clarify how long you've been experiencing the knee pain and whether it has progressively worsened over time?\nPatient: The knee pain has been going on for a while now, probably since I started doing those stair workouts. It hasn't gotten much worse, but it's been pretty constant and hasn't improved with rest.\nDoctor: Could you please provide your vital signs and describe any physical examination findings you've had so far?\nPatient: My blood pressure was a little high today, which the doctor mentioned, but I’ve been monitoring it at home and it’s been okay otherwise. The doctor checked my knees and saw some redness and swelling, especially on the left one, and there was a little fluid buildup. My knees feel stiff and sore, and it’s been hard to bend or straighten them fully, but I don’t have any other physical issues or symptoms.\nDoctor: Could you provide the specific blood pressure readings you've been monitoring at home, and have you had any recent laboratory tests or imaging studies for your knees?\nPatient: I haven't been tracking my blood pressure with specific numbers at home, just making sure it's under control with my medication. As for tests, the doctor did some x-rays of my left knee when I came in, and there was some swelling and redness, but the x-ray looked normal. I haven't had any other tests done yet.\nDoctor: Could you describe the swelling and redness in your left knee in more detail? For example, how long has it been present, and has it changed in size or appearance over time?\nPatient: The swelling and redness in my left knee have been there for a while now, probably since the knee pain started. It hasn't really gotten bigger or changed much, just stayed the same. It's been a constant issue, especially when I'm doing my workouts or even just walking around.\nDoctor: Have you had any recent blood tests, such as a complete blood count, ESR, or CRP, to check for signs of inflammation or infection?\nPatient: I don't think I've had any of those specific blood tests recently. The doctor mentioned checking my diabetes labs, and my A1C was a little high but not too bad. Other than that, I don't recall any tests for inflammation or infection.\nDoctor: Have you experienced any recent changes in your diabetes management, such as adjustments to your medication or blood sugar levels?\nPatient: No, I haven't had any recent changes in my diabetes management. I've been taking my metformin as prescribed, twice a day, and my blood sugars have been under control, so I don't think there's been any need to adjust my medication.\nDoctor: Have you been tested for inflammatory markers such as ESR, CRP, RF, or anti-CCP? If so, what were the results?\nPatient: I don't think I've been tested for those specific inflammatory markers yet. The doctor mentioned ordering some autoimmune labs, but I haven't received the results or been told anything about them.\nDoctor: Have you been tested for inflammatory markers such as ESR or CRP, or autoimmune panels such as RF and ANA? If so, what were the results?\nPatient: I don't think I've been tested for those specific inflammatory markers yet. The doctor mentioned ordering some autoimmune labs, but I haven't received the results or been told anything about them.\nDoctor: Could you clarify if you have been tested for autoimmune labs, and if so, what were the results? Also, have you noticed any other symptoms such as fatigue, weight loss, or skin rashes that might be related to your knee pain?\nPatient: I haven't been tested for autoimmune labs yet, but the doctor mentioned ordering them. I haven't noticed any other symptoms like fatigue, weight loss, or skin rashes related to my knee pain. It's just been the swelling, redness, and discomfort in my knees, especially when I'm active.\nDoctor: Could you please confirm if you have any family history of autoimmune or rheumatic conditions, such as rheumatoid arthritis or lupus? This information may help us better understand the potential cause of your knee symptoms.\nPatient: I don't think there's any family history of autoimmune or rheumatic conditions that I'm aware of. I don't have any information about my family's medical history, so I can't confirm or deny that.",
+  "reference_so": {
+    "subjective": "Basic information: 33-year-old female presenting with bilateral knee pain, exacerbated by stair workouts.\n\nHistory of present illness: The knee pain started a while back and has been bothering the patient ever since she started doing stair workouts. The pain is in both knees, with the left knee being more affected. The knees feel sore, swollen, and there is some redness. The patient has difficulty bending or straightening her legs fully. The pain seems to get worse when she is active, especially when she is doing those stair workouts, but it doesn't really get better with rest. It's just been pretty constant. No locking, clicking, or instability in the knees during the workouts or otherwise. The patient does not have morning stiffness. The swelling and redness in my left knee have been there for a while now, probably since the knee pain started. It hasn't really gotten bigger or changed much, just stayed the same. It's been a constant issue, especially when I'm doing my workouts or even just walking around.\n\nPast history: No history of trauma or injury reported. The patient had a rotator cuff repair on her right shoulder about two years ago. No family history of joint-related conditions mentioned yet. No prior treatments or medications for knee pain. No systemic symptoms such as fatigue or weight loss reported. No family history of autoimmune or rheumatic conditions reported.",
+    "objective": "Physical examination: Vital signs: Blood pressure 140/90 mmHg (home monitoring). System examination findings: Bilateral knee effusion, particularly left knee; mild erythema and warmth over both knees; limited range of motion with pain on active movement. No joint instability, locking, or crepitus.\n\nInvestigations: X-ray of left knee performed, showed swelling and redness but no fractures or osteoarthritis noted. Inflammatory markers (ESR, CRP, RF, ANA) and autoimmune panel results: Not yet available."
+  }
+}

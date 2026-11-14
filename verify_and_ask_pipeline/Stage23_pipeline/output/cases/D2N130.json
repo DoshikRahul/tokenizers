@@ -1,0 +1,558 @@
+{
+  "case_id": "D2N130",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* The patient, a 26-year-old female, presents with a 3-week history of left elbow pain and swelling, which is worse after typing and improved with rest and ice application.\n* The pain is described as a dull ache, located at the tip of the left elbow, near the back, and is accompanied by stiffness and limited range of motion.\n* The patient reports no prior injuries or family history of joint or musculoskeletal disorders.\n* She is currently taking Keppra for epilepsy and Protonix for peptic ulcer disease.\n* The patient has not undergone any imaging studies or blood tests for her elbow, except for an endoscopy for her ulcer, which showed gastritis.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* The patient, a 26-year-old female, presents with a 3-week history of left elbow pain and swelling, which is worse after typing and improved with rest and ice application.\n* The pain is described as a dull ache, located at the tip of the left elbow, near the back, and is accompanied by stiffness and limited range of motion.\n* The patient reports no prior injuries or family history of joint or musculoskeletal disorders.\n* She is currently taking Keppra for epilepsy and Protonix for peptic ulcer disease.\n* The patient has not undergone any imaging studies or blood tests for her elbow, except for an endoscopy for her ulcer, which showed gastritis.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* The patient is willing to undergo imaging studies to further evaluate the left elbow.\n* The patient, a 26-year-old female, presents with a 3-week history of left elbow pain and swelling, which is worse after typing and improved with rest and ice application.\n* The pain is described as a dull ache, located at the tip of the left elbow, near the back, and is accompanied by stiffness and limited range of motion.\n* The patient states that morning stiffness in the elbow does not really bother them.\n* The patient reports a little bit of weakness in their arm, but no numbness or tingling.\n* The patient reports no prior injuries or family history of joint or musculoskeletal disorders.\n* She is currently taking Keppra for epilepsy and Protonix for peptic ulcer disease.\n* The patient has not undergone any imaging studies or blood tests for her elbow, except for an endoscopy for her ulcer, which showed gastritis.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient presents with a history of left elbow pain and swelling, which is likely related to repetitive strain or overuse from typing.",
+    "plan": "* The doctor will order an X-ray of the left elbow to evaluate for any potential bony abnormalities.\n* The patient will be referred for physical therapy to address the stiffness and limited range of motion in her left elbow.\n* The patient will be advised to continue applying ice and resting her elbow as needed to alleviate symptoms.\n* The patient will be scheduled for a follow-up appointment to reassess her symptoms and progress."
+  },
+  "stage2_audit": [
+    {
+      "claim": "The patient is a 26-year-old female.",
+      "scores": {
+        "entailment": 0.9997,
+        "neutral": 0.0001,
+        "contradiction": 0.0004
+      },
+      "support_evidence": "Patient: Hi, I'm 26 years old, and I'm female. I'm here because my left elbow has been really bothering me. It's been stiff and painful, especially after work, and I've noticed some swelling at the tip of my elbow.",
+      "contradiction_evidence": "Patient: The pain and swelling in my elbow have been going on for a few weeks now. It started gradually, and it's gotten worse over time, especially after I type all day. It's been pretty consistent, and the stiffness and pain are getting more noticeable each day.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient is a 26-year-old female.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient, a 26-year-old female, presents with a 3-week history of left elbow pain and swelling, which is worse after typing and improved with rest and ice application."
+    },
+    {
+      "claim": "The patient presents with a 3-week history of left elbow pain.",
+      "scores": {
+        "entailment": 0.7843,
+        "neutral": 0.1868,
+        "contradiction": 0.0289
+      },
+      "support_evidence": "Patient: I don't have any prior injuries to my elbow, and I don't think there's a family history of joint issues. I'm currently taking Keppra for my epilepsy and Protonix for my peptic ulcer disease. That's it.",
+      "contradiction_evidence": "Patient: I don't have any prior injuries to my elbow, and I don't think there's a family history of joint issues. I'm currently taking Keppra for my epilepsy and Protonix for my peptic ulcer disease. That's it.",
+      "corrected_text": null,
+      "flagged": true,
+      "decision": "uncertain",
+      "keep": true,
+      "output": "The patient presents with a 3-week history of left elbow pain.",
+      "reason": "Partially supported; kept and flagged for review (neutral is not proof of falsehood).",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient, a 26-year-old female, presents with a 3-week history of left elbow pain and swelling, which is worse after typing and improved with rest and ice application."
+    },
+    {
+      "claim": "The patient presents with left elbow swelling.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.0213
+      },
+      "support_evidence": "Patient: The pain and swelling are right at the tip of my left elbow, near the back. It's really stiff, and it hurts when I try to straighten or bend my elbow. It makes typing difficult, but I can still write with my non-dominant hand, which is good.",
+      "contradiction_evidence": "Patient: The pain gets worse when I type all day, especially when I'm using my left elbow on the desk. It also hurts when I try to straighten or bend my elbow. The only thing that seems to help a little is resting my elbow and applying ice.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient presents with left elbow swelling.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient, a 26-year-old female, presents with a 3-week history of left elbow pain and swelling, which is worse after typing and improved with rest and ice application."
+    },
+    {
+      "claim": "The left elbow pain is worse after typing.",
+      "scores": {
+        "entailment": 0.9991,
+        "neutral": 0.0006,
+        "contradiction": 0.001
+      },
+      "support_evidence": "Patient: The pain and swelling are right at the tip of my left elbow, near the back. It's really stiff, and it hurts when I try to straighten or bend my elbow. It makes typing difficult, but I can still write with my non-dominant hand, which is good.",
+      "contradiction_evidence": "Patient: Yes, there is some redness and warmth around my left elbow, and I've been experiencing pain and swelling, but I haven't had a fever. It feels warm to the touch, and the area looks a little red.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The left elbow pain is worse after typing.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient, a 26-year-old female, presents with a 3-week history of left elbow pain and swelling, which is worse after typing and improved with rest and ice application."
+    },
+    {
+      "claim": "The left elbow pain is improved with rest.",
+      "scores": {
+        "entailment": 0.9987,
+        "neutral": 0.0008,
+        "contradiction": 0.0005
+      },
+      "support_evidence": "Patient: The pain gets worse when I type all day, especially when I'm using my left elbow on the desk. It also hurts when I try to straighten or bend my elbow. The only thing that seems to help a little is resting my elbow and applying ice.",
+      "contradiction_evidence": "Patient: The pain gets worse when I type all day, especially when I'm using my left elbow on the desk. It also hurts when I try to straighten or bend my elbow. The only thing that seems to help a little is resting my elbow and applying ice.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The left elbow pain is improved with rest.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient, a 26-year-old female, presents with a 3-week history of left elbow pain and swelling, which is worse after typing and improved with rest and ice application."
+    },
+    {
+      "claim": "The left elbow pain is improved with ice application.",
+      "scores": {
+        "entailment": 0.9987,
+        "neutral": 0.0011,
+        "contradiction": 0.0007
+      },
+      "support_evidence": "Patient: The pain gets worse when I type all day, especially when I'm using my left elbow on the desk. It also hurts when I try to straighten or bend my elbow. The only thing that seems to help a little is resting my elbow and applying ice.",
+      "contradiction_evidence": "Doctor: Could you please describe the duration of your elbow pain and swelling? For example, how long have you been experiencing these symptoms, and have they been gradually worsening or sudden in onset?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The left elbow pain is improved with ice application.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient, a 26-year-old female, presents with a 3-week history of left elbow pain and swelling, which is worse after typing and improved with rest and ice application."
+    },
+    {
+      "claim": "The pain is described as a dull ache, located at the tip of the left elbow, near the back, and is accompanied by stiffness and limited range of motion.",
+      "scores": {
+        "entailment": 0.9969,
+        "neutral": 0.0012,
+        "contradiction": 0.0232
+      },
+      "support_evidence": "Patient: The pain and swelling are right at the tip of my left elbow, near the back. It's really stiff, and it hurts when I try to straighten or bend my elbow. It makes typing difficult, but I can still write with my non-dominant hand, which is good.",
+      "contradiction_evidence": "Patient: The pain and swelling in my elbow have been going on for a few weeks now. It started gradually, and it's gotten worse over time, especially after I type all day. It's been pretty consistent, and the stiffness and pain are getting more noticeable each day.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain is described as a dull ache, located at the tip of the left elbow, near the back, and is accompanied by stiffness and limited range of motion.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The pain is described as a dull ache, located at the tip of the left elbow, near the back, and is accompanied by stiffness and limited range of motion.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient reports no prior injuries or family history of joint or musculoskeletal disorders.",
+      "scores": {
+        "entailment": 0.9915,
+        "neutral": 0.0042,
+        "contradiction": 0.0356
+      },
+      "support_evidence": "Patient: I don't have any prior injuries to my elbow, and I don't think there's a family history of joint issues. I'm currently taking Keppra for my epilepsy and Protonix for my peptic ulcer disease. That's it.",
+      "contradiction_evidence": "Doctor: Could you please provide the results of any previous blood tests, such as inflammatory markers (e.g., ESR, CRP) or rheumatologic panels, that may have been done for your elbow or other conditions?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient reports no prior injuries or family history of joint or musculoskeletal disorders.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "The patient reports no prior injuries or family history of joint or musculoskeletal disorders.",
+      "level": "sentence"
+    },
+    {
+      "claim": "She is currently taking Keppra for epilepsy and Protonix for peptic ulcer disease.",
+      "scores": {
+        "entailment": 0.9986,
+        "neutral": 0.0008,
+        "contradiction": 0.0013
+      },
+      "support_evidence": "Patient: I don't have any prior injuries to my elbow, and I don't think there's a family history of joint issues. I'm currently taking Keppra for my epilepsy and Protonix for my peptic ulcer disease. That's it.",
+      "contradiction_evidence": "Patient: I don't have any prior injuries to my elbow, and I don't think there's a family history of joint issues. I'm currently taking Keppra for my epilepsy and Protonix for my peptic ulcer disease. That's it.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "She is currently taking Keppra for epilepsy and Protonix for peptic ulcer disease.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "She is currently taking Keppra for epilepsy and Protonix for peptic ulcer disease.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient has not undergone any imaging studies or blood tests for her elbow, except for an endoscopy for her ulcer, which showed gastritis.",
+      "scores": {
+        "entailment": 0.9989,
+        "neutral": 0.0004,
+        "contradiction": 0.1913
+      },
+      "support_evidence": "Patient: I don't have any results from previous blood tests for inflammatory markers or rheumatologic panels. I was told during my endoscopy that I had gastritis, but that was for my ulcer, not for my elbow. I haven't had any blood tests specifically for my elbow.",
+      "contradiction_evidence": "Doctor: Have you undergone any imaging studies such as X-rays, MRI, or ultrasound of the left elbow? If so, please provide the results. If not, would you be willing to undergo imaging to further evaluate the elbow?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient has not undergone any imaging studies or blood tests for her elbow, except for an endoscopy for her ulcer, which showed gastritis.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "The patient has not undergone any imaging studies or blood tests for her elbow, except for an endoscopy for her ulcer, which showed gastritis.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 9,
+      "uncertain": 1,
+      "exempt": 1
+    },
+    "num_claims": 10,
+    "num_kept": 10,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient states that morning stiffness in the elbow does not really bother them.",
+      "evidence": "Patient: No, I haven't experienced any morning stiffness in my elbow. The stiffness and pain are more related to using my elbow throughout the day at work. It doesn't really bother me in the morning.",
+      "section": "subjective",
+      "candidate": "It doesn't really bother me in the morning."
+    },
+    {
+      "statement": "The patient reports a little bit of weakness in their arm, but no numbness or tingling.",
+      "evidence": "Patient: The pain is more of a dull ache, and it's been bothering me a lot after I type all day at work. I don't think I've had any recent trauma, just repetitive motion. I haven't had any numbness or tingling, but there's a little bit of weakness in my arm, though nothing too bad.",
+      "section": "subjective",
+      "candidate": "I haven't had any numbness or tingling, but there's a little bit of weakness in my arm, though nothing too bad."
+    },
+    {
+      "statement": "The patient is willing to undergo imaging studies to further evaluate the left elbow.",
+      "evidence": "Patient: I haven't had any imaging studies done for my elbow yet. I'm willing to undergo imaging if it would help figure out what's going on.",
+      "section": "subjective",
+      "candidate": "I'm willing to undergo imaging if it would help figure out what's going on."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "Hi, I'm 26 years old, and I'm female.",
+      "speaker": "Patient",
+      "coverage": 0.0406,
+      "nearest_so_sentence": "The patient, a 26-year-old female, presents with a 3-week history of left elbow pain and swelling, which is worse after typing and improved with rest and ice application.",
+      "statement": "The patient is a 26-year-old female.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: Hi, I'm 26 years old, and I'm female. I'm here because my left elbow has been really bothering me. It's been stiff and painful, especially after work, and I've noticed some swelling at the tip of my elbow.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0004
+      },
+      "duplicate_entailment": 0.9991,
+      "duplicate_similarity": 0.4572
+    },
+    {
+      "candidate": "That's it.",
+      "speaker": "Patient",
+      "coverage": 0.1131,
+      "nearest_so_sentence": "The patient reports no prior injuries or family history of joint or musculoskeletal disorders.",
+      "statement": "The patient reports no prior injuries or conditions affecting the elbow, and denies any family history of joint or musculoskeletal disorders.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I don't have any prior injuries to my elbow, and I don't think there's a family history of joint issues. I'm currently taking Keppra for my epilepsy and Protonix for my peptic ulcer disease. That's it.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9915,
+        "contradiction": 0.5838
+      }
+    },
+    {
+      "candidate": "It doesn't really bother me in the morning.",
+      "speaker": "Patient",
+      "coverage": 0.1693,
+      "nearest_so_sentence": "The pain is described as a dull ache, located at the tip of the left elbow, near the back, and is accompanied by stiffness and limited range of motion.",
+      "statement": "The patient states that morning stiffness in the elbow does not really bother them.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: No, I haven't experienced any morning stiffness in my elbow. The stiffness and pain are more related to using my elbow throughout the day at work. It doesn't really bother me in the morning.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.0858
+      },
+      "first_rewrite_rejected": "The patient reports that morning stiffness in the elbow does not bother them.",
+      "duplicate_entailment": 0.3894,
+      "duplicate_similarity": 0.552,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 2,
+        "perplexity": 22.39,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "My vital signs were checked in the office, and everything looked good.",
+      "speaker": "Patient",
+      "coverage": 0.1894,
+      "nearest_so_sentence": "The patient has not undergone any imaging studies or blood tests for her elbow, except for an endoscopy for her ulcer, which showed gastritis.",
+      "statement": "The patient reports that their vital signs were checked in the office and were found to be normal.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: My vital signs were checked in the office, and everything looked good. I haven't had any blood tests done recently, just the endoscopy for my ulcer.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.4198
+      }
+    },
+    {
+      "candidate": "It makes typing difficult, but I can still write with my non-dominant hand, which is good.",
+      "speaker": "Patient",
+      "coverage": 0.2279,
+      "nearest_so_sentence": "The patient, a 26-year-old female, presents with a 3-week history of left elbow pain and swelling, which is worse after typing and improved with rest and ice application.",
+      "statement": "The patient reports that typing is difficult due to elbow pain and swelling, but is able to write with their non-dominant hand.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The pain and swelling are right at the tip of my left elbow, near the back. It's really stiff, and it hurts when I try to straighten or bend my elbow. It makes typing difficult, but I can still write with my non-dominant hand, which is good.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0294
+      },
+      "duplicate_entailment": 0.9611,
+      "duplicate_similarity": 0.5949
+    },
+    {
+      "candidate": "It started gradually, and it's gotten worse over time, especially after I type all day.",
+      "speaker": "Patient",
+      "coverage": 0.2647,
+      "nearest_so_sentence": "The patient, a 26-year-old female, presents with a 3-week history of left elbow pain and swelling, which is worse after typing and improved with rest and ice application.",
+      "statement": "The patient reports that the elbow pain and swelling started gradually and have worsened over time, particularly after typing all day.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The pain and swelling in my elbow have been going on for a few weeks now. It started gradually, and it's gotten worse over time, especially after I type all day. It's been pretty consistent, and the stiffness and pain are getting more noticeable each day.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9988,
+        "contradiction": 0.0061
+      },
+      "duplicate_entailment": 0.9958,
+      "duplicate_similarity": 0.8224
+    },
+    {
+      "candidate": "It feels warm to the touch, and the area looks a little red.",
+      "speaker": "Patient",
+      "coverage": 0.2803,
+      "nearest_so_sentence": "The pain is described as a dull ache, located at the tip of the left elbow, near the back, and is accompanied by stiffness and limited range of motion.",
+      "statement": "The patient reports that the affected area feels warm to the touch and appears slightly red.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: Yes, there is some redness and warmth around my left elbow, and I've been experiencing pain and swelling, but I haven't had a fever. It feels warm to the touch, and the area looks a little red.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.0112
+      },
+      "duplicate_entailment": 0.8584,
+      "duplicate_similarity": 0.4052
+    },
+    {
+      "candidate": "I don't think I've had any recent trauma, just repetitive motion.",
+      "speaker": "Patient",
+      "coverage": 0.3105,
+      "nearest_so_sentence": "The patient reports no prior injuries or family history of joint or musculoskeletal disorders.",
+      "statement": "The patient reports experiencing pain in the left elbow due to repetitive motion, with no recent trauma.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Doctor: Can you describe the nature of the pain in your left elbow? Is it a sharp, dull, burning, or throbbing sensation? Have you experienced any recent trauma or overuse activities that might have contributed to the pain? Additionally, have you noticed any numbness, tingling, or weakness in your hand or forearm?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9988,
+        "contradiction": 0.7038
+      }
+    },
+    {
+      "candidate": "No, I haven't noticed any clicking, locking, or popping in my left elbow when I move it.",
+      "speaker": "Patient",
+      "coverage": 0.316,
+      "nearest_so_sentence": "The pain is described as a dull ache, located at the tip of the left elbow, near the back, and is accompanied by stiffness and limited range of motion.",
+      "statement": "The patient denies experiencing any clicking, locking, or popping sensations in their left elbow during movement.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I haven't noticed any clicking, locking, or popping sensations in my left elbow when moving it. It just feels stiff and painful, especially after I've been typing all day.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0046
+      },
+      "duplicate_entailment": 0.9891,
+      "duplicate_similarity": 0.5451
+    },
+    {
+      "candidate": "I haven't had any numbness or tingling, but there's a little bit of weakness in my arm, though nothing too bad.",
+      "speaker": "Patient",
+      "coverage": 0.3426,
+      "nearest_so_sentence": "The pain is described as a dull ache, located at the tip of the left elbow, near the back, and is accompanied by stiffness and limited range of motion.",
+      "statement": "The patient reports a little bit of weakness in their arm, but no numbness or tingling.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: The pain is more of a dull ache, and it's been bothering me a lot after I type all day at work. I don't think I've had any recent trauma, just repetitive motion. I haven't had any numbness or tingling, but there's a little bit of weakness in my arm, though nothing too bad.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.1286
+      },
+      "duplicate_entailment": 0.5816,
+      "duplicate_similarity": 0.4927,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 3,
+        "perplexity": 19.45,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "It's been pretty consistent, and the stiffness and pain are getting more noticeable each day.",
+      "speaker": "Patient",
+      "coverage": 0.3508,
+      "nearest_so_sentence": "The pain is described as a dull ache, located at the tip of the left elbow, near the back, and is accompanied by stiffness and limited range of motion.",
+      "statement": "The patient reports that the stiffness and pain in the elbow have been gradually worsening over time, becoming more noticeable each day.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The pain and swelling in my elbow have been going on for a few weeks now. It started gradually, and it's gotten worse over time, especially after I type all day. It's been pretty consistent, and the stiffness and pain are getting more noticeable each day.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9991,
+        "contradiction": 0.0147
+      },
+      "duplicate_entailment": 0.9804,
+      "duplicate_similarity": 0.7291
+    },
+    {
+      "candidate": "I'm willing to undergo imaging if it would help figure out what's going on.",
+      "speaker": "Patient",
+      "coverage": 0.3617,
+      "nearest_so_sentence": "The patient has not undergone any imaging studies or blood tests for her elbow, except for an endoscopy for her ulcer, which showed gastritis.",
+      "statement": "The patient is willing to undergo imaging studies to further evaluate the left elbow.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I haven't had any imaging studies done for my elbow yet. I'm willing to undergo imaging if it would help figure out what's going on.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9973,
+        "contradiction": 0.0047
+      },
+      "duplicate_entailment": 0.0106,
+      "duplicate_similarity": 0.6655,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 18.28,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "No, I haven't noticed any clicking, locking, or popping sensations in my left elbow when moving it.",
+      "speaker": "Patient",
+      "coverage": 0.3903,
+      "nearest_so_sentence": "The pain is described as a dull ache, located at the tip of the left elbow, near the back, and is accompanied by stiffness and limited range of motion.",
+      "statement": "The patient denies noticing any clicking, locking, or popping sensations in their left elbow when moving it.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I haven't noticed any clicking, locking, or popping sensations in my left elbow when moving it. It just feels stiff and painful, especially after I've been typing all day.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0092
+      },
+      "duplicate_entailment": 0.993,
+      "duplicate_similarity": 0.5129
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 40,
+    "num_covered": 27,
+    "num_flagged": 13,
+    "num_not_checked_cap": 0,
+    "num_added": 3
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [
+      {
+        "stage": "stage2",
+        "section": "subjective",
+        "claim": "The patient presents with a 3-week history of left elbow pain.",
+        "decision": "uncertain",
+        "scores": {
+          "entailment": 0.7843,
+          "neutral": 0.1868,
+          "contradiction": 0.0289
+        },
+        "reason": "Partially supported; kept and flagged for review (neutral is not proof of falsehood)."
+      }
+    ],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "That's it.",
+        "statement": "The patient reports no prior injuries or conditions affecting the elbow, and denies any family history of joint or musculoskeletal disorders.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9915,
+          "contradiction": 0.5838
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "My vital signs were checked in the office, and everything looked good.",
+        "statement": "The patient reports that their vital signs were checked in the office and were found to be normal.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9992,
+          "contradiction": 0.4198
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I don't think I've had any recent trauma, just repetitive motion.",
+        "statement": "The patient reports experiencing pain in the left elbow due to repetitive motion, with no recent trauma.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9988,
+          "contradiction": 0.7038
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 84.3,
+  "ap_unchanged": true,
+  "conversation": "Patient: Hi, I'm 26 years old, and I'm female. I'm here because my left elbow has been really bothering me. It's been stiff and painful, especially after work, and I've noticed some swelling at the tip of my elbow.\nDoctor: Can you describe the nature of the pain in your left elbow? Is it a sharp, dull, burning, or throbbing sensation? Have you experienced any recent trauma or overuse activities that might have contributed to the pain? Additionally, have you noticed any numbness, tingling, or weakness in your hand or forearm?\nPatient: The pain is more of a dull ache, and it's been bothering me a lot after I type all day at work. I don't think I've had any recent trauma, just repetitive motion. I haven't had any numbness or tingling, but there's a little bit of weakness in my arm, though nothing too bad.\nDoctor: Could you clarify the exact location of the pain and swelling in your elbow, and whether there is any limitation in your range of motion?\nPatient: The pain and swelling are right at the tip of my left elbow, near the back. It's really stiff, and it hurts when I try to straighten or bend my elbow. It makes typing difficult, but I can still write with my non-dominant hand, which is good.\nDoctor: Could you please provide information about any prior injuries or conditions affecting your elbow, as well as any family history of joint or musculoskeletal disorders? Additionally, are you currently taking any medications or supplements?\nPatient: I don't have any prior injuries to my elbow, and I don't think there's a family history of joint issues. I'm currently taking Keppra for my epilepsy and Protonix for my peptic ulcer disease. That's it.\nDoctor: Could you please describe the duration of your elbow pain and swelling? For example, how long have you been experiencing these symptoms, and have they been gradually worsening or sudden in onset?\nPatient: The pain and swelling in my elbow have been going on for a few weeks now. It started gradually, and it's gotten worse over time, especially after I type all day. It's been pretty consistent, and the stiffness and pain are getting more noticeable each day.\nDoctor: Have you undergone any imaging studies such as X-rays, MRI, or ultrasound of the left elbow? If so, please provide the results. If not, would you be willing to undergo imaging to further evaluate the elbow?\nPatient: I haven't had any imaging studies done for my elbow yet. I'm willing to undergo imaging if it would help figure out what's going on.\nDoctor: Could you please provide your vital signs and let me know if you've had any blood tests done recently?\nPatient: My vital signs were checked in the office, and everything looked good. I haven't had any blood tests done recently, just the endoscopy for my ulcer.\nDoctor: Could you please provide the results of any previous blood tests, such as inflammatory markers (e.g., ESR, CRP) or rheumatologic panels, that may have been done for your elbow or other conditions?\nPatient: I don't have any results from previous blood tests for inflammatory markers or rheumatologic panels. I was told during my endoscopy that I had gastritis, but that was for my ulcer, not for my elbow. I haven't had any blood tests specifically for my elbow.\nDoctor: Have you noticed any specific activities or movements that make the pain worse, or any that provide relief?\nPatient: The pain gets worse when I type all day, especially when I'm using my left elbow on the desk. It also hurts when I try to straighten or bend my elbow. The only thing that seems to help a little is resting my elbow and applying ice.\nDoctor: Have you had any imaging studies, such as X-rays or an MRI, of your left elbow evaluated by a healthcare provider? Also, have you had any blood tests for inflammatory markers such as ESR or CRP, or for rheumatologic conditions such as rheumatoid factor or anti-CCP antibodies?\nPatient: No, I haven't had any imaging studies of my left elbow evaluated by a healthcare provider. I also haven't had any blood tests for inflammatory markers or rheumatologic conditions. The only test I had was an endoscopy for my ulcer, which showed gastritis.\nDoctor: Have you experienced any morning stiffness in the elbow, and if so, how long does it last?\nPatient: No, I haven't experienced any morning stiffness in my elbow. The stiffness and pain are more related to using my elbow throughout the day at work. It doesn't really bother me in the morning.\nDoctor: Have you experienced any clicking, locking, or popping sensations in your left elbow during movement?\nPatient: No, I haven't noticed any clicking, locking, or popping in my left elbow when I move it. It just feels stiff and painful, especially after I've been typing all day.\nDoctor: Have you experienced any redness, warmth, or fever associated with the left elbow pain and swelling?\nPatient: Yes, there is some redness and warmth around my left elbow, and I've been experiencing pain and swelling, but I haven't had a fever. It feels warm to the touch, and the area looks a little red.\nDoctor: Have you noticed any clicking, locking, or popping sensations in your left elbow when moving it?\nPatient: No, I haven't noticed any clicking, locking, or popping sensations in my left elbow when moving it. It just feels stiff and painful, especially after I've been typing all day.\nDoctor: Have you had any recent blood tests or imaging studies for your left elbow, such as an X-ray, MRI, or blood tests for inflammation markers (e.g., ESR, CRP) or autoimmune conditions (e.g., rheumatoid factor)?\nPatient: No, I haven't had any blood tests or imaging studies for my left elbow. The only test I had was an endoscopy for my ulcer, which showed gastritis. I didn't know I needed anything else for my elbow.",
+  "reference_so": {
+    "subjective": "Basic information: 26-year-old female presenting with left elbow pain and swelling\n\nHistory of present illness: Left elbow pain and swelling for a few weeks, starting gradually and worsening over time, especially after repetitive typing. The pain is characterized as a dull ache, exacerbated by repetitive motion, with associated swelling at the tip of the elbow and mild arm weakness. The pain and swelling are located at the tip of the left elbow, near the back. It is really stiff, and it hurts when trying to straighten or bend the elbow. It makes typing difficult, but the patient can still write with her non-dominant hand. No recent trauma, no numbness or tingling. The patient notes that the pain worsens with repetitive typing and when straightening or bending the elbow. Rest and ice provide some relief. The patient also mentions that the pain gets worse when typing all day, especially when using the left elbow on the desk. It also hurts when trying to straighten or bend the elbow. The stiffness and pain are more related to using the elbow throughout the day at work. No morning stiffness. No clicking, locking, or popping in the elbow. There is redness and warmth around the left elbow, but no fever.\n\nPast history: No prior injuries to the elbow. No family history of joint issues. Current medications: Keppra for epilepsy and Protonix for peptic ulcer disease.",
+    "objective": "Physical examination: Vital signs: Normal. System examination: Left elbow tenderness at the posterior aspect, limited range of motion, mild swelling, redness, and warmth. No neurological deficits noted.\n\nInvestigations: Imaging: [Not provided]. Laboratory: [Not provided]."
+  }
+}

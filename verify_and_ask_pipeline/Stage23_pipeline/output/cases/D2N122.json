@@ -1,0 +1,471 @@
+{
+  "case_id": "D2N122",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient is a 38-year-old male who presented with a lung nodule identified on a chest x-ray performed for a cough diagnosed as bronchitis.\n* The nodule is described as a solitary, smooth, and approximately 2-centimeter lesion in the lateral aspect of the right upper lobe.\n* Patient stopped smoking 7 years ago and has no known risk factors for lung cancer.\n* Patient's mother had breast cancer, but no other family members have had lung cancer.\n* Patient is anxious and concerned about the nodule, hoping it is benign.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient is a 38-year-old male who presented with a lung nodule identified on a chest x-ray performed for a cough diagnosed as bronchitis.\n* The nodule is described as a solitary, smooth, and approximately 2-centimeter lesion in the lateral aspect of the right upper lobe.\n* Patient stopped smoking 7 years ago and has no known risk factors for lung cancer.\n* Patient's mother had breast cancer, but no other family members have had lung cancer.\n* Patient is anxious and concerned about the nodule, hoping it is benign.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* Patient is a 38-year-old male who presented with a lung nodule identified on a chest x-ray performed for a cough diagnosed as bronchitis.\n* The nodule is described as a solitary, smooth, and approximately 2-centimeter lesion in the lateral aspect of the right upper lobe.\n* The patient expresses anxiety about the lung nodule and expresses trust in the doctor's ability to help with its evaluation.\n* Patient stopped smoking 7 years ago and has no known risk factors for lung cancer.\n* Patient's mother had breast cancer, but no other family members have had lung cancer.\n* Patient is anxious and concerned about the nodule, hoping it is benign.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has a solitary lung nodule in the lateral aspect of the right upper lobe, approximately 2 centimeters in size, described as smooth on a chest x-ray and CT scan.",
+    "plan": "* Further evaluation and imaging studies may be necessary to better characterize the nodule and determine the next steps in the patient's care."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient is a 38-year-old male who presented with a lung nodule identified on a chest x-ray performed for a cough diagnosed as bronchitis.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0002,
+        "contradiction": 0.0617
+      },
+      "support_evidence": "Patient: I'm 38 years old and male. I came in because I found out I have a lung nodule after having a chest x-ray for a cough that was diagnosed as bronchitis. It's been really nerve-wracking, to be honest.",
+      "contradiction_evidence": "Patient: Yes, I went for a CT scan that confirmed the nodule, and they referred me here to you. I'm still really nervous about it, but I trust you'll help me figure it out.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient is a 38-year-old male who presented with a lung nodule identified on a chest x-ray performed for a cough diagnosed as bronchitis.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 38-year-old male who presented with a lung nodule identified on a chest x-ray performed for a cough diagnosed as bronchitis.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The nodule is described as a solitary, smooth, and approximately 2-centimeter lesion in the lateral aspect of the right upper lobe.",
+      "scores": {
+        "entailment": 0.9985,
+        "neutral": 0.0008,
+        "contradiction": 0.0021
+      },
+      "support_evidence": "Patient: The CT scan showed a solitary two-centimeter nodule in the lateral aspect of the right upper lobe. It was described as smooth, and there was no mention of any emphysematous disease, lymphadenopathy, or pleural effusion. I was told it looked pretty straightforward, but I’m still really worried about what it could mean.",
+      "contradiction_evidence": "Patient: I was told it's a solitary nodule, about two centimeters in size, located in the lateral aspect of the right upper lobe. They said it looks smooth, but I don't know much more about it other than what the doctor explained.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The nodule is described as a solitary, smooth, and approximately 2-centimeter lesion in the lateral aspect of the right upper lobe.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The nodule is described as a solitary, smooth, and approximately 2-centimeter lesion in the lateral aspect of the right upper lobe.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The patient stopped smoking 7 years ago.",
+      "scores": {
+        "entailment": 0.9966,
+        "neutral": 0.0024,
+        "contradiction": 0.0012
+      },
+      "support_evidence": "Patient: I stopped smoking about seven years ago, and I was a smoker before that, but I haven't had any recent exposure to anything else. My mom had breast cancer, but no one else in my family that I know of has had lung cancer.",
+      "contradiction_evidence": "Patient: I stopped smoking about seven years ago, and I was a smoker before that, but I haven't had any recent exposure to anything else. My mom had breast cancer, but no one else in my family that I know of has had lung cancer.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient stopped smoking 7 years ago.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Patient stopped smoking 7 years ago and has no known risk factors for lung cancer."
+    },
+    {
+      "claim": "The patient has no known risk factors for lung cancer.",
+      "scores": {
+        "entailment": 0.8898,
+        "neutral": 0.1026,
+        "contradiction": 0.0185
+      },
+      "support_evidence": "Doctor: Could you clarify if the chest x-ray was performed recently, and whether there are any known risk factors for lung cancer, such as a history of smoking, occupational exposures, or family history of lung cancer?",
+      "contradiction_evidence": "Patient: I stopped smoking about seven years ago, and I was a smoker before that, but I haven't had any recent exposure to anything else. My mom had breast cancer, but no one else in my family that I know of has had lung cancer.",
+      "corrected_text": null,
+      "flagged": true,
+      "decision": "uncertain",
+      "keep": true,
+      "output": "The patient has no known risk factors for lung cancer.",
+      "reason": "Partially supported; kept and flagged for review (neutral is not proof of falsehood).",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Patient stopped smoking 7 years ago and has no known risk factors for lung cancer."
+    },
+    {
+      "claim": "Patient's mother had breast cancer, but no other family members have had lung cancer.",
+      "scores": {
+        "entailment": 0.9978,
+        "neutral": 0.0012,
+        "contradiction": 0.0009
+      },
+      "support_evidence": "Patient: I stopped smoking about seven years ago, and I was a smoker before that, but I haven't had any recent exposure to anything else. My mom had breast cancer, but no one else in my family that I know of has had lung cancer.",
+      "contradiction_evidence": "Patient: I stopped smoking about seven years ago, and I was a smoker before that, but I haven't had any recent exposure to anything else. My mom had breast cancer, but no one else in my family that I know of has had lung cancer.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient's mother had breast cancer, but no other family members have had lung cancer.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Patient's mother had breast cancer, but no other family members have had lung cancer.",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient is anxious and concerned about the nodule, hoping it is benign.",
+      "scores": {
+        "entailment": 0.9989,
+        "neutral": 0.0009,
+        "contradiction": 0.0006
+      },
+      "support_evidence": "Patient: I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence. They just said it was smooth and didn't have any signs of emphysematous disease. I'm really hoping it's something benign, but I'm still pretty scared.",
+      "contradiction_evidence": "Patient: I was told it's a solitary nodule, about two centimeters in size, located in the lateral aspect of the right upper lobe. They said it looks smooth, but I don't know much more about it other than what the doctor explained.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient is anxious and concerned about the nodule, hoping it is benign.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Patient is anxious and concerned about the nodule, hoping it is benign.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 5,
+      "uncertain": 1,
+      "exempt": 1
+    },
+    "num_claims": 6,
+    "num_kept": 6,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient expresses anxiety about the lung nodule and expresses trust in the doctor's ability to help with its evaluation.",
+      "evidence": "Patient: Yes, I went for a CT scan that confirmed the nodule, and they referred me here to you. I'm still really nervous about it, but I trust you'll help me figure it out.",
+      "section": "subjective",
+      "candidate": "I'm still really nervous about it, but I trust you'll help me figure it out."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I'm 38 years old and male.",
+      "speaker": "Patient",
+      "coverage": 0.0977,
+      "nearest_so_sentence": "Patient is a 38-year-old male who presented with a lung nodule identified on a chest x-ray performed for a cough diagnosed as bronchitis.",
+      "statement": "The patient is 38 years old and male.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 38 years old and male. I came in because I found out I have a lung nodule after having a chest x-ray for a cough that was diagnosed as bronchitis. It's been really nerve-wracking, to be honest.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.0009
+      },
+      "duplicate_entailment": 0.9995,
+      "duplicate_similarity": 0.4379
+    },
+    {
+      "candidate": "It's been really nerve-wracking, to be honest.",
+      "speaker": "Patient",
+      "coverage": 0.1458,
+      "nearest_so_sentence": "Patient is anxious and concerned about the nodule, hoping it is benign.",
+      "statement": "The patient reports experiencing feelings of nervousness and anxiety.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Could you please provide more details about the size, location, and characteristics of the lung nodule identified on your chest x-ray?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0165
+      },
+      "duplicate_entailment": 0.999,
+      "duplicate_similarity": 0.5446
+    },
+    {
+      "candidate": "I'm still really nervous about it, but I trust you'll help me figure it out.",
+      "speaker": "Patient",
+      "coverage": 0.1626,
+      "nearest_so_sentence": "Patient is anxious and concerned about the nodule, hoping it is benign.",
+      "statement": "The patient expresses anxiety about the lung nodule and expresses trust in the doctor's ability to help with its evaluation.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: Yes, I went for a CT scan that confirmed the nodule, and they referred me here to you. I'm still really nervous about it, but I trust you'll help me figure it out.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0126
+      },
+      "duplicate_entailment": 0.0212,
+      "duplicate_similarity": 0.6717,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 2,
+        "perplexity": 19.08,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I was told it looked pretty straightforward, but I’m still really worried about what it could mean.",
+      "speaker": "Patient",
+      "coverage": 0.2954,
+      "nearest_so_sentence": "Patient is anxious and concerned about the nodule, hoping it is benign.",
+      "statement": "The patient reports being informed that the CT scan findings appear straightforward, but expresses ongoing concern about the potential implications.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: Yes, I went for a CT scan that confirmed the nodule, and they referred me here to you. I'm still really nervous about it, but I trust you'll help me figure it out.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0024
+      },
+      "duplicate_entailment": 0.8692,
+      "duplicate_similarity": 0.5074
+    },
+    {
+      "candidate": "I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence.",
+      "speaker": "Patient",
+      "coverage": 0.3347,
+      "nearest_so_sentence": "The nodule is described as a solitary, smooth, and approximately 2-centimeter lesion in the lateral aspect of the right upper lobe.",
+      "statement": "The patient reports that the CT scan report did not mention the density or specific features such as spiculation or vascular convergence.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Could you provide details about the nodule's density on the CT scan, such as whether it is solid, ground-glass, or mixed, and whether there are any features such as spiculation, vascular convergence, or pleural retraction that might suggest malignancy?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.1515
+      },
+      "duplicate_entailment": 0.8449,
+      "duplicate_similarity": 0.4135
+    },
+    {
+      "candidate": "I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence.",
+      "speaker": "Patient",
+      "coverage": 0.3347,
+      "nearest_so_sentence": "The nodule is described as a solitary, smooth, and approximately 2-centimeter lesion in the lateral aspect of the right upper lobe.",
+      "statement": "The patient reports that the CT scan report did not mention the density or specific features such as spiculation or vascular convergence.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Could you provide details about the nodule's density on the CT scan, such as whether it is solid, ground-glass, or mixed, and whether there are any features such as spiculation, vascular convergence, or pleural retraction that might suggest malignancy?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.1515
+      },
+      "duplicate_entailment": 0.8449,
+      "duplicate_similarity": 0.4135
+    },
+    {
+      "candidate": "I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence.",
+      "speaker": "Patient",
+      "coverage": 0.3347,
+      "nearest_so_sentence": "The nodule is described as a solitary, smooth, and approximately 2-centimeter lesion in the lateral aspect of the right upper lobe.",
+      "statement": "The patient reports that the CT scan did not mention the density or specific features of the nodule, such as spiculation or vascular convergence.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Doctor: Could you provide details about the nodule's density on the CT scan, such as whether it is solid, ground-glass, or mixed, and whether there are any features such as spiculation, vascular convergence, or pleural retraction that might suggest malignancy?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.4743
+      }
+    },
+    {
+      "candidate": "I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence.",
+      "speaker": "Patient",
+      "coverage": 0.3347,
+      "nearest_so_sentence": "The nodule is described as a solitary, smooth, and approximately 2-centimeter lesion in the lateral aspect of the right upper lobe.",
+      "statement": "The patient reports that the CT scan report did not mention the density of the nodule or features such as spiculation, vascular convergence, or pleural retraction.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Could you provide details about the nodule's density on the CT scan, such as whether it is solid, ground-glass, or mixed, and whether there are any features such as spiculation, vascular convergence, or pleural retraction that might suggest malignancy?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0397
+      },
+      "duplicate_entailment": 0.7801,
+      "duplicate_similarity": 0.4986
+    },
+    {
+      "candidate": "I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence.",
+      "speaker": "Patient",
+      "coverage": 0.3347,
+      "nearest_so_sentence": "The nodule is described as a solitary, smooth, and approximately 2-centimeter lesion in the lateral aspect of the right upper lobe.",
+      "statement": "The patient reports that the CT scan did not mention the density or specific features such as spiculation or vascular convergence.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Could you provide details about the nodule's density on the CT scan, such as whether it is solid, ground-glass, or mixed, and whether there are any features such as spiculation, vascular convergence, or pleural retraction that might suggest malignancy?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.2685
+      },
+      "duplicate_entailment": 0.9022,
+      "duplicate_similarity": 0.4001
+    },
+    {
+      "candidate": "I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence.",
+      "speaker": "Patient",
+      "coverage": 0.3347,
+      "nearest_so_sentence": "The nodule is described as a solitary, smooth, and approximately 2-centimeter lesion in the lateral aspect of the right upper lobe.",
+      "statement": "The patient reports that the CT scan report did not mention the density or specific features of the nodule, such as spiculation or vascular convergence.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Could you provide details about the nodule's density on the CT scan, such as whether it is solid, ground-glass, or mixed, and whether there are any features such as spiculation, vascular convergence, or pleural retraction that might suggest malignancy?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.2486
+      },
+      "duplicate_entailment": 0.9362,
+      "duplicate_similarity": 0.5662
+    },
+    {
+      "candidate": "I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence.",
+      "speaker": "Patient",
+      "coverage": 0.3347,
+      "nearest_so_sentence": "The nodule is described as a solitary, smooth, and approximately 2-centimeter lesion in the lateral aspect of the right upper lobe.",
+      "statement": "The patient reports that the CT scan report did not mention the density or specific features such as spiculation or vascular convergence.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Could you provide details about the nodule's density on the CT scan, such as whether it is solid, ground-glass, or mixed, and whether there are any features such as spiculation, vascular convergence, or pleural retraction that might suggest malignancy?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.1515
+      },
+      "duplicate_entailment": 0.8449,
+      "duplicate_similarity": 0.4135
+    },
+    {
+      "candidate": "I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence.",
+      "speaker": "Patient",
+      "coverage": 0.3347,
+      "nearest_so_sentence": "The nodule is described as a solitary, smooth, and approximately 2-centimeter lesion in the lateral aspect of the right upper lobe.",
+      "statement": "The patient reports that the CT scan report did not mention the density of the nodule or any features such as spiculation, vascular convergence, or pleural retraction.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Could you provide details about the nodule's density on the CT scan, such as whether it is solid, ground-glass, or mixed, and whether there are any features such as spiculation, vascular convergence, or pleural retraction that might suggest malignancy?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0602
+      },
+      "duplicate_entailment": 0.7861,
+      "duplicate_similarity": 0.5266
+    },
+    {
+      "candidate": "I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence.",
+      "speaker": "Patient",
+      "coverage": 0.3347,
+      "nearest_so_sentence": "The nodule is described as a solitary, smooth, and approximately 2-centimeter lesion in the lateral aspect of the right upper lobe.",
+      "statement": "The patient reports that the CT scan report did not mention the density of the nodule or any features such as spiculation, vascular convergence, or pleural retraction.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Could you provide details about the nodule's density on the CT scan, such as whether it is solid, ground-glass, or mixed, and whether there are any features such as spiculation, vascular convergence, or pleural retraction that might suggest malignancy?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0602
+      },
+      "duplicate_entailment": 0.7861,
+      "duplicate_similarity": 0.5266
+    },
+    {
+      "candidate": "I don't think they mentioned anything about calcification or other findings like lymphadenopathy or pleural effusion.",
+      "speaker": "Patient",
+      "coverage": 0.364,
+      "nearest_so_sentence": "Patient is a 38-year-old male who presented with a lung nodule identified on a chest x-ray performed for a cough diagnosed as bronchitis.",
+      "statement": "The patient reports that the chest x-ray did not mention calcification or other findings such as lymphadenopathy or pleural effusion.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Doctor: Could you clarify if the chest x-ray mentioned any calcification within the nodule or any associated findings such as lymphadenopathy or pleural effusion?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.0163
+      },
+      "duplicate_entailment": 0.7986,
+      "duplicate_similarity": 0.5208
+    },
+    {
+      "candidate": "It was described as smooth, and there was no mention of any emphysematous disease, lymphadenopathy, or pleural effusion.",
+      "speaker": "Patient",
+      "coverage": 0.3878,
+      "nearest_so_sentence": "The nodule is described as a solitary, smooth, and approximately 2-centimeter lesion in the lateral aspect of the right upper lobe.",
+      "statement": "The CT scan findings described the nodule as smooth, with no mention of emphysematous disease, lymphadenopathy, or pleural effusion.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The CT scan showed a solitary two-centimeter nodule in the lateral aspect of the right upper lobe. It was described as smooth, and there was no mention of any emphysematous disease, lymphadenopathy, or pleural effusion. I was told it looked pretty straightforward, but I’m still really worried about what it could mean.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9988,
+        "contradiction": 0.0179
+      },
+      "duplicate_entailment": 0.9288,
+      "duplicate_similarity": 0.6656
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 41,
+    "num_covered": 26,
+    "num_flagged": 15,
+    "num_not_checked_cap": 0,
+    "num_added": 1
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [
+      {
+        "stage": "stage2",
+        "section": "subjective",
+        "claim": "The patient has no known risk factors for lung cancer.",
+        "decision": "uncertain",
+        "scores": {
+          "entailment": 0.8898,
+          "neutral": 0.1026,
+          "contradiction": 0.0185
+        },
+        "reason": "Partially supported; kept and flagged for review (neutral is not proof of falsehood)."
+      }
+    ],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence.",
+        "statement": "The patient reports that the CT scan did not mention the density or specific features of the nodule, such as spiculation or vascular convergence.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.4743
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 99.7,
+  "ap_unchanged": true,
+  "conversation": "Patient: I'm 38 years old and male. I came in because I found out I have a lung nodule after having a chest x-ray for a cough that was diagnosed as bronchitis. It's been really nerve-wracking, to be honest.\nDoctor: Could you please provide more details about the size, location, and characteristics of the lung nodule identified on your chest x-ray?\nPatient: I was told it's a solitary nodule, about two centimeters in size, located in the lateral aspect of the right upper lobe. They said it looks smooth, but I don't know much more about it other than what the doctor explained.\nDoctor: Could you clarify if the chest x-ray was performed recently, and whether there are any known risk factors for lung cancer, such as a history of smoking, occupational exposures, or family history of lung cancer?\nPatient: I stopped smoking about seven years ago, and I was a smoker before that, but I haven't had any recent exposure to anything else. My mom had breast cancer, but no one else in my family that I know of has had lung cancer.\nDoctor: Could you clarify if the chest x-ray mentioned any calcification within the nodule or any associated findings such as lymphadenopathy or pleural effusion?\nPatient: I don't think they mentioned anything about calcification or other findings like lymphadenopathy or pleural effusion. They just said it was a smooth, solitary nodule in the right upper lobe.\nDoctor: Have you undergone any further imaging studies, such as a CT scan of the chest, to better characterize the lung nodule?\nPatient: Yes, I went for a CT scan that confirmed the nodule, and they referred me here to you. I'm still really nervous about it, but I trust you'll help me figure it out.\nDoctor: Could you provide details about the CT scan findings, such as the nodule's size, margins, density, and whether there are any associated findings like lymphadenopathy or pleural effusion?\nPatient: The CT scan showed a solitary two-centimeter nodule in the lateral aspect of the right upper lobe. It was described as smooth, and there was no mention of any emphysematous disease, lymphadenopathy, or pleural effusion. I was told it looked pretty straightforward, but I’m still really worried about what it could mean.\nDoctor: Could you provide details about the nodule's density on the CT scan, such as whether it is solid, ground-glass, or mixed, and whether there are any features such as spiculation, vascular convergence, or pleural retraction that might suggest malignancy?\nPatient: I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence. They just said it was smooth and didn't have any signs of emphysematous disease. I'm really hoping it's something benign, but I'm still pretty scared.\nDoctor: Thank you for sharing your concerns. I understand that this can be very worrying. Could you confirm if the CT scan report mentioned anything about the nodule's density (whether it was solid, ground-glass, or mixed) or any features like spiculation, vascular convergence, or pleural retraction? This information is important for further evaluation.\nPatient: I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence. They just said it was smooth and didn't have any signs of emphysematous disease. I'm really hoping it's something benign, but I'm still pretty scared.\nDoctor: Thank you for sharing that. It's understandable to feel concerned. To better assess the nodule, could you confirm if the CT scan mentioned anything about the nodule's density (such as solid, ground-glass, or mixed) or features like spiculation, vascular convergence, or pleural retraction? If not, we may need to discuss further imaging or tests to better characterize the nodule.\nPatient: I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence. They just said it was smooth and didn't have any signs of emphysematous disease. I'm really hoping it's something benign, but I'm still pretty scared.\nDoctor: Could you clarify the nodule's density (solid, ground-glass, or mixed) and whether it exhibits features such as spiculation, vascular convergence, or pleural retraction on the CT scan?\nPatient: I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence. They just said it was smooth and didn't have any signs of emphysematous disease. I'm really hoping it's something benign, but I'm still pretty scared.\nDoctor: Could you clarify the nodule's density (solid, ground-glass, or mixed) and whether it exhibits features such as spiculation, vascular convergence, or pleural retraction from the CT scan?\nPatient: I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence. They just said it was smooth and didn't have any signs of emphysematous disease. I'm really hoping it's something benign, but I'm still pretty scared.\nDoctor: Thank you for sharing that. It's understandable to feel concerned. Could you confirm if the CT scan report mentioned anything about the nodule's density, such as whether it was solid, ground-glass, or mixed? This information will help guide further evaluation.\nPatient: I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence. They just said it was smooth and didn't have any signs of emphysematous disease. I'm really hoping it's something benign, but I'm still pretty scared.\nDoctor: Thank you for sharing that. I understand your concern, and it's completely normal to feel anxious about a lung nodule. To help us better understand the situation, could you let me know if there were any other details mentioned in the CT scan report, such as the nodule's density (whether it was solid, ground-glass, or mixed) or any other features that might have been noted?\nPatient: I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence. They just said it was smooth and didn't have any signs of emphysematous disease. I'm really hoping it's something benign, but I'm still pretty scared.\nDoctor: Thank you for sharing your concerns. I understand that this can be very worrying. Could you confirm if the CT scan report mentioned anything about the nodule's density (whether it was solid, ground-glass, or mixed) or if there were any features such as spiculation, vascular convergence, or pleural retraction? This information will help guide the next steps in your care.\nPatient: I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence. They just said it was smooth and didn't have any signs of emphysematous disease. I'm really hoping it's something benign, but I'm still pretty scared.\nDoctor: Thank you for sharing your concerns. I understand that this can be very worrying. Could you confirm if the CT scan report mentioned anything about the nodule's density, such as whether it was solid, ground-glass, or mixed? Also, were there any features like spiculation, vascular convergence, or pleural retraction noted?\nPatient: I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence. They just said it was smooth and didn't have any signs of emphysematous disease. I'm really hoping it's something benign, but I'm still pretty scared.",
+  "reference_so": {
+    "subjective": "Basic information: 38-year-old male presenting with a lung nodule discovered on chest x-ray following a diagnosis of bronchitis\n\nHistory of present illness: Onset of cough leading to bronchitis diagnosis, subsequent chest x-ray revealed a lung nodule, causing significant anxiety\n\nPast history: Smoker (quit 7 years ago), family history of breast cancer (mother).",
+    "objective": "Physical examination: No specific findings reported.\n\nInvestigations: Chest x-ray showed a solitary lung nodule, approximately 2 cm in size, located in the lateral aspect of the right upper lobe, with smooth margins. No calcification or associated findings such as lymphadenopathy or pleural effusion mentioned. CT scan confirmed the nodule, which was described as smooth, solitary, and 2 cm in size, located in the lateral aspect of the right upper lobe. No emphysematous disease, lymphadenopathy, or pleural effusion was noted. Details regarding density (solid, ground-glass, or mixed) and features suggestive of malignancy (e.g., spiculation, vascular convergence, pleural retraction) are pending."
+  }
+}

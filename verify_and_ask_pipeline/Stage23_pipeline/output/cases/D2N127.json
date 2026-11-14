@@ -1,0 +1,518 @@
+{
+  "case_id": "D2N127",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* The patient is a 34-year-old male who was in a car crash recently and has been experiencing neck pain, rated as a 12 out of 10.\n* He reports numbness in his left arm and right leg, which has been getting worse.\n* He has a history of previous car crashes and had neck surgery in the past, but does not remember the details.\n* He has not experienced any changes in bowel or bladder function.\n* He has occasional dizziness and sharp pain in his neck that makes it hard to move.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* The patient is a 34-year-old male who was in a car crash recently and has been experiencing neck pain, rated as a 12 out of 10.\n* He reports numbness in his left arm and right leg, which has been getting worse.\n* He has a history of previous car crashes and had neck surgery in the past, but does not remember the details.\n* He has not experienced any changes in bowel or bladder function.\n* He has occasional dizziness and sharp pain in his neck that makes it hard to move.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* The patient reports that their lawyer instructed them to seek medical attention and they are seeking an MRI, which was mentioned as a necessary diagnostic tool.\n* The patient is a 34-year-old male who was in a car crash recently and has been experiencing neck pain, rated as a 12 out of 10.\n* He reports numbness in his left arm and right leg, which has been getting worse.\n* He has a history of previous car crashes and had neck surgery in the past, but does not remember the details.\n* The patient reports having undergone a neck surgery in the past, with the exact details unclear, but notes that the surgery was performed a while ago and was followed by a period of being fine until the recent crash in February.\n* The patient reports having been fine until the most recent episode of neck pain in February.\n* He has not experienced any changes in bowel or bladder function.\n* He has occasional dizziness and sharp pain in his neck that makes it hard to move.\n* The patient reports feeling dizzy at times after the recent car crash in February.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has a history of neck pain and numbness in his left arm and right leg, which has worsened since the recent car crash.\n* He has a history of previous neck surgery, but the details are unclear.\n* He has not experienced any changes in bowel or bladder function.",
+    "plan": "* The doctor will refer the patient for an MRI to evaluate the extent of the neck injury.\n* The patient will be advised to follow up with the doctor after the MRI results are available."
+  },
+  "stage2_audit": [
+    {
+      "claim": "The patient is a 34-year-old male who was in a car crash recently and has been experiencing neck pain, rated as a 12 out of 10.",
+      "scores": {
+        "entailment": 0.9967,
+        "neutral": 0.0011,
+        "contradiction": 0.0139
+      },
+      "support_evidence": "Patient: I'm 34, and I'm a male. I was in a car crash recently, and my neck has been hurting a lot since then. It's really bad, like a twelve out of ten. I can't work because of the pain, and I've been having some numbness in my left arm and right leg too.",
+      "contradiction_evidence": "Patient: I had surgery on my neck after one of the crashes, but I don't remember the exact type or when it was done. I just know it was a while ago, and I was fine until this latest crash in February. I'm not sure about any complications because I don't have the details anymore.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient is a 34-year-old male who was in a car crash recently and has been experiencing neck pain, rated as a 12 out of 10.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 34-year-old male who was in a car crash recently and has been experiencing neck pain, rated as a 12 out of 10.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He reports numbness in his left arm and right leg, which has been getting worse.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0002,
+        "contradiction": 0.9315
+      },
+      "support_evidence": "Patient: The numbness in my left arm and right leg comes and goes, but it's been getting worse. I don't have any weakness or tingling, but I do have sharp pain in my neck that makes it hard to move. I haven't noticed any changes in my bowel or bladder function.",
+      "contradiction_evidence": "Patient: I don't remember the exact details of the crash, like if I was wearing a seatbelt or what kind of collision it was. I just know I was in a car crash recently, and my neck has been hurting ever since. I didn't lose consciousness, but I did feel dizzy sometimes after it happened.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He reports numbness in his left arm and right leg, which has been getting worse.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "He reports numbness in his left arm and right leg, which has been getting worse.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has a history of previous car crashes and had neck surgery in the past, but does not remember the details.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0003,
+        "contradiction": 0.7415
+      },
+      "support_evidence": "Patient: I had surgery on my neck after one of the crashes, but I don't remember the exact type or when it was done. I just know it was a while ago, and I was fine until this latest crash in February. I'm not sure about any complications because I don't have the details anymore.",
+      "contradiction_evidence": "Patient: I had some previous car crashes too, actually. I was in therapy for a few months after one of them, and I even had surgery on my neck after another crash. But I was fine until this most recent one in February. My lawyer told me to come here, and I'm hoping we can get an MRI like they said I needed.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has a history of previous car crashes and had neck surgery in the past, but does not remember the details.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "He has a history of previous car crashes and had neck surgery in the past, but does not remember the details.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has not experienced any changes in bowel or bladder function.",
+      "scores": {
+        "entailment": 0.9968,
+        "neutral": 0.001,
+        "contradiction": 0.8703
+      },
+      "support_evidence": "Patient: The numbness in my left arm and right leg comes and goes, but it's been getting worse. I don't have any weakness or tingling, but I do have sharp pain in my neck that makes it hard to move. I haven't noticed any changes in my bowel or bladder function.",
+      "contradiction_evidence": "Doctor: Could you clarify if you have experienced any changes in bowel or bladder function since the recent car crash, and have you noticed any worsening of the numbness or development of new neurological symptoms?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has not experienced any changes in bowel or bladder function.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "He has not experienced any changes in bowel or bladder function.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has occasional dizziness and sharp pain in his neck that makes it hard to move.",
+      "scores": {
+        "entailment": 0.9938,
+        "neutral": 0.0051,
+        "contradiction": 0.0123
+      },
+      "support_evidence": "Patient: The numbness in my left arm and right leg comes and goes, but it's been getting worse. I don't have any weakness or tingling, but I do have sharp pain in my neck that makes it hard to move. I haven't noticed any changes in my bowel or bladder function.",
+      "contradiction_evidence": "Patient: The numbness in my left arm and right leg comes and goes, but it's been getting worse. I don't have any weakness or tingling, but I do have sharp pain in my neck that makes it hard to move. I haven't noticed any changes in my bowel or bladder function.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has occasional dizziness and sharp pain in his neck that makes it hard to move.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "He has occasional dizziness and sharp pain in his neck that makes it hard to move.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 5,
+      "exempt": 1
+    },
+    "num_claims": 5,
+    "num_kept": 5,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient reports having been fine until the most recent episode of neck pain in February.",
+      "evidence": "Patient: I had surgery on my neck after one of the crashes, but I don't remember the exact type or when it was done. I just know it was a while ago, and I was fine until this latest crash in February. I'm not sure about any complications because I don't have the details anymore.",
+      "section": "subjective",
+      "candidate": "But I was fine until this most recent one in February."
+    },
+    {
+      "statement": "The patient reports having undergone a neck surgery in the past, with the exact details unclear, but notes that the surgery was performed a while ago and was followed by a period of being fine until the recent crash in February.",
+      "evidence": "Patient: I had surgery on my neck after one of the crashes, but I don't remember the exact type or when it was done. I just know it was a while ago, and I was fine until this latest crash in February. I'm not sure about any complications because I don't have the details anymore.",
+      "section": "subjective",
+      "candidate": "I just know it was a while ago, and I was fine until this latest crash in February."
+    },
+    {
+      "statement": "The patient reports feeling dizzy at times after the recent car crash in February.",
+      "evidence": "Patient: I had surgery on my neck after one of the crashes, but I don't remember the exact type or when it was done. I just know it was a while ago, and I was fine until this latest crash in February. I'm not sure about any complications because I don't have the details anymore.",
+      "section": "subjective",
+      "candidate": "I didn't lose consciousness, but I did feel dizzy sometimes after it happened."
+    },
+    {
+      "statement": "The patient reports that their lawyer instructed them to seek medical attention and they are seeking an MRI, which was mentioned as a necessary diagnostic tool.",
+      "evidence": "Patient: I had some previous car crashes too, actually. I was in therapy for a few months after one of them, and I even had surgery on my neck after another crash. But I was fine until this most recent one in February. My lawyer told me to come here, and I'm hoping we can get an MRI like they said I needed.",
+      "section": "subjective",
+      "candidate": "My lawyer told me to come here, and I'm hoping we can get an MRI like they said I needed."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I'm 34, and I'm a male.",
+      "speaker": "Patient",
+      "coverage": 0.0748,
+      "nearest_so_sentence": "The patient is a 34-year-old male who was in a car crash recently and has been experiencing neck pain, rated as a 12 out of 10.",
+      "statement": "The patient is a 34-year-old male.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 34, and I'm a male. I was in a car crash recently, and my neck has been hurting a lot since then. It's really bad, like a twelve out of ten. I can't work because of the pain, and I've been having some numbness in my left arm and right leg too.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9988,
+        "contradiction": 0.0011
+      },
+      "duplicate_entailment": 0.9994,
+      "duplicate_similarity": 0.6058
+    },
+    {
+      "candidate": "It's really bad, like a twelve out of ten.",
+      "speaker": "Patient",
+      "coverage": 0.1572,
+      "nearest_so_sentence": "The patient is a 34-year-old male who was in a car crash recently and has been experiencing neck pain, rated as a 12 out of 10.",
+      "statement": "The patient reports that their current condition is severe, rating it as a twelve out of ten.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 34, and I'm a male. I was in a car crash recently, and my neck has been hurting a lot since then. It's really bad, like a twelve out of ten. I can't work because of the pain, and I've been having some numbness in my left arm and right leg too.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.1159
+      },
+      "duplicate_entailment": 0.9991,
+      "duplicate_similarity": 0.5278
+    },
+    {
+      "candidate": "But I was fine until this most recent one in February.",
+      "speaker": "Patient",
+      "coverage": 0.1577,
+      "nearest_so_sentence": "He reports numbness in his left arm and right leg, which has been getting worse.",
+      "statement": "The patient reports having been fine until the most recent episode of neck pain in February.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I had surgery on my neck after one of the crashes, but I don't remember the exact type or when it was done. I just know it was a while ago, and I was fine until this latest crash in February. I'm not sure about any complications because I don't have the details anymore.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0068
+      },
+      "duplicate_entailment": 0.0021,
+      "duplicate_similarity": 0.6712,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 3,
+        "perplexity": 14.32,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I just know it was a while ago, and I was fine until this latest crash in February.",
+      "speaker": "Patient",
+      "coverage": 0.2384,
+      "nearest_so_sentence": "He has a history of previous car crashes and had neck surgery in the past, but does not remember the details.",
+      "statement": "The patient reports having undergone a neck surgery in the past, with the exact details unclear, but notes that the surgery was performed a while ago and was followed by a period of being fine until the recent crash in February.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I had surgery on my neck after one of the crashes, but I don't remember the exact type or when it was done. I just know it was a while ago, and I was fine until this latest crash in February. I'm not sure about any complications because I don't have the details anymore.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.211
+      },
+      "duplicate_entailment": 0.0915,
+      "duplicate_similarity": 0.6608,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 3,
+        "perplexity": 13.88,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I just know it was a while ago, and I was fine until this latest crash in February.",
+      "speaker": "Patient",
+      "coverage": 0.2384,
+      "nearest_so_sentence": "He has a history of previous car crashes and had neck surgery in the past, but does not remember the details.",
+      "statement": "The patient reports having undergone neck surgery in the past, with the exact year unclear, and notes that the surgery was uneventful until a recent crash in February.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I had surgery on my neck after one of the crashes, but I don't remember the exact type or when it was done. I just know it was a while ago, and I was fine until this latest crash in February. I'm not sure about any complications because I don't have the details anymore.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.0034
+      },
+      "duplicate_entailment": 0.4094,
+      "duplicate_similarity": 0.6584
+    },
+    {
+      "candidate": "I just know it was a while ago, and I was fine until this latest crash in February.",
+      "speaker": "Patient",
+      "coverage": 0.2384,
+      "nearest_so_sentence": "He has a history of previous car crashes and had neck surgery in the past, but does not remember the details.",
+      "statement": "The patient reports having undergone previous neck surgery, with the exact year unclear, but notes that the surgery was performed in the past and was followed by an uneventful recovery until the recent crash in February.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I had surgery on my neck after one of the crashes, but I don't remember the exact type or when it was done. I just know it was a while ago, and I was fine until this latest crash in February. I'm not sure about any complications because I don't have the details anymore.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0202
+      },
+      "duplicate_entailment": 0.2156,
+      "duplicate_similarity": 0.6699
+    },
+    {
+      "candidate": "I just know it was a while ago, and I was fine until this latest crash in February.",
+      "speaker": "Patient",
+      "coverage": 0.2384,
+      "nearest_so_sentence": "He has a history of previous car crashes and had neck surgery in the past, but does not remember the details.",
+      "statement": "The patient reports having undergone previous neck surgery, but is unable to specify the exact type or year it was performed, stating that it was a while ago and that they were fine until the latest crash in February.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I had surgery on my neck after one of the crashes, but I don't remember the exact type or when it was done. I just know it was a while ago, and I was fine until this latest crash in February. I'm not sure about any complications because I don't have the details anymore.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0052
+      },
+      "duplicate_entailment": 0.9775,
+      "duplicate_similarity": 0.6775
+    },
+    {
+      "candidate": "I just know it was a while ago, and I was fine until this latest crash in February.",
+      "speaker": "Patient",
+      "coverage": 0.2384,
+      "nearest_so_sentence": "He has a history of previous car crashes and had neck surgery in the past, but does not remember the details.",
+      "statement": "The patient reports having undergone previous neck surgery, with the exact year unclear, and notes that the surgery was uneventful until the recent crash in February.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I had surgery on my neck after one of the crashes, but I don't remember the exact type or when it was done. I just know it was a while ago, and I was fine until this latest crash in February. I'm not sure about any complications because I don't have the details anymore.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9986,
+        "contradiction": 0.004
+      },
+      "duplicate_entailment": 0.3013,
+      "duplicate_similarity": 0.6526
+    },
+    {
+      "candidate": "I didn't lose consciousness, but I did feel dizzy sometimes after it happened.",
+      "speaker": "Patient",
+      "coverage": 0.2791,
+      "nearest_so_sentence": "He has occasional dizziness and sharp pain in his neck that makes it hard to move.",
+      "statement": "The patient reports not losing consciousness, but experiencing dizziness at times following the car crash.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't remember the exact details of the crash, like if I was wearing a seatbelt or what kind of collision it was. I just know I was in a car crash recently, and my neck has been hurting ever since. I didn't lose consciousness, but I did feel dizzy sometimes after it happened.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.002
+      },
+      "duplicate_entailment": 0.9935,
+      "duplicate_similarity": 0.4694
+    },
+    {
+      "candidate": "I didn't lose consciousness, but I did feel dizzy sometimes after it happened.",
+      "speaker": "Patient",
+      "coverage": 0.2791,
+      "nearest_so_sentence": "He has occasional dizziness and sharp pain in his neck that makes it hard to move.",
+      "statement": "The patient reports feeling dizzy at times after the recent car crash in February.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I had surgery on my neck after one of the crashes, but I don't remember the exact type or when it was done. I just know it was a while ago, and I was fine until this latest crash in February. I'm not sure about any complications because I don't have the details anymore.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0015
+      },
+      "duplicate_entailment": 0.0037,
+      "duplicate_similarity": 0.5775,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 7,
+        "perplexity": 12.65,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I'm not sure about any complications because I don't have the details anymore.",
+      "speaker": "Patient",
+      "coverage": 0.2961,
+      "nearest_so_sentence": "He has a history of previous car crashes and had neck surgery in the past, but does not remember the details.",
+      "statement": "The patient reports that they do not have the details about any complications following their previous neck surgeries.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I had surgery on my neck after one of the crashes, but I don't remember the exact type or when it was done. I just know it was a while ago, and I was fine until this latest crash in February. I'm not sure about any complications because I don't have the details anymore.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.1201
+      },
+      "duplicate_entailment": 0.9808,
+      "duplicate_similarity": 0.5229
+    },
+    {
+      "candidate": "I'm not sure about any complications because I don't have the details anymore.",
+      "speaker": "Patient",
+      "coverage": 0.2961,
+      "nearest_so_sentence": "He has a history of previous car crashes and had neck surgery in the past, but does not remember the details.",
+      "statement": "The patient reports that they do not have the details about any complications following their previous neck surgery.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I had surgery on my neck after one of the crashes, but I don't remember the exact type or when it was done. I just know it was a while ago, and I was fine until this latest crash in February. I'm not sure about any complications because I don't have the details anymore.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.8739
+      }
+    },
+    {
+      "candidate": "I'm not sure about any complications because I don't have the details anymore.",
+      "speaker": "Patient",
+      "coverage": 0.2961,
+      "nearest_so_sentence": "He has a history of previous car crashes and had neck surgery in the past, but does not remember the details.",
+      "statement": "The patient reports that they do not have the details about any complications following their previous neck surgery.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I had surgery on my neck after one of the crashes, but I don't remember the exact type or when it was done. I just know it was a while ago, and I was fine until this latest crash in February. I'm not sure about any complications because I don't have the details anymore.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.8739
+      }
+    },
+    {
+      "candidate": "I'm not sure about any complications because I don't have the details anymore.",
+      "speaker": "Patient",
+      "coverage": 0.2961,
+      "nearest_so_sentence": "He has a history of previous car crashes and had neck surgery in the past, but does not remember the details.",
+      "statement": "The patient reports that they do not have the details about any complications following their previous neck surgery.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I had surgery on my neck after one of the crashes, but I don't remember the exact type or when it was done. I just know it was a while ago, and I was fine until this latest crash in February. I'm not sure about any complications because I don't have the details anymore.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.8739
+      }
+    },
+    {
+      "candidate": "I'm not sure about any complications because I don't have the details anymore.",
+      "speaker": "Patient",
+      "coverage": 0.2961,
+      "nearest_so_sentence": "He has a history of previous car crashes and had neck surgery in the past, but does not remember the details.",
+      "statement": "The patient reports that they do not have the details about any complications following their previous neck surgery.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I had surgery on my neck after one of the crashes, but I don't remember the exact type or when it was done. I just know it was a while ago, and I was fine until this latest crash in February. I'm not sure about any complications because I don't have the details anymore.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.8739
+      }
+    },
+    {
+      "candidate": "My lawyer told me to come here, and I'm hoping we can get an MRI like they said I needed.",
+      "speaker": "Patient",
+      "coverage": 0.385,
+      "nearest_so_sentence": "The patient is a 34-year-old male who was in a car crash recently and has been experiencing neck pain, rated as a 12 out of 10.",
+      "statement": "The patient reports that their lawyer instructed them to seek medical attention and they are seeking an MRI, which was mentioned as a necessary diagnostic tool.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I had some previous car crashes too, actually. I was in therapy for a few months after one of them, and I even had surgery on my neck after another crash. But I was fine until this most recent one in February. My lawyer told me to come here, and I'm hoping we can get an MRI like they said I needed.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0031
+      },
+      "duplicate_entailment": 0.002,
+      "duplicate_similarity": 0.4117,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 13.99,
+        "removed_placeholder": []
+      }
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 42,
+    "num_covered": 26,
+    "num_flagged": 16,
+    "num_not_checked_cap": 0,
+    "num_added": 4
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "I'm not sure about any complications because I don't have the details anymore.",
+        "statement": "The patient reports that they do not have the details about any complications following their previous neck surgery.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.8739
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I'm not sure about any complications because I don't have the details anymore.",
+        "statement": "The patient reports that they do not have the details about any complications following their previous neck surgery.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.8739
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I'm not sure about any complications because I don't have the details anymore.",
+        "statement": "The patient reports that they do not have the details about any complications following their previous neck surgery.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.8739
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I'm not sure about any complications because I don't have the details anymore.",
+        "statement": "The patient reports that they do not have the details about any complications following their previous neck surgery.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.8739
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 116.1,
+  "ap_unchanged": true,
+  "conversation": "Patient: I'm 34, and I'm a male. I was in a car crash recently, and my neck has been hurting a lot since then. It's really bad, like a twelve out of ten. I can't work because of the pain, and I've been having some numbness in my left arm and right leg too.\nDoctor: Can you describe the exact mechanism of the car crash, such as whether you were wearing a seatbelt, if there was a head-on collision, or if you hit your head during the crash? Also, were there any immediate symptoms following the crash, such as loss of consciousness, dizziness, or vomiting?\nPatient: I don't remember the exact details of the crash, like if I was wearing a seatbelt or what kind of collision it was. I just know I was in a car crash recently, and my neck has been hurting ever since. I didn't lose consciousness, but I did feel dizzy sometimes after it happened.\nDoctor: Could you describe the pattern and progression of the numbness in your left arm and right leg? Have you noticed any associated weakness, tingling, or changes in bowel or bladder function?\nPatient: The numbness in my left arm and right leg comes and goes, but it's been getting worse. I don't have any weakness or tingling, but I do have sharp pain in my neck that makes it hard to move. I haven't noticed any changes in my bowel or bladder function.\nDoctor: Could you please provide details about any prior injuries, surgeries, or medical conditions you may have had, even if they are not directly related to the current neck pain?\nPatient: I had some previous car crashes too, actually. I was in therapy for a few months after one of them, and I even had surgery on my neck after another crash. But I was fine until this most recent one in February. My lawyer told me to come here, and I'm hoping we can get an MRI like they said I needed.\nDoctor: Could you provide more details about the previous neck surgeries, including the type of surgery, the year it was performed, and whether there were any complications?\nPatient: I had surgery on my neck after one of the crashes, but I don't remember the exact type or when it was done. I just know it was a while ago, and I was fine until this latest crash in February. I'm not sure about any complications because I don't have the details anymore.\nDoctor: Could you please describe the mechanism of the recent car crash in February? For example, were you wearing a seatbelt, and did you experience any direct impact to your head or neck during the collision?\nPatient: I don't remember the exact details of the crash, like if I was wearing a seatbelt or what kind of collision it was. I just know I was in a car crash recently, and my neck has been hurting ever since. I didn't lose consciousness, but I did feel dizzy sometimes after it happened.\nDoctor: Could you please provide more details about the type of neck surgery you had previously, including the year it was performed and whether there were any complications following the surgery?\nPatient: I had surgery on my neck after one of the crashes, but I don't remember the exact type or when it was done. I just know it was a while ago, and I was fine until this latest crash in February. I'm not sure about any complications because I don't have the details anymore.\nDoctor: Could you clarify if you have experienced any changes in bowel or bladder function since the recent car crash, and have you noticed any worsening of the numbness or development of new neurological symptoms?\nPatient: I haven't noticed any changes in my bowel or bladder function since the crash. The numbness in my left arm and right leg has been getting worse, but I haven't had any new neurological symptoms besides the sharp pain in my neck and the occasional dizziness.\nDoctor: Could you please provide more details about the type of previous neck surgery you had, including the year it was performed and whether there were any complications following the surgery?\nPatient: I had surgery on my neck after one of the crashes, but I don't remember the exact type or when it was done. I just know it was a while ago, and I was fine until this latest crash in February. I'm not sure about any complications because I don't have the details anymore.\nDoctor: Could you please describe the exact type of previous neck surgery you had, the year it was performed, and whether you experienced any complications following the surgery?\nPatient: I had surgery on my neck after one of the crashes, but I don't remember the exact type or when it was done. I just know it was a while ago, and I was fine until this latest crash in February. I'm not sure about any complications because I don't have the details anymore.\nDoctor: Could you clarify whether you were wearing a seatbelt during the recent car crash and if there was any direct impact to your head or neck?\nPatient: I don't remember if I was wearing a seatbelt during the crash, and I don't have clear details about what kind of impact happened to my head or neck. I just know I was in a car crash and my neck has been hurting since then.\nDoctor: Could you please clarify if you have experienced any changes in sensation or motor function in your arms or legs since the recent car crash, and whether you have had any prior imaging or neurological evaluations for your previous neck surgery?\nPatient: I don't remember if I was wearing a seatbelt during the crash, and I don't have clear details about what kind of impact happened to my head or neck. I just know I was in a car crash and my neck has been hurting since then.\nDoctor: Could you please confirm whether you were wearing a seatbelt during the recent car crash, and if there was any direct impact to your head or neck during the collision?\nPatient: I don't remember if I was wearing a seatbelt during the crash, and I don't have clear details about what kind of impact happened to my head or neck. I just know I was in a car crash and my neck has been hurting since then.\nDoctor: Could you please provide details about the type of previous neck surgery you had, the year it was performed, and whether there were any complications following the surgery?\nPatient: I had surgery on my neck after one of the crashes, but I don't remember the exact type or when it was done. I just know it was a while ago, and I was fine until this latest crash in February. I'm not sure about any complications because I don't have the details anymore.\nDoctor: Can you tell me if you were wearing a seatbelt during the recent car crash in February, and if there was any direct impact to your head or neck during the crash?\nPatient: I don't remember if I was wearing a seatbelt during the crash, and I don't have clear details about what kind of impact happened to my head or neck. I just know I was in a car crash and my neck has been hurting since then.",
+  "reference_so": {
+    "subjective": "Basic information: 34-year-old male with chief complaint of severe neck pain (12/10) following a recent car crash, with associated numbness in the left arm and right leg.\n\nHistory of present illness: Onset of neck pain immediately after a recent car crash; pain severity is 12/10. Numbness in left arm and right leg has been present since the crash. The patient is unable to work due to the pain. The patient did not lose consciousness but experienced dizziness post-crash. The numbness in the left arm and right leg comes and goes, but it's been getting worse. The patient does not have any weakness or tingling, but has sharp pain in the neck that makes it hard to move. No changes in bowel or bladder function have been noted. The patient had previous car crashes and neck surgery in the past, but was fine until this most recent crash in February. The patient does not remember if they were wearing a seatbelt during the recent car crash or the specific mechanism of injury to the head or neck.\n\nPast history: Previous neck surgery: Type unspecified (patient does not recall), year unspecified (patient does not recall), complications unspecified (patient does not recall). Previous car crashes and therapy mentioned.",
+    "objective": "Physical examination: Physical examination findings are pending.\n\nInvestigations: Auxiliary examination results are pending."
+  }
+}

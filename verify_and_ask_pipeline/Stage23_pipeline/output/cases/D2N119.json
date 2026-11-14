@@ -1,0 +1,387 @@
+{
+  "case_id": "D2N119",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient reports a 6-month history of asthma symptoms, including frequent flare-ups, coughing, and wheezing\n* Patient uses Ventolin inhaler daily and at night when symptoms worsen\n* Patient reports that getting sick and being around her aunt's cat trigger her asthma symptoms\n* Patient has not undergone allergy testing or pulmonary function tests\n* Patient has not been evaluated by a pulmonologist or allergist for asthma management\n* Patient wants to get better and start hiking again without worrying about asthma flares",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient reports a 6-month history of asthma symptoms, including frequent flare-ups, coughing, and wheezing\n* Patient uses Ventolin inhaler daily and at night when symptoms worsen\n* Patient reports that getting sick and being around her aunt's cat trigger her asthma symptoms\n* Patient has not undergone allergy testing or pulmonary function tests\n* Patient has not been evaluated by a pulmonologist or allergist for asthma management\n* Patient wants to get better and start hiking again without worrying about asthma flares",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* The patient reports being an adult, but unable to provide exact age.\n* The patient reports being a female and employed in an office setting.\n* Patient reports a 6-month history of asthma symptoms, including frequent flare-ups, coughing, and wheezing\n* The patient reports having visited urgent care and primary care doctor frequently, receiving antibiotics or steroids as treatment.\n* Patient uses Ventolin inhaler daily and at night when symptoms worsen\n* Patient reports that getting sick and being around her aunt's cat trigger her asthma symptoms\n* Patient has not undergone allergy testing or pulmonary function tests\n* Patient has not been evaluated by a pulmonologist or allergist for asthma management\n* Patient wants to get better and start hiking again without worrying about asthma flares",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has a diagnosis of asthma, confirmed by pulmonary function tests, but has not undergone allergy testing or pulmonary function tests to assess asthma control and severity\n* The patient's symptoms are consistent with asthma, including wheezing, coughing, and chest tightness\n* The patient's asthma is not well-controlled, as she relies heavily on her rescue inhaler and has not been evaluated by a pulmonologist or allergist for asthma management",
+    "plan": "* The patient will be referred to a pulmonologist or allergist for further evaluation and management of her asthma\n* The patient will undergo allergy testing, including skin prick tests or IgE blood tests, to identify potential allergens contributing to her asthma flares\n* The patient will be prescribed controller medications to help manage her asthma and reduce her reliance on her rescue inhaler\n* The patient will be advised to avoid her aunt's cat and to take steps to reduce her exposure to other potential allergens\n* The patient will be scheduled for follow-up appointments to monitor her asthma control and adjust her treatment plan as needed."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient reports a 6-month history of asthma symptoms, including frequent flare-ups, coughing, and wheezing",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.0107
+      },
+      "support_evidence": "Patient: I was told during my last visit that I have asthma, and I'm currently using a blue inhaler called Ventolin, which I use almost every day because I'm always coughing and wheezing. I also use it a couple of times a week at night when I wake up needing relief. I was given a pulmonary function test during my last office visit, and the results were consistent with asthma. I haven't had any imaging studies done for my asthma.",
+      "contradiction_evidence": "Patient: I'm sorry, I don't have that information on hand, but I can tell you that I've been struggling with my asthma for the past six months, and it's been really frustrating because I seem to have flare-ups almost every month or every other month. I've been going to urgent care and my primary care doctor quite a bit, and sometimes they give me antibiotics or steroids. I really need help getting this under control so I can start enjoying things like hiking again.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient reports a 6-month history of asthma symptoms, including frequent flare-ups, coughing, and wheezing",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient reports a 6-month history of asthma symptoms, including frequent flare-ups, coughing, and wheezing",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient uses Ventolin inhaler daily and at night when symptoms worsen",
+      "scores": {
+        "entailment": 0.9989,
+        "neutral": 0.0006,
+        "contradiction": 0.0029
+      },
+      "support_evidence": "Patient: I was told during my last visit that I have asthma, and I'm currently using a blue inhaler called Ventolin, which I use almost every day because I'm always coughing and wheezing. I also use it a couple of times a week at night when I wake up needing relief. I was given a pulmonary function test during my last office visit, and the results were consistent with asthma. I haven't had any imaging studies done for my asthma.",
+      "contradiction_evidence": "Patient: I was told during my last visit that I have asthma, and I'm currently using a blue inhaler called Ventolin, which I use almost every day because I'm always coughing and wheezing. I also use it a couple of times a week at night when I wake up needing relief. I was given a pulmonary function test during my last office visit, and the results were consistent with asthma. I haven't had any imaging studies done for my asthma.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient uses Ventolin inhaler daily and at night when symptoms worsen",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "Patient uses Ventolin inhaler daily and at night when symptoms worsen",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient reports that getting sick and being around her aunt's cat trigger her asthma symptoms",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.0081
+      },
+      "support_evidence": "Patient: I don't really have any other triggers besides getting sick or being around my aunt's cat. I try to avoid going to her house now, and that seems to help. I haven't tried any other strategies besides using my inhaler when I need it. I really want to get better so I can start hiking again without having to worry about my asthma flaring up.",
+      "contradiction_evidence": "Patient: I'm sorry, I don't have that information on hand, but I can tell you that I've been struggling with my asthma for the past six months, and it's been really frustrating because I seem to have flare-ups almost every month or every other month. I've been going to urgent care and my primary care doctor quite a bit, and sometimes they give me antibiotics or steroids. I really need help getting this under control so I can start enjoying things like hiking again.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient reports that getting sick and being around her aunt's cat trigger her asthma symptoms",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Patient reports that getting sick and being around her aunt's cat trigger her asthma symptoms",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient has not undergone allergy testing or pulmonary function tests",
+      "scores": {
+        "entailment": 0.998,
+        "neutral": 0.0017,
+        "contradiction": 0.9986
+      },
+      "support_evidence": "Doctor: Has the patient undergone any pulmonary function tests (PFTs) or peak flow monitoring to assess asthma control and severity?",
+      "contradiction_evidence": "Patient: I was told during my last visit that I have asthma, and I'm currently using a blue inhaler called Ventolin, which I use almost every day because I'm always coughing and wheezing. I also use it a couple of times a week at night when I wake up needing relief. I was given a pulmonary function test during my last office visit, and the results were consistent with asthma. I haven't had any imaging studies done for my asthma.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient has not undergone allergy testing or pulmonary function tests",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Patient has not undergone allergy testing or pulmonary function tests",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient has not been evaluated by a pulmonologist or allergist for asthma management",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0002,
+        "contradiction": 0.9452
+      },
+      "support_evidence": "Patient: No, I haven't been evaluated by a pulmonologist or allergist for asthma management. I've mostly seen my primary care doctor and urgent care when I have flare-ups. I really hope to see someone who can help me manage my asthma better so I can start hiking again without worrying so much.",
+      "contradiction_evidence": "Patient: I'm not sure about my exact age, but I'm an adult. I'm female, and I work a regular office job. I don't have any specific issues with my job that seem to trigger my asthma.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient has not been evaluated by a pulmonologist or allergist for asthma management",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "Patient has not been evaluated by a pulmonologist or allergist for asthma management",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient wants to get better and start hiking again without worrying about asthma flares",
+      "scores": {
+        "entailment": 0.9987,
+        "neutral": 0.0007,
+        "contradiction": 0.0022
+      },
+      "support_evidence": "Patient: I don't really have any other triggers besides getting sick or being around my aunt's cat. I try to avoid going to her house now, and that seems to help. I haven't tried any other strategies besides using my inhaler when I need it. I really want to get better so I can start hiking again without having to worry about my asthma flaring up.",
+      "contradiction_evidence": "Patient: I don't really have any other triggers besides getting sick or being around my aunt's cat. I try to avoid going to her house now, and that seems to help. I haven't tried any other strategies besides using my inhaler when I need it. I really want to get better so I can start hiking again without having to worry about my asthma flaring up.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient wants to get better and start hiking again without worrying about asthma flares",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "Patient wants to get better and start hiking again without worrying about asthma flares",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 6,
+      "exempt": 1
+    },
+    "num_claims": 6,
+    "num_kept": 6,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient reports being a female and employed in an office setting.",
+      "evidence": "Patient: I'm not sure about my exact age, but I'm an adult. I'm female, and I work a regular office job. I don't have any specific issues with my job that seem to trigger my asthma.",
+      "section": "subjective",
+      "candidate": "I'm female, and I work a regular office job."
+    },
+    {
+      "statement": "The patient reports being an adult, but unable to provide exact age.",
+      "evidence": "Patient: I'm not sure about my exact age, but I'm an adult. I'm female, and I work a regular office job. I don't have any specific issues with my job that seem to trigger my asthma.",
+      "section": "subjective",
+      "candidate": "I'm not sure about my exact age, but I'm an adult."
+    },
+    {
+      "statement": "The patient reports having visited urgent care and primary care doctor frequently, receiving antibiotics or steroids as treatment.",
+      "evidence": "Patient: I'm sorry, I don't have that information on hand, but I can tell you that I've been struggling with my asthma for the past six months, and it's been really frustrating because I seem to have flare-ups almost every month or every other month. I've been going to urgent care and my primary care doctor quite a bit, and sometimes they give me antibiotics or steroids. I really need help getting this under control so I can start enjoying things like hiking again.",
+      "section": "subjective",
+      "candidate": "I've been going to urgent care and my primary care doctor quite a bit, and sometimes they give me antibiotics or steroids."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I'm female, and I work a regular office job.",
+      "speaker": "Patient",
+      "coverage": -0.0211,
+      "nearest_so_sentence": "Patient reports that getting sick and being around her aunt's cat trigger her asthma symptoms",
+      "statement": "The patient reports being a female and employed in an office setting.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I'm not sure about my exact age, but I'm an adult. I'm female, and I work a regular office job. I don't have any specific issues with my job that seem to trigger my asthma.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0005
+      },
+      "duplicate_entailment": 0.0131,
+      "duplicate_similarity": 0.2751,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 29.15,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I'm not sure about my exact age, but I'm an adult.",
+      "speaker": "Patient",
+      "coverage": 0.0415,
+      "nearest_so_sentence": "Patient reports a 6-month history of asthma symptoms, including frequent flare-ups, coughing, and wheezing",
+      "statement": "The patient reports being an adult, but unable to provide exact age.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I'm not sure about my exact age, but I'm an adult. I'm female, and I work a regular office job. I don't have any specific issues with my job that seem to trigger my asthma.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0025
+      },
+      "duplicate_entailment": 0.0046,
+      "duplicate_similarity": 0.385,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 26.4,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I try to avoid going there now.",
+      "speaker": "Patient",
+      "coverage": 0.1674,
+      "nearest_so_sentence": "Patient wants to get better and start hiking again without worrying about asthma flares",
+      "statement": "The patient reports avoiding a specific location due to worsening asthma symptoms.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't use any controller medications right now, just the blue inhaler called Ventolin. I was told I have asthma, but I haven't been on any other long-term medications for it. I really need to start using something that will help me not rely on my rescue inhaler so much.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.127
+      },
+      "duplicate_entailment": 0.9988,
+      "duplicate_similarity": 0.6284
+    },
+    {
+      "candidate": "I really want to get better so I can enjoy that again.",
+      "speaker": "Patient",
+      "coverage": 0.2225,
+      "nearest_so_sentence": "Patient wants to get better and start hiking again without worrying about asthma flares",
+      "statement": "The patient expresses a strong desire to recover from their asthma flares in order to resume enjoyable activities.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't use any controller medications right now, just the blue inhaler called Ventolin. I was told I have asthma, but I haven't been on any other long-term medications for it. I really need to start using something that will help me not rely on my rescue inhaler so much.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0025
+      },
+      "duplicate_entailment": 0.9991,
+      "duplicate_similarity": 0.6838
+    },
+    {
+      "candidate": "I try to avoid going to her house now, and that seems to help.",
+      "speaker": "Patient",
+      "coverage": 0.2474,
+      "nearest_so_sentence": "Patient reports that getting sick and being around her aunt's cat trigger her asthma symptoms",
+      "statement": "The patient reports that avoiding visits to her house seems to help alleviate symptoms.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I don't really have any other triggers besides getting sick or being around my aunt's cat. I try to avoid going to her house now, and that seems to help. I haven't tried any other strategies besides using my inhaler when I need it. I really want to get better so I can start hiking again without having to worry about my asthma flaring up.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.1545
+      },
+      "duplicate_entailment": 0.9769,
+      "duplicate_similarity": 0.4624
+    },
+    {
+      "candidate": "I've been going to urgent care and my primary care doctor quite a bit, and sometimes they give me antibiotics or steroids.",
+      "speaker": "Patient",
+      "coverage": 0.3076,
+      "nearest_so_sentence": "Patient wants to get better and start hiking again without worrying about asthma flares",
+      "statement": "The patient reports having visited urgent care and primary care doctor frequently, receiving antibiotics or steroids as treatment.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I'm sorry, I don't have that information on hand, but I can tell you that I've been struggling with my asthma for the past six months, and it's been really frustrating because I seem to have flare-ups almost every month or every other month. I've been going to urgent care and my primary care doctor quite a bit, and sometimes they give me antibiotics or steroids. I really need help getting this under control so I can start enjoying things like hiking again.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.0089
+      },
+      "duplicate_entailment": 0.0349,
+      "duplicate_similarity": 0.3774,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 3,
+        "perplexity": 28.06,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "It's been going on for the past six months.",
+      "speaker": "Patient",
+      "coverage": 0.3216,
+      "nearest_so_sentence": "Patient reports a 6-month history of asthma symptoms, including frequent flare-ups, coughing, and wheezing",
+      "statement": "The patient reports that their asthma symptoms have been present for the past six months.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I find that my asthma flares up a lot when I get sick with a cold, and I think my aunt's cat might be a trigger too. I try to avoid going there now. My symptoms seem to happen almost every month or every other month, and I usually end up needing my inhaler almost every day, especially at night a couple of times a week. It's been going on for the past six months.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.0093
+      },
+      "duplicate_entailment": 0.9993,
+      "duplicate_similarity": 0.8532
+    },
+    {
+      "candidate": "It's really frustrating because it happens so often and it keeps me from doing things I enjoy like hiking.",
+      "speaker": "Patient",
+      "coverage": 0.3463,
+      "nearest_so_sentence": "Patient wants to get better and start hiking again without worrying about asthma flares",
+      "statement": "The patient reports that asthma flare-ups frequently occur, which can limit their ability to engage in activities they enjoy, such as hiking.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I haven't had any pulmonary function tests or peak flow monitoring done to assess my asthma control and severity. I did have some tests done when I came in today, and the doctor said they were consistent with asthma, but I don't think I've had any regular monitoring. I really hope this helps me get better and start hiking again.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.001
+      },
+      "duplicate_entailment": 0.9985,
+      "duplicate_similarity": 0.8145
+    },
+    {
+      "candidate": "I try to avoid going there, and I haven't had a flare since.",
+      "speaker": "Patient",
+      "coverage": 0.365,
+      "nearest_so_sentence": "Patient wants to get better and start hiking again without worrying about asthma flares",
+      "statement": "The patient reports avoiding a specific location and has not experienced an asthma flare since.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: No, I haven't noticed any other triggers besides getting sick or being around my aunt's cat. I try to avoid going there, and I haven't had a flare since. I do like to go hiking, but I have to be careful with my coughing and wheezing. I really want to get better so I can enjoy that again.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.994
+      }
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 50,
+    "num_covered": 41,
+    "num_flagged": 9,
+    "num_not_checked_cap": 0,
+    "num_added": 3
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "I try to avoid going there, and I haven't had a flare since.",
+        "statement": "The patient reports avoiding a specific location and has not experienced an asthma flare since.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9994,
+          "contradiction": 0.994
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 60.3,
+  "ap_unchanged": true,
+  "conversation": "Patient: I'm sorry, I don't have that information on hand, but I can tell you that I've been struggling with my asthma for the past six months, and it's been really frustrating because I seem to have flare-ups almost every month or every other month. I've been going to urgent care and my primary care doctor quite a bit, and sometimes they give me antibiotics or steroids. I really need help getting this under control so I can start enjoying things like hiking again.\nDoctor: Could you please provide your age, gender, and occupation?\nPatient: I'm not sure about my exact age, but I'm an adult. I'm female, and I work a regular office job. I don't have any specific issues with my job that seem to trigger my asthma.\nDoctor: Could you please provide details about any previous asthma diagnosis, medications you have been prescribed, and whether you have undergone any pulmonary function tests or imaging studies?\nPatient: I was told during my last visit that I have asthma, and I'm currently using a blue inhaler called Ventolin, which I use almost every day because I'm always coughing and wheezing. I also use it a couple of times a week at night when I wake up needing relief. I was given a pulmonary function test during my last office visit, and the results were consistent with asthma. I haven't had any imaging studies done for my asthma.\nDoctor: Could you please describe any specific triggers or situations that seem to worsen your asthma symptoms, such as allergens, exercise, or changes in weather? Additionally, have you noticed any patterns in your symptoms, such as worsening during certain times of the day or week?\nPatient: I find that my asthma flares up a lot when I get sick with a cold, and I think my aunt's cat might be a trigger too. I try to avoid going there now. My symptoms seem to happen almost every month or every other month, and I usually end up needing my inhaler almost every day, especially at night a couple of times a week. It's been going on for the past six months.\nDoctor: Could you please tell me about any other potential triggers you have noticed, such as pollen, dust, or exercise, and whether you have tried any specific strategies to manage your symptoms or avoid triggers?\nPatient: I don't really have any other triggers besides getting sick or being around my aunt's cat. I try to avoid going to her house now, and that seems to help. I haven't tried any other strategies besides using my inhaler when I need it. I really want to get better so I can start hiking again without having to worry about my asthma flaring up.\nDoctor: Are you currently using any controller medications, such as inhaled corticosteroids, leukotriene modifiers, or other long-term asthma medications, or have you been prescribed these in the past?\nPatient: I don't use any controller medications right now, just the blue inhaler called Ventolin. I was told I have asthma, but I haven't been on any other long-term medications for it. I really need to start using something that will help me not rely on my rescue inhaler so much.\nDoctor: Have you undergone any allergy testing, such as skin prick tests or blood tests for specific IgE antibodies, to identify potential allergens like cat dander that may be contributing to your asthma flare-ups?\nPatient: No, I haven't had any allergy testing done yet. I know my aunt's cat might be a trigger, but I haven't been tested for specific allergens like cat dander. I really hope we can figure out more about what's causing my asthma flares so I can manage it better.\nDoctor: Has the patient undergone any allergy testing, such as skin prick tests or blood tests for specific allergens, to confirm the suspected trigger of cat dander?\nPatient: No, I haven't had any allergy testing done yet. I know my aunt's cat might be a trigger, but I haven't been tested for specific allergens like cat dander. I really hope we can figure out more about what's causing my asthma flares so I can manage it better.\nDoctor: Have you had any recent pulmonary function tests or spirometry results reviewed by a pulmonologist?\nPatient: No, I haven't had any recent pulmonary function tests or spirometry done by a pulmonologist. I did have some tests done when I came in today, and the doctor said they were consistent with asthma, but I don't think I've seen a pulmonologist for that. I really hope this helps me get better and start hiking again.\nDoctor: Have you had any skin prick testing or blood tests (such as IgE testing) for common allergens, including cat dander, dust mites, pollen, or mold, to confirm potential triggers?\nPatient: No, I haven't had any skin prick testing or blood tests for common allergens like cat dander, dust mites, pollen, or mold. I know my aunt's cat might be a trigger, but I haven't been tested for specific allergens. I really hope we can figure out more about what's causing my asthma flares so I can manage it better.\nDoctor: Have you noticed any other potential triggers for your asthma flares, such as exercise, weather changes, or exposure to other pets or environmental factors?\nPatient: No, I haven't noticed any other triggers besides getting sick or being around my aunt's cat. I try to avoid going there, and I haven't had a flare since. I do like to go hiking, but I have to be careful with my coughing and wheezing. I really want to get better so I can enjoy that again.\nDoctor: Has the patient undergone any allergy testing, such as skin prick tests or IgE blood tests, for common allergens like cat dander, dust mites, pollen, or mold?\nPatient: No, I haven't had any allergy testing, like skin prick tests or IgE blood tests, for common allergens such as cat dander, dust mites, pollen, or mold. I know my aunt's cat might be a trigger, but I haven't been tested for specific allergens. I really hope we can figure out more about what's causing my asthma flares so I can manage it better.\nDoctor: Has the patient been evaluated by a pulmonologist or allergist for asthma management and to discuss the need for controller medications?\nPatient: No, I haven't been evaluated by a pulmonologist or allergist for asthma management. I've mostly seen my primary care doctor and urgent care when I have flare-ups. I really hope to see someone who can help me manage my asthma better so I can start hiking again without worrying so much.\nDoctor: Has the patient undergone any pulmonary function tests (PFTs) or peak flow monitoring to assess asthma control and severity?\nPatient: No, I haven't had any pulmonary function tests or peak flow monitoring done to assess my asthma control and severity. I did have some tests done when I came in today, and the doctor said they were consistent with asthma, but I don't think I've had any regular monitoring. I really hope this helps me get better and start hiking again.\nDoctor: Could you please describe the specific symptoms you experience during your asthma flare-ups, such as wheezing, shortness of breath, chest tightness, or coughing? This will help us better understand the pattern and severity of your symptoms.\nPatient: During my asthma flare-ups, I mostly experience a lot of coughing and wheezing. Sometimes I feel like my chest is tight, and I have trouble breathing, especially at night. It wakes me up a couple of times a week, and I usually need to use my inhaler to get back to sleep. It's really frustrating because it happens so often and it keeps me from doing things I enjoy like hiking.",
+  "reference_so": {
+    "subjective": "Basic information: Female, adult, office job, chief complaint: six-month history of asthma with monthly or bi-monthly flare-ups, impacting daily activities.\n\nHistory of present illness: Six-month history of asthma with monthly or bi-monthly flare-ups; symptoms flare up often triggered by colds or cat exposure. Uses Ventolin (albuterol) almost daily and a couple of times a week at night. Symptoms have been present for six months, impacting daily activities such as hiking. Frequent visits to urgent care and primary care physician, receiving antibiotics or steroids. Patient currently does not use any controller medications and relies solely on a rescue inhaler. During flare-ups, the patient experiences coughing, wheezing, chest tightness, and difficulty breathing, especially at night, which wakes her up a couple of times a week. She usually needs to use her inhaler to get back to sleep. This is frustrating and impacts her ability to enjoy activities like hiking.\n\nPast history: Asthma diagnosed six months ago, currently using Ventolin (albuterol) as a rescue inhaler, used almost every day and a couple of times a week at night. Possible triggers include colds and exposure to cats. No other medications mentioned. No relevant past medical history, no surgeries, no known allergies. No allergy testing has been performed yet, although cat dander is suspected as a trigger based on symptom patterns. No skin prick testing or blood tests for common allergens like cat dander, dust mites, pollen, or mold have been performed. No evaluation by a pulmonologist or allergist.",
+    "objective": "Physical examination: Not performed yet.\n\nInvestigations: Pulmonary function test (PFT) consistent with asthma; no imaging studies performed for asthma. No spirometry or peak flow monitoring data available. No recent PFTs or peak flow monitoring performed, though some tests were done today and were consistent with asthma."
+  }
+}

@@ -1,0 +1,647 @@
+{
+  "case_id": "D2N186",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* Patient is a 35-year-old male with a history of back pain, specifically on the left side, which has been bothering him for a while.\n* The pain is random, sometimes occurring without warning, and is worse when bending over.\n* Stretching usually helps alleviate the pain.\n* Patient had a microdiscectomy in November 2020 due to a broken disk that wrapped around his spinal thecal sac.\n* He was on high-dose gabapentin for nerve pain and had a difficult time getting off the medication.\n* Patient has not had any imaging studies (MRI or CT scans) since his surgery.\n* He is open to considering further imaging studies if it would help diagnose the current back pain.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage2_so": {
+    "subjective": "* Patient is a 35-year-old male with a history of back pain, specifically on the left side, which has been bothering him for a while.\n* The pain is random, sometimes occurring without warning, and is worse when bending over.\n* Stretching usually helps alleviate the pain.\n* Patient had a microdiscectomy in November 2020 due to a broken disk that wrapped around his spinal thecal sac.\n* He was on high-dose gabapentin for nerve pain and had a difficult time getting off the medication.\n* Patient has not had any imaging studies (MRI or CT scans) since his surgery.\n* He is open to considering further imaging studies if it would help diagnose the current back pain.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage3_so": {
+    "subjective": "* The patient states that they attend physical therapy or rehabilitation exercises occasionally, but not as much as they probably should.\n* Patient is a 35-year-old male with a history of back pain, specifically on the left side, which has been bothering him for a while.\n* The patient denies experiencing any new neurological symptoms such as numbness, tingling, or weakness in their legs or feet since the onset of their current back pain.\n* The pain is random, sometimes occurring without warning, and is worse when bending over.\n* Stretching usually helps alleviate the pain.\n* The patient reports that it is easy to forget physical therapy or rehabilitation exercises due to being busy with work and other responsibilities.\n* Patient had a microdiscectomy in November 2020 due to a broken disk that wrapped around his spinal thecal sac.\n* He was on high-dose gabapentin for nerve pain and had a difficult time getting off the medication.\n* The patient denies experiencing any new or worsening symptoms such as increased pain, numbness, tingling, or weakness in the legs or feet since the microdiscectomy.\n* Patient has not had any imaging studies (MRI or CT scans) since his surgery.\n* He is open to considering further imaging studies if it would help diagnose the current back pain.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has a history of back pain, specifically on the left side, which has been ongoing since his microdiscectomy in November 2020.\n* The pain is random, sometimes occurring without warning, and is worse when bending over.\n* Stretching usually helps alleviate the pain.\n* There is no evidence of new or worsening neurological symptoms such as numbness, tingling, or weakness in the legs or feet.",
+    "plan": "* The doctor recommends considering further imaging studies (MRI or CT scans) to evaluate the spinal structures for potential recurrence or other pathology.\n* The patient is advised to continue stretching exercises to alleviate the back pain.\n* The doctor suggests that the patient should follow up with physical therapy to improve his flexibility and strength.\n* The patient is encouraged to keep a pain diary to track the frequency, duration, and severity of his back pain to better understand the pattern and triggers of his symptoms."
+  },
+  "stage2_audit": [
+    {
+      "claim": "Patient is a 35-year-old male with a history of back pain, specifically on the left side, which has been bothering him for a while.",
+      "scores": {
+        "entailment": 0.9967,
+        "neutral": 0.0029,
+        "contradiction": 0.0068
+      },
+      "support_evidence": "Patient: I'm 35, male. I've been having some back pain again, especially on the left side. It's been bothering me for a while now, and I wanted to check in. The pain is pretty random, sometimes it just happens, and it's worse when I bend over. My significant other says stretching helps, which it usually does.",
+      "contradiction_evidence": "Doctor: Have you noticed any changes in the pattern or intensity of your back pain since your previous surgery? For example, has it become more frequent, severe, or is there any specific activity that seems to trigger it?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient is a 35-year-old male with a history of back pain, specifically on the left side, which has been bothering him for a while.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "Patient is a 35-year-old male with a history of back pain, specifically on the left side, which has been bothering him for a while.",
+      "level": "sentence"
+    },
+    {
+      "claim": "The pain is random, sometimes occurring without warning, and is worse when bending over.",
+      "scores": {
+        "entailment": 0.9991,
+        "neutral": 0.0007,
+        "contradiction": 0.0052
+      },
+      "support_evidence": "Patient: The pain hasn't really changed much since the surgery, but it just happens randomly. It's not constant, but it does get worse when I bend over. I don't really have a specific trigger, but stretching helps a lot. It's been pretty annoying, but nothing too bad.",
+      "contradiction_evidence": "Patient: The pain hasn't really changed much since the surgery, but it just happens randomly. It's not constant, but it does get worse when I bend over. I don't really have a specific trigger, but stretching helps a lot. It's been pretty annoying, but nothing too bad.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The pain is random, sometimes occurring without warning, and is worse when bending over.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "The pain is random, sometimes occurring without warning, and is worse when bending over.",
+      "level": "sentence"
+    },
+    {
+      "claim": "Stretching usually helps alleviate the pain.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0004,
+        "contradiction": 0.0013
+      },
+      "support_evidence": "Patient: The pain is generally around where I had surgery, on the left side of my lower back. It doesn't really radiate down my legs, but it does happen randomly, and it's worse when I bend over. It affects me a bit during the day, especially if I'm doing things that require bending, but stretching usually helps. It's not constant, but it's enough to bother me sometimes.",
+      "contradiction_evidence": "Patient: No, I haven't had any numbness, tingling, or weakness in my legs or feet with the pain. It's more of a random back pain, mostly on the left side, and it's worse when I bend over. Stretching usually helps, though.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Stretching usually helps alleviate the pain.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "Stretching usually helps alleviate the pain.",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient had a microdiscectomy in November 2020 due to a broken disk that wrapped around his spinal thecal sac.",
+      "scores": {
+        "entailment": 0.9967,
+        "neutral": 0.0006,
+        "contradiction": 0.9344
+      },
+      "support_evidence": "Patient: Yes, I had back surgery in November of 2020. It was a microdiscectomy because my disk broke off and wrapped around my spinal thecal sac. It was a pretty horrible experience, but at least it wasn't the poop sac. I had a lot of nerve pain down my leg and in my back, and I was on a high dose of gabapentin for it. It was tough to get off of.",
+      "contradiction_evidence": "Patient: No, I haven't had any MRI or CT scans of the lumbar spine since my surgery. I don't know if I need one, but I'm open to considering it if it would help figure out what's going on. I just want to get better and get back to feeling normal again.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient had a microdiscectomy in November 2020 due to a broken disk that wrapped around his spinal thecal sac.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "Patient had a microdiscectomy in November 2020 due to a broken disk that wrapped around his spinal thecal sac.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He was on high-dose gabapentin for nerve pain and had a difficult time getting off the medication.",
+      "scores": {
+        "entailment": 0.9983,
+        "neutral": 0.0009,
+        "contradiction": 0.0021
+      },
+      "support_evidence": "Patient: Yes, I had back surgery in November of 2020. It was a microdiscectomy because my disk broke off and wrapped around my spinal thecal sac. It was a pretty horrible experience, but at least it wasn't the poop sac. I had a lot of nerve pain down my leg and in my back, and I was on a high dose of gabapentin for it. It was tough to get off of.",
+      "contradiction_evidence": "Patient: The pain has been going on for a while, maybe a few months, but I can't say exactly. It tends to happen more when I'm doing things that require bending over, like picking something up off the floor. It doesn't really happen at a specific time of day, but it's more likely when I'm active. Stretching usually helps when it does happen. The pattern hasn't really changed much since the surgery, just random occurrences, mostly on the left side.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He was on high-dose gabapentin for nerve pain and had a difficult time getting off the medication.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "He was on high-dose gabapentin for nerve pain and had a difficult time getting off the medication.",
+      "level": "sentence"
+    },
+    {
+      "claim": "Patient has not had any imaging studies (MRI or CT scans) since his surgery.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0002,
+        "contradiction": 0.0199
+      },
+      "support_evidence": "Patient: No, I haven't had any MRI or CT scans of the lumbar spine since my surgery. I don't know if I need one, but I'm open to considering it if it would help figure out what's going on. I just want to get better and get back to feeling normal again.",
+      "contradiction_evidence": "Patient: I don't have any imaging studies done since my surgery, but when I came in today, they took an X-ray and it showed that there are no fractures or issues with the spinal bone. It also looked like my surgery site has healed properly.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Patient has not had any imaging studies (MRI or CT scans) since his surgery.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "Patient has not had any imaging studies (MRI or CT scans) since his surgery.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He is open to considering further imaging studies if it would help diagnose the current back pain.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0003,
+        "contradiction": 0.0017
+      },
+      "support_evidence": "Patient: No, I haven't had any MRI or CT scans of the lumbar spine since my surgery. I don't know if I need one, but I'm open to considering it if it would help figure out what's going on. I just want to get better and get back to feeling normal again.",
+      "contradiction_evidence": "Patient: No, I haven't had any MRI or CT scans of the lumbar spine since my surgery. I don't know if I need one, but I'm open to considering it if it would help figure out what's going on. I just want to get better and get back to feeling normal again.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He is open to considering further imaging studies if it would help diagnose the current back pain.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 6,
+      "sentence": "He is open to considering further imaging studies if it would help diagnose the current back pain.",
+      "level": "sentence"
+    },
+    {
+      "section": "objective",
+      "line": 0,
+      "sentence": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "claim": "No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+      "decision": "exempt",
+      "keep": true,
+      "flagged": false,
+      "reason": "Placeholder / statement of absence; not verified as a claim."
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 7,
+      "exempt": 1
+    },
+    "num_claims": 7,
+    "num_kept": 7,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient reports that it is easy to forget physical therapy or rehabilitation exercises due to being busy with work and other responsibilities.",
+      "evidence": "Patient: I have been to physical therapy before, but I don't go regularly. I mean, I go sometimes, but not as much as I probably should. My therapist recommended some stretching and strengthening exercises, but I'm not sure if I've been doing them consistently. I know it's important, but it's easy to forget when you're busy with work and everything else.",
+      "section": "subjective",
+      "candidate": "I know it's important, but it's easy to forget when you're busy with work and everything else."
+    },
+    {
+      "statement": "The patient states that they attend physical therapy or rehabilitation exercises occasionally, but not as much as they probably should.",
+      "evidence": "Patient: I have been to physical therapy before, but I don't go regularly. I mean, I go sometimes, but not as much as I probably should. My therapist recommended some stretching and strengthening exercises, but I'm not sure if I've been doing them consistently. I know it's important, but it's easy to forget when you're busy with work and everything else.",
+      "section": "subjective",
+      "candidate": "I mean, I go sometimes, but not as much as I probably should."
+    },
+    {
+      "statement": "The patient denies experiencing any new or worsening symptoms such as increased pain, numbness, tingling, or weakness in the legs or feet since the microdiscectomy.",
+      "evidence": "Doctor: Have you experienced any new or worsening neurological symptoms, such as numbness, tingling, or weakness in your legs or feet since your microdiscectomy?",
+      "section": "subjective",
+      "candidate": "No, I haven't experienced any new or worsening symptoms like increased pain, numbness, tingling, or weakness in my legs or feet since the surgery."
+    },
+    {
+      "statement": "The patient denies experiencing any new neurological symptoms such as numbness, tingling, or weakness in their legs or feet since the onset of their current back pain.",
+      "evidence": "Patient: No, I haven't experienced any new or worsening neurological symptoms like numbness, tingling, or weakness in my legs or feet since the surgery. It's just been the back pain, mostly on the left side, and it happens randomly, especially when I bend over. Stretching helps, but it's been pretty annoying at times.",
+      "section": "subjective",
+      "candidate": "No, I haven't had any new neurological symptoms like numbness, tingling, or weakness in my legs or feet since the pain started."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I'm 35, male.",
+      "speaker": "Patient",
+      "coverage": 0.1054,
+      "nearest_so_sentence": "Patient is a 35-year-old male with a history of back pain, specifically on the left side, which has been bothering him for a while.",
+      "statement": "The patient is 35 years old and male.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 35, male. I've been having some back pain again, especially on the left side. It's been bothering me for a while now, and I wanted to check in. The pain is pretty random, sometimes it just happens, and it's worse when I bend over. My significant other says stretching helps, which it usually does.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0011
+      },
+      "duplicate_entailment": 0.9988,
+      "duplicate_similarity": 0.6971
+    },
+    {
+      "candidate": "I'm 35, male.",
+      "speaker": "Patient",
+      "coverage": 0.1054,
+      "nearest_so_sentence": "Patient is a 35-year-old male with a history of back pain, specifically on the left side, which has been bothering him for a while.",
+      "statement": "The patient reports his age to be 35 years old and identifies as male.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 35, male. I've been having some back pain again, especially on the left side. It's been bothering me for a while now, and I wanted to check in.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0146
+      },
+      "duplicate_entailment": 0.9994,
+      "duplicate_similarity": 0.5495
+    },
+    {
+      "candidate": "I know it's important, but it's easy to forget when you're busy with work and everything else.",
+      "speaker": "Patient",
+      "coverage": 0.1227,
+      "nearest_so_sentence": "Stretching usually helps alleviate the pain.",
+      "statement": "The patient reports that it is easy to forget physical therapy or rehabilitation exercises due to being busy with work and other responsibilities.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I have been to physical therapy before, but I don't go regularly. I mean, I go sometimes, but not as much as I probably should. My therapist recommended some stretching and strengthening exercises, but I'm not sure if I've been doing them consistently. I know it's important, but it's easy to forget when you're busy with work and everything else.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0102
+      },
+      "duplicate_entailment": 0.5206,
+      "duplicate_similarity": 0.3345,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 3,
+        "perplexity": 22.65,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I mean, I go sometimes, but not as much as I probably should.",
+      "speaker": "Patient",
+      "coverage": 0.1415,
+      "nearest_so_sentence": "The pain is random, sometimes occurring without warning, and is worse when bending over.",
+      "statement": "The patient states that they attend physical therapy or rehabilitation exercises occasionally, but not as much as they probably should.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I have been to physical therapy before, but I don't go regularly. I mean, I go sometimes, but not as much as I probably should. My therapist recommended some stretching and strengthening exercises, but I'm not sure if I've been doing them consistently. I know it's important, but it's easy to forget when you're busy with work and everything else.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.0046
+      },
+      "first_rewrite_rejected": "The patient reports attending physical therapy or rehabilitation exercises occasionally, but not consistently, since the microdiscectomy in November 2020.",
+      "duplicate_entailment": 0.5406,
+      "duplicate_similarity": 0.4386,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 20.43,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "It's been bothering me for a while now, and I wanted to check in.",
+      "speaker": "Patient",
+      "coverage": 0.1449,
+      "nearest_so_sentence": "The pain is random, sometimes occurring without warning, and is worse when bending over.",
+      "statement": "The patient reports that a concern has been bothering them for a while and they wanted to seek medical attention.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 35, male. I've been having some back pain again, especially on the left side. It's been bothering me for a while now, and I wanted to check in.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0076
+      },
+      "duplicate_entailment": 0.9886,
+      "duplicate_similarity": 0.4974
+    },
+    {
+      "candidate": "It's been bothering me for a while now, and I wanted to check in.",
+      "speaker": "Patient",
+      "coverage": 0.1449,
+      "nearest_so_sentence": "The pain is random, sometimes occurring without warning, and is worse when bending over.",
+      "statement": "The patient reports that their back pain has been bothering them for a while.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 35, male. I've been having some back pain again, especially on the left side. It's been bothering me for a while now, and I wanted to check in.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9998,
+        "contradiction": 0.0553
+      },
+      "duplicate_entailment": 0.9993,
+      "duplicate_similarity": 0.7722
+    },
+    {
+      "candidate": "It's not constant, but it's enough to bother me sometimes.",
+      "speaker": "Patient",
+      "coverage": 0.2063,
+      "nearest_so_sentence": "The pain is random, sometimes occurring without warning, and is worse when bending over.",
+      "statement": "The patient reports that the back pain is not constant, but it is bothersome at times.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The pain is generally around where I had surgery, on the left side of my lower back. It doesn't really radiate down my legs, but it does happen randomly, and it's worse when I bend over. It affects me a bit during the day, especially if I'm doing things that require bending, but stretching usually helps. It's not constant, but it's enough to bother me sometimes.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0535
+      },
+      "duplicate_entailment": 0.9993,
+      "duplicate_similarity": 0.6971
+    },
+    {
+      "candidate": "It's been pretty annoying, but nothing too bad.",
+      "speaker": "Patient",
+      "coverage": 0.214,
+      "nearest_so_sentence": "The pain is random, sometimes occurring without warning, and is worse when bending over.",
+      "statement": "The patient reports that their back pain has been \"pretty annoying, but nothing too bad\" since their previous surgery.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: The pain hasn't really changed much since the surgery, but it just happens randomly. It's not constant, but it does get worse when I bend over. I don't really have a specific trigger, but stretching helps a lot. It's been pretty annoying, but nothing too bad.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9994,
+        "contradiction": 0.0227
+      },
+      "duplicate_entailment": 0.9395,
+      "duplicate_similarity": 0.6493
+    },
+    {
+      "candidate": "I don't know if I need one, but I'm open to considering it if it would help figure out what's going on.",
+      "speaker": "Patient",
+      "coverage": 0.2611,
+      "nearest_so_sentence": "He is open to considering further imaging studies if it would help diagnose the current back pain.",
+      "statement": "The patient is open to considering an MRI or CT scan of the lumbar spine to further evaluate the spinal structures if it would help determine the cause of their symptoms.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I haven't had any MRI or CT scans of the lumbar spine since my surgery. I don't know if I need one, but I'm open to considering it if it would help figure out what's going on. I just want to get better and get back to feeling normal again.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9989,
+        "contradiction": 0.1195
+      },
+      "duplicate_entailment": 0.9508,
+      "duplicate_similarity": 0.6255
+    },
+    {
+      "candidate": "I don't know if I need one, but I'm open to considering it if it would help figure out what's going on.",
+      "speaker": "Patient",
+      "coverage": 0.2611,
+      "nearest_so_sentence": "He is open to considering further imaging studies if it would help diagnose the current back pain.",
+      "statement": "The patient is open to considering an MRI or CT scan of the lumbar spine if it would help determine the cause of their current symptoms.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I haven't had any MRI or CT scans of the lumbar spine since my surgery. I don't know if I need one, but I'm open to considering it if it would help figure out what's going on. I just want to get better and get back to feeling normal again.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.1385
+      },
+      "duplicate_entailment": 0.9602,
+      "duplicate_similarity": 0.6837
+    },
+    {
+      "candidate": "I just want to get better and get back to feeling normal again.",
+      "speaker": "Patient",
+      "coverage": 0.2665,
+      "nearest_so_sentence": "Stretching usually helps alleviate the pain.",
+      "statement": "The patient expresses a desire to recover and return to normal functioning.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I haven't had any MRI or CT scans of the lumbar spine since my surgery. I don't know if I need one, but I'm open to considering it if it would help figure out what's going on. I just want to get better and get back to feeling normal again.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0735
+      },
+      "duplicate_entailment": 0.9638,
+      "duplicate_similarity": 0.4009
+    },
+    {
+      "candidate": "I just want to get better and get back to feeling normal again.",
+      "speaker": "Patient",
+      "coverage": 0.2665,
+      "nearest_so_sentence": "Stretching usually helps alleviate the pain.",
+      "statement": "The patient reports wanting to get better and return to normal functioning.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I haven't had any MRI or CT scans of the lumbar spine since my surgery. I don't know if I need one, but I'm open to considering it if it would help figure out what's going on. I just want to get better and get back to feeling normal again.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0483
+      },
+      "duplicate_entailment": 0.989,
+      "duplicate_similarity": 0.4911
+    },
+    {
+      "candidate": "I have been to physical therapy before, but I don't go regularly.",
+      "speaker": "Patient",
+      "coverage": 0.2678,
+      "nearest_so_sentence": "Stretching usually helps alleviate the pain.",
+      "statement": "The patient reports having undergone physical therapy before, but does not attend regularly.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: I have been to physical therapy before, but I don't go regularly. I mean, I go sometimes, but not as much as I probably should. My therapist recommended some stretching and strengthening exercises, but I'm not sure if I've been doing them consistently. I know it's important, but it's easy to forget when you're busy with work and everything else.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0018
+      },
+      "duplicate_entailment": 0.1968,
+      "duplicate_similarity": 0.6011
+    },
+    {
+      "candidate": "It doesn't really happen at a specific time of day, but it's more likely when I'm active.",
+      "speaker": "Patient",
+      "coverage": 0.2702,
+      "nearest_so_sentence": "The pain is random, sometimes occurring without warning, and is worse when bending over.",
+      "statement": "The patient reports that the back pain is more likely to occur when they are active.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Doctor: Could you please specify the exact duration of the current back pain and whether there are any specific activities or times of day when the pain is more likely to occur?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.7843
+      }
+    },
+    {
+      "candidate": "It doesn't really happen at a specific time of day, but it's more likely when I'm active.",
+      "speaker": "Patient",
+      "coverage": 0.2702,
+      "nearest_so_sentence": "The pain is random, sometimes occurring without warning, and is worse when bending over.",
+      "statement": "The patient reports that the back pain is more likely to occur when they are active.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Doctor: Could you please specify the exact duration of the current back pain and whether there are any specific activities or times of day when the pain is more likely to occur?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.7843
+      }
+    },
+    {
+      "candidate": "It was a pretty horrible experience, but at least it wasn't the poop sac.",
+      "speaker": "Patient",
+      "coverage": 0.3208,
+      "nearest_so_sentence": "Patient had a microdiscectomy in November 2020 due to a broken disk that wrapped around his spinal thecal sac.",
+      "statement": "The patient reports that their previous experience was a \"horrible\" one, but they clarify that it was not related to a \"poop sac\".",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: Yes, I had back surgery in November of 2020. It was a microdiscectomy because my disk broke off and wrapped around my spinal thecal sac. It was a pretty horrible experience, but at least it wasn't the poop sac. I had a lot of nerve pain down my leg and in my back, and I was on a high dose of gabapentin for it. It was tough to get off of.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9993,
+        "contradiction": 0.0216
+      },
+      "duplicate_entailment": 0.9135,
+      "duplicate_similarity": 0.4062
+    },
+    {
+      "candidate": "No, I haven't experienced any new or worsening symptoms like increased pain, numbness, tingling, or weakness in my legs or feet since the surgery.",
+      "speaker": "Patient",
+      "coverage": 0.3572,
+      "nearest_so_sentence": "He is open to considering further imaging studies if it would help diagnose the current back pain.",
+      "statement": "The patient denies experiencing any new or worsening symptoms such as increased pain, numbness, tingling, or weakness in the legs or feet since the microdiscectomy.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Doctor: Have you experienced any new or worsening neurological symptoms, such as numbness, tingling, or weakness in your legs or feet since your microdiscectomy?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.203
+      },
+      "duplicate_entailment": 0.0662,
+      "duplicate_similarity": 0.5797,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 7,
+        "perplexity": 17.66,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "No, I haven't had any new neurological symptoms like numbness, tingling, or weakness in my legs or feet since the pain started.",
+      "speaker": "Patient",
+      "coverage": 0.3623,
+      "nearest_so_sentence": "The pain is random, sometimes occurring without warning, and is worse when bending over.",
+      "statement": "The patient denies experiencing any new neurological symptoms such as numbness, tingling, or weakness in their legs or feet since the onset of their current back pain.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: No, I haven't experienced any new or worsening neurological symptoms like numbness, tingling, or weakness in my legs or feet since the surgery. It's just been the back pain, mostly on the left side, and it happens randomly, especially when I bend over. Stretching helps, but it's been pretty annoying at times.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0316
+      },
+      "duplicate_entailment": 0.4118,
+      "duplicate_similarity": 0.5336,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 2,
+        "perplexity": 14.91,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "It was tough to get off of.",
+      "speaker": "Patient",
+      "coverage": 0.3646,
+      "nearest_so_sentence": "He was on high-dose gabapentin for nerve pain and had a difficult time getting off the medication.",
+      "statement": "It was tough to get off.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: Yes, I had back surgery in November of 2020. It was a microdiscectomy because my disk broke off and wrapped around my spinal thecal sac. It was a pretty horrible experience, but at least it wasn't the poop sac. I had a lot of nerve pain down my leg and in my back, and I was on a high dose of gabapentin for it. It was tough to get off of.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9844,
+        "contradiction": 0.0107
+      },
+      "first_rewrite_rejected": "The patient reports that it was tough to get off.",
+      "duplicate_entailment": 0.9991,
+      "duplicate_similarity": 0.3843
+    },
+    {
+      "candidate": "No, I haven't experienced any new or worsening neurological symptoms like numbness, tingling, or weakness in my legs or feet since the surgery.",
+      "speaker": "Patient",
+      "coverage": 0.3699,
+      "nearest_so_sentence": "Patient has not had any imaging studies (MRI or CT scans) since his surgery.",
+      "statement": "The patient denies experiencing any new or worsening neurological symptoms, such as numbness, tingling, or weakness in their legs or feet since the microdiscectomy.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Doctor: Have you experienced any new or worsening neurological symptoms, such as numbness, tingling, or weakness in your legs or feet since your microdiscectomy?",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0674
+      },
+      "duplicate_entailment": 0.2146,
+      "duplicate_similarity": 0.5894
+    },
+    {
+      "candidate": "The pattern hasn't really changed much since the surgery, just random occurrences, mostly on the left side.",
+      "speaker": "Patient",
+      "coverage": 0.3866,
+      "nearest_so_sentence": "Patient had a microdiscectomy in November 2020 due to a broken disk that wrapped around his spinal thecal sac.",
+      "statement": "The patient reports that the pattern of back pain has not changed much since the surgery, with random occurrences mostly on the left side.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I haven't experienced any new or worsening neurological symptoms like numbness, tingling, or weakness in my legs or feet since the surgery. It's just been the back pain, mostly on the left side, and it happens randomly, especially when I bend over. Stretching helps, but it's been pretty annoying at times.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0357
+      },
+      "duplicate_entailment": 0.971,
+      "duplicate_similarity": 0.7136
+    },
+    {
+      "candidate": "It also looked like my surgery site has healed properly.",
+      "speaker": "Patient",
+      "coverage": 0.3877,
+      "nearest_so_sentence": "Patient had a microdiscectomy in November 2020 due to a broken disk that wrapped around his spinal thecal sac.",
+      "statement": "The patient reports that the surgical site has healed properly.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: I don't have any imaging studies done since my surgery, but when I came in today, they took an X-ray and it showed that there are no fractures or issues with the spinal bone. It also looked like my surgery site has healed properly.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9992,
+        "contradiction": 0.9978
+      }
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 54,
+    "num_covered": 32,
+    "num_flagged": 22,
+    "num_not_checked_cap": 0,
+    "num_added": 4
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "It doesn't really happen at a specific time of day, but it's more likely when I'm active.",
+        "statement": "The patient reports that the back pain is more likely to occur when they are active.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.7843
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "It doesn't really happen at a specific time of day, but it's more likely when I'm active.",
+        "statement": "The patient reports that the back pain is more likely to occur when they are active.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.7843
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "It also looked like my surgery site has healed properly.",
+        "statement": "The patient reports that the surgical site has healed properly.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9992,
+          "contradiction": 0.9978
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 146.7,
+  "ap_unchanged": true,
+  "conversation": "Patient: I'm 35, male. I've been having some back pain again, especially on the left side. It's been bothering me for a while now, and I wanted to check in.\nDoctor: Could you please provide your age, gender, and describe the nature, duration, and any associated symptoms of your back pain?\nPatient: I'm 35, male. I've been having some back pain again, especially on the left side. It's been bothering me for a while now, and I wanted to check in. The pain is pretty random, sometimes it just happens, and it's worse when I bend over. My significant other says stretching helps, which it usually does.\nDoctor: Have you experienced any numbness, tingling, or weakness in your legs or feet associated with the back pain?\nPatient: No, I haven't had any numbness, tingling, or weakness in my legs or feet with the pain. It's more of a random back pain, mostly on the left side, and it's worse when I bend over. Stretching usually helps, though.\nDoctor: Have you experienced any prior injuries or conditions related to your back, such as previous fractures, herniated discs, or surgeries?\nPatient: Yes, I had back surgery in November of 2020. It was a microdiscectomy because my disk broke off and wrapped around my spinal thecal sac. It was a pretty horrible experience, but at least it wasn't the poop sac. I had a lot of nerve pain down my leg and in my back, and I was on a high dose of gabapentin for it. It was tough to get off of.\nDoctor: Have you undergone any imaging studies, such as an MRI or X-ray, since your 2020 microdiscectomy? If so, could you provide the dates and results of these examinations?\nPatient: I don't have any imaging studies done since my surgery, but when I came in today, they took an X-ray and it showed that there are no fractures or issues with the spinal bone. It also looked like my surgery site has healed properly.\nDoctor: Could you please describe the exact location of your back pain and whether it radiates to any other parts of your body, such as your legs or feet? Additionally, could you share more about how this pain affects your daily activities and if there are any specific triggers or patterns you've noticed?\nPatient: The pain is generally around where I had surgery, on the left side of my lower back. It doesn't really radiate down my legs, but it does happen randomly, and it's worse when I bend over. It affects me a bit during the day, especially if I'm doing things that require bending, but stretching usually helps. It's not constant, but it's enough to bother me sometimes.\nDoctor: Have you experienced any new neurological symptoms such as numbness, tingling, or weakness in your legs or feet since the onset of your current back pain?\nPatient: No, I haven't had any new neurological symptoms like numbness, tingling, or weakness in my legs or feet since the pain started. It's mostly just the back pain, and it's been pretty random, but it's worse when I bend over. Stretching helps, though.\nDoctor: Have you undergone any MRI or CT scans of the lumbar spine since your previous microdiscectomy? If not, would you be willing to consider one to further evaluate the spinal structures for potential recurrence or other pathology?\nPatient: No, I haven't had any MRI or CT scans of the lumbar spine since my surgery. I don't know if I need one, but I'm open to considering it if it would help figure out what's going on. I just want to get better and get back to feeling normal again.\nDoctor: Have you noticed any changes in the pattern or intensity of your back pain since your previous surgery? For example, has it become more frequent, severe, or is there any specific activity that seems to trigger it?\nPatient: The pain hasn't really changed much since the surgery, but it just happens randomly. It's not constant, but it does get worse when I bend over. I don't really have a specific trigger, but stretching helps a lot. It's been pretty annoying, but nothing too bad.\nDoctor: Could you please specify the exact duration of the current back pain and whether there are any specific activities or times of day when the pain is more likely to occur?\nPatient: The pain has been going on for a while, maybe a few months, but I can't say exactly. It tends to happen more when I'm doing things that require bending over, like picking something up off the floor. It doesn't really happen at a specific time of day, but it's more likely when I'm active. Stretching usually helps when it does happen.\nDoctor: Have you experienced any new or worsening neurological symptoms, such as numbness, tingling, or weakness in your legs or feet since your microdiscectomy?\nPatient: No, I haven't experienced any new or worsening neurological symptoms like numbness, tingling, or weakness in my legs or feet since the surgery. It's just been the back pain, mostly on the left side, and it happens randomly, especially when I bend over. Stretching helps, but it's been pretty annoying at times.\nDoctor: Could you please describe the exact duration of the back pain and any specific activities or movements that trigger it? Additionally, have you noticed any changes in the pattern or intensity of the pain over the past few months?\nPatient: The pain has been going on for a while, maybe a few months, but I can't say exactly. It tends to happen more when I'm doing things that require bending over, like picking something up off the floor. It doesn't really happen at a specific time of day, but it's more likely when I'm active. Stretching usually helps when it does happen. The pattern hasn't really changed much since the surgery, just random occurrences, mostly on the left side.\nDoctor: Has the patient undergone any recent imaging studies, such as an MRI or CT scan of the lumbar spine, since the microdiscectomy in November 2020?\nPatient: No, I haven't had any MRI or CT scans of the lumbar spine since my surgery. I don't know if I need one, but I'm open to considering it if it would help figure out what's going on. I just want to get better and get back to feeling normal again.\nDoctor: Have you undergone any physical therapy or rehabilitation exercises since your microdiscectomy in November 2020? If so, what type of exercises were recommended, and have you been consistently following them?\nPatient: I have been to physical therapy before, but I don't go regularly. I mean, I go sometimes, but not as much as I probably should. My therapist recommended some stretching and strengthening exercises, but I'm not sure if I've been doing them consistently. I know it's important, but it's easy to forget when you're busy with work and everything else.\nDoctor: Have you experienced any new or worsening symptoms since your last microdiscectomy, such as increased pain, numbness, tingling, or weakness in your legs or feet?\nPatient: No, I haven't experienced any new or worsening symptoms like increased pain, numbness, tingling, or weakness in my legs or feet since the surgery. It's just been the back pain, mostly on the left side, and it happens randomly, especially when I bend over. Stretching helps, but it's been pretty annoying at times.",
+  "reference_so": {
+    "subjective": "Basic information: 35-year-old male with left-sided back pain\n\nHistory of present illness: Left-sided back pain for an unspecified duration, worsening with bending; pain is intermittent and sometimes spontaneous; stretching provides relief. No numbness, tingling, or weakness in the legs or feet associated with the pain. The patient reports that the pain has not significantly changed since the surgery, but it occurs randomly and is worse when bending over. Stretching helps, though. The patient estimates the pain has been present for a few months and is more likely to occur when active, particularly with bending over.\n\nPast history: Previous microdiscectomy in November 2020 for a herniated disc wrapping around the spinal thecal sac; experienced significant nerve pain down the leg and back, managed with high-dose gabapentin. The patient has a history of physical therapy following the surgery but has not been adhering consistently to the recommended exercises.",
+    "objective": "Physical examination: Physical examination findings are pending collection. The patient reports localized left-sided lower back pain without radiation to the legs. No neurological deficits were noted during the initial assessment.\n\nInvestigations: Recent X-ray showed no fractures or issues with the spinal bone and confirmed proper healing of the surgery site. No recent MRI or CT scans of the lumbar spine have been performed since the microdiscectomy."
+  }
+}

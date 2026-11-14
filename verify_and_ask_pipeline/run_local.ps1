@@ -1,5 +1,5 @@
-# Run the pipeline on this PC. The LLM runs on the friend's GPU server; everything else (NLI, embeddings,
-# GPT-2, scoring) runs locally, and all outputs are saved under this folder.
+# Run the pipeline on this PC. Llama-3, DeBERTa NLI and MiniLM run on the GPU server (via SSH tunnel to
+# localhost:8000); GPT-2 and scoring run locally, and all outputs are saved under this folder.
 #
 #   .\run_local.ps1 setup            # one time: venv (Python 3.12) + dependencies
 #   .\run_local.ps1 check            # test the LLM server (reachable? context large enough?)
@@ -8,7 +8,7 @@
 #   .\run_local.ps1 stage23 [extra args]
 #   .\run_local.ps1 eval    [extra args, e.g. --split dev]
 #
-# The API key is never stored: set $env:LLM_API_KEY first, or you will be asked for it.
+# The API key is never stored: set $env:API_KEY first, or you will be asked for it.
 param(
     [Parameter(Mandatory = $true)][ValidateSet("setup", "check", "prepare", "stage1", "stage23", "eval")][string]$Step,
     [Parameter(ValueFromRemainingArguments = $true)][string[]]$Rest
@@ -28,33 +28,30 @@ if ($Step -eq "setup") {
 
 if (-not (Test-Path $Py)) { throw "Run '.\run_local.ps1 setup' first." }
 
-# ---- server settings (edit the URL if it changes) ----
-if (-not $env:LLM_BASE_URL) { $env:LLM_BASE_URL = "http://10.2.236.141:8080/v1" }
-if (-not $env:LLM_MODEL)    { $env:LLM_MODEL = "llama3" }
-if (-not $env:LLM_API_KEY) {
-    $secure = Read-Host "LLM API key" -AsSecureString
-    $env:LLM_API_KEY = [Runtime.InteropServices.Marshal]::PtrToStringAuto(
+# ---- server: all three models on ONE server, reached through an SSH tunnel to localhost:8000 ----
+# In a separate terminal, keep this open while running:
+#   ssh -N -L 8000:localhost:8000 -J jyothika.goparaju@ada-gw1.iiit.ac.in jyothika.goparaju@gnode087
+# One Bearer API key for all endpoints (never stored in a file): set $env:API_KEY first, or you will be asked.
+if (-not $env:API_KEY) {
+    $secure = Read-Host "API key" -AsSecureString
+    $env:API_KEY = [Runtime.InteropServices.Marshal]::PtrToStringAuto(
         [Runtime.InteropServices.Marshal]::SecureStringToBSTR($secure))
 }
+$env:LLM_BASE_URL   = "http://localhost:8000/v1"
+$env:LLM_MODEL      = "llama3"
+$env:LLM_API_KEY    = $env:API_KEY
+$env:NLI_BASE_URL   = "http://localhost:8000"
+$env:NLI_API_KEY    = $env:API_KEY
+$env:EMBED_BASE_URL = "http://localhost:8000"
+$env:EMBED_API_KEY  = $env:API_KEY
 
-# ---- NLI server (DeBERTa on the friend's GPU); set NLI_BASE_URL to "" to load DeBERTa locally instead ----
-if ($null -eq $env:NLI_BASE_URL) { $env:NLI_BASE_URL = "http://10.2.236.141:8081" }
-if ($env:NLI_BASE_URL -and -not $env:NLI_API_KEY) {
-    $secure = Read-Host "NLI API key" -AsSecureString
-    $env:NLI_API_KEY = [Runtime.InteropServices.Marshal]::PtrToStringAuto(
-        [Runtime.InteropServices.Marshal]::SecureStringToBSTR($secure))
-}
-
-# ---- embedding server (MiniLM on the friend's GPU, no key); set EMBED_BASE_URL to "" to load MiniLM locally ----
-if ($null -eq $env:EMBED_BASE_URL) { $env:EMBED_BASE_URL = "http://10.2.236.141:8082" }
-
-# ---- local paths: everything stays in this folder ----
-$S1 = Join-Path $Root "stage1_pipeline\stage1_colab_project"
-$RQ = Join-Path $Root "rq1_pipeline"
-$env:DATASET_ROOT       = Join-Path $Root "agentic-pipeline-output\soap_notes"
-$env:STAGE1_OUTPUT_DIR  = Join-Path $Root "stage1_pipeline\stage1"
+# ---- local paths: 207-case dataset, outputs added to the existing folders ----
+$S1 = Join-Path $Root "stage1_pipeline\stage1_code"
+$RQ = Join-Path $Root "Stage23_pipeline\code"
+$env:DATASET_ROOT       = Join-Path (Split-Path $Root -Parent) "soap_notes_207\agentic-pipeline-output\soap_notes"
+$env:STAGE1_OUTPUT_DIR  = Join-Path $Root "stage1_pipeline\stage1_output"
 $env:STAGE1_OUTPUT_JSON = Join-Path $env:STAGE1_OUTPUT_DIR "stage1_output.json"
-$env:RQ1_OUTPUT_DIR     = Join-Path $RQ "output"
+$env:RQ1_OUTPUT_DIR     = Join-Path $Root "Stage23_pipeline\output"
 
 switch ($Step) {
     "check"   { Push-Location $RQ; & $Py check_llm.py; Pop-Location }

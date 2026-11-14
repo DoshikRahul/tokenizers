@@ -1,0 +1,558 @@
+{
+  "case_id": "D2N157",
+  "split": "test",
+  "stage1_so": {
+    "subjective": "* The patient is a 62-year-old male who had a heart attack six months ago and is currently taking aspirin, Brilinta, and fish oil.\n* He reports mild puffiness in his legs, which he attributes to his medications.\n* He stopped taking Crestor due to muscle aches, but did not consult a doctor about it.\n* He has not experienced any new or worsening symptoms since stopping Crestor.\n* He reports no changes in exercise tolerance, fatigue, or swelling in his legs.\n* He has not noticed any changes in his appetite or weight.\n* He experiences dizziness when standing up quickly, which is relieved by standing up slowly.\n* He has measured his blood pressure and found that it drops by 15/10 mmHg when standing up, indicating orthostatic hypotension.",
+    "objective": "* Blood pressure readings: 120/80 mmHg (lying down), 105/70 mmHg (standing up)"
+  },
+  "stage2_so": {
+    "subjective": "* The patient is a 62-year-old male who had a heart attack six months ago and is currently taking aspirin, Brilinta, and fish oil.\n* He reports mild puffiness in his legs, which he attributes to his medications.\n* He stopped taking Crestor due to muscle aches, but did not consult a doctor about it.\n* He has not experienced any new or worsening symptoms since stopping Crestor.\n* He reports no changes in exercise tolerance, fatigue, or swelling in his legs.\n* He has not noticed any changes in his appetite or weight.\n* He experiences dizziness when standing up quickly, which is relieved by standing up slowly.\n* He has measured his blood pressure and found that it drops by 15/10 mmHg when standing up, indicating orthostatic hypotension.",
+    "objective": "* Blood pressure readings: 120/80 mmHg (lying down), 105/70 mmHg (standing up)"
+  },
+  "stage3_so": {
+    "subjective": "* The patient reports that the dizziness lasts for a few seconds or up to a minute.\n* The patient reports that the leg puffiness does not bother them too much.\n* The patient reports desiring a check-in to ensure their overall well-being and to inquire about any additional measures they should be taking.\n* The patient is a 62-year-old male who had a heart attack six months ago and is currently taking aspirin, Brilinta, and fish oil.\n* He reports mild puffiness in his legs, which he attributes to his medications.\n* He stopped taking Crestor due to muscle aches, but did not consult a doctor about it.\n* He has not experienced any new or worsening symptoms since stopping Crestor.\n* He reports no changes in exercise tolerance, fatigue, or swelling in his legs.\n* He has not noticed any changes in his appetite or weight.\n* He experiences dizziness when standing up quickly, which is relieved by standing up slowly.\n* He has measured his blood pressure and found that it drops by 15/10 mmHg when standing up, indicating orthostatic hypotension.",
+    "objective": "* The patient agrees to check their blood pressure while lying down and then after standing up for 1 minute.\n* The patient retrieved the blood pressure cuff.\n* Blood pressure readings: 120/80 mmHg (lying down), 105/70 mmHg (standing up)"
+  },
+  "stage1_ap": {
+    "assessment": "* The patient has orthostatic hypotension, which is likely related to his beta-blocker medication.\n* The patient's leg puffiness is likely related to his medications, but the exact cause is unclear.\n* The patient has not experienced any new or worsening symptoms since stopping Crestor.",
+    "plan": "* The patient will continue to monitor his blood pressure and report any changes to his healthcare provider.\n* The patient will be advised to increase his fluid intake to help manage his orthostatic hypotension.\n* The patient will be advised to continue taking his medications as prescribed and to report any changes in his symptoms or blood pressure to his healthcare provider."
+  },
+  "stage2_audit": [
+    {
+      "claim": "The patient is a 62-year-old male who had a heart attack six months ago and is currently taking aspirin, Brilinta, and fish oil.",
+      "scores": {
+        "entailment": 0.9828,
+        "neutral": 0.0125,
+        "contradiction": 0.0047
+      },
+      "support_evidence": "Patient: I'm 62 years old, and I'm male. I'm here because I had a heart attack about six months ago, and I've been on a bunch of medications since then. I just wanted to check in and make sure I'm doing okay and see if there's anything else I need to be doing.",
+      "contradiction_evidence": "Patient: I'm 62 years old, and I'm male. I'm here because I had a heart attack about six months ago, and I've been on a bunch of medications since then. I just wanted to check in and make sure I'm doing okay and see if there's anything else I need to be doing.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "The patient is a 62-year-old male who had a heart attack six months ago and is currently taking aspirin, Brilinta, and fish oil.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 0,
+      "sentence": "The patient is a 62-year-old male who had a heart attack six months ago and is currently taking aspirin, Brilinta, and fish oil.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He reports mild puffiness in his legs, which he attributes to his medications.",
+      "scores": {
+        "entailment": 0.9993,
+        "neutral": 0.0004,
+        "contradiction": 0.0591
+      },
+      "support_evidence": "Patient: No, I haven't noticed any changes in my exercise tolerance, fatigue, or swelling in my legs since I stopped taking Crestor. I do have some mild puffiness in my legs, but I think that might be from the medications I'm on. I don't feel like I'm having any trouble with my breathing or getting tired more easily than before.",
+      "contradiction_evidence": "Doctor: Thank you for providing those blood pressure readings. It's good that you've measured them. Given the orthostatic hypotension you've confirmed, I'd like to understand if you've experienced any falls or near-falls due to the dizziness, and if you've made any lifestyle adjustments to manage this, such as increasing fluid intake or adjusting your medications. Additionally, have you noticed any changes in your leg puffiness or any other symptoms since you stopped taking Crestor?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He reports mild puffiness in his legs, which he attributes to his medications.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 1,
+      "sentence": "He reports mild puffiness in his legs, which he attributes to his medications.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He stopped taking Crestor due to muscle aches, but did not consult a doctor about it.",
+      "scores": {
+        "entailment": 0.9995,
+        "neutral": 0.0003,
+        "contradiction": 0.9949
+      },
+      "support_evidence": "Patient: I don't remember seeing a doctor specifically about the muscle aches from Crestor. I just stopped taking it on my own because of the discomfort, and I haven't talked to anyone about switching to another statin or managing that issue.",
+      "contradiction_evidence": "Doctor: Thank you for providing those blood pressure readings. It's good that you've measured them. Given the orthostatic hypotension you've confirmed, I'd like to understand if you've experienced any falls or near-falls due to the dizziness, and if you've made any lifestyle adjustments to manage this, such as increasing fluid intake or adjusting your medications. Additionally, have you noticed any changes in your leg puffiness or any other symptoms since you stopped taking Crestor?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He stopped taking Crestor due to muscle aches, but did not consult a doctor about it.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 2,
+      "sentence": "He stopped taking Crestor due to muscle aches, but did not consult a doctor about it.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has not experienced any new or worsening symptoms since stopping Crestor.",
+      "scores": {
+        "entailment": 0.9982,
+        "neutral": 0.0014,
+        "contradiction": 0.7607
+      },
+      "support_evidence": "Doctor: Thank you for providing those blood pressure readings. It's good that you've measured them. Given the orthostatic hypotension you've confirmed, I'd like to understand if you've experienced any falls or near-falls due to the dizziness, and if you've made any lifestyle adjustments to manage this, such as increasing fluid intake or adjusting your medications. Additionally, have you noticed any changes in your leg puffiness or any other symptoms since you stopped taking Crestor?",
+      "contradiction_evidence": "Doctor: Thank you for providing those blood pressure readings. It's good that you've measured them. Given the orthostatic hypotension you've confirmed, I'd like to understand if you've experienced any falls or near-falls due to the dizziness, and if you've made any lifestyle adjustments to manage this, such as increasing fluid intake or adjusting your medications. Additionally, have you noticed any changes in your leg puffiness or any other symptoms since you stopped taking Crestor?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has not experienced any new or worsening symptoms since stopping Crestor.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 3,
+      "sentence": "He has not experienced any new or worsening symptoms since stopping Crestor.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He reports no changes in exercise tolerance, fatigue, or swelling in his legs.",
+      "scores": {
+        "entailment": 0.9996,
+        "neutral": 0.0002,
+        "contradiction": 0.8487
+      },
+      "support_evidence": "Patient: No, I haven't noticed any changes in my exercise tolerance, fatigue, or swelling in my legs since I stopped taking Crestor. I do have some mild puffiness in my legs, but I think that might be from the medications I'm on. I don't feel like I'm having any trouble with my breathing or getting tired more easily than before.",
+      "contradiction_evidence": "Patient: No, I haven't noticed any changes in my appetite or weight recently. I eat about the same as I always have, and I don't feel like I've gained or lost any weight. My appetite seems normal.",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He reports no changes in exercise tolerance, fatigue, or swelling in his legs.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 4,
+      "sentence": "He reports no changes in exercise tolerance, fatigue, or swelling in his legs.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has not noticed any changes in his appetite or weight.",
+      "scores": {
+        "entailment": 0.9967,
+        "neutral": 0.0019,
+        "contradiction": 0.2338
+      },
+      "support_evidence": "Patient: No, I haven't noticed any changes in my appetite or weight recently. I eat about the same as I always have, and I don't feel like I've gained or lost any weight. My appetite seems normal.",
+      "contradiction_evidence": "Doctor: Could you please describe any other symptoms you might be experiencing, such as fatigue, shortness of breath, or changes in your appetite or weight? Also, have you noticed any changes in your ability to perform physical activities or any new symptoms since your last follow-up?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has not noticed any changes in his appetite or weight.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 5,
+      "sentence": "He has not noticed any changes in his appetite or weight.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He experiences dizziness when standing up quickly, which is relieved by standing up slowly.",
+      "scores": {
+        "entailment": 0.9994,
+        "neutral": 0.0004,
+        "contradiction": 0.0072
+      },
+      "support_evidence": "Patient: I can try that. Let me get my blood pressure cuff. Okay, when I'm lying down, my blood pressure is around 120 over 80. Then, after I stand up for a minute, it drops to about 105 over 70. That's when I feel the dizziness.",
+      "contradiction_evidence": "Doctor: Could you please describe any other symptoms you might be experiencing, such as fatigue, shortness of breath, or changes in your appetite or weight? Also, have you noticed any changes in your ability to perform physical activities or any new symptoms since your last follow-up?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He experiences dizziness when standing up quickly, which is relieved by standing up slowly.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 6,
+      "sentence": "He experiences dizziness when standing up quickly, which is relieved by standing up slowly.",
+      "level": "sentence"
+    },
+    {
+      "claim": "He has measured his blood pressure and found that it drops by 15/10 mmHg when standing up, indicating orthostatic hypotension.",
+      "scores": {
+        "entailment": 0.9991,
+        "neutral": 0.0003,
+        "contradiction": 0.2435
+      },
+      "support_evidence": "Doctor: Thank you for providing those blood pressure readings. It's good that you've measured them. Given the orthostatic hypotension you've confirmed, I'd like to understand if you've experienced any falls or near-falls due to the dizziness, and if you've made any lifestyle adjustments to manage this, such as increasing fluid intake or adjusting your medications. Additionally, have you noticed any changes in your leg puffiness or any other symptoms since you stopped taking Crestor?",
+      "contradiction_evidence": "Doctor: Could you please describe the exact timing and duration of the dizziness you experience when standing up? Additionally, have you measured your blood pressure when lying down and when standing up to check for orthostatic hypotension?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "He has measured his blood pressure and found that it drops by 15/10 mmHg when standing up, indicating orthostatic hypotension.",
+      "reason": "Entailed by the conversation.",
+      "section": "subjective",
+      "line": 7,
+      "sentence": "He has measured his blood pressure and found that it drops by 15/10 mmHg when standing up, indicating orthostatic hypotension.",
+      "level": "sentence"
+    },
+    {
+      "claim": "Blood pressure readings: 120/80 mmHg (lying down), 105/70 mmHg (standing up)",
+      "scores": {
+        "entailment": 0.996,
+        "neutral": 0.0024,
+        "contradiction": 0.0092
+      },
+      "support_evidence": "Patient: I can try that. Let me get my blood pressure cuff. Okay, when I'm lying down, my blood pressure is around 120 over 80. Then, after I stand up for a minute, it drops to about 105 over 70. That's when I feel the dizziness.",
+      "contradiction_evidence": "Doctor: Could you please describe the exact timing and duration of the dizziness you experience when standing up? Additionally, have you measured your blood pressure when lying down and when standing up to check for orthostatic hypotension?",
+      "corrected_text": null,
+      "flagged": false,
+      "decision": "supported",
+      "keep": true,
+      "output": "Blood pressure readings: 120/80 mmHg (lying down), 105/70 mmHg (standing up)",
+      "reason": "Entailed by the conversation.",
+      "section": "objective",
+      "line": 0,
+      "sentence": "Blood pressure readings: 120/80 mmHg (lying down), 105/70 mmHg (standing up)",
+      "level": "sentence"
+    }
+  ],
+  "stage2_stats": {
+    "decision_counts": {
+      "supported": 9
+    },
+    "num_claims": 9,
+    "num_kept": 9,
+    "claim_retention_rate": 1.0
+  },
+  "stage3_added": [
+    {
+      "statement": "The patient agrees to check their blood pressure while lying down and then after standing up for 1 minute.",
+      "evidence": "Patient: I can try that. Let me get my blood pressure cuff. Okay, when I'm lying down, my blood pressure is around 120 over 80. Then, after I stand up for a minute, it drops to about 105 over 70. That's when I feel the dizziness.",
+      "section": "objective",
+      "candidate": "I can try that."
+    },
+    {
+      "statement": "The patient reports desiring a check-in to ensure their overall well-being and to inquire about any additional measures they should be taking.",
+      "evidence": "Patient: I'm 62 years old, and I'm male. I'm here because I had a heart attack about six months ago, and I've been on a bunch of medications since then. I just wanted to check in and make sure I'm doing okay and see if there's anything else I need to be doing.",
+      "section": "subjective",
+      "candidate": "I just wanted to check in and make sure I'm doing okay and see if there's anything else I need to be doing."
+    },
+    {
+      "statement": "The patient reports that the dizziness lasts for a few seconds or up to a minute.",
+      "evidence": "Patient: The dizziness happens pretty quickly when I stand up, like within a few seconds. It doesn't last too long, just a few seconds or maybe a minute. I haven't really checked my blood pressure when lying down and standing up, but I guess I could try that. I didn't think about it before.",
+      "section": "subjective",
+      "candidate": "It doesn't last too long, just a few seconds or maybe a minute."
+    },
+    {
+      "statement": "The patient reports that the leg puffiness does not bother them too much.",
+      "evidence": "Patient: The puffiness in my legs has been pretty consistent, and I don't really notice it being worse in the morning or evening. It's just a little puffiness, and I haven't noticed any changes in the color or temperature of my legs. It doesn't really bother me too much.",
+      "section": "subjective",
+      "candidate": "It doesn't really bother me too much."
+    },
+    {
+      "statement": "The patient retrieved the blood pressure cuff.",
+      "evidence": "Patient: I can try that. Let me get my blood pressure cuff. Okay, when I'm lying down, my blood pressure is around 120 over 80. Then, after I stand up for a minute, it drops to about 105 over 70. That's when I feel the dizziness.",
+      "section": "objective",
+      "candidate": "Let me get my blood pressure cuff."
+    }
+  ],
+  "stage3_candidate_log": [
+    {
+      "candidate": "I can try that.",
+      "speaker": "Patient",
+      "coverage": 0.0073,
+      "nearest_so_sentence": "He stopped taking Crestor due to muscle aches, but did not consult a doctor about it.",
+      "statement": "The patient agrees to check their blood pressure while lying down and then after standing up for 1 minute.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I can try that. Let me get my blood pressure cuff. Okay, when I'm lying down, my blood pressure is around 120 over 80. Then, after I stand up for a minute, it drops to about 105 over 70. That's when I feel the dizziness.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0025
+      },
+      "duplicate_entailment": 0.0084,
+      "duplicate_similarity": 0.6227,
+      "insertion": {
+        "section": "objective",
+        "line_index": 0,
+        "perplexity": 25.62,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I didn't think about it before.",
+      "speaker": "Patient",
+      "coverage": 0.0867,
+      "nearest_so_sentence": "He has not noticed any changes in his appetite or weight.",
+      "statement": "The patient reports not having thought about the timing and duration of their dizziness when standing up.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: The dizziness happens pretty quickly when I stand up, like within a few seconds. It doesn't last too long, just a few seconds or maybe a minute. I haven't really checked my blood pressure when lying down and standing up, but I guess I could try that. I didn't think about it before.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.9909
+      }
+    },
+    {
+      "candidate": "I'm 62 years old, and I'm male.",
+      "speaker": "Patient",
+      "coverage": 0.0906,
+      "nearest_so_sentence": "Blood pressure readings: 120/80 mmHg (lying down), 105/70 mmHg (standing up)",
+      "statement": "The patient is 62 years old and male.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: I'm 62 years old, and I'm male. I'm here because I had a heart attack about six months ago, and I've been on a bunch of medications since then. I just wanted to check in and make sure I'm doing okay and see if there's anything else I need to be doing.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9984,
+        "contradiction": 0.0004
+      },
+      "duplicate_entailment": 0.9987,
+      "duplicate_similarity": 0.5424
+    },
+    {
+      "candidate": "I just wanted to check in and make sure I'm doing okay and see if there's anything else I need to be doing.",
+      "speaker": "Patient",
+      "coverage": 0.1135,
+      "nearest_so_sentence": "Blood pressure readings: 120/80 mmHg (lying down), 105/70 mmHg (standing up)",
+      "statement": "The patient reports desiring a check-in to ensure their overall well-being and to inquire about any additional measures they should be taking.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I'm 62 years old, and I'm male. I'm here because I had a heart attack about six months ago, and I've been on a bunch of medications since then. I just wanted to check in and make sure I'm doing okay and see if there's anything else I need to be doing.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0094
+      },
+      "duplicate_entailment": 0.0006,
+      "duplicate_similarity": 0.2811,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 15.75,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "It doesn't last too long, just a few seconds or maybe a minute.",
+      "speaker": "Patient",
+      "coverage": 0.1644,
+      "nearest_so_sentence": "He has not experienced any new or worsening symptoms since stopping Crestor.",
+      "statement": "The patient reports that the dizziness lasts for a few seconds or up to a minute.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: The dizziness happens pretty quickly when I stand up, like within a few seconds. It doesn't last too long, just a few seconds or maybe a minute. I haven't really checked my blood pressure when lying down and standing up, but I guess I could try that. I didn't think about it before.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.1237
+      },
+      "duplicate_entailment": 0.0004,
+      "duplicate_similarity": 0.6623,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 0,
+        "perplexity": 14.66,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "I don't see stars or anything like that.",
+      "speaker": "Patient",
+      "coverage": 0.1688,
+      "nearest_so_sentence": "He has not noticed any changes in his appetite or weight.",
+      "statement": "The patient reports not seeing stars or any other visual disturbances.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: No, I haven't noticed any lightheadedness, fainting spells, or changes in my vision or balance other than the dizziness when I stand up quickly. It's just that brief feeling of being off-balance, and it goes away pretty fast. I don't see stars or anything like that.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.3655
+      }
+    },
+    {
+      "candidate": "It doesn't really bother me too much.",
+      "speaker": "Patient",
+      "coverage": 0.1927,
+      "nearest_so_sentence": "He reports mild puffiness in his legs, which he attributes to his medications.",
+      "statement": "The patient reports that the leg puffiness does not bother them too much.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: The puffiness in my legs has been pretty consistent, and I don't really notice it being worse in the morning or evening. It's just a little puffiness, and I haven't noticed any changes in the color or temperature of my legs. It doesn't really bother me too much.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9998,
+        "contradiction": 0.0114
+      },
+      "duplicate_entailment": 0.0005,
+      "duplicate_similarity": 0.7047,
+      "insertion": {
+        "section": "subjective",
+        "line_index": 1,
+        "perplexity": 14.14,
+        "removed_placeholder": []
+      }
+    },
+    {
+      "candidate": "It doesn't really bother me too much.",
+      "speaker": "Patient",
+      "coverage": 0.1927,
+      "nearest_so_sentence": "He reports mild puffiness in his legs, which he attributes to his medications.",
+      "statement": "The patient reports that the leg puffiness does not bother them too much.",
+      "status": "rejected_duplicate",
+      "reason": "Duplicate of another added statement.",
+      "evidence": "Patient: The puffiness in my legs has been pretty consistent, and I don't really notice it being worse in the morning or evening. It's just a little puffiness, and I haven't noticed any changes in the color or temperature of my legs. It doesn't really bother me too much.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9998,
+        "contradiction": 0.0114
+      },
+      "duplicate_entailment": 0.0005,
+      "duplicate_similarity": 0.7047
+    },
+    {
+      "candidate": "I don't feel like it's gotten any worse.",
+      "speaker": "Patient",
+      "coverage": 0.197,
+      "nearest_so_sentence": "He has not experienced any new or worsening symptoms since stopping Crestor.",
+      "statement": "The patient reports that their leg swelling has not worsened since stopping Crestor.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I haven't noticed any changes in my leg swelling or if it has worsened since I stopped taking Crestor. It's been pretty consistent, and I think it's just a little puffiness, probably from the medications I'm on. I don't feel like it's gotten any worse.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0062
+      },
+      "duplicate_entailment": 0.9987,
+      "duplicate_similarity": 0.7067
+    },
+    {
+      "candidate": "I don't feel like I'm having any trouble with my breathing or getting tired more easily than before.",
+      "speaker": "Patient",
+      "coverage": 0.3031,
+      "nearest_so_sentence": "He reports mild puffiness in his legs, which he attributes to his medications.",
+      "statement": "The patient denies experiencing any changes in exercise tolerance or new symptoms such as fatigue, swelling in the legs, or difficulty breathing with activity.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I haven't noticed any changes in my exercise tolerance, fatigue, or swelling in my legs since I stopped taking Crestor. I do have some mild puffiness in my legs, but I think that might be from the medications I'm on. I don't feel like I'm having any trouble with my breathing or getting tired more easily than before.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9995,
+        "contradiction": 0.135
+      },
+      "duplicate_entailment": 0.9177,
+      "duplicate_similarity": 0.7591
+    },
+    {
+      "candidate": "I don't feel like I'm having any trouble with my breathing or getting tired more easily than before.",
+      "speaker": "Patient",
+      "coverage": 0.3031,
+      "nearest_so_sentence": "He reports mild puffiness in his legs, which he attributes to his medications.",
+      "statement": "The patient reports not experiencing any trouble with his breathing or getting tired more easily than before.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I haven't noticed any changes in my exercise tolerance, fatigue, or swelling in my legs since I stopped taking Crestor. I do have some mild puffiness in my legs, but I think that might be from the medications I'm on. I don't feel like I'm having any trouble with my breathing or getting tired more easily than before.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.0106
+      },
+      "duplicate_entailment": 0.8782,
+      "duplicate_similarity": 0.562
+    },
+    {
+      "candidate": "I don't have chest pain or shortness of breath, and I feel okay overall.",
+      "speaker": "Patient",
+      "coverage": 0.3169,
+      "nearest_so_sentence": "He stopped taking Crestor due to muscle aches, but did not consult a doctor about it.",
+      "statement": "The patient denies experiencing chest pain or shortness of breath, and reports feeling overall okay.",
+      "status": "rejected_duplicate",
+      "reason": "Already represented in the verified S/O.",
+      "evidence": "Patient: No, I haven't had any new or worsening symptoms since I stopped taking Crestor. I do get dizzy when I stand up too fast, but I think that's more related to the beta-blocker I'm on. I don't have chest pain or shortness of breath, and I feel okay overall.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9997,
+        "contradiction": 0.0047
+      },
+      "duplicate_entailment": 0.8472,
+      "duplicate_similarity": 0.4296
+    },
+    {
+      "candidate": "I feel about the same as before, and I don't have any shortness of breath or fatigue that's different from what I've been experiencing.",
+      "speaker": "Patient",
+      "coverage": 0.3331,
+      "nearest_so_sentence": "He has not experienced any new or worsening symptoms since stopping Crestor.",
+      "statement": "The patient reports feeling the same as before and denies experiencing any shortness of breath or fatigue that is different from what they have been experiencing.",
+      "status": "rejected_unsupported",
+      "reason": "Rewritten statement is not entailed by the conversation.",
+      "evidence": "Patient: No, I haven't had any new or worsening symptoms since I stopped taking Crestor. I do get dizzy when I stand up too fast, but I think that's more related to the beta-blocker I'm on. I don't have chest pain or shortness of breath, and I feel okay overall.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9996,
+        "contradiction": 0.9373
+      }
+    },
+    {
+      "candidate": "Let me get my blood pressure cuff.",
+      "speaker": "Patient",
+      "coverage": 0.3611,
+      "nearest_so_sentence": "Blood pressure readings: 120/80 mmHg (lying down), 105/70 mmHg (standing up)",
+      "statement": "The patient retrieved the blood pressure cuff.",
+      "status": "validated",
+      "reason": "Supported by the conversation and not already in the S/O.",
+      "evidence": "Patient: I can try that. Let me get my blood pressure cuff. Okay, when I'm lying down, my blood pressure is around 120 over 80. Then, after I stand up for a minute, it drops to about 105 over 70. That's when I feel the dizziness.",
+      "scores_vs_dialogue": {
+        "entailment": 0.9998,
+        "contradiction": 0.0089
+      },
+      "duplicate_entailment": 0.1228,
+      "duplicate_similarity": 0.442,
+      "insertion": {
+        "section": "objective",
+        "line_index": 1,
+        "perplexity": 22.7,
+        "removed_placeholder": []
+      }
+    }
+  ],
+  "stage3_stats": {
+    "num_candidates": 48,
+    "num_covered": 34,
+    "num_flagged": 14,
+    "num_not_checked_cap": 0,
+    "num_added": 5
+  },
+  "gaps": {
+    "gaps": [],
+    "dropped": [],
+    "num_generated": 0
+  },
+  "unsupported_claims": {
+    "removed_stage2": [],
+    "flagged_kept_stage2": [],
+    "rejected_stage3": [
+      {
+        "stage": "stage3",
+        "candidate": "I didn't think about it before.",
+        "statement": "The patient reports not having thought about the timing and duration of their dizziness when standing up.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9995,
+          "contradiction": 0.9909
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I don't see stars or anything like that.",
+        "statement": "The patient reports not seeing stars or any other visual disturbances.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9997,
+          "contradiction": 0.3655
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      },
+      {
+        "stage": "stage3",
+        "candidate": "I feel about the same as before, and I don't have any shortness of breath or fatigue that's different from what I've been experiencing.",
+        "statement": "The patient reports feeling the same as before and denies experiencing any shortness of breath or fatigue that is different from what they have been experiencing.",
+        "decision": "rejected_unsupported",
+        "scores": {
+          "entailment": 0.9996,
+          "contradiction": 0.9373
+        },
+        "reason": "Rewritten statement is not entailed by the conversation."
+      }
+    ]
+  },
+  "thresholds": {
+    "TE": 0.9,
+    "TA": 0.5,
+    "TCONTRA": 0.5,
+    "COV_MIN": 0.4,
+    "UNSUPPORTED_POLICY": "remove"
+  },
+  "status": "success",
+  "seconds": 114.6,
+  "ap_unchanged": true,
+  "conversation": "Patient: I'm 62 years old, and I'm male. I'm here because I had a heart attack about six months ago, and I've been on a bunch of medications since then. I just wanted to check in and make sure I'm doing okay and see if there's anything else I need to be doing.\nDoctor: Could you please provide more details about the medications you are currently taking following your heart attack?\nPatient: Sure, I'm still taking my aspirin and Brilinta, and I also take fish oil. I was on a statin called Crestor before, but I'm not sure if I'm still on it. I had some muscle aches with it, so I might have stopped.\nDoctor: Could you please clarify if you have seen a healthcare provider about the muscle aches you experienced with Crestor, and whether you were advised to discontinue it or switch to another statin?\nPatient: I don't remember seeing a doctor specifically about the muscle aches from Crestor. I just stopped taking it on my own because of the discomfort, and I haven't talked to anyone about switching to another statin or managing that issue.\nDoctor: Has the patient experienced any new or worsening symptoms since discontinuing Crestor, such as chest pain, shortness of breath, or fatigue?\nPatient: No, I haven't had any new or worsening symptoms since I stopped taking Crestor. I do get dizzy when I stand up too fast, but I think that's more related to the beta-blocker I'm on. I don't have chest pain or shortness of breath, and I feel okay overall.\nDoctor: Have you noticed any changes in your exercise tolerance or any new symptoms such as fatigue, swelling in your legs, or difficulty breathing with activity?\nPatient: No, I haven't noticed any changes in my exercise tolerance or any new symptoms like fatigue, swelling in my legs, or difficulty breathing with activity. I do have some mild puffiness in my legs, but I think that might be from the medications I'm on. I don't feel like I'm having any trouble with my breathing or getting tired more easily than before.\nDoctor: Has the patient experienced any changes in his exercise tolerance, fatigue, or swelling in his legs since discontinuing Crestor?\nPatient: No, I haven't noticed any changes in my exercise tolerance, fatigue, or swelling in my legs since I stopped taking Crestor. I do have some mild puffiness in my legs, but I think that might be from the medications I'm on. I don't feel like I'm having any trouble with my breathing or getting tired more easily than before.\nDoctor: Thank you for sharing that with me. To better understand your current condition, could you please tell me if you have experienced any changes in your leg swelling or if it has worsened since you stopped taking Crestor?\nPatient: No, I haven't noticed any changes in my leg swelling or if it has worsened since I stopped taking Crestor. It's been pretty consistent, and I think it's just a little puffiness, probably from the medications I'm on. I don't feel like it's gotten any worse.\nDoctor: Thank you for sharing that. To better understand your condition, could you tell me if you have been experiencing any changes in your appetite or weight recently?\nPatient: No, I haven't noticed any changes in my appetite or weight recently. I eat about the same as I always have, and I don't feel like I've gained or lost any weight. My appetite seems normal.\nDoctor: Could you please describe the duration of the leg puffiness and whether it is worse in the morning or evening? Also, have you noticed any changes in the color or temperature of your legs?\nPatient: The puffiness in my legs has been pretty consistent, and I don't really notice it being worse in the morning or evening. It's just a little puffiness, and I haven't noticed any changes in the color or temperature of my legs. It doesn't really bother me too much.\nDoctor: Could you please describe any changes in your leg puffiness over the past few weeks? Have you noticed any swelling in other parts of your body, such as your ankles or feet?\nPatient: The puffiness in my legs has been pretty consistent over the past few weeks, and I haven't noticed any swelling in my ankles or feet. It's just a little puffiness, and I don't really notice it getting worse or better at any particular time of day. It doesn't really bother me too much.\nDoctor: Could you please describe any other symptoms you might be experiencing, such as fatigue, shortness of breath, or changes in your appetite or weight? Also, have you noticed any changes in your ability to perform physical activities or any new symptoms since your last follow-up?\nPatient: No, I haven't noticed any changes in my ability to perform physical activities or any new symptoms since my last follow-up. I feel about the same as before, and I don't have any shortness of breath or fatigue that's different from what I've been experiencing. My appetite is normal, and I haven't had any changes in weight. I just have that little puffiness in my legs, and that's about it.\nDoctor: Could you please describe the exact timing and duration of the dizziness you experience when standing up? Additionally, have you measured your blood pressure when lying down and when standing up to check for orthostatic hypotension?\nPatient: The dizziness happens pretty quickly when I stand up, like within a few seconds. It doesn't last too long, just a few seconds or maybe a minute. I haven't really checked my blood pressure when lying down and standing up, but I guess I could try that. I didn't think about it before.\nDoctor: Could you please check your blood pressure while lying down and then again after standing up for 1 minute, and report the readings?\nPatient: I can try that. Let me get my blood pressure cuff. Okay, when I'm lying down, my blood pressure is around 120 over 80. Then, after I stand up for a minute, it drops to about 105 over 70. That's when I feel the dizziness.\nDoctor: Thank you for providing those blood pressure readings. It's good that you've measured them. Given the orthostatic hypotension you've confirmed, I'd like to understand if you've experienced any falls or near-falls due to the dizziness, and if you've made any lifestyle adjustments to manage this, such as increasing fluid intake or adjusting your medications. Additionally, have you noticed any changes in your leg puffiness or any other symptoms since you stopped taking Crestor?\nPatient: No, I haven't had any falls or near-falls because of the dizziness, and I haven't really made any specific lifestyle changes to manage it. I just try to stand up slowly now, which helps a little. As for the leg puffiness, it hasn't changed since I stopped taking Crestor, and I don't have any other symptoms that I can think of.\nDoctor: Thank you for sharing that. I understand that you're managing the dizziness by standing up slowly, and the leg puffiness hasn't changed since you stopped taking Crestor. To better understand your situation, could you tell me if you've noticed any other symptoms, such as lightheadedness, fainting spells, or changes in your vision or balance, especially when standing up?\nPatient: No, I haven't noticed any lightheadedness, fainting spells, or changes in my vision or balance other than the dizziness when I stand up quickly. It's just that brief feeling of being off-balance, and it goes away pretty fast. I don't see stars or anything like that.",
+  "reference_so": {
+    "subjective": "Basic information: 62-year-old male presenting for follow-up after a heart attack six months ago, currently on medications, seeking to ensure well-being and check for additional actions.\n\nHistory of present illness: The patient had a heart attack six months ago and has been on medications since then. He is now seeking follow-up to ensure his well-being and check for any additional actions. He reports experiencing dizziness upon standing, which he attributes to his beta-blocker. He discontinued Crestor due to muscle aches without consulting a healthcare provider. He denies any new or worsening symptoms since discontinuing Crestor, including chest pain, shortness of breath, or changes in exercise tolerance. He notes mild puffiness in his legs but does not feel any trouble with breathing or fatigue. He states that the leg puffiness has been consistent and has not worsened since discontinuing Crestor. He also denies any changes in appetite or weight. He reports no changes in his ability to perform physical activities or new symptoms since his last follow-up. He feels about the same as before, with no shortness of breath or fatigue, and his appetite and weight are normal. Patient reports dizziness upon standing, which occurs within seconds and lasts for a few seconds to a minute. Patient has now measured blood pressure in different positions, showing orthostatic hypotension. He has not experienced any falls or near-falls due to the dizziness and has not made any specific lifestyle changes to manage it, other than standing up slowly. He denies lightheadedness, fainting spells, or changes in his vision or balance other than the dizziness when standing up quickly. It is a brief feeling of being off-balance, and it goes away pretty fast. He does not see stars or anything like that.\n\nPast history: Previous myocardial infarction six months ago; currently on aspirin, Brilinta, and fish oil. Previously on Crestor but discontinued due to muscle aches without consulting a healthcare provider. No known allergies or other significant past medical history.",
+    "objective": "Physical examination: Vital signs: BP 128/82 mmHg, HR 72 bpm, RR 16, SpO2 98% on room air. Cardiac exam: S1 and S2 present, no murmur, no gallop. No peripheral edema. Neurological and respiratory exams unremarkable. The patient reports mild puffiness in his legs, but no peripheral edema was noted on examination.\n\nInvestigations: Recent lipid panel (3 months ago): LDL 110 mg/dL, HDL 45 mg/dL, triglycerides 140 mg/dL. Echocardiogram (6 months ago): ejection fraction 55%, no wall motion abnormalities. Recent troponin levels within normal limits. Orthostatic hypotension confirmed with self-measured blood pressure readings: supine BP 120/80 mmHg, standing BP 105/70 mmHg."
+  }
+}

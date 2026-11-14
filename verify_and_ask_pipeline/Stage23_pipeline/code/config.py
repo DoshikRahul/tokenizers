@@ -44,6 +44,7 @@ NLI_MODEL = os.environ.get("NLI_MODEL", "MoritzLaurer/DeBERTa-v3-large-mnli-feve
 EMBED_MODEL = os.environ.get("EMBED_MODEL", "all-MiniLM-L6-v2")
 # Embedding backend: "remote" = MiniLM served on a GPU host (/v1/embeddings, no key); "local" = load on this PC.
 EMBED_BASE_URL = os.environ.get("EMBED_BASE_URL", "")      # e.g. http://10.2.236.141:8082
+EMBED_API_KEY = os.environ.get("EMBED_API_KEY", "")        # Bearer key, if the embedding server needs one
 EMBED_BACKEND = os.environ.get("EMBED_BACKEND", "remote" if EMBED_BASE_URL else "local")
 PPL_MODEL = os.environ.get("PPL_MODEL", "gpt2")
 
