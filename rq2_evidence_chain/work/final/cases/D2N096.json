@@ -1,0 +1,364 @@
+{
+  "case_id": "D2N096",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test1",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* Patient is a 44-year-old female who presents with left shoulder pain that started after a gymnastics class where she fell into an awkward position.\n* The pain is located in the left shoulder and hurts with any movement.\n* The patient has not taken any pain medication except for Tylenol for a couple of days, which did not help.\n* The patient reports difficulty sleeping on the affected side and has noticed limitations in daily activities due to the pain.\n* The patient has not experienced any swelling, bruising, numbness, tingling, or weakness in the left arm or hand.\n* The patient greets the doctor with a \"Hello, Doctor\".",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [
+    {
+      "id": "q1",
+      "gap": "Severity of pain",
+      "question": "On a scale of 1-10, how would you rate the severity of your shoulder pain?",
+      "category": "subjective",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "q2",
+      "gap": "Any relevant medical history",
+      "question": "Do you have any pre-existing medical conditions or allergies that may be relevant to your shoulder pain?",
+      "category": "subjective",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "q3",
+      "gap": "Range of motion and strength testing",
+      "question": "Can you please demonstrate your range of motion and strength in your left shoulder?",
+      "category": "objective",
+      "status": "unresolved",
+      "answer": null
+    }
+  ],
+  "ap_lines": [
+    {
+      "statement_id": "D2N096_V01",
+      "section": "Assessment",
+      "text": "The patient presents with acute left shoulder pain following a gymnastics class injury.",
+      "status": "ok",
+      "p_chain_broken": 0.0015,
+      "components": [
+        {
+          "component": "The patient presents with acute left shoulder pain following a gymnastics class injury.",
+          "feature_ids": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F12",
+            "F13",
+            "F14"
+          ],
+          "p_broken": 0.001501172379294978,
+          "passages": [
+            {
+              "pid": "5932_3280",
+              "title": "Rotator Cuff Injuries",
+              "section": "When should I see a health care provider for shoulder pain?",
+              "cos": 0.571
+            },
+            {
+              "pid": "6927_1196",
+              "title": "Dislocated Shoulder",
+              "section": "What are the symptoms of a dislocated shoulder?",
+              "cos": 0.545
+            },
+            {
+              "pid": "505_3380",
+              "title": "Shoulder Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.633
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N096_V02",
+      "section": "Plan",
+      "text": "The doctor will need to perform a physical examination and possibly order imaging studies, such as X-rays or an MRI, to further assess the injury and determine the best course of treatment.",
+      "status": "ok",
+      "p_chain_broken": 0.0124,
+      "components": [
+        {
+          "component": "The doctor will need to perform a physical examination",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8",
+            "F9"
+          ],
+          "p_broken": 0.007577204451158062,
+          "passages": [
+            {
+              "pid": "6927_1196",
+              "title": "Dislocated Shoulder",
+              "section": "What are the symptoms of a dislocated shoulder?",
+              "cos": 0.638
+            },
+            {
+              "pid": "5932_3276",
+              "title": "Rotator Cuff Injuries",
+              "section": "What are the symptoms of rotator cuff injuries?",
+              "cos": 0.575
+            },
+            {
+              "pid": "5932_3280",
+              "title": "Rotator Cuff Injuries",
+              "section": "When should I see a health care provider for shoulder pain?",
+              "cos": 0.64
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The doctor will need to order imaging studies, such as X-rays or an MRI",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F10",
+            "F11",
+            "F12",
+            "F13",
+            "F14"
+          ],
+          "p_broken": 0.012431576692837265,
+          "passages": [
+            {
+              "pid": "505_3380",
+              "title": "Shoulder Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.687
+            },
+            {
+              "pid": "5932_3277",
+              "title": "Rotator Cuff Injuries",
+              "section": "How are rotator cuff injuries diagnosed?",
+              "cos": 0.598
+            },
+            {
+              "pid": "6927_1196",
+              "title": "Dislocated Shoulder",
+              "section": "What are the symptoms of a dislocated shoulder?",
+              "cos": 0.6
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N096_V03",
+      "section": "Plan",
+      "text": "The patient will need to follow up with the doctor to discuss the results of any imaging studies and to receive further guidance on managing the pain and improving function.",
+      "status": "ok",
+      "p_chain_broken": 0.0534,
+      "components": [
+        {
+          "component": "The patient will need to follow up with the doctor to discuss the results of any imaging studies and to receive further guidance on managing the pain and improving function.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.053403065777632805,
+          "passages": [
+            {
+              "pid": "6927_1198",
+              "title": "Dislocated Shoulder",
+              "section": "What are the treatments for a dislocated shoulder?",
+              "cos": 0.547
+            },
+            {
+              "pid": "5932_3278",
+              "title": "Rotator Cuff Injuries",
+              "section": "What are the treatments for rotator cuff injuries?",
+              "cos": 0.56
+            },
+            {
+              "pid": "6927_1196",
+              "title": "Dislocated Shoulder",
+              "section": "What are the symptoms of a dislocated shoulder?",
+              "cos": 0.531
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* Patient is a 44-year-old female who presents with left shoulder pain that started after a gymnastics class where she fell into an awkward position.\n* The pain is located in the left shoulder and hurts with any movement.\n* The patient has not taken any pain medication except for Tylenol for a couple of days, which did not help.\n* The patient reports difficulty sleeping on the affected side and has noticed limitations in daily activities due to the pain.\n* The patient has not experienced any swelling, bruising, numbness, tingling, or weakness in the left arm or hand.\n* The patient greets the doctor with a \"Hello, Doctor\".",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient presents with acute left shoulder pain following a gymnastics class injury."
+    ],
+    "plan": [
+      "The doctor will need to perform a physical examination and possibly order imaging studies, such as X-rays or an MRI, to further assess the injury and determine the best course of treatment.",
+      "The patient will need to follow up with the doctor to discuss the results of any imaging studies and to receive further guidance on managing the pain and improving function."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Doctor",
+      "text": "Hello. Could you tell me your age and gender, and what brings you in today?",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Hello, Doctor. I'm 44 years old, and I'm here because I've been having a lot of pain in my left shoulder for about a week. It started after I was in a gymnastics class and I think I might have fallen into a weird position during a move. It hurts when I try to move it at all.",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm your age, gender, and provide more details about the shoulder pain, such as its location, intensity, and any associated symptoms?",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 44 years old, and I'm a female. The pain is in my left shoulder, and it hurts a lot. It started after I was in a gymnastics class, and I think I might have fallen into a weird position during a move. Any movement of my left shoulder hurts, and I haven't taken any pain medication except for Tylenol for a couple of days, but that didn't help.",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any swelling, bruising, or numbness/tingling in your left arm or hand since the injury?",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any swelling, bruising, or numbness or tingling in my left arm or hand since the injury. The pain is just in my shoulder, and it hurts when I move it at all.",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any clicking, locking, or weakness in your left shoulder since the injury? Additionally, does the pain radiate to your arm or neck?",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any clicking, locking, or weakness in my left shoulder since the injury. The pain doesn't radiate to my arm or neck—it's just in my shoulder and hurts when I move it at all.",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the specific movement or position during the gymnastics class that caused the fall? Additionally, have you noticed any weakness, clicking, or locking in your left shoulder since the injury?",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I was doing a move where I think I toppled over into some weird position, maybe went overboard, and that's when the pain started. No, I haven't noticed any weakness, clicking, or locking in my left shoulder since then. It just hurts when I try to move it at all.",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any prior imaging or evaluation of your shoulder, such as X-rays or an MRI, either before this incident or in the past?",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any prior imaging or evaluation of my shoulder, like X-rays or an MRI, either before this incident or in the past.",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any numbness, tingling, or weakness in your left arm or hand since the injury?",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any numbness, tingling, or weakness in my left arm or hand since the injury. The pain is just in my shoulder and hurts when I move it at all.",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the specific movement or position during the gymnastics class that caused the pain? Additionally, have you noticed any limitation in your ability to lift your arm or perform daily activities with your left hand?",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I was doing a move where I think I toppled over into some weird position, maybe went overboard, and that's when the pain started. And yeah, I have a hard time lifting my arm or doing anything with my left hand because it hurts too much.",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any difficulty sleeping on the affected side or noticed any changes in your ability to perform daily activities due to the shoulder pain?",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Yes, I've had a hard time sleeping on my left side because it hurts too much, and I've noticed that I can't do a lot of my daily activities with my left hand because of the pain. It's really limiting me.",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any popping, clicking, or locking sensations in your left shoulder since the injury?",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any popping, clicking, or locking sensations in my left shoulder since the injury. It just hurts when I try to move it at all.",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any previous imaging studies for shoulder injuries, such as X-rays or MRI, or do you have a history of shoulder dislocations or labral tears?",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't have a history of shoulder dislocations or labral tears, and I haven't had any previous imaging studies for shoulder injuries like X-rays or MRI. This is the first time I've had issues with my left shoulder.",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any numbness, tingling, or weakness in your left arm or hand since the injury?",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any numbness, tingling, or weakness in my left arm or hand since the injury. The pain is just in my shoulder and hurts when I move it at all.",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the specific movement or position during the gymnastics class that led to the shoulder injury? This will help clarify the mechanism of injury and assess for possible rotator cuff involvement.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I was doing a move where I think I toppled over into some weird position, maybe went overboard, and that's when the pain started. It felt like I twisted or fell awkwardly, and since then, any movement of my left shoulder has been really painful.",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any popping, clicking, or locking sensations in your left shoulder since the injury?",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any popping, clicking, or locking sensations in my left shoulder since the injury. It just hurts when I try to move it at all.",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any prior imaging or evaluation of the left shoulder, such as an X-ray or MRI?",
+      "tid": "T29"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any prior imaging or evaluation of the left shoulder, like an X-ray or MRI. This is the first time I've had issues with my left shoulder.",
+      "tid": "T30"
+    }
+  ]
+}

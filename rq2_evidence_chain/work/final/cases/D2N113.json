@@ -1,0 +1,461 @@
+{
+  "case_id": "D2N113",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test1",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports that their doctor plans to perform additional tests, but no further testing has been conducted yet.\n* The patient reports being diagnosed with hepatitis C based on recent blood work, but is unable to provide the exact date of diagnosis.\n* Patient is a 45-year-old female who was diagnosed with hepatitis C by her primary care doctor based on a recent blood work result.\n* The patient reports not having undergone liver function tests, including ALT, AST, bilirubin, or albumin levels.\n* The patient reports feeling tired at the end of the day despite adequate sleep.\n* She reports feeling fine and never being told she had hepatitis C before.\n* She has been experiencing fatigue at the end of the day for a few months, which is not severe but makes her feel drained.\n* She has not noticed any other symptoms such as nausea, weight loss, changes in bowel habits, or jaundice.\n* She has a history of intravenous drug use, but has been clean for over 15 years.\n* She has had multiple sexual partners in the past, but is unsure if that is a risk factor for hepatitis C.\n* The patient denies having had any blood transfusions or recent medical procedures that involved exposure to blood.\n* The patient is waiting to hear what the next steps are.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N113_V01",
+      "section": "Assessment",
+      "text": "The patient has been diagnosed with hepatitis C based on a positive hepatitis C antibody test, but has not undergone confirmatory testing such as HCV RNA testing or genotype testing.",
+      "status": "ok",
+      "p_chain_broken": 0.2227,
+      "components": [
+        {
+          "component": "The patient has been diagnosed with hepatitis C based on a positive hepatitis C antibody test",
+          "feature_ids": [
+            "F2",
+            "F4",
+            "F5",
+            "F15"
+          ],
+          "p_broken": 0.2226994268945165,
+          "passages": [
+            {
+              "pid": "1286_1875",
+              "title": "Hepatitis C",
+              "section": "How is hepatitis C diagnosed?",
+              "cos": 0.786
+            },
+            {
+              "pid": "1286_1872",
+              "title": "Hepatitis C",
+              "section": "Who is more likely to get hepatitis C?",
+              "cos": 0.653
+            },
+            {
+              "pid": "1286_1871",
+              "title": "Hepatitis C",
+              "section": "How is hepatitis C spread?",
+              "cos": 0.561
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient has not undergone confirmatory testing such as HCV RNA testing or genotype testing",
+          "feature_ids": [
+            "F4"
+          ],
+          "p_broken": 1.4738808029963498e-05,
+          "passages": [
+            {
+              "pid": "1286_1871",
+              "title": "Hepatitis C",
+              "section": "How is hepatitis C spread?",
+              "cos": 0.496
+            },
+            {
+              "pid": "1286_1870",
+              "title": "Hepatitis C",
+              "section": "How is hepatitis C spread?",
+              "cos": 0.478
+            },
+            {
+              "pid": "1286_1875",
+              "title": "Hepatitis C",
+              "section": "How is hepatitis C diagnosed?",
+              "cos": 0.619
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N113_V02",
+      "section": "Assessment",
+      "text": "The patient has not had any liver function tests or imaging studies to assess liver damage or fibrosis.",
+      "status": "ok",
+      "p_chain_broken": 0.0,
+      "components": [
+        {
+          "component": "The patient has not had any liver function tests or imaging studies to assess liver damage or fibrosis.",
+          "feature_ids": [
+            "F14"
+          ],
+          "p_broken": 1.0129904034575382e-05,
+          "passages": [
+            {
+              "pid": "6465_3492",
+              "title": "Steatotic Liver Disease",
+              "section": "How is steatotic liver disease diagnosed?",
+              "cos": 0.584
+            },
+            {
+              "pid": "310_2357",
+              "title": "Liver Diseases",
+              "section": "Summary",
+              "cos": 0.526
+            },
+            {
+              "pid": "190_829",
+              "title": "Cirrhosis",
+              "section": "Summary",
+              "cos": 0.612
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N113_V03",
+      "section": "Assessment",
+      "text": "The patient's symptoms are limited to fatigue at the end of the day, which may or may not be related to the hepatitis C diagnosis.",
+      "status": "ok",
+      "p_chain_broken": 0.0097,
+      "components": [
+        {
+          "component": "The patient's symptoms are limited to fatigue at the end of the day, which may or may not be related to the hepatitis C diagnosis.",
+          "feature_ids": [
+            "F8",
+            "F9",
+            "F16",
+            "F17",
+            "F18",
+            "F4",
+            "F15",
+            "F1"
+          ],
+          "p_broken": 0.009708505966849256,
+          "passages": [
+            {
+              "pid": "1286_1873",
+              "title": "Hepatitis C",
+              "section": "What are the symptoms of hepatitis C?",
+              "cos": 0.786
+            },
+            {
+              "pid": "1686_1853",
+              "title": "Hepatitis A",
+              "section": "What are the symptoms of hepatitis A?",
+              "cos": 0.66
+            },
+            {
+              "pid": "109_1844",
+              "title": "Hepatitis",
+              "section": "What are the symptoms of hepatitis?",
+              "cos": 0.633
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N113_V04",
+      "section": "Plan",
+      "text": "The patient will need to undergo further testing, including HCV RNA testing and liver function tests, to confirm the diagnosis and assess liver damage.",
+      "status": "ok",
+      "p_chain_broken": 0.023,
+      "components": [
+        {
+          "component": "The patient will need to undergo further testing, including HCV RNA testing and liver function tests, to confirm the diagnosis and assess liver damage.",
+          "feature_ids": [
+            "F4",
+            "F14",
+            "F15",
+            "F16",
+            "F17",
+            "F18"
+          ],
+          "p_broken": 0.02297724132837447,
+          "passages": [
+            {
+              "pid": "1286_1875",
+              "title": "Hepatitis C",
+              "section": "How is hepatitis C diagnosed?",
+              "cos": 0.721
+            },
+            {
+              "pid": "1286_1873",
+              "title": "Hepatitis C",
+              "section": "What are the symptoms of hepatitis C?",
+              "cos": 0.702
+            },
+            {
+              "pid": "1286_1874",
+              "title": "Hepatitis C",
+              "section": "What other problems can hepatitis C cause?",
+              "cos": 0.578
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N113_V05",
+      "section": "Plan",
+      "text": "The patient will need to discuss potential treatment options with her primary care doctor.",
+      "status": "ok",
+      "p_chain_broken": 0.026,
+      "components": [
+        {
+          "component": "The patient will need to discuss potential treatment options with her primary care doctor.",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F10",
+            "F11"
+          ],
+          "p_broken": 0.02595722571076772,
+          "passages": [
+            {
+              "pid": "1286_1875",
+              "title": "Hepatitis C",
+              "section": "How is hepatitis C diagnosed?",
+              "cos": 0.696
+            },
+            {
+              "pid": "1286_1872",
+              "title": "Hepatitis C",
+              "section": "Who is more likely to get hepatitis C?",
+              "cos": 0.7
+            },
+            {
+              "pid": "1286_1871",
+              "title": "Hepatitis C",
+              "section": "How is hepatitis C spread?",
+              "cos": 0.575
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N113_V06",
+      "section": "Plan",
+      "text": "The patient will need to follow up with her primary care doctor to receive further guidance on managing her hepatitis C diagnosis.",
+      "status": "ok",
+      "p_chain_broken": 0.0534,
+      "components": [
+        {
+          "component": "The patient will need to follow up with her primary care doctor to receive further guidance on managing her hepatitis C diagnosis.",
+          "feature_ids": [
+            "F2",
+            "F4",
+            "F15",
+            "F14",
+            "F10",
+            "F11",
+            "F12",
+            "F13"
+          ],
+          "p_broken": 0.053403153533802296,
+          "passages": [
+            {
+              "pid": "1286_1875",
+              "title": "Hepatitis C",
+              "section": "How is hepatitis C diagnosed?",
+              "cos": 0.711
+            },
+            {
+              "pid": "1286_1871",
+              "title": "Hepatitis C",
+              "section": "How is hepatitis C spread?",
+              "cos": 0.619
+            },
+            {
+              "pid": "1286_1872",
+              "title": "Hepatitis C",
+              "section": "Who is more likely to get hepatitis C?",
+              "cos": 0.708
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports that their doctor plans to perform additional tests, but no further testing has been conducted yet.\n* The patient reports being diagnosed with hepatitis C based on recent blood work, but is unable to provide the exact date of diagnosis.\n* Patient is a 45-year-old female who was diagnosed with hepatitis C by her primary care doctor based on a recent blood work result.\n* The patient reports not having undergone liver function tests, including ALT, AST, bilirubin, or albumin levels.\n* The patient reports feeling tired at the end of the day despite adequate sleep.\n* She reports feeling fine and never being told she had hepatitis C before.\n* She has been experiencing fatigue at the end of the day for a few months, which is not severe but makes her feel drained.\n* She has not noticed any other symptoms such as nausea, weight loss, changes in bowel habits, or jaundice.\n* She has a history of intravenous drug use, but has been clean for over 15 years.\n* She has had multiple sexual partners in the past, but is unsure if that is a risk factor for hepatitis C.\n* The patient denies having had any blood transfusions or recent medical procedures that involved exposure to blood.\n* The patient is waiting to hear what the next steps are.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient has been diagnosed with hepatitis C based on a positive hepatitis C antibody test, but has not undergone confirmatory testing such as HCV RNA testing or genotype testing.",
+      "The patient has not had any liver function tests or imaging studies to assess liver damage or fibrosis.",
+      "The patient's symptoms are limited to fatigue at the end of the day, which may or may not be related to the hepatitis C diagnosis."
+    ],
+    "plan": [
+      "The patient will need to undergo further testing, including HCV RNA testing and liver function tests, to confirm the diagnosis and assess liver damage.",
+      "The patient will need to discuss potential treatment options with her primary care doctor.",
+      "The patient will need to follow up with her primary care doctor to receive further guidance on managing her hepatitis C diagnosis."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Doctor",
+      "text": "Hello. Could you tell me your age and gender, and what brings you in today?",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 45 years old and female. I'm here because my primary care doctor told me I have hepatitis C, and I'm really anxious about it because I've been feeling fine and never been told I had it before.",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Can you confirm the date when you were diagnosed with hepatitis C and whether you have undergone any prior testing or treatment for it?",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know the exact date I was diagnosed, but my primary care doctor mentioned it was from recent blood work. I've never been told I had hepatitis C before, and I haven't had any prior testing or treatment for it.",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you confirm if you have undergone confirmatory testing for hepatitis C, such as HCV RNA testing or genotype testing, and whether you have been tested for hepatitis C antibodies?",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know about the HCV RNA or genotype testing yet because my doctor just mentioned the antibody test was positive and wants to do more tests. I haven't had any of those other tests done yet.",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm if you have been tested for other hepatitis viruses, such as hepatitis B or E, and if you have any symptoms such as fatigue, jaundice, or abdominal discomfort?",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know about being tested for hepatitis B or E. I haven't had any symptoms like jaundice or abdominal discomfort, but I have been feeling really tired at the end of the day, even though I get enough sleep.",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide information about your potential risk factors for hepatitis C, such as a history of blood transfusions, intravenous drug use, sexual activity with multiple partners, or any recent medical procedures that may have involved exposure to blood?",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I used to use intravenous drugs a lot, but I've been clean for over fifteen years now. I don't think I've had any blood transfusions or recent medical procedures that involved exposure to blood. I've had multiple sexual partners in the past, but I don't know if that's a risk factor for hepatitis C.",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any liver function tests or imaging studies (e.g., ultrasound) to assess the extent of liver damage or the presence of cirrhosis?",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any liver function tests or imaging studies yet. My primary care doctor mentioned my hepatitis C antibody was positive and said they would do more tests, but I haven't had anything else done yet.",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please share more details about your risk factors for hepatitis C, such as a history of intravenous drug use, sexual activity, or any potential exposure to blood? This will help us better understand your situation.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I used to use intravenous drugs a lot, but I've been clean for over fifteen years now. I don't think I've had any blood transfusions or recent medical procedures that involved exposure to blood. I've had multiple sexual partners in the past, but I don't know if that's a risk factor for hepatitis C.",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide more details about your current symptoms, such as the duration and severity of the fatigue you experience at the end of the day? Additionally, have you undergone any liver function tests or imaging studies to assess liver damage?",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The fatigue I feel at the end of the day has been going on for a while now, maybe a few months. It's not super severe, but it's enough to make me feel really drained, and I don't know if it's related to the hepatitis C or just being busy with work. I haven't had any liver function tests or imaging studies yet, just the hepatitis C antibody test that came back positive.",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm if you have had any liver function tests or imaging studies, such as an ultrasound or FibroScan, to assess the extent of liver damage or fibrosis?",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any liver function tests or imaging studies yet. My primary care doctor mentioned my hepatitis C antibody was positive and said they would do more tests, but I haven't had anything else done yet.",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe in more detail the nature of your fatigue? For example, does it interfere with your daily activities, and have you noticed any other symptoms such as nausea, weight loss, or changes in bowel habits?",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The fatigue I feel at the end of the day has been going on for a while now, maybe a few months. It's not super severe, but it's enough to make me feel really drained, and I don't know if it's related to the hepatitis C or just being busy with work. I haven't had any liver function tests or imaging studies yet, just the hepatitis C antibody test that came back positive.",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient experienced any other symptoms such as nausea, weight loss, changes in bowel habits, or jaundice since being diagnosed with hepatitis C?",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any other symptoms like nausea, weight loss, changes in bowel habits, or jaundice since finding out about the hepatitis C. I’ve been feeling pretty much the same as usual, except for the fatigue at the end of the day.",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any liver function tests or imaging studies to confirm the hepatitis C diagnosis and assess liver damage?",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any liver function tests or imaging studies yet. My primary care doctor mentioned my hepatitis C antibody was positive and said they would do more tests, but I haven't had anything else done yet.",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone HCV RNA testing to confirm active hepatitis C infection, and if so, what were the results?",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had the HCV RNA test yet. My doctor said they would do more tests, but I haven't had anything else done yet. I'm waiting to hear what the next steps are.",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any liver function tests, such as ALT, AST, bilirubin, or albumin levels, to assess liver health and determine the stage of hepatitis C?",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any liver function tests like ALT, AST, bilirubin, or albumin levels yet. My doctor mentioned my hepatitis C antibody was positive and said they would do more tests, but I haven't had anything else done yet. I'm waiting to hear what the next steps are.",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe any changes in your appetite or bowel habits over the past few months? Also, have you noticed any dark-colored urine or pale-colored stools?",
+      "tid": "T29"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any changes in my appetite or bowel habits over the past few months. I haven't had dark-colored urine or pale-colored stools either. I’ve been feeling pretty much the same as usual, except for the fatigue at the end of the day.",
+      "tid": "T30"
+    }
+  ]
+}

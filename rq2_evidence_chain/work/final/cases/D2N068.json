@@ -1,0 +1,279 @@
+{
+  "case_id": "D2N068",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "dev",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* Patient is a 58-year-old male who has been feeling out of sorts lately, experiencing fatigue, lightheadedness, and bloating.\n* Fatigue and lightheadedness have been present for about five weeks, since Labor Day.\n* Bloating is a general feeling that comes and goes, not tied to meals or specific foods.\n* No changes in bowel habits, weight loss, or nausea associated with bloating.\n* Chest cramps occur during exertion, feeling like slight pressure or tightness, and usually resolve within an hour.\n* No palpitations, but shortness of breath during exertion.\n* Previous echocardiogram showed reduced pumping function of the heart, but exact ejection fraction value is unknown.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [
+    {
+      "id": "q1",
+      "gap": "Specific ejection fraction value from previous echocardiogram",
+      "question": "What is the exact ejection fraction value from your previous echocardiogram?",
+      "category": "objective",
+      "status": "unresolved",
+      "answer": null
+    }
+  ],
+  "ap_lines": [
+    {
+      "statement_id": "D2N068_V01",
+      "section": "Assessment",
+      "text": "The patient is experiencing symptoms of fatigue, lightheadedness, and bloating, which may be related to his reduced heart pumping function.",
+      "status": "ok",
+      "p_chain_broken": 0.0006,
+      "components": [
+        {
+          "component": "The patient is experiencing symptoms of fatigue, lightheadedness, and bloating, which may be related to his reduced heart pumping function.",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F7"
+          ],
+          "p_broken": 0.0005527726186843432,
+          "passages": [
+            {
+              "pid": "199_1765",
+              "title": "Heart Failure",
+              "section": "What are the symptoms of heart failure?",
+              "cos": 0.484
+            },
+            {
+              "pid": "5_1739",
+              "title": "Heart Attack",
+              "section": "What are the symptoms of a heart attack?",
+              "cos": 0.459
+            },
+            {
+              "pid": "5324_1445",
+              "title": "Fatigue",
+              "section": "What is fatigue?",
+              "cos": 0.5
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N068_V02",
+      "section": "Assessment",
+      "text": "The patient has a history of reduced heart pumping function, but the exact ejection fraction value is unknown.",
+      "status": "ok",
+      "p_chain_broken": 0.0373,
+      "components": [
+        {
+          "component": "The patient has a history of reduced heart pumping function",
+          "feature_ids": [
+            "F7"
+          ],
+          "p_broken": 0.00029595463070635397,
+          "passages": [
+            {
+              "pid": "4119_1787",
+              "title": "Heart Surgery",
+              "section": "What conditions does heart surgery treat?",
+              "cos": 0.445
+            },
+            {
+              "pid": "4119_1789",
+              "title": "Heart Surgery",
+              "section": "What approaches do surgeons use to do heart surgery?",
+              "cos": 0.408
+            },
+            {
+              "pid": "147_227",
+              "title": "Arrhythmia",
+              "section": "What is an arrhythmia?",
+              "cos": 0.382
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "the exact ejection fraction value is unknown",
+          "feature_ids": [
+            "F7",
+            "F8"
+          ],
+          "p_broken": 0.037326733937368815,
+          "passages": [
+            {
+              "pid": "6452_1775",
+              "title": "Heart Health Tests",
+              "section": "Cardiac CT Scan",
+              "cos": 0.365
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* Patient is a 58-year-old male who has been feeling out of sorts lately, experiencing fatigue, lightheadedness, and bloating.\n* Fatigue and lightheadedness have been present for about five weeks, since Labor Day.\n* Bloating is a general feeling that comes and goes, not tied to meals or specific foods.\n* No changes in bowel habits, weight loss, or nausea associated with bloating.\n* Chest cramps occur during exertion, feeling like slight pressure or tightness, and usually resolve within an hour.\n* No palpitations, but shortness of breath during exertion.\n* Previous echocardiogram showed reduced pumping function of the heart, but exact ejection fraction value is unknown.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient is experiencing symptoms of fatigue, lightheadedness, and bloating, which may be related to his reduced heart pumping function.",
+      "The patient has a history of reduced heart pumping function, but the exact ejection fraction value is unknown."
+    ],
+    "plan": []
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Doctor",
+      "text": "Hello. Could you tell me your age and gender, and what brings you in today?",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 58 years old, male. I've been feeling out of sorts lately—just tired, fatigued, and sometimes lightheaded. I also feel bloated now and then. I wanted to come in for a check-up because I've been struggling with some of my usual symptoms again.",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm your age, gender, and the specific symptoms you're experiencing, including how long you've been feeling fatigued, lightheaded, or bloated?",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 58 years old, male. The fatigue and lightheadedness have been going on for about five weeks now, since around Labor Day. I've also been feeling bloated every once in a while, and it's been a bit harder to keep up with my diet lately because of some home renovations we've been doing.",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any chest pain, shortness of breath, or palpitations during the episodes of fatigue or lightheadedness? Have you had any prior cardiovascular evaluations, such as an ECG or echocardiogram?",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I've had some slight chest cramps, but they usually go away after an hour or so. I don't really feel like I'm having palpitations, but I do get short of breath sometimes when I'm exerting myself, like when I'm working on the home projects. I've had some tests done before, like an echocardiogram, which I think showed that my heart's pumping function is a little reduced.",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please share the specific ejection fraction value from your previous echocardiogram? Also, have you experienced any other symptoms such as nausea, vomiting, or changes in bowel habits that might be related to your bloating?",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember the exact number, but I was told that the pumping function of my heart is a little reduced. As for other symptoms, I haven't had nausea, vomiting, or changes in my bowel habits—just the bloating now and then.",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the specific ejection fraction value from your previous echocardiogram, as well as any other recent laboratory or imaging results you may have?",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember the exact number, but I was told that the pumping function of my heart is a little reduced. As for other results, I don't have any recent lab work or imaging results with me today.",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide more details about the chest cramps you experience? For example, do they occur at rest or during activity, and are they accompanied by any other symptoms such as sweating or nausea?",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The chest cramps happen when I'm exerting myself, like when I'm working on the home projects. They usually go away after about an hour, and I don't really have any other symptoms like sweating or nausea with them.",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide the specific ejection fraction percentage from your previous echocardiogram?",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember the exact number, but I was told that the pumping function of my heart is a little reduced.",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the nature of the bloating? Is it associated with meals, bowel movements, or any specific foods? Have you noticed any changes in bowel habits, such as constipation, diarrhea, or gas?",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The bloating is just kind of there every once in a while, not really tied to meals or anything specific. I don't have any changes in my bowel habits—no constipation, diarrhea, or gas that I can tell. It's just kind of a general feeling.",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the specific ejection fraction value from the previous echocardiogram?",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember the exact number, but I was told that the pumping function of my heart is a little reduced.",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the specific ejection fraction percentage from your echocardiogram?",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember the exact number, but I was told that the pumping function of my heart is a little reduced.",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please tell me if there have been any changes in your bowel habits or if you've noticed any weight loss or nausea along with the bloating?",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any changes in my bowel habits, and I haven't had any weight loss or nausea along with the bloating. It's just a general feeling that comes and goes.",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the specific ejection fraction value from your previous echocardiogram?",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember the exact number, but I was told that the pumping function of my heart is a little reduced.",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the specific ejection fraction value from the previous echocardiogram?",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember the exact number, but I was told that the pumping function of my heart is a little reduced.",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the exact ejection fraction value from the previous echocardiogram?",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember the exact number, but I was told that the pumping function of my heart is a little reduced.",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the nature of the chest cramps you experience? For example, do they feel like pressure, squeezing, or sharp pain? Also, have you experienced any recent changes in your weight or bowel habits?",
+      "tid": "T29"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The chest cramps feel more like a slight pressure or tightness, not sharp pain. They come and go, and I don't think there have been any recent changes in my weight or bowel habits.",
+      "tid": "T30"
+    }
+  ]
+}

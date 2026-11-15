@@ -1,0 +1,253 @@
+{
+  "case_id": "D2N117",
+  "rq2_split": "va_dev",
+  "rq1_split": "dev",
+  "aci_source_split": "test1",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient is a 45-year-old male. The patient presents with a 3-week history of sharp pain. The patient presents with a 3-week history of shooting pain. The patient's pain worsens with use. The patient's pain worsens when gripping objects. The patient's pain worsens when lifting objects. The patient's pain worsens when extending his arm.\n* The pain is located near the bony prominence (lateral epicondyle) on the outside of his elbow, and is not accompanied by swelling, redness, or warmth.\n* The patient has no history of previous injuries or surgeries on his right elbow, and no history of repetitive strain or overuse in the upper extremities except for recent increased tennis playing.\n* The patient has not undergone any physical examination or imaging studies for his elbow pain before today.\n* The patient reports wanting to return to playing tennis without experiencing pain.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N117_V01",
+      "section": "Assessment",
+      "text": "The patient presents with a history of sharp, shooting pain on the outside of his right elbow, which worsens with use, and is located near the bony prominence (lateral epicondyle).",
+      "status": "ok",
+      "p_chain_broken": 0.0003,
+      "components": [
+        {
+          "component": "The patient presents with a history of sharp, shooting pain on the outside of his right elbow, which worsens with use, and is located near the bony prominence (lateral epicondyle).",
+          "feature_ids": [
+            "F1",
+            "F4",
+            "F5",
+            "F12",
+            "F13",
+            "F18",
+            "F20"
+          ],
+          "p_broken": 0.00029595480629914916,
+          "passages": [
+            {
+              "pid": "506_1309",
+              "title": "Elbow Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.567
+            },
+            {
+              "pid": "1618_3641",
+              "title": "Tendinitis",
+              "section": "Summary",
+              "cos": 0.473
+            },
+            {
+              "pid": "4329_225",
+              "title": "Arm Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.521
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N117_V02",
+      "section": "Plan",
+      "text": "The patient is willing to undergo a physical examination and imaging studies such as an X-ray or MRI to further evaluate the cause of his elbow pain.",
+      "status": "ok",
+      "p_chain_broken": 0.0019,
+      "components": [
+        {
+          "component": "The patient is willing to undergo a physical examination and imaging studies such as an X-ray or MRI to further evaluate the cause of his elbow pain.",
+          "feature_ids": [
+            "F20"
+          ],
+          "p_broken": 0.0019267203523137876,
+          "passages": [
+            {
+              "pid": "3953_2593",
+              "title": "MRI Scans",
+              "section": "Who needs an MRI scan?",
+              "cos": 0.531
+            },
+            {
+              "pid": "5932_3277",
+              "title": "Rotator Cuff Injuries",
+              "section": "How are rotator cuff injuries diagnosed?",
+              "cos": 0.531
+            },
+            {
+              "pid": "3949_3992",
+              "title": "X-Rays",
+              "section": "Who needs an x-ray?",
+              "cos": 0.508
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient is a 45-year-old male. The patient presents with a 3-week history of sharp pain. The patient presents with a 3-week history of shooting pain. The patient's pain worsens with use. The patient's pain worsens when gripping objects. The patient's pain worsens when lifting objects. The patient's pain worsens when extending his arm.\n* The pain is located near the bony prominence (lateral epicondyle) on the outside of his elbow, and is not accompanied by swelling, redness, or warmth.\n* The patient has no history of previous injuries or surgeries on his right elbow, and no history of repetitive strain or overuse in the upper extremities except for recent increased tennis playing.\n* The patient has not undergone any physical examination or imaging studies for his elbow pain before today.\n* The patient reports wanting to return to playing tennis without experiencing pain.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient presents with a history of sharp, shooting pain on the outside of his right elbow, which worsens with use, and is located near the bony prominence (lateral epicondyle)."
+    ],
+    "plan": [
+      "The patient is willing to undergo a physical examination and imaging studies such as an X-ray or MRI to further evaluate the cause of his elbow pain."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 45 years old, male, and I'm here because of right elbow pain. I've been playing a lot of tennis lately, and it's been hurting for about three weeks.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the nature of your elbow pain? For example, is it a sharp pain, a dull ache, or something else? Also, have you noticed any swelling, redness, or difficulty moving your elbow?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "It's a sharp, shooting pain, like it's stabbing. It's really bad when I use my elbow, even just reaching for something in the cupboard. I don't have any swelling or redness, but it's hard to move it without pain.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any previous injuries or surgeries involving your right elbow, or any history of repetitive strain or overuse in the upper extremities?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any injuries or surgeries on my right elbow, and I don't have a history of repetitive strain in my upper extremities other than the recent increase in tennis. I used to play a lot more back in high school, but that was a long time ago.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any physical examination or imaging studies for your elbow pain, such as X-rays or an MRI?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any physical examination or imaging studies for my elbow pain yet. I just started feeling the pain a few weeks ago, so I haven't seen a doctor about it before today.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the specific movements or activities that trigger the pain? For example, do you feel it more when you grip objects, lift things, or extend your arm?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The pain is really bad when I use my elbow, like when I try to grip something or lift things, and especially when I extend my arm. It feels like it's shooting and stabbing, and it's been getting worse the more I play tennis.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the exact location of the pain in your right elbow? Is it on the inner (medial) or outer (lateral) side, or does it radiate to other areas?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The pain is on the outside part of my elbow, and it doesn't radiate anywhere else. It's really bad when I use my elbow, like when I try to grip something or lift things, and especially when I extend my arm. It feels like it's shooting and stabbing.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any numbness, tingling, or weakness in your hand or fingers associated with the elbow pain?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any numbness, tingling, or weakness in my hand or fingers associated with the elbow pain. It's just the sharp, shooting pain on the outside of my elbow that makes it hard to use my arm without discomfort.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any swelling, redness, or warmth around the affected elbow? Have you experienced any locking, clicking, or popping sensations during elbow movement?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any swelling, redness, or warmth around my elbow, and I haven't experienced any locking, clicking, or popping sensations during movement. It's just the sharp pain on the outside that's been getting me.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any prior imaging or physical examination of the right elbow? If so, what were the findings?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any prior imaging or physical examination of the right elbow. I just started feeling the pain a few weeks ago, so I haven't seen a doctor about it before today.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the exact location of the pain on the outside of your elbow? Is it near the bony prominence (lateral epicondyle) or more towards the forearm?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "It's near the bony prominence on the outside of my elbow, right where the doctor pressed and it hurt the most. I think that's called the lateral epicondyle, but I'm not sure. It's definitely on the outer part, not the inner.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any physical examination or imaging studies for your right elbow previously?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any physical examination or imaging studies for my right elbow before today. This is the first time I've come in because of the pain.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the specific movements or actions during tennis play that seem to trigger or worsen the pain?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The movements that seem to trigger or worsen the pain are when I hit the ball, especially when I follow through with my arm, and even simple things like reaching up to get something from a cupboard. It feels like it's really straining that outside part of my elbow.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the exact location of the pain on your elbow and whether you've noticed any specific movements or activities that seem to trigger or worsen the pain?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The pain is on the outside of my elbow, right near the bony part, and it really hurts when I hit the ball or even when I reach up to get something from a cupboard. It feels like it's straining that area.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any previous episodes of elbow pain or injury, even minor ones, that might be related to tennis or other activities?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't recall having any previous episodes of elbow pain or injury, even minor ones. This is the first time I've had this kind of pain, and it started after I began playing tennis more regularly.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any recent physical examination or imaging studies for your elbow? If not, would you be willing to undergo a physical examination and imaging studies such as an X-ray or MRI to further evaluate the cause of your elbow pain?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any recent physical examination or imaging studies for my elbow before today. But I'm definitely willing to undergo a physical examination and any imaging studies you recommend to figure out what's going on with my elbow. I just want to get back to playing tennis without the pain.",
+      "tid": "T29"
+    }
+  ]
+}

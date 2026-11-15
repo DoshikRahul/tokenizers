@@ -1,0 +1,252 @@
+{
+  "case_id": "D2N097",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test1",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports being on lisinopril, which was prescribed.\n* The patient reports no allergies and a past medical history significant for depression and hypertension.\n* Patient is a 66-year-old female who is here for her annual exam\n* Patient's main concerns are ensuring her blood pressure is under control and checking in on her depression\n* Patient reports feeling good overall, with stable mood and no recent changes in sleep or energy levels\n* Patient is not currently taking medication for depression, but is attending therapy sessions once a week\n* Patient has been using a blood pressure cuff once a day and has not noticed any changes in her hypertension management or treatment plan\n* The patient reports that being in person helps them more.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation"
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N097_V01",
+      "section": "Assessment",
+      "text": "Patient has a history of depression and hypertension, which is currently well-managed with therapy and medication",
+      "status": "ok",
+      "p_chain_broken": 0.0001,
+      "components": [
+        {
+          "component": "Patient has a history of depression and hypertension, which is currently well-managed with therapy and medication",
+          "feature_ids": [
+            "F5",
+            "F6",
+            "F7",
+            "F11",
+            "F12",
+            "F13",
+            "F14",
+            "F15"
+          ],
+          "p_broken": 7.484562059094591e-05,
+          "passages": [
+            {
+              "pid": "34_1910",
+              "title": "High Blood Pressure",
+              "section": "How is high blood pressure diagnosed?",
+              "cos": 0.433
+            },
+            {
+              "pid": "34_1909",
+              "title": "High Blood Pressure",
+              "section": "How is high blood pressure diagnosed?",
+              "cos": 0.456
+            },
+            {
+              "pid": "34_1913",
+              "title": "High Blood Pressure",
+              "section": "What are the treatments for high blood pressure?",
+              "cos": 0.422
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N097_V02",
+      "section": "Assessment",
+      "text": "Patient's blood pressure is reportedly under control, with no recent changes in management or treatment plan",
+      "status": "ok",
+      "p_chain_broken": 0.0,
+      "components": [
+        {
+          "component": "Patient's blood pressure is reportedly under control, with no recent changes in management or treatment plan",
+          "feature_ids": [
+            "F12",
+            "F14"
+          ],
+          "p_broken": 1.6701250625441236e-05,
+          "passages": [
+            {
+              "pid": "34_1913",
+              "title": "High Blood Pressure",
+              "section": "What are the treatments for high blood pressure?",
+              "cos": 0.522
+            },
+            {
+              "pid": "34_1909",
+              "title": "High Blood Pressure",
+              "section": "How is high blood pressure diagnosed?",
+              "cos": 0.573
+            },
+            {
+              "pid": "1225_2373",
+              "title": "Low Blood Pressure",
+              "section": "Summary",
+              "cos": 0.522
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N097_V03",
+      "section": "Plan",
+      "text": "Patient will continue to attend therapy sessions once a week, with a focus on in-person sessions",
+      "status": "ok",
+      "p_chain_broken": 0.0028,
+      "components": [
+        {
+          "component": "Patient will continue to attend therapy sessions once a week, with a focus on in-person sessions",
+          "feature_ids": [
+            "F8",
+            "F9",
+            "F19",
+            "F20"
+          ],
+          "p_broken": 0.0028009021778718293,
+          "passages": [
+            {
+              "pid": "113_1065",
+              "title": "Depression",
+              "section": "What are the treatments for depression?",
+              "cos": 0.609
+            },
+            {
+              "pid": "6931_3608",
+              "title": "Teen Depression",
+              "section": "How is depression in teens treated?",
+              "cos": 0.483
+            },
+            {
+              "pid": "6621_78",
+              "title": "Alcohol Use Disorder (AUD) Treatment",
+              "section": "Which behavioral therapies can treat alcohol use disorder?",
+              "cos": 0.413
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N097_V04",
+      "section": "Plan",
+      "text": "Patient will continue to use a blood pressure cuff once a day to monitor her blood pressure",
+      "status": "ok",
+      "p_chain_broken": 0.0002,
+      "components": [
+        {
+          "component": "Patient will continue to use a blood pressure cuff once a day to monitor her blood pressure",
+          "feature_ids": [
+            "F12",
+            "F13",
+            "F14",
+            "F1"
+          ],
+          "p_broken": 0.0002305056714183031,
+          "passages": [
+            {
+              "pid": "34_1909",
+              "title": "High Blood Pressure",
+              "section": "How is high blood pressure diagnosed?",
+              "cos": 0.462
+            },
+            {
+              "pid": "6450_2060",
+              "title": "How to Prevent High Blood Pressure",
+              "section": "How is high blood pressure diagnosed?",
+              "cos": 0.452
+            },
+            {
+              "pid": "34_1913",
+              "title": "High Blood Pressure",
+              "section": "What are the treatments for high blood pressure?",
+              "cos": 0.406
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports being on lisinopril, which was prescribed.\n* The patient reports no allergies and a past medical history significant for depression and hypertension.\n* Patient is a 66-year-old female who is here for her annual exam\n* Patient's main concerns are ensuring her blood pressure is under control and checking in on her depression\n* Patient reports feeling good overall, with stable mood and no recent changes in sleep or energy levels\n* Patient is not currently taking medication for depression, but is attending therapy sessions once a week\n* Patient has been using a blood pressure cuff once a day and has not noticed any changes in her hypertension management or treatment plan\n* The patient reports that being in person helps them more.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation",
+    "assessment": [
+      "Patient has a history of depression and hypertension, which is currently well-managed with therapy and medication",
+      "Patient's blood pressure is reportedly under control, with no recent changes in management or treatment plan"
+    ],
+    "plan": [
+      "Patient will continue to attend therapy sessions once a week, with a focus on in-person sessions",
+      "Patient will continue to use a blood pressure cuff once a day to monitor her blood pressure"
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Doctor",
+      "text": "Hello. Could you tell me your age and gender, and what brings you in today?",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 66 years old, and I'm here for my annual exam. I've been doing well overall, but I wanted to check in on my blood pressure and make sure everything is still under control.",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm your gender and any specific concerns or symptoms you'd like to discuss during your annual exam?",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm a female, and my main concerns are just making sure my blood pressure is still under control and that everything else is okay. I've been feeling good, but I do want to check in on my depression as well.",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide details about your past medical history, including any previous illnesses, surgeries, or allergies?",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have any allergies, and my past medical history includes depression and hypertension. I've been managing both with therapy and medication, and I've been doing well overall.",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide details about your current medications for hypertension and depression, including dosages and any recent changes? Additionally, could you describe any recent symptoms related to your depression, such as changes in mood, sleep, or energy levels?",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm not on any medication for depression, but I've been going to therapy once a week, mostly virtually, though I'm starting to do some in-person sessions now. I feel like being in person helps me more. My mood has been pretty stable, and I haven't had any big changes in sleep or energy levels lately. I've been feeling good overall.",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you share your current blood pressure readings and how frequently you monitor it? Additionally, have there been any recent changes in your hypertension management or treatment plan?",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I've been using the blood pressure cuff once a day, and my readings have been pretty normal. There haven't been any changes in my hypertension management or treatment plan recently. I'm still on the lisinopril that was prescribed.",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Thank you for the update. Could you please tell me if you've noticed any changes in your mood or energy levels over the past few weeks, or if there are any specific concerns you have about your depression management?",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any changes in my mood or energy levels over the past few weeks. I feel pretty stable, and I'm really glad that I've been able to get back to in-person therapy because it's been helping me a lot. I don't have any specific concerns about my depression management right now.",
+      "tid": "T12"
+    }
+  ]
+}

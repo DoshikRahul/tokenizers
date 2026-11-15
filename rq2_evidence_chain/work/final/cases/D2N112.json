@@ -1,0 +1,281 @@
+{
+  "case_id": "D2N112",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test1",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* Patient is a 35-year-old male who has been experiencing back pain for a while, which has worsened recently.\n* The pain is located in the lower back, radiates down the left leg, and is constant, especially when standing or walking.\n* The patient reports being referred to the doctor by their primary care physician.\n* The pain is described as an electrical toothache, with a intensity of 8/10, but can be as high as 13/10 when severe.\n* The patient uses a cane due to difficulty standing for long periods.\n* The patient reports having been evaluated by their primary care doctor, who referred them to this specialist.\n* The patient reports that an MRI showed a disk issue, but the exact details are unclear.\n* The patient reports a disk herniation at the L4-5 level with nerve root impingement.\n* He has a history of falling off a roof 30 years ago, which may have resulted in a fracture, but he did not have surgery.\n* The patient reports weakness in both legs and dragging of the foot when walking.\n* He has not experienced numbness or tingling in the left leg specifically, but has had no issues with bowel or bladder function.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [
+    {
+      "id": "q1",
+      "gap": "Specific details about the patient's current medication regimen",
+      "question": "What medications is the patient currently taking?",
+      "category": "subjective",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "q2",
+      "gap": "Any relevant family medical history or genetic predispositions",
+      "question": "Is there any family history of back problems or other relevant medical conditions?",
+      "category": "subjective",
+      "status": "unresolved",
+      "answer": null
+    }
+  ],
+  "ap_lines": [
+    {
+      "statement_id": "D2N112_V01",
+      "section": "Assessment",
+      "text": "The patient has a history of back pain, which has worsened recently, and is likely related to a disk herniation at L4-5 with nerve root impingement.",
+      "status": "ok",
+      "p_chain_broken": 0.0059,
+      "components": [
+        {
+          "component": "The patient has a history of back pain, which has worsened recently, and is likely related to a disk herniation at L4-5 with nerve root impingement.",
+          "feature_ids": [
+            "F2",
+            "F14",
+            "F15",
+            "F16",
+            "F19",
+            "F25"
+          ],
+          "p_broken": 0.005911005508838264,
+          "passages": [
+            {
+              "pid": "284_1882",
+              "title": "Herniated Disk",
+              "section": "Summary",
+              "cos": 0.618
+            },
+            {
+              "pid": "1532_3315",
+              "title": "Sciatica",
+              "section": "Summary",
+              "cos": 0.494
+            },
+            {
+              "pid": "157_328",
+              "title": "Back Pain",
+              "section": "Summary",
+              "cos": 0.477
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N112_V02",
+      "section": "Plan",
+      "text": "The doctor will ask the primary care physician or radiologist to clarify whether spinal stenosis is present at the L4-5 level and which specific nerve roots (L5 or S1) are affected by the herniation.",
+      "status": "ok",
+      "p_chain_broken": 0.0421,
+      "components": [
+        {
+          "component": "The doctor will ask the primary care physician or radiologist to clarify whether spinal stenosis is present at the L4-5 level and which specific nerve roots (L5 or S1) are affected by the herniation.",
+          "feature_ids": [
+            "F14",
+            "F15",
+            "F16",
+            "F17",
+            "F18",
+            "F23",
+            "F24",
+            "F27"
+          ],
+          "p_broken": 0.04208753957762187,
+          "passages": [
+            {
+              "pid": "1532_3315",
+              "title": "Sciatica",
+              "section": "Summary",
+              "cos": 0.496
+            },
+            {
+              "pid": "412_3462",
+              "title": "Spinal Stenosis",
+              "section": "Summary",
+              "cos": 0.63
+            },
+            {
+              "pid": "3953_2596",
+              "title": "MRI Scans",
+              "section": "What should I expect after an MRI scan?",
+              "cos": 0.464
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* Patient is a 35-year-old male who has been experiencing back pain for a while, which has worsened recently.\n* The pain is located in the lower back, radiates down the left leg, and is constant, especially when standing or walking.\n* The patient reports being referred to the doctor by their primary care physician.\n* The pain is described as an electrical toothache, with a intensity of 8/10, but can be as high as 13/10 when severe.\n* The patient uses a cane due to difficulty standing for long periods.\n* The patient reports having been evaluated by their primary care doctor, who referred them to this specialist.\n* The patient reports that an MRI showed a disk issue, but the exact details are unclear.\n* The patient reports a disk herniation at the L4-5 level with nerve root impingement.\n* He has a history of falling off a roof 30 years ago, which may have resulted in a fracture, but he did not have surgery.\n* The patient reports weakness in both legs and dragging of the foot when walking.\n* He has not experienced numbness or tingling in the left leg specifically, but has had no issues with bowel or bladder function.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient has a history of back pain, which has worsened recently, and is likely related to a disk herniation at L4-5 with nerve root impingement."
+    ],
+    "plan": [
+      "The doctor will ask the primary care physician or radiologist to clarify whether spinal stenosis is present at the L4-5 level and which specific nerve roots (L5 or S1) are affected by the herniation."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Doctor",
+      "text": "Hello. Could you tell me your age and gender, and what brings you in today?",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 35, male. I've been having back pain for a while, and it's gotten really bad lately. It's been making it hard to walk or even stand for very long, and it radiates down my left leg like an electric toothache. I can't really tie my shoes anymore, and I've been using a cane. My primary care doctor sent me to see you.",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the exact location of the back pain, its intensity on a scale of 1 to 10, and whether it is constant or intermittent? Have you experienced any numbness, tingling, or weakness in your left leg? Have you had any prior injuries, surgeries, or conditions affecting your back or legs?",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The pain is in my lower back, right here, and it goes down through my hip, along the side of my leg, and all the way to my big toe. It feels like an electrical toothache, and it's been constant, especially when I'm standing or walking. It's been about an eight out of ten right now, but when it's really bad, it feels like thirteen. I do have some weakness in both legs, and my foot kinda drags when I walk. I also use a cane because it's hard to stand for long. As for past injuries, I fell off a roof about thirty years ago, and they thought there might have been a fracture, but I never had surgery.",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any numbness, tingling, or loss of sensation in your left leg or foot? Have you had any bowel or bladder dysfunction? Have you been evaluated for this condition before, and if so, what were the findings?",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had any numbness or tingling in my left leg specifically, but I do feel weakness in both legs, and my foot kinda drags when I walk. I haven't had any issues with my bowel or bladder. I've been to my primary care doctor, and they sent me here. They mentioned something about an MRI showing a disk issue, but I don't remember the exact details.",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you clarify if your primary care physician mentioned the specific location of the disc issue (e.g., L4-L5) and whether there was any mention of spinal stenosis or nerve root compression on the MRI?",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Patient",
+      "text": "They mentioned something about a disk herniation, I think at the L4-L5 level, and there was some nerve root impingement. I don't remember if they said anything about spinal stenosis specifically, but they did say it was causing the pain down my leg.",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you confirm whether the MRI report specifically mentions spinal stenosis at the L4-L5 level, and whether there is evidence of nerve root compression affecting the L5 or S1 nerve roots?",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember if they specifically mentioned spinal stenosis, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you clarify whether the MRI report specifically mentions spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation?",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember if they specifically mentioned spinal stenosis, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you confirm if the MRI report mentioned any specific nerve roots (such as L5 or S1) that were affected by the herniation, and whether there was any mention of spinal stenosis at the L4-L5 level?",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember if they specifically mentioned spinal stenosis, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you clarify whether the MRI report specifically mentions spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation?",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember if they specifically mentioned spinal stenosis, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you clarify whether the MRI report specifically mentions spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation?",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember if they specifically mentioned spinal stenosis, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you ask the primary care physician or the radiologist to clarify whether spinal stenosis is present at the L4-L5 level and which specific nerve roots (L5 or S1) are affected by the herniation? This information is important for understanding the extent of the nerve impingement and guiding further management.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember if spinal stenosis was mentioned specifically, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you clarify whether spinal stenosis is present at the L4-L5 level and which specific nerve roots (L5 or S1) are affected by the herniation, based on the MRI findings?",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation?",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you clarify whether the MRI report specifically mentions spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation?",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation?",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you clarify whether the MRI report specifically mentions the presence of spinal stenosis at the L4-L5 level and which nerve roots (L5 or S1) are affected by the herniation?",
+      "tid": "T29"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember if spinal stenosis was specifically mentioned, but they did say there was a disk herniation at L4-L5 with nerve root impingement. They didn't go into detail about which exact nerve roots were affected, just that it was causing the pain down my leg.",
+      "tid": "T30"
+    }
+  ]
+}

@@ -1,0 +1,299 @@
+{
+  "case_id": "D2N167",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test2",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* Patient is a 35-year-old female who presents with a left knee injury sustained while running with her niece a week ago. She reports hearing a pop and experiencing pain, swelling, and instability in the knee.\n* The pain is located on the medial side of the knee, with some swelling and warmth to the touch.\n* She has difficulty bearing weight on the knee and has been limping.\n* The patient reports that they are unsure if imaging studies, such as X-rays or an MRI, will be performed for their left knee injury.\n* The patient reports experiencing worsening limping.\n* The patient reports that they are unsure if imaging studies, including X-rays, will be performed today.\n* No prior knee injuries or surgeries are reported.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N167_V01",
+      "section": "Assessment",
+      "text": "The patient presents with a recent left knee injury, characterized by pain, swelling, and instability.",
+      "status": "ok",
+      "p_chain_broken": 0.0006,
+      "components": [
+        {
+          "component": "The patient presents with a recent left knee injury, characterized by pain, swelling, and instability.",
+          "feature_ids": [
+            "F2",
+            "F4",
+            "F7",
+            "F8",
+            "F9",
+            "F13",
+            "F14",
+            "F16"
+          ],
+          "p_broken": 0.0005527755807164898,
+          "passages": [
+            {
+              "pid": "304_2281",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.561
+            },
+            {
+              "pid": "304_2282",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.579
+            },
+            {
+              "pid": "1618_3641",
+              "title": "Tendinitis",
+              "section": "Summary",
+              "cos": 0.474
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N167_V02",
+      "section": "Plan",
+      "text": "The patient will undergo further evaluation, including imaging studies such as X-rays or MRI, to determine the extent of the injury and guide further management.",
+      "status": "flagged",
+      "p_chain_broken": 0.5927,
+      "components": [
+        {
+          "component": "The patient will undergo further evaluation, including imaging studies such as X-rays or MRI, to determine the extent of the injury and guide further management.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.5926656502579288,
+          "passages": [
+            {
+              "pid": "5932_3277",
+              "title": "Rotator Cuff Injuries",
+              "section": "How are rotator cuff injuries diagnosed?",
+              "cos": 0.452
+            },
+            {
+              "pid": "3953_2593",
+              "title": "MRI Scans",
+              "section": "Who needs an MRI scan?",
+              "cos": 0.427
+            },
+            {
+              "pid": "304_2282",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.523
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N167_V03",
+      "section": "Plan",
+      "text": "The patient will be advised to follow up with the doctor for further instructions and to report any changes in her symptoms.",
+      "status": "ok",
+      "p_chain_broken": 0.0046,
+      "components": [
+        {
+          "component": "The patient will be advised to follow up with the doctor for further instructions and to report any changes in her symptoms.",
+          "feature_ids": [
+            "F4",
+            "F6",
+            "F8",
+            "F13",
+            "F14",
+            "F16",
+            "F17",
+            "F18"
+          ],
+          "p_broken": 0.004609533543309487,
+          "passages": [
+            {
+              "pid": "304_2281",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.546
+            },
+            {
+              "pid": "304_2282",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.566
+            },
+            {
+              "pid": "5668_2151",
+              "title": "Infectious Arthritis",
+              "section": "Summary",
+              "cos": 0.459
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* Patient is a 35-year-old female who presents with a left knee injury sustained while running with her niece a week ago. She reports hearing a pop and experiencing pain, swelling, and instability in the knee.\n* The pain is located on the medial side of the knee, with some swelling and warmth to the touch.\n* She has difficulty bearing weight on the knee and has been limping.\n* The patient reports that they are unsure if imaging studies, such as X-rays or an MRI, will be performed for their left knee injury.\n* The patient reports experiencing worsening limping.\n* The patient reports that they are unsure if imaging studies, including X-rays, will be performed today.\n* No prior knee injuries or surgeries are reported.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient presents with a recent left knee injury, characterized by pain, swelling, and instability."
+    ],
+    "plan": [
+      "The patient will be advised to follow up with the doctor for further instructions and to report any changes in her symptoms."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 35 and female. I came in because I hurt my left knee about a week ago while running with my niece, who's learning to ride her bike. I think I twisted my knee in a weird way and heard a pop, and it's been hurting ever since. I've been limping and it's gotten worse, so I wanted to come in and check it out.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Can you describe the exact location of the pain in your left knee, and have you noticed any swelling, bruising, or instability in the knee since the injury?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The pain is mostly on the inside of my knee, more on the medial side than the outside. I haven’t noticed any bruising, but there is some swelling, and it feels a little unstable when I try to put weight on it. It’s been hurting pretty consistently since it happened.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any locking, catching, or giving way of the knee since the injury? Have you had any prior knee injuries or surgeries?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any locking or catching in my knee, and it hasn't given way completely, but it does feel a little unstable. I don't have any prior knee injuries or surgeries that I'm aware of.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the range of motion of your left knee? Have you noticed any locking, catching, or giving way of the knee? Additionally, have you experienced any numbness, tingling, or weakness in your leg?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I can move my knee, but not all the way. It hurts when I try to bend or straighten it fully. I haven't had any numbness, tingling, or weakness in my leg.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the specific location of the swelling and whether it is accompanied by warmth or redness? Additionally, have you noticed any changes in the alignment of your knee or difficulty bearing weight?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The swelling is around the knee joint, and it feels a bit warm to the touch. I haven't noticed any changes in the alignment of my knee, but I definitely have trouble bearing weight on it without limping. It's been really hard to walk normally since it happened.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies, such as X-rays or an MRI, for your left knee injury?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies such as X-rays or MRI for your left knee injury?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies such as X-rays or MRI for your left knee injury?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies such as X-ray, MRI, or ultrasound for your left knee injury?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any previous imaging studies for this injury, such as X-rays, MRI, or ultrasound?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies such as X-rays, MRI, or ultrasound for your left knee injury?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies such as X-rays, MRI, or ultrasound for your knee injury?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies such as X-rays, MRI, or ultrasound for your left knee injury?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies such as X-rays, MRI, or ultrasound for your left knee injury?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies such as X-rays, MRI, or ultrasound for your knee injury?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging studies done yet. I just came in today to get checked out, so I don't know if they'll do an X-ray or anything else. I'm hoping it's not too serious, but I'm worried because it's been hurting a lot and I can't really put weight on it.",
+      "tid": "T29"
+    }
+  ]
+}

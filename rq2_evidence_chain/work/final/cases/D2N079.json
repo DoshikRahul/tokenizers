@@ -1,0 +1,497 @@
+{
+  "case_id": "D2N079",
+  "rq2_split": "va_dev",
+  "rq1_split": "dev",
+  "aci_source_split": "dev",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient is Wayne.\n* The patient reports being a male in his late 40s.\n* The patient reports being in their late 40s.\n* The doctor mentioned looking at an X-ray, but the patient does not remember having one done before this visit.\n* The patient is not sure about the results because they were not told anything about them beforehand.\n* The patient hasn't felt anything else like that.\n* Patient reports left shoulder pain for approximately three weeks\n* The patient reports that everyday tasks have become a bit more difficult.\n* Pain is constant, but worsens with movement or pressure\n* Pain is described as a dull ache, but sharpens with movement or pressure\n* No numbness or weakness reported\n* Patient has been taking Tylenol to manage pain\n* No fever, fatigue, weight loss, or morning stiffness reported\n* No history of diabetes, thyroid disorders, or autoimmune conditions\n* Patient has been doing a lot of work in the basement lately, which may have contributed to the onset of pain",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [
+    {
+      "id": "q1",
+      "gap": "Exact age",
+      "question": "What is your exact age?",
+      "category": "subjective",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "q2",
+      "gap": "Imaging study results",
+      "question": "What were the results of the X-ray mentioned by the doctor?",
+      "category": "objective",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "q3",
+      "gap": "Physical examination findings",
+      "question": "What were the findings on physical examination of the left shoulder?",
+      "category": "objective",
+      "status": "unresolved",
+      "answer": null
+    }
+  ],
+  "ap_lines": [
+    {
+      "statement_id": "D2N079_V01",
+      "section": "Assessment",
+      "text": "The patient presents with a three-week history of left shoulder pain, which is constant and worsens with movement or pressure.",
+      "status": "ok",
+      "p_chain_broken": 0.0,
+      "components": [
+        {
+          "component": "The patient presents with a three-week history of left shoulder pain, which is constant and worsens with movement or pressure.",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F9",
+            "F19"
+          ],
+          "p_broken": 3.1201558027899776e-05,
+          "passages": [
+            {
+              "pid": "6927_1196",
+              "title": "Dislocated Shoulder",
+              "section": "What are the symptoms of a dislocated shoulder?",
+              "cos": 0.578
+            },
+            {
+              "pid": "505_3380",
+              "title": "Shoulder Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.579
+            },
+            {
+              "pid": "5932_3280",
+              "title": "Rotator Cuff Injuries",
+              "section": "When should I see a health care provider for shoulder pain?",
+              "cos": 0.586
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N079_V02",
+      "section": "Assessment",
+      "text": "The patient reports limitation in range of motion of the left arm and difficulty performing daily activities due to the pain.",
+      "status": "ok",
+      "p_chain_broken": 0.0,
+      "components": [
+        {
+          "component": "The patient reports limitation in range of motion of the left arm and difficulty performing daily activities due to the pain.",
+          "feature_ids": [
+            "F8",
+            "F19"
+          ],
+          "p_broken": 4.006320028855444e-05,
+          "passages": [
+            {
+              "pid": "5932_3280",
+              "title": "Rotator Cuff Injuries",
+              "section": "When should I see a health care provider for shoulder pain?",
+              "cos": 0.457
+            },
+            {
+              "pid": "5932_3277",
+              "title": "Rotator Cuff Injuries",
+              "section": "How are rotator cuff injuries diagnosed?",
+              "cos": 0.418
+            },
+            {
+              "pid": "5932_3276",
+              "title": "Rotator Cuff Injuries",
+              "section": "What are the symptoms of rotator cuff injuries?",
+              "cos": 0.403
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N079_V03",
+      "section": "Assessment",
+      "text": "No specific trauma or injury to the left shoulder is reported, but the patient has been doing a lot of work in the basement lately, which may have contributed to the onset of pain.",
+      "status": "ok",
+      "p_chain_broken": 0.0001,
+      "components": [
+        {
+          "component": "No specific trauma or injury to the left shoulder is reported",
+          "feature_ids": [
+            "F6",
+            "F13"
+          ],
+          "p_broken": 9.610147566869818e-05,
+          "passages": [
+            {
+              "pid": "5932_3277",
+              "title": "Rotator Cuff Injuries",
+              "section": "How are rotator cuff injuries diagnosed?",
+              "cos": 0.541
+            },
+            {
+              "pid": "5932_3280",
+              "title": "Rotator Cuff Injuries",
+              "section": "When should I see a health care provider for shoulder pain?",
+              "cos": 0.566
+            },
+            {
+              "pid": "6927_1193",
+              "title": "Dislocated Shoulder",
+              "section": "What is a dislocated shoulder?",
+              "cos": 0.498
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "the patient has been doing a lot of work in the basement lately, which may have contributed to the onset of pain",
+          "feature_ids": [
+            "F14"
+          ],
+          "p_broken": 1.4738692070209848e-05,
+          "passages": [],
+          "reference_found": false
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N079_V04",
+      "section": "Assessment",
+      "text": "No systemic symptoms or signs of rheumatologic conditions are reported.",
+      "status": "ok",
+      "p_chain_broken": 0.0006,
+      "components": [
+        {
+          "component": "No systemic symptoms or signs of rheumatologic conditions are reported.",
+          "feature_ids": [
+            "F15",
+            "F16"
+          ],
+          "p_broken": 0.0006263279087302323,
+          "passages": [
+            {
+              "pid": "1232_3264",
+              "title": "Rheumatoid Arthritis",
+              "section": "What are the symptoms of rheumatoid arthritis?",
+              "cos": 0.695
+            },
+            {
+              "pid": "82_2390",
+              "title": "Lupus",
+              "section": "What are the symptoms of lupus?",
+              "cos": 0.689
+            },
+            {
+              "pid": "1232_3265",
+              "title": "Rheumatoid Arthritis",
+              "section": "How is rheumatoid arthritis diagnosed?",
+              "cos": 0.681
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N079_V05",
+      "section": "Plan",
+      "text": "The doctor will order an X-ray of the left shoulder to further evaluate the cause of the pain.",
+      "status": "ok",
+      "p_chain_broken": 0.0331,
+      "components": [
+        {
+          "component": "The doctor will order an X-ray of the left shoulder to further evaluate the cause of the pain.",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F8",
+            "F9",
+            "F14",
+            "F19"
+          ],
+          "p_broken": 0.033085797597875145,
+          "passages": [
+            {
+              "pid": "5932_3280",
+              "title": "Rotator Cuff Injuries",
+              "section": "When should I see a health care provider for shoulder pain?",
+              "cos": 0.569
+            },
+            {
+              "pid": "5932_3276",
+              "title": "Rotator Cuff Injuries",
+              "section": "What are the symptoms of rotator cuff injuries?",
+              "cos": 0.561
+            },
+            {
+              "pid": "6927_1196",
+              "title": "Dislocated Shoulder",
+              "section": "What are the symptoms of a dislocated shoulder?",
+              "cos": 0.558
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N079_V06",
+      "section": "Plan",
+      "text": "The patient will be advised to continue taking Tylenol as needed to manage pain.",
+      "status": "ok",
+      "p_chain_broken": 0.0028,
+      "components": [
+        {
+          "component": "The patient will be advised to continue taking Tylenol as needed to manage pain.",
+          "feature_ids": [
+            "F11",
+            "F1",
+            "F4",
+            "F19",
+            "F8",
+            "F9",
+            "F14",
+            "F15"
+          ],
+          "p_broken": 0.002800909077661851,
+          "passages": [
+            {
+              "pid": "5932_3273",
+              "title": "Rotator Cuff Injuries",
+              "section": "What are rotator cuff injuries?",
+              "cos": 0.496
+            },
+            {
+              "pid": "143_161",
+              "title": "Ankylosing Spondylitis",
+              "section": "What are the symptoms of ankylosing spondylitis?",
+              "cos": 0.51
+            },
+            {
+              "pid": "5932_3280",
+              "title": "Rotator Cuff Injuries",
+              "section": "When should I see a health care provider for shoulder pain?",
+              "cos": 0.541
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N079_V07",
+      "section": "Plan",
+      "text": "The patient will be scheduled for a follow-up appointment to review the results of the X-ray and discuss further management options.",
+      "status": "ok",
+      "p_chain_broken": 0.0601,
+      "components": [
+        {
+          "component": "The patient will be scheduled for a follow-up appointment to review the results of the X-ray and discuss further management options.",
+          "feature_ids": [
+            "F10",
+            "F17"
+          ],
+          "p_broken": 0.06008638508264312,
+          "passages": [
+            {
+              "pid": "5932_3277",
+              "title": "Rotator Cuff Injuries",
+              "section": "How are rotator cuff injuries diagnosed?",
+              "cos": 0.616
+            },
+            {
+              "pid": "3949_3995",
+              "title": "X-Rays",
+              "section": "What should you expect after an x-ray?",
+              "cos": 0.592
+            },
+            {
+              "pid": "6927_1197",
+              "title": "Dislocated Shoulder",
+              "section": "How is a dislocated shoulder diagnosed?",
+              "cos": 0.529
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient is Wayne.\n* The patient reports being a male in his late 40s.\n* The patient reports being in their late 40s.\n* The doctor mentioned looking at an X-ray, but the patient does not remember having one done before this visit.\n* The patient is not sure about the results because they were not told anything about them beforehand.\n* The patient hasn't felt anything else like that.\n* Patient reports left shoulder pain for approximately three weeks\n* The patient reports that everyday tasks have become a bit more difficult.\n* Pain is constant, but worsens with movement or pressure\n* Pain is described as a dull ache, but sharpens with movement or pressure\n* No numbness or weakness reported\n* Patient has been taking Tylenol to manage pain\n* No fever, fatigue, weight loss, or morning stiffness reported\n* No history of diabetes, thyroid disorders, or autoimmune conditions\n* Patient has been doing a lot of work in the basement lately, which may have contributed to the onset of pain",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient presents with a three-week history of left shoulder pain, which is constant and worsens with movement or pressure.",
+      "The patient reports limitation in range of motion of the left arm and difficulty performing daily activities due to the pain.",
+      "No specific trauma or injury to the left shoulder is reported, but the patient has been doing a lot of work in the basement lately, which may have contributed to the onset of pain.",
+      "No systemic symptoms or signs of rheumatologic conditions are reported."
+    ],
+    "plan": [
+      "The doctor will order an X-ray of the left shoulder to further evaluate the cause of the pain.",
+      "The patient will be advised to continue taking Tylenol as needed to manage pain.",
+      "The patient will be scheduled for a follow-up appointment to review the results of the X-ray and discuss further management options."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Doctor",
+      "text": "Hello. Could you tell me your age and gender, and what brings you in today?",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Hi, I'm Wayne. I'm not sure about my exact age, but I'm in my late 40s. I'm here because I've been having this left shoulder pain for about three weeks now. It's been pretty constant and it really hurts when I try to lift things or even lay on that shoulder at night.",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm your exact age and gender, and describe the nature of the left shoulder pain in more detail, such as whether it is sharp, dull, or throbbing, and if there are any associated symptoms like numbness or weakness?",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm not sure about my exact age, but I'm in my late 40s, and I'm male. The pain is more of a constant ache, but it gets sharper when I try to move my arm or put pressure on it. It doesn't feel numb or weak, just really sore, especially at night when I try to lay on that shoulder.",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any trauma or injury to your left shoulder in the past three weeks? Additionally, have you had any previous shoulder issues or surgeries?",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember any specific injury to my shoulder, but I have been doing a lot of work in my basement lately, so maybe I did something while doing that. I have had some aches and pains before, but nothing serious—just stuff that Tylenol could handle.",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any swelling, redness, or warmth in the left shoulder area? Have you noticed any limitation in the range of motion of your left arm?",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Yes, I have noticed a limitation in the range of motion of my left arm. It hurts when I try to reach for something or lift objects, and I don’t even try to reach over my head because it really hurts. It feels like my shoulder is just not moving the way it should.",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies or consultations with a healthcare provider for this shoulder pain?",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging studies or consultations with a healthcare provider for this shoulder pain yet. I've just been taking Tylenol to try to manage the pain.",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any clicking, popping, or locking sensations in your left shoulder joint during movement?",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any clicking, popping, or locking sensations in my left shoulder joint during movement. It just hurts when I try to move it, especially when I put pressure on it or try to lift things.",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any clicking, popping, or locking sensations in your left shoulder joint during movement?",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any clicking, popping, or locking sensations in my left shoulder joint during movement. It just hurts when I try to move it, especially when I put pressure on it or try to lift things.",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any recent trauma or injury to the left shoulder, such as a fall or direct blow?",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don’t remember any recent trauma or injury to my left shoulder, like a fall or a direct blow. I just don’t remember exactly what caused the pain to start, but I’ve been doing a lot of work in the basement lately, so maybe that’s when it happened.",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any systemic symptoms such as fever, fatigue, weight loss, or morning stiffness in other joints that might suggest a rheumatologic condition?",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any fever, fatigue, weight loss, or morning stiffness in other joints. I just have this constant pain in my left shoulder, and it gets worse when I put pressure on it or try to move it. I don’t feel anything else like that.",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any recent shoulder trauma, such as a fall or direct blow to the shoulder, that might have contributed to the onset of your pain?",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don’t remember any recent trauma or injury to my left shoulder, like a fall or a direct blow. I just don’t remember exactly what caused the pain to start, but I’ve been doing a lot of work in the basement lately, so maybe that’s when it happened.",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient ever been diagnosed with diabetes, thyroid disorders, or autoimmune conditions such as rheumatoid arthritis or lupus?",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don’t think I’ve ever been diagnosed with diabetes, thyroid disorders, or autoimmune conditions like rheumatoid arthritis or lupus. I’ve been pretty healthy overall, just with some occasional aches and pains from being active.",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any recent shoulder trauma, such as a fall or direct blow to the shoulder, that might have contributed to the onset of your pain?",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don’t remember any recent trauma or injury to my left shoulder, like a fall or a direct blow. I just don’t remember exactly what caused the pain to start, but I’ve been doing a lot of work in the basement lately, so maybe that’s when it happened.",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies such as X-rays, MRI, or ultrasound of the left shoulder? If so, please provide the results and dates.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don’t think I’ve had any imaging studies done on my left shoulder yet. The doctor mentioned looking at an X-ray, but I don’t remember having one done before this visit. I’m not sure about the results because I wasn’t told anything about them beforehand.",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any radiation of the pain to your arm, neck, or chest? If so, could you describe the nature and location of that pain?",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, the pain hasn't radiated to my arm, neck, or chest. It's been pretty much confined to my left shoulder, and it's just this constant ache that gets worse when I move it or put pressure on it. I haven't felt anything else like that.",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any recent episodes of shoulder stiffness or difficulty performing daily activities such as dressing or reaching behind your back?",
+      "tid": "T29"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Yes, I have had some stiffness in my shoulder, and it's been pretty hard to do things like reach behind my back or even lift objects. It's been bothering me enough that I avoid putting pressure on it, especially at night when I try to lie on that side. It's made some everyday tasks a bit more difficult.",
+      "tid": "T30"
+    }
+  ]
+}

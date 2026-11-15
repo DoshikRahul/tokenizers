@@ -1,0 +1,303 @@
+{
+  "case_id": "D2N134",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test2",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* Patient is a 31-year-old female who presented with a positive Lyme titer and symptoms of fatigue, joint pain, and nausea.\n* The patient reported a bull's-eye rash on her abdomen, which appeared a couple of weeks ago and has not changed much in size or appearance.\n* The patient also reported headaches, but no fever, swollen lymph nodes, or neurological symptoms.\n* The patient states that the bull's-eye rash is itchy.\n* The patient has been experiencing ongoing fatigue and joint pain, which worsen throughout the day, and constant nausea.\n* The patient reports that the elbows are the main issue, with the knees and wrists being less affected.\n* The patient reports that the elbows are the main areas of pain and swelling, with increased discomfort when moving them.\n* The patient has not experienced any numbness, tingling, facial drooping, or cardiac symptoms.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N134_V01",
+      "section": "Assessment",
+      "text": "The patient has symptoms consistent with Lyme disease, including a bull's-eye rash and joint pain, fatigue, and nausea.",
+      "status": "flagged",
+      "p_chain_broken": 0.3208,
+      "components": [
+        {
+          "component": "The patient has symptoms consistent with Lyme disease, including a bull's-eye rash and joint pain, fatigue, and nausea.",
+          "feature_ids": [
+            "F2",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8",
+            "F11",
+            "F12"
+          ],
+          "p_broken": 0.32082042416536416,
+          "passages": [
+            {
+              "pid": "84_2401",
+              "title": "Lyme Disease",
+              "section": "What are the symptoms of Lyme disease?",
+              "cos": 0.751
+            },
+            {
+              "pid": "84_2398",
+              "title": "Lyme Disease",
+              "section": "What is Lyme disease?",
+              "cos": 0.58
+            },
+            {
+              "pid": "389_3303",
+              "title": "Sarcoidosis",
+              "section": "What are the symptoms of sarcoidosis?",
+              "cos": 0.468
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N134_V02",
+      "section": "Plan",
+      "text": "The patient will be referred for further evaluation and treatment for Lyme disease.",
+      "status": "flagged",
+      "p_chain_broken": 0.4073,
+      "components": [
+        {
+          "component": "The patient will be referred for further evaluation and treatment for Lyme disease.",
+          "feature_ids": [
+            "F2",
+            "F6",
+            "F7",
+            "F8",
+            "F26",
+            "F27",
+            "F28",
+            "F29"
+          ],
+          "p_broken": 0.40733233523592893,
+          "passages": [
+            {
+              "pid": "84_2401",
+              "title": "Lyme Disease",
+              "section": "What are the symptoms of Lyme disease?",
+              "cos": 0.668
+            },
+            {
+              "pid": "84_2398",
+              "title": "Lyme Disease",
+              "section": "What is Lyme disease?",
+              "cos": 0.502
+            },
+            {
+              "pid": "208_3173",
+              "title": "Rashes",
+              "section": "Summary",
+              "cos": 0.485
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N134_V03",
+      "section": "Plan",
+      "text": "The patient will be advised to follow up with the doctor in a few days to monitor the progression of symptoms and to discuss potential treatment options.",
+      "status": "ok",
+      "p_chain_broken": 0.0159,
+      "components": [
+        {
+          "component": "The patient will be advised to follow up with the doctor in a few days to monitor the progression of symptoms and to discuss potential treatment options.",
+          "feature_ids": [
+            "F2",
+            "F4",
+            "F6",
+            "F7",
+            "F8",
+            "F9",
+            "F26",
+            "F27"
+          ],
+          "p_broken": 0.01590629578659124,
+          "passages": [
+            {
+              "pid": "84_2401",
+              "title": "Lyme Disease",
+              "section": "What are the symptoms of Lyme disease?",
+              "cos": 0.657
+            },
+            {
+              "pid": "90_3373",
+              "title": "Shingles",
+              "section": "What are the symptoms of shingles?",
+              "cos": 0.471
+            },
+            {
+              "pid": "208_3173",
+              "title": "Rashes",
+              "section": "Summary",
+              "cos": 0.472
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* Patient is a 31-year-old female who presented with a positive Lyme titer and symptoms of fatigue, joint pain, and nausea.\n* The patient reported a bull's-eye rash on her abdomen, which appeared a couple of weeks ago and has not changed much in size or appearance.\n* The patient also reported headaches, but no fever, swollen lymph nodes, or neurological symptoms.\n* The patient states that the bull's-eye rash is itchy.\n* The patient has been experiencing ongoing fatigue and joint pain, which worsen throughout the day, and constant nausea.\n* The patient reports that the elbows are the main issue, with the knees and wrists being less affected.\n* The patient reports that the elbows are the main areas of pain and swelling, with increased discomfort when moving them.\n* The patient has not experienced any numbness, tingling, facial drooping, or cardiac symptoms.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [],
+    "plan": [
+      "The patient will be advised to follow up with the doctor in a few days to monitor the progression of symptoms and to discuss potential treatment options."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 31 years old, and I'm a female. I came in because I had a positive Lyme titer, and I've been feeling tired, having joint pain, and some nausea. I also noticed a bull's-eye rash on my abdomen.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide more details about the timeline of the bull's-eye rash, including when it first appeared, how long it has been present, and whether it has changed in size or appearance over time? Additionally, have you experienced any fever, headache, or swollen lymph nodes alongside these symptoms?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The bull's-eye rash first appeared a couple of weeks ago, around the same time I got the insect bite. It's been on my abdomen on the left side, and it hasn't really changed much in size or appearance. I haven't had any fever or swollen lymph nodes, but I have had some headaches off and on.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the progression of your fatigue, joint pain, and nausea? Have these symptoms worsened over time, and are there any specific activities or times of day when they are more noticeable?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The fatigue and joint pain have been ongoing, and they seem to get worse throughout the day. The nausea has been pretty constant, and it's been hard for me to eat much. I feel like I just don't have much energy, and my joints, especially my elbows, really hurt when I move them.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any neurological symptoms such as numbness, tingling, or facial drooping? Have you had any cardiac symptoms such as palpitations or chest discomfort?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any numbness, tingling, or facial drooping. And I haven't had any palpitations or chest discomfort either. I've been focused mostly on the joint pain, fatigue, and nausea.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you been treated for Lyme disease previously, and if so, what was the regimen and duration of treatment?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't been treated for Lyme disease before. This is the first time I've had a positive titer, and I'm just now starting to feel these symptoms.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any neurological symptoms such as numbness, tingling, or facial drooping, or any cardiac symptoms like palpitations or chest discomfort?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any numbness, tingling, or facial drooping. And I haven't had any palpitations or chest discomfort either. I've been focused mostly on the joint pain, fatigue, and nausea.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you traveled to any areas known for Lyme disease in the past few months, or have you had any other tick bites besides the one you mentioned?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't traveled to any areas known for Lyme disease in the past few months, and I haven't had any other tick bites besides the one I mentioned.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any neurological symptoms such as numbness, tingling, or facial drooping since the onset of your symptoms? Have you had any palpitations, chest discomfort, or shortness of breath?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any numbness, tingling, or facial drooping since the onset of my symptoms. And I haven't had any palpitations, chest discomfort, or shortness of breath either. I've been dealing mostly with the joint pain, fatigue, and nausea.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you traveled to any areas known for Lyme disease in the past few months? Have you had any other tick bites besides the one you mentioned?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't traveled to any areas known for Lyme disease in the past few months, and I haven't had any other tick bites besides the one I mentioned.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the size, shape, and any changes in the bull's-eye rash over the past few weeks? Have you noticed any new rashes or skin changes?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The bull's-eye rash on my abdomen has been about the size of a quarter, with a red ring around a clear center and a red spot in the middle. It hasn't changed much in size, but I have noticed a few smaller rashes on my arms since the original one appeared. They don't hurt, but they're kind of itchy.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any swelling or stiffness in your joints, particularly in the knees, ankles, or wrists, and if so, how long has this been occurring?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I've had swelling and stiffness in my elbows, and it's been going on for a few weeks now. It's been pretty uncomfortable, especially when I try to move my arms or do anything with my hands. The knees and wrists haven't been as bad, but the elbows are the main issue.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any neurological symptoms such as numbness, tingling, facial drooping, or difficulty with coordination or balance?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any numbness, tingling, facial drooping, or difficulty with coordination or balance. I've been focused more on the joint pain, fatigue, and nausea.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any swelling or tenderness in your knees, wrists, or other joints besides the elbows?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any swelling or tenderness in my knees, wrists, or other joints besides the elbows. The elbows are the main ones that hurt and feel swollen, especially when I move them. The other joints haven't been as bad.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any neurological symptoms such as numbness, tingling, facial drooping, or difficulty with coordination or balance?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any numbness, tingling, facial drooping, or difficulty with coordination or balance. I've been focused more on the joint pain, fatigue, and nausea.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any swelling or tenderness in your knees, wrists, or other joints besides the elbows? If so, could you describe the pattern and severity?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any swelling or tenderness in my knees, wrists, or other joints besides the elbows. The elbows are the main ones that hurt and feel swollen, especially when I move them. The other joints haven't been as bad.",
+      "tid": "T29"
+    }
+  ]
+}

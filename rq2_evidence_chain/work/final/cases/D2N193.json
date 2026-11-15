@@ -1,0 +1,385 @@
+{
+  "case_id": "D2N193",
+  "rq2_split": "va_dev",
+  "rq1_split": "dev",
+  "aci_source_split": "test3",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* Patient reports a 3-day history of cough, which started after being around a sick sister\n* Cough is accompanied by green phlegm, sore throat, and nasal congestion\n* No fever, chest pain, or shortness of breath\n* The patient reports that their blood sugar levels have been around 120 and they have been trying to manage their diet, but have had some difficulty with sugar intake.\n* Patient is a female with type 2 diabetes, taking metformin 500mg and hydrochlorothiazide for blood pressure\n* No known allergies, except for seasonal allergies causing sneezing and runny nose in springtime\n* Patient has been drinking plenty of water and taking over-the-counter cough medicine, but symptoms have not improved",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation"
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N193_V01",
+      "section": "Assessment",
+      "text": "The patient presents with a 3-day history of cough, accompanied by green phlegm, sore throat, and nasal congestion, which may be related to a respiratory infection",
+      "status": "ok",
+      "p_chain_broken": 0.0025,
+      "components": [
+        {
+          "component": "The patient presents with a 3-day history of cough, accompanied by green phlegm, sore throat, and nasal congestion, which may be related to a respiratory infection",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F12",
+            "F13",
+            "F14"
+          ],
+          "p_broken": 0.002472608950737197,
+          "passages": [
+            {
+              "pid": "363_2947",
+              "title": "Pneumonia",
+              "section": "What are the symptoms of pneumonia?",
+              "cos": 0.537
+            },
+            {
+              "pid": "404_3395",
+              "title": "Sinusitis",
+              "section": "Summary",
+              "cos": 0.514
+            },
+            {
+              "pid": "461_3963",
+              "title": "Whooping Cough",
+              "section": "What are the symptoms of whooping cough?",
+              "cos": 0.512
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N193_V02",
+      "section": "Plan",
+      "text": "The doctor will order a chest X-ray and sputum culture to further evaluate the patient's condition",
+      "status": "ok",
+      "p_chain_broken": 0.1645,
+      "components": [
+        {
+          "component": "The doctor will order a chest X-ray to further evaluate the patient's condition",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8",
+            "F9"
+          ],
+          "p_broken": 0.16451560880875463,
+          "passages": [
+            {
+              "pid": "461_3965",
+              "title": "Whooping Cough",
+              "section": "How is whooping cough diagnosed?",
+              "cos": 0.427
+            },
+            {
+              "pid": "5755_11",
+              "title": "Acute Bronchitis",
+              "section": "Summary",
+              "cos": 0.435
+            },
+            {
+              "pid": "377_3124",
+              "title": "Pulmonary Embolism",
+              "section": "What are the symptoms of a pulmonary embolism (PE)?",
+              "cos": 0.411
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The doctor will order a sputum culture to further evaluate the patient's condition",
+          "feature_ids": [
+            "F4",
+            "F14"
+          ],
+          "p_broken": 0.14804654021772642,
+          "passages": [
+            {
+              "pid": "363_2950",
+              "title": "Pneumonia",
+              "section": "How is pneumonia diagnosed?",
+              "cos": 0.6
+            },
+            {
+              "pid": "1526_2319",
+              "title": "Legionnaires' Disease",
+              "section": "How is Legionnaires' disease diagnosed?",
+              "cos": 0.457
+            },
+            {
+              "pid": "1510_2940",
+              "title": "Pneumocystis Infections",
+              "section": "How is pneumocystis pneumonia (PCP) diagnosed?",
+              "cos": 0.527
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N193_V03",
+      "section": "Plan",
+      "text": "The patient will be advised to continue taking metformin and hydrochlorothiazide as prescribed, and to monitor her blood sugar levels",
+      "status": "ok",
+      "p_chain_broken": 0.2451,
+      "components": [
+        {
+          "component": "The patient will be advised to continue taking metformin and hydrochlorothiazide as prescribed",
+          "feature_ids": [
+            "F8",
+            "F9"
+          ],
+          "p_broken": 3.5355736528755706e-05,
+          "passages": [
+            {
+              "pid": "4939_441",
+              "title": "Blood Pressure Medicines",
+              "section": "How do blood pressure medicines work?",
+              "cos": 0.528
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient will be advised to monitor her blood sugar levels",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.2450844176233985,
+          "passages": [
+            {
+              "pid": "6125_2087",
+              "title": "Hyperglycemia",
+              "section": "How is hyperglycemia diagnosed?",
+              "cos": 0.402
+            },
+            {
+              "pid": "1264_2105",
+              "title": "Hypoglycemia",
+              "section": "How is hypoglycemia diagnosed?",
+              "cos": 0.386
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N193_V04",
+      "section": "Plan",
+      "text": "The patient will be instructed to return for follow-up in 2-3 days to reassess her condition and receive further treatment as needed",
+      "status": "ok",
+      "p_chain_broken": 0.011,
+      "components": [
+        {
+          "component": "The patient will be instructed to return for follow-up in 2-3 days to reassess her condition and receive further treatment as needed",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8",
+            "F9"
+          ],
+          "p_broken": 0.01098685975850853,
+          "passages": [
+            {
+              "pid": "461_3963",
+              "title": "Whooping Cough",
+              "section": "What are the symptoms of whooping cough?",
+              "cos": 0.397
+            },
+            {
+              "pid": "3229_2584",
+              "title": "Mpox",
+              "section": "What are the symptoms of mpox?",
+              "cos": 0.385
+            },
+            {
+              "pid": "1543_961",
+              "title": "Cough",
+              "section": "Summary",
+              "cos": 0.422
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* Patient reports a 3-day history of cough, which started after being around a sick sister\n* Cough is accompanied by green phlegm, sore throat, and nasal congestion\n* No fever, chest pain, or shortness of breath\n* The patient reports that their blood sugar levels have been around 120 and they have been trying to manage their diet, but have had some difficulty with sugar intake.\n* Patient is a female with type 2 diabetes, taking metformin 500mg and hydrochlorothiazide for blood pressure\n* No known allergies, except for seasonal allergies causing sneezing and runny nose in springtime\n* Patient has been drinking plenty of water and taking over-the-counter cough medicine, but symptoms have not improved",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation",
+    "assessment": [
+      "The patient presents with a 3-day history of cough, accompanied by green phlegm, sore throat, and nasal congestion, which may be related to a respiratory infection"
+    ],
+    "plan": [
+      "The doctor will order a chest X-ray and sputum culture to further evaluate the patient's condition",
+      "The patient will be advised to continue taking metformin and hydrochlorothiazide as prescribed, and to monitor her blood sugar levels",
+      "The patient will be instructed to return for follow-up in 2-3 days to reassess her condition and receive further treatment as needed"
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "Hello. I'm Hannah, and I'm here because I've had a cough for about three days now. It started after being around my sister, who's been sick too, and now I'm coughing up some green phlegm. I've been drinking a lot of water and taking some over-the-counter cough medicine, but it hasn't really helped.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your age and gender, and describe the characteristics of your cough in more detail, such as its frequency, duration, and whether it is accompanied by any other symptoms like fever, chest pain, or difficulty breathing?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm sorry, I don't have my age with me, but I can tell you I'm a female. My cough has been going on for about three days now. It started as a gradual cough, and now I've been coughing up some green phlegm. I also have a little sore throat and some nasal congestion, but no fever or shortness of breath.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your age and confirm whether you have any known medical conditions, allergies, or medications you are currently taking?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have my age with me, but I can tell you I'm a female. I do have type two diabetes, and I'm currently taking metformin, 500 milligrams. I also take hydrochlorothiazide for my blood pressure. I don't have any known allergies, but I do have seasonal allergies around springtime, which cause sneezing and a runny nose.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the color, consistency, and amount of the green phlegm you're producing? Have you noticed any chest discomfort, wheezing, or difficulty breathing with the cough?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The phlegm is green in color, and I cough it up in small amounts. It's not too thick, but I do notice it more when I cough. I haven't had any chest discomfort, wheezing, or trouble breathing with the cough.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your age and any recent exposure to sick individuals or potential sources of infection?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have my age with me, but I was on vacation last week, and my sister was sick with similar symptoms around the same time. I think I might have caught it from her.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your current temperature and let me know if you've had any fever during this illness?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had a fever, my temperature has been normal. I've been checking my blood sugars, they've been around 120, and I've been trying to manage my diet, but I've had a little trouble with my sugar intake.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please tell me if you have had any recent chest X-rays or sputum cultures done?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have any recent chest X-rays or sputum cultures done. I haven't been to the hospital or had any tests done for this cough other than what was done today.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your current age and body weight? This will help us better assess your condition.",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have my age with me, but I can tell you I'm a female. I do have type two diabetes, and I'm currently taking metformin, 500 milligrams. I also take hydrochlorothiazide for my blood pressure. I don't have any known allergies, but I do have seasonal allergies around springtime, which cause sneezing and a runny nose.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "What is your current age and weight?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have my age with me, but I can tell you I'm a female. I do have type two diabetes, and I'm currently taking metformin, 500 milligrams. I also take hydrochlorothiazide for my blood pressure. I don't have any known allergies, but I do have seasonal allergies around springtime, which cause sneezing and a runny nose.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "What is your current age and weight?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have my age with me, but I can tell you I'm a female. I do have type two diabetes, and I'm currently taking metformin, 500 milligrams. I also take hydrochlorothiazide for my blood pressure. I don't have any known allergies, but I do have seasonal allergies around springtime, which cause sneezing and a runny nose.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "What is your current age and weight?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have my age with me, but I can tell you I'm a female. I do have type two diabetes, and I'm currently taking metformin, 500 milligrams. I also take hydrochlorothiazide for my blood pressure. I don't have any known allergies, but I do have seasonal allergies around springtime, which cause sneezing and a runny nose.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "What is your current age and weight?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have my age with me, but I can tell you I'm a female. I do have type two diabetes, and I'm currently taking metformin, 500 milligrams. I also take hydrochlorothiazide for my blood pressure. I don't have any known allergies, but I do have seasonal allergies around springtime, which cause sneezing and a runny nose.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your current age and weight?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have my age with me, but I can tell you I'm a female. I do have type two diabetes, and I'm currently taking metformin, 500 milligrams. I also take hydrochlorothiazide for my blood pressure. I don't have any known allergies, but I do have seasonal allergies around springtime, which cause sneezing and a runny nose.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your current age and weight?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have my age with me, but I can tell you I'm a female. I do have type two diabetes, and I'm currently taking metformin, 500 milligrams. I also take hydrochlorothiazide for my blood pressure. I don't have any known allergies, but I do have seasonal allergies around springtime, which cause sneezing and a runny nose.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your current age and weight?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have my age with me, but I can tell you I'm a female. I do have type two diabetes, and I'm currently taking metformin, 500 milligrams. I also take hydrochlorothiazide for my blood pressure. I don't have any known allergies, but I do have seasonal allergies around springtime, which cause sneezing and a runny nose.",
+      "tid": "T29"
+    }
+  ]
+}

@@ -1,0 +1,429 @@
+{
+  "case_id": "D2N161",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test2",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports that they were given a special mask by 911 personnel to assist with breathing.\n* The patient is an 82-year-old male who was hospitalized for an acute on chronic heart failure exacerbation and reports feeling better now.\n* He has a history of chronic kidney disease and hypertension.\n* He was prescribed medications during his hospitalization, including a diuretic (Bumex) and blood pressure medications (Cozaar and Norvasc).\n* He reports swelling in his ankles, which has been ongoing for a while, and shortness of breath, which came on suddenly and resolved with hospitalization.\n* He is currently taking Bumex 2mg daily and Cozaar and Norvasc, but does not recall the exact dosages.\n* The patient reports that they will obtain their current serum creatinine level, estimated glomerular filtration rate (eGFR), and electrolyte levels soon.\n* The patient states, \"Sure, doc.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N161_V01",
+      "section": "Assessment",
+      "text": "The patient has a history of chronic kidney disease and hypertension.",
+      "status": "ok",
+      "p_chain_broken": 0.0373,
+      "components": [
+        {
+          "component": "The patient has a history of chronic kidney disease.",
+          "feature_ids": [
+            "F8",
+            "F15"
+          ],
+          "p_broken": 0.00015843474392690442,
+          "passages": [
+            {
+              "pid": "5987_797",
+              "title": "Chronic Kidney Disease",
+              "section": "Summary",
+              "cos": 0.621
+            },
+            {
+              "pid": "5987_795",
+              "title": "Chronic Kidney Disease",
+              "section": "Summary",
+              "cos": 0.674
+            },
+            {
+              "pid": "91_2264",
+              "title": "Kidney Diseases",
+              "section": "Summary",
+              "cos": 0.569
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient has a history of hypertension.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.037326669415683696,
+          "passages": [
+            {
+              "pid": "3634_3134",
+              "title": "Pulmonary Hypertension",
+              "section": "Who is more likely to develop pulmonary hypertension?",
+              "cos": 0.477
+            },
+            {
+              "pid": "3634_3136",
+              "title": "Pulmonary Hypertension",
+              "section": "What are the symptoms of pulmonary hypertension?",
+              "cos": 0.409
+            },
+            {
+              "pid": "3634_3138",
+              "title": "Pulmonary Hypertension",
+              "section": "How is pulmonary hypertension diagnosed?",
+              "cos": 0.478
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N161_V02",
+      "section": "Assessment",
+      "text": "He has had an acute heart failure episode, which resolved with hospitalization.",
+      "status": "ok",
+      "p_chain_broken": 0.0,
+      "components": [
+        {
+          "component": "He has had an acute heart failure episode, which resolved with hospitalization.",
+          "feature_ids": [
+            "F2",
+            "F4",
+            "F7",
+            "F9",
+            "F10",
+            "F11",
+            "F13",
+            "F15"
+          ],
+          "p_broken": 4.0063295801642714e-05,
+          "passages": [
+            {
+              "pid": "199_1766",
+              "title": "Heart Failure",
+              "section": "What are the symptoms of heart failure?",
+              "cos": 0.382
+            },
+            {
+              "pid": "199_1765",
+              "title": "Heart Failure",
+              "section": "What are the symptoms of heart failure?",
+              "cos": 0.388
+            },
+            {
+              "pid": "1605_2556",
+              "title": "Mitral Valve Prolapse",
+              "section": "What are the treatments for mitral valve prolapse (MVP)?",
+              "cos": 0.396
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N161_V03",
+      "section": "Assessment",
+      "text": "He is currently taking medications for his conditions, but the exact dosages are unknown.",
+      "status": "ok",
+      "p_chain_broken": 0.0067,
+      "components": [
+        {
+          "component": "He is currently taking medications for his conditions, but the exact dosages are unknown.",
+          "feature_ids": [
+            "F11",
+            "F12",
+            "F16",
+            "F17"
+          ],
+          "p_broken": 0.006692790065355379,
+          "passages": [
+            {
+              "pid": "4939_441",
+              "title": "Blood Pressure Medicines",
+              "section": "How do blood pressure medicines work?",
+              "cos": 0.377
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N161_V04",
+      "section": "Plan",
+      "text": "The patient will need to follow up with his primary care physician to obtain the results of his recent blood work and to discuss his medication regimen and kidney function.",
+      "status": "ok",
+      "p_chain_broken": 0.0076,
+      "components": [
+        {
+          "component": "The patient will need to follow up with his primary care physician to obtain the results of his recent blood work and to discuss his medication regimen and kidney function.",
+          "feature_ids": [
+            "F1",
+            "F4",
+            "F8",
+            "F12",
+            "F15",
+            "F16",
+            "F17"
+          ],
+          "p_broken": 0.007577205655734455,
+          "passages": [
+            {
+              "pid": "6382_2271",
+              "title": "Kidney Tests",
+              "section": "Summary",
+              "cos": 0.404
+            },
+            {
+              "pid": "5987_795",
+              "title": "Chronic Kidney Disease",
+              "section": "Summary",
+              "cos": 0.42
+            },
+            {
+              "pid": "5987_796",
+              "title": "Chronic Kidney Disease",
+              "section": "Summary",
+              "cos": 0.426
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N161_V05",
+      "section": "Plan",
+      "text": "The patient will need to continue taking his medications as prescribed and monitor his symptoms for any signs of worsening heart failure or kidney disease.",
+      "status": "ok",
+      "p_chain_broken": 0.0008,
+      "components": [
+        {
+          "component": "The patient will need to continue taking his medications as prescribed",
+          "feature_ids": [
+            "F11",
+            "F12",
+            "F13",
+            "F15",
+            "F16",
+            "F17"
+          ],
+          "p_broken": 0.000230504545011979,
+          "passages": [
+            {
+              "pid": "6382_2271",
+              "title": "Kidney Tests",
+              "section": "Summary",
+              "cos": 0.358
+            },
+            {
+              "pid": "4939_441",
+              "title": "Blood Pressure Medicines",
+              "section": "How do blood pressure medicines work?",
+              "cos": 0.352
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "monitor his symptoms for any signs of worsening heart failure or kidney disease",
+          "feature_ids": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F8",
+            "F15",
+            "F17"
+          ],
+          "p_broken": 0.0008040809697153503,
+          "passages": [
+            {
+              "pid": "199_1766",
+              "title": "Heart Failure",
+              "section": "What are the symptoms of heart failure?",
+              "cos": 0.578
+            },
+            {
+              "pid": "279_1799",
+              "title": "Heart Valve Diseases",
+              "section": "What are the symptoms of heart valve diseases?",
+              "cos": 0.495
+            },
+            {
+              "pid": "5987_795",
+              "title": "Chronic Kidney Disease",
+              "section": "Summary",
+              "cos": 0.509
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports that they were given a special mask by 911 personnel to assist with breathing.\n* The patient is an 82-year-old male who was hospitalized for an acute on chronic heart failure exacerbation and reports feeling better now.\n* He has a history of chronic kidney disease and hypertension.\n* He was prescribed medications during his hospitalization, including a diuretic (Bumex) and blood pressure medications (Cozaar and Norvasc).\n* He reports swelling in his ankles, which has been ongoing for a while, and shortness of breath, which came on suddenly and resolved with hospitalization.\n* He is currently taking Bumex 2mg daily and Cozaar and Norvasc, but does not recall the exact dosages.\n* The patient reports that they will obtain their current serum creatinine level, estimated glomerular filtration rate (eGFR), and electrolyte levels soon.\n* The patient states, \"Sure, doc.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient has a history of chronic kidney disease and hypertension.",
+      "He has had an acute heart failure episode, which resolved with hospitalization.",
+      "He is currently taking medications for his conditions, but the exact dosages are unknown."
+    ],
+    "plan": [
+      "The patient will need to follow up with his primary care physician to obtain the results of his recent blood work and to discuss his medication regimen and kidney function.",
+      "The patient will need to continue taking his medications as prescribed and monitor his symptoms for any signs of worsening heart failure or kidney disease."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 82 years old, and I'm a male. I'm here because I had an acute on chronic heart failure exacerbation, and I was in the hospital for a few days. I felt really bad with shortness of breath and swelling in my ankles, and I even had to call 911. But now I feel much better.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide more details about your current symptoms and how long you've been experiencing them?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Sure, doc. The swelling in my ankles has been going on for a while, but it got worse before I went to the hospital. And the shortness of breath came on pretty suddenly—one day I was fine, and the next I was struggling to breathe. I had to call 911, and they gave me that special mask to help me breathe. But since I've been home, I haven't had any trouble breathing or swelling anymore. I feel good now.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide details about any prior heart failure diagnoses, medications you were taking during your hospitalization, and any previous hospitalizations related to heart failure or other conditions?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I was told I have chronic kidney disease and hypertension, and this was the first time I had an acute heart failure episode. During the hospital stay, they gave me some medications, including a water pill that made me go to the bathroom a lot, and some blood pressure meds. I don't remember the exact names, but I'm taking them now as prescribed. I haven't been hospitalized for heart failure before, but I have had some issues with my kidneys.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the specific names and dosages of the medications you are currently taking, including the diuretic and blood pressure medications?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm taking Bumex, which is the water pill, and I think it's two milligrams once a day. For my blood pressure, I'm on Cozaar and Norvasc, but I don't remember the exact dosages. The doctor told me to keep taking them, so I do.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide the results of any recent blood tests, such as serum creatinine, estimated glomerular filtration rate (eGFR), and electrolyte levels, as well as any imaging studies like an echocardiogram or renal ultrasound that were performed during or after the hospitalization?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I was told that I have chronic kidney disease and that my echocardiogram showed a preserved ejection fraction of 55%, abnormal diastolic filling, and mild to moderate mitral regurgitation. The doctor also mentioned ordering a renal artery ultrasound to check for any secondary causes affecting my kidneys, but I haven’t had the results yet.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your current serum creatinine level, estimated glomerular filtration rate (eGFR), and electrolyte levels (such as sodium, potassium, and bicarbonate)? This information will help us better understand your kidney function and guide your care.",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers for my serum creatinine, eGFR, or electrolytes right now. The doctor mentioned that I have stage three chronic kidney disease, and they want to check some more blood work to make sure I can handle the medications I'm on. I'll get those results soon, I guess.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the most recent serum creatinine level, eGFR, and electrolyte values (sodium, potassium, chloride, bicarbonate) to assess the patient's current kidney function and guide medication management?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers for my serum creatinine, eGFR, or electrolytes right now. The doctor mentioned that I have stage three chronic kidney disease, and they want to check some more blood work to make sure I can handle the medications I'm on. I'll get those results soon, I guess.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the most recent serum creatinine level, eGFR, and electrolyte values (sodium, potassium, chloride, bicarbonate) to assess the patient's current kidney function and guide medication management?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers for my serum creatinine, eGFR, or electrolytes right now. The doctor mentioned that I have stage three chronic kidney disease, and they want to check some more blood work to make sure I can handle the medications I'm on. I'll get those results soon, I guess.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the most recent serum creatinine, eGFR, and electrolyte values (sodium, potassium, chloride, bicarbonate) for the patient?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers for my serum creatinine, eGFR, or electrolytes right now. The doctor mentioned that I have stage three chronic kidney disease, and they want to check some more blood work to make sure I can handle the medications I'm on. I'll get those results soon, I guess.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the most recent serum creatinine, eGFR, and electrolyte values (sodium, potassium, chloride, bicarbonate) from your recent hospitalization or outpatient testing?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers for my serum creatinine, eGFR, or electrolytes right now. The doctor mentioned that I have stage three chronic kidney disease, and they want to check some more blood work to make sure I can handle the medications I'm on. I'll get those results soon, I guess.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the most recent serum creatinine, eGFR, and electrolyte values (sodium, potassium, chloride, bicarbonate) from your recent hospitalization or outpatient testing?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers for my serum creatinine, eGFR, or electrolytes right now. The doctor mentioned that I have stage three chronic kidney disease, and they want to check some more blood work to make sure I can handle the medications I'm on. I'll get those results soon, I guess.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the most recent serum creatinine, eGFR, and electrolyte values (sodium, potassium, chloride, bicarbonate) from your recent hospitalization or outpatient testing?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers for my serum creatinine, eGFR, or electrolytes right now. The doctor mentioned that I have stage three chronic kidney disease, and they want to check some more blood work to make sure I can handle the medications I'm on. I'll get those results soon, I guess.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the most recent serum creatinine, eGFR, and electrolyte values (sodium, potassium, chloride, bicarbonate) from your recent hospitalization or outpatient testing?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers for my serum creatinine, eGFR, or electrolytes right now. The doctor mentioned that I have stage three chronic kidney disease, and they want to check some more blood work to make sure I can handle the medications I'm on. I'll get those results soon, I guess.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the most recent serum creatinine, eGFR, and electrolyte values (sodium, potassium, chloride, bicarbonate) from the patient's recent hospitalization or outpatient testing?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers for my serum creatinine, eGFR, or electrolytes right now. The doctor mentioned that I have stage three chronic kidney disease, and they want to check some more blood work to make sure I can handle the medications I'm on. I'll get those results soon, I guess.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the most recent values for your serum creatinine, eGFR, and electrolytes (sodium, potassium, chloride, bicarbonate) from your recent hospitalization or outpatient testing? These results are important for managing your medications and kidney function.",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers for my serum creatinine, eGFR, or electrolytes right now. The doctor mentioned that I have stage three chronic kidney disease, and they want to check some more blood work to make sure I can handle the medications I'm on. I'll get those results soon, I guess.",
+      "tid": "T29"
+    }
+  ]
+}

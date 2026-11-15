@@ -1,0 +1,260 @@
+{
+  "case_id": "D2N109",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test1",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient is a 36-year-old female who presents with a painful and swollen left ankle after slipping on ice two days ago.\n* She reports throbbing and aching pain on the outside of her ankle, with no bruising or deformity.\n* She denies numbness, tingling, or weakness in her left foot or ankle.\n* She has not had any prior ankle injuries or conditions.\n* She has not undergone any imaging studies for this injury, but the doctor plans to order an X-ray to check for a possible fracture.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N109_V01",
+      "section": "Assessment",
+      "text": "The patient presents with a painful and swollen left ankle after a recent injury, with no prior history of ankle problems.",
+      "status": "ok",
+      "p_chain_broken": 0.0001,
+      "components": [
+        {
+          "component": "The patient presents with a painful and swollen left ankle after a recent injury, with no prior history of ankle problems.",
+          "feature_ids": [
+            "F1",
+            "F4",
+            "F2",
+            "F3",
+            "F6",
+            "F7",
+            "F8",
+            "F12"
+          ],
+          "p_broken": 0.00012339356001513476,
+          "passages": [
+            {
+              "pid": "1612_157",
+              "title": "Ankle Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.64
+            },
+            {
+              "pid": "417_3470",
+              "title": "Sprains and Strains",
+              "section": "Summary",
+              "cos": 0.51
+            },
+            {
+              "pid": "1618_3641",
+              "title": "Tendinitis",
+              "section": "Summary",
+              "cos": 0.506
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N109_V02",
+      "section": "Plan",
+      "text": "The doctor plans to order an X-ray to check for a possible fracture.",
+      "status": "ok",
+      "p_chain_broken": 0.2018,
+      "components": [
+        {
+          "component": "The doctor plans to order an X-ray to check for a possible fracture.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.2018125309609618,
+          "passages": [
+            {
+              "pid": "257_1531",
+              "title": "Fractures",
+              "section": "How are fractures diagnosed?",
+              "cos": 0.644
+            },
+            {
+              "pid": "1612_157",
+              "title": "Ankle Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.571
+            },
+            {
+              "pid": "257_1527",
+              "title": "Fractures",
+              "section": "What is a fracture?",
+              "cos": 0.534
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient is a 36-year-old female who presents with a painful and swollen left ankle after slipping on ice two days ago.\n* She reports throbbing and aching pain on the outside of her ankle, with no bruising or deformity.\n* She denies numbness, tingling, or weakness in her left foot or ankle.\n* She has not had any prior ankle injuries or conditions.\n* She has not undergone any imaging studies for this injury, but the doctor plans to order an X-ray to check for a possible fracture.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient presents with a painful and swollen left ankle after a recent injury, with no prior history of ankle problems."
+    ],
+    "plan": [
+      "The doctor plans to order an X-ray to check for a possible fracture."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Doctor",
+      "text": "Hello. Could you tell me your age and gender, and what brings you in today?",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 36 years old, and I'm here because I hurt my left ankle a couple of days ago when I slipped on some ice. It's been swollen and really painful, and it's hard for me to walk on it.",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm your age, gender, and describe the injury to your left ankle in more detail, including when it occurred and what activity you were doing at the time?",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 36 years old, and I'm a female. I hurt my left ankle about two days ago when I was walking to my car and slipped on some snow and ice. It twisted underneath me, and I fell. It's been swollen and really painful since then, and it's hard for me to walk on it.",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any previous ankle injuries or conditions, such as sprains, fractures, or arthritis?",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any previous ankle injuries or conditions like sprains, fractures, or arthritis. This is the first time I've had an issue like this.",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the nature of the pain in your left ankle? Is it sharp, dull, throbbing, or a combination of these? Have you noticed any bruising or deformity around the ankle area?",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The pain is more of a throbbing and aching feeling, especially on the outside of my ankle. I haven't noticed any bruising, but there's quite a bit of swelling. It doesn't look deformed, just really sore and swollen.",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any numbness, tingling, or weakness in your left foot or ankle since the injury?",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally.",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies such as X-rays or MRI for this injury? If so, please provide the results.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging studies done for this injury yet. The doctor is going to order an X-ray to check for a possible fracture. I didn't have any imaging done before coming in today.",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient experienced any numbness, tingling, or weakness in the left foot or ankle since the injury?",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any numbness, tingling, or weakness in my left foot or ankle since the injury. It's just sore and swollen, but I can still feel everything normally.",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any prior imaging or evaluation of this ankle injury?",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any prior imaging or evaluation of this ankle injury. This is the first time I've had an issue like this, so I haven't had anything done before today.",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient experienced any numbness, tingling, or weakness in the foot or toes since the injury?",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any numbness, tingling, or weakness in the foot or toes since the injury. I can still feel everything normally, and there's no tingling or numbness at all.",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any imaging studies for the left ankle injury, such as X-rays or MRI?",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't undergone any imaging studies for the left ankle injury yet. The doctor is going to order an X-ray to check for a possible fracture. I didn't have any imaging done before coming in today.",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe if you have experienced any numbness, tingling, or weakness in your foot or toes since the injury?",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any numbness, tingling, or weakness in my foot or toes since the injury. I can still feel everything normally, and there's no tingling or numbness at all.",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient experienced any numbness, tingling, or weakness in the foot or toes since the injury?",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any numbness, tingling, or weakness in the foot or toes since the injury. I can still feel everything normally, and there's no tingling or numbness at all.",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any numbness, tingling, or weakness in the foot or toes since the injury?",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any numbness, tingling, or weakness in the foot or toes since the injury. I can still feel everything normally, and there's no tingling or numbness at all.",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any changes in the color of your foot or toes since the injury, such as pallor or redness?",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any changes in the color of my foot or toes since the injury. It looks normal, and there's no pallor or unusual redness that I can see.",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any locking, catching, or instability in the ankle joint since the injury?",
+      "tid": "T29"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any locking, catching, or instability in the ankle joint since the injury. It feels a little sore and swollen, but it doesn't catch or lock up when I move it.",
+      "tid": "T30"
+    }
+  ]
+}

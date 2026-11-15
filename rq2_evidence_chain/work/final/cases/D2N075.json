@@ -1,0 +1,368 @@
+{
+  "case_id": "D2N075",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "dev",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* Patient is a 54-year-old female who was referred to the doctor from the ER for esophagitis.\n* The patient reports that the tests performed during their ER visit for chest pain three months ago did not reveal any abnormalities with their heart.\n* The patient reports that the chest pain did not occur at the time of waking.\n* She had chest pain a few months ago that lasted for four days and went away.\n* The chest pain was sharp and located right behind her breastbone in the center of her chest.\n* She also experienced difficulty swallowing during that time.\n* She has not had any symptoms related to esophagitis since the initial episode three months ago.\n* The patient states that the doctor mentioned an upper endoscopy as an option, but the patient chose to wait and see if symptoms worsen before pursuing it.\n* The patient reports that cardiac stress testing and echocardiography were not performed subsequent to the initial evaluation due to the initial testing already ruling out cardiac causes of the prior chest pain.\n* The patient reports that the EKG and blood tests performed during the ER visit did not reveal any cardiac issues, and the healthcare provider suspected a possible gastrointestinal issue instead.\n* She does not smoke or drink alcohol and has been trying to lose weight.\n* The patient reports that the blood tests performed during the ER visit showed normal results, but does not recall the exact names of the tests.\n* She does not have a family history of cardiovascular disease.\n* The patient reports feeling fine currently, but wants to ensure there is no underlying condition.\n* The patient reports feeling better currently, but still desires reassurance that there are no other underlying issues.\n* The patient reports wanting to ensure everything is okay.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [
+    {
+      "id": "q1",
+      "gap": "Current weight",
+      "question": "What is your current weight?",
+      "category": "subjective",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "q2",
+      "gap": "Height",
+      "question": "What is your height?",
+      "category": "subjective",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "q3",
+      "gap": "Body mass index (BMI)",
+      "question": "What is your BMI?",
+      "category": "subjective",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "q4",
+      "gap": "Results of EGD (if performed)",
+      "question": "What were the results of the upper endoscopy (EGD) if performed?",
+      "category": "objective",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "q5",
+      "gap": "Current medications",
+      "question": "Are you currently taking any medications?",
+      "category": "subjective",
+      "status": "unresolved",
+      "answer": null
+    }
+  ],
+  "ap_lines": [
+    {
+      "statement_id": "D2N075_V01",
+      "section": "Assessment",
+      "text": "The patient has a history of esophagitis and chest pain that resolved three months ago.",
+      "status": "ok",
+      "p_chain_broken": 0.0601,
+      "components": [
+        {
+          "component": "The patient has a history of esophagitis and chest pain that resolved three months ago.",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F13",
+            "F14"
+          ],
+          "p_broken": 0.060086465030717115,
+          "passages": [
+            {
+              "pid": "6967_1372",
+              "title": "Eosinophilic Esophagitis",
+              "section": "What are the symptoms of eosinophilic esophagitis (EoE)?",
+              "cos": 0.585
+            },
+            {
+              "pid": "246_1385",
+              "title": "Esophagus Disorders",
+              "section": "What are common esophagus disorders?",
+              "cos": 0.64
+            },
+            {
+              "pid": "246_1387",
+              "title": "Esophagus Disorders",
+              "section": "What are symptoms of esophagus disorders?",
+              "cos": 0.65
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N075_V02",
+      "section": "Assessment",
+      "text": "She is currently asymptomatic and has not had any further episodes of chest pain or difficulty swallowing.",
+      "status": "ok",
+      "p_chain_broken": 0.1824,
+      "components": [
+        {
+          "component": "She is currently asymptomatic and has not had any further episodes of chest pain or difficulty swallowing.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.18242508376061456,
+          "passages": [
+            {
+              "pid": "4744_694",
+              "title": "Chest Pain",
+              "section": "Summary",
+              "cos": 0.54
+            },
+            {
+              "pid": "246_1387",
+              "title": "Esophagus Disorders",
+              "section": "What are symptoms of esophagus disorders?",
+              "cos": 0.556
+            },
+            {
+              "pid": "4212_1748",
+              "title": "Heart Disease in Women",
+              "section": "What are the symptoms of heart disease and heart attack in women?",
+              "cos": 0.467
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N075_V03",
+      "section": "Plan",
+      "text": "The patient will continue to monitor her symptoms and may consider an upper endoscopy (EGD) in the future if she experiences any further symptoms.",
+      "status": "ok",
+      "p_chain_broken": 0.1192,
+      "components": [
+        {
+          "component": "The patient will continue to monitor her symptoms",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.010986890411696284,
+          "passages": [
+            {
+              "pid": "4212_1748",
+              "title": "Heart Disease in Women",
+              "section": "What are the symptoms of heart disease and heart attack in women?",
+              "cos": 0.46
+            },
+            {
+              "pid": "4931_205",
+              "title": "Aortic Aneurysm",
+              "section": "Who should be screened for an aortic aneurysm?",
+              "cos": 0.441
+            },
+            {
+              "pid": "4744_694",
+              "title": "Chest Pain",
+              "section": "Summary",
+              "cos": 0.517
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "may consider an upper endoscopy (EGD) in the future if she experiences any further symptoms",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.11920235879378555,
+          "passages": [
+            {
+              "pid": "4370_1894",
+              "title": "Hiatal Hernia",
+              "section": "Summary",
+              "cos": 0.382
+            },
+            {
+              "pid": "4212_1748",
+              "title": "Heart Disease in Women",
+              "section": "What are the symptoms of heart disease and heart attack in women?",
+              "cos": 0.362
+            },
+            {
+              "pid": "4513_1353",
+              "title": "Endoscopy",
+              "section": "Summary",
+              "cos": 0.391
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* Patient is a 54-year-old female who was referred to the doctor from the ER for esophagitis.\n* The patient reports that the tests performed during their ER visit for chest pain three months ago did not reveal any abnormalities with their heart.\n* The patient reports that the chest pain did not occur at the time of waking.\n* She had chest pain a few months ago that lasted for four days and went away.\n* The chest pain was sharp and located right behind her breastbone in the center of her chest.\n* She also experienced difficulty swallowing during that time.\n* She has not had any symptoms related to esophagitis since the initial episode three months ago.\n* The patient states that the doctor mentioned an upper endoscopy as an option, but the patient chose to wait and see if symptoms worsen before pursuing it.\n* The patient reports that cardiac stress testing and echocardiography were not performed subsequent to the initial evaluation due to the initial testing already ruling out cardiac causes of the prior chest pain.\n* The patient reports that the EKG and blood tests performed during the ER visit did not reveal any cardiac issues, and the healthcare provider suspected a possible gastrointestinal issue instead.\n* She does not smoke or drink alcohol and has been trying to lose weight.\n* The patient reports that the blood tests performed during the ER visit showed normal results, but does not recall the exact names of the tests.\n* She does not have a family history of cardiovascular disease.\n* The patient reports feeling fine currently, but wants to ensure there is no underlying condition.\n* The patient reports feeling better currently, but still desires reassurance that there are no other underlying issues.\n* The patient reports wanting to ensure everything is okay.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient has a history of esophagitis and chest pain that resolved three months ago.",
+      "She is currently asymptomatic and has not had any further episodes of chest pain or difficulty swallowing."
+    ],
+    "plan": [
+      "The patient will continue to monitor her symptoms and may consider an upper endoscopy (EGD) in the future if she experiences any further symptoms."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Doctor",
+      "text": "Hello. Could you tell me your age and gender, and what brings you in today?",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 54 years old, and I'm female. I was referred here from the ER for esophagitis, but I also had chest pain a few months ago that lasted for four days and went away. I wanted to make sure everything is okay.",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the nature, location, duration, and any associated symptoms of the chest pain you experienced a few months ago?",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The chest pain was sharp and located right behind my breastbone in the center of my chest. It just came on randomly, and I didn’t wake up with it. It lasted for four days, and I couldn’t relieve it with anything I tried. I ended up going to the ER because it was so bad, and they did a bunch of tests but didn’t find anything. It went away after about three days, and I haven’t had any pain since then. I did have some trouble swallowing at the time, though.",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the current symptoms related to your esophagitis? Please include the duration, severity, and any associated symptoms such as difficulty swallowing, heartburn, or regurgitation.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't currently have any symptoms related to esophagitis. The issues I had before, like the chest pain and difficulty swallowing, have resolved since the initial episode three months ago. I feel better now, but I still want to make sure there isn't anything else going on.",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide details about any family history of cardiovascular disease, such as heart attacks, angina, or strokes in close relatives?",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't think there's any family history of cardiovascular disease that I'm aware of. I don't have any close relatives who've had heart attacks, angina, or strokes that I know of.",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide details about your current symptoms related to esophagitis, such as the presence of dysphagia, regurgitation, heartburn, or odynophagia? Additionally, have you experienced any risk factors for gastroesophageal reflux disease (GERD), such as obesity, smoking, or alcohol consumption?",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't currently have any symptoms related to esophagitis. The issues I had before, like the chest pain and difficulty swallowing, have resolved since the initial episode three months ago. I feel better now, but I still want to make sure there isn't anything else going on. I don't smoke or drink alcohol, and I've been trying to lose weight, so I don't think I have any of the typical risk factors for GERD.",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide details about the results of the tests performed during your ER visit for the chest pain three months ago, including any ECG findings, cardiac enzymes, or imaging studies?",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Patient",
+      "text": "They did an EKG and some blood tests, but everything was normal. They didn't find anything wrong with my heart. They thought it might be related to my GI system, which is why they referred me here. I didn't have any other tests done at the time, just those basic ones.",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe any current symptoms related to your esophagitis, such as difficulty swallowing, heartburn, or regurgitation?",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't currently have any symptoms related to esophagitis. The chest pain and difficulty swallowing I had before have resolved, and I haven't had any issues since then. I feel fine now, but I still want to make sure there's nothing else going on.",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide details about the specific blood tests performed during the ER visit, including results for cardiac enzymes such as troponin and creatine kinase-MB?",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember the exact names of the blood tests, but they said everything was normal. They didn't find any issues with my heart, so I guess the results were all within the normal range. They didn't mention anything specific about troponin or creatine kinase-MB, just that the heart tests came back okay.",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe any current symptoms related to your esophagitis, such as difficulty swallowing, heartburn, or regurgitation?",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't currently have any symptoms related to esophagitis. The chest pain and difficulty swallowing I had before have resolved, and I haven't had any issues since then. I feel fine now, but I still want to make sure there's nothing else going on.",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "What specific tests were performed during the ER visit for the chest pain, and were there any findings related to esophageal or gastric pathology?",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Patient",
+      "text": "They did an EKG and some blood tests, but everything was normal. They didn't find anything wrong with my heart. They thought it might be related to my GI system, which is why they referred me here. I didn't have any other tests done at the time, just those basic ones.",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide details about the current evaluation for esophagitis, including any endoscopic findings, biopsy results, or other relevant tests that have been performed?",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had any tests for esophagitis done yet. The doctor mentioned doing an EGD, which is an upper endoscopy, but I decided to wait and see if I have more symptoms before having that done. Right now, I don't have any issues, so I'm just monitoring things.",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any cardiac stress testing or echocardiography since the initial ER evaluation to further assess for cardiac causes of the prior chest pain?",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any additional cardiac tests since the ER visit. They already ruled out any heart issues with the initial testing, so I didn't need anything else. I'm just focusing on making sure there's nothing else going on with my esophagus or stomach.",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone an upper endoscopy (EGD) or any other tests to evaluate for esophagitis, and if so, what were the findings?",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had an upper endoscopy or any other tests to evaluate for esophagitis yet. The doctor mentioned it as an option, but I chose to wait and see if I have more symptoms before having that done. Right now, I don't have any issues, so I'm just monitoring things.",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide the specific results of the EKG and blood tests performed during the ER visit, including the levels of cardiac enzymes such as troponin and creatine kinase-MB?",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the specific results of the EKG or blood tests, but they told me everything was normal and that there was no sign of a heart problem. They didn't find any issues with my heart, so they thought it might be something else, like a GI issue. I wasn't given any medications or further tests at the time.",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone an upper endoscopy or any other tests to evaluate for esophagitis or GERD?",
+      "tid": "T29"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had an upper endoscopy or any other tests to evaluate for esophagitis or GERD yet. The doctor mentioned it as an option, but I chose to wait and see if I have more symptoms before having that done. Right now, I don't have any issues, so I'm just monitoring things.",
+      "tid": "T30"
+    }
+  ]
+}

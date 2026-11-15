@@ -1,0 +1,374 @@
+{
+  "case_id": "D2N093",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test1",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports being unsure if there are any other relevant comorbidities.\n* The patient reports being unsure if there were any other diuretics or heart failure medications prescribed in the past.\n* The patient is unsure if there were any medications prescribed for congestive heart failure in the past.\n* The patient reports that shortness of breath does not stop them from doing things, but they notice it more now.\n* Age: 62 years old, male\n* Chief complaint: Trouble with breathing, especially when walking up a flight of stairs, and mild swelling in both legs\n* Duration of symptoms: 10 days\n* Description of breathing difficulty: Shortness of breath, especially when walking up a flight of stairs\n* Description of leg swelling: Mild, not painful or red, mostly around the ankles\n* History of diabetes: Type I diabetes, managed with insulin pump\n* History of heart failure: Congestive heart failure\n* Current medications: Insulin pump for diabetes, omeprazole for reflux\n* Recent changes in urine output: None\n* Recent changes in appetite: None\n* Recent changes in fatigue: Feeling more fatigued than usual, especially after walking up a flight of stairs or doing anything that requires being on feet for too long",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N093_V01",
+      "section": "Assessment",
+      "text": "The patient is experiencing shortness of breath, especially when walking up a flight of stairs, and mild swelling in both legs.",
+      "status": "ok",
+      "p_chain_broken": 0.0,
+      "components": [
+        {
+          "component": "The patient is experiencing shortness of breath, especially when walking up a flight of stairs",
+          "feature_ids": [
+            "F2",
+            "F4"
+          ],
+          "p_broken": 2.1444562403726142e-05,
+          "passages": [
+            {
+              "pid": "147_229",
+              "title": "Arrhythmia",
+              "section": "What are the symptoms of an arrhythmia?",
+              "cos": 0.524
+            },
+            {
+              "pid": "3077_509",
+              "title": "Breathing Problems",
+              "section": "Summary",
+              "cos": 0.631
+            },
+            {
+              "pid": "377_3124",
+              "title": "Pulmonary Embolism",
+              "section": "What are the symptoms of a pulmonary embolism (PE)?",
+              "cos": 0.477
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient is experiencing mild swelling in both legs",
+          "feature_ids": [
+            "F3"
+          ],
+          "p_broken": 2.7535418661665885e-05,
+          "passages": [
+            {
+              "pid": "1229_1307",
+              "title": "Edema",
+              "section": "Summary",
+              "cos": 0.574
+            },
+            {
+              "pid": "481_2250",
+              "title": "Kaposi Sarcoma",
+              "section": "What are the symptoms of Kaposi sarcoma?",
+              "cos": 0.399
+            },
+            {
+              "pid": "5404_1431",
+              "title": "Eyelid Disorders",
+              "section": "What are common eyelid disorders?",
+              "cos": 0.401
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N093_V02",
+      "section": "Assessment",
+      "text": "The patient has a history of type I diabetes and congestive heart failure.",
+      "status": "ok",
+      "p_chain_broken": 0.0474,
+      "components": [
+        {
+          "component": "The patient has a history of type I diabetes.",
+          "feature_ids": [
+            "F5"
+          ],
+          "p_broken": 0.047425674588478656,
+          "passages": [
+            {
+              "pid": "6661_2042",
+              "title": "How to Prevent Diabetes",
+              "section": "Who is at risk for type 2 diabetes?",
+              "cos": 0.489
+            },
+            {
+              "pid": "5930_1116",
+              "title": "Diabetes Type 2",
+              "section": "Who is at risk for type 2 diabetes?",
+              "cos": 0.491
+            },
+            {
+              "pid": "199_1768",
+              "title": "Heart Failure",
+              "section": "How is heart failure diagnosed?",
+              "cos": 0.47
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient has a history of congestive heart failure.",
+          "feature_ids": [
+            "F5"
+          ],
+          "p_broken": 0.015906338821666702,
+          "passages": [
+            {
+              "pid": "199_1768",
+              "title": "Heart Failure",
+              "section": "How is heart failure diagnosed?",
+              "cos": 0.575
+            },
+            {
+              "pid": "199_1763",
+              "title": "Heart Failure",
+              "section": "Who is more likely to develop heart failure?",
+              "cos": 0.508
+            },
+            {
+              "pid": "199_1771",
+              "title": "Heart Failure",
+              "section": "Can heart failure be prevented?",
+              "cos": 0.491
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N093_V03",
+      "section": "Assessment",
+      "text": "The patient is currently taking insulin pump for diabetes and omeprazole for reflux.",
+      "status": "ok",
+      "p_chain_broken": 0.0019,
+      "components": [
+        {
+          "component": "The patient is currently taking insulin pump for diabetes",
+          "feature_ids": [
+            "F6"
+          ],
+          "p_broken": 0.00043055329337760587,
+          "passages": [
+            {
+              "pid": "4935_1103",
+              "title": "Diabetes Medicines",
+              "section": "What are the types of medicines for type 1 diabetes?",
+              "cos": 0.475
+            },
+            {
+              "pid": "1339_1112",
+              "title": "Diabetes Type 1",
+              "section": "What are the treatments for type 1 diabetes?",
+              "cos": 0.378
+            },
+            {
+              "pid": "4_1079",
+              "title": "Diabetes",
+              "section": "What are the treatments for diabetes?",
+              "cos": 0.361
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient is currently taking omeprazole for reflux",
+          "feature_ids": [
+            "F6"
+          ],
+          "p_broken": 0.0019267203885803405,
+          "passages": [
+            {
+              "pid": "6467_3203",
+              "title": "Reflux in Infants",
+              "section": "What are the treatments for my infant's GERD?",
+              "cos": 0.497
+            },
+            {
+              "pid": "4935_1103",
+              "title": "Diabetes Medicines",
+              "section": "What are the types of medicines for type 1 diabetes?",
+              "cos": 0.435
+            },
+            {
+              "pid": "6467_3202",
+              "title": "Reflux in Infants",
+              "section": "What are the treatments for my infant's GERD?",
+              "cos": 0.465
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports being unsure if there are any other relevant comorbidities.\n* The patient reports being unsure if there were any other diuretics or heart failure medications prescribed in the past.\n* The patient is unsure if there were any medications prescribed for congestive heart failure in the past.\n* The patient reports that shortness of breath does not stop them from doing things, but they notice it more now.\n* Age: 62 years old, male\n* Chief complaint: Trouble with breathing, especially when walking up a flight of stairs, and mild swelling in both legs\n* Duration of symptoms: 10 days\n* Description of breathing difficulty: Shortness of breath, especially when walking up a flight of stairs\n* Description of leg swelling: Mild, not painful or red, mostly around the ankles\n* History of diabetes: Type I diabetes, managed with insulin pump\n* History of heart failure: Congestive heart failure\n* Current medications: Insulin pump for diabetes, omeprazole for reflux\n* Recent changes in urine output: None\n* Recent changes in appetite: None\n* Recent changes in fatigue: Feeling more fatigued than usual, especially after walking up a flight of stairs or doing anything that requires being on feet for too long",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient is experiencing shortness of breath, especially when walking up a flight of stairs, and mild swelling in both legs.",
+      "The patient has a history of type I diabetes and congestive heart failure.",
+      "The patient is currently taking insulin pump for diabetes and omeprazole for reflux."
+    ],
+    "plan": []
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Doctor",
+      "text": "Hello. Could you tell me your age and gender, and what brings you in today?",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 62 years old, male. I've been having some trouble with my breathing, especially when I walk up a flight of stairs, and I've noticed some swelling in my legs. It's been going on for about 10 days.",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the nature of your breathing difficulty? For example, is it shortness of breath, chest tightness, or wheezing? Also, could you specify if the leg swelling is in both legs or only one, and whether it is accompanied by pain or redness?",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The breathing difficulty is more like shortness of breath, especially when I walk up a flight of stairs. It doesn't feel like chest tightness or wheezing. As for the swelling, it's in both legs, and it's not painful or red. It's just a little puffy, especially around the ankles.",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any chest pain, palpitations, or dizziness during the episodes of shortness of breath? Additionally, have you had any recent weight gain, changes in urine output, or a history of hypertension, diabetes, heart disease, or kidney disease?",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any chest pain, palpitations, or dizziness during the episodes of shortness of breath. I do have a history of type I diabetes and congestive heart failure, but I haven't noticed any recent weight gain or changes in my urine output.",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide details about your current medications, including any diuretics, ACE inhibitors, or other drugs related to heart failure or diabetes? Also, have you had any recent changes in your urine output or noticed any blood in your urine?",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm on an insulin pump for my diabetes, and I take omeprazole for my reflux. I don't take any diuretics or other medications for my heart failure. I haven't noticed any changes in my urine output or blood in my urine.",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide details on the current New York Heart Association (NYHA) functional classification for the patient's heart failure, as well as any recent changes in the frequency or severity of shortness of breath or leg swelling?",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm not sure about the NYHA classification, but I can tell you that my shortness of breath has been happening for about 10 days, and it's mostly when I walk up a flight of stairs. The swelling in my legs is mild and hasn't gotten worse, as far as I can tell. I haven't had any changes in how often it happens, just that it's been ongoing.",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient experienced any changes in his urine output, such as decreased volume or increased frequency, over the past 10 days?",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any changes in my urine output. It's been the same as usual.",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe how your shortness of breath has been affecting your daily activities? For example, have you been able to walk the same distance as before, or has it limited your ability to perform tasks?",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Patient",
+      "text": "It's been affecting my daily activities a bit. I can still walk around, but if I try to go up a flight of stairs, I feel out of breath. It doesn't stop me from doing things, but it's something I notice more now.",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide information on whether the patient has been prescribed any medications for his congestive heart failure in the past, and if so, what were they and how did he respond to them?",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't recall being prescribed any medications specifically for my congestive heart failure in the past. I've been managing my conditions with the insulin pump for diabetes and omeprazole for reflux, but I haven't taken any other medications for my heart failure. I'm not sure if there were any others.",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you clarify if you have ever been prescribed any diuretics or heart failure medications in the past, even if you are not currently taking them, and if so, what were they and how did you respond to them?",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't recall being prescribed any diuretics or heart failure medications in the past. I've been managing my conditions with the insulin pump for diabetes and omeprazole for reflux, but I haven't taken any other medications for my heart failure. I'm not sure if there were any others.",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient experienced any changes in his urine output or noticed any blood in the urine over the past 10 days?",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any changes in my urine output or any blood in the urine over the past 10 days. It's been the same as usual.",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm if you have ever been prescribed any diuretics or heart failure medications in the past, even if you are not currently taking them?",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't recall being prescribed any diuretics or heart failure medications in the past. I've been managing my conditions with the insulin pump for diabetes and omeprazole for reflux, but I haven't taken any other medications for my heart failure. I'm not sure if there were any others.",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm if you have a history of renal disease, proteinuria, or any other relevant comorbidities that may contribute to your current symptoms?",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have a history of renal disease or proteinuria. I was told I have type I diabetes, congestive heart failure, depression, and reflux, but nothing else about my kidneys or other comorbidities. I'm not sure if there's anything else.",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you clarify if you have ever been prescribed diuretics or heart failure medications in the past, even if you are not currently taking them? Additionally, have you noticed any changes in your urine output or the color of your urine over the past 10 days?",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't recall being prescribed any diuretics or heart failure medications in the past. I've been managing my conditions with the insulin pump for diabetes and omeprazole for reflux, but I haven't taken any other medications for my heart failure. I'm not sure if there were any others. And no, I haven't noticed any changes in my urine output or the color of my urine over the past 10 days. It's been the same as usual.",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Thank you for the clarification. To better understand your current condition, could you please tell me if you have experienced any changes in your appetite or if you have been feeling more fatigued than usual over the past 10 days?",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't noticed any changes in my appetite, but I have been feeling more fatigued than usual, especially after walking up a flight of stairs or doing anything that requires me to be on my feet for too long. It's been pretty tiring.",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any changes in your urine output, such as decreased volume, frequency, or color, over the past 10 days?",
+      "tid": "T29"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any changes in my urine output, frequency, or color over the past 10 days. It's been the same as usual.",
+      "tid": "T30"
+    }
+  ]
+}

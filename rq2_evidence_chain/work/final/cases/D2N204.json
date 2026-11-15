@@ -1,0 +1,254 @@
+{
+  "case_id": "D2N204",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test3",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports skiing with friends in snowy conditions.\n* Patient reports a right knee injury sustained while skiing over the weekend, which caused a pop and subsequent pain and swelling.\n* Patient has been taking Advil and icing the knee, but has not experienced any instability, locking, or difficulty bearing weight.\n* Patient reports pain and tightness with bending and straightening of the knee, but has not noticed any numbness, tingling, or weakness in the right leg.\n* Patient has not undergone any specific ligament or meniscal tests, such as the Lachman test or McMurray test.\n* The patient, a 32-year-old male, identifies himself as Joe.",
+    "objective": "* The patient is present for a check-up today."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N204_V01",
+      "section": "Assessment",
+      "text": "The patient has a history of a right knee injury sustained while skiing, which caused a pop and subsequent pain and swelling.",
+      "status": "ok",
+      "p_chain_broken": 0.0001,
+      "components": [
+        {
+          "component": "The patient has a history of a right knee injury sustained while skiing, which caused a pop and subsequent pain and swelling.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 8.481022251451527e-05,
+          "passages": [
+            {
+              "pid": "304_2282",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.574
+            },
+            {
+              "pid": "304_2281",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.516
+            },
+            {
+              "pid": "417_3470",
+              "title": "Sprains and Strains",
+              "section": "Summary",
+              "cos": 0.557
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N204_V02",
+      "section": "Assessment",
+      "text": "The patient has not experienced any instability, locking, or difficulty bearing weight, but reports pain and tightness with bending and straightening of the knee.",
+      "status": "ok",
+      "p_chain_broken": 0.0086,
+      "components": [
+        {
+          "component": "The patient has not experienced any instability, locking, or difficulty bearing weight, but reports pain and tightness with bending and straightening of the knee.",
+          "feature_ids": [
+            "F1",
+            "F4",
+            "F7",
+            "F8",
+            "F10",
+            "F12",
+            "F14",
+            "F16"
+          ],
+          "p_broken": 0.008577437894530283,
+          "passages": [
+            {
+              "pid": "304_2282",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.582
+            },
+            {
+              "pid": "304_2281",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.537
+            },
+            {
+              "pid": "417_3470",
+              "title": "Sprains and Strains",
+              "section": "Summary",
+              "cos": 0.564
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports skiing with friends in snowy conditions.\n* Patient reports a right knee injury sustained while skiing over the weekend, which caused a pop and subsequent pain and swelling.\n* Patient has been taking Advil and icing the knee, but has not experienced any instability, locking, or difficulty bearing weight.\n* Patient reports pain and tightness with bending and straightening of the knee, but has not noticed any numbness, tingling, or weakness in the right leg.\n* Patient has not undergone any specific ligament or meniscal tests, such as the Lachman test or McMurray test.\n* The patient, a 32-year-old male, identifies himself as Joe.",
+    "objective": "* The patient is present for a check-up today.",
+    "assessment": [
+      "The patient has a history of a right knee injury sustained while skiing, which caused a pop and subsequent pain and swelling.",
+      "The patient has not experienced any instability, locking, or difficulty bearing weight, but reports pain and tightness with bending and straightening of the knee."
+    ],
+    "plan": []
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "Hi, I'm Joe, and I'm 32 years old. I came in because I hurt my right knee while skiing over the weekend. It feels swollen and painful, and I heard a pop when it happened. I've been taking some Advil and icing it, but I wanted to get checked out.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any instability, locking, or difficulty bearing weight on the right knee since the injury?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had any real instability, but it's been pretty painful to put weight on it. I've been able to walk a little, but it's swollen and feels tight. I didn't really lock up or anything like that.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any locking, clicking, or giving way of the knee? Have you been able to fully bend or straighten the knee?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't noticed any locking or clicking, but I did feel a pop when it happened. As for bending or straightening, I can get through the full range of motion, but it feels tight and hurts a little when I do.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the exact mechanism of the injury, such as whether you twisted your knee, landed awkwardly, or collided with something while skiing?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Sure, I was skiing with some friends, and it was snowing pretty hard. I couldn't really see well, and the two paths kind of came together. I think the front end of my skis dug into the snow, and I ended up doing a cartwheel but kind of stopped halfway through. I could feel a pop in my right knee right then, and the pain came right after that.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies such as X-rays or MRI for your knee injury, and if so, what were the findings?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had any imaging studies done yet for my knee. The doctor did mention that there was no fracture or bony abnormality on the X-ray, but I don't know the full details of the results. I'm just here getting checked out today.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any instability, locking, or giving way of your knee since the injury?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any real instability or giving way of the knee since the injury. It's been painful to put weight on it, but I haven't felt it buckle or lock up. I can bend and straighten it, though it feels tight and hurts a little when I do.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any numbness, tingling, or weakness in your right leg since the injury?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any numbness, tingling, or weakness in my right leg since the injury. Everything feels normal there, just some pain and tightness around the knee.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any physical examination or specific tests for ligament or meniscal injuries, such as the Lachman test, anterior drawer test, or McMurray test, since the injury?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't undergone any specific tests for ligament or meniscal injuries like the Lachman test or McMurray test. The doctor did do a physical exam and found some swelling, bruising, and tenderness around the knee, but they didn't mention any of those specific tests. They did an X-ray, though, and said there was no fracture or bony abnormality.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any instability, locking, or giving way of the knee since the injury? Additionally, have you experienced any numbness, tingling, or weakness in your right leg?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any instability or giving way of the knee since the injury. It's been painful to put weight on it, but I haven't felt it buckle or lock up. I can bend and straighten it, though it feels tight and hurts a little when I do. And I haven't experienced any numbness, tingling, or weakness in my right leg since the injury. Everything feels normal there, just some pain and tightness around the knee.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any specific ligament or meniscal tests, such as the Lachman test or McMurray test, to assess for potential ligament or meniscal damage?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't undergone any specific ligament or meniscal tests like the Lachman test or McMurray test. The doctor did do a physical exam and found some swelling, bruising, and tenderness around the knee, but they didn't mention any of those specific tests. They did an X-ray, though, and said there was no fracture or bony abnormality.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any instability, locking, or giving way of the knee since the injury?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any instability or giving way of the knee since the injury. It's been painful to put weight on it, but I haven't felt it buckle or lock up. I can bend and straighten it, though it feels tight and hurts a little when I do.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any specific ligament or meniscal tests, such as the Lachman test or McMurray test, to assess for potential ligament or meniscal damage?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't undergone any specific ligament or meniscal tests like the Lachman test or McMurray test. The doctor did do a physical exam and found some swelling, bruising, and tenderness around the knee, but they didn't mention any of those specific tests. They did an X-ray, though, and said there was no fracture or bony abnormality.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any instability, locking, or giving way of the knee since the injury?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any instability or giving way of the knee since the injury. It's been painful to put weight on it, but I haven't felt it buckle or lock up. I can bend and straighten it, though it feels tight and hurts a little when I do.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any specific ligament or meniscal tests, such as the Lachman test or McMurray test, to assess for potential ligament or meniscal damage?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't undergone any specific ligament or meniscal tests like the Lachman test or McMurray test. The doctor did do a physical exam and found some swelling, bruising, and tenderness around the knee, but they didn't mention any of those specific tests. They did an X-ray, though, and said there was no fracture or bony abnormality.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any instability, locking, or a sensation of the knee giving way since the injury?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any instability or a sensation of the knee giving way since the injury. It's been painful to put weight on it, but I haven't felt it buckle or lock up. I can bend and straighten it, though it feels tight and hurts a little when I do.",
+      "tid": "T29"
+    }
+  ]
+}

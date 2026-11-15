@@ -1,0 +1,374 @@
+{
+  "case_id": "D2N149",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test2",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports that it has been hard to deal with.\n* The patient states that they tried to get an appointment, but they were booked up.\n* The patient reports that they attempted to schedule an appointment for blood tests, but was unable to do so due to the provider being booked up.\n* The patient reports coughing up approximately three to four cups of blood per day, without specifying the exact color.\n* Patient reports shortness of breath for a couple of weeks, coughing up blood (3-4 cups a day) without chest pain or fever\n* The patient denies having undergone any imaging studies such as a chest X-ray or CT scan.\n* Patient has experienced weight loss (approximately 10 pounds over the past few weeks) without trying\n* Patient has been tired and short of breath, leading to reduced appetite",
+    "objective": "* The patient is 57 years old, male."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N149_V01",
+      "section": "Assessment",
+      "text": "Patient presents with hemoptysis (coughing up blood) and shortness of breath, with no reported chest pain or fever",
+      "status": "ok",
+      "p_chain_broken": 0.0124,
+      "components": [
+        {
+          "component": "Patient presents with hemoptysis (coughing up blood) and shortness of breath, with no reported chest pain or fever",
+          "feature_ids": [
+            "F1",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F11",
+            "F12",
+            "F13"
+          ],
+          "p_broken": 0.012431558512984999,
+          "passages": [
+            {
+              "pid": "246_1387",
+              "title": "Esophagus Disorders",
+              "section": "What are symptoms of esophagus disorders?",
+              "cos": 0.434
+            },
+            {
+              "pid": "418_3476",
+              "title": "Staphylococcal Infections",
+              "section": "What are the symptoms of staph infections?",
+              "cos": 0.442
+            },
+            {
+              "pid": "377_3124",
+              "title": "Pulmonary Embolism",
+              "section": "What are the symptoms of a pulmonary embolism (PE)?",
+              "cos": 0.423
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N149_V02",
+      "section": "Assessment",
+      "text": "Patient has experienced weight loss and fatigue",
+      "status": "ok",
+      "p_chain_broken": 0.0028,
+      "components": [
+        {
+          "component": "Patient has experienced weight loss and fatigue",
+          "feature_ids": [
+            "F12",
+            "F13",
+            "F14",
+            "F7"
+          ],
+          "p_broken": 0.002800911144350606,
+          "passages": [
+            {
+              "pid": "5610_459",
+              "title": "Body Weight",
+              "section": "What if I have a sudden gain or loss of weight?",
+              "cos": 0.55
+            },
+            {
+              "pid": "5461_2430",
+              "title": "Malnutrition",
+              "section": "What are the symptoms of malnutrition?",
+              "cos": 0.504
+            },
+            {
+              "pid": "5324_1447",
+              "title": "Fatigue",
+              "section": "What causes fatigue?",
+              "cos": 0.43
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N149_V03",
+      "section": "Plan",
+      "text": "The doctor will arrange for the patient to undergo imaging studies, such as a chest X-ray or CT scan, to evaluate the cause of the hemoptysis",
+      "status": "ok",
+      "p_chain_broken": 0.0843,
+      "components": [
+        {
+          "component": "The doctor will arrange for the patient to undergo imaging studies, such as a chest X-ray or CT scan, to evaluate the cause of the hemoptysis",
+          "feature_ids": [
+            "F3",
+            "F11",
+            "F12",
+            "F13",
+            "F14",
+            "F9"
+          ],
+          "p_broken": 0.0843135853793007,
+          "passages": [
+            {
+              "pid": "6076_422",
+              "title": "Blood Clots",
+              "section": "How are blood clots diagnosed?",
+              "cos": 0.37
+            },
+            {
+              "pid": "3951_1001",
+              "title": "CT Scans",
+              "section": "How is a CT scan done?",
+              "cos": 0.383
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N149_V04",
+      "section": "Plan",
+      "text": "The doctor will also arrange for the patient to have blood tests, such as a complete blood count (CBC), coagulation profile, or tumor markers, to assess for potential coagulopathy or anemia",
+      "status": "ok",
+      "p_chain_broken": 0.2018,
+      "components": [
+        {
+          "component": "The doctor will also arrange for the patient to have blood tests, such as a complete blood count (CBC), coagulation profile, or tumor markers, to assess for potential coagulopathy or anemia",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.20181261977363507,
+          "passages": [
+            {
+              "pid": "6351_426",
+              "title": "Blood Count Tests",
+              "section": "Summary",
+              "cos": 0.511
+            },
+            {
+              "pid": "1438_730",
+              "title": "Childhood Leukemia",
+              "section": "How is leukemia in children diagnosed?",
+              "cos": 0.546
+            },
+            {
+              "pid": "5620_2330",
+              "title": "Leukemia",
+              "section": "How is leukemia diagnosed?",
+              "cos": 0.546
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N149_V05",
+      "section": "Plan",
+      "text": "The patient will be advised to follow up with the doctor after the imaging and blood test results are available.",
+      "status": "ok",
+      "p_chain_broken": 0.0293,
+      "components": [
+        {
+          "component": "The patient will be advised to follow up with the doctor after the imaging and blood test results are available.",
+          "feature_ids": [
+            "F9",
+            "F12",
+            "F13",
+            "F14"
+          ],
+          "p_broken": 0.02931209454709385,
+          "passages": [
+            {
+              "pid": "1104_1162",
+              "title": "Diagnostic Imaging",
+              "section": "How is diagnostic imaging done?",
+              "cos": 0.43
+            },
+            {
+              "pid": "61_2699",
+              "title": "Obesity",
+              "section": "How is obesity diagnosed?",
+              "cos": 0.501
+            },
+            {
+              "pid": "6076_422",
+              "title": "Blood Clots",
+              "section": "How are blood clots diagnosed?",
+              "cos": 0.404
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports that it has been hard to deal with.\n* The patient states that they tried to get an appointment, but they were booked up.\n* The patient reports that they attempted to schedule an appointment for blood tests, but was unable to do so due to the provider being booked up.\n* The patient reports coughing up approximately three to four cups of blood per day, without specifying the exact color.\n* Patient reports shortness of breath for a couple of weeks, coughing up blood (3-4 cups a day) without chest pain or fever\n* The patient denies having undergone any imaging studies such as a chest X-ray or CT scan.\n* Patient has experienced weight loss (approximately 10 pounds over the past few weeks) without trying\n* Patient has been tired and short of breath, leading to reduced appetite",
+    "objective": "* The patient is 57 years old, male.",
+    "assessment": [
+      "Patient presents with hemoptysis (coughing up blood) and shortness of breath, with no reported chest pain or fever",
+      "Patient has experienced weight loss and fatigue"
+    ],
+    "plan": [
+      "The doctor will arrange for the patient to undergo imaging studies, such as a chest X-ray or CT scan, to evaluate the cause of the hemoptysis",
+      "The doctor will also arrange for the patient to have blood tests, such as a complete blood count (CBC), coagulation profile, or tumor markers, to assess for potential coagulopathy or anemia",
+      "The patient will be advised to follow up with the doctor after the imaging and blood test results are available."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 57 years old, male. I've been having shortness of breath for a couple of weeks, and I've been coughing up blood, about three to four cups a day. It's been really tough dealing with it.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide more details about the characteristics of the blood you are coughing up, such as whether it is bright red or darker in color, and if there are any associated symptoms like chest pain, fever, or weight loss?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know the color of the blood exactly, but it's a lot—three to four cups a day. I don't have chest pain or a fever, but I do have shortness of breath, especially when I wake up and when I get home. It's been really hard to deal with.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the color and consistency of the blood you are coughing up? Have you noticed any other symptoms such as weight loss, night sweats, or fatigue? Have you had any recent illnesses or injuries?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know the exact color of the blood, but it's a lot—three to four cups a day. I haven't noticed any weight loss, night sweats, or fatigue, and I don't remember having any recent illnesses or injuries.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the color and consistency of the blood you are coughing up, and have you experienced any weight loss, night sweats, or fatigue since the onset of your symptoms?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know the exact color of the blood, but it's a lot—three to four cups a day. I haven't noticed any weight loss, night sweats, or fatigue since this started.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide details about the color and consistency of the hemoptysis? Additionally, have you undergone any recent imaging studies or blood tests?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know the exact color of the blood, but it's a lot—three to four cups a day. I haven't had any recent imaging studies or blood tests.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the color and consistency of the blood you are coughing up? Additionally, have you experienced any recent weight loss, night sweats, or fatigue that you haven't mentioned before?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know the exact color of the blood, but it's a lot—three to four cups a day. I haven't experienced any recent weight loss, night sweats, or fatigue that I haven't already mentioned.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any recent imaging studies such as a chest X-ray or CT scan, or blood tests such as a complete blood count or coagulation profile?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any recent imaging studies or blood tests. I tried to get an appointment but they were booked up.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the color and consistency of the blood you are coughing up? For example, is it bright red, dark red, or mixed with mucus?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know the exact color of the blood, but it's a lot—three to four cups a day. It just comes up when I cough, and I haven't noticed any other symptoms like weight loss or night sweats.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please clarify if you have had any recent chest imaging studies, such as a chest X-ray or CT scan, or any blood tests, even if they were not performed recently?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any recent chest imaging studies or blood tests. I tried to get an appointment, but they were booked up.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the color and consistency of the blood you are coughing up? Is it bright red, dark red, or mixed with mucus?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know the exact color of the blood, but it's a lot—three to four cups a day. It just comes up when I cough, and I haven't noticed any other symptoms like weight loss or night sweats.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any recent blood tests, such as a complete blood count or coagulation profile, to assess for potential coagulopathy or anemia?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any recent blood tests. I tried to get an appointment, but they were booked up. I just keep coughing up a lot of blood, and I don't know the exact color, but it's a lot—three to four cups a day.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the color and consistency of the blood you are coughing up? Additionally, have you noticed any other symptoms such as chest pain, fever, or weight loss?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The blood is bright red, and it just comes up when I cough. I haven't had any chest pain or fever, but I have been losing some weight without trying.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please tell me more about the weight loss? How much weight have you lost, and over what period of time?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know the exact amount, but I've lost maybe ten pounds over the past few weeks. It's been gradual, and I haven't been eating as much because I've been so tired and short of breath.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies such as a chest X-ray or CT scan to evaluate the cause of your hemoptysis?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging studies like a chest X-ray or CT scan. I tried to get an appointment, but they were booked up, and I just keep coughing up a lot of blood.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of any blood tests, such as a complete blood count (CBC), coagulation profile, or tumor markers, that have been performed?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have any blood test results because I haven't had any recent tests. I tried to get an appointment, but they were booked up, and I just keep coughing up a lot of blood.",
+      "tid": "T29"
+    }
+  ]
+}

@@ -1,0 +1,446 @@
+{
+  "case_id": "D2N168",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test3",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* Patient is a 28-year-old female who presented with a recent episode of hypertension, feeling light-headed, and almost falling. She has been taking lisinopril for hypertension.\n* The patient reports that her boyfriend was present when she experienced the episode.\n* She reports no chest pain, palpitations, or visual disturbances during the episode.\n* The patient reports that her boyfriend discovered her and she was taken directly to the emergency department.\n* The patient reports that the information about undergoing imaging studies is not available to them.\n* The patient reports that information regarding plasma aldosterone-to-renin ratio, cortisol levels, or adrenal imaging is not available.\n* The patient reports that the results of the most recent physical examination are unknown.\n* The patient reports that the blood pressure reading from the ER was not recorded, but the patient was informed that it was approximately 200 mmHg.\n* The patient reports that the headache was intense, but it resolved after arrival at the emergency room.\n* She has a history of high blood pressure, which is usually triggered by traveling for work and not eating well.\n* She has no family history of hypertension, migraines, or neurological conditions.\n* She has not had similar episodes before, but her blood pressure has been running high once a month or so.",
+    "objective": "* The patient reports having a slightly leaky heart valve, as shown on an echocardiogram performed a few months ago.\n* The patient's cardiovascular examination revealed a slight murmur.\n* The patient exhibited trace pitting edema in their lower extremities."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N168_V01",
+      "section": "Assessment",
+      "text": "The patient has a history of hypertension, which is currently uncontrolled.",
+      "status": "ok",
+      "p_chain_broken": 0.0067,
+      "components": [
+        {
+          "component": "The patient has a history of hypertension, which is currently uncontrolled.",
+          "feature_ids": [
+            "F4",
+            "F7",
+            "F9",
+            "F16",
+            "F19"
+          ],
+          "p_broken": 0.006692817926844985,
+          "passages": [
+            {
+              "pid": "4939_437",
+              "title": "Blood Pressure Medicines",
+              "section": "What is high blood pressure?",
+              "cos": 0.452
+            },
+            {
+              "pid": "34_1908",
+              "title": "High Blood Pressure",
+              "section": "What is blood pressure?",
+              "cos": 0.427
+            },
+            {
+              "pid": "6288_3893",
+              "title": "Vital Signs",
+              "section": "Summary",
+              "cos": 0.417
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N168_V02",
+      "section": "Assessment",
+      "text": "She has experienced an episode of light-headedness and almost falling, which may be related to her hypertension.",
+      "status": "ok",
+      "p_chain_broken": 0.0005,
+      "components": [
+        {
+          "component": "She has experienced an episode of light-headedness and almost falling, which may be related to her hypertension.",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F9",
+            "F11"
+          ],
+          "p_broken": 0.0004878536290822019,
+          "passages": [
+            {
+              "pid": "4939_437",
+              "title": "Blood Pressure Medicines",
+              "section": "What is high blood pressure?",
+              "cos": 0.433
+            },
+            {
+              "pid": "34_1909",
+              "title": "High Blood Pressure",
+              "section": "How is high blood pressure diagnosed?",
+              "cos": 0.469
+            },
+            {
+              "pid": "1225_2372",
+              "title": "Low Blood Pressure",
+              "section": "Summary",
+              "cos": 0.458
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N168_V03",
+      "section": "Assessment",
+      "text": "The patient has a slightly leaky heart valve, but no other structural heart disease was found.",
+      "status": "ok",
+      "p_chain_broken": 0.0293,
+      "components": [
+        {
+          "component": "The patient has a slightly leaky heart valve",
+          "feature_ids": [
+            "F19"
+          ],
+          "p_broken": 0.00017952642553725558,
+          "passages": [
+            {
+              "pid": "279_1794",
+              "title": "Heart Valve Diseases",
+              "section": "What are the types of heart valve diseases?",
+              "cos": 0.526
+            },
+            {
+              "pid": "1605_2555",
+              "title": "Mitral Valve Prolapse",
+              "section": "How is mitral valve prolapse (MVP) diagnosed?",
+              "cos": 0.447
+            },
+            {
+              "pid": "279_1793",
+              "title": "Heart Valve Diseases",
+              "section": "What are heart valve diseases?",
+              "cos": 0.493
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "no other structural heart disease was found",
+          "feature_ids": [
+            "F12",
+            "F18",
+            "F19"
+          ],
+          "p_broken": 0.029312072288089856,
+          "passages": [
+            {
+              "pid": "6452_1777",
+              "title": "Heart Health Tests",
+              "section": "Cardiac MRI",
+              "cos": 0.603
+            },
+            {
+              "pid": "6452_1778",
+              "title": "Heart Health Tests",
+              "section": "Cardiac MRI",
+              "cos": 0.581
+            },
+            {
+              "pid": "6452_1784",
+              "title": "Heart Health Tests",
+              "section": "Stress Testing",
+              "cos": 0.485
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N168_V04",
+      "section": "Plan",
+      "text": "The patient will continue taking lisinopril as prescribed.",
+      "status": "ok",
+      "p_chain_broken": 0.0006,
+      "components": [
+        {
+          "component": "The patient will continue taking lisinopril as prescribed.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.0005527719613146724,
+          "passages": [
+            {
+              "pid": "5719_2455",
+              "title": "Medication Errors",
+              "section": "Summary",
+              "cos": 0.484
+            },
+            {
+              "pid": "6811_779",
+              "title": "Cholesterol Medicines",
+              "section": "Who needs cholesterol medicines?",
+              "cos": 0.398
+            },
+            {
+              "pid": "222_176",
+              "title": "Antibiotics",
+              "section": "How do I use antibiotics correctly?",
+              "cos": 0.407
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N168_V05",
+      "section": "Plan",
+      "text": "The doctor will consider further evaluation for secondary causes of hypertension, including endocrine evaluations and imaging studies.",
+      "status": "ok",
+      "p_chain_broken": 0.148,
+      "components": [
+        {
+          "component": "The doctor will consider further evaluation for secondary causes of hypertension, including endocrine evaluations and imaging studies.",
+          "feature_ids": [
+            "F4",
+            "F15",
+            "F16",
+            "F19",
+            "F20"
+          ],
+          "p_broken": 0.1480466849365911,
+          "passages": [
+            {
+              "pid": "3634_3138",
+              "title": "Pulmonary Hypertension",
+              "section": "How is pulmonary hypertension diagnosed?",
+              "cos": 0.446
+            },
+            {
+              "pid": "128_49",
+              "title": "Adrenal Gland Disorders",
+              "section": "What are adrenal gland disorders?",
+              "cos": 0.39
+            },
+            {
+              "pid": "4939_437",
+              "title": "Blood Pressure Medicines",
+              "section": "What is high blood pressure?",
+              "cos": 0.426
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N168_V06",
+      "section": "Plan",
+      "text": "The patient will be advised to monitor her blood pressure regularly and to report any further episodes or changes in her condition.",
+      "status": "ok",
+      "p_chain_broken": 0.0036,
+      "components": [
+        {
+          "component": "The patient will be advised to monitor her blood pressure regularly and to report any further episodes or changes in her condition.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.0035935757807576242,
+          "passages": [
+            {
+              "pid": "4939_441",
+              "title": "Blood Pressure Medicines",
+              "section": "How do blood pressure medicines work?",
+              "cos": 0.413
+            },
+            {
+              "pid": "34_1913",
+              "title": "High Blood Pressure",
+              "section": "What are the treatments for high blood pressure?",
+              "cos": 0.41
+            },
+            {
+              "pid": "1508_1923",
+              "title": "High Blood Pressure in Pregnancy",
+              "section": "What are the treatments for high blood pressure in pregnancy?",
+              "cos": 0.382
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* Patient is a 28-year-old female who presented with a recent episode of hypertension, feeling light-headed, and almost falling. She has been taking lisinopril for hypertension.\n* The patient reports that her boyfriend was present when she experienced the episode.\n* She reports no chest pain, palpitations, or visual disturbances during the episode.\n* The patient reports that her boyfriend discovered her and she was taken directly to the emergency department.\n* The patient reports that the information about undergoing imaging studies is not available to them.\n* The patient reports that information regarding plasma aldosterone-to-renin ratio, cortisol levels, or adrenal imaging is not available.\n* The patient reports that the results of the most recent physical examination are unknown.\n* The patient reports that the blood pressure reading from the ER was not recorded, but the patient was informed that it was approximately 200 mmHg.\n* The patient reports that the headache was intense, but it resolved after arrival at the emergency room.\n* She has a history of high blood pressure, which is usually triggered by traveling for work and not eating well.\n* She has no family history of hypertension, migraines, or neurological conditions.\n* She has not had similar episodes before, but her blood pressure has been running high once a month or so.",
+    "objective": "* The patient reports having a slightly leaky heart valve, as shown on an echocardiogram performed a few months ago.\n* The patient's cardiovascular examination revealed a slight murmur.\n* The patient exhibited trace pitting edema in their lower extremities.",
+    "assessment": [
+      "The patient has a history of hypertension, which is currently uncontrolled.",
+      "She has experienced an episode of light-headedness and almost falling, which may be related to her hypertension.",
+      "The patient has a slightly leaky heart valve, but no other structural heart disease was found."
+    ],
+    "plan": [
+      "The patient will continue taking lisinopril as prescribed.",
+      "The doctor will consider further evaluation for secondary causes of hypertension, including endocrine evaluations and imaging studies.",
+      "The patient will be advised to monitor her blood pressure regularly and to report any further episodes or changes in her condition."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 28 years old and female. I came in because my blood pressure was really high, and I felt light-headed and almost fell yesterday. My boyfriend caught me and we went straight to the ER.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm your current blood pressure reading and any medications you are taking?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "My blood pressure was really high in the ER, like almost 200, but I don't have the exact number now. I'm taking lisinopril, which I've been on for a while.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any chest pain, palpitations, or visual disturbances alongside the hypertension?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had chest pain or palpitations, and I didn't have any visual disturbances. The main things were the light-headedness and the feeling like I was going to fall. It was pretty scary, but my boyfriend was there to catch me.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has there been a family history of hypertension, migraines, or neurological conditions such as seizures or stroke? Have you experienced similar episodes in the past?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have a family history of hypertension, migraines, or neurological conditions. I haven't had similar episodes before, but my blood pressure has been running high once a month or so, usually when I'm traveling for work and not eating as well.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe any neurological symptoms you experienced during the episode, such as vision changes, speech difficulties, weakness, or numbness?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I didn't experience any vision changes, speech difficulties, weakness, or numbness during the episode. The main thing was just feeling light-headed and like I was going to fall. It was pretty scary, but my boyfriend was there to catch me.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide the exact blood pressure reading from the ER and any results from previous blood pressure monitoring or ambulatory blood pressure measurements?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact blood pressure reading from the ER, but it was really high, like almost 200. I don't have any results from previous blood pressure monitoring or ambulatory measurements, but I do check it sometimes when I'm home, though not as consistently as I should.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe any other symptoms you experience during these episodes, such as chest pain, palpitations, or visual disturbances? Additionally, have you had any imaging studies like a head CT, MRI, or echocardiogram to evaluate for secondary causes of hypertension or neurological involvement?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have any other symptoms during these episodes besides the light-headedness and feeling like I'm going to fall. I haven't had any imaging studies like a head CT, MRI, or echocardiogram to evaluate for secondary causes of hypertension or neurological involvement.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any renal function tests, such as serum creatinine, estimated glomerular filtration rate (eGFR), or urine albumin-to-creatinine ratio, to evaluate for renal causes of secondary hypertension?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have any information about renal function tests like serum creatinine, eGFR, or urine albumin-to-creatinine ratio. That information isn't available to me.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any other symptoms during these episodes, such as chest pain, palpitations, visual changes, or headaches?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I did have a headache during the episode, but no chest pain, palpitations, or visual changes. The headache was pretty intense, but it went away after I got to the ER.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any endocrine evaluations, such as a plasma aldosterone-to-renin ratio, cortisol levels, or imaging of the adrenal glands, to rule out secondary causes of hypertension?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any endocrine evaluations like a plasma aldosterone-to-renin ratio, cortisol levels, or imaging of the adrenal glands. That information isn't available to me.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of your most recent physical examination, particularly focusing on cardiovascular and neurological findings?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of my most recent physical examination, but the doctor mentioned during the visit that my blood pressure was still a little elevated. He listened to my heart and found a slight murmur, and he said my lungs were clear. He also noted some trace pitting edema in my lower extremities. That's all I know about the exam.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide the exact blood pressure reading recorded in the ER during the episode, as well as the results of your most recent serum creatinine, eGFR, and urine albumin-to-creatinine ratio tests?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact blood pressure reading from the ER, and I don't have the results of serum creatinine, eGFR, or urine albumin-to-creatinine ratio tests. That information isn't available to me.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies such as an echocardiogram, head CT, or MRI to evaluate for potential neurological or cardiac causes of your symptoms?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of imaging studies like an echocardiogram, head CT, or MRI. That information isn't available to me.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide the exact blood pressure reading from the ER and confirm whether an echocardiogram has been performed to evaluate the heart murmur and assess for structural heart disease?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact blood pressure reading from the ER, but I was told that it was really high, almost 200. As for the echocardiogram, the doctor showed me the results from a few months ago, which showed that I have a slightly leaky heart valve, but nothing else was found.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide the exact blood pressure reading from the ER and confirm if any endocrine evaluations, such as plasma aldosterone-to-renin ratio, cortisol levels, or adrenal imaging, have been performed?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact blood pressure reading from the ER, but I was told it was really high, almost 200. As for endocrine evaluations like plasma aldosterone-to-renin ratio, cortisol levels, or adrenal imaging, that information isn't available to me.",
+      "tid": "T29"
+    }
+  ]
+}

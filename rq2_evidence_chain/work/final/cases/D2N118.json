@@ -1,0 +1,546 @@
+{
+  "case_id": "D2N118",
+  "rq2_split": "va_dev",
+  "rq1_split": "dev",
+  "aci_source_split": "test1",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports that they can arrange to have their blood sugar reading and recent urine analysis results, including calcium, oxalate, and uric acid levels, available for their next appointment.\n* The patient reports that they will bring the requested urine analysis results and serum creatinine test results to their next appointment.\n* Patient is a 45-year-old female who presented with a history of kidney stone and hypertension, and diabetes.\n* She reported symptoms of intense side pain, which resolved after passing the kidney stone, and no blood in the urine.\n* She is currently taking Norvasc 2.5 mg for hypertension and metformin 500 mg daily for diabetes.\n* She does not regularly check her blood sugars, but thinks they have been okay.\n* She has no history of diabetic complications such as neuropathy or retinopathy.\n* She does not have her most recent HbA1c level or blood pressure readings available.\n* The patient reports that their blood pressure at home is usually around 130 to 140 over 60 to 70.",
+    "objective": "* The patient agrees to arrange for urine analysis, including calcium, oxalate, and uric acid levels, and will bring the results to the next appointment."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N118_V01",
+      "section": "Assessment",
+      "text": "The patient has a history of kidney stone and hypertension, and diabetes.",
+      "status": "ok",
+      "p_chain_broken": 0.0001,
+      "components": [
+        {
+          "component": "The patient has a history of kidney stone and hypertension, and diabetes.",
+          "feature_ids": [
+            "F1",
+            "F3",
+            "F5",
+            "F6",
+            "F7",
+            "F8",
+            "F9",
+            "F14"
+          ],
+          "p_broken": 8.481050556329707e-05,
+          "passages": [
+            {
+              "pid": "1465_1158",
+              "title": "Diabetic Nerve Problems",
+              "section": "Summary",
+              "cos": 0.505
+            },
+            {
+              "pid": "6308_0",
+              "title": "A1C",
+              "section": "Summary",
+              "cos": 0.448
+            },
+            {
+              "pid": "1559_1155",
+              "title": "Diabetic Kidney Problems",
+              "section": "Summary",
+              "cos": 0.456
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N118_V02",
+      "section": "Assessment",
+      "text": "The patient's blood sugars are not well-controlled, and she does not regularly check them.",
+      "status": "ok",
+      "p_chain_broken": 0.133,
+      "components": [
+        {
+          "component": "The patient's blood sugars are not well-controlled",
+          "feature_ids": [
+            "F7",
+            "F8",
+            "F16",
+            "F18"
+          ],
+          "p_broken": 0.1329639412875752,
+          "passages": [
+            {
+              "pid": "6308_0",
+              "title": "A1C",
+              "section": "Summary",
+              "cos": 0.657
+            },
+            {
+              "pid": "3048_1128",
+              "title": "Diabetic Diet",
+              "section": "What foods should I limit to control my blood glucose?",
+              "cos": 0.41
+            },
+            {
+              "pid": "6121_435",
+              "title": "Blood Glucose",
+              "section": "What happens if my blood glucose level becomes low for me?",
+              "cos": 0.414
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "she does not regularly check them",
+          "feature_ids": [
+            "F7",
+            "F18"
+          ],
+          "p_broken": 0.0046095438651730086,
+          "passages": [
+            {
+              "pid": "6125_2089",
+              "title": "Hyperglycemia",
+              "section": "Can hyperglycemia be prevented?",
+              "cos": 0.429
+            },
+            {
+              "pid": "4_1080",
+              "title": "Diabetes",
+              "section": "What are the treatments for diabetes?",
+              "cos": 0.449
+            },
+            {
+              "pid": "6026_1097",
+              "title": "Diabetes in Children and Teens",
+              "section": "Summary",
+              "cos": 0.452
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N118_V03",
+      "section": "Assessment",
+      "text": "The patient's blood pressure is not well-controlled, and she does not have her most recent readings available.",
+      "status": "ok",
+      "p_chain_broken": 0.0076,
+      "components": [
+        {
+          "component": "The patient's blood pressure is not well-controlled",
+          "feature_ids": [
+            "F10",
+            "F5"
+          ],
+          "p_broken": 0.004070117837719294,
+          "passages": [
+            {
+              "pid": "34_1909",
+              "title": "High Blood Pressure",
+              "section": "How is high blood pressure diagnosed?",
+              "cos": 0.47
+            },
+            {
+              "pid": "6450_2060",
+              "title": "How to Prevent High Blood Pressure",
+              "section": "How is high blood pressure diagnosed?",
+              "cos": 0.47
+            },
+            {
+              "pid": "34_1908",
+              "title": "High Blood Pressure",
+              "section": "What is blood pressure?",
+              "cos": 0.476
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "she does not have her most recent readings available",
+          "feature_ids": [
+            "F11",
+            "F13",
+            "F16",
+            "F17",
+            "F18"
+          ],
+          "p_broken": 0.007577208688186336,
+          "passages": [
+            {
+              "pid": "6382_2271",
+              "title": "Kidney Tests",
+              "section": "Summary",
+              "cos": 0.563
+            },
+            {
+              "pid": "6355_3786",
+              "title": "Urinalysis",
+              "section": "Summary",
+              "cos": 0.436
+            },
+            {
+              "pid": "210_2292",
+              "title": "Laboratory Tests",
+              "section": "Summary",
+              "cos": 0.41
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N118_V04",
+      "section": "Assessment",
+      "text": "The patient's urine analysis and serum creatinine levels are pending.",
+      "status": "ok",
+      "p_chain_broken": 0.0019,
+      "components": [
+        {
+          "component": "The patient's urine analysis and serum creatinine levels are pending.",
+          "feature_ids": [
+            "F11",
+            "F13",
+            "F17"
+          ],
+          "p_broken": 0.0019267251480116203,
+          "passages": [
+            {
+              "pid": "6382_2271",
+              "title": "Kidney Tests",
+              "section": "Summary",
+              "cos": 0.609
+            },
+            {
+              "pid": "6355_3786",
+              "title": "Urinalysis",
+              "section": "Summary",
+              "cos": 0.481
+            },
+            {
+              "pid": "210_2292",
+              "title": "Laboratory Tests",
+              "section": "Summary",
+              "cos": 0.399
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N118_V05",
+      "section": "Plan",
+      "text": "The patient will arrange for a urine analysis to check calcium, oxalate, and uric acid levels, as well as a recent serum creatinine test.",
+      "status": "ok",
+      "p_chain_broken": 0.0041,
+      "components": [
+        {
+          "component": "The patient will arrange for a urine analysis to check calcium, oxalate, and uric acid levels",
+          "feature_ids": [
+            "F13",
+            "F17"
+          ],
+          "p_broken": 0.001169502039204273,
+          "passages": [
+            {
+              "pid": "6382_2271",
+              "title": "Kidney Tests",
+              "section": "Summary",
+              "cos": 0.651
+            },
+            {
+              "pid": "6355_3786",
+              "title": "Urinalysis",
+              "section": "Summary",
+              "cos": 0.57
+            },
+            {
+              "pid": "210_2292",
+              "title": "Laboratory Tests",
+              "section": "Summary",
+              "cos": 0.483
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient will arrange for a recent serum creatinine test",
+          "feature_ids": [
+            "F11",
+            "F17"
+          ],
+          "p_broken": 0.0040701139511893246,
+          "passages": [
+            {
+              "pid": "6382_2271",
+              "title": "Kidney Tests",
+              "section": "Summary",
+              "cos": 0.634
+            },
+            {
+              "pid": "6355_3786",
+              "title": "Urinalysis",
+              "section": "Summary",
+              "cos": 0.456
+            },
+            {
+              "pid": "210_2292",
+              "title": "Laboratory Tests",
+              "section": "Summary",
+              "cos": 0.428
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N118_V06",
+      "section": "Plan",
+      "text": "The patient will start checking her blood sugars more frequently and bring a recent reading to her next appointment.",
+      "status": "ok",
+      "p_chain_broken": 0.018,
+      "components": [
+        {
+          "component": "The patient will start checking her blood sugars more frequently and bring a recent reading to her next appointment.",
+          "feature_ids": [
+            "F7",
+            "F8",
+            "F16",
+            "F18"
+          ],
+          "p_broken": 0.017986140807779855,
+          "passages": [
+            {
+              "pid": "6308_0",
+              "title": "A1C",
+              "section": "Summary",
+              "cos": 0.614
+            },
+            {
+              "pid": "6121_435",
+              "title": "Blood Glucose",
+              "section": "What happens if my blood glucose level becomes low for me?",
+              "cos": 0.377
+            },
+            {
+              "pid": "4_1080",
+              "title": "Diabetes",
+              "section": "What are the treatments for diabetes?",
+              "cos": 0.366
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N118_V07",
+      "section": "Plan",
+      "text": "The patient will bring the results of the urine analysis and serum creatinine test to her next appointment.",
+      "status": "ok",
+      "p_chain_broken": 0.023,
+      "components": [
+        {
+          "component": "The patient will bring the results of the urine analysis and serum creatinine test to her next appointment.",
+          "feature_ids": [
+            "F11",
+            "F13",
+            "F17"
+          ],
+          "p_broken": 0.02297729025204185,
+          "passages": [
+            {
+              "pid": "6355_3786",
+              "title": "Urinalysis",
+              "section": "Summary",
+              "cos": 0.504
+            },
+            {
+              "pid": "6382_2271",
+              "title": "Kidney Tests",
+              "section": "Summary",
+              "cos": 0.643
+            },
+            {
+              "pid": "210_2292",
+              "title": "Laboratory Tests",
+              "section": "Summary",
+              "cos": 0.479
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports that they can arrange to have their blood sugar reading and recent urine analysis results, including calcium, oxalate, and uric acid levels, available for their next appointment.\n* The patient reports that they will bring the requested urine analysis results and serum creatinine test results to their next appointment.\n* Patient is a 45-year-old female who presented with a history of kidney stone and hypertension, and diabetes.\n* She reported symptoms of intense side pain, which resolved after passing the kidney stone, and no blood in the urine.\n* She is currently taking Norvasc 2.5 mg for hypertension and metformin 500 mg daily for diabetes.\n* She does not regularly check her blood sugars, but thinks they have been okay.\n* She has no history of diabetic complications such as neuropathy or retinopathy.\n* She does not have her most recent HbA1c level or blood pressure readings available.\n* The patient reports that their blood pressure at home is usually around 130 to 140 over 60 to 70.",
+    "objective": "* The patient agrees to arrange for urine analysis, including calcium, oxalate, and uric acid levels, and will bring the results to the next appointment.",
+    "assessment": [
+      "The patient has a history of kidney stone and hypertension, and diabetes.",
+      "The patient's blood sugars are not well-controlled, and she does not regularly check them.",
+      "The patient's blood pressure is not well-controlled, and she does not have her most recent readings available.",
+      "The patient's urine analysis and serum creatinine levels are pending."
+    ],
+    "plan": [
+      "The patient will arrange for a urine analysis to check calcium, oxalate, and uric acid levels, as well as a recent serum creatinine test.",
+      "The patient will start checking her blood sugars more frequently and bring a recent reading to her next appointment.",
+      "The patient will bring the results of the urine analysis and serum creatinine test to her next appointment."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 45 years old and female. I'm here because I think I might have a kidney stone again, and I also wanted to check in on my hypertension and diabetes.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the symptoms you are experiencing related to the kidney stone, such as pain location, severity, duration, and any associated symptoms like blood in the urine or nausea?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The pain was in my side and came and went, and it was pretty intense at times. I went to the ER last week, but I think the stone passed about three days ago. There's no blood in my urine anymore, and the pain is gone now. I was on some pain medication called Percocet while I was there.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide details about your current medications for hypertension and diabetes, including the names, dosages, and how long you've been taking them?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm on 2.5 mg of Norvasc for my hypertension, and I've been taking that regularly. For my diabetes, I'm on 500 mg of metformin daily. I take my metformin as prescribed, but I don't check my blood sugars very often. I think they've been pretty good, though.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide your most recent HbA1c level and any history of diabetic complications such as neuropathy or retinopathy?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have my most recent HbA1c level with me, but I think it was around 6.7 last time I checked. I don't have any complications from my diabetes that I'm aware of.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your most recent blood pressure readings and any episodes of uncontrolled hypertension? Additionally, could you share your most recent serum creatinine, electrolytes, and urine analysis results?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have my most recent blood pressure readings with me, but at home, my blood pressure is usually around 130 to 140 over 60 to 70. I don't have my serum creatinine or urine analysis results on hand, but I was told everything seems to be cleared up since the kidney stone passed.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide more details about your current blood sugar levels and how often you check them? Additionally, have you experienced any changes in your urinary habits or symptoms since the kidney stone passed?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I check my blood sugars pretty infrequently, maybe once in a while, but I think they've been okay. Since the kidney stone passed, I haven't had any changes in my urinary habits or symptoms—no pain, no blood in the urine, and everything seems to be back to normal.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide the results of your most recent urine analysis, including any findings related to calcium, oxalate, or uric acid levels?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of my most recent urine analysis with me, but I was told that everything is cleared up since the kidney stone passed. I don't have specific numbers on calcium, oxalate, or uric acid levels, but I think the doctor is going to run some tests to check for any issues.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide the most recent serum creatinine level and any history of uncontrolled hypertension or diabetic complications such as neuropathy or retinopathy?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have my most recent serum creatinine level with me, but I was told that everything seems to be cleared up since the kidney stone passed. I don't have any history of uncontrolled hypertension or diabetic complications like neuropathy or retinopathy that I'm aware of.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide the results of your most recent urine analysis, including calcium, oxalate, and uric acid levels? If you don't have them on hand, could you arrange to have them done and bring the results to your next appointment?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of my most recent urine analysis with me, but I was told that everything is cleared up since the kidney stone passed. I don't have specific numbers on calcium, oxalate, or uric acid levels, but I think the doctor is going to run some tests to check for any issues. I can arrange to have them done and bring the results to my next appointment.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your current blood sugar levels and how often you check them? Also, have you ever been diagnosed with any diabetic complications such as neuropathy or retinopathy?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I check my blood sugars pretty infrequently, maybe once in a while, but I think they've been okay. I don't think I've ever been diagnosed with any diabetic complications like neuropathy or retinopathy.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your most recent blood sugar reading and the date it was taken? Additionally, have you had a urine analysis done recently that includes calcium, oxalate, and uric acid levels? If so, could you share those results with me?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I check my blood sugars pretty infrequently, maybe once in a while, but I think they've been okay. I don't have a specific recent reading with me, but I was told my A1c was 6.7 at my last visit. As for a urine analysis, I don't have the results with me, but I was told everything is cleared up since the kidney stone passed. I can arrange to have it done and bring the results to my next appointment.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please arrange for a urine analysis to check calcium, oxalate, and uric acid levels, as well as a recent serum creatinine test, and bring the results to your next appointment? Additionally, could you start checking your blood sugars more frequently and bring a recent reading to your next visit?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Sure, I can arrange to have a urine analysis done to check for calcium, oxalate, and uric acid levels, and I can also get a serum creatinine test. I’ll make sure to bring those results to my next appointment. As for my blood sugars, I’ll start checking them more regularly and bring a recent reading with me too.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Thank you for your cooperation. Could you please provide the results of the urine analysis (calcium, oxalate, uric acid levels) and the serum creatinine test once you have them? Additionally, could you share a recent blood sugar reading that you've taken?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'll make sure to bring the results of the urine analysis and the serum creatinine test to my next appointment. As for my blood sugars, I'll start checking them more regularly and bring a recent reading with me too.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Thank you for your cooperation. Could you please share the results of your urine analysis, including calcium, oxalate, and uric acid levels, as well as your most recent serum creatinine and blood sugar readings?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'll make sure to bring the results of the urine analysis and the serum creatinine test to my next appointment. As for my blood sugars, I'll start checking them more regularly and bring a recent reading with me too.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Thank you for your commitment to managing your health. Could you please provide the results of the urine analysis (calcium, oxalate, uric acid levels), the serum creatinine test, and a recent blood sugar reading at your next appointment?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'll make sure to bring the results of the urine analysis and the serum creatinine test to my next appointment. As for my blood sugars, I'll start checking them more regularly and bring a recent reading with me too.",
+      "tid": "T29"
+    }
+  ]
+}

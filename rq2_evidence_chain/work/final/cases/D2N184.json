@@ -1,0 +1,240 @@
+{
+  "case_id": "D2N184",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test3",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports continuing with physical therapy and does not give the numbness much thought.\n* The patient is a 44-year-old female who underwent a right medial unicompartmental arthroplasty six weeks ago.\n* She reports numbness on the side of her knee, where the incision was, since the surgery, but no pain.\n* The numbness has remained unchanged since the surgery and has not caused any difficulty with daily activities or physical therapy.\n* She has not had any nerve conduction studies or electromyography (EMG) tests to evaluate the numbness.\n* The patient is currently undergoing physical therapy to build strength and range of motion.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N184_V01",
+      "section": "Assessment",
+      "text": "The patient has numbness on the side of her knee, where the incision was, since the surgery, which has remained unchanged and is not causing any difficulty with daily activities or physical therapy.",
+      "status": "ok",
+      "p_chain_broken": 0.0,
+      "components": [
+        {
+          "component": "The patient has numbness on the side of her knee, where the incision was, since the surgery, which has remained unchanged and is not causing any difficulty with daily activities or physical therapy.",
+          "feature_ids": [
+            "F3",
+            "F4",
+            "F7",
+            "F10",
+            "F11",
+            "F12",
+            "F14",
+            "F15"
+          ],
+          "p_broken": 4.539738701576662e-05,
+          "passages": [
+            {
+              "pid": "3924_2289",
+              "title": "Knee Replacement",
+              "section": "What is life like after a knee replacement?",
+              "cos": 0.45
+            },
+            {
+              "pid": "1532_3315",
+              "title": "Sciatica",
+              "section": "Summary",
+              "cos": 0.455
+            },
+            {
+              "pid": "1095_2897",
+              "title": "Peripheral Nerve Disorders",
+              "section": "What are the symptoms of peripheral nerve disorders?",
+              "cos": 0.491
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N184_V02",
+      "section": "Assessment",
+      "text": "The numbness is localized to the area of the incision and has not spread or worsened over time.",
+      "status": "ok",
+      "p_chain_broken": 0.0003,
+      "components": [
+        {
+          "component": "The numbness is localized to the area of the incision and has not spread or worsened over time.",
+          "feature_ids": [
+            "F3",
+            "F4",
+            "F7",
+            "F10",
+            "F11",
+            "F12",
+            "F14",
+            "F15"
+          ],
+          "p_broken": 0.000335346113539921,
+          "passages": [
+            {
+              "pid": "1532_3315",
+              "title": "Sciatica",
+              "section": "Summary",
+              "cos": 0.45
+            },
+            {
+              "pid": "1341_1141",
+              "title": "Diabetic Foot",
+              "section": "How does diabetes cause foot problems?",
+              "cos": 0.442
+            },
+            {
+              "pid": "3924_2289",
+              "title": "Knee Replacement",
+              "section": "What is life like after a knee replacement?",
+              "cos": 0.409
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports continuing with physical therapy and does not give the numbness much thought.\n* The patient is a 44-year-old female who underwent a right medial unicompartmental arthroplasty six weeks ago.\n* She reports numbness on the side of her knee, where the incision was, since the surgery, but no pain.\n* The numbness has remained unchanged since the surgery and has not caused any difficulty with daily activities or physical therapy.\n* She has not had any nerve conduction studies or electromyography (EMG) tests to evaluate the numbness.\n* The patient is currently undergoing physical therapy to build strength and range of motion.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient has numbness on the side of her knee, where the incision was, since the surgery, which has remained unchanged and is not causing any difficulty with daily activities or physical therapy.",
+      "The numbness is localized to the area of the incision and has not spread or worsened over time."
+    ],
+    "plan": []
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 44 years old, and I'm here because it's six weeks since I had a right medial unicompartmental arthroplasty. I just wanted to check in on how my knee is doing.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm your gender and provide more details about any pain, swelling, or functional limitations you're experiencing in your knee since the surgery?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm female. Since the surgery, I've had some numbness on the side of my knee, but no pain. I'm able to move it pretty well, and I'm doing physical therapy to build strength and range of motion. Other than the numbness, I feel good.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the exact location of the numbness, its duration, and whether it is associated with any tingling, weakness, or changes in sensation in other areas?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The numbness is on the side of my knee, where the incision was. It's been there since right after the surgery, and it hasn't really changed much. I don't have any tingling or weakness in other areas, just that numb spot.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the numbness on the side of your knee caused any difficulty with your daily activities or physical therapy? Have you noticed any changes in the texture of your skin or any other sensations in that area?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, the numbness hasn't really caused any trouble with my daily activities or physical therapy. I can still move my knee and do the exercises without any issues. The skin feels normal, just numb in that one area.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any nerve conduction studies or electromyography (EMG) to evaluate the numbness following the surgery?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any nerve conduction studies or EMG tests to evaluate the numbness. The doctor mentioned that the numbness will get smaller as the nerves heal, so I haven't needed any additional testing for it.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Thank you for sharing that. It's good to hear that the numbness hasn't been causing you any trouble with your daily activities or physical therapy. Since the numbness is localized to the medial aspect of your right knee, where the incision was, and has remained unchanged since the surgery, I understand that your surgeon has mentioned it may improve as the nerves heal. Have you noticed any changes in the numbness over the past few weeks, such as it getting better, worse, or staying the same?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The numbness has stayed the same since the surgery. It's still there, but it hasn't gotten better or worse. I just live with it and keep going with my physical therapy.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any nerve conduction studies or EMG tests done to evaluate the numbness in your knee?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any nerve conduction studies or EMG tests done to evaluate the numbness in my knee. The doctor said it will get smaller as the nerves heal, so I haven't needed any additional testing for it.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Thank you for sharing that. It's reassuring to hear that the numbness hasn't impacted your daily activities or physical therapy. Since the numbness is localized to the area of the incision and has remained unchanged since the surgery, it may be a typical post-surgical sensory change. However, to ensure there are no underlying issues, have you noticed any changes in the numbness over time, such as it spreading, worsening, or being accompanied by any other symptoms like tingling or weakness?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, the numbness hasn't spread or gotten worse, and I haven't had any tingling or weakness with it. It's just that one spot on the side of my knee, and it's been the same since the surgery. I just keep going with my PT and don't really think about it much anymore.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any changes in the numbness, such as increased sensitivity, pain, or any other unusual sensations in the area? Also, have you experienced any difficulty with movement or coordination in your right leg?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any increased sensitivity, pain, or unusual sensations in the numb area. And I haven't had any difficulty with movement or coordination in my right leg. It's just that one spot, and it doesn't bother me much anymore.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any numbness or tingling in other parts of your body, or any changes in your ability to move your right leg or foot?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any numbness or tingling in other parts of my body, and I haven't noticed any changes in my ability to move my right leg or foot. Everything else feels normal.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Thank you for confirming that the numbness is localized and not affecting other areas. Have you had any imaging or nerve studies done to evaluate the numbness, such as an MRI or nerve conduction study?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging or nerve studies done to evaluate the numbness. The doctor said it would get smaller as the nerves heal, so I haven't needed any additional testing for it.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Thank you for confirming that you haven't had any imaging or nerve studies done for the numbness. It's good to know that your doctor has explained that the numbness may improve as the nerves heal. Since the numbness hasn't changed and isn't causing any issues with your daily activities or physical therapy, is there anything else you'd like to share about your recovery or any other concerns you might have?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, there's nothing else I really need to share. I'm just glad the surgery went well and that I'm recovering without any major issues. I'm focusing on my PT and just trying to be patient with the healing process. Everything seems to be on track.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Thank you for sharing that with me. It sounds like your recovery is progressing well, and the numbness hasn't caused any issues with your daily activities or physical therapy. I just want to make sure there's nothing else you'd like to add or any concerns you have about your recovery or the numbness. If not, we can conclude the history-taking here.",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, there's nothing else I really need to share. I'm just glad the surgery went well and that I'm recovering without any major issues. I'm focusing on my PT and just trying to be patient with the healing process. Everything seems to be on track.",
+      "tid": "T25"
+    }
+  ]
+}

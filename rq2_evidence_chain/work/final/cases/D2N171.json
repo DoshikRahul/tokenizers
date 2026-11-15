@@ -1,0 +1,293 @@
+{
+  "case_id": "D2N171",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test3",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient is a 56-year-old female who presents for her annual exam with a complaint of chest pain.\n* The patient describes the chest pain as a burning sensation in the middle of her chest, which occurs when she walks and resolves when she rests.\n* The pain has been occurring about three times a week and is not severe enough to warrant an emergency room visit.\n* The patient has not experienced any other symptoms such as shortness of breath, nausea, sweating, or dizziness.\n* The patient has no family history of heart disease or gastrointestinal issues.\n* The patient reports that they do not have any information about their family history.\n* The patient has not noticed any specific triggers or patterns to the pain.\n* The patient has not undergone any cardiac or gastrointestinal evaluations for the chest pain.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N171_V01",
+      "section": "Assessment",
+      "text": "The patient presents with a complaint of chest pain, which is a burning sensation in the middle of her chest that occurs when she walks and resolves when she rests.",
+      "status": "ok",
+      "p_chain_broken": 0.0001,
+      "components": [
+        {
+          "component": "The patient presents with a complaint of chest pain, which is a burning sensation in the middle of her chest that occurs when she walks and resolves when she rests.",
+          "feature_ids": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8"
+          ],
+          "p_broken": 0.00012339348651543752,
+          "passages": [
+            {
+              "pid": "4744_694",
+              "title": "Chest Pain",
+              "section": "Summary",
+              "cos": 0.706
+            },
+            {
+              "pid": "4212_1748",
+              "title": "Heart Disease in Women",
+              "section": "What are the symptoms of heart disease and heart attack in women?",
+              "cos": 0.592
+            },
+            {
+              "pid": "5_1738",
+              "title": "Heart Attack",
+              "section": "What are the symptoms of a heart attack?",
+              "cos": 0.64
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N171_V02",
+      "section": "Assessment",
+      "text": "The patient has not experienced any other symptoms or signs of cardiac or gastrointestinal disease.",
+      "status": "ok",
+      "p_chain_broken": 0.2018,
+      "components": [
+        {
+          "component": "The patient has not experienced any other symptoms or signs of cardiac or gastrointestinal disease.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.20181247575309855,
+          "passages": [
+            {
+              "pid": "1276_954",
+              "title": "Coronary Artery Disease",
+              "section": "What are symptoms of coronary artery disease?",
+              "cos": 0.566
+            },
+            {
+              "pid": "512_1597",
+              "title": "GERD",
+              "section": "What are common symptoms of GERD?",
+              "cos": 0.583
+            },
+            {
+              "pid": "6452_1779",
+              "title": "Heart Health Tests",
+              "section": "Chest X-Ray",
+              "cos": 0.494
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N171_V03",
+      "section": "Plan",
+      "text": "The patient is willing to schedule an ECG and stress test to further evaluate the nature of her chest pain.",
+      "status": "ok",
+      "p_chain_broken": 0.0017,
+      "components": [
+        {
+          "component": "The patient is willing to schedule an ECG and stress test to further evaluate the nature of her chest pain.",
+          "feature_ids": [
+            "F10"
+          ],
+          "p_broken": 0.0017007098788709462,
+          "passages": [
+            {
+              "pid": "6452_1782",
+              "title": "Heart Health Tests",
+              "section": "Electrocardiogram (EKG), (ECG)",
+              "cos": 0.597
+            },
+            {
+              "pid": "4212_1748",
+              "title": "Heart Disease in Women",
+              "section": "What are the symptoms of heart disease and heart attack in women?",
+              "cos": 0.47
+            },
+            {
+              "pid": "4744_694",
+              "title": "Chest Pain",
+              "section": "Summary",
+              "cos": 0.498
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient is a 56-year-old female who presents for her annual exam with a complaint of chest pain.\n* The patient describes the chest pain as a burning sensation in the middle of her chest, which occurs when she walks and resolves when she rests.\n* The pain has been occurring about three times a week and is not severe enough to warrant an emergency room visit.\n* The patient has not experienced any other symptoms such as shortness of breath, nausea, sweating, or dizziness.\n* The patient has no family history of heart disease or gastrointestinal issues.\n* The patient reports that they do not have any information about their family history.\n* The patient has not noticed any specific triggers or patterns to the pain.\n* The patient has not undergone any cardiac or gastrointestinal evaluations for the chest pain.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient presents with a complaint of chest pain, which is a burning sensation in the middle of her chest that occurs when she walks and resolves when she rests.",
+      "The patient has not experienced any other symptoms or signs of cardiac or gastrointestinal disease."
+    ],
+    "plan": [
+      "The patient is willing to schedule an ECG and stress test to further evaluate the nature of her chest pain."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 56 years old, and I'm here for my annual exam. I've been doing okay overall, but I wanted to mention some chest pain I've been having lately.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your gender and describe the chest pain in more detail, such as its location, duration, intensity, and any associated symptoms?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm a female. The chest pain is right in the middle of my chest, and it feels like a burn. It happens when I walk, but it goes away when I rest. It's been happening about three times a week, and it's not bad enough to send me to the ER, but I do notice it.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any other symptoms along with the chest pain, such as shortness of breath, nausea, sweating, or dizziness?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any of those other symptoms. The only thing is the chest pain, and it feels like a burning sensation in the middle of my chest. It happens when I walk, but it goes away when I rest. It's been happening about three times a week.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please share any information about your family history, particularly regarding heart disease or gastrointestinal issues? Also, are there any other factors, such as eating, stress, or physical activity, that seem to make the pain worse or better?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have any information about my family history, so I can't share that. As for what makes the pain better or worse, it happens when I walk but goes away when I rest. It doesn't seem to be related to eating, stress, or anything else specific.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe any other symptoms that occur along with the chest pain, such as shortness of breath, nausea, or arm pain? Also, have you noticed any patterns or specific triggers that make the pain worse or better?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have any other symptoms like shortness of breath, nausea, or arm pain. The pain only happens when I walk and goes away when I rest. It doesn't seem to be triggered by anything specific, and it's been happening about three times a week.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any cardiac or gastrointestinal evaluations for this chest pain, such as an ECG, stress test, or upper endoscopy?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any cardiac or gastrointestinal evaluations for this chest pain. I just started noticing it a few weeks ago, and I haven't had the chance to get it checked out yet. I wanted to bring it up during my annual exam today.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any radiation of the chest pain to other areas, such as your arms, neck, jaw, or back? Additionally, have you noticed any changes in the pattern or intensity of the pain over the past few weeks?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, the pain doesn't radiate to other areas like my arms, neck, jaw, or back. It stays right in the middle of my chest, and it hasn't gotten worse or changed in any way over the past few weeks. It just happens when I walk and goes away when I rest.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any cardiac or gastrointestinal evaluations for this chest pain, such as an ECG, stress test, or endoscopy? If so, what were the results?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any cardiac or gastrointestinal evaluations for this chest pain. I just started noticing it a few weeks ago, and I haven't had the chance to get it checked out yet. I wanted to bring it up during my annual exam today.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the exact location of the chest pain and whether it feels worse when you lie down or after eating? Also, have you noticed any changes in the pattern or intensity of the pain over the past few weeks?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The pain is right in the middle of my chest, and it doesn't feel worse when I lie down or after eating. It hasn't changed in how often it happens or how intense it feels over the past few weeks. It just happens when I walk and goes away when I rest.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any cardiac or gastrointestinal evaluations for this chest pain, such as an ECG, stress test, or upper endoscopy?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any cardiac or gastrointestinal evaluations for this chest pain. I just started noticing it a few weeks ago, and I haven't had the chance to get it checked out yet. I wanted to bring it up during my annual exam today.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any recent changes in your exercise tolerance or any new symptoms such as dizziness, palpitations, or shortness of breath during or after the chest pain episodes?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any recent changes in my exercise tolerance, and I haven't had any dizziness, palpitations, or shortness of breath during or after the chest pain episodes. It just feels like a burning sensation in the middle of my chest when I walk, and it goes away when I rest.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any cardiac or gastrointestinal evaluations for this chest pain, such as an ECG, stress test, or upper endoscopy?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any cardiac or gastrointestinal evaluations for this chest pain. I just started noticing it a few weeks ago, and I haven't had the chance to get it checked out yet. I wanted to bring it up during my annual exam today.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any recent stress tests, echocardiograms, or other cardiac evaluations? If not, would you be willing to schedule an ECG and stress test to further evaluate the nature of your chest pain?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any recent stress tests, echocardiograms, or other cardiac evaluations. I'm willing to schedule an ECG and stress test to further evaluate the nature of my chest pain.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any episodes of chest pain while at rest or during activities that are not physically demanding, such as sitting or lying down?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any episodes of chest pain while at rest or during activities like sitting or lying down. It only happens when I walk, and it goes away when I rest.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient experienced any episodes of chest pain while at rest or during activities like sitting or lying down?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any episodes of chest pain while at rest or during activities like sitting or lying down. It only happens when I walk, and it goes away when I rest.",
+      "tid": "T29"
+    }
+  ]
+}

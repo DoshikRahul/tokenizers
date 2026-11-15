@@ -1,0 +1,381 @@
+{
+  "case_id": "D2N166",
+  "rq2_split": "va_dev",
+  "rq1_split": "dev",
+  "aci_source_split": "test2",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports being uncertain about whether imaging studies of the lumbar spine have already been performed or are scheduled to be done.\n* The patient is unsure if further tests, such as neurological assessments or electromyography (EMG), are necessary to evaluate for nerve root involvement.\n* The patient is a 28-year-old male who presents with low back pain that started 2 weeks ago after lifting a box of books and feeling a \"pop\". The pain is achy and sharp, and has worsened over time. The patient reports that the pain sometimes shoots down his left leg, but has not experienced numbness, tingling, or weakness in his leg.\n* The patient has not had any imaging studies or physical therapy for this condition.\n* The patient has taken ibuprofen and Tylenol, which sometimes helps alleviate the pain.\n* The patient has not experienced any bowel or bladder dysfunction since the onset of symptoms.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N166_V01",
+      "section": "Assessment",
+      "text": "The patient presents with low back pain that started after lifting a box of books and feeling a \"pop\", which has worsened over time.",
+      "status": "ok",
+      "p_chain_broken": 0.0001,
+      "components": [
+        {
+          "component": "The patient presents with low back pain that started after lifting a box of books and feeling a \"pop\", which has worsened over time.",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8",
+            "F11"
+          ],
+          "p_broken": 0.00012339292762436732,
+          "passages": [
+            {
+              "pid": "1532_3315",
+              "title": "Sciatica",
+              "section": "Summary",
+              "cos": 0.468
+            },
+            {
+              "pid": "412_3462",
+              "title": "Spinal Stenosis",
+              "section": "Summary",
+              "cos": 0.459
+            },
+            {
+              "pid": "4083_2891",
+              "title": "Peripheral Arterial Disease",
+              "section": "Summary",
+              "cos": 0.485
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N166_V02",
+      "section": "Assessment",
+      "text": "The patient has not experienced numbness, tingling, or weakness in his leg, but reports that the pain sometimes shoots down his left leg.",
+      "status": "ok",
+      "p_chain_broken": 0.0421,
+      "components": [
+        {
+          "component": "The patient has not experienced numbness, tingling, or weakness in his leg",
+          "feature_ids": [
+            "F6"
+          ],
+          "p_broken": 8.939597195670804e-06,
+          "passages": [
+            {
+              "pid": "4083_2891",
+              "title": "Peripheral Arterial Disease",
+              "section": "Summary",
+              "cos": 0.496
+            },
+            {
+              "pid": "6248_2218",
+              "title": "Ischemic Stroke",
+              "section": "What are the symptoms of ischemic stroke?",
+              "cos": 0.477
+            },
+            {
+              "pid": "8_3528",
+              "title": "Stroke",
+              "section": "What are the symptoms of a stroke?",
+              "cos": 0.458
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "the pain sometimes shoots down his left leg",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.04208740050239329,
+          "passages": [
+            {
+              "pid": "7107_2667",
+              "title": "Non-Drug Pain Management",
+              "section": "What is pain?",
+              "cos": 0.454
+            },
+            {
+              "pid": "1532_3315",
+              "title": "Sciatica",
+              "section": "Summary",
+              "cos": 0.464
+            },
+            {
+              "pid": "4083_2891",
+              "title": "Peripheral Arterial Disease",
+              "section": "Summary",
+              "cos": 0.503
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N166_V03",
+      "section": "Plan",
+      "text": "The doctor mentioned the possibility of an MRI to evaluate the cause of the patient's low back pain and radiculopathy.",
+      "status": "ok",
+      "p_chain_broken": 0.0076,
+      "components": [
+        {
+          "component": "The doctor mentioned the possibility of an MRI to evaluate the cause of the patient's low back pain and radiculopathy.",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F8",
+            "F9",
+            "F11"
+          ],
+          "p_broken": 0.007577182446662251,
+          "passages": [
+            {
+              "pid": "412_3462",
+              "title": "Spinal Stenosis",
+              "section": "Summary",
+              "cos": 0.52
+            },
+            {
+              "pid": "157_327",
+              "title": "Back Pain",
+              "section": "Summary",
+              "cos": 0.505
+            },
+            {
+              "pid": "284_1882",
+              "title": "Herniated Disk",
+              "section": "Summary",
+              "cos": 0.484
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N166_V04",
+      "section": "Plan",
+      "text": "The patient has not had any imaging studies or physical therapy for this condition, and has not undergone any neurological assessments or electromyography (EMG) tests.",
+      "status": "ok",
+      "p_chain_broken": 0.0,
+      "components": [
+        {
+          "component": "The patient has not had any imaging studies or physical therapy for this condition",
+          "feature_ids": [
+            "F8"
+          ],
+          "p_broken": 6.144064004820067e-06,
+          "passages": [
+            {
+              "pid": "335_2621",
+              "title": "Muscular Dystrophy",
+              "section": "How is muscular dystrophy (MD) diagnosed?",
+              "cos": 0.363
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient has not undergone any neurological assessments or electromyography (EMG) tests",
+          "feature_ids": [
+            "F10"
+          ],
+          "p_broken": 4.222739813327687e-06,
+          "passages": [
+            {
+              "pid": "336_2636",
+              "title": "Myasthenia Gravis",
+              "section": "How is myasthenia gravis diagnosed?",
+              "cos": 0.433
+            },
+            {
+              "pid": "135_112",
+              "title": "Amyotrophic Lateral Sclerosis",
+              "section": "How is amyotrophic lateral sclerosis (ALS) diagnosed?",
+              "cos": 0.496
+            },
+            {
+              "pid": "7207_17",
+              "title": "Acute Flaccid Myelitis",
+              "section": "How is acute flaccid myelitis (AFM) diagnosed?",
+              "cos": 0.425
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports being uncertain about whether imaging studies of the lumbar spine have already been performed or are scheduled to be done.\n* The patient is unsure if further tests, such as neurological assessments or electromyography (EMG), are necessary to evaluate for nerve root involvement.\n* The patient is a 28-year-old male who presents with low back pain that started 2 weeks ago after lifting a box of books and feeling a \"pop\". The pain is achy and sharp, and has worsened over time. The patient reports that the pain sometimes shoots down his left leg, but has not experienced numbness, tingling, or weakness in his leg.\n* The patient has not had any imaging studies or physical therapy for this condition.\n* The patient has taken ibuprofen and Tylenol, which sometimes helps alleviate the pain.\n* The patient has not experienced any bowel or bladder dysfunction since the onset of symptoms.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient presents with low back pain that started after lifting a box of books and feeling a \"pop\", which has worsened over time.",
+      "The patient has not experienced numbness, tingling, or weakness in his leg, but reports that the pain sometimes shoots down his left leg."
+    ],
+    "plan": [
+      "The doctor mentioned the possibility of an MRI to evaluate the cause of the patient's low back pain and radiculopathy.",
+      "The patient has not had any imaging studies or physical therapy for this condition, and has not undergone any neurological assessments or electromyography (EMG) tests."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 28 years old and male. I'm here because I've been having really bad low back pain for a couple of weeks, and it's gotten worse. It started when I lifted a box of books and I felt a pop, and now it's shooting down my left leg sometimes.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Can you describe the nature of the pain (e.g., sharp, dull, burning) and whether it is constant or intermittent? Have you experienced any numbness, tingling, or weakness in your left leg?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The pain is kind of achy and sharp, and it's been getting worse over the past couple of weeks. It started when I lifted that box of books and I felt a pop. Now, sometimes it shoots down my left leg, but I haven't had any numbness or tingling, and I don't feel any weakness in my leg.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies or physical therapy for this condition? If so, please provide details.",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging studies or physical therapy for this yet. This is the first time I'm really talking about it with a doctor. I did take some ibuprofen and Tylenol, and that sometimes helps, but nothing else.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any bowel or bladder dysfunction, such as difficulty urinating, incontinence, or changes in bowel habits, since the onset of your symptoms?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any issues with my bladder or bowels. Everything has been normal since the pain started.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient experienced any episodes of numbness, tingling, or weakness in the legs since the onset of the symptoms?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any numbness, tingling, or weakness in my legs since the pain started. I do feel the pain shooting down my left leg sometimes, but my legs otherwise feel normal.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any episodes of bowel or bladder dysfunction since the onset of your low back pain?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any episodes of bowel or bladder dysfunction since the onset of my low back pain. Everything has been normal, and I haven't had any issues with urination or bowel habits.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies such as an X-ray, MRI, or CT scan of the lumbar spine to evaluate the cause of your low back pain and radiculopathy?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging studies of the lumbar spine yet. The doctor mentioned something about an MRI after the exam, but I didn't have it done before today. I'm not sure if that's already been done or if it's something that's going to happen next.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient experienced any episodes of bowel or bladder dysfunction since the onset of the low back pain?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any episodes of bowel or bladder dysfunction since the onset of the low back pain. Everything has been normal, and I haven't had any issues with urination or bowel habits.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any recent imaging studies of the lumbar spine, such as an MRI or X-ray, and if so, what were the findings?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any recent imaging studies of the lumbar spine yet. The doctor mentioned something about an MRI after the exam, but I didn't have it done before today. I'm not sure if that's already been done or if it's something that's going to happen next.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any neurological assessments or electromyography (EMG) to evaluate for nerve root involvement?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any neurological assessments or EMG tests yet. The doctor did do a physical exam and mentioned something about a straight leg test being positive, but nothing else like that. I'm not sure if they would need to do more tests.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient experienced any episodes of bowel or bladder dysfunction since the onset of the low back pain?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any episodes of bowel or bladder dysfunction since the onset of the low back pain. Everything has been normal, and I haven't had any issues with urination or bowel habits.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any neurological assessments or EMG tests to evaluate for nerve root involvement?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any neurological assessments or EMG tests yet. The doctor did do a physical exam and mentioned something about a straight leg test being positive, but nothing else like that. I'm not sure if they would need to do more tests.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient experienced any changes in bowel or bladder function since the onset of the low back pain?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any changes in bowel or bladder function since the onset of the low back pain. Everything has been normal, and I haven't had any issues with urination or bowel habits.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any numbness, tingling, or weakness in your left leg since the onset of the low back pain?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any numbness, tingling, or weakness in my left leg since the onset of the low back pain. The pain does shoot down my leg sometimes, but I don't feel any of those other sensations.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient experienced any episodes of bowel or bladder dysfunction since the onset of the low back pain?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any episodes of bowel or bladder dysfunction since the onset of the low back pain. Everything has been normal, and I haven't had any issues with urination or bowel habits.",
+      "tid": "T29"
+    }
+  ]
+}

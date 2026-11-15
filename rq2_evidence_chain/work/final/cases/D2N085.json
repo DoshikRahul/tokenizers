@@ -1,0 +1,357 @@
+{
+  "case_id": "D2N085",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "dev",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient is Russell.\n* The patient reports being a male and is unsure of his exact age.\n* The patient reports being unable to find a comfortable position when experiencing the symptom.\n* Patient reports sharp pain on the right side of the abdomen, just below the ribs, which radiates to the lower abdomen and groin.\n* Pain is intermittent, but when present, is severe and affects daily activities.\n* Patient experiences nausea, but no vomiting.\n* The patient reports staying hydrated by drinking more fluids than usual.\n* Burning sensation during urination, with occasional dark-colored urine.\n* Patient has a history of kidney stones, but this one is taking longer to pass.\n* No fever, chills, or changes in urinary frequency or volume.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [
+    {
+      "id": "q1",
+      "gap": "Patient's exact age",
+      "question": "What is your exact age?",
+      "category": "subjective",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "q2",
+      "gap": "Size of the kidney stone",
+      "question": "What is the exact size of the kidney stone found on the CT scan?",
+      "category": "objective",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "q3",
+      "gap": "Physical examination findings",
+      "question": "What are your vital signs and physical examination findings?",
+      "category": "objective",
+      "status": "unresolved",
+      "answer": null
+    }
+  ],
+  "ap_lines": [
+    {
+      "statement_id": "D2N085_V01",
+      "section": "Assessment",
+      "text": "The patient is experiencing a current episode of right-sided abdominal pain, likely related to a kidney stone.",
+      "status": "ok",
+      "p_chain_broken": 0.0076,
+      "components": [
+        {
+          "component": "The patient is experiencing a current episode of right-sided abdominal pain, likely related to a kidney stone.",
+          "feature_ids": [
+            "F1",
+            "F4",
+            "F12",
+            "F13",
+            "F14",
+            "F15",
+            "F16",
+            "F17"
+          ],
+          "p_broken": 0.007577186459571622,
+          "passages": [
+            {
+              "pid": "1224_2268",
+              "title": "Kidney Stones",
+              "section": "Summary",
+              "cos": 0.645
+            },
+            {
+              "pid": "1224_2269",
+              "title": "Kidney Stones",
+              "section": "Summary",
+              "cos": 0.593
+            },
+            {
+              "pid": "1223_223",
+              "title": "Appendicitis",
+              "section": "Summary",
+              "cos": 0.438
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N085_V02",
+      "section": "Assessment",
+      "text": "The patient has a history of kidney stones, but this one is taking longer to pass.",
+      "status": "ok",
+      "p_chain_broken": 0.0002,
+      "components": [
+        {
+          "component": "The patient has a history of kidney stones, but this one is taking longer to pass.",
+          "feature_ids": [
+            "F12",
+            "F13",
+            "F14",
+            "F17",
+            "F1",
+            "F2",
+            "F16",
+            "F18"
+          ],
+          "p_broken": 0.0002305049293043579,
+          "passages": [
+            {
+              "pid": "1224_2268",
+              "title": "Kidney Stones",
+              "section": "Summary",
+              "cos": 0.706
+            },
+            {
+              "pid": "1224_2269",
+              "title": "Kidney Stones",
+              "section": "Summary",
+              "cos": 0.641
+            },
+            {
+              "pid": "301_2260",
+              "title": "Kidney Cancer",
+              "section": "Summary",
+              "cos": 0.507
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N085_V03",
+      "section": "Plan",
+      "text": "Continue oxycodone 5 milligrams every 6-8 hours as needed for pain management.",
+      "status": "ok",
+      "p_chain_broken": 0.2689,
+      "components": [
+        {
+          "component": "Continue oxycodone 5 milligrams every 6-8 hours as needed for pain management.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.26894071237202727,
+          "passages": [
+            {
+              "pid": "4059_2833",
+              "title": "Pain Relievers",
+              "section": "What are prescription pain relievers?",
+              "cos": 0.399
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N085_V04",
+      "section": "Plan",
+      "text": "Alternate with Tylenol as needed.",
+      "status": "ok",
+      "p_chain_broken": 0.2227,
+      "components": [
+        {
+          "component": "Alternate with Tylenol as needed.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.22269887489132414,
+          "passages": [
+            {
+              "pid": "3061_2",
+              "title": "Abdominal Pain",
+              "section": "Summary",
+              "cos": 0.507
+            },
+            {
+              "pid": "1223_223",
+              "title": "Appendicitis",
+              "section": "Summary",
+              "cos": 0.486
+            },
+            {
+              "pid": "4486_2873",
+              "title": "Pelvic Pain",
+              "section": "Summary",
+              "cos": 0.39
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient is Russell.\n* The patient reports being a male and is unsure of his exact age.\n* The patient reports being unable to find a comfortable position when experiencing the symptom.\n* Patient reports sharp pain on the right side of the abdomen, just below the ribs, which radiates to the lower abdomen and groin.\n* Pain is intermittent, but when present, is severe and affects daily activities.\n* Patient experiences nausea, but no vomiting.\n* The patient reports staying hydrated by drinking more fluids than usual.\n* Burning sensation during urination, with occasional dark-colored urine.\n* Patient has a history of kidney stones, but this one is taking longer to pass.\n* No fever, chills, or changes in urinary frequency or volume.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient is experiencing a current episode of right-sided abdominal pain, likely related to a kidney stone.",
+      "The patient has a history of kidney stones, but this one is taking longer to pass."
+    ],
+    "plan": [
+      "Continue oxycodone 5 milligrams every 6-8 hours as needed for pain management.",
+      "Alternate with Tylenol as needed."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Doctor",
+      "text": "Hello. Could you tell me your age and gender, and what brings you in today?",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Hi, I'm Russell. I'm not sure about my exact age, but I'm a male. I've been having this sharp pain on the right side of my abdomen, just below my ribs, for the last several days. It feels like it goes down to my lower abdomen and into my groin, and it comes and goes, but when it does, it's really bad. I can't find a comfortable position when it's happening.",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your approximate age and confirm if you have experienced any associated symptoms such as nausea, vomiting, fever, or changes in your urinary habits (e.g., frequency, urgency, blood in urine)?",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm not sure about my exact age, but I'm a male. I have felt nauseated, though I haven't vomited. The pain is accompanied by a burning sensation when I urinate, and sometimes my urine looks a little dark, though I don't think there's any frank blood.",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any prior episodes of similar pain, and have you been diagnosed with kidney stones, urinary tract infections, or gallstones in the past?",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Yes, I've had kidney stones before, but I've been able to pass them. This one is taking a lot longer, though.",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any fever, chills, or changes in urinary frequency or volume associated with the pain?",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had a fever or chills, and I don't notice any significant changes in how often I urinate, just that it burns a little when I do.",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies, such as a CT scan or ultrasound, for this current episode of pain? If so, what were the findings?",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I saw my doctor, and they ordered a CT scan, which showed a kidney stone in the right ureter. They sent me to see a urologist after that.",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm the size of the kidney stone found on the CT scan, and have you received any prior treatment for kidney stones, such as lithotripsy or medication?",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know the exact size of the stone, but my doctor mentioned it was a .5 centimeter stone. I've had kidney stones before, but I've been able to pass them on my own. I haven't had any treatment like lithotripsy or medication specifically for this one yet.",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any fever, chills, or signs of infection during this episode?",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had any fever or chills, and I don't think there are any signs of infection. I just feel nauseated and have the burning when I pee, but nothing else that feels like an infection.",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any changes in the frequency or urgency of urination since the onset of your symptoms?",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't notice any changes in how often I urinate or any increased urgency. It just burns a little when I pee, but the frequency seems about the same as usual.",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "What is the patient's current hydration status, and has he been following any specific dietary recommendations or restrictions to manage kidney stones?",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I’ve been trying to drink more water to help pass the stone, but I haven’t been following any specific dietary recommendations. I just know I need to stay hydrated, so I’ve been drinking more fluids than usual.",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any changes in the color or consistency of your urine besides dark urine and burning sensation during urination?",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any other changes in the color or consistency of my urine besides it looking a little dark sometimes. It still looks like regular urine to me, just darker than usual.",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you been prescribed any medications for pain management or to facilitate stone passage, and if so, what are they?",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I’ve been prescribed oxycodone 5 milligrams every six to eight hours as needed for pain, and I can continue to alternate that with Tylenol.",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any changes in the intensity or frequency of your pain since starting the oxycodone and Tylenol? Also, have you been able to pass any stone fragments or noticed any changes in your urine output?",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, the pain is still coming and going, and when it does come, it's pretty bad. I haven't been able to pass any stone fragments yet, and my urine output hasn't really changed.",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any changes in the color or smell of your urine recently, and have you been able to pass any stone fragments?",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any changes in the color or smell of my urine recently, and I haven't been able to pass any stone fragments yet.",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any changes in the color or smell of your urine recently, and have you been able to pass any stone fragments yet?",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any changes in the color or smell of my urine recently, and I haven't been able to pass any stone fragments yet.",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient experienced any changes in the intensity or frequency of the pain over the past 24 hours, and has there been any associated vomiting or changes in bowel movements?",
+      "tid": "T29"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, the pain is still coming and going, and when it does come, it's pretty bad. I haven't had any vomiting or changes in my bowel movements.",
+      "tid": "T30"
+    }
+  ]
+}

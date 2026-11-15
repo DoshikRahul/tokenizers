@@ -1,0 +1,424 @@
+{
+  "case_id": "D2N148",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test2",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* Patient is a 45-year-old man who injured his lower back four months ago while helping his son move out of his college dorm.\n* The patient reports being concerned about the persistence of lower back pain and tingling and wishes to pursue further evaluation.\n* The patient states that they tried physical therapy at their gym, but it did not seem to help.\n* He reports a dull ache in his lower back, which sometimes becomes sharp when he turns a certain way or rolls over in his sleep.\n* The pain is exacerbated by lifting heavy objects or sitting for long periods, but is alleviated by stretching or adjusting his position.\n* He has not experienced any recent changes in the pattern or intensity of his pain, and has not had any new symptoms such as numbness, weakness, or bowel/bladder dysfunction.\n* He has not undergone any prior imaging studies for his lower back pain, but is willing to consider an MRI to evaluate for potential disc-related or musculoskeletal pathology.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N148_V01",
+      "section": "Assessment",
+      "text": "The patient has chronic lower back pain with a history of injury four months ago, which has been persistent and has not changed in pattern or intensity over time.",
+      "status": "ok",
+      "p_chain_broken": 0.0086,
+      "components": [
+        {
+          "component": "The patient has chronic lower back pain with a history of injury four months ago, which has been persistent and has not changed in pattern or intensity over time.",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F10",
+            "F11",
+            "F12",
+            "F13",
+            "F17"
+          ],
+          "p_broken": 0.008577432635756882,
+          "passages": [
+            {
+              "pid": "157_327",
+              "title": "Back Pain",
+              "section": "Summary",
+              "cos": 0.656
+            },
+            {
+              "pid": "156_326",
+              "title": "Back Injuries",
+              "section": "Summary",
+              "cos": 0.611
+            },
+            {
+              "pid": "7107_2667",
+              "title": "Non-Drug Pain Management",
+              "section": "What is pain?",
+              "cos": 0.526
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N148_V02",
+      "section": "Assessment",
+      "text": "The patient has not experienced any recent changes in his symptoms, and has not had any new symptoms such as numbness, weakness, or bowel/bladder dysfunction.",
+      "status": "ok",
+      "p_chain_broken": 0.0,
+      "components": [
+        {
+          "component": "The patient has not experienced any recent changes in his symptoms, and has not had any new symptoms such as numbness, weakness, or bowel/bladder dysfunction.",
+          "feature_ids": [
+            "F6",
+            "F17"
+          ],
+          "p_broken": 4.539749524364928e-05,
+          "passages": [
+            {
+              "pid": "1095_2897",
+              "title": "Peripheral Nerve Disorders",
+              "section": "What are the symptoms of peripheral nerve disorders?",
+              "cos": 0.529
+            },
+            {
+              "pid": "179_617",
+              "title": "Carpal Tunnel Syndrome",
+              "section": "What are the symptoms of carpal tunnel syndrome?",
+              "cos": 0.42
+            },
+            {
+              "pid": "5400_285",
+              "title": "Atherosclerosis",
+              "section": "What are the symptoms of atherosclerosis?",
+              "cos": 0.441
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N148_V03",
+      "section": "Plan",
+      "text": "The patient will undergo an MRI to evaluate for potential disc-related or musculoskeletal pathology.",
+      "status": "flagged",
+      "p_chain_broken": 0.7311,
+      "components": [
+        {
+          "component": "The patient will undergo an MRI to evaluate for potential disc-related or musculoskeletal pathology.",
+          "feature_ids": [
+            "F1",
+            "F4",
+            "F5",
+            "F8",
+            "F9",
+            "F10",
+            "F11",
+            "F12"
+          ],
+          "p_broken": 0.7310578403333446,
+          "passages": [
+            {
+              "pid": "157_327",
+              "title": "Back Pain",
+              "section": "Summary",
+              "cos": 0.571
+            },
+            {
+              "pid": "7107_2667",
+              "title": "Non-Drug Pain Management",
+              "section": "What is pain?",
+              "cos": 0.516
+            },
+            {
+              "pid": "351_2823",
+              "title": "Pain",
+              "section": "What is pain?",
+              "cos": 0.462
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N148_V04",
+      "section": "Plan",
+      "text": "The patient will be advised to avoid heavy lifting and prolonged sitting to alleviate his symptoms.",
+      "status": "ok",
+      "p_chain_broken": 0.148,
+      "components": [
+        {
+          "component": "The patient will be advised to avoid heavy lifting and prolonged sitting to alleviate his symptoms.",
+          "feature_ids": [
+            "F11",
+            "F12",
+            "F16",
+            "F17"
+          ],
+          "p_broken": 0.14804666050352783,
+          "passages": [
+            {
+              "pid": "143_161",
+              "title": "Ankylosing Spondylitis",
+              "section": "What are the symptoms of ankylosing spondylitis?",
+              "cos": 0.542
+            },
+            {
+              "pid": "156_326",
+              "title": "Back Injuries",
+              "section": "Summary",
+              "cos": 0.614
+            },
+            {
+              "pid": "4621_2238",
+              "title": "Joint Disorders",
+              "section": "What types of joint disorders happen from sudden injuries?",
+              "cos": 0.435
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N148_V05",
+      "section": "Plan",
+      "text": "The patient will be referred to physical therapy to address his chronic lower back pain and improve his flexibility and strength.",
+      "status": "flagged",
+      "p_chain_broken": 0.7982,
+      "components": [
+        {
+          "component": "The patient will be referred to physical therapy to address his chronic lower back pain and improve his flexibility and strength.",
+          "feature_ids": [
+            "F1",
+            "F4",
+            "F10",
+            "F11",
+            "F12",
+            "F13",
+            "F14",
+            "F16"
+          ],
+          "p_broken": 0.7981860624348897,
+          "passages": [
+            {
+              "pid": "157_327",
+              "title": "Back Pain",
+              "section": "Summary",
+              "cos": 0.691
+            },
+            {
+              "pid": "156_326",
+              "title": "Back Injuries",
+              "section": "Summary",
+              "cos": 0.617
+            },
+            {
+              "pid": "7107_2667",
+              "title": "Non-Drug Pain Management",
+              "section": "What is pain?",
+              "cos": 0.506
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N148_V06",
+      "section": "Plan",
+      "text": "The patient will be followed up with to assess the results of the MRI and to adjust his treatment plan as necessary.",
+      "status": "ok",
+      "p_chain_broken": 0.0006,
+      "components": [
+        {
+          "component": "The patient will be followed up with to assess the results of the MRI and to adjust his treatment plan as necessary.",
+          "feature_ids": [
+            "F9",
+            "F15",
+            "F17"
+          ],
+          "p_broken": 0.000552773475594313,
+          "passages": [
+            {
+              "pid": "3953_2594",
+              "title": "MRI Scans",
+              "section": "How do you prepare for an MRI scan?",
+              "cos": 0.655
+            },
+            {
+              "pid": "3953_2593",
+              "title": "MRI Scans",
+              "section": "Who needs an MRI scan?",
+              "cos": 0.62
+            },
+            {
+              "pid": "3953_2596",
+              "title": "MRI Scans",
+              "section": "What should I expect after an MRI scan?",
+              "cos": 0.641
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* Patient is a 45-year-old man who injured his lower back four months ago while helping his son move out of his college dorm.\n* The patient reports being concerned about the persistence of lower back pain and tingling and wishes to pursue further evaluation.\n* The patient states that they tried physical therapy at their gym, but it did not seem to help.\n* He reports a dull ache in his lower back, which sometimes becomes sharp when he turns a certain way or rolls over in his sleep.\n* The pain is exacerbated by lifting heavy objects or sitting for long periods, but is alleviated by stretching or adjusting his position.\n* He has not experienced any recent changes in the pattern or intensity of his pain, and has not had any new symptoms such as numbness, weakness, or bowel/bladder dysfunction.\n* He has not undergone any prior imaging studies for his lower back pain, but is willing to consider an MRI to evaluate for potential disc-related or musculoskeletal pathology.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient has chronic lower back pain with a history of injury four months ago, which has been persistent and has not changed in pattern or intensity over time.",
+      "The patient has not experienced any recent changes in his symptoms, and has not had any new symptoms such as numbness, weakness, or bowel/bladder dysfunction."
+    ],
+    "plan": [
+      "The patient will be advised to avoid heavy lifting and prolonged sitting to alleviate his symptoms.",
+      "The patient will be followed up with to assess the results of the MRI and to adjust his treatment plan as necessary."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 45 years old, and I'm a man. I injured my lower back about four months ago while helping my son move out of his college dorm, and I've been having some pain and occasional tingling that's been concerning me.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Can you describe the specific movement or action that caused the lower back pain during the move, and does the pain radiate to your legs or any other areas? Also, have you experienced any numbness, weakness, or changes in bowel or bladder function since the injury?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I was moving some boxes when my son was moving out, and that's when I felt the tweak in my lower back. The pain doesn't really radiate to my legs, but I did have some tingling in my right foot at first, though that went away. I haven't had any numbness or weakness in my legs recently, and I haven't had any issues with my bladder or bowels.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies or consultations with a specialist for your lower back pain and tingling since the injury?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I went to an urgent care and they wanted me to do an MRI, but I didn't end up doing it because I was worried about the cost and because it started to feel better. Now that it's been going on for so long, I'm a little concerned and want to move forward with that.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any prior imaging studies, such as an MRI or X-ray, for your lower back pain, and if so, what were the findings?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any prior imaging studies for my lower back pain other than what was discussed at urgent care. They wanted me to have an MRI, but I didn't end up getting it at the time.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the nature of the lower back pain (e.g., sharp, dull, constant, intermittent) and any specific activities or positions that aggravate or alleviate the pain?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The pain is more of a dull ache, but sometimes it feels sharp, especially when I turn a certain way or roll over in my sleep. It aggravates when I lift something heavy or sit for a long time, but it feels better when I stretch or position myself the right way.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any recent changes in the pattern or intensity of your lower back pain, or any new symptoms such as numbness, weakness, or bowel/bladder dysfunction?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any recent changes in the pattern or intensity of my lower back pain, and I haven't had any new symptoms like numbness, weakness, or issues with my bowel or bladder. The tingling in my foot happened once when I first injured my back, but it hasn't come back since.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe any specific movements or positions that consistently reproduce the pain, and have you noticed any patterns in when the pain is more severe or less severe?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The pain is worse when I turn a certain way or roll over in my sleep, and it feels sharp then. It also gets worse if I lift something heavy, but it's better when I stretch or adjust my position. I haven't noticed a specific movement that always reproduces the pain, but it does seem to come back after sitting for a long time or doing something that strains my back.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any recent episodes of numbness, weakness, or changes in bowel or bladder function since the initial injury?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any recent episodes of numbness, weakness, or changes in bowel or bladder function since the initial injury. The only tingling I had was in my right foot right after the injury, but it went away and hasn't come back since. I don't have any issues with my bladder or bowels.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe any specific movements or activities that make the pain worse or better? Also, have you noticed any changes in the pattern or intensity of the pain over the past four months?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The pain gets worse when I lift something heavy or sit for a long time, but it feels better when I stretch or adjust my position. Over the past four months, the pain has been pretty consistent, though it doesn't feel as bad as it did right after the injury. I still get that sharp pain when I turn a certain way or roll over in my sleep, but it doesn't last long if I move into a different position.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any recent episodes of numbness, weakness, or changes in bowel or bladder function since the initial injury?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any recent episodes of numbness, weakness, or changes in bowel or bladder function since the initial injury. The only tingling I had was in my right foot right after the injury, but it went away and hasn't come back since. I don't have any issues with my bladder or bowels.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any physical therapy or received any treatment for the lower back pain since the injury? If so, what was the nature of the treatment and how did it affect your symptoms?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I tried some physical therapy at my gym, but it really didn't seem to help. I was hoping for some relief, but my symptoms stayed about the same. I also tried heat and ice, but nothing really made the pain go away for very long.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies, such as X-rays or MRI, for your lower back pain since the injury? If not, would you be willing to consider an MRI to further evaluate for potential disc-related or musculoskeletal pathology?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I didn't have any imaging done at first because I was worried about the cost, but now that it's been a few months and the pain is still there, I'm willing to go ahead with an MRI to see what's going on. I just want to make sure there's nothing serious that needs attention.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Thank you for your willingness to proceed with an MRI. To better prepare for the imaging, could you please let me know if you have any known metal implants, pacemakers, or other devices in your body that might affect the MRI? Also, are there any specific areas of your back that feel more painful or tender when you move or touch them?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have any metal implants or devices in my body that would interfere with an MRI. The only area that feels tender is my lower back, especially when I move or turn a certain way, but it doesn't hurt when I just sit or lie down.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Thank you for confirming that you don't have any metal implants or devices that would interfere with an MRI. To better prepare for the imaging, could you let me know if you've experienced any recent changes in your symptoms, such as increased pain, new tingling, or any difficulty with movement?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any recent changes in my symptoms. The pain has been pretty consistent over the past four months, and the only thing that's gotten worse is when I lift something heavy or sit for a long time. I still get that sharp pain when I turn a certain way or roll over in my sleep, but it doesn't last long if I move into a different position. Other than that, things have stayed about the same.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any recent changes in your symptoms, such as increased pain, new symptoms, or changes in the pattern of your pain?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any recent changes in my symptoms. The pain has been pretty consistent over the past four months, and the only thing that's gotten worse is when I lift something heavy or sit for a long time. I still get that sharp pain when I turn a certain way or roll over in my sleep, but it doesn't last long if I move into a different position. Other than that, things have stayed about the same.",
+      "tid": "T29"
+    }
+  ]
+}

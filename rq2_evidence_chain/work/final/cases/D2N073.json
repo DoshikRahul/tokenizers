@@ -1,0 +1,485 @@
+{
+  "case_id": "D2N073",
+  "rq2_split": "va_dev",
+  "rq1_split": "dev",
+  "aci_source_split": "dev",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* Patient is a 65-year-old female with a history of iron deficiency anemia.\n* She has been feeling tired, having chills, and experiencing wheezing when active.\n* The patient reports no changes in bowel habits or abdominal pain, and has not noticed any black stools.\n* The patient reports no testing for malabsorption syndromes, including celiac disease, and no small bowel imaging studies, such as capsule endoscopy or small bowel follow-through.\n* She has not made any changes to her diet to increase iron intake, but has been taking iron pills again for about a year.\n* She takes over-the-counter vitamin B12 supplements.\n* The patient reports being unaware of the possibilities of malabsorption syndromes or small bowel imaging studies until now.\n* The patient reports not knowing celiac disease was a possibility until now.\n* She has a history of hysterectomy in 1996 and has not had any menstrual bleeding since then.\n* She has been feeling more anxious and depressed lately.\n* The patient states it has been frustrating not knowing why this keeps happening.\n* The patient plans to inquire about testing for malabsorption syndromes and small bowel imaging studies at their next appointment.",
+    "objective": "* The patient had a colonoscopy about five to six years ago, which was normal with no polyps."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N073_V01",
+      "section": "Assessment",
+      "text": "The patient has a history of iron deficiency anemia and is currently experiencing symptoms of fatigue, chills, and wheezing.",
+      "status": "ok",
+      "p_chain_broken": 0.0003,
+      "components": [
+        {
+          "component": "The patient has a history of iron deficiency anemia.",
+          "feature_ids": [
+            "F2"
+          ],
+          "p_broken": 0.0001398209242214022,
+          "passages": [
+            {
+              "pid": "139_137",
+              "title": "Anemia",
+              "section": "Summary",
+              "cos": 0.612
+            },
+            {
+              "pid": "139_136",
+              "title": "Anemia",
+              "section": "Summary",
+              "cos": 0.606
+            },
+            {
+              "pid": "5542_2212",
+              "title": "Iron",
+              "section": "What happens if you don't get enough iron?",
+              "cos": 0.505
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient is currently experiencing symptoms of fatigue, chills, and wheezing.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.00029595473606029645,
+          "passages": [
+            {
+              "pid": "89_2627",
+              "title": "Myalgic Encephalomyelitis/Chronic Fatigue Syndrome",
+              "section": "What are the symptoms of myalgic encephalomyelitis/chronic fatigue syndrome (ME/CFS)?",
+              "cos": 0.529
+            },
+            {
+              "pid": "299_1488",
+              "title": "Flu",
+              "section": "What are the symptoms of the flu?",
+              "cos": 0.445
+            },
+            {
+              "pid": "418_3475",
+              "title": "Staphylococcal Infections",
+              "section": "What are the symptoms of staph infections?",
+              "cos": 0.462
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N073_V02",
+      "section": "Assessment",
+      "text": "The patient has not undergone any recent gastrointestinal symptoms, such as changes in bowel habits, abdominal pain, or black stools.",
+      "status": "ok",
+      "p_chain_broken": 0.0001,
+      "components": [
+        {
+          "component": "The patient has not undergone any recent gastrointestinal symptoms, such as changes in bowel habits, abdominal pain, or black stools.",
+          "feature_ids": [
+            "F11",
+            "F12",
+            "F13",
+            "F14",
+            "F15",
+            "F16",
+            "F17",
+            "F18"
+          ],
+          "p_broken": 6.605135734071002e-05,
+          "passages": [
+            {
+              "pid": "897_638",
+              "title": "Celiac Disease",
+              "section": "How is celiac disease diagnosed?",
+              "cos": 0.726
+            },
+            {
+              "pid": "5459_2419",
+              "title": "Malabsorption Syndromes",
+              "section": "Summary",
+              "cos": 0.585
+            },
+            {
+              "pid": "897_632",
+              "title": "Celiac Disease",
+              "section": "What is celiac disease?",
+              "cos": 0.577
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N073_V03",
+      "section": "Assessment",
+      "text": "The patient has not had any upper or lower gastrointestinal endoscopy or imaging studies to evaluate for potential sources of blood loss.",
+      "status": "ok",
+      "p_chain_broken": 0.0025,
+      "components": [
+        {
+          "component": "The patient has not had any upper or lower gastrointestinal endoscopy or imaging studies to evaluate for potential sources of blood loss.",
+          "feature_ids": [
+            "F14",
+            "F15",
+            "F13",
+            "F18",
+            "F17",
+            "F19",
+            "F9",
+            "F11"
+          ],
+          "p_broken": 0.0024726093182736433,
+          "passages": [
+            {
+              "pid": "5459_2419",
+              "title": "Malabsorption Syndromes",
+              "section": "Summary",
+              "cos": 0.644
+            },
+            {
+              "pid": "897_638",
+              "title": "Celiac Disease",
+              "section": "How is celiac disease diagnosed?",
+              "cos": 0.744
+            },
+            {
+              "pid": "897_632",
+              "title": "Celiac Disease",
+              "section": "What is celiac disease?",
+              "cos": 0.555
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N073_V04",
+      "section": "Assessment",
+      "text": "The patient has not been tested for celiac disease or other malabsorption syndromes.",
+      "status": "ok",
+      "p_chain_broken": 0.0001,
+      "components": [
+        {
+          "component": "The patient has not been tested for celiac disease or other malabsorption syndromes.",
+          "feature_ids": [
+            "F18",
+            "F19"
+          ],
+          "p_broken": 5.1441772147924305e-05,
+          "passages": [
+            {
+              "pid": "5459_2419",
+              "title": "Malabsorption Syndromes",
+              "section": "Summary",
+              "cos": 0.589
+            },
+            {
+              "pid": "897_635",
+              "title": "Celiac Disease",
+              "section": "What are the symptoms of celiac disease?",
+              "cos": 0.581
+            },
+            {
+              "pid": "897_637",
+              "title": "Celiac Disease",
+              "section": "What other problems can celiac disease cause?",
+              "cos": 0.562
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N073_V05",
+      "section": "Plan",
+      "text": "The patient will discuss the possibility of celiac disease testing with her doctor at her next appointment.",
+      "status": "flagged",
+      "p_chain_broken": 0.9707,
+      "components": [
+        {
+          "component": "The patient will discuss the possibility of celiac disease testing with her doctor at her next appointment.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.9706876515931058,
+          "passages": [
+            {
+              "pid": "897_635",
+              "title": "Celiac Disease",
+              "section": "What are the symptoms of celiac disease?",
+              "cos": 0.679
+            },
+            {
+              "pid": "897_634",
+              "title": "Celiac Disease",
+              "section": "Who is more likely to develop celiac disease?",
+              "cos": 0.525
+            },
+            {
+              "pid": "897_636",
+              "title": "Celiac Disease",
+              "section": "What are the symptoms of celiac disease?",
+              "cos": 0.655
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N073_V06",
+      "section": "Plan",
+      "text": "The patient will ask her doctor about the possibility of a capsule endoscopy or small bowel follow-through to evaluate for potential sources of chronic blood loss.",
+      "status": "flagged",
+      "p_chain_broken": 0.9149,
+      "components": [
+        {
+          "component": "The patient will ask her doctor about the possibility of a capsule endoscopy or small bowel follow-through to evaluate for potential sources of chronic blood loss.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.9149007392024787,
+          "passages": [
+            {
+              "pid": "512_1598",
+              "title": "GERD",
+              "section": "How is GERD diagnosed?",
+              "cos": 0.386
+            },
+            {
+              "pid": "4916_878",
+              "title": "Colonoscopy",
+              "section": "How do you prepare for a colonoscopy, virtual colonoscopy, or flexible sigmoidoscopy?",
+              "cos": 0.375
+            },
+            {
+              "pid": "246_1388",
+              "title": "Esophagus Disorders",
+              "section": "How are esophagus disorders diagnosed?",
+              "cos": 0.418
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N073_V07",
+      "section": "Plan",
+      "text": "The patient will discuss the possibility of testing for malabsorption syndromes, such as celiac disease, with her doctor at her next appointment.",
+      "status": "flagged",
+      "p_chain_broken": 0.9149,
+      "components": [
+        {
+          "component": "The patient will discuss the possibility of testing for malabsorption syndromes, such as celiac disease, with her doctor at her next appointment.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.9149006811941948,
+          "passages": [
+            {
+              "pid": "5459_2419",
+              "title": "Malabsorption Syndromes",
+              "section": "Summary",
+              "cos": 0.528
+            },
+            {
+              "pid": "897_635",
+              "title": "Celiac Disease",
+              "section": "What are the symptoms of celiac disease?",
+              "cos": 0.638
+            },
+            {
+              "pid": "897_634",
+              "title": "Celiac Disease",
+              "section": "Who is more likely to develop celiac disease?",
+              "cos": 0.467
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* Patient is a 65-year-old female with a history of iron deficiency anemia.\n* She has been feeling tired, having chills, and experiencing wheezing when active.\n* The patient reports no changes in bowel habits or abdominal pain, and has not noticed any black stools.\n* The patient reports no testing for malabsorption syndromes, including celiac disease, and no small bowel imaging studies, such as capsule endoscopy or small bowel follow-through.\n* She has not made any changes to her diet to increase iron intake, but has been taking iron pills again for about a year.\n* She takes over-the-counter vitamin B12 supplements.\n* The patient reports being unaware of the possibilities of malabsorption syndromes or small bowel imaging studies until now.\n* The patient reports not knowing celiac disease was a possibility until now.\n* She has a history of hysterectomy in 1996 and has not had any menstrual bleeding since then.\n* She has been feeling more anxious and depressed lately.\n* The patient states it has been frustrating not knowing why this keeps happening.\n* The patient plans to inquire about testing for malabsorption syndromes and small bowel imaging studies at their next appointment.",
+    "objective": "* The patient had a colonoscopy about five to six years ago, which was normal with no polyps.",
+    "assessment": [
+      "The patient has a history of iron deficiency anemia and is currently experiencing symptoms of fatigue, chills, and wheezing.",
+      "The patient has not undergone any recent gastrointestinal symptoms, such as changes in bowel habits, abdominal pain, or black stools.",
+      "The patient has not had any upper or lower gastrointestinal endoscopy or imaging studies to evaluate for potential sources of blood loss.",
+      "The patient has not been tested for celiac disease or other malabsorption syndromes."
+    ],
+    "plan": []
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Doctor",
+      "text": "Hello. Could you tell me your age and gender, and what brings you in today?",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 65 years old, and I'm a female. I've been dealing with iron deficiency anemia for a long time, and I came in because I was told I was anemic again when I tried to donate blood in December. I've been feeling really tired, having chills, and even some wheezing when I try to be active. It's been frustrating not knowing why this keeps happening.",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide more details about your dietary habits, including any changes in your intake of iron-rich foods or supplements, and whether you have a history of menstrual bleeding or gastrointestinal issues that might contribute to iron deficiency?",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have a history of menstrual bleeding anymore since I had a hysterectomy in 1996. As for my diet, I haven't really made any changes to eat more iron-rich foods, but I did start taking iron pills again about a year ago after not taking them for some time. I also take over-the-counter vitamin B12 supplements. I don't have any known gastrointestinal issues, but I do get cold easily and have been feeling more anxious and depressed lately.",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide details about any recent gastrointestinal symptoms, such as changes in bowel habits, abdominal pain, or black stools? Additionally, have you undergone any upper or lower gastrointestinal endoscopy or imaging studies to evaluate for potential sources of blood loss?",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have any changes in my bowel habits or abdominal pain, and I haven't noticed any black stools. I had a colonoscopy about five to six years ago, and it was normal with no polyps. They said to come back in 10 years, so I haven't had an upper endoscopy yet.",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any recent upper endoscopy or capsule endoscopy to evaluate for potential sources of chronic gastrointestinal blood loss, such as angiodysplasia or small bowel lesions?",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had an upper endoscopy or capsule endoscopy yet. The doctor mentioned that if my initial tests come back normal, they might consider a capsule endoscopy to check for any issues in my digestive system that could be causing the anemia.",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any imaging studies of the small bowel, such as a capsule endoscopy or small bowel follow-through, to evaluate for potential sources of chronic blood loss, such as angiodysplasia or celiac disease?",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging studies of the small bowel, like a capsule endoscopy or small bowel follow-through. The doctor mentioned that if my upper endoscopy and colonoscopy come back normal, they might consider a capsule endoscopy to look for any issues in my digestive system that could be causing the anemia.",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you been tested for celiac disease, such as with a blood test for tissue transglutaminase antibodies or endomysial antibodies?",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't been tested for celiac disease. I didn't even know that was a possibility until now. I'll definitely ask about that when I see the doctor next.",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any imaging studies of the small bowel, such as a capsule endoscopy or small bowel follow-through, to evaluate for potential sources of chronic blood loss?",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging studies of the small bowel, like a capsule endoscopy or small bowel follow-through. The doctor mentioned that if my upper endoscopy and colonoscopy come back normal, they might consider a capsule endoscopy to look for any issues in my digestive system that could be causing the anemia.",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any testing for celiac disease, such as tissue transglutaminase IgA (tTG-IgA) or endomysial antibody (EMA) testing?",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't been tested for celiac disease. I didn't even know that was a possibility until now. I'll definitely ask about that when I see the doctor next.",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any imaging studies of the small bowel, such as a capsule endoscopy or small bowel follow-through, to evaluate for potential sources of chronic blood loss?",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging studies of the small bowel, like a capsule endoscopy or small bowel follow-through. The doctor mentioned that if my upper endoscopy and colonoscopy come back normal, they might consider a capsule endoscopy to look for any issues in my digestive system that could be causing the anemia.",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any testing for celiac disease, such as tTG-IgA or EMA?",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't been tested for celiac disease. I didn't even know that was a possibility until now. I'll definitely ask about that when I see the doctor next.",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any imaging studies of the small bowel, such as a capsule endoscopy or small bowel follow-through, to evaluate for potential sources of chronic blood loss?",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging studies of the small bowel, like a capsule endoscopy or small bowel follow-through. The doctor mentioned that if my upper endoscopy and colonoscopy come back normal, they might consider a capsule endoscopy to look for any issues in my digestive system that could be causing the anemia.",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone celiac disease screening (tTG-IgA, EMA) or any other tests to evaluate for malabsorption syndromes?",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't been tested for celiac disease or any other malabsorption syndromes. I didn't even know that could be a possibility until now. I'll make sure to bring that up with my doctor at my next appointment.",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any testing for celiac disease or other malabsorption syndromes?",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't been tested for celiac disease or any other malabsorption syndromes. I didn't even know that could be a possibility until now. I'll make sure to bring that up with my doctor at my next appointment.",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any evaluation for celiac disease or other malabsorption syndromes, such as testing for tissue transglutaminase IgA (tTG-IgA) or endomysial antibody (EMA)?",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't been tested for celiac disease or any other malabsorption syndromes. I didn't even know that could be a possibility until now. I'll make sure to bring that up with my doctor at my next appointment.",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any testing for malabsorption syndromes, such as celiac disease, or any imaging studies of the small bowel, such as capsule endoscopy or small bowel follow-through?",
+      "tid": "T29"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't been tested for malabsorption syndromes like celiac disease, and I haven't had any imaging studies of the small bowel such as a capsule endoscopy or small bowel follow-through. I didn't even know those were possibilities until now. I'll definitely ask my doctor about them at my next appointment.",
+      "tid": "T30"
+    }
+  ]
+}

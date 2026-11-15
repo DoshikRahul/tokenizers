@@ -1,0 +1,419 @@
+{
+  "case_id": "D2N135",
+  "rq2_split": "va_dev",
+  "rq1_split": "dev",
+  "aci_source_split": "test2",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient, Hannah, is 52 years old.\n* The patient reports having no new symptoms since the emergency room visit, but expresses ongoing concern about their condition.\n* Patient reported a recent episode of high blood sugar, which led to an emergency room visit.\n* The patient reports that they decided to come in for a follow-up after the high blood sugar episode.\n* Patient reported feeling light-headed and dizzy, with a history of eating sweets, especially during the holidays.\n* Patient reported no history of diabetes or other endocrine-related conditions.\n* The patient denies experiencing unexplained weight loss.\n* Patient reported no family history of diabetes or other endocrine-related conditions, but mentioned that her mom and grandmother are big bakers.\n* Patient reported no allergies, surgeries, or trauma.\n* Patient reported feeling concerned about her blood sugar levels and wanting to get them under control.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N135_V01",
+      "section": "Assessment",
+      "text": "The patient has a history of high blood sugar, which was not specified in terms of exact blood sugar levels or fasting blood glucose and HbA1c tests.",
+      "status": "ok",
+      "p_chain_broken": 0.0203,
+      "components": [
+        {
+          "component": "The patient has a history of high blood sugar, which was not specified in terms of exact blood sugar levels or fasting blood glucose and HbA1c tests.",
+          "feature_ids": [
+            "F2",
+            "F16"
+          ],
+          "p_broken": 0.02033228058589509,
+          "passages": [
+            {
+              "pid": "5784_3012",
+              "title": "Prediabetes",
+              "section": "How is prediabetes diagnosed?",
+              "cos": 0.505
+            },
+            {
+              "pid": "6308_0",
+              "title": "A1C",
+              "section": "Summary",
+              "cos": 0.522
+            },
+            {
+              "pid": "6125_2087",
+              "title": "Hyperglycemia",
+              "section": "How is hyperglycemia diagnosed?",
+              "cos": 0.595
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N135_V02",
+      "section": "Assessment",
+      "text": "The patient has no established history of diabetes or other endocrine-related conditions.",
+      "status": "ok",
+      "p_chain_broken": 0.0,
+      "components": [
+        {
+          "component": "The patient has no established history of diabetes or other endocrine-related conditions.",
+          "feature_ids": [
+            "F7",
+            "F8"
+          ],
+          "p_broken": 1.892487752165407e-05,
+          "passages": [
+            {
+              "pid": "475_1345",
+              "title": "Endocrine Diseases",
+              "section": "Summary",
+              "cos": 0.461
+            },
+            {
+              "pid": "4_1076",
+              "title": "Diabetes",
+              "section": "Who is more likely to develop diabetes?",
+              "cos": 0.456
+            },
+            {
+              "pid": "5930_1116",
+              "title": "Diabetes Type 2",
+              "section": "Who is at risk for type 2 diabetes?",
+              "cos": 0.459
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N135_V03",
+      "section": "Assessment",
+      "text": "The patient's family history is unclear, but her mom and grandmother are big bakers.",
+      "status": "ok",
+      "p_chain_broken": 0.2227,
+      "components": [
+        {
+          "component": "The patient's family history is unclear, but her mom and grandmother are big bakers.",
+          "feature_ids": [
+            "F8",
+            "F16"
+          ],
+          "p_broken": 0.2226996126154362,
+          "passages": [
+            {
+              "pid": "6661_2042",
+              "title": "How to Prevent Diabetes",
+              "section": "Who is at risk for type 2 diabetes?",
+              "cos": 0.419
+            },
+            {
+              "pid": "5930_1116",
+              "title": "Diabetes Type 2",
+              "section": "Who is at risk for type 2 diabetes?",
+              "cos": 0.464
+            },
+            {
+              "pid": "4_1075",
+              "title": "Diabetes",
+              "section": "Who is more likely to develop diabetes?",
+              "cos": 0.46
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N135_V04",
+      "section": "Plan",
+      "text": "The patient will start monitoring her blood sugar levels at home.",
+      "status": "ok",
+      "p_chain_broken": 0.0124,
+      "components": [
+        {
+          "component": "The patient will start monitoring her blood sugar levels at home.",
+          "feature_ids": [
+            "F15",
+            "F1",
+            "F2",
+            "F5",
+            "F6",
+            "F12",
+            "F13",
+            "F14"
+          ],
+          "p_broken": 0.012431600761172626,
+          "passages": [
+            {
+              "pid": "6125_2087",
+              "title": "Hyperglycemia",
+              "section": "How is hyperglycemia diagnosed?",
+              "cos": 0.555
+            },
+            {
+              "pid": "1264_2105",
+              "title": "Hypoglycemia",
+              "section": "How is hypoglycemia diagnosed?",
+              "cos": 0.505
+            },
+            {
+              "pid": "6121_433",
+              "title": "Blood Glucose",
+              "section": "When and how should I check my blood glucose?",
+              "cos": 0.478
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N135_V05",
+      "section": "Plan",
+      "text": "The patient will work on managing her sugar intake, especially with the help of her family.",
+      "status": "ok",
+      "p_chain_broken": 0.0003,
+      "components": [
+        {
+          "component": "The patient will work on managing her sugar intake, especially with the help of her family.",
+          "feature_ids": [
+            "F5",
+            "F6",
+            "F12",
+            "F15"
+          ],
+          "p_broken": 0.0002959548067555252,
+          "passages": [
+            {
+              "pid": "3048_1124",
+              "title": "Diabetic Diet",
+              "section": "How do the foods I eat affect my blood glucose levels?",
+              "cos": 0.544
+            },
+            {
+              "pid": "3048_1130",
+              "title": "Diabetic Diet",
+              "section": "What else do I need to know about diabetic diets?",
+              "cos": 0.487
+            },
+            {
+              "pid": "4_1079",
+              "title": "Diabetes",
+              "section": "What are the treatments for diabetes?",
+              "cos": 0.485
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N135_V06",
+      "section": "Plan",
+      "text": "The patient will follow up with her healthcare provider to discuss further management and monitoring of her blood sugar levels.",
+      "status": "ok",
+      "p_chain_broken": 0.0025,
+      "components": [
+        {
+          "component": "The patient will follow up with her healthcare provider to discuss further management and monitoring of her blood sugar levels.",
+          "feature_ids": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F12",
+            "F15"
+          ],
+          "p_broken": 0.002472606125876862,
+          "passages": [
+            {
+              "pid": "6125_2087",
+              "title": "Hyperglycemia",
+              "section": "How is hyperglycemia diagnosed?",
+              "cos": 0.602
+            },
+            {
+              "pid": "6121_434",
+              "title": "Blood Glucose",
+              "section": "What happens if my blood glucose level becomes too high?",
+              "cos": 0.597
+            },
+            {
+              "pid": "6125_2084",
+              "title": "Hyperglycemia",
+              "section": "What are the symptoms of hyperglycemia?",
+              "cos": 0.539
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient, Hannah, is 52 years old.\n* The patient reports having no new symptoms since the emergency room visit, but expresses ongoing concern about their condition.\n* Patient reported a recent episode of high blood sugar, which led to an emergency room visit.\n* The patient reports that they decided to come in for a follow-up after the high blood sugar episode.\n* Patient reported feeling light-headed and dizzy, with a history of eating sweets, especially during the holidays.\n* Patient reported no history of diabetes or other endocrine-related conditions.\n* The patient denies experiencing unexplained weight loss.\n* Patient reported no family history of diabetes or other endocrine-related conditions, but mentioned that her mom and grandmother are big bakers.\n* Patient reported no allergies, surgeries, or trauma.\n* Patient reported feeling concerned about her blood sugar levels and wanting to get them under control.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient has a history of high blood sugar, which was not specified in terms of exact blood sugar levels or fasting blood glucose and HbA1c tests.",
+      "The patient has no established history of diabetes or other endocrine-related conditions.",
+      "The patient's family history is unclear, but her mom and grandmother are big bakers."
+    ],
+    "plan": [
+      "The patient will start monitoring her blood sugar levels at home.",
+      "The patient will work on managing her sugar intake, especially with the help of her family.",
+      "The patient will follow up with her healthcare provider to discuss further management and monitoring of her blood sugar levels."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "Hi, I'm Hannah, and I'm 52 years old. I'm here because I had a high blood sugar and was in the emergency room recently. I wanted to come in and follow up with you to get checked out.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you confirm your age, gender, and the reason you were in the emergency room recently?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 52 years old, and I was in the emergency room because I had a high blood sugar. I've been eating a lot of sweets recently, especially during the holidays, and I started feeling light-headed and dizzy, so I went in for checkup.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide more details about the timeline of your high blood sugar episode, including when it occurred, how long it lasted, and what your blood sugar level was when you were in the emergency room?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Sure. It happened this past week, and I had been eating a lot of sweets over the past couple of weeks, especially during the holidays. I didn't know my exact blood sugar level, but the ER told me it was high, and I felt really light-headed and dizzy, even seeing spots. That's when I decided to come in for a follow-up.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please share any history of diabetes or other endocrine-related conditions, including any medications you have taken in the past? Also, could you provide information about your family history, any surgeries, trauma, or allergies?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have a history of diabetes or any other endocrine-related conditions. I'm not sure about my family history in terms of diabetes or other endocrine issues. I don't have any allergies, and I haven't had any surgeries or trauma that I'm aware of.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the exact blood sugar level that was recorded during your emergency room visit, and have you experienced any new symptoms or complications since that time?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know the exact blood sugar level they recorded, but they told me it was high. Since then, I haven't had any new symptoms, but I'm still feeling a bit concerned about it and want to make sure I get it under control.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please share any medications or treatments you received during your emergency room visit, as well as any follow-up actions taken since then?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "They gave me some IV fluids and told me to cut out eating extra sweets and get back into my normal routine and diet. I'm still with my family, and it's been hard because my mom and grandmother are big bakers, so I'm trying to be careful but it's a challenge. I just want to make sure I get this under control before it becomes a bigger issue.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide the exact blood sugar level recorded during your ER visit, and have you had any follow-up blood tests or consultations with a healthcare provider since then?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know the exact blood sugar level they recorded, but they told me it was high. Since then, I haven't had any follow-up blood tests or consultations with a healthcare provider, but I wanted to come in for a checkup to make sure I'm on the right track.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide details about your family history of diabetes or other endocrine-related conditions, including whether your mother, grandmother, or other close relatives have been diagnosed with diabetes?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know the details about my family history of diabetes or other endocrine-related conditions. I know my mom and grandmother are big bakers, but I don't have any specific information about whether they've been diagnosed with diabetes or other endocrine issues.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the exact blood sugar level recorded during your ER visit, and have you been monitoring your blood sugar levels at home since then?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know the exact blood sugar level they recorded, but they told me it was high. Since then, I haven't been monitoring my blood sugar levels at home, but I'm ready to start doing that if you think it would help.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please share more about your family history, specifically if any of your close relatives, such as your mother, grandmother, or siblings, have been diagnosed with diabetes or other endocrine-related conditions?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know if any of my close relatives have been diagnosed with diabetes or other endocrine-related conditions. I know my mom and grandmother are big bakers, but I don't have specific information about their health histories.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of any recent blood tests, such as fasting blood glucose or HbA1c levels, that you may have had done during or after your ER visit?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of any recent blood tests, like fasting blood glucose or HbA1c levels, done during or after my ER visit. I was told my blood sugar was high, but they didn't give me the exact numbers or any test results to take home with me.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe any other symptoms you've experienced since your ER visit, such as frequent urination, increased thirst, or unexplained weight loss? This will help us better understand your condition.",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had any frequent urination or increased thirst since the ER visit, but I have been feeling light-headed and saw spots, which is what led me to go in. I haven't noticed any unexplained weight loss, though.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of the fasting blood glucose and HbA1c tests conducted during your ER visit, if available?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of the fasting blood glucose and HbA1c tests conducted during my ER visit. They told me my blood sugar was high, but they didn't give me the exact numbers or any test results to take home with me.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe any other symptoms you've experienced since your ER visit, such as fatigue, frequent urination, or increased thirst? Additionally, could you share more about your current diet and any challenges you face in managing your sugar intake, especially with your family's baking habits?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had any fatigue, frequent urination, or increased thirst since the ER visit. As for my diet, it's been really hard to manage my sugar intake because I'm staying with my family, and my mom and grandmother are big bakers. There's always something sweet around, and it's been challenging to stick to a routine or avoid eating them. I want to do better, though, and I'm ready to start monitoring my blood sugar at home if that helps.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of the fasting blood glucose and HbA1c tests that were conducted during your ER visit? These results are essential for assessing your current blood sugar control and determining the next steps in your care.",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of the fasting blood glucose and HbA1c tests conducted during my ER visit. They told me my blood sugar was high, but they didn't give me the exact numbers or any test results to take home with me.",
+      "tid": "T29"
+    }
+  ]
+}

@@ -1,0 +1,508 @@
+{
+  "case_id": "D2N175",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test3",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports needing to discuss their concerns and undergo additional testing to determine the underlying cause.\n* Patient is a 39-year-old female with a history of diabetes, currently taking 1,000 milligrams of metformin daily.\n* She was previously diagnosed with diabetes and has been managing her condition well until recent blood work showed elevated blood sugars.\n* She has been watching her diet and power walking daily, but has not experienced any symptoms of high or low blood sugar.\n* Her HbA1c was 8.1, which is elevated.\n* She was not provided with specific dates for her most recent HbA1c test or other laboratory tests.\n* The patient reports that they were not given specific dates for the other tests, but were informed that additional testing is needed to investigate elevated blood sugars.\n* She has no family history of diabetes that she is aware of.\n* The patient reports engaging in power walking for 30 minutes daily.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N175_V01",
+      "section": "Assessment",
+      "text": "The patient has a history of diabetes and is currently taking metformin.",
+      "status": "ok",
+      "p_chain_broken": 0.0002,
+      "components": [
+        {
+          "component": "The patient has a history of diabetes.",
+          "feature_ids": [
+            "F3"
+          ],
+          "p_broken": 0.00017952527011926058,
+          "passages": [
+            {
+              "pid": "4_1079",
+              "title": "Diabetes",
+              "section": "What are the treatments for diabetes?",
+              "cos": 0.446
+            },
+            {
+              "pid": "4935_1101",
+              "title": "Diabetes Medicines",
+              "section": "Who needs diabetes medicines?",
+              "cos": 0.412
+            },
+            {
+              "pid": "1339_1113",
+              "title": "Diabetes Type 1",
+              "section": "Can type 1 diabetes be prevented?",
+              "cos": 0.406
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient is currently taking metformin.",
+          "feature_ids": [
+            "F3"
+          ],
+          "p_broken": 0.0001398205908706961,
+          "passages": [
+            {
+              "pid": "4935_1101",
+              "title": "Diabetes Medicines",
+              "section": "Who needs diabetes medicines?",
+              "cos": 0.394
+            },
+            {
+              "pid": "4_1079",
+              "title": "Diabetes",
+              "section": "What are the treatments for diabetes?",
+              "cos": 0.384
+            },
+            {
+              "pid": "4935_1103",
+              "title": "Diabetes Medicines",
+              "section": "What are the types of medicines for type 1 diabetes?",
+              "cos": 0.397
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N175_V02",
+      "section": "Assessment",
+      "text": "Her HbA1c is elevated, indicating poor glycemic control.",
+      "status": "ok",
+      "p_chain_broken": 0.0001,
+      "components": [
+        {
+          "component": "Her HbA1c is elevated, indicating poor glycemic control.",
+          "feature_ids": [
+            "F7"
+          ],
+          "p_broken": 7.484716389123524e-05,
+          "passages": [
+            {
+              "pid": "6308_0",
+              "title": "A1C",
+              "section": "Summary",
+              "cos": 0.48
+            },
+            {
+              "pid": "6308_1",
+              "title": "A1C",
+              "section": "Summary",
+              "cos": 0.41
+            },
+            {
+              "pid": "1339_1107",
+              "title": "Diabetes Type 1",
+              "section": "What is type 1 diabetes?",
+              "cos": 0.352
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N175_V03",
+      "section": "Assessment",
+      "text": "The patient's diet and exercise routine have been consistent, but the exact details of her diet and exercise habits are unknown.",
+      "status": "ok",
+      "p_chain_broken": 0.0141,
+      "components": [
+        {
+          "component": "The patient's diet and exercise routine have been consistent, but the exact details of her diet and exercise habits are unknown.",
+          "feature_ids": [
+            "F4",
+            "F8"
+          ],
+          "p_broken": 0.014063551886459358,
+          "passages": [
+            {
+              "pid": "4924_1182",
+              "title": "Diets",
+              "section": "Summary",
+              "cos": 0.488
+            },
+            {
+              "pid": "5610_455",
+              "title": "Body Weight",
+              "section": "What is body weight?",
+              "cos": 0.468
+            },
+            {
+              "pid": "6603_2011",
+              "title": "How Much Exercise Do I Need?",
+              "section": "Exercise tips",
+              "cos": 0.443
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N175_V04",
+      "section": "Assessment",
+      "text": "The patient's weight and height are unknown.",
+      "status": "ok",
+      "p_chain_broken": 0.0017,
+      "components": [
+        {
+          "component": "The patient's weight and height are unknown.",
+          "feature_ids": [
+            "F8"
+          ],
+          "p_broken": 0.0017007151563842799,
+          "passages": [
+            {
+              "pid": "61_2699",
+              "title": "Obesity",
+              "section": "How is obesity diagnosed?",
+              "cos": 0.464
+            },
+            {
+              "pid": "5610_456",
+              "title": "Body Weight",
+              "section": "What factors help determine a healthy body weight?",
+              "cos": 0.421
+            },
+            {
+              "pid": "61_2697",
+              "title": "Obesity",
+              "section": "What is obesity?",
+              "cos": 0.407
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N175_V05",
+      "section": "Plan",
+      "text": "The patient will need further investigation to determine the cause of her elevated blood sugars.",
+      "status": "ok",
+      "p_chain_broken": 0.0124,
+      "components": [
+        {
+          "component": "The patient will need further investigation to determine the cause of her elevated blood sugars.",
+          "feature_ids": [
+            "F3",
+            "F7"
+          ],
+          "p_broken": 0.012431584113426016,
+          "passages": [
+            {
+              "pid": "5784_3012",
+              "title": "Prediabetes",
+              "section": "How is prediabetes diagnosed?",
+              "cos": 0.531
+            },
+            {
+              "pid": "6308_0",
+              "title": "A1C",
+              "section": "Summary",
+              "cos": 0.598
+            },
+            {
+              "pid": "6308_1",
+              "title": "A1C",
+              "section": "Summary",
+              "cos": 0.484
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N175_V06",
+      "section": "Plan",
+      "text": "The doctor will request the patient's most recent laboratory test results, including fasting glucose, postprandial glucose, lipid profile, and kidney function tests.",
+      "status": "ok",
+      "p_chain_broken": 0.0067,
+      "components": [
+        {
+          "component": "The doctor will request the patient's most recent laboratory test results, including fasting glucose, postprandial glucose, lipid profile, and kidney function tests.",
+          "feature_ids": [
+            "F3",
+            "F7"
+          ],
+          "p_broken": 0.006692801457594984,
+          "passages": [
+            {
+              "pid": "5784_3012",
+              "title": "Prediabetes",
+              "section": "How is prediabetes diagnosed?",
+              "cos": 0.58
+            },
+            {
+              "pid": "5930_1119",
+              "title": "Diabetes Type 2",
+              "section": "How is type 2 diabetes diagnosed?",
+              "cos": 0.528
+            },
+            {
+              "pid": "1339_1113",
+              "title": "Diabetes Type 1",
+              "section": "Can type 1 diabetes be prevented?",
+              "cos": 0.403
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N175_V07",
+      "section": "Plan",
+      "text": "The patient will need to provide her current weight and height so that her BMI can be calculated and her metabolic status assessed.",
+      "status": "ok",
+      "p_chain_broken": 0.0036,
+      "components": [
+        {
+          "component": "The patient will need to provide her current weight and height so that her BMI can be calculated and her metabolic status assessed.",
+          "feature_ids": [
+            "F8"
+          ],
+          "p_broken": 0.003593585735004132,
+          "passages": [
+            {
+              "pid": "5610_456",
+              "title": "Body Weight",
+              "section": "What factors help determine a healthy body weight?",
+              "cos": 0.577
+            },
+            {
+              "pid": "61_2700",
+              "title": "Obesity",
+              "section": "How is obesity diagnosed?",
+              "cos": 0.545
+            },
+            {
+              "pid": "61_2697",
+              "title": "Obesity",
+              "section": "What is obesity?",
+              "cos": 0.477
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N175_V08",
+      "section": "Plan",
+      "text": "The doctor will review the patient's medication regimen and consider adjusting her treatment plan as necessary.",
+      "status": "ok",
+      "p_chain_broken": 0.0067,
+      "components": [
+        {
+          "component": "The doctor will review the patient's medication regimen and consider adjusting her treatment plan as necessary.",
+          "feature_ids": [
+            "F3",
+            "F4",
+            "F7"
+          ],
+          "p_broken": 0.006692818338576751,
+          "passages": [
+            {
+              "pid": "4_1079",
+              "title": "Diabetes",
+              "section": "What are the treatments for diabetes?",
+              "cos": 0.398
+            },
+            {
+              "pid": "6308_1",
+              "title": "A1C",
+              "section": "Summary",
+              "cos": 0.494
+            },
+            {
+              "pid": "6308_0",
+              "title": "A1C",
+              "section": "Summary",
+              "cos": 0.516
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports needing to discuss their concerns and undergo additional testing to determine the underlying cause.\n* Patient is a 39-year-old female with a history of diabetes, currently taking 1,000 milligrams of metformin daily.\n* She was previously diagnosed with diabetes and has been managing her condition well until recent blood work showed elevated blood sugars.\n* She has been watching her diet and power walking daily, but has not experienced any symptoms of high or low blood sugar.\n* Her HbA1c was 8.1, which is elevated.\n* She was not provided with specific dates for her most recent HbA1c test or other laboratory tests.\n* The patient reports that they were not given specific dates for the other tests, but were informed that additional testing is needed to investigate elevated blood sugars.\n* She has no family history of diabetes that she is aware of.\n* The patient reports engaging in power walking for 30 minutes daily.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient has a history of diabetes and is currently taking metformin.",
+      "Her HbA1c is elevated, indicating poor glycemic control.",
+      "The patient's diet and exercise routine have been consistent, but the exact details of her diet and exercise habits are unknown.",
+      "The patient's weight and height are unknown."
+    ],
+    "plan": [
+      "The patient will need further investigation to determine the cause of her elevated blood sugars.",
+      "The doctor will request the patient's most recent laboratory test results, including fasting glucose, postprandial glucose, lipid profile, and kidney function tests.",
+      "The patient will need to provide her current weight and height so that her BMI can be calculated and her metabolic status assessed.",
+      "The doctor will review the patient's medication regimen and consider adjusting her treatment plan as necessary."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 39 years old, and I'm here because I had some routine blood work done last week, and they said my blood sugars were high. I needed to come in and talk about it and get some more tests done to figure out why.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm your gender and provide more details about your symptoms or concerns related to the high blood sugars?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm female. I don't really have any symptoms other than being surprised when the blood work came back high. I've been watching my diet and power walking every day, so I was a little shocked when they said my blood sugars were elevated.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you share more about your family history of diabetes and any other relevant medical conditions? Also, have you been previously diagnosed with diabetes or prediabetes?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have any family history of diabetes that I'm aware of. I was previously diagnosed with diabetes, and I've been on metformin for a while now. My blood sugars have been pretty well managed until this latest test.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please share more details about your current diet and exercise routine, and have you experienced any symptoms related to high or low blood sugar levels recently?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "My diet has been really good lately—I’ve been avoiding sugars and watching my weight. I’ve also been power walking about 30 minutes every day. I haven’t had any symptoms of high or low blood sugar recently, just the surprise when the blood work came back elevated.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the specific glucose levels from your recent blood work, including your fasting glucose, HbA1c, and any postprandial measurements? Also, have you had any other relevant laboratory tests, such as a lipid profile or kidney function tests?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don’t have the exact numbers for my fasting glucose or postprandial measurements, but my HbA1c was 8.1, which was elevated. I wasn’t told about any other lab tests like a lipid profile or kidney function tests, but I was told I needed more work done to figure out why my blood sugars are high.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the dates of your most recent HbA1c test and any other relevant laboratory tests, such as fasting glucose, postprandial glucose, lipid profile, and kidney function tests?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don’t have the exact dates for my most recent HbA1c test or other lab tests, but I was told my HbA1c was 8.1, which was elevated. I wasn’t given specific dates for the other tests, but I was told I needed more work done to figure out why my blood sugars are high.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your current weight, height, and BMI? This information will help us better understand your diabetes management and overall metabolic health.",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don’t have my exact weight or height on hand, but I’ve been watching my weight pretty closely and have been power walking every day. I’m not sure about my BMI, but I feel like I’ve been managing it well through diet and exercise.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your current weight and height so we can calculate your BMI? Additionally, could you confirm the exact dosage of metformin you are currently taking and whether there have been any recent changes in your medication regimen?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide your current weight and height so we can calculate your BMI? This will help us better understand your diabetes management and overall health.",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your current weight and height? This will help us calculate your BMI and better understand your overall health status.",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your current weight and height? This will help us calculate your BMI and better assess your metabolic status.",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your current weight and height? This information will help us better assess your diabetes management and determine if any adjustments to your treatment plan are needed.",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your current weight and height so that we can calculate your BMI and assess your overall metabolic status?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I’m not sure about my exact weight or height, but I’ve been keeping track of my weight and have been power walking daily. I’m currently on 1,000 milligrams of metformin a day, and there haven’t been any recent changes to my medication.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your current weight and height, or at least your most recent weight measurement?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don’t have my exact weight or height on me right now, but I’ve been tracking my weight regularly and have been power walking every day as part of my routine.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your current weight and height so that we can calculate your BMI and better assess your metabolic status?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don’t have my exact weight or height on me right now, but I’ve been tracking my weight regularly and have been power walking every day as part of my routine.",
+      "tid": "T29"
+    }
+  ]
+}

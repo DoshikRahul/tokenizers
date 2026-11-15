@@ -1,0 +1,513 @@
+{
+  "case_id": "D2N105",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test1",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* Patient is a 100-year-old female who reports a heart murmur diagnosed recently by her doctor.\n* The patient reports being unaware of any changes in the heart murmur's intensity or characteristics over time, as they were not provided with specific information regarding its progression.\n* The patient reports not being given information regarding echocardiogram or ECG performance in the past six months.\n* The patient states that they do not know if they have had an echocardiogram or ECG done recently because they were not given that information.\n* The patient states they do not have the results of the chest x-ray with them and their doctor did not go over them with them.\n* The patient reports taking amlodipine and lisinopril for blood pressure, simvastatin for lipids, and levothyroxine for hyperthyroidism.\n* The patient reports being a non-smoker and having no known allergies to medications.\n* She experiences shortness of breath when walking too fast or drinking a whole glass of water without stopping.\n* She also reports feeling dizzy sometimes, which she treats with a pill, but not every day.\n* She is feeling overly tired due to her medication regimen.\n* She has been experiencing ankle swelling for about six months, which comes and goes.\n* She has not noticed any changes in her symptoms.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N105_V01",
+      "section": "Assessment",
+      "text": "The patient has a newly diagnosed heart murmur, but the specific characteristics and timing of the murmur are unknown.",
+      "status": "ok",
+      "p_chain_broken": 0.0052,
+      "components": [
+        {
+          "component": "The patient has a newly diagnosed heart murmur",
+          "feature_ids": [
+            "F13"
+          ],
+          "p_broken": 0.0052201009441451085,
+          "passages": [
+            {
+              "pid": "279_1801",
+              "title": "Heart Valve Diseases",
+              "section": "How is heart valve disease diagnosed?",
+              "cos": 0.578
+            },
+            {
+              "pid": "1605_2555",
+              "title": "Mitral Valve Prolapse",
+              "section": "How is mitral valve prolapse (MVP) diagnosed?",
+              "cos": 0.451
+            },
+            {
+              "pid": "277_1758",
+              "title": "Heart Diseases",
+              "section": "How are heart diseases diagnosed?",
+              "cos": 0.497
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "the specific characteristics and timing of the murmur are unknown",
+          "feature_ids": [
+            "F13",
+            "F18",
+            "F19",
+            "F20",
+            "F21"
+          ],
+          "p_broken": 0.0005527752522549022,
+          "passages": [
+            {
+              "pid": "279_1801",
+              "title": "Heart Valve Diseases",
+              "section": "How is heart valve disease diagnosed?",
+              "cos": 0.557
+            },
+            {
+              "pid": "1605_2555",
+              "title": "Mitral Valve Prolapse",
+              "section": "How is mitral valve prolapse (MVP) diagnosed?",
+              "cos": 0.47
+            },
+            {
+              "pid": "277_1757",
+              "title": "Heart Diseases",
+              "section": "What are the symptoms of heart disease?",
+              "cos": 0.391
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N105_V02",
+      "section": "Assessment",
+      "text": "She has symptoms of shortness of breath, dizziness, and ankle swelling, but the exact nature and severity of these symptoms are unclear.",
+      "status": "ok",
+      "p_chain_broken": 0.026,
+      "components": [
+        {
+          "component": "She has symptoms of shortness of breath, dizziness, and ankle swelling, but the exact nature and severity of these symptoms are unclear.",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F5",
+            "F6",
+            "F7",
+            "F12",
+            "F13",
+            "F14"
+          ],
+          "p_broken": 0.025957236966258092,
+          "passages": [
+            {
+              "pid": "279_1799",
+              "title": "Heart Valve Diseases",
+              "section": "What are the symptoms of heart valve diseases?",
+              "cos": 0.597
+            },
+            {
+              "pid": "4744_694",
+              "title": "Chest Pain",
+              "section": "Summary",
+              "cos": 0.535
+            },
+            {
+              "pid": "3634_3136",
+              "title": "Pulmonary Hypertension",
+              "section": "What are the symptoms of pulmonary hypertension?",
+              "cos": 0.517
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N105_V03",
+      "section": "Assessment",
+      "text": "The patient has a history of hypertension, hyperthyroidism, and a family history of heart disease.",
+      "status": "ok",
+      "p_chain_broken": 0.0331,
+      "components": [
+        {
+          "component": "The patient has a history of hypertension",
+          "feature_ids": [
+            "F8"
+          ],
+          "p_broken": 0.033085852657341014,
+          "passages": [
+            {
+              "pid": "4939_437",
+              "title": "Blood Pressure Medicines",
+              "section": "What is high blood pressure?",
+              "cos": 0.464
+            },
+            {
+              "pid": "34_1913",
+              "title": "High Blood Pressure",
+              "section": "What are the treatments for high blood pressure?",
+              "cos": 0.413
+            },
+            {
+              "pid": "3634_3139",
+              "title": "Pulmonary Hypertension",
+              "section": "What are the treatments for pulmonary hypertension?",
+              "cos": 0.419
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient has a history of hyperthyroidism",
+          "feature_ids": [
+            "F8"
+          ],
+          "p_broken": 0.00460953934842013,
+          "passages": [
+            {
+              "pid": "6177_2098",
+              "title": "Hyperthyroidism",
+              "section": "What are the treatments for hyperthyroidism?",
+              "cos": 0.471
+            },
+            {
+              "pid": "6177_2097",
+              "title": "Hyperthyroidism",
+              "section": "What are the treatments for hyperthyroidism?",
+              "cos": 0.453
+            },
+            {
+              "pid": "6177_2099",
+              "title": "Hyperthyroidism",
+              "section": "What are the treatments for hyperthyroidism?",
+              "cos": 0.431
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient has a family history of heart disease",
+          "feature_ids": [
+            "F10"
+          ],
+          "p_broken": 0.0006263270886322708,
+          "passages": [
+            {
+              "pid": "279_1798",
+              "title": "Heart Valve Diseases",
+              "section": "Who is more likely to develop heart valve diseases?",
+              "cos": 0.505
+            },
+            {
+              "pid": "277_1758",
+              "title": "Heart Diseases",
+              "section": "How are heart diseases diagnosed?",
+              "cos": 0.519
+            },
+            {
+              "pid": "4484_1443",
+              "title": "Family History",
+              "section": "Summary",
+              "cos": 0.498
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N105_V04",
+      "section": "Plan",
+      "text": "The patient will need to schedule an echocardiogram and ECG with her doctor to further evaluate the heart murmur.",
+      "status": "ok",
+      "p_chain_broken": 0.0953,
+      "components": [
+        {
+          "component": "The patient will need to schedule an echocardiogram and ECG with her doctor to further evaluate the heart murmur.",
+          "feature_ids": [
+            "F13",
+            "F16",
+            "F17",
+            "F18",
+            "F19",
+            "F20",
+            "F21"
+          ],
+          "p_broken": 0.09534906130200385,
+          "passages": [
+            {
+              "pid": "1605_2555",
+              "title": "Mitral Valve Prolapse",
+              "section": "How is mitral valve prolapse (MVP) diagnosed?",
+              "cos": 0.478
+            },
+            {
+              "pid": "279_1801",
+              "title": "Heart Valve Diseases",
+              "section": "How is heart valve disease diagnosed?",
+              "cos": 0.542
+            },
+            {
+              "pid": "3634_3138",
+              "title": "Pulmonary Hypertension",
+              "section": "How is pulmonary hypertension diagnosed?",
+              "cos": 0.471
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N105_V05",
+      "section": "Plan",
+      "text": "The patient will need to provide the results of her recent chest x-ray to her doctor.",
+      "status": "ok",
+      "p_chain_broken": 0.0006,
+      "components": [
+        {
+          "component": "The patient will need to provide the results of her recent chest x-ray to her doctor.",
+          "feature_ids": [
+            "F14",
+            "F17"
+          ],
+          "p_broken": 0.0005527741357635212,
+          "passages": [
+            {
+              "pid": "3949_3995",
+              "title": "X-Rays",
+              "section": "What should you expect after an x-ray?",
+              "cos": 0.524
+            },
+            {
+              "pid": "6452_1779",
+              "title": "Heart Health Tests",
+              "section": "Chest X-Ray",
+              "cos": 0.48
+            },
+            {
+              "pid": "1263_2437",
+              "title": "Mammography",
+              "section": "How is a mammogram done?",
+              "cos": 0.492
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N105_V06",
+      "section": "Plan",
+      "text": "The patient will need to follow up with her doctor to discuss the results of the echocardiogram and ECG and any further management or treatment plans.",
+      "status": "ok",
+      "p_chain_broken": 0.011,
+      "components": [
+        {
+          "component": "The patient will need to follow up with her doctor to discuss the results of the echocardiogram and ECG and any further management or treatment plans.",
+          "feature_ids": [
+            "F13",
+            "F14",
+            "F15",
+            "F16",
+            "F17",
+            "F18",
+            "F19",
+            "F20"
+          ],
+          "p_broken": 0.010986889359224913,
+          "passages": [
+            {
+              "pid": "6452_1779",
+              "title": "Heart Health Tests",
+              "section": "Chest X-Ray",
+              "cos": 0.503
+            },
+            {
+              "pid": "279_1801",
+              "title": "Heart Valve Diseases",
+              "section": "How is heart valve disease diagnosed?",
+              "cos": 0.562
+            },
+            {
+              "pid": "1605_2555",
+              "title": "Mitral Valve Prolapse",
+              "section": "How is mitral valve prolapse (MVP) diagnosed?",
+              "cos": 0.451
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* Patient is a 100-year-old female who reports a heart murmur diagnosed recently by her doctor.\n* The patient reports being unaware of any changes in the heart murmur's intensity or characteristics over time, as they were not provided with specific information regarding its progression.\n* The patient reports not being given information regarding echocardiogram or ECG performance in the past six months.\n* The patient states that they do not know if they have had an echocardiogram or ECG done recently because they were not given that information.\n* The patient states they do not have the results of the chest x-ray with them and their doctor did not go over them with them.\n* The patient reports taking amlodipine and lisinopril for blood pressure, simvastatin for lipids, and levothyroxine for hyperthyroidism.\n* The patient reports being a non-smoker and having no known allergies to medications.\n* She experiences shortness of breath when walking too fast or drinking a whole glass of water without stopping.\n* She also reports feeling dizzy sometimes, which she treats with a pill, but not every day.\n* She is feeling overly tired due to her medication regimen.\n* She has been experiencing ankle swelling for about six months, which comes and goes.\n* She has not noticed any changes in her symptoms.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient has a newly diagnosed heart murmur, but the specific characteristics and timing of the murmur are unknown.",
+      "She has symptoms of shortness of breath, dizziness, and ankle swelling, but the exact nature and severity of these symptoms are unclear.",
+      "The patient has a history of hypertension, hyperthyroidism, and a family history of heart disease."
+    ],
+    "plan": [
+      "The patient will need to schedule an echocardiogram and ECG with her doctor to further evaluate the heart murmur.",
+      "The patient will need to provide the results of her recent chest x-ray to her doctor.",
+      "The patient will need to follow up with her doctor to discuss the results of the echocardiogram and ECG and any further management or treatment plans."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Doctor",
+      "text": "Hello. Could you tell me your age and gender, and what brings you in today?",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 100 years old, and I'm a female. I came in because my doctor mentioned I have a heart murmur, and I wanted to learn more about it and see what we should do next.",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you clarify if you have any symptoms such as chest pain, shortness of breath, dizziness, or fatigue associated with the heart murmur?",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have chest pain, but I do get short of breath if I walk too fast or try to drink a whole glass of water without stopping. I also feel dizzy sometimes, and I take a pill for that when it happens, but not every day. I'm also feeling overly tired because of all the medication I take.",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the timing and characteristics of the heart murmur you were told about? For example, is it a systolic or diastolic murmur, and does it have any specific qualities such as a rumbling, blowing, or harsh sound?",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I wasn't told the exact timing or specific qualities of the murmur, just that it's a new worrisome heart murmur. My doctor didn't describe it in detail, so I don't know if it's systolic or diastolic or what kind of sound it makes.",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide more details about your current medications, including their names, dosages, and the reasons you are taking them? Additionally, have you been diagnosed with any prior cardiac conditions, undergone any cardiac surgeries, or have a family history of heart disease?",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I take a few medications, including amlodipine and lisinopril for my blood pressure, simvastatin for my lipids, and levothyroxine for my hyperthyroidism. I also take a pill for dizziness when it happens, but not every day. As for my medical history, I've had several surgeries over the years, but I'm not sure which ones exactly. My family has a history of heart problems—my son had a heart attack, my brother had a stroke, and my eldest sister had a heart issue too. I don't smoke and don't have any allergies to medications.",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the heart murmur in more detail? For example, when was it first detected, and has there been any change in its intensity or characteristics over time?",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The heart murmur was first detected recently by my doctor, and she mentioned it's a new worrisome one. I don't know if it's gotten louder or changed in any way because I wasn't told specifics, but I'm worried about what it could mean.",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the timing of the heart murmur, such as whether it occurs during systole or diastole, and its characteristics, such as whether it sounds rumbling, blowing, harsh, or any other specific sound?",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I wasn't told the exact timing or specific qualities of the murmur, just that it's a new worrisome heart murmur. My doctor didn't describe it in detail, so I don't know if it's systolic or diastolic or what kind of sound it makes.",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the timing of the heart murmur (systolic or diastolic) and its characteristics (e.g., rumbling, blowing, harsh)? Also, have you noticed any changes in its intensity or characteristics over time?",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I wasn't told the exact timing or specific qualities of the murmur, just that it's a new worrisome one. My doctor didn't describe it in detail, so I don't know if it's systolic or diastolic or what kind of sound it makes. I wasn't aware of any changes in its intensity or characteristics because I wasn't given that information.",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe any other symptoms you have been experiencing, such as chest pain, palpitations, or swelling in your legs? Additionally, could you confirm if you have been following up with a cardiologist or if you have had any recent tests related to your heart murmur?",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I do have some swelling in my ankles, and it's been going on for about six months, though it comes and goes. I don't have chest pain or palpitations, but I do get short of breath if I walk too fast or try to drink a whole glass of water without stopping. I haven't been following up with a cardiologist specifically, but my doctor did have me get a chest x-ray last week. I don't know if there have been any other tests done related to the murmur.",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the heart murmur in more detail? For example, when was it first noticed, and has it changed in intensity or sound over time? Also, could you confirm if you have had an echocardiogram or ECG done recently?",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The heart murmur was first noticed by my doctor recently, and she said it's a new worrisome one. I wasn't told if it's gotten louder or changed in any way, so I don't know if it's gotten worse or different over time. I don't know if I've had an echocardiogram or ECG done recently because I wasn't given that information.",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of the chest x-ray that was performed last week, as well as confirm whether an echocardiogram or ECG has been done recently and if so, what were the findings?",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of the chest x-ray available to me, and I wasn't told what they showed. As for an echocardiogram or ECG, I don't know if they've been done recently because I wasn't given that information. My doctor mentioned the murmur but didn't provide any test results or details about it.",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm if you have had an echocardiogram or ECG done recently, and if so, whether you have the results or if your doctor has shared them with you? Additionally, could you describe the heart murmur in more detail, such as when you first noticed it, whether it is loud or soft, and if it seems to change with activity or position?",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know if I've had an echocardiogram or ECG done recently because I wasn't given that information. I wasn't told when the murmur was first noticed, and I don't know if it's loud or soft or if it changes with activity or position. My doctor didn't describe it in detail.",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm if you have had an echocardiogram or ECG done recently, and if not, would you be willing to schedule these tests with your doctor? Additionally, could you describe any changes in the intensity or characteristics of the heart murmur, if any, and whether it seems to change with activity or position?",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know if I've had an echocardiogram or ECG done recently because I wasn't given that information. My doctor didn't describe the murmur in detail, so I don't know if it changes with activity or position. I wasn't told anything about its intensity or characteristics.",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm if you have had an echocardiogram or ECG in the past six months, and if so, what were the results? Additionally, could you describe any changes in the heart murmur you have noticed, such as whether it becomes louder or softer with activity or when lying down?",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know if I've had an echocardiogram or ECG in the past six months because I wasn't given that information. My doctor didn't describe the murmur in detail, so I don't know if it changes with activity or position. I wasn't told anything about its intensity or characteristics.",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe any changes in your symptoms, such as shortness of breath, dizziness, or ankle swelling, over the past six months? Also, could you share any details about your recent chest x-ray results, if available?",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Over the past six months, my shortness of breath has gotten worse, especially when I walk or try to drink water quickly. My ankles have been swelling for about six months, though it comes and goes. As for the chest x-ray, I don’t have the results with me, and my doctor didn’t go over them with me.",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of the chest x-ray that was performed last week, and confirm whether an echocardiogram or ECG has been performed in the past six months?",
+      "tid": "T29"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don’t have the results of the chest x-ray with me, and my doctor didn’t go over them with me. As for an echocardiogram or ECG in the past six months, I don’t know if they’ve been done because I wasn’t given that information.",
+      "tid": "T30"
+    }
+  ]
+}

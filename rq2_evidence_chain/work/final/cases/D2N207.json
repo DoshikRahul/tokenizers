@@ -1,0 +1,431 @@
+{
+  "case_id": "D2N207",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test3",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* Patient is a 65-year-old male who presents with shortness of breath for about a week, which is mostly experienced when walking, especially up stairs or quickly.\n* The patient reports not having chest pain or palpitations and not having had a fever in the past week.\n* The patient states that they did not think it was anything serious at the time.\n* The patient denies having had recent blood tests for uric acid, C-reactive protein (CRP), or erythrocyte sedimentation rate (ESR).\n* The patient denies having had an echocardiogram recently.\n* He also reports swelling in both legs and foot pain in one foot, specifically in front of the big toe, which resolved after a few days.\n* He has a history of coronary disease, had a heart attack in 2018, and has a low ejection fraction (35%).\n* He has stage three chronic kidney disease and takes Lasix (40 mg once a day).\n* He has been experiencing some trouble with his diet lately, especially around the holidays.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N207_V01",
+      "section": "Assessment",
+      "text": "The patient has a history of coronary disease, heart failure, and chronic kidney disease, which may be contributing to his shortness of breath and swelling.",
+      "status": "ok",
+      "p_chain_broken": 0.0041,
+      "components": [
+        {
+          "component": "The patient has a history of coronary disease, heart failure, and chronic kidney disease, which may be contributing to his shortness of breath and swelling.",
+          "feature_ids": [
+            "F6",
+            "F7",
+            "F8",
+            "F16",
+            "F2",
+            "F3",
+            "F13",
+            "F15"
+          ],
+          "p_broken": 0.0040701158576460115,
+          "passages": [
+            {
+              "pid": "5987_795",
+              "title": "Chronic Kidney Disease",
+              "section": "Summary",
+              "cos": 0.468
+            },
+            {
+              "pid": "91_2264",
+              "title": "Kidney Diseases",
+              "section": "Summary",
+              "cos": 0.462
+            },
+            {
+              "pid": "1276_954",
+              "title": "Coronary Artery Disease",
+              "section": "What are symptoms of coronary artery disease?",
+              "cos": 0.385
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N207_V02",
+      "section": "Assessment",
+      "text": "The patient's foot pain, which resolved after a few days, may be related to his chronic kidney disease or another underlying condition.",
+      "status": "ok",
+      "p_chain_broken": 0.1192,
+      "components": [
+        {
+          "component": "The patient's foot pain, which resolved after a few days, may be related to his chronic kidney disease or another underlying condition.",
+          "feature_ids": [
+            "F4",
+            "F6",
+            "F8",
+            "F9",
+            "F16",
+            "F20",
+            "F21"
+          ],
+          "p_broken": 0.11920251211682575,
+          "passages": [
+            {
+              "pid": "1341_1147",
+              "title": "Diabetic Foot",
+              "section": "When should I see my health care provider about diabetic foot problems?",
+              "cos": 0.478
+            },
+            {
+              "pid": "5987_795",
+              "title": "Chronic Kidney Disease",
+              "section": "Summary",
+              "cos": 0.492
+            },
+            {
+              "pid": "1327_1524",
+              "title": "Foot Health",
+              "section": "Summary",
+              "cos": 0.388
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N207_V03",
+      "section": "Plan",
+      "text": "The doctor will order blood tests, including BNP, creatinine, electrolytes, and urinalysis, to assess the patient's kidney function and potential cardiac issues.",
+      "status": "ok",
+      "p_chain_broken": 0.0534,
+      "components": [
+        {
+          "component": "The doctor will order blood tests, including BNP, creatinine, electrolytes, and urinalysis, to assess the patient's kidney function and potential cardiac issues.",
+          "feature_ids": [
+            "F6",
+            "F7",
+            "F8",
+            "F9",
+            "F12",
+            "F16",
+            "F17",
+            "F18"
+          ],
+          "p_broken": 0.05340310306457232,
+          "passages": [
+            {
+              "pid": "5987_795",
+              "title": "Chronic Kidney Disease",
+              "section": "Summary",
+              "cos": 0.503
+            },
+            {
+              "pid": "6382_2271",
+              "title": "Kidney Tests",
+              "section": "Summary",
+              "cos": 0.421
+            },
+            {
+              "pid": "6382_2270",
+              "title": "Kidney Tests",
+              "section": "Summary",
+              "cos": 0.39
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N207_V04",
+      "section": "Plan",
+      "text": "The patient will continue taking Lasix as prescribed.",
+      "status": "ok",
+      "p_chain_broken": 0.0002,
+      "components": [
+        {
+          "component": "The patient will continue taking Lasix as prescribed.",
+          "feature_ids": [
+            "F9",
+            "F13",
+            "F16",
+            "F18",
+            "F20",
+            "F21"
+          ],
+          "p_broken": 0.00015843491387518838,
+          "passages": [
+            {
+              "pid": "6382_2271",
+              "title": "Kidney Tests",
+              "section": "Summary",
+              "cos": 0.381
+            },
+            {
+              "pid": "301_2260",
+              "title": "Kidney Cancer",
+              "section": "Summary",
+              "cos": 0.425
+            },
+            {
+              "pid": "5987_795",
+              "title": "Chronic Kidney Disease",
+              "section": "Summary",
+              "cos": 0.433
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N207_V05",
+      "section": "Plan",
+      "text": "The doctor will consider referring the patient to a cardiologist for further evaluation and management of his heart condition.",
+      "status": "flagged",
+      "p_chain_broken": 0.3775,
+      "components": [
+        {
+          "component": "The doctor will consider referring the patient to a cardiologist for further evaluation and management of his heart condition.",
+          "feature_ids": [
+            "F1",
+            "F2",
+            "F3",
+            "F6",
+            "F7",
+            "F8",
+            "F9",
+            "F16"
+          ],
+          "p_broken": 0.3775396602721548,
+          "passages": [
+            {
+              "pid": "1276_954",
+              "title": "Coronary Artery Disease",
+              "section": "What are symptoms of coronary artery disease?",
+              "cos": 0.39
+            },
+            {
+              "pid": "91_2264",
+              "title": "Kidney Diseases",
+              "section": "Summary",
+              "cos": 0.47
+            },
+            {
+              "pid": "5987_795",
+              "title": "Chronic Kidney Disease",
+              "section": "Summary",
+              "cos": 0.481
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N207_V06",
+      "section": "Plan",
+      "text": "The patient will be advised to follow up with his primary care physician in a few days to discuss the results of the blood tests and any further management plans.",
+      "status": "ok",
+      "p_chain_broken": 0.133,
+      "components": [
+        {
+          "component": "The patient will be advised to follow up with his primary care physician in a few days to discuss the results of the blood tests and any further management plans.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.13296381588286788,
+          "passages": [
+            {
+              "pid": "1341_1147",
+              "title": "Diabetic Foot",
+              "section": "When should I see my health care provider about diabetic foot problems?",
+              "cos": 0.52
+            },
+            {
+              "pid": "3648_3682",
+              "title": "Toe Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.464
+            },
+            {
+              "pid": "508_1525",
+              "title": "Foot Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.419
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* Patient is a 65-year-old male who presents with shortness of breath for about a week, which is mostly experienced when walking, especially up stairs or quickly.\n* The patient reports not having chest pain or palpitations and not having had a fever in the past week.\n* The patient states that they did not think it was anything serious at the time.\n* The patient denies having had recent blood tests for uric acid, C-reactive protein (CRP), or erythrocyte sedimentation rate (ESR).\n* The patient denies having had an echocardiogram recently.\n* He also reports swelling in both legs and foot pain in one foot, specifically in front of the big toe, which resolved after a few days.\n* He has a history of coronary disease, had a heart attack in 2018, and has a low ejection fraction (35%).\n* He has stage three chronic kidney disease and takes Lasix (40 mg once a day).\n* He has been experiencing some trouble with his diet lately, especially around the holidays.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient has a history of coronary disease, heart failure, and chronic kidney disease, which may be contributing to his shortness of breath and swelling.",
+      "The patient's foot pain, which resolved after a few days, may be related to his chronic kidney disease or another underlying condition."
+    ],
+    "plan": [
+      "The doctor will order blood tests, including BNP, creatinine, electrolytes, and urinalysis, to assess the patient's kidney function and potential cardiac issues.",
+      "The patient will continue taking Lasix as prescribed.",
+      "The patient will be advised to follow up with his primary care physician in a few days to discuss the results of the blood tests and any further management plans."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 65 years old, and I'm male. I'm here because I've been having some shortness of breath for about a week, and I also had some swelling in my legs and foot pain that I took Motrin for.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the nature of your shortness of breath? For example, is it constant or intermittent, and does it occur with exertion or at rest? Also, could you clarify if the leg swelling is in both legs or just one, and whether the foot pain is in one or both feet?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The shortness of breath is mostly when I'm walking, especially up stairs or if I walk quickly. It's not constant, but it's been going on for about a week. The swelling is in both legs, and the foot pain was just in one foot, right in front of the big toe.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any chest pain, palpitations, or fever in the past week? Additionally, could you provide details about your past medical history, including any prior diagnoses of heart failure, arthritis, gout, or kidney disease, as well as any medications, allergies, or family history of relevant conditions?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have chest pain or palpitations, and I haven't had a fever. I have a history of coronary disease, had a heart attack in 2018, and had a stent put in my right coronary artery. My heart's pumping function is low, with an ejection fraction of about 35%. I also have stage three chronic kidney disease. I take Lasix, 40 mg once a day, and I've been told to avoid Motrin and Advil. I don't have any allergies, and I don't know if there's a family history of these conditions.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the nature of the foot pain (e.g., sharp, throbbing, or burning) and whether there is any redness or warmth in the affected foot?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The foot pain was just a dull ache, not sharp or burning, and there wasn't any redness or warmth in the foot. It was in front of the big toe, and it went away after a few days.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide your current blood pressure, heart rate, respiratory rate, and oxygen saturation levels?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have those numbers with me, but my blood pressure has been a bit high lately, around 135 over 80, and I do have some swelling in my legs and shortness of breath when I walk. I'm on Lasix, but I've been having some trouble with my diet lately, especially around the holidays.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm if you have been taking your Lasix as prescribed? Also, have you noticed any changes in the color or temperature of your legs, or any new symptoms such as chest pain, palpitations, or fever?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I have been taking my Lasix as prescribed, every day. I haven't noticed any changes in the color or temperature of my legs, and I haven't had any new symptoms like chest pain, palpitations, or fever.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any recent changes in your urine output, such as decreased volume or changes in color or consistency? Have you experienced any nausea, vomiting, or abdominal discomfort?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't noticed any changes in my urine output—it seems about the same as before. I don't have any nausea, vomiting, or abdominal discomfort.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide the results of any recent blood tests, such as BNP, creatinine, electrolytes, and urinalysis?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of any recent blood tests with me, but I did have a kidney function test a month ago, and I was told I have stage three chronic kidney disease. I haven't had any other tests done recently.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the nature of the foot pain in more detail? For example, is it sharp, throbbing, or burning? Does it get worse with activity or at rest? Have you noticed any redness, warmth, or swelling in the affected foot?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The foot pain was just a dull ache, not sharp or burning, and there wasn't any redness or warmth in the foot. It was in front of the big toe, and it went away after a few days.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any recent changes in your heart symptoms, such as increased shortness of breath, chest discomfort, or palpitations? Have you had an echocardiogram or recent follow-up with your cardiologist to assess your ejection fraction?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any recent changes in my heart symptoms, and I haven't had an echocardiogram or follow-up with my cardiologist recently. I just came in because of the shortness of breath and swelling.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had an echocardiogram recently to assess your ejection fraction and check for any changes in your heart function?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had an echocardiogram recently. The last time I saw my cardiologist was a while back, and they mentioned my ejection fraction was low, around thirty-five percent. I just came in because of the shortness of breath and swelling.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any recent changes in your urine output, such as decreased volume or changes in color or frequency?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any changes in my urine output—it seems about the same as before. I don't have any nausea, vomiting, or abdominal discomfort.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any new or worsening chest pain, palpitations, or dizziness in the past week?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any new or worsening chest pain, palpitations, or dizziness in the past week. I've been mostly focused on the shortness of breath and swelling.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any recent blood tests for uric acid, C-reactive protein (CRP), or erythrocyte sedimentation rate (ESR)?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any recent blood tests for uric acid, CRP, or ESR. I just came in because of the shortness of breath and swelling, and I didn't think to ask about those tests.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any recent episodes of joint pain or stiffness, particularly in the morning or after periods of inactivity? This would help assess for potential rheumatologic involvement.",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any recent episodes of joint pain or stiffness. The only pain I had was in my foot, just in front of my big toe, and it went away after a few days. I didn't think it was anything serious at the time.",
+      "tid": "T29"
+    }
+  ]
+}

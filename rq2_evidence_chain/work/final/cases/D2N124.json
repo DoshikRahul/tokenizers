@@ -1,0 +1,194 @@
+{
+  "case_id": "D2N124",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test1",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports that this is the first time they are seeking medical attention for the affected ankle.\n* The patient reports being able to stand on the ankle, but unable to walk due to feelings of instability and significant pain.\n* Patient is a 45-year-old male who injured his ankle while playing basketball with his son a few days ago\n* He landed awkwardly and twisted his ankle, resulting in swelling, bruising, and pain\n* The pain is worse when he tries to put weight on it, and it's been getting more swollen since the injury\n* No prior ankle injuries or surgeries, and no history of chronic medical conditions like diabetes or hypertension\n* No prior imaging of the affected ankle since the injury",
+    "objective": "* Swelling on the outside of the ankle\n* Tenderness on the lateral and medial sides of the ankle\n* Pain on palpation of the outside of the ankle\n* No obvious deformity, and skin looks normal with good color and capillary refill\n* X-ray results show a fracture on the lateral side of the ankle, specifically a displaced lateral malleolus at the Weber C level"
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N124_V01",
+      "section": "Assessment",
+      "text": "The patient has a displaced lateral malleolus fracture at the Weber C level, which is likely causing the instability and pain in his ankle",
+      "status": "ok",
+      "p_chain_broken": 0.0025,
+      "components": [
+        {
+          "component": "The patient has a displaced lateral malleolus fracture at the Weber C level",
+          "feature_ids": [
+            "F17",
+            "F18"
+          ],
+          "p_broken": 0.00020342491262958113,
+          "passages": [
+            {
+              "pid": "257_1531",
+              "title": "Fractures",
+              "section": "How are fractures diagnosed?",
+              "cos": 0.462
+            },
+            {
+              "pid": "1612_157",
+              "title": "Ankle Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.478
+            },
+            {
+              "pid": "257_1530",
+              "title": "Fractures",
+              "section": "What are the symptoms of a fracture?",
+              "cos": 0.429
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "which is likely causing the instability and pain in his ankle",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.002472608598706246,
+          "passages": [
+            {
+              "pid": "1612_157",
+              "title": "Ankle Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.569
+            },
+            {
+              "pid": "1618_3641",
+              "title": "Tendinitis",
+              "section": "Summary",
+              "cos": 0.451
+            },
+            {
+              "pid": "417_3470",
+              "title": "Sprains and Strains",
+              "section": "Summary",
+              "cos": 0.443
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N124_V02",
+      "section": "Plan",
+      "text": "The doctor will need to discuss further management and treatment options with the patient, including potential surgical intervention and physical therapy",
+      "status": "ok",
+      "p_chain_broken": 0.1192,
+      "components": [
+        {
+          "component": "The doctor will need to discuss further management and treatment options with the patient, including potential surgical intervention and physical therapy",
+          "feature_ids": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F17"
+          ],
+          "p_broken": 0.11920251055230408,
+          "passages": [
+            {
+              "pid": "1612_157",
+              "title": "Ankle Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.655
+            },
+            {
+              "pid": "417_3470",
+              "title": "Sprains and Strains",
+              "section": "Summary",
+              "cos": 0.503
+            },
+            {
+              "pid": "1618_3641",
+              "title": "Tendinitis",
+              "section": "Summary",
+              "cos": 0.536
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports that this is the first time they are seeking medical attention for the affected ankle.\n* The patient reports being able to stand on the ankle, but unable to walk due to feelings of instability and significant pain.\n* Patient is a 45-year-old male who injured his ankle while playing basketball with his son a few days ago\n* He landed awkwardly and twisted his ankle, resulting in swelling, bruising, and pain\n* The pain is worse when he tries to put weight on it, and it's been getting more swollen since the injury\n* No prior ankle injuries or surgeries, and no history of chronic medical conditions like diabetes or hypertension\n* No prior imaging of the affected ankle since the injury",
+    "objective": "* Swelling on the outside of the ankle\n* Tenderness on the lateral and medial sides of the ankle\n* Pain on palpation of the outside of the ankle\n* No obvious deformity, and skin looks normal with good color and capillary refill\n* X-ray results show a fracture on the lateral side of the ankle, specifically a displaced lateral malleolus at the Weber C level",
+    "assessment": [
+      "The patient has a displaced lateral malleolus fracture at the Weber C level, which is likely causing the instability and pain in his ankle"
+    ],
+    "plan": [
+      "The doctor will need to discuss further management and treatment options with the patient, including potential surgical intervention and physical therapy"
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 45 years old, male. I came in because I injured my ankle while playing basketball with my son. I landed awkwardly and twisted it, and now it's swollen, bruised, and really painful. It doesn't feel stable at all, and I'm having trouble walking on it.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your age, gender, and a detailed description of your current symptoms, including when they started and any activities that worsen them?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 45 years old, male. I injured my ankle while playing basketball with my son a few days ago. I landed awkwardly and twisted it, and now it's swollen, bruised, and really painful. It doesn't feel stable at all, and I'm having trouble walking on it. The pain is worse when I try to put weight on it, and it's been getting more swollen since the injury.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any prior ankle injuries or surgeries? Do you have a history of diabetes, hypertension, or any other chronic medical conditions?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have a history of ankle injuries or surgeries, and I don't have any chronic medical conditions like diabetes or hypertension. I've been pretty healthy overall.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any prior imaging, such as X-rays or an MRI, of the affected ankle since the injury?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any prior imaging of the affected ankle since the injury. This is the first time I'm seeing a doctor about it.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Can you describe the physical examination findings, including swelling, bruising, pain, instability, and any deformity? Also, please mention if there is any tenderness, range of motion, or crepitus, and whether you can bear weight on the ankle.",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The doctor did a physical exam and found that my ankle is swollen on the outside, and there's a lot of tenderness, especially on the lateral side. When he pressed on the outside, it hurt pretty badly, and there was some tenderness on the inner part too. I can stand on it, but I can't walk on it because it feels unstable and hurts a lot. There's no obvious deformity, and my skin looks normal with good color and capillary refill.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies such as X-rays or MRI for the injured ankle?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Yes, I had an X-ray done when I came in today. The doctor showed me the results on the screen, and it looks like there's a fracture on the lateral side of my ankle. It's a displaced lateral malleolus at the Weber C level, and that's probably why it feels so unstable when I try to walk on it.",
+      "tid": "T11"
+    }
+  ]
+}

@@ -1,0 +1,353 @@
+{
+  "case_id": "D2N164",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test2",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports that the chest pain does not persist once they stop, but it has been interfering with their ability to walk as much as they used to.\n* The patient reports that their electrocardiogram (EKG) was normal during a previous office visit, but they have not undergone a stress test or echocardiogram.\n* Patient is a 53-year-old female who presents with chest pain when walking, described as pressure in the chest, lasting for about three months.\n* The pain is not accompanied by shortness of breath, dizziness, or sweating.\n* Patient has a history of diabetes and was told she might have high blood pressure, but no medication has been prescribed.\n* Patient is on metformin for diabetes.\n* Patient's family history of cardiovascular disease is unknown, but her doctor mentioned a history of heart disease in her family.",
+    "objective": "* The patient does not have the results of any recent lipid profile or troponin tests."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N164_V01",
+      "section": "Assessment",
+      "text": "The patient presents with chest pain when walking, described as pressure in the chest, lasting for about three months.",
+      "status": "ok",
+      "p_chain_broken": 0.0,
+      "components": [
+        {
+          "component": "The patient presents with chest pain when walking, described as pressure in the chest, lasting for about three months.",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F13",
+            "F15"
+          ],
+          "p_broken": 2.1444746460724423e-05,
+          "passages": [
+            {
+              "pid": "4744_694",
+              "title": "Chest Pain",
+              "section": "Summary",
+              "cos": 0.581
+            },
+            {
+              "pid": "4212_1748",
+              "title": "Heart Disease in Women",
+              "section": "What are the symptoms of heart disease and heart attack in women?",
+              "cos": 0.478
+            },
+            {
+              "pid": "5_1738",
+              "title": "Heart Attack",
+              "section": "What are the symptoms of a heart attack?",
+              "cos": 0.506
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N164_V02",
+      "section": "Assessment",
+      "text": "The patient has a history of diabetes and was told she might have high blood pressure, but no medication has been prescribed.",
+      "status": "flagged",
+      "p_chain_broken": 0.6225,
+      "components": [
+        {
+          "component": "The patient has a history of diabetes.",
+          "feature_ids": [
+            "F6"
+          ],
+          "p_broken": 0.0015011656409292323,
+          "passages": [
+            {
+              "pid": "5784_3010",
+              "title": "Prediabetes",
+              "section": "Who is at risk for prediabetes?",
+              "cos": 0.442
+            },
+            {
+              "pid": "4_1078",
+              "title": "Diabetes",
+              "section": "How is diabetes diagnosed?",
+              "cos": 0.47
+            },
+            {
+              "pid": "4_1079",
+              "title": "Diabetes",
+              "section": "What are the treatments for diabetes?",
+              "cos": 0.451
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient was told she might have high blood pressure.",
+          "feature_ids": [
+            "F7"
+          ],
+          "p_broken": 4.5397435721345376e-05,
+          "passages": [
+            {
+              "pid": "4939_437",
+              "title": "Blood Pressure Medicines",
+              "section": "What is high blood pressure?",
+              "cos": 0.544
+            },
+            {
+              "pid": "6450_2060",
+              "title": "How to Prevent High Blood Pressure",
+              "section": "How is high blood pressure diagnosed?",
+              "cos": 0.43
+            },
+            {
+              "pid": "34_1913",
+              "title": "High Blood Pressure",
+              "section": "What are the treatments for high blood pressure?",
+              "cos": 0.435
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "No medication has been prescribed.",
+          "feature_ids": [
+            "F6",
+            "F7",
+            "F8",
+            "F9",
+            "F10",
+            "F11",
+            "F12",
+            "F13"
+          ],
+          "p_broken": 0.6224587498981978,
+          "passages": [
+            {
+              "pid": "3634_3138",
+              "title": "Pulmonary Hypertension",
+              "section": "How is pulmonary hypertension diagnosed?",
+              "cos": 0.43
+            },
+            {
+              "pid": "4266_3555",
+              "title": "Sudden Cardiac Arrest",
+              "section": "Who is at risk for sudden cardiac arrest (SCA)?",
+              "cos": 0.414
+            },
+            {
+              "pid": "4921_2258",
+              "title": "Kawasaki Disease",
+              "section": "How is Kawasaki disease diagnosed?",
+              "cos": 0.392
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N164_V03",
+      "section": "Assessment",
+      "text": "The patient's family history of cardiovascular disease is unknown, but her doctor mentioned a history of heart disease in her family.",
+      "status": "ok",
+      "p_chain_broken": 0.018,
+      "components": [
+        {
+          "component": "The patient's family history of cardiovascular disease is unknown, but her doctor mentioned a history of heart disease in her family.",
+          "feature_ids": [
+            "F13"
+          ],
+          "p_broken": 0.017986109882529872,
+          "passages": [
+            {
+              "pid": "4484_1443",
+              "title": "Family History",
+              "section": "Summary",
+              "cos": 0.52
+            },
+            {
+              "pid": "277_1758",
+              "title": "Heart Diseases",
+              "section": "How are heart diseases diagnosed?",
+              "cos": 0.556
+            },
+            {
+              "pid": "277_1751",
+              "title": "Heart Diseases",
+              "section": "What is heart disease?",
+              "cos": 0.461
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports that the chest pain does not persist once they stop, but it has been interfering with their ability to walk as much as they used to.\n* The patient reports that their electrocardiogram (EKG) was normal during a previous office visit, but they have not undergone a stress test or echocardiogram.\n* Patient is a 53-year-old female who presents with chest pain when walking, described as pressure in the chest, lasting for about three months.\n* The pain is not accompanied by shortness of breath, dizziness, or sweating.\n* Patient has a history of diabetes and was told she might have high blood pressure, but no medication has been prescribed.\n* Patient is on metformin for diabetes.\n* Patient's family history of cardiovascular disease is unknown, but her doctor mentioned a history of heart disease in her family.",
+    "objective": "* The patient does not have the results of any recent lipid profile or troponin tests.",
+    "assessment": [
+      "The patient presents with chest pain when walking, described as pressure in the chest, lasting for about three months.",
+      "The patient's family history of cardiovascular disease is unknown, but her doctor mentioned a history of heart disease in her family."
+    ],
+    "plan": []
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 53 years old, and I'm here because I've been having chest pain when I walk. It feels like pressure in my chest, and it's been going on for about three months. I haven't been able to keep up with my walking because of it.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm your age, gender, and describe the chest pain in more detail, including its location, duration, intensity, and any associated symptoms?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 53 years old, and I'm a female. The chest pain is in my chest, and it feels like pressure. It mainly happens when I'm walking, and it's been going on for about three months. It doesn't go away right away, and I haven't been able to keep up with my walking because of it. I don't have any other symptoms right now, like shortness of breath or sweating.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide details about your past medical history, including any previous illnesses, surgeries, or allergies?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have any allergies, and I don't remember having any surgeries. I do have diabetes, and I was told I might have high blood pressure, but no one has given me medication for it yet. I'm on metformin for my diabetes.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe if the chest pain radiates to other areas, such as your arms, jaw, or back? Also, are there any specific activities or positions that make the pain worse or better?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The chest pain doesn't radiate anywhere else, just stays in my chest. It mainly happens when I'm walking, and it's been getting in the way of me keeping up with my walks. I haven't found anything that makes it better except maybe resting, but I haven't tried anything specific.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of any previous cardiac evaluations, such as an ECG, stress test, or echocardiogram, if available? Additionally, could you share the results of any recent blood tests, such as fasting blood glucose, HbA1c, lipid profile, and renal function tests?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of any cardiac evaluations or blood tests done recently. I was told my EKG looked normal when I was in the office, but I haven't had any other tests like a stress test or echocardiogram. I do know my blood sugars have been a little higher lately because I haven't been as active, and my HbA1c was seven before, which my doctor said was okay but could be better.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe any changes in the pattern of your chest pain, such as whether it has become more frequent, lasts longer, or is now accompanied by other symptoms like shortness of breath, dizziness, or nausea?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The chest pain hasn't changed much in pattern, it still mainly happens when I'm walking, and it's been about three months. It doesn't last too long once I stop, but it's been getting in the way of me walking as much as I used to. I haven't had any other symptoms like shortness of breath or dizziness with it, just the pressure in my chest.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of your most recent EKG, as well as any other cardiac evaluations or blood tests you may have had, including lipid profile, troponin levels, and a stress test if available?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of any recent EKG or other cardiac evaluations done outside of what was mentioned in the office, which was that the EKG looked normal. I haven't had a stress test or any blood tests like lipid profile or troponin levels recently. My doctor mentioned my HbA1c was seven before, but I don't have any other test results with me.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide more details about your family history of cardiovascular disease, including any history of heart attacks, strokes, or hypertension in first-degree relatives?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know the specifics of my family history regarding heart disease, but I was told there is a history of heart disease in my family. I don't have the details on exactly who or how many relatives were affected, but it's something my doctor mentioned as a concern.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of your most recent lipid profile, troponin levels, and any other cardiac blood tests you may have had? Additionally, have you had a stress test or echocardiogram in the past?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of any recent lipid profile or troponin tests, and I haven't had a stress test or echocardiogram in the past. My doctor only mentioned my EKG looked normal when I was in the office.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of your most recent lipid profile, troponin levels, and whether you have had a stress test or echocardiogram in the past?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of any recent lipid profile or troponin tests, and I haven't had a stress test or echocardiogram in the past. My doctor only mentioned my EKG looked normal when I was in the office.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of your most recent lipid profile, including total cholesterol, LDL, HDL, and triglycerides, as well as any recent troponin levels?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of any recent lipid profile or troponin tests. My doctor only mentioned my EKG looked normal when I was in the office.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of your most recent lipid profile, including total cholesterol, LDL, HDL, and triglycerides, as well as any recent troponin levels?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of any recent lipid profile or troponin tests. My doctor only mentioned my EKG looked normal when I was in the office.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of your most recent lipid profile and troponin levels, if available? If not, when was the last time you had these tests done?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of any recent lipid profile or troponin tests. My doctor only mentioned my EKG looked normal when I was in the office.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please tell me if you have had any lipid profile tests or troponin level tests in the past, and if so, what were the results? Also, have you had any cardiac imaging or stress tests, such as an echocardiogram, stress EKG, or nuclear stress test?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember having any lipid profile tests or troponin level tests done recently. My doctor only mentioned my EKG looked normal when I was in the office. I haven't had any stress tests or echocardiograms in the past as far as I know.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of your most recent lipid profile, troponin levels, and any cardiac imaging studies such as a stress test or echocardiogram?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember having any lipid profile tests or troponin level tests done recently. My doctor only mentioned my EKG looked normal when I was in the office. I haven't had any stress tests or echocardiograms in the past as far as I know.",
+      "tid": "T29"
+    }
+  ]
+}
