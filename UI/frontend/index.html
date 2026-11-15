@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tokenizers · Agentic Clinical Intake</title>
+<link rel="icon" href="logo.jpg">
+<style>
+:root{
+  --bg:#f4f6f8; --panel:#ffffff; --ink:#14212b; --muted:#5b6b78; --line:#dde3e8;
+  --accent:#0f766e; --accent-soft:#e0f2ef; --accent-ink:#0b5b55;
+  --doc:#eef4fb; --doc-ink:#17406b; --pat:#0f766e; --pat-ink:#ffffff;
+  --orch:#7c3aed; --spec:#c2410c; --agg:#0369a1; --soap:#15803d; --warn:#b45309; --err:#b91c1c;
+  --shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.08);
+  --r:12px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0e1419; --panel:#151d24; --ink:#e3eaf0; --muted:#93a4b2; --line:#26323c;
+  --accent:#2dd4bf; --accent-soft:#11302d; --accent-ink:#5eead4;
+  --doc:#1a2633; --doc-ink:#cfe0f3; --pat:#0f766e; --pat-ink:#f0fdfa;
+  --orch:#a78bfa; --spec:#fb923c; --agg:#38bdf8; --soap:#4ade80; --warn:#fbbf24; --err:#f87171;
+  --shadow:none; color-scheme:dark;
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:1680px;margin:0 auto;padding:16px 20px 24px}
+
+/* ---------- header ---------- */
+header.top{display:flex;gap:20px;align-items:center;flex-wrap:wrap;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px 18px;box-shadow:var(--shadow)}
+.brand{display:flex;gap:14px;align-items:center;flex:1 1 420px;min-width:0}
+.brand img{width:64px;height:64px;object-fit:contain;border-radius:10px;background:#fff;border:1px solid var(--line)}
+.course{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-ink);font-weight:600}
+.brand h1{margin:2px 0 2px;font-size:21px;line-height:1.2}
+.brand p{margin:0;color:var(--muted);font-size:13px}
+.team{flex:1 1 520px;display:flex;flex-direction:column;gap:6px}
+.team-name{font-weight:700;font-size:13px}
+.team-name span{color:var(--accent-ink)}
+.members{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.member{border:1px solid var(--line);border-radius:8px;padding:5px 9px;background:var(--bg)}
+.member b{display:block;font-size:12.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.member small{color:var(--muted);font-variant-numeric:tabular-nums}
+.status{display:flex;align-items:center;gap:8px;font-size:12.5px;border:1px solid var(--line);border-radius:999px;padding:5px 12px;background:var(--bg);max-width:100%}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--muted);flex:none}
+.dot.ready{background:#16a34a}.dot.loading,.dot.connecting{background:#f59e0b;animation:pulse 1.2s infinite}.dot.error,.dot.missing{background:var(--err)}
+.status .msg{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:520px}
+
+/* ---------- tabs & controls ---------- */
+.bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:14px 0 10px}
+.tabs{display:flex;gap:4px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:4px;flex-wrap:wrap}
+.tab{border:0;background:transparent;padding:7px 14px;border-radius:7px;cursor:pointer;color:var(--muted);font-weight:600}
+.tab[aria-selected=true]{background:var(--accent);color:#fff}
+.controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;flex:1}
+.controls label{color:var(--muted);font-size:12.5px;display:flex;gap:6px;align-items:center}
+select,input[type=number]{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:6px 8px}
+input[type=number]{width:64px}
+.btn{border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:7px 13px;cursor:pointer;font-weight:600}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.ghost{background:transparent}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.hint{color:var(--muted);font-size:12.5px}
+
+/* ---------- pipeline diagram ---------- */
+.pipeline{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;box-shadow:var(--shadow);overflow-x:auto}
+.flow{display:flex;align-items:stretch;gap:0;min-width:980px}
+.node{flex:1;border:1.5px solid var(--line);border-radius:10px;padding:8px 10px;background:var(--bg);position:relative;transition:all .25s}
+.node h4{margin:0;font-size:12.5px;display:flex;gap:6px;align-items:center}
+.node p{margin:2px 0 0;color:var(--muted);font-size:11.5px;line-height:1.35}
+.node .chips{display:flex;gap:4px;flex-wrap:wrap;margin-top:4px}
+.chip{font-size:10.5px;border-radius:999px;padding:1px 7px;background:var(--panel);border:1px solid var(--line);color:var(--muted)}
+.chip.on{border-color:var(--spec);color:var(--spec)}
+.arrow{flex:0 0 26px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+.sep{flex:0 0 18px;border-left:2px dashed var(--line);margin:0 10px}
+.node.active{border-color:var(--c);box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 22%,transparent);background:color-mix(in srgb,var(--c) 8%,var(--panel))}
+.node.active h4::after{content:"";width:7px;height:7px;border-radius:50%;background:var(--c);animation:pulse 1s infinite}
+.node.done{border-color:color-mix(in srgb,var(--c) 45%,var(--line))}
+.n-pat{--c:var(--pat)}.n-orch{--c:var(--orch)}.n-spec{--c:var(--spec)}.n-agg{--c:var(--agg)}.n-rec{--c:var(--accent)}.n-dx{--c:var(--orch)}.n-soap{--c:var(--soap)}
+.phase-tag{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+
+/* ---------- main grid ---------- */
+.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr) minmax(0,1fr);gap:14px;margin-top:14px;height:calc(100vh - 330px);min-height:520px}
+.col{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);display:flex;flex-direction:column;min-height:0;box-shadow:var(--shadow)}
+.col>h3{margin:0;padding:11px 14px;border-bottom:1px solid var(--line);font-size:13.5px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.col>h3 small{color:var(--muted);font-weight:500}
+.scroll{overflow-y:auto;padding:12px 14px;flex:1;min-height:0}
+
+/* chat */
+.msg{max-width:88%;margin:0 0 10px;padding:9px 12px;border-radius:12px;white-space:pre-wrap;word-wrap:break-word}
+.msg .who{display:block;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;opacity:.75;margin-bottom:2px}
+.msg.doctor{background:var(--doc);color:var(--doc-ink);border-top-left-radius:4px}
+.msg.patient{background:var(--pat);color:var(--pat-ink);margin-left:auto;border-top-right-radius:4px}
+.thinking{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:12.5px;margin:4px 0 10px}
+.typing span{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--muted);margin-right:3px;animation:blink 1.2s infinite}
+.typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}
+.composer{border-top:1px solid var(--line);padding:10px;display:flex;gap:8px;align-items:flex-end}
+.composer textarea{flex:1;resize:none;border:1px solid var(--line);border-radius:10px;padding:9px 11px;background:var(--bg);min-height:42px;max-height:140px}
+.composer textarea:focus{outline:2px solid var(--accent);outline-offset:-1px}
+.empty{color:var(--muted);text-align:center;padding:30px 10px;font-size:13px}
+.empty b{color:var(--ink)}
+.examples{display:flex;flex-direction:column;gap:6px;margin-top:12px}
+.examples button{text-align:left;border:1px dashed var(--line);background:transparent;border-radius:8px;padding:7px 10px;cursor:pointer;color:var(--ink)}
+.examples button:hover{border-color:var(--accent)}
+
+/* trace */
+.turn-div{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin:12px 0 8px}
+.turn-div::after{content:"";flex:1;height:1px;background:var(--line)}
+.card{border:1px solid var(--line);border-left:4px solid var(--c,var(--line));border-radius:9px;margin:0 0 8px;background:var(--bg)}
+.card .hd{display:flex;gap:8px;align-items:center;padding:7px 10px;cursor:pointer;font-size:12.5px}
+.card .hd b{color:var(--c)}
+.card .hd .kind{color:var(--muted)}
+.card .hd .t{margin-left:auto;color:var(--muted);font-size:11.5px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.card .bd{padding:0 10px 9px;font-size:12.5px;color:var(--ink);display:none}
+.card.open .bd{display:block}
+.card .bd p{margin:0 0 6px}
+.card.working .hd::before{content:"";width:12px;height:12px;border:2px solid var(--c);border-right-color:transparent;border-radius:50%;animation:spin .8s linear infinite;flex:none}
+.c-orch{--c:var(--orch)}.c-spec{--c:var(--spec)}.c-agg{--c:var(--agg)}.c-pat{--c:var(--pat)}.c-pipe{--c:var(--muted)}
+.notice{font-size:12px;padding:6px 10px;border-radius:8px;margin:0 0 8px;background:color-mix(in srgb,var(--warn) 12%,transparent);color:var(--warn)}
+.notice.error{background:color-mix(in srgb,var(--err) 12%,transparent);color:var(--err)}
+.notice.info{background:var(--accent-soft);color:var(--accent-ink)}
+
+/* note */
+.fields{display:flex;gap:5px;flex-wrap:wrap;padding:9px 14px;border-bottom:1px solid var(--line)}
+.fchip{font-size:11px;padding:2px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.fchip.got{border-color:var(--accent);color:var(--accent-ink);background:var(--accent-soft)}
+.sec{border:1px solid var(--line);border-radius:10px;margin:0 0 10px;overflow:hidden}
+.sec h5{margin:0;padding:7px 11px;font-size:12.5px;display:flex;align-items:center;gap:8px;background:var(--bg);border-bottom:1px solid var(--line)}
+.sec h5 .L{display:inline-flex;width:22px;height:22px;border-radius:6px;align-items:center;justify-content:center;color:#fff;font-weight:800;background:var(--c)}
+.sec h5 small{margin-left:auto;color:var(--muted);font-weight:500}
+.sec .body{padding:9px 11px;font-size:13px}
+.sec .body .f{margin:0 0 8px}
+.sec .body .f:last-child{margin:0}
+.sec .body .f b{display:block;font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.sec .body .f .v{white-space:pre-wrap}
+.sec .body .f .v.none{color:var(--muted);font-style:italic}
+.sec .body .f.flash .v{animation:flash 1.6s}
+.sec.S{--c:#0f766e}.sec.O{--c:#0369a1}.sec.A{--c:#7c3aed}.sec.P{--c:#15803d}
+.sec.pending{opacity:.55}
+.banner{font-size:12.5px;border-radius:9px;padding:8px 11px;margin:0 0 10px;background:var(--accent-soft);color:var(--accent-ink)}
+details.src{margin:0 0 10px;border:1px solid var(--line);border-radius:9px;padding:6px 10px;font-size:12.5px}
+details.src summary{cursor:pointer;font-weight:600}
+details.src pre{white-space:pre-wrap;max-height:260px;overflow:auto;font:12px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace;margin:8px 0 0}
+
+footer{margin-top:12px;color:var(--muted);font-size:12px;text-align:center}
+@keyframes pulse{50%{opacity:.35}}
+@keyframes blink{0%,80%,100%{opacity:.2}40%{opacity:1}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes flash{0%{background:color-mix(in srgb,var(--accent) 30%,transparent)}100%{background:transparent}}
+@media (max-width:1200px){.grid{grid-template-columns:1fr 1fr;height:auto}.grid .col{height:70vh}.grid .note{grid-column:1/-1}}
+@media (max-width:760px){.grid{grid-template-columns:1fr}.members{grid-template-columns:repeat(2,minmax(0,1fr))}.wrap{padding:12px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div class="brand">
+    <img src="logo.jpg" alt="Tokenizers logo">
+    <div>
+      <div class="course">Language Models and Agents · Course Project</div>
+      <h1>One Encounter, Two Readers</h1>
+      <p>Agentic clinical intake: a multi-agent doctor team interviews the patient and writes the <b>Subjective</b> &amp; <b>Objective</b> record, then the full SOAP note.</p>
+    </div>
+  </div>
+  <div class="team">
+    <div class="team-name">Team Name — <span>Tokenizers</span></div>
+    <div class="members">
+      <div class="member"><b>Jyothika Goparaju</b><small>2025701007</small></div>
+      <div class="member"><b>Namrata Mokshagundam</b><small>2025701011</small></div>
+      <div class="member"><b>Repaka Doshik Rahul</b><small>2026701035</small></div>
+      <div class="member"><b>Surya Teja Thodupunuri</b><small>2025701054</small></div>
+    </div>
+    <div class="status" id="status"><span class="dot" id="statusDot"></span><b id="statusModel">Qwen3-14B</b><span class="msg" id="statusMsg">checking…</span></div>
+  </div>
+</header>
+
+<div class="bar">
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" data-mode="chat" aria-selected="true">① Live consultation — you are the patient</button>
+    <button class="tab" role="tab" data-mode="simulate" aria-selected="false">② Patient-agent simulation (ACI-Bench)</button>
+    <button class="tab" role="tab" data-mode="replay" aria-selected="false">③ Saved project runs</button>
+  </div>
+  <div class="controls" id="ctl-chat">
+    <label>Max turns <input type="number" id="chatTurns" min="1" max="30" value="15"></label>
+    <button class="btn primary" id="newChat">New consultation</button>
+    <button class="btn" id="finishChat" disabled>Finish → write SOAP note</button>
+  </div>
+  <div class="controls" id="ctl-simulate" hidden>
+    <label>Encounter <select id="simEnc"></select></label>
+    <label>Max turns <input type="number" id="simTurns" min="1" max="30" value="6"></label>
+    <button class="btn primary" id="startSim">Run live pipeline</button>
+    <button class="btn" id="stopSim" disabled>Stop after this turn</button>
+  </div>
+  <div class="controls" id="ctl-replay" hidden>
+    <label>Encounter <select id="repEnc"></select></label>
+    <label>Speed <select id="repSpeed"><option value="900">Presentation</option><option value="250">Fast</option><option value="0">Instant</option></select></label>
+    <button class="btn primary" id="playRep">Replay</button>
+  </div>
+</div>
+
+<section class="pipeline" aria-label="Agentic pipeline">
+  <div class="phase-tag" id="phaseTag">Aegle-style MDT on Qwen3-14B · LangGraph: orchestrator → specialists → aggregator, once per patient turn</div>
+  <div class="flow">
+    <div class="node n-pat" id="n-pat"><h4>🧑 Patient</h4><p id="patDesc">You type your issue in your own words</p></div>
+    <div class="arrow">→</div>
+    <div class="node n-orch" id="n-orch"><h4>Orchestrator</h4><p>Routes the turn: direct question or activate specialists</p></div>
+    <div class="arrow">→</div>
+    <div class="node n-spec" id="n-spec"><h4>Specialists</h4><p>Run in parallel, each proposes record edits + one question</p><div class="chips" id="specChips"></div></div>
+    <div class="arrow">→</div>
+    <div class="node n-agg" id="n-agg"><h4>Aggregator</h4><p>Merges proposals, updates the record, asks the next question</p></div>
+    <div class="arrow">→</div>
+    <div class="node n-rec" id="n-rec"><h4>Shared record (S / O)</h4><p>basic info · present illness · past history · exam · investigations</p></div>
+    <div class="sep"></div>
+    <div class="node n-dx" id="n-dx"><h4>Diagnosis &amp; plan</h4><p>Evidence frozen; same team writes A / P</p></div>
+    <div class="arrow">→</div>
+    <div class="node n-soap" id="n-soap"><h4>SOAP note</h4><p>Subjective · Objective · Assessment · Plan</p></div>
+  </div>
+</section>
+
+<main class="grid">
+  <section class="col">
+    <h3>Consultation <small id="turnInfo"></small></h3>
+    <div class="scroll" id="chat"></div>
+    <form class="composer" id="composer">
+      <textarea id="input" rows="1" placeholder="Start a new consultation, then answer the doctor here…" disabled></textarea>
+      <button class="btn primary" id="send" disabled>Send</button>
+    </form>
+  </section>
+  <section class="col">
+    <h3>Agent trace <small>what the doctor team does each turn</small></h3>
+    <div class="scroll" id="trace"><div class="empty">Every model call by the orchestrator, specialists and aggregator appears here as it happens.</div></div>
+  </section>
+  <section class="col note">
+    <h3>Clinical note <small id="noteInfo">built live from the shared record</small></h3>
+    <div class="fields" id="fieldChips"></div>
+    <div class="scroll" id="note"></div>
+  </section>
+</main>
+
+<footer>Team Tokenizers · Data: ACI-Bench · Agents: Aegle-style MDT (LangGraph) · Model: Qwen3-14B (FP16, 4× RTX 2080 Ti). Model-generated A/P is not medical advice.</footer>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const FIELDS = [["basic_info","Basic information","S"],["present_illness","History of present illness","S"],["past_history","Past history","S"],["physical_exam","Physical examination","O"],["aux_exam","Investigations","O"]];
+const state = {mode:"chat", session:null, busy:false, features:{}, specialists:new Set(), timers:{}, working:{}, modelReady:false, replayToken:0};
+
+/* ---------------- utilities ---------------- */
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function md(s){return esc(s).split(/\n{2,}/).map(p=>"<p>"+p.replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>").replace(/\n/g,"<br>")+"</p>").join("")}
+function el(html){const t=document.createElement("template");t.innerHTML=html.trim();return t.content.firstChild}
+function scrollEnd(box){box.scrollTop=box.scrollHeight}
+function agentClass(a){return a==="orchestrator"?"orch":a.startsWith("specialist:")?"spec":a==="aggregator"?"agg":a==="patient"?"pat":"pipe"}
+function agentLabel(a){return a.startsWith("specialist:")?a.slice(11).replace(/_/g," "):a}
+function nodeFor(a){return {orch:"n-orch",spec:"n-spec",agg:"n-agg",pat:"n-pat"}[agentClass(a)]}
+const sleep = ms => new Promise(r=>setTimeout(r,ms));
+
+/* ---------------- status ---------------- */
+async function pollStatus(){
+  try{
+    const s = await (await fetch("api/status")).json();
+    state.modelReady = s.status==="ready";
+    $("#statusDot").className = "dot "+s.status;
+    $("#statusModel").textContent = s.model;
+    const gpu = (s.gpus||[]).map(g=>`GPU${g.index} ${g.used_gib}/${g.total_gib}G`).join(" · ");
+    const q = s.queue && (s.queue.running || s.queue.waiting) ? ` · queue: ${s.queue.running?1:0} running, ${s.queue.waiting} waiting` : "";
+    $("#statusMsg").textContent = (s.status==="ready"?"ready":s.status)+q+" — "+(gpu||s.message);
+    $("#status").title = s.message;
+  }catch(e){ $("#statusDot").className="dot error"; $("#statusMsg").textContent="server unreachable"; }
+  updateButtons();
+}
+
+/* ---------------- diagram ---------------- */
+function setActive(id){document.querySelectorAll(".node").forEach(n=>n.classList.toggle("active",n.id===id)); if(id){$("#"+id).classList.add("done")}}
+function clearDiagram(){document.querySelectorAll(".node").forEach(n=>n.classList.remove("active","done")); state.specialists.clear(); renderChips()}
+function renderChips(active=[]){ $("#specChips").innerHTML=[...state.specialists].map(s=>`<span class="chip ${active.includes(s)?"on":""}">${esc(s.replace(/_/g," "))}</span>`).join("") }
+
+/* ---------------- note panel ---------------- */
+function renderNote(soap, opts={}){
+  const f = state.features;
+  const got = FIELDS.filter(([k])=>f[k]&&f[k].trim()).length;
+  $("#fieldChips").innerHTML = FIELDS.map(([k,l,x])=>`<span class="fchip ${f[k]&&f[k].trim()?"got":""}">${x} · ${esc(l)}</span>`).join("") + `<span class="fchip" style="margin-left:auto">${got}/5 collected</span>`;
+  const field = ([k,l]) => `<div class="f ${opts.changed&&opts.changed.includes(k)?"flash":""}"><b>${esc(l)}</b><div class="v ${f[k]&&f[k].trim()?"":"none"}">${esc(f[k]&&f[k].trim()?f[k]:"Not yet collected")}</div></div>`;
+  const sec = (L,title,sub,body,pending) => `<div class="sec ${L} ${pending?"pending":""}"><h5><span class="L">${L}</span>${title}<small>${sub}</small></h5><div class="body">${body}</div></div>`;
+  let html = "";
+  if(opts.banner) html += `<div class="banner">${opts.banner}</div>`;
+  if(opts.source) html += `<details class="src"><summary>Original ACI-Bench transcript (seen only by the patient agent)</summary><pre>${esc(opts.source)}</pre></details>`;
+  html += sec("S","Subjective","from what the patient said",FIELDS.filter(x=>x[2]==="S").map(field).join(""));
+  html += sec("O","Objective","exam & investigations",FIELDS.filter(x=>x[2]==="O").map(field).join(""));
+  const A = soap&&soap.assessment, P = soap&&soap.plan;
+  html += sec("A","Assessment","after evidence is frozen",A?`<div class="f"><div class="v">${esc(A)}</div></div>`:`<div class="f"><div class="v none">Generated when history taking ends</div></div>`,!A);
+  html += sec("P","Plan","model-proposed",P?`<div class="f"><div class="v">${esc(P)}</div></div>`:`<div class="f"><div class="v none">Generated when history taking ends</div></div>`,!P);
+  $("#note").innerHTML = html;
+}
+let noteExtras = {};
+function updateFeatures(features){
+  const changed = FIELDS.map(x=>x[0]).filter(k=>(features[k]||"")!==(state.features[k]||""));
+  state.features = {...features};
+  renderNote(null,{...noteExtras,changed});
+}
+
+/* ---------------- event renderer (live + replay share it) ---------------- */
+let lastTurn = 0, thinkingEl = null;
+function showThinking(text){
+  if(!thinkingEl){thinkingEl = el(`<div class="thinking"><span class="typing"><span></span><span></span><span></span></span><span class="tt"></span></div>`); $("#chat").append(thinkingEl)}
+  thinkingEl.querySelector(".tt").textContent = text; $("#chat").append(thinkingEl); scrollEnd($("#chat"));
+}
+function hideThinking(){ if(thinkingEl){thinkingEl.remove(); thinkingEl=null} }
+function turnDivider(turn, phase){
+  const key = phase+":"+turn;
+  if(state.lastDivider===key) return;
+  state.lastDivider = key;
+  const label = phase==="diagnosis_and_plan" ? "Diagnosis & plan (evidence frozen)" : `Turn ${turn} · history taking`;
+  $("#trace").append(el(`<div class="turn-div">${label}</div>`));
+}
+function addCard(ev, working){
+  const c = agentClass(ev.agent);
+  const card = el(`<div class="card c-${c} ${working?"working":""}"><div class="hd"><b>${esc(agentLabel(ev.agent))}</b><span class="kind">→ ${esc(ev.recipient||"…")} · ${esc(ev.kind||"working")}</span><span class="t"></span></div><div class="bd"></div></div>`);
+  card.querySelector(".hd").onclick = ()=>card.classList.toggle("open");
+  $("#trace").append(card); scrollEnd($("#trace"));
+  return card;
+}
+function handle(ev){
+  const trace = $("#trace");
+  if(trace.querySelector(".empty")) trace.innerHTML = "";
+  switch(ev.type){
+    case "chat": {
+      hideThinking();
+      if(ev.role==="doctor"){ turnDivider(ev.turn,"historytaking"); }
+      $("#chat").append(el(`<div class="msg ${ev.role}"><span class="who">${ev.role==="doctor"?"Doctor agent":(state.mode==="chat"?"You (patient)":"Patient agent")}</span>${esc(ev.content)}</div>`));
+      scrollEnd($("#chat"));
+      $("#turnInfo").textContent = `turn ${ev.turn}`;
+      if(ev.role==="patient") setActive("n-pat");
+      break;
+    }
+    case "phase": turnDivider(ev.turn, ev.phase); if(ev.phase==="diagnosis_and_plan"){ setActive("n-dx"); $("#phaseTag").textContent="Phase 2 · diagnosis & plan — case features are frozen; no new patient facts may be added"; } else { $("#phaseTag").textContent="Phase 1 · history taking — orchestrator → specialists → aggregator for every patient answer"; } break;
+    case "agent_start": {
+      if(ev.agent==="patient"){ setActive("n-pat"); showThinking("Patient agent is answering…"); break; }
+      turnDivider(ev.turn, ev.phase);
+      setActive(ev.phase==="diagnosis_and_plan" && ev.agent==="aggregator" ? "n-dx" : nodeFor(ev.agent));
+      if(ev.agent.startsWith("specialist:")){ state.specialists.add(ev.agent.slice(11)); renderChips([...state.working_specs||[], ev.agent.slice(11)]); }
+      if(!state.working[ev.agent]){ const card = addCard({agent:ev.agent,kind:ev.attempt>1?`retry ${ev.attempt}`:"working…"},true); state.working[ev.agent]={card,start:Date.now()}; }
+      showThinking(`Doctor team: ${agentLabel(ev.agent)} is working…`);
+      break;
+    }
+    case "agent_tokens": { const w = state.working[ev.agent]; if(w) w.card.querySelector(".t").textContent = `${ev.seconds}s · ${ev.completion_tokens??"?"} tok`; break; }
+    case "agent": {
+      turnDivider(ev.turn, ev.phase);
+      let w = state.working[ev.agent]; delete state.working[ev.agent];
+      const card = w ? w.card : addCard(ev,false);
+      card.classList.remove("working");
+      card.querySelector(".kind").textContent = `→ ${ev.recipient} · ${ev.kind}`;
+      card.querySelector(".bd").innerHTML = md(ev.content);
+      if(ev.kind==="routing" || ev.kind==="diagnosis and plan") card.classList.add("open");
+      const id = ev.phase==="diagnosis_and_plan" && ev.agent==="aggregator" ? "n-dx" : nodeFor(ev.agent);
+      if(id) setActive(id);
+      if(ev.agent==="orchestrator"){
+        const m = /Selected specialists:\**\s*([^\n]*)/.exec(ev.content);
+        const list = m ? m[1].split(",").map(s=>s.trim().replace(/\.$/,"").replace(/ /g,"_")).filter(s=>s && !s.startsWith("none")) : [];
+        list.forEach(s=>state.specialists.add(s)); renderChips(list);
+      }
+      scrollEnd($("#trace"));
+      break;
+    }
+    case "features": setActive("n-rec"); updateFeatures(ev.features); break;
+    case "frozen": {
+      setActive("n-dx");
+      noteExtras.banner = `Evidence frozen after ${ev.turn} turn(s) — stop reason: <b>${esc((ev.stop_reason||"").replace(/_/g," "))}</b>${ev.uncollected&&ev.uncollected.length?` · not collected: ${esc(ev.uncollected.join(", "))}`:""}`;
+      renderNote(null,noteExtras);
+      $("#trace").append(el(`<div class="notice info">Evidence frozen (${esc(ev.stop_reason||"")}). The S/O record is now locked; specialists write the assessment and plan.</div>`));
+      showThinking("Doctor team is writing the assessment & plan…");
+      break;
+    }
+    case "soap": {
+      hideThinking(); setActive("n-soap");
+      const m = ev.meta||{};
+      noteExtras.banner = `SOAP note complete · ${m.turns} turn(s) · stop: ${esc((m.stop_reason||"").replace(/_/g," "))}${m.activated_specialists&&m.activated_specialists.length?" · specialists: "+esc(m.activated_specialists.join(", ").replace(/_/g," ")):""}`;
+      renderNote(ev.soap,noteExtras);
+      $("#noteInfo").textContent = "final note";
+      break;
+    }
+    case "queue": if(ev.ahead>0){ showThinking(ev.text); setActive(null); } else { showThinking("Doctor team is starting…"); } break;
+    case "notice": $("#trace").append(el(`<div class="notice ${ev.level==="info"?"info":""}">${esc(ev.text)}</div>`)); scrollEnd($("#trace")); break;
+    case "error": hideThinking(); Object.values(state.working).forEach(w=>w.card.classList.remove("working")); state.working={}; $("#trace").append(el(`<div class="notice error">${esc(ev.message)}</div>`)); $("#chat").append(el(`<div class="notice error">Something went wrong: ${esc(ev.message)}</div>`)); scrollEnd($("#trace")); break;
+    case "done": hideThinking(); if(ev.finished) setActive("n-soap"); break;
+  }
+}
+
+/* ---------------- streaming ---------------- */
+async function stream(url, body){
+  const res = await fetch(url,{method:"POST",headers:{"Content-Type":"application/json"},body:body?JSON.stringify(body):"{}"});
+  if(!res.ok){ let d; try{d=(await res.json()).detail}catch{d=res.statusText} handle({type:"error",message:d}); return null; }
+  const reader = res.body.getReader(), dec = new TextDecoder(); let buf = "", last = null;
+  for(;;){
+    const {value,done} = await reader.read(); if(done) break;
+    buf += dec.decode(value,{stream:true});
+    let i; while((i=buf.indexOf("\n\n"))>=0){
+      const chunk = buf.slice(0,i); buf = buf.slice(i+2);
+      for(const line of chunk.split("\n")) if(line.startsWith("data: ")){ const ev = JSON.parse(line.slice(6)); handle(ev); if(ev.type==="done") last=ev; }
+    }
+  }
+  return last;
+}
+
+/* ---------------- reset / modes ---------------- */
+function resetView(intro){
+  state.replayToken++; state.features={}; state.working={}; state.lastDivider=null; noteExtras={}; hideThinking();
+  clearDiagram(); $("#chat").innerHTML = intro||""; $("#trace").innerHTML = `<div class="empty">Every model call by the orchestrator, specialists and aggregator appears here as it happens.</div>`;
+  $("#turnInfo").textContent=""; $("#noteInfo").textContent="built live from the shared record"; renderNote(null,{});
+}
+const CHAT_INTRO = `<div class="empty"><b>Live demo — you play the patient.</b><br>Press <b>New consultation</b>. The doctor agent asks questions; behind it the orchestrator, specialists and aggregator update the Subjective &amp; Objective record after each answer.<div class="examples">
+<button type="button" data-ex="I'm a 45 year old man. I've had a dull pain in my lower back for about three weeks, it gets worse when I sit for long and it goes down my left leg sometimes.">“45-year-old man, lower back pain radiating down the left leg for three weeks…”</button>
+<button type="button" data-ex="I'm 32, female. I've been getting headaches almost every day for the past month, mostly in the afternoon, and sometimes I feel nauseous.">“32-year-old woman, daily afternoon headaches with nausea for a month…”</button>
+<button type="button" data-ex="I'm 60 and I have type 2 diabetes. My sugars have been high recently, around 220 in the mornings, and I feel tired and thirsty all the time.">“60, type 2 diabetes, morning sugars ~220, tired and thirsty…”</button></div></div>`;
+function setMode(mode){
+  state.mode = mode;
+  document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-selected",t.dataset.mode===mode));
+  ["chat","simulate","replay"].forEach(m=>$("#ctl-"+m).hidden = m!==mode);
+  $("#composer").hidden = mode!=="chat";
+  $("#patDesc").textContent = mode==="chat" ? "You type your issue in your own words" : "Standardized patient agent grounded in an ACI-Bench dialogue";
+  state.session = null;
+  resetView(mode==="chat" ? CHAT_INTRO : mode==="simulate"
+    ? `<div class="empty"><b>Live pipeline run on an ACI-Bench encounter.</b><br>The patient agent only sees the original transcript; the doctor team never does. Pick an encounter and press <b>Run live pipeline</b>.</div>`
+    : `<div class="empty"><b>Replay of saved runs</b> from <code>agentic-pipeline-output/soap_notes</code> — full 15-turn consultations produced by the project (no GPU needed).</div>`);
+  updateButtons();
+}
+function updateButtons(){
+  const chatLive = state.mode==="chat" && state.session && !state.session.finished;
+  $("#newChat").disabled = state.busy || !state.modelReady;
+  $("#finishChat").disabled = state.busy || !chatLive || !(state.session && state.session.turns>0);
+  $("#input").disabled = state.busy || !chatLive;
+  $("#send").disabled = state.busy || !chatLive;
+  $("#input").placeholder = !state.modelReady ? "Waiting for Qwen3-14B to load… (tab ③ works without the model)" : chatLive ? "Describe your issue / answer the doctor…  (Enter to send, Shift+Enter for newline)" : "Press “New consultation” to begin";
+  $("#startSim").disabled = state.busy || !state.modelReady;
+  $("#stopSim").disabled = !(state.busy && state.mode==="simulate");
+}
+
+/* ---------------- live chat ---------------- */
+async function newChat(){
+  const r = await fetch("api/session",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({mode:"chat",max_turns:+$("#chatTurns").value||15})});
+  const d = await r.json(); if(!r.ok){ alertBox(d.detail); return; }
+  resetView(""); state.session = {id:d.session_id, turns:0, finished:false};
+  handle({type:"chat",role:"doctor",turn:1,content:d.first_question});
+  updateButtons(); $("#input").focus();
+}
+async function send(text){
+  text = text.trim(); if(!text || state.busy || !state.session) return;
+  $("#input").value=""; autoSize();
+  handle({type:"chat",role:"patient",turn:state.session.turns+1,content:text});
+  state.busy = true; updateButtons(); showThinking("Doctor team is reviewing your answer…");
+  const done = await stream(`api/session/${state.session.id}/message`,{text});
+  state.busy = false; if(done){ state.session.turns = done.turns; state.session.finished = done.finished; }
+  updateButtons(); if(!state.session.finished) $("#input").focus();
+}
+async function finishChat(){
+  state.busy = true; updateButtons();
+  const done = await stream(`api/session/${state.session.id}/finish`);
+  state.busy = false; if(done){ state.session.finished = done.finished; } updateButtons();
+}
+function alertBox(msg){ $("#chat").append(el(`<div class="notice error">${esc(msg)}</div>`)); scrollEnd($("#chat")); }
+
+/* ---------------- simulation ---------------- */
+async function startSim(){
+  const id = $("#simEnc").value;
+  const r = await fetch("api/session",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({mode:"simulate",encounter_id:id,max_turns:+$("#simTurns").value||6})});
+  const d = await r.json(); if(!r.ok){ alertBox(d.detail); return; }
+  resetView(""); state.session = {id:d.session_id};
+  try{ const s = await (await fetch("api/samples/"+id)).json(); noteExtras.source = s.source_dialogue; renderNote(null,noteExtras);}catch{}
+  state.busy = true; updateButtons();
+  await stream(`api/session/${d.session_id}/simulate`);
+  state.busy = false; updateButtons();
+}
+async function stopSim(){ if(state.session){ await fetch(`api/session/${state.session.id}/stop`,{method:"POST"}); handle({type:"notice",level:"info",text:"Stopping after the current turn; the note will then be written."}); } }
+
+/* ---------------- replay ---------------- */
+async function playReplay(){
+  const id = $("#repEnc").value; const token = ++state.replayToken + 0;
+  resetView(""); const my = state.replayToken;
+  const data = await (await fetch("api/samples/"+id)).json();
+  noteExtras.source = data.source_dialogue; renderNote(null,noteExtras);
+  const delay = +$("#repSpeed").value;
+  $("#phaseTag").textContent = `Replaying ${id} (${data.split}) from agentic-pipeline-output — phase 1 · history taking`;
+  for(const ev of data.events){
+    if(state.replayToken!==my) return;
+    if(ev.type==="agent" && delay){ handle({type:"agent_start",agent:ev.agent,phase:ev.phase,turn:ev.turn}); await sleep(delay*0.6); if(state.replayToken!==my) return; }
+    if(ev.type==="agent" && ev.phase==="diagnosis_and_plan" && ev.agent!=="orchestrator") $("#phaseTag").textContent = "Phase 2 · diagnosis & plan — case features are frozen";
+    handle(ev);
+    if(delay) await sleep(ev.type==="chat"?delay*1.2:delay*0.4);
+  }
+  hideThinking();
+}
+async function loadSamples(){
+  try{
+    const list = await (await fetch("api/samples")).json();
+    const opts = list.map(s=>`<option value="${s.encounter_id}">${s.encounter_id} · ${esc(s.split)} · ${esc((s.summary||"").slice(0,70))}</option>`).join("");
+    $("#repEnc").innerHTML = opts; $("#simEnc").innerHTML = opts;
+    if(list.some(s=>s.encounter_id==="D2N024")) $("#repEnc").value="D2N024";
+  }catch(e){}
+}
+
+/* ---------------- wiring ---------------- */
+document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{ if(!state.busy) setMode(t.dataset.mode) });
+$("#newChat").onclick = newChat; $("#finishChat").onclick = finishChat;
+$("#startSim").onclick = startSim; $("#stopSim").onclick = stopSim; $("#playRep").onclick = playReplay;
+$("#composer").onsubmit = e=>{ e.preventDefault(); send($("#input").value) };
+function autoSize(){ const t=$("#input"); t.style.height="auto"; t.style.height=Math.min(t.scrollHeight,140)+"px" }
+$("#input").addEventListener("input",autoSize);
+$("#input").addEventListener("keydown",e=>{ if(e.key==="Enter"&&!e.shiftKey){ e.preventDefault(); send($("#input").value) } });
+$("#chat").addEventListener("click",async e=>{ const b=e.target.closest("[data-ex]"); if(!b) return; if(!state.session){ if(!state.modelReady){alertBox("Qwen3-14B is still loading.");return} await newChat(); } $("#input").value=b.dataset.ex; autoSize(); $("#input").focus(); });
+setMode("chat"); loadSamples(); pollStatus(); setInterval(pollStatus, 5000);
+</script>
+</body>
+</html>
