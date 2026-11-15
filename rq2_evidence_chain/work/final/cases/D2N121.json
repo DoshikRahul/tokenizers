@@ -1,0 +1,479 @@
+{
+  "case_id": "D2N121",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test1",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient is a 58-year-old male who presented with a right knee injury sustained while water skiing last weekend.\n* He reported swelling and soreness in the knee, especially with squatting or bending.\n* He has been using cold packs and taking Aleve to manage the pain.\n* He has not experienced any locking, instability, or sensation of the knee giving way.\n* He has not undergone any imaging studies, but an X-ray was ordered to rule out broken bones.\n* The patient expresses hope that the X-ray results will be okay.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N121_V01",
+      "section": "Assessment",
+      "text": "The patient has a recent right knee injury with swelling and soreness, especially with squatting or bending.",
+      "status": "ok",
+      "p_chain_broken": 0.0002,
+      "components": [
+        {
+          "component": "The patient has a recent right knee injury with swelling and soreness, especially with squatting or bending.",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F8",
+            "F14",
+            "F15",
+            "F16",
+            "F17"
+          ],
+          "p_broken": 0.0002034255669937146,
+          "passages": [
+            {
+              "pid": "304_2281",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.527
+            },
+            {
+              "pid": "304_2282",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.537
+            },
+            {
+              "pid": "1618_3641",
+              "title": "Tendinitis",
+              "section": "Summary",
+              "cos": 0.507
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N121_V02",
+      "section": "Assessment",
+      "text": "The patient has not experienced any locking, instability, or sensation of the knee giving way.",
+      "status": "ok",
+      "p_chain_broken": 0.0,
+      "components": [
+        {
+          "component": "The patient has not experienced any locking, instability, or sensation of the knee giving way.",
+          "feature_ids": [
+            "F6"
+          ],
+          "p_broken": 1.0129895581798155e-05,
+          "passages": [
+            {
+              "pid": "304_2281",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.445
+            },
+            {
+              "pid": "304_2282",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.474
+            },
+            {
+              "pid": "3924_2289",
+              "title": "Knee Replacement",
+              "section": "What is life like after a knee replacement?",
+              "cos": 0.355
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N121_V03",
+      "section": "Assessment",
+      "text": "The patient has not undergone any imaging studies, but an X-ray was ordered to rule out broken bones.",
+      "status": "ok",
+      "p_chain_broken": 0.0005,
+      "components": [
+        {
+          "component": "The patient has not undergone any imaging studies",
+          "feature_ids": [
+            "F10"
+          ],
+          "p_broken": 6.144060342494967e-06,
+          "passages": [
+            {
+              "pid": "3953_2593",
+              "title": "MRI Scans",
+              "section": "Who needs an MRI scan?",
+              "cos": 0.383
+            },
+            {
+              "pid": "304_2281",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.409
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "An X-ray was ordered to rule out broken bones",
+          "feature_ids": [
+            "F11",
+            "F10"
+          ],
+          "p_broken": 0.00048785095640760834,
+          "passages": [
+            {
+              "pid": "3949_3992",
+              "title": "X-Rays",
+              "section": "Who needs an x-ray?",
+              "cos": 0.539
+            },
+            {
+              "pid": "257_1531",
+              "title": "Fractures",
+              "section": "How are fractures diagnosed?",
+              "cos": 0.641
+            },
+            {
+              "pid": "3949_3995",
+              "title": "X-Rays",
+              "section": "What should you expect after an x-ray?",
+              "cos": 0.508
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N121_V04",
+      "section": "Plan",
+      "text": "The patient will have an X-ray to rule out broken bones.",
+      "status": "ok",
+      "p_chain_broken": 0.018,
+      "components": [
+        {
+          "component": "The patient will have an X-ray to rule out broken bones.",
+          "feature_ids": [
+            "F11",
+            "F10"
+          ],
+          "p_broken": 0.017986076029310745,
+          "passages": [
+            {
+              "pid": "257_1531",
+              "title": "Fractures",
+              "section": "How are fractures diagnosed?",
+              "cos": 0.685
+            },
+            {
+              "pid": "3949_3992",
+              "title": "X-Rays",
+              "section": "Who needs an x-ray?",
+              "cos": 0.539
+            },
+            {
+              "pid": "3949_3995",
+              "title": "X-Rays",
+              "section": "What should you expect after an x-ray?",
+              "cos": 0.503
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N121_V05",
+      "section": "Plan",
+      "text": "The patient will continue to use cold packs and take Aleve to manage the pain.",
+      "status": "ok",
+      "p_chain_broken": 0.0001,
+      "components": [
+        {
+          "component": "The patient will continue to use cold packs and take Aleve to manage the pain.",
+          "feature_ids": [
+            "F5",
+            "F16",
+            "F17",
+            "F19"
+          ],
+          "p_broken": 9.610165896216163e-05,
+          "passages": [
+            {
+              "pid": "196_900",
+              "title": "Common Cold",
+              "section": "What are the treatments for the common cold?",
+              "cos": 0.461
+            },
+            {
+              "pid": "196_901",
+              "title": "Common Cold",
+              "section": "What are the treatments for the common cold?",
+              "cos": 0.528
+            },
+            {
+              "pid": "23_246",
+              "title": "Arthritis",
+              "section": "What are the treatments for arthritis?",
+              "cos": 0.419
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N121_V06",
+      "section": "Plan",
+      "text": "The patient will avoid putting weight on the affected knee and will try to rest it as much as possible.",
+      "status": "ok",
+      "p_chain_broken": 0.2689,
+      "components": [
+        {
+          "component": "The patient will avoid putting weight on the affected knee and will try to rest it as much as possible.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.2689407006530625,
+          "passages": [
+            {
+              "pid": "3924_2289",
+              "title": "Knee Replacement",
+              "section": "What is life like after a knee replacement?",
+              "cos": 0.492
+            },
+            {
+              "pid": "304_2281",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.526
+            },
+            {
+              "pid": "3924_2283",
+              "title": "Knee Replacement",
+              "section": "What is knee replacement surgery?",
+              "cos": 0.44
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N121_V07",
+      "section": "Plan",
+      "text": "The patient will follow up with the doctor once the X-ray results are available.",
+      "status": "ok",
+      "p_chain_broken": 0.0003,
+      "components": [
+        {
+          "component": "The patient will follow up with the doctor once the X-ray results are available.",
+          "feature_ids": [
+            "F11",
+            "F1",
+            "F4",
+            "F14",
+            "F15",
+            "F16",
+            "F17",
+            "F19"
+          ],
+          "p_broken": 0.00029595544172171095,
+          "passages": [
+            {
+              "pid": "304_2281",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.55
+            },
+            {
+              "pid": "3924_2289",
+              "title": "Knee Replacement",
+              "section": "What is life like after a knee replacement?",
+              "cos": 0.49
+            },
+            {
+              "pid": "304_2282",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.518
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient is a 58-year-old male who presented with a right knee injury sustained while water skiing last weekend.\n* He reported swelling and soreness in the knee, especially with squatting or bending.\n* He has been using cold packs and taking Aleve to manage the pain.\n* He has not experienced any locking, instability, or sensation of the knee giving way.\n* He has not undergone any imaging studies, but an X-ray was ordered to rule out broken bones.\n* The patient expresses hope that the X-ray results will be okay.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient has a recent right knee injury with swelling and soreness, especially with squatting or bending.",
+      "The patient has not experienced any locking, instability, or sensation of the knee giving way.",
+      "The patient has not undergone any imaging studies, but an X-ray was ordered to rule out broken bones."
+    ],
+    "plan": [
+      "The patient will have an X-ray to rule out broken bones.",
+      "The patient will continue to use cold packs and take Aleve to manage the pain.",
+      "The patient will avoid putting weight on the affected knee and will try to rest it as much as possible.",
+      "The patient will follow up with the doctor once the X-ray results are available."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 58 years old, and I'm male. I came in because I hurt my right knee while water skiing last weekend. It's been swollen and sore ever since, especially when I try to squat or bend it.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your age, gender, and a detailed description of your current symptoms?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 58 years old, and I'm male. I came in because I hurt my right knee while water skiing last weekend. It's been swollen and sore ever since, especially when I try to squat or bend it. It's been pretty uncomfortable, and I've been using cold packs and taking Aleve to help with the pain.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any locking, instability, or a sensation of the knee giving way since the injury?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any locking or the knee giving way, but it's been pretty sore to bend or squat, and I've been careful not to put too much weight on it. I've been using cold packs and taking Aleve to manage the pain.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the mechanism of the injury in more detail? For example, did you twist your knee, hit it on something, or experience a sudden impact during water skiing?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I was doing a jump on the boat and kinda twisted when I landed, which is when I felt something stretch and then my knee started swelling up after that. I was able to get out of the water on my own, but it was really sore afterward.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies such as X-rays or MRI for your knee injury, and if so, what were the findings?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging studies done for my knee yet. The doctor mentioned they were going to order an X-ray to make sure there's no broken bones, so that's something that's going to happen soon.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient experienced any numbness, tingling, or weakness in the leg or foot associated with the knee injury?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any numbness or tingling in my foot or leg from the injury. It's just been swelling and pain in the knee itself.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any locking or giving way of the knee since the injury?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any locking or the knee giving way, but it's been pretty sore to bend or squat, and I've been careful not to put too much weight on it. I've been using cold packs and taking Aleve to manage the pain.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you received the results of the X-ray that was ordered for your knee injury? If so, what were the findings?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't received the results of the X-ray yet. The doctor said they were going to order it to make sure there's no broken bones, so I'm waiting on that. I hope it comes back okay.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any popping or snapping sensations in the knee at the time of injury, and are you able to fully extend the knee without pain?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I didn't hear or feel anything pop at the time of the injury. It just felt like something stretched, and then it started swelling. As for extending my knee, it's pretty sore to bend or squat, so I haven't been trying to fully extend it because it hurts too much.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you been able to bear weight on the affected knee since the injury, and if so, to what extent?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I've been able to bear some weight on it, but it's been very sore to walk on, especially when I have to squat or climb stairs. I've been trying to keep it elevated and use the cold packs to help with the swelling. I haven't been putting much weight on it at all, really just trying to rest it as much as possible.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you received the results of the X-ray yet, and if so, what did they show?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't received the results of the X-ray yet. The doctor ordered it to make sure there's no broken bones, so I'm still waiting on that. I hope it comes back okay.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe any specific activities that make the pain worse or better? Also, have you noticed any changes in the color or temperature of your knee or leg?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The pain gets worse when I try to squat, bend my knee, or climb stairs. It feels better when I rest and use the cold packs. I haven't noticed any changes in the color or temperature of my knee or leg.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any previous imaging studies for this knee injury, such as an MRI or ultrasound?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any previous imaging studies for this knee injury. This is the first time I've had any issues with it, so I don't have an MRI or ultrasound of it. The doctor just ordered an X-ray to check for any broken bones.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any numbness, tingling, or weakness in your leg or foot since the injury?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any numbness, tingling, or weakness in my leg or foot since the injury. It's just been swelling and pain in the knee area.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any previous imaging studies for this knee injury, such as an MRI or ultrasound?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any previous imaging studies for this knee injury. This is the first time I've had any issues with it, so I don't have an MRI or ultrasound of it. The doctor just ordered an X-ray to check for any broken bones.",
+      "tid": "T29"
+    }
+  ]
+}

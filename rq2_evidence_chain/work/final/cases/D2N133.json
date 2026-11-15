@@ -1,0 +1,286 @@
+{
+  "case_id": "D2N133",
+  "rq2_split": "va_dev",
+  "rq1_split": "dev",
+  "aci_source_split": "test2",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient is a 27-year-old female who has been experiencing right knee pain, especially during breaststroke swimming, for a few weeks.\n* The pain is described as a dull ache that becomes sharper when moving the knee in a specific way, especially during breaststroke.\n* The patient has not noticed any swelling, stiffness, or instability in the knee.\n* The pain started after increasing swimming frequency and intensity.\n* The patient has not experienced any weakness in the quadriceps or difficulty with straight leg raises.\n* The pain has not improved with rest and has not tried any specific exercises for it yet.",
+    "objective": "* The doctor reviewed the x-ray and reported it as normal."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N133_V01",
+      "section": "Assessment",
+      "text": "The patient has patellofemoral pain syndrome, likely caused by overuse while swimming, as diagnosed by the doctor.",
+      "status": "flagged",
+      "p_chain_broken": 0.9149,
+      "components": [
+        {
+          "component": "The patient has patellofemoral pain syndrome, likely caused by overuse while swimming, as diagnosed by the doctor.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.914900617385041,
+          "passages": [
+            {
+              "pid": "4621_2239",
+              "title": "Joint Disorders",
+              "section": "What types of joint disorders happen from overuse?",
+              "cos": 0.487
+            },
+            {
+              "pid": "304_2281",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.508
+            },
+            {
+              "pid": "1230_524",
+              "title": "Bursitis",
+              "section": "Summary",
+              "cos": 0.459
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N133_V02",
+      "section": "Plan",
+      "text": "The doctor suggested straight leg raises to strengthen the quadriceps.",
+      "status": "ok",
+      "p_chain_broken": 0.2451,
+      "components": [
+        {
+          "component": "The doctor suggested straight leg raises to strengthen the quadriceps.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.24508437902562835,
+          "passages": [
+            {
+              "pid": "509_2313",
+              "title": "Leg Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.408
+            },
+            {
+              "pid": "1532_3315",
+              "title": "Sciatica",
+              "section": "Summary",
+              "cos": 0.408
+            },
+            {
+              "pid": "304_2281",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.396
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N133_V03",
+      "section": "Plan",
+      "text": "The patient is awaiting the results of the pending MRI of the right knee to confirm the diagnosis and rule out other potential causes.",
+      "status": "ok",
+      "p_chain_broken": 0.0293,
+      "components": [
+        {
+          "component": "The patient is awaiting the results of the pending MRI of the right knee to confirm the diagnosis and rule out other potential causes.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.029312053738932375,
+          "passages": [
+            {
+              "pid": "304_2281",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.491
+            },
+            {
+              "pid": "304_2282",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.467
+            },
+            {
+              "pid": "3953_2593",
+              "title": "MRI Scans",
+              "section": "Who needs an MRI scan?",
+              "cos": 0.456
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient is a 27-year-old female who has been experiencing right knee pain, especially during breaststroke swimming, for a few weeks.\n* The pain is described as a dull ache that becomes sharper when moving the knee in a specific way, especially during breaststroke.\n* The patient has not noticed any swelling, stiffness, or instability in the knee.\n* The pain started after increasing swimming frequency and intensity.\n* The patient has not experienced any weakness in the quadriceps or difficulty with straight leg raises.\n* The pain has not improved with rest and has not tried any specific exercises for it yet.",
+    "objective": "* The doctor reviewed the x-ray and reported it as normal.",
+    "assessment": [],
+    "plan": [
+      "The doctor suggested straight leg raises to strengthen the quadriceps.",
+      "The patient is awaiting the results of the pending MRI of the right knee to confirm the diagnosis and rule out other potential causes."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 27 years old and female. I've been feeling some really bad knee pain in my right knee, especially when I swim using the breaststroke. It started a few weeks ago, and it's been getting worse.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Can you describe the nature of the knee pain (e.g., sharp, dull, throbbing) and whether it is constant or only occurs during specific movements, such as during the breaststroke? Have you experienced any swelling, stiffness, or instability in the knee?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The pain feels like a dull ache, but it gets sharper when I move my knee a certain way, especially when I kick out my legs during the breaststroke. It doesn't happen all the time, just when I'm swimming, and I haven't noticed any swelling or instability, just pain when I do that movement.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Can you describe the specific movement during breaststroke that causes the sharp pain in your right knee? Have you noticed any patterns or triggers that make the pain worse?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The sharp pain happens when I kick my legs out like a frog during the breaststroke. It starts to hurt after I swim a couple of laps, and it feels worse the more I do it. I didn’t have any issues before I started swimming more regularly.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any physical examination or imaging studies for your knee pain, such as an X-ray or MRI?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The doctor showed me the X-ray, and it was normal. He didn’t find any swelling, but there was pain when he moved my patella and when he had me stiffen my leg. He said it looks like chondromalacia of the patella, which is probably from overuse with swimming.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Thank you for sharing that information. To better understand your condition, could you describe the exact location of the pain on your knee and whether it radiates anywhere? Also, have you noticed any clicking, popping, or grinding sensations in the knee during or after swimming?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The pain is on the front of my right knee, around the patella area, and it doesn't really radiate anywhere else. I haven't noticed any clicking or popping, just the pain when I move my leg that way during the breaststroke.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any weakness in your quadriceps or any difficulty with straight leg raises? Have you had any prior episodes of patellar dislocation or subluxation?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any weakness in my quadriceps, and I can do straight leg raises without too much trouble. I don't think I've ever had any patellar dislocation or subluxation before.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe any other activities that might be causing or aggravating the knee pain, and have you noticed any improvement or worsening with rest or specific exercises?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't noticed any other activities that cause the pain except for the breaststroke. The pain started after I began swimming more regularly, and it hasn't improved with rest. I haven't tried any specific exercises for it yet, but the doctor suggested straight leg raises to strengthen my quadriceps.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any MRI or other advanced imaging of the right knee, and if so, what were the findings?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had an MRI or any other advanced imaging of my right knee. The doctor only showed me the X-ray, which was normal. He didn’t mention anything about needing further imaging.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any locking, catching, or giving way of the knee during or after swimming? This could help differentiate between patellofemoral pain syndrome and other intra-articular pathology.",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any locking, catching, or giving way of the knee during or after swimming. It just hurts when I move my leg a certain way, especially during the breaststroke.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any numbness, tingling, or weakness in your right leg, especially around the knee or lower extremity?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any numbness, tingling, or weakness in my right leg, especially around the knee or lower extremity. The only issue I have is the pain in my right knee when I swim using the breaststroke.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any recent changes in your swimming technique or increased training intensity that might contribute to the knee pain?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't changed my swimming technique or increased my training intensity recently. I just started swimming more regularly over the past month, and the pain began after that. I was doing it pretty consistently with the same form.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any clicking, popping, or locking of the knee during or after swimming?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any clicking, popping, or locking of the knee during or after swimming. It just hurts when I move my leg a certain way, especially during the breaststroke.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any specific movements or positions outside of swimming that reproduce the knee pain, and if so, what are they?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any specific movements or positions outside of swimming that reproduce the knee pain. It only happens when I'm swimming, especially with the breaststroke. Otherwise, my knee feels fine.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any numbness, tingling, or weakness in your right leg, particularly in the distribution of the femoral or peroneal nerves?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any numbness, tingling, or weakness in my right leg, particularly in the distribution of the femoral or peroneal nerves. The only issue I have is the pain in my right knee when I swim using the breaststroke.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of the pending MRI of the right knee? This will help in confirming the diagnosis and ruling out other potential causes such as a meniscal tear or ligamentous injury.",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of an MRI yet. The doctor looked at my x-ray, and it was normal. He said there's no swelling, but there's pain when moving my patella or when he held my leg out. He mentioned something called chondromalacia of the patella, which he thinks is from overuse while swimming.",
+      "tid": "T29"
+    }
+  ]
+}

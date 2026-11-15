@@ -1,0 +1,344 @@
+{
+  "case_id": "D2N081",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "dev",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports that everything else seems the same as before.\n* Patient is a 53-year-old female diagnosed with stage three non-small cell lung cancer and undergoing neoadjuvant chemotherapy.\n* The patient reports receiving neoadjuvant chemotherapy for a duration prior to their last treatment, which occurred a few days ago, but does not recall the exact dosages.\n* The patient reports receiving a combination of cisplatin and etoposide as part of their neoadjuvant chemotherapy regimen.\n* The patient reports having completed their last treatment just a few days prior to the follow-up appointment.\n* The patient reports tolerating their last treatment well, which was completed just a few days prior to the current visit.\n* Patient reports a minimal dry cough and a sore throat, feeling a little more tired than usual, but no nausea or vomiting.\n* Patient has been tolerating chemotherapy well, with no shortness of breath.\n* Patient reports decreased appetite, but no weight loss.\n* Fatigue is present, but not overwhelming, and patient can still manage daily activities.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N081_V01",
+      "section": "Assessment",
+      "text": "Patient has stage three non-small cell lung cancer with adenocarcinoma, diagnosed after neoadjuvant chemotherapy.",
+      "status": "ok",
+      "p_chain_broken": 0.0001,
+      "components": [
+        {
+          "component": "Patient has stage three non-small cell lung cancer with adenocarcinoma, diagnosed after neoadjuvant chemotherapy.",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F7"
+          ],
+          "p_broken": 6.605147542810895e-05,
+          "passages": [
+            {
+              "pid": "86_2374",
+              "title": "Lung Cancer",
+              "section": "What is lung cancer?",
+              "cos": 0.487
+            },
+            {
+              "pid": "86_2380",
+              "title": "Lung Cancer",
+              "section": "How is lung cancer diagnosed?",
+              "cos": 0.502
+            },
+            {
+              "pid": "86_2381",
+              "title": "Lung Cancer",
+              "section": "What are the treatments for lung cancer?",
+              "cos": 0.48
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N081_V02",
+      "section": "Assessment",
+      "text": "Patient is experiencing mild dry cough, sore throat, and decreased appetite.",
+      "status": "ok",
+      "p_chain_broken": 0.0,
+      "components": [
+        {
+          "component": "Patient is experiencing mild dry cough, sore throat, and decreased appetite.",
+          "feature_ids": [
+            "F13",
+            "F14",
+            "F15",
+            "F21",
+            "F22"
+          ],
+          "p_broken": 2.1444787362260084e-05,
+          "passages": [
+            {
+              "pid": "4748_3444",
+              "title": "Sore Throat",
+              "section": "Summary",
+              "cos": 0.544
+            },
+            {
+              "pid": "1660_3658",
+              "title": "Throat Disorders",
+              "section": "Summary",
+              "cos": 0.514
+            },
+            {
+              "pid": "246_1387",
+              "title": "Esophagus Disorders",
+              "section": "What are symptoms of esophagus disorders?",
+              "cos": 0.523
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N081_V03",
+      "section": "Assessment",
+      "text": "Patient is tolerating chemotherapy well, with no significant changes in weight or new symptoms.",
+      "status": "ok",
+      "p_chain_broken": 0.0067,
+      "components": [
+        {
+          "component": "Patient is tolerating chemotherapy well, with no significant changes in weight or new symptoms.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.006692802048877512,
+          "passages": [
+            {
+              "pid": "464_559",
+              "title": "Cancer Chemotherapy",
+              "section": "What is cancer chemotherapy?",
+              "cos": 0.555
+            },
+            {
+              "pid": "464_561",
+              "title": "Cancer Chemotherapy",
+              "section": "What can I expect when getting chemotherapy?",
+              "cos": 0.526
+            },
+            {
+              "pid": "464_560",
+              "title": "Cancer Chemotherapy",
+              "section": "What are the side effects of chemotherapy?",
+              "cos": 0.567
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N081_V04",
+      "section": "Plan",
+      "text": "Follow-up appointment to monitor patient's condition and symptoms.",
+      "status": "ok",
+      "p_chain_broken": 0.0041,
+      "components": [
+        {
+          "component": "Follow-up appointment to monitor patient's condition and symptoms.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.004070113128204338,
+          "passages": [
+            {
+              "pid": "464_559",
+              "title": "Cancer Chemotherapy",
+              "section": "What is cancer chemotherapy?",
+              "cos": 0.455
+            },
+            {
+              "pid": "464_561",
+              "title": "Cancer Chemotherapy",
+              "section": "What can I expect when getting chemotherapy?",
+              "cos": 0.522
+            },
+            {
+              "pid": "3073_3584",
+              "title": "Talking With Your Doctor",
+              "section": "Summary",
+              "cos": 0.367
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N081_V05",
+      "section": "Plan",
+      "text": "Patient will continue to receive chemotherapy as prescribed.",
+      "status": "ok",
+      "p_chain_broken": 0.0022,
+      "components": [
+        {
+          "component": "Patient will continue to receive chemotherapy as prescribed.",
+          "feature_ids": [
+            "F4",
+            "F7",
+            "F8",
+            "F9",
+            "F10",
+            "F11",
+            "F12",
+            "F13"
+          ],
+          "p_broken": 0.0021827060484213763,
+          "passages": [
+            {
+              "pid": "464_560",
+              "title": "Cancer Chemotherapy",
+              "section": "What are the side effects of chemotherapy?",
+              "cos": 0.607
+            },
+            {
+              "pid": "464_561",
+              "title": "Cancer Chemotherapy",
+              "section": "What can I expect when getting chemotherapy?",
+              "cos": 0.6
+            },
+            {
+              "pid": "464_559",
+              "title": "Cancer Chemotherapy",
+              "section": "What is cancer chemotherapy?",
+              "cos": 0.524
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N081_V06",
+      "section": "Plan",
+      "text": "Doctor will assess patient's appetite and weight changes.",
+      "status": "ok",
+      "p_chain_broken": 0.0002,
+      "components": [
+        {
+          "component": "Doctor will assess patient's appetite and weight changes.",
+          "feature_ids": [
+            "F15",
+            "F20",
+            "F21",
+            "F22"
+          ],
+          "p_broken": 0.00017952610457952102,
+          "passages": [
+            {
+              "pid": "86_2378",
+              "title": "Lung Cancer",
+              "section": "What are the symptoms of lung cancer?",
+              "cos": 0.408
+            },
+            {
+              "pid": "5461_2431",
+              "title": "Malnutrition",
+              "section": "How is malnutrition diagnosed?",
+              "cos": 0.388
+            },
+            {
+              "pid": "88_890",
+              "title": "Colorectal Cancer",
+              "section": "What are the symptoms of colorectal cancer?",
+              "cos": 0.416
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports that everything else seems the same as before.\n* Patient is a 53-year-old female diagnosed with stage three non-small cell lung cancer and undergoing neoadjuvant chemotherapy.\n* The patient reports receiving neoadjuvant chemotherapy for a duration prior to their last treatment, which occurred a few days ago, but does not recall the exact dosages.\n* The patient reports receiving a combination of cisplatin and etoposide as part of their neoadjuvant chemotherapy regimen.\n* The patient reports having completed their last treatment just a few days prior to the follow-up appointment.\n* The patient reports tolerating their last treatment well, which was completed just a few days prior to the current visit.\n* Patient reports a minimal dry cough and a sore throat, feeling a little more tired than usual, but no nausea or vomiting.\n* Patient has been tolerating chemotherapy well, with no shortness of breath.\n* Patient reports decreased appetite, but no weight loss.\n* Fatigue is present, but not overwhelming, and patient can still manage daily activities.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "Patient has stage three non-small cell lung cancer with adenocarcinoma, diagnosed after neoadjuvant chemotherapy.",
+      "Patient is experiencing mild dry cough, sore throat, and decreased appetite.",
+      "Patient is tolerating chemotherapy well, with no significant changes in weight or new symptoms."
+    ],
+    "plan": [
+      "Follow-up appointment to monitor patient's condition and symptoms.",
+      "Patient will continue to receive chemotherapy as prescribed.",
+      "Doctor will assess patient's appetite and weight changes."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Doctor",
+      "text": "Hello. Could you tell me your age and gender, and what brings you in today?",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 53 years old, and I'm a female. I'm here for a follow-up after being diagnosed with stage three non-small cell lung cancer and undergoing neoadjuvant chemotherapy. I also had a biopsy that came back positive for adenocarcinoma, and I'm here to check on how I'm doing since my last treatment.",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide details about the timeline of your diagnosis, including when the biopsy was performed and when the neoadjuvant chemotherapy started and ended?",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I was diagnosed with stage three non-small cell lung cancer, and the biopsy was done before starting the neoadjuvant chemotherapy. I had my last treatment just a few days ago, and I'm here for a follow-up to see how I'm doing.",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide details about the timeline of your diagnosis, the biopsy procedure, and the specific regimen and duration of your neoadjuvant chemotherapy? Additionally, have you experienced any symptoms or side effects since completing your last treatment?",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I had my last treatment just a few days ago, and I’ve been tolerating it pretty well. I have a minimal cough and a sore throat, and I’ve been feeling a little more tired than usual, but I haven’t had any nausea or vomiting. I haven’t noticed any shortness of breath, just a dry cough that comes and goes.",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide details about the specific neoadjuvant chemotherapy regimen you received, including the drugs used, dosages, and the duration of treatment?",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I was on a combination of two chemotherapies, cisplatin and etoposide. I don't know the exact dosages, but I was getting it for a while before my last treatment just a few days ago. I’ve been tolerating it pretty well overall.",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the duration and severity of your cough and sore throat? Have you noticed any changes in your appetite or weight since starting the chemotherapy? Additionally, could you tell me how your fatigue is affecting your daily activities?",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Patient",
+      "text": "My cough is pretty mild, just a dry one that comes and goes, and the sore throat is persistent but not constant—it feels worse some days and better on others. I haven’t had much of an appetite lately, so I’m not eating as much as I normally would, but I haven’t lost weight yet. The fatigue is there, but it’s not overwhelming; it just makes me feel a little more tired than usual, but I can still manage my daily activities.",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Thank you for sharing that. I understand that you're experiencing some discomfort with your cough and sore throat, and that your appetite has decreased. To better assess your condition, could you please tell me if you've noticed any changes in the color or consistency of your sputum, if you've had any difficulty swallowing, or if you've experienced any chest pain or shortness of breath recently?",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't noticed any changes in the color or consistency of my sputum because it's mostly a dry cough. I don't have any difficulty swallowing right now, and I haven't had any chest pain or shortness of breath recently.",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please let me know if you have experienced any changes in your appetite or weight since completing your chemotherapy? Additionally, have you noticed any new symptoms or changes in your existing symptoms that you haven't mentioned yet?",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't noticed any significant changes in my weight, but my appetite has been lower than usual. I haven't had any new symptoms besides the cough and sore throat, and I don't feel like anything is getting stuck when I eat. Everything else seems the same as before.",
+      "tid": "T14"
+    }
+  ]
+}

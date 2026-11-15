@@ -1,0 +1,289 @@
+{
+  "case_id": "D2N146",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test2",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports experiencing nausea, but denies vomiting.\n* The patient is a 45-year-old male who has been experiencing right upper quadrant (RUQ) abdominal pain for several weeks, which is described as a squeezing, severe pain that is worsened by eating and is not associated with fever, chills, or changes in bowel habits.\n* The patient has a family history of gallbladder disease, with both parents having had their gallbladders removed.\n* The patient reports no recent weight loss and no changes in bowel habits.\n* The patient has been advised to avoid high-fat foods, but the pain persists.\n* The patient reports that they are unaware of any blood tests performed since their gallstones were diagnosed.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N146_V01",
+      "section": "Assessment",
+      "text": "The patient has a history of gallstones, diagnosed by ultrasound, and has been experiencing persistent RUQ abdominal pain despite dietary changes.",
+      "status": "ok",
+      "p_chain_broken": 0.0059,
+      "components": [
+        {
+          "component": "The patient has a history of gallstones, diagnosed by ultrasound",
+          "feature_ids": [
+            "F11"
+          ],
+          "p_broken": 6.605138884398983e-05,
+          "passages": [
+            {
+              "pid": "4643_1546",
+              "title": "Gallstones",
+              "section": "Summary",
+              "cos": 0.693
+            },
+            {
+              "pid": "4645_1543",
+              "title": "Gallbladder Cancer",
+              "section": "Summary",
+              "cos": 0.599
+            },
+            {
+              "pid": "4643_1545",
+              "title": "Gallstones",
+              "section": "Summary",
+              "cos": 0.592
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient has been experiencing persistent RUQ abdominal pain despite dietary changes",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F10",
+            "F11",
+            "F12",
+            "F15"
+          ],
+          "p_broken": 0.005911007963260613,
+          "passages": [
+            {
+              "pid": "4643_1545",
+              "title": "Gallstones",
+              "section": "Summary",
+              "cos": 0.621
+            },
+            {
+              "pid": "4645_1542",
+              "title": "Gallbladder Cancer",
+              "section": "Summary",
+              "cos": 0.618
+            },
+            {
+              "pid": "4643_1546",
+              "title": "Gallstones",
+              "section": "Summary",
+              "cos": 0.569
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N146_V02",
+      "section": "Plan",
+      "text": "The patient will be referred for further evaluation and management of his gallstones, including consideration of cholecystectomy or other treatment options.",
+      "status": "ok",
+      "p_chain_broken": 0.1824,
+      "components": [
+        {
+          "component": "The patient will be referred for further evaluation and management of his gallstones, including consideration of cholecystectomy or other treatment options.",
+          "feature_ids": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F10",
+            "F11",
+            "F12"
+          ],
+          "p_broken": 0.1824248770727477,
+          "passages": [
+            {
+              "pid": "4643_1545",
+              "title": "Gallstones",
+              "section": "Summary",
+              "cos": 0.655
+            },
+            {
+              "pid": "4645_1542",
+              "title": "Gallbladder Cancer",
+              "section": "Summary",
+              "cos": 0.635
+            },
+            {
+              "pid": "4643_1546",
+              "title": "Gallstones",
+              "section": "Summary",
+              "cos": 0.605
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports experiencing nausea, but denies vomiting.\n* The patient is a 45-year-old male who has been experiencing right upper quadrant (RUQ) abdominal pain for several weeks, which is described as a squeezing, severe pain that is worsened by eating and is not associated with fever, chills, or changes in bowel habits.\n* The patient has a family history of gallbladder disease, with both parents having had their gallbladders removed.\n* The patient reports no recent weight loss and no changes in bowel habits.\n* The patient has been advised to avoid high-fat foods, but the pain persists.\n* The patient reports that they are unaware of any blood tests performed since their gallstones were diagnosed.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient has a history of gallstones, diagnosed by ultrasound, and has been experiencing persistent RUQ abdominal pain despite dietary changes."
+    ],
+    "plan": [
+      "The patient will be referred for further evaluation and management of his gallstones, including consideration of cholecystectomy or other treatment options."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 45 years old and male. I'm here because I've been having this pain on the right side of my belly under my ribs for several weeks, and even after changing my diet to avoid high-fat foods, the pain is still really bad sometimes.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Can you describe the nature of the pain (e.g., sharp, dull, burning), its radiation (e.g., to the back or shoulder), and whether it is associated with any specific activities or meals?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The pain feels like a squeezing, severe pain, and it's right under my ribs on the right side. It comes and goes, but when it does come, it's really bad and I get nauseated. It usually happens after I eat, either right away or a couple of hours later.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any episodes of jaundice, dark urine, or pale stools during this time? Have you had any recent weight loss or changes in bowel habits?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any jaundice, dark urine, or pale stools. I haven't lost any weight recently, and my bowel habits haven't changed much.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any fever, chills, or changes in bowel habits such as diarrhea or constipation associated with the pain?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had any fever or chills with the pain, and my bowel habits haven't really changed. I do get nauseated sometimes, but I haven't vomited.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient experienced any radiation of the pain to the back, shoulder, or right shoulder? Additionally, has there been any history of similar episodes or family history of gallbladder disease?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The pain doesn't radiate to my back or shoulder, just stays right under my ribs on the right side. Both my mom and dad had gallbladder issues and had their gallbladders removed, so there's a family history of it.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies or blood tests to evaluate the cause of your right upper quadrant pain?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Yes, I had an ultrasound done, and they found gallstones in my gallbladder. The doctor who did that recommended avoiding high-fat foods, but I'm still having a lot of pain, which is why I came to see you.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any recent episodes of severe pain that required you to seek medical attention or take medication to manage it?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any recent episodes of severe pain that required me to seek medical attention or take medication for it. I've been managing it with dietary changes, but they haven't really helped much.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient experienced any changes in bowel habits, such as diarrhea or constipation, since the onset of the abdominal pain?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, my bowel habits haven't changed much since the pain started. I haven't had any diarrhea or constipation related to it.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any blood tests, such as a complete blood count (CBC), liver function tests (LFTs), or inflammatory markers (e.g., CRP or amylase/lipase), to assess for signs of cholecystitis or other biliary pathology?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know about any blood tests I've had, but I was told I had gallstones from an ultrasound, and the doctor recommended avoiding high-fat foods. I still have a lot of pain, so that's why I came to see you.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any blood tests, such as a complete blood count or liver function tests, since your gallstones were diagnosed?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know about any blood tests I've had since my gallstones were diagnosed. I was just told about the gallstones from the ultrasound, and the doctor recommended avoiding high-fat foods, but I'm still having a lot of pain. That's why I came to see you.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any blood tests, such as a complete blood count or liver function tests, since your gallstones were diagnosed?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know about any blood tests I've had since my gallstones were diagnosed. I was just told about the gallstones from the ultrasound, and the doctor recommended avoiding high-fat foods, but I'm still having a lot of pain. That's why I came to see you.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any blood tests, such as a complete blood count or liver function tests, since your gallstones were diagnosed?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know about any blood tests I've had since my gallstones were diagnosed. I was just told about the gallstones from the ultrasound, and the doctor recommended avoiding high-fat foods, but I'm still having a lot of pain. That's why I came to see you.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any recent blood tests, specifically liver function tests (LFTs), complete blood count (CBC), or inflammatory markers (e.g., CRP, amylase, lipase) since your gallstone diagnosis?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know about any blood tests I've had since my gallstones were diagnosed. I was just told about the gallstones from the ultrasound, and the doctor recommended avoiding high-fat foods, but I'm still having a lot of pain. That's why I came to see you.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any recent blood tests, such as liver function tests (LFTs), complete blood count (CBC), or inflammatory markers (e.g., CRP, amylase, lipase), since your gallstone diagnosis?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know about any blood tests I've had since my gallstones were diagnosed. I was just told about the gallstones from the ultrasound, and the doctor recommended avoiding high-fat foods, but I'm still having a lot of pain. That's why I came to see you.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any recent blood tests, such as liver function tests (LFTs), complete blood count (CBC), or inflammatory markers (e.g., CRP, amylase, lipase), since your gallstone diagnosis?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know about any blood tests I've had since my gallstones were diagnosed. I was just told about the gallstones from the ultrasound, and the doctor recommended avoiding high-fat foods, but I'm still having a lot of pain. That's why I came to see you.",
+      "tid": "T29"
+    }
+  ]
+}

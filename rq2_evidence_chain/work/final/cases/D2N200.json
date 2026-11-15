@@ -1,0 +1,472 @@
+{
+  "case_id": "D2N200",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test3",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* Patient is a 58-year-old female who presents with headaches on the top of her head, which come and go, and are accompanied by dizziness and blurry vision. She has a history of high blood pressure and diabetes. She is not taking her medication regularly due to stomachache.\n* The patient reports that the headaches are throbbing and are worse when her blood pressure is high. She has tried taking Tylenol, which provides some relief.\n* She experiences chest pain, which is described as a pressure feeling, not sharp or dull, and does not have a specific trigger.\n* The patient has not had her blood pressure checked recently, but knows it has been high for a while.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N200_V01",
+      "section": "Assessment",
+      "text": "The patient has a history of high blood pressure and diabetes, and is experiencing headaches on the top of her head, which are accompanied by dizziness and blurry vision.",
+      "status": "ok",
+      "p_chain_broken": 0.0,
+      "components": [
+        {
+          "component": "The patient has a history of high blood pressure and diabetes",
+          "feature_ids": [
+            "F6",
+            "F13"
+          ],
+          "p_broken": 1.0129826750508083e-05,
+          "passages": [
+            {
+              "pid": "6661_2042",
+              "title": "How to Prevent Diabetes",
+              "section": "Who is at risk for type 2 diabetes?",
+              "cos": 0.482
+            },
+            {
+              "pid": "6450_2064",
+              "title": "How to Prevent High Blood Pressure",
+              "section": "Who is more likely to develop high blood pressure?",
+              "cos": 0.497
+            },
+            {
+              "pid": "5930_1116",
+              "title": "Diabetes Type 2",
+              "section": "Who is at risk for type 2 diabetes?",
+              "cos": 0.453
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient is experiencing headaches on the top of her head, which are accompanied by dizziness and blurry vision",
+          "feature_ids": [
+            "F2",
+            "F4"
+          ],
+          "p_broken": 2.7535389119995584e-05,
+          "passages": [
+            {
+              "pid": "273_1683",
+              "title": "Headache",
+              "section": "Summary",
+              "cos": 0.607
+            },
+            {
+              "pid": "216_1214",
+              "title": "Dizziness and Vertigo",
+              "section": "What causes dizziness and vertigo?",
+              "cos": 0.565
+            },
+            {
+              "pid": "216_1215",
+              "title": "Dizziness and Vertigo",
+              "section": "How is the cause of dizziness and vertigo diagnosed?",
+              "cos": 0.575
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N200_V02",
+      "section": "Assessment",
+      "text": "The patient's blood pressure is not well-controlled, and she is not taking her medication regularly due to side effects.",
+      "status": "ok",
+      "p_chain_broken": 0.0046,
+      "components": [
+        {
+          "component": "The patient's blood pressure is not well-controlled",
+          "feature_ids": [
+            "F6",
+            "F7",
+            "F15",
+            "F16",
+            "F12"
+          ],
+          "p_broken": 0.0011695039834367738,
+          "passages": [
+            {
+              "pid": "4939_437",
+              "title": "Blood Pressure Medicines",
+              "section": "What is high blood pressure?",
+              "cos": 0.45
+            },
+            {
+              "pid": "34_1909",
+              "title": "High Blood Pressure",
+              "section": "How is high blood pressure diagnosed?",
+              "cos": 0.396
+            },
+            {
+              "pid": "6450_2060",
+              "title": "How to Prevent High Blood Pressure",
+              "section": "How is high blood pressure diagnosed?",
+              "cos": 0.369
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "she is not taking her medication regularly due to side effects",
+          "feature_ids": [
+            "F7"
+          ],
+          "p_broken": 0.004609543683562709,
+          "passages": [
+            {
+              "pid": "5719_2455",
+              "title": "Medication Errors",
+              "section": "Summary",
+              "cos": 0.431
+            },
+            {
+              "pid": "5719_2454",
+              "title": "Medication Errors",
+              "section": "Summary",
+              "cos": 0.406
+            },
+            {
+              "pid": "5603_1229",
+              "title": "Drug Reactions",
+              "section": "What are side effects?",
+              "cos": 0.378
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N200_V03",
+      "section": "Plan",
+      "text": "The patient will be referred to a specialist for further evaluation and management of her high blood pressure and headaches.",
+      "status": "flagged",
+      "p_chain_broken": 0.6792,
+      "components": [
+        {
+          "component": "The patient will be referred to a specialist for further evaluation and management of her high blood pressure and headaches.",
+          "feature_ids": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F6",
+            "F7",
+            "F12",
+            "F16"
+          ],
+          "p_broken": 0.679177549775804,
+          "passages": [
+            {
+              "pid": "273_1683",
+              "title": "Headache",
+              "section": "Summary",
+              "cos": 0.518
+            },
+            {
+              "pid": "273_1682",
+              "title": "Headache",
+              "section": "Summary",
+              "cos": 0.443
+            },
+            {
+              "pid": "34_1909",
+              "title": "High Blood Pressure",
+              "section": "How is high blood pressure diagnosed?",
+              "cos": 0.469
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N200_V04",
+      "section": "Plan",
+      "text": "The patient will be advised to take her medication regularly and to keep track of her blood pressure readings.",
+      "status": "ok",
+      "p_chain_broken": 0.0036,
+      "components": [
+        {
+          "component": "The patient will be advised to take her medication regularly",
+          "feature_ids": [
+            "F7",
+            "F6",
+            "F15",
+            "F16",
+            "F1",
+            "F13",
+            "F14",
+            "F2"
+          ],
+          "p_broken": 0.0035936009198682664,
+          "passages": [
+            {
+              "pid": "4939_437",
+              "title": "Blood Pressure Medicines",
+              "section": "What is high blood pressure?",
+              "cos": 0.423
+            },
+            {
+              "pid": "6121_434",
+              "title": "Blood Glucose",
+              "section": "What happens if my blood glucose level becomes too high?",
+              "cos": 0.45
+            },
+            {
+              "pid": "1508_1919",
+              "title": "High Blood Pressure in Pregnancy",
+              "section": "What are the symptoms of high blood pressure in pregnancy?",
+              "cos": 0.361
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient will be advised to keep track of her blood pressure readings",
+          "feature_ids": [
+            "F6",
+            "F7",
+            "F15",
+            "F16",
+            "F1",
+            "F11",
+            "F12",
+            "F13"
+          ],
+          "p_broken": 0.0008040785722111926,
+          "passages": [
+            {
+              "pid": "34_1909",
+              "title": "High Blood Pressure",
+              "section": "How is high blood pressure diagnosed?",
+              "cos": 0.436
+            },
+            {
+              "pid": "6450_2060",
+              "title": "How to Prevent High Blood Pressure",
+              "section": "How is high blood pressure diagnosed?",
+              "cos": 0.397
+            },
+            {
+              "pid": "4939_437",
+              "title": "Blood Pressure Medicines",
+              "section": "What is high blood pressure?",
+              "cos": 0.406
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N200_V05",
+      "section": "Plan",
+      "text": "The patient will be instructed to return for follow-up appointments to monitor her blood pressure and headache symptoms.",
+      "status": "ok",
+      "p_chain_broken": 0.0159,
+      "components": [
+        {
+          "component": "The patient will be instructed to return for follow-up appointments to monitor her blood pressure and headache symptoms.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.015906251964406513,
+          "passages": [
+            {
+              "pid": "273_1683",
+              "title": "Headache",
+              "section": "Summary",
+              "cos": 0.526
+            },
+            {
+              "pid": "216_1214",
+              "title": "Dizziness and Vertigo",
+              "section": "What causes dizziness and vertigo?",
+              "cos": 0.455
+            },
+            {
+              "pid": "946_3208",
+              "title": "Refractive Errors",
+              "section": "What are the symptoms of refractive errors?",
+              "cos": 0.497
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* Patient is a 58-year-old female who presents with headaches on the top of her head, which come and go, and are accompanied by dizziness and blurry vision. She has a history of high blood pressure and diabetes. She is not taking her medication regularly due to stomachache.\n* The patient reports that the headaches are throbbing and are worse when her blood pressure is high. She has tried taking Tylenol, which provides some relief.\n* She experiences chest pain, which is described as a pressure feeling, not sharp or dull, and does not have a specific trigger.\n* The patient has not had her blood pressure checked recently, but knows it has been high for a while.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient has a history of high blood pressure and diabetes, and is experiencing headaches on the top of her head, which are accompanied by dizziness and blurry vision.",
+      "The patient's blood pressure is not well-controlled, and she is not taking her medication regularly due to side effects."
+    ],
+    "plan": [
+      "The patient will be advised to take her medication regularly and to keep track of her blood pressure readings.",
+      "The patient will be instructed to return for follow-up appointments to monitor her blood pressure and headache symptoms."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 58 years old and female. I'm here because I've been having these headaches on the top of my head that come and go, and I've also been having high blood pressure for a while. I'm not taking my medication regularly because it gives me a stomachache.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the headaches in more detail, such as their intensity, any specific triggers, and whether they are accompanied by other symptoms like nausea, dizziness, or visual changes?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "They’re throbbing and they come and go, mostly on the top of my head. Sometimes I feel dizzy and my vision gets a little blurry with them, but they don’t usually come with nausea. Tylenol helps a little, but it doesn’t get rid of them completely.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide details about your blood pressure readings, including the highest recorded value and when you last had them checked? Additionally, have you experienced any chest pain, shortness of breath, or palpitations recently?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had my blood pressure checked recently, but I know it's been high for a while. My provider gave me chlorthalidone, but I don't take it every day because it gives me a stomachache. I do have some chest pain sometimes, but not always when I have the headaches.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the chest pain you sometimes experience? Is it sharp, dull, or pressure-like? Does it last for a few minutes or longer? Have you noticed any patterns or triggers?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The chest pain is more like a pressure feeling, not sharp or dull really. It doesn't last too long, maybe a few minutes, and I don't really notice any specific triggers for it. It doesn't happen all the time, just sometimes when I have the headaches.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide details about the frequency and duration of your headaches, as well as any specific triggers or patterns you've noticed?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The headaches have been coming and going for about a month, mostly on the top of my head. They’re throbbing, and sometimes they’re worse than others. I don’t really have any specific triggers, but they do seem to happen more when my blood pressure is up.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide details about your family history, particularly regarding cardiovascular or neurological conditions?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know about my family history, but I do know that I have high blood pressure and diabetes, and I've been having these headaches on the top of my head for about a month. They come and go, and they're worse when my blood pressure is up. I also sometimes feel dizzy and my vision gets a little blurry with them.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please clarify if you have been experiencing any other symptoms along with the headaches and chest pain, such as shortness of breath, palpitations, or changes in consciousness? Additionally, have you had any recent episodes of fainting or dizziness that might be related?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't really have any shortness of breath or palpitations, but I do sometimes feel dizzy and my vision gets a little blurry when I have the headaches. I haven't had any fainting episodes, but the dizziness does happen more when my blood pressure is high.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide details about your current blood pressure readings, including when they were measured and the values recorded?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had my blood pressure checked recently, but I know it's been high for a while. My provider gave me chlorthalidone, but I don't take it every day because it gives me a stomachache. I do have some chest pain sometimes, but not always when I have the headaches.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe any changes in your vision, such as seeing spots or losing vision in one eye, during the headaches?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't see spots or lose vision in one eye during the headaches. My vision just gets a little blurry sometimes, but it doesn't go away completely. It usually goes away when the headache starts to ease up.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide details about your family history, particularly regarding hypertension, stroke, or other neurological conditions?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know about my family history. I just know that I have high blood pressure and diabetes, and I've been having these headaches on the top of my head for about a month. They come and go, and they're worse when my blood pressure is up. I also sometimes feel dizzy and my vision gets a little blurry with them.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your most recent blood pressure reading, if available? Additionally, have you experienced any changes in your vision, such as seeing spots or losing vision in one eye, during or after the headaches?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have my blood pressure reading with me, but I know it's been high. I was told this morning it was like 172 over 98. And no, I don't see spots or lose vision in one eye during the headaches, just a little blurry vision that usually goes away when the headache eases up.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide more details about your family history, including any history of hypertension, diabetes, or cardiovascular disease in your immediate family members?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know about my family history. I just know that I have high blood pressure and diabetes, and I've been having these headaches on the top of my head for about a month. They come and go, and they're worse when my blood pressure is up. I also sometimes feel dizzy and my vision gets a little blurry with them.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your most recent blood pressure reading, and have you experienced any other symptoms such as shortness of breath, palpitations, or chest discomfort that are not related to your headaches?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have my blood pressure reading with me, but I was told this morning it was like 172 over 98. And no, I don't have shortness of breath or chest discomfort that's not related to the headaches. The chest pain I mentioned earlier is when I have the headaches, not separate from them.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any changes in your vision, such as seeing spots, losing vision in one eye, or experiencing double vision during or after the headaches?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't see spots or lose vision in one eye during the headaches. My vision just gets a little blurry sometimes, but it doesn't go away completely. It usually goes away when the headache starts to ease up.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe any other symptoms you experience during or after the headaches, such as weakness, numbness, speech difficulties, or changes in your balance?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't have weakness, numbness, or trouble speaking during the headaches. I do feel a little off-balance sometimes when the dizziness hits, but it doesn't last long.",
+      "tid": "T29"
+    }
+  ]
+}

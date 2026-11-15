@@ -1,0 +1,355 @@
+{
+  "case_id": "D2N104",
+  "rq2_split": "va_dev",
+  "rq1_split": "dev",
+  "aci_source_split": "test1",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports not having the results of their most recent blood work, but was informed that they need to schedule an appointment to obtain them.\n* The patient reports having no recent tests done other than the CBC, LFTs, and renal function tests.\n* The patient plans to schedule an appointment soon.\n* Patient is 62 years old and has ongoing management of psoriatic arthritis\n* Current symptoms: joint pain, mainly in knees and feet, manageable; stiffness, especially after sitting for a long time\n* Recent changes: no real flare-ups, but took extra prednisone for a couple of days due to increased pain in feet\n* Medications: methotrexate, prednisone (trying to wean off)\n* Side effects: bruises that show up when bumping self, didn't feel them happening, possibly related to prednisone\n* No other medications or supplements besides methotrexate and prednisone",
+    "objective": "* The patient's most recent CBC, LFTs, and renal function tests are still pending."
+  },
+  "open_questions": [
+    {
+      "id": "q1",
+      "gap": "Severity of joint pain and stiffness",
+      "question": "On a scale of 0-10, how would you rate the severity of your joint pain and stiffness?",
+      "category": "subjective",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "q2",
+      "gap": "Specific activities affected by joint pain and stiffness",
+      "question": "Which specific activities or daily tasks are affected by your joint pain and stiffness?",
+      "category": "subjective",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "q3",
+      "gap": "Current weight and body mass index (BMI)",
+      "question": "What is your current weight and height?",
+      "category": "objective",
+      "status": "unresolved",
+      "answer": null
+    }
+  ],
+  "ap_lines": [
+    {
+      "statement_id": "D2N104_V01",
+      "section": "Assessment",
+      "text": "Psoriatic arthritis, ongoing management",
+      "status": "ok",
+      "p_chain_broken": 0.0,
+      "components": [
+        {
+          "component": "Psoriatic arthritis, ongoing management",
+          "feature_ids": [
+            "F2",
+            "F7",
+            "F8",
+            "F11",
+            "F17"
+          ],
+          "p_broken": 2.4299988716893082e-05,
+          "passages": [
+            {
+              "pid": "6159_3111",
+              "title": "Psoriatic Arthritis",
+              "section": "Summary",
+              "cos": 0.47
+            },
+            {
+              "pid": "373_3109",
+              "title": "Psoriasis",
+              "section": "Summary",
+              "cos": 0.412
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N104_V02",
+      "section": "Assessment",
+      "text": "No other clinical problems or diagnoses established in the conversation.",
+      "status": "ok",
+      "p_chain_broken": 0.0534,
+      "components": [
+        {
+          "component": "No other clinical problems or diagnoses established in the conversation.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.0534030090939991,
+          "passages": [
+            {
+              "pid": "1382_2977",
+              "title": "Polymyalgia Rheumatica",
+              "section": "Summary",
+              "cos": 0.482
+            },
+            {
+              "pid": "3609_3082",
+              "title": "Progressive Supranuclear Palsy",
+              "section": "What are the treatments for progressive supranuclear palsy (PSP)?",
+              "cos": 0.354
+            },
+            {
+              "pid": "1694_3457",
+              "title": "Spinal Muscular Atrophy",
+              "section": "What are the types of spinal muscular atrophy (SMA) and what are their symptoms?",
+              "cos": 0.416
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N104_V03",
+      "section": "Plan",
+      "text": "Make an appointment for blood work to monitor methotrexate therapy and ensure it is safe and effective",
+      "status": "ok",
+      "p_chain_broken": 0.0046,
+      "components": [
+        {
+          "component": "Make an appointment for blood work to monitor methotrexate therapy and ensure it is safe and effective",
+          "feature_ids": [
+            "F7",
+            "F11",
+            "F13",
+            "F14",
+            "F17"
+          ],
+          "p_broken": 0.0046095341351441365,
+          "passages": [
+            {
+              "pid": "3073_3584",
+              "title": "Talking With Your Doctor",
+              "section": "Summary",
+              "cos": 0.38
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N104_V04",
+      "section": "Plan",
+      "text": "Wean off prednisone",
+      "status": "ok",
+      "p_chain_broken": 0.0013,
+      "components": [
+        {
+          "component": "Wean off prednisone",
+          "feature_ids": [
+            "F8",
+            "F6",
+            "F9",
+            "F11",
+            "F17",
+            "F13",
+            "F14",
+            "F16"
+          ],
+          "p_broken": 0.001325005729087615,
+          "passages": [],
+          "reference_found": false
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N104_V05",
+      "section": "Plan",
+      "text": "Follow up on pending blood work results",
+      "status": "ok",
+      "p_chain_broken": 0.0007,
+      "components": [
+        {
+          "component": "Follow up on pending blood work results",
+          "feature_ids": [
+            "F11",
+            "F13",
+            "F14",
+            "F17",
+            "F16"
+          ],
+          "p_broken": 0.0007096594711222711,
+          "passages": [],
+          "reference_found": false
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports not having the results of their most recent blood work, but was informed that they need to schedule an appointment to obtain them.\n* The patient reports having no recent tests done other than the CBC, LFTs, and renal function tests.\n* The patient plans to schedule an appointment soon.\n* Patient is 62 years old and has ongoing management of psoriatic arthritis\n* Current symptoms: joint pain, mainly in knees and feet, manageable; stiffness, especially after sitting for a long time\n* Recent changes: no real flare-ups, but took extra prednisone for a couple of days due to increased pain in feet\n* Medications: methotrexate, prednisone (trying to wean off)\n* Side effects: bruises that show up when bumping self, didn't feel them happening, possibly related to prednisone\n* No other medications or supplements besides methotrexate and prednisone",
+    "objective": "* The patient's most recent CBC, LFTs, and renal function tests are still pending.",
+    "assessment": [
+      "Psoriatic arthritis, ongoing management",
+      "No other clinical problems or diagnoses established in the conversation."
+    ],
+    "plan": [
+      "Make an appointment for blood work to monitor methotrexate therapy and ensure it is safe and effective",
+      "Wean off prednisone",
+      "Follow up on pending blood work results"
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Doctor",
+      "text": "Hello. Could you tell me your age and gender, and what brings you in today?",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 62 years old, and I'm here for my ongoing management of psoriatic arthritis. I've been coming in for regular check-ups and adjustments to my medication.",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide more details about your current symptoms, such as joint pain, swelling, or stiffness, and how they have been affecting your daily activities?",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I've been having some joint pain, mainly in my knees and feet, but it's been manageable. I do notice some stiffness, especially after sitting for a long time at my desk. It doesn't interfere too much with my daily routine, but I do have days where it's a bit worse, especially when I'm moving around more.",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide details about any recent changes in your symptoms, such as increased pain, swelling, or stiffness, and whether there have been any flare-ups in the past month?",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had any real flare-ups lately, but there were a couple of days where I took an extra prednisone because my feet were a little more painful, especially on days when I was moving around more. It wasn't too bad, though.",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide details about your current medications, including the names, dosages, and how long you've been taking them? Additionally, have you experienced any side effects from these medications?",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm currently on methotrexate, and I've been taking it for a while now. I also used to be on prednisone, but I'm down to just one pill now, and I've been trying to wean off it. The only side effect I've noticed is these bruises that show up when I bump myself, and I didn't feel them happening. I didn't know it was related to the prednisone.",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide the results of your most recent physical examination and any auxiliary tests, such as blood work or imaging studies, that have been conducted for your psoriatic arthritis?",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of my most recent blood work, but I was told I need to make an appointment for it. The doctor mentioned that methotrexate is a high-risk medication, so they want to keep an eye on it. Other than that, I haven't had any other tests done recently.",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of your most recent blood work, including complete blood count, liver function tests, and renal function tests?",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of my most recent blood work, but I was told I need to make an appointment for it. The doctor mentioned that methotrexate is a high-risk medication, so they want to keep an eye on it. Other than that, I haven't had any other tests done recently.",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of your most recent blood work, including complete blood count (CBC), liver function tests (LFTs), and renal function tests (e.g., creatinine, BUN)?",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of my most recent blood work, but I was told I need to make an appointment for it. The doctor mentioned that methotrexate is a high-risk medication, so they want to keep an eye on it. Other than that, I haven't had any other tests done recently.",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of your most recent blood work, including complete blood count, liver function tests, and renal function tests?",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of my most recent blood work, but I was told I need to make an appointment for it. The doctor mentioned that methotrexate is a high-risk medication, so they want to keep an eye on it. Other than that, I haven't had any other tests done recently.",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm if you have any other medications or supplements you are currently taking, including over-the-counter drugs or herbal remedies?",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't take any other medications or supplements besides the methotrexate and the prednisone. I haven't been on anything else recently.",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of your most recent CBC, LFTs, and renal function tests? These are essential for monitoring your methotrexate therapy and ensuring it is safe and effective.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of my most recent blood work, but I was told I need to make an appointment for it. The doctor mentioned that methotrexate is a high-risk medication, so they want to keep an eye on it. Other than that, I haven't had any other tests done recently.",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of your most recent CBC, LFTs, and renal function tests? These are essential for monitoring your methotrexate therapy and ensuring it is safe and effective.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of my most recent blood work, but I was told I need to make an appointment for it. The doctor mentioned that methotrexate is a high-risk medication, so they want to keep an eye on it. Other than that, I haven't had any other tests done recently.",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of your most recent CBC, LFTs, and renal function tests? These are essential for monitoring your methotrexate therapy and ensuring it is safe and effective.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of my most recent blood work, but I was told I need to make an appointment for it. The doctor mentioned that methotrexate is a high-risk medication, so they want to keep an eye on it. Other than that, I haven't had any other tests done recently.",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm if you have made an appointment for your blood work, and if there is any specific concern or symptom you have noticed since your last visit that you would like to discuss?",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't made an appointment for the blood work yet, but I plan to do so soon. Other than the joint pain and the bruising, I haven't noticed anything else new since my last visit.",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of your most recent CBC, LFTs, and renal function tests, or confirm if they are still pending?",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The results are still pending. I haven't made the appointment yet, but I was told I need to get them done because methotrexate is a high-risk medication, and they want to keep an eye on it. I plan to make the appointment soon.",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of the pending CBC, LFTs, and renal function tests, or confirm if they are still pending and when they are expected to be available?",
+      "tid": "T29"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The results are still pending. I haven't made the appointment yet, but I was told I need to get them done because methotrexate is a high-risk medication, and they want to keep an eye on it. I plan to make the appointment soon.",
+      "tid": "T30"
+    }
+  ]
+}

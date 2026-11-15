@@ -1,0 +1,445 @@
+{
+  "case_id": "D2N102",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test1",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* I don't have any other issues right now.\n* Patient is a 44-year-old female who has been experiencing blood in her urine and pain for approximately six weeks.\n* The blood in her urine is bright red, like cherry Kool-Aid, and has been intermittent.\n* The patient reports being unable to provide information about family history regarding kidney stones or other urological conditions due to not being asked about it before.\n* The patient denies having swelling in their legs or abdomen.\n* The patient denies flank tenderness.\n* She had a few episodes of severe pain (8/10) in her lower back area, which has since improved after passing the stones.\n* She did not experience fever, nausea, or vomiting with the pain.\n* She has had frequent urination and urgency, especially before passing the stones.\n* She does not remember having any dysuria or a history of urinary tract infections.\n* She has not experienced any changes in her urinary stream.\n* The patient reports feeling normal currently, with a plan to increase fluid intake and improve diet.\n* The patient knows they should drink more water but has not been keeping track of their actual consumption.\n* She drinks more Mountain Dew than water and does not eat many fruits or vegetables.\n* She eats a lot of processed foods and meat.",
+    "objective": "* The renal ultrasound showed a 10 cm long right kidney and a 10.8 cm long left kidney, with a 6 mm stone in the left kidney. The renal ultrasound showed a 5 cm wide right kidney. The renal ultrasound showed a 10.8 cm long left kidney. The renal ultrasound showed a 6 mm stone in the left kidney. The 6 mm stone in the left kidney is not blocking anything.\n* Urine test showed a trace amount of blood, but nothing else was abnormal."
+  },
+  "open_questions": [
+    {
+      "id": "q1",
+      "gap": "Family history of kidney stones or related conditions",
+      "question": "Does the patient have a family history of kidney stones or related conditions?",
+      "category": "subjective",
+      "status": "unresolved",
+      "answer": null
+    }
+  ],
+  "ap_lines": [
+    {
+      "statement_id": "D2N102_V01",
+      "section": "Assessment",
+      "text": "The patient has a history of kidney stones, with a recent episode of passing stones and associated symptoms of blood in her urine and pain.",
+      "status": "ok",
+      "p_chain_broken": 0.0017,
+      "components": [
+        {
+          "component": "The patient has a history of kidney stones",
+          "feature_ids": [
+            "F8",
+            "F13"
+          ],
+          "p_broken": 0.0006263279822909843,
+          "passages": [
+            {
+              "pid": "1224_2268",
+              "title": "Kidney Stones",
+              "section": "Summary",
+              "cos": 0.629
+            },
+            {
+              "pid": "1224_2269",
+              "title": "Kidney Stones",
+              "section": "Summary",
+              "cos": 0.711
+            },
+            {
+              "pid": "91_2264",
+              "title": "Kidney Diseases",
+              "section": "Summary",
+              "cos": 0.496
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient has a recent episode of passing stones and associated symptoms of blood in her urine and pain",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F13",
+            "F18",
+            "F22"
+          ],
+          "p_broken": 0.00170071210858424,
+          "passages": [
+            {
+              "pid": "1224_2268",
+              "title": "Kidney Stones",
+              "section": "Summary",
+              "cos": 0.573
+            },
+            {
+              "pid": "1224_2269",
+              "title": "Kidney Stones",
+              "section": "Summary",
+              "cos": 0.517
+            },
+            {
+              "pid": "6196_1359",
+              "title": "Enlarged Prostate (BPH)",
+              "section": "What are the symptoms of BPH?",
+              "cos": 0.421
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N102_V02",
+      "section": "Assessment",
+      "text": "She has a current diagnosis of kidney stones, with a 6 mm stone in her left kidney.",
+      "status": "ok",
+      "p_chain_broken": 0.0293,
+      "components": [
+        {
+          "component": "She has a current diagnosis of kidney stones",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F8",
+            "F13",
+            "F14"
+          ],
+          "p_broken": 0.02931209714397872,
+          "passages": [
+            {
+              "pid": "1224_2268",
+              "title": "Kidney Stones",
+              "section": "Summary",
+              "cos": 0.635
+            },
+            {
+              "pid": "1224_2269",
+              "title": "Kidney Stones",
+              "section": "Summary",
+              "cos": 0.587
+            },
+            {
+              "pid": "164_407",
+              "title": "Bladder Diseases",
+              "section": "Summary",
+              "cos": 0.516
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "with a 6 mm stone in her left kidney",
+          "feature_ids": [
+            "F8"
+          ],
+          "p_broken": 3.535593461626527e-05,
+          "passages": [
+            {
+              "pid": "1224_2268",
+              "title": "Kidney Stones",
+              "section": "Summary",
+              "cos": 0.459
+            },
+            {
+              "pid": "1224_2269",
+              "title": "Kidney Stones",
+              "section": "Summary",
+              "cos": 0.591
+            },
+            {
+              "pid": "91_2264",
+              "title": "Kidney Diseases",
+              "section": "Summary",
+              "cos": 0.381
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N102_V03",
+      "section": "Plan",
+      "text": "The patient will continue to monitor her urine output and frequency.",
+      "status": "ok",
+      "p_chain_broken": 0.0025,
+      "components": [
+        {
+          "component": "The patient will continue to monitor her urine output and frequency.",
+          "feature_ids": [
+            "F4",
+            "F13",
+            "F16",
+            "F22"
+          ],
+          "p_broken": 0.0024726031999474625,
+          "passages": [
+            {
+              "pid": "4889_3800",
+              "title": "Urine and Urination",
+              "section": "Summary",
+              "cos": 0.518
+            },
+            {
+              "pid": "1224_2268",
+              "title": "Kidney Stones",
+              "section": "Summary",
+              "cos": 0.512
+            },
+            {
+              "pid": "5350_3782",
+              "title": "Ureteral Disorders",
+              "section": "Summary",
+              "cos": 0.531
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N102_V04",
+      "section": "Plan",
+      "text": "She will be advised to drink more water and eat a balanced diet to help prevent future kidney stone formation.",
+      "status": "ok",
+      "p_chain_broken": 0.2689,
+      "components": [
+        {
+          "component": "She will be advised to drink more water and eat a balanced diet to help prevent future kidney stone formation.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.26894075338840645,
+          "passages": [
+            {
+              "pid": "1224_2268",
+              "title": "Kidney Stones",
+              "section": "Summary",
+              "cos": 0.454
+            },
+            {
+              "pid": "1224_2269",
+              "title": "Kidney Stones",
+              "section": "Summary",
+              "cos": 0.522
+            },
+            {
+              "pid": "5987_795",
+              "title": "Chronic Kidney Disease",
+              "section": "Summary",
+              "cos": 0.375
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N102_V05",
+      "section": "Plan",
+      "text": "She will be scheduled for a follow-up appointment to monitor her progress and address any further concerns.",
+      "status": "ok",
+      "p_chain_broken": 0.023,
+      "components": [
+        {
+          "component": "She will be scheduled for a follow-up appointment to monitor her progress and address any further concerns.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.022977234136185794,
+          "passages": [
+            {
+              "pid": "1692_86",
+              "title": "Alpha-1 Antitrypsin Deficiency",
+              "section": "What are the symptoms of alpha-1 antitrypsin deficiency (AAT deficiency)?",
+              "cos": 0.368
+            },
+            {
+              "pid": "5350_3783",
+              "title": "Ureteral Disorders",
+              "section": "Summary",
+              "cos": 0.485
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* I don't have any other issues right now.\n* Patient is a 44-year-old female who has been experiencing blood in her urine and pain for approximately six weeks.\n* The blood in her urine is bright red, like cherry Kool-Aid, and has been intermittent.\n* The patient reports being unable to provide information about family history regarding kidney stones or other urological conditions due to not being asked about it before.\n* The patient denies having swelling in their legs or abdomen.\n* The patient denies flank tenderness.\n* She had a few episodes of severe pain (8/10) in her lower back area, which has since improved after passing the stones.\n* She did not experience fever, nausea, or vomiting with the pain.\n* She has had frequent urination and urgency, especially before passing the stones.\n* She does not remember having any dysuria or a history of urinary tract infections.\n* She has not experienced any changes in her urinary stream.\n* The patient reports feeling normal currently, with a plan to increase fluid intake and improve diet.\n* The patient knows they should drink more water but has not been keeping track of their actual consumption.\n* She drinks more Mountain Dew than water and does not eat many fruits or vegetables.\n* She eats a lot of processed foods and meat.",
+    "objective": "* The renal ultrasound showed a 10 cm long right kidney and a 10.8 cm long left kidney, with a 6 mm stone in the left kidney. The renal ultrasound showed a 5 cm wide right kidney. The renal ultrasound showed a 10.8 cm long left kidney. The renal ultrasound showed a 6 mm stone in the left kidney. The 6 mm stone in the left kidney is not blocking anything.\n* Urine test showed a trace amount of blood, but nothing else was abnormal.",
+    "assessment": [
+      "The patient has a history of kidney stones, with a recent episode of passing stones and associated symptoms of blood in her urine and pain.",
+      "She has a current diagnosis of kidney stones, with a 6 mm stone in her left kidney."
+    ],
+    "plan": [
+      "The patient will continue to monitor her urine output and frequency.",
+      "She will be advised to drink more water and eat a balanced diet to help prevent future kidney stone formation.",
+      "She will be scheduled for a follow-up appointment to monitor her progress and address any further concerns."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Doctor",
+      "text": "Hello. Could you tell me your age and gender, and what brings you in today?",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 44 years old, and I'm a female. I'm here because I've been having blood in my urine and some pain, and I had a renal ultrasound to check for kidney stones.",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the duration and characteristics of the hematuria, such as whether it is gross or microscopic, and whether it is intermittent or persistent? Also, could you describe the nature and location of the pain, and whether it is associated with any other symptoms like fever, nausea, or vomiting?",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The blood in my urine has been going on for about six weeks. It’s bright red, like cherry Kool-Aid, and it’s been intermittent. I had a few episodes of really bad pain last week, like an 8 out of 10, in my lower back area. It was constant and hurt something terrible, but now it’s better after passing the stones. I didn’t have any fever, nausea, or vomiting with it.",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of the renal ultrasound that was performed?",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The ultrasound showed that my right kidney is 10 cm long and 5 cm wide, and there were no stones, masses, or hydronephrosis. My left kidney is a bit bigger, 10.8 cm long, and there's a 6 mm stone, but it's not blocking anything. I also had a urine test today, and there was a trace amount of blood, but nothing else was abnormal.",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Thank you for providing the ultrasound results. Have you experienced any other symptoms, such as frequent urination, urgency, or difficulty passing urine?",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Yes, I have had frequent urination and a lot of urgency, especially before I passed the stones last week. It was really uncomfortable and made me go to the bathroom constantly.",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any dysuria, nocturia, or a history of urinary tract infections?",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember having any dysuria or a history of urinary tract infections, but I did have a lot of urgency and frequent urination, especially before passing the stones.",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any fever, chills, or flank tenderness associated with the symptoms?",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I didn't have any fever, chills, or flank tenderness after the pain from passing the stones. The pain was mostly in my lower back, but now I feel much better. I don't have any tenderness when I touch my back or sides.",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any dysuria, nocturia, or a history of urinary tract infections?",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember having any dysuria or a history of urinary tract infections, but I did have a lot of urgency and frequent urination, especially before passing the stones.",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient experienced any changes in urinary stream, such as difficulty starting urination, weak flow, or intermittent flow?",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any changes in my urinary stream. I was able to urinate normally, and there wasn't any difficulty starting or a weak flow. I just had to go more often, especially before passing the stones.",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any family history of kidney stones or related conditions?",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know if there's a family history of kidney stones or related conditions. I haven't been asked about that before, so I can't say for sure.",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you tell me about your dietary habits, such as your intake of fluids, salt, protein, or any foods that are known to contribute to kidney stone formation?",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I drink more Mountain Dew than water, and I don't eat much fruits or vegetables. I know I should drink more water, but I haven't been keeping track of how much I actually consume. I also eat a lot of processed foods and meat, like beef and pork.",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please share if there is any family history of kidney stones or related conditions? Additionally, have you experienced any other symptoms or concerns related to your kidney stone or urinary tract?",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know if there's a family history of kidney stones or related conditions. I haven't been asked about that before, so I can't say for sure. As for other symptoms, I've had bright red urine like cherry Kool-Aid for the past six weeks and had to pee constantly with pain, but now I feel much better after passing the stones. I don't have any other issues right now.",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm if there are any other symptoms you've experienced related to your urinary tract, such as difficulty urinating, changes in the color or smell of your urine, or any swelling in your legs or abdomen?",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any difficulty urinating, and my urine doesn't have a strong smell anymore. I don't have any swelling in my legs or abdomen either. I feel pretty normal now, just trying to remember to drink more water and eat better.",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please share any information about your family history regarding kidney stones or other urological conditions? Additionally, have you noticed any changes in your urine color, frequency, or any other symptoms related to your urinary system?",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know if there's a family history of kidney stones or other urological conditions. I haven't been asked about that before, so I can't say for sure. As for my urine, it's been mostly clear and yellow, and I haven't had any changes in color or frequency other than what I already mentioned. I feel much better now after passing the stones.",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone a CT urography or other imaging studies to evaluate for kidney stones or other urological abnormalities?",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know if I've had a CT urography or any other imaging studies besides the renal ultrasound I just had. The doctor mentioned there was a small stone in my left kidney, but nothing else was found.",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please share any information about your family history, specifically if any close relatives have had kidney stones or urological conditions?",
+      "tid": "T29"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know if any close relatives have had kidney stones or urological conditions. I haven't been asked about that before, so I can't say for sure.",
+      "tid": "T30"
+    }
+  ]
+}

@@ -1,0 +1,1382 @@
+{
+ "files": {
+  "b04_statements": 1035,
+  "b05_components": 1133,
+  "b06_facts": 2612,
+  "b07_fact_checks": 2612,
+  "b08_links": 1133,
+  "b09_references": 1133,
+  "b10_chain_scores": 1133,
+  "b11_flags": 997,
+  "b12_signoff": 136,
+  "b13_summary_drafts": 1997,
+  "b14_summary_checks": 1997
+ },
+ "runs": {
+  "va_dev": {
+   "U1": "U1_preap_hf",
+   "U2": "U2_preap_hf",
+   "U3": "U3_preap_link-llm_hf",
+   "U4": "U4_preap_ref3_link-llm_hf"
+  },
+  "va_test": {
+   "U1": "U1_preap_hf",
+   "U2": "U2_preap_hf",
+   "U3": "U3_preap_link-llm_hf",
+   "U4": "U4_preap_ref3_link-llm_hf"
+  }
+ },
+ "thresholds": {
+  "U2_preap_hf": 0.9771515,
+  "U3_preap_link-llm_hf": 0.307517,
+  "U4_preap_ref3_link-llm_hf": 0.2829525,
+  "U1_preap_hf+tuned": 0.4141415
+ },
+ "b04_statement_splitter": {
+  "va_dev": {
+   "cases": 26,
+   "statements_kept": 119,
+   "filler_lines_excluded": 3,
+   "assessment": 53,
+   "plan": 66,
+   "statements_per_case": 4.5769,
+   "planted": {
+    "unsupported_diagnosis": 26,
+    "plan_without_evidence": 26,
+    "contradicted_inference": 26
+   }
+  },
+  "va_test": {
+   "cases": 110,
+   "statements_kept": 470,
+   "filler_lines_excluded": 35,
+   "assessment": 233,
+   "plan": 237,
+   "statements_per_case": 4.2727,
+   "planted": {
+    "unsupported_diagnosis": 110,
+    "plan_without_evidence": 110,
+    "contradicted_inference": 110
+   }
+  }
+ },
+ "b05_claim_splitter": {
+  "va_dev": {
+   "pieces": 224,
+   "statements": 197,
+   "share_split": 0.1168,
+   "pieces_per_statement": 1.1371
+  },
+  "va_test": {
+   "pieces": 909,
+   "statements": 800,
+   "share_split": 0.1237,
+   "pieces_per_statement": 1.1362
+  }
+ },
+ "b06_fact_collector": {
+  "va_dev": {
+   "facts": 535,
+   "facts_per_case": 20.5769,
+   "by_category": {
+    "history": 85,
+    "social": 11,
+    "symptom": 204,
+    "negative": 123,
+    "medication": 31,
+    "family": 6,
+    "result": 25,
+    "preference": 21,
+    "vital": 15,
+    "exam": 11,
+    "allergy": 3
+   },
+   "cases_without_facts": 0
+  },
+  "va_test": {
+   "facts": 2077,
+   "facts_per_case": 18.8818,
+   "by_category": {
+    "history": 338,
+    "symptom": 712,
+    "negative": 550,
+    "exam": 53,
+    "medication": 83,
+    "result": 148,
+    "family": 36,
+    "social": 50,
+    "preference": 57,
+    "allergy": 17,
+    "vital": 30,
+    "history|medication": 1,
+    "symptom|negative": 2
+   },
+   "cases_without_facts": 0
+  }
+ },
+ "b07_fact_checker": {
+  "va_dev": {
+   "facts": 535,
+   "share_kept": 0.9944,
+   "mean_p_supported": 0.9947
+  },
+  "va_test": {
+   "facts": 2077,
+   "share_kept": 0.9947,
+   "mean_p_supported": 0.9935
+  }
+ },
+ "b08_fact_linker": {
+  "va_dev": {
+   "pieces": 224,
+   "mean_facts_linked": 4.8482,
+   "share_pieces_without_facts": 0.0045
+  },
+  "va_test": {
+   "pieces": 909,
+   "mean_facts_linked": 4.6887,
+   "share_pieces_without_facts": 0.0044
+  }
+ },
+ "b09_reference_lookup": {
+  "va_dev": {
+   "pieces": 224,
+   "reference_coverage": 0.9821,
+   "mean_passages": 2.8304
+  },
+  "va_test": {
+   "pieces": 909,
+   "reference_coverage": 0.9901,
+   "mean_passages": 2.8867
+  }
+ },
+ "b10_chain_judge": {
+  "va_dev": {
+   "mean_p_broken_U3_real": 0.0795,
+   "mean_p_broken_U3_planted": 0.8537,
+   "mean_p_broken_U4_real": 0.0755,
+   "mean_p_broken_U4_planted": 0.8255
+  },
+  "va_test": {
+   "mean_p_broken_U3_real": 0.077,
+   "mean_p_broken_U3_planted": 0.8382,
+   "mean_p_broken_U4_real": 0.0687,
+   "mean_p_broken_U4_planted": 0.822
+  }
+ },
+ "b11_flagger_rq2": {
+  "va_dev": {
+   "table": [
+    {
+     "run": "U1_preap_hf",
+     "section": "all",
+     "n": 197.0,
+     "n_valid": 119.0,
+     "n_unsupported": 78.0,
+     "valid_retention": 0.6050420168067226,
+     "reject_precision": 0.6083333333333333,
+     "reject_recall": 0.9358974358974359,
+     "flag_rate": 0.6091370558375635,
+     "auc": 0.7403576815341522,
+     "sec_per_claim": 0.19251269035532995,
+     "reject_f1": 0.7373737373737375,
+     "retention_ci": "(0.4915254237288136, 0.7169811320754716)",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U1_preap_hf",
+     "section": "Assessment",
+     "n": 96.0,
+     "n_valid": 53.0,
+     "n_unsupported": 43.0,
+     "valid_retention": 0.9056603773584906,
+     "reject_precision": 0.8837209302325582,
+     "reject_recall": 0.8837209302325582,
+     "flag_rate": 0.4479166666666667,
+     "auc": 0.9855199648968846,
+     "sec_per_claim": 0.18489583333333334,
+     "reject_f1": 0.8837209302325582,
+     "retention_ci": "",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U1_preap_hf",
+     "section": "Plan",
+     "n": 101.0,
+     "n_valid": 66.0,
+     "n_unsupported": 35.0,
+     "valid_retention": 0.36363636363636365,
+     "reject_precision": 0.45454545454545453,
+     "reject_recall": 1.0,
+     "flag_rate": 0.7623762376237624,
+     "auc": 0.5805194805194805,
+     "sec_per_claim": 0.19975247524752476,
+     "reject_f1": 0.625,
+     "retention_ci": "",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U2_preap_hf",
+     "section": "all",
+     "n": 197.0,
+     "n_valid": 119.0,
+     "n_unsupported": 78.0,
+     "valid_retention": 0.9831932773109243,
+     "reject_precision": 0.9743589743589743,
+     "reject_recall": 0.9743589743589743,
+     "flag_rate": 0.39593908629441626,
+     "auc": 0.9929971988795518,
+     "sec_per_claim": 0.49513705583756346,
+     "reject_f1": 0.9743589743589743,
+     "retention_ci": "(0.959349593495935, 1.0)",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U2_preap_hf",
+     "section": "Assessment",
+     "n": 96.0,
+     "n_valid": 53.0,
+     "n_unsupported": 43.0,
+     "valid_retention": 0.9811320754716981,
+     "reject_precision": 0.9761904761904762,
+     "reject_recall": 0.9534883720930233,
+     "flag_rate": 0.4375,
+     "auc": 0.9960508995173322,
+     "sec_per_claim": 0.49903125,
+     "reject_f1": 0.9647058823529412,
+     "retention_ci": "",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U2_preap_hf",
+     "section": "Plan",
+     "n": 101.0,
+     "n_valid": 66.0,
+     "n_unsupported": 35.0,
+     "valid_retention": 0.9848484848484849,
+     "reject_precision": 0.9722222222222222,
+     "reject_recall": 1.0,
+     "flag_rate": 0.3564356435643564,
+     "auc": 0.996969696969697,
+     "sec_per_claim": 0.49143564356435643,
+     "reject_f1": 0.9859154929577464,
+     "retention_ci": "",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U3_preap_link-llm_hf",
+     "section": "all",
+     "n": 197.0,
+     "n_valid": 119.0,
+     "n_unsupported": 78.0,
+     "valid_retention": 0.9159663865546218,
+     "reject_precision": 0.8837209302325582,
+     "reject_recall": 0.9743589743589743,
+     "flag_rate": 0.4365482233502538,
+     "auc": 0.9747899159663865,
+     "sec_per_claim": 0.371248730964467,
+     "reject_f1": 0.9268292682926831,
+     "retention_ci": "(0.8468468468468469, 0.9745762711864406)",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U3_preap_link-llm_hf",
+     "section": "Assessment",
+     "n": 96.0,
+     "n_valid": 53.0,
+     "n_unsupported": 43.0,
+     "valid_retention": 0.9622641509433962,
+     "reject_precision": 0.9545454545454546,
+     "reject_recall": 0.9767441860465116,
+     "flag_rate": 0.4583333333333333,
+     "auc": 0.98376480912681,
+     "sec_per_claim": 0.37621875,
+     "reject_f1": 0.9655172413793104,
+     "retention_ci": "",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U3_preap_link-llm_hf",
+     "section": "Plan",
+     "n": 101.0,
+     "n_valid": 66.0,
+     "n_unsupported": 35.0,
+     "valid_retention": 0.8787878787878788,
+     "reject_precision": 0.8095238095238095,
+     "reject_recall": 0.9714285714285714,
+     "flag_rate": 0.4158415841584158,
+     "auc": 0.974025974025974,
+     "sec_per_claim": 0.3665247524752475,
+     "reject_f1": 0.8831168831168832,
+     "retention_ci": "",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U4_preap_ref3_link-llm_hf",
+     "section": "all",
+     "n": 197.0,
+     "n_valid": 119.0,
+     "n_unsupported": 78.0,
+     "valid_retention": 0.907563025210084,
+     "reject_precision": 0.8690476190476191,
+     "reject_recall": 0.9358974358974359,
+     "flag_rate": 0.4263959390862944,
+     "auc": 0.9724197371256195,
+     "sec_per_claim": 3.44402538071066,
+     "reject_f1": 0.9012345679012346,
+     "retention_ci": "(0.8429752066115702, 0.963963963963964)",
+     "reference_coverage": 0.9821428571428571
+    },
+    {
+     "run": "U4_preap_ref3_link-llm_hf",
+     "section": "Assessment",
+     "n": 96.0,
+     "n_valid": 53.0,
+     "n_unsupported": 43.0,
+     "valid_retention": 0.9622641509433962,
+     "reject_precision": 0.9512195121951219,
+     "reject_recall": 0.9069767441860465,
+     "flag_rate": 0.4270833333333333,
+     "auc": 0.9802544975866608,
+     "sec_per_claim": 5.944624999999999,
+     "reject_f1": 0.9285714285714286,
+     "retention_ci": "",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U4_preap_ref3_link-llm_hf",
+     "section": "Plan",
+     "n": 101.0,
+     "n_valid": 66.0,
+     "n_unsupported": 35.0,
+     "valid_retention": 0.8636363636363636,
+     "reject_precision": 0.7906976744186046,
+     "reject_recall": 0.9714285714285714,
+     "flag_rate": 0.42574257425742573,
+     "auc": 0.9766233766233766,
+     "sec_per_claim": 1.0672178217821782,
+     "reject_f1": 0.8717948717948717,
+     "retention_ci": "",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U1_preap_hf+tuned",
+     "section": "all",
+     "n": 197.0,
+     "n_valid": 119.0,
+     "n_unsupported": 78.0,
+     "valid_retention": 0.6470588235294118,
+     "reject_precision": 0.631578947368421,
+     "reject_recall": 0.9230769230769231,
+     "flag_rate": 0.5786802030456852,
+     "auc": 0.7403576815341522,
+     "sec_per_claim": 0.19251269035532995,
+     "reject_f1": 0.7499999999999999,
+     "retention_ci": "(0.5277777777777778, 0.7593984962406015)",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U1_preap_hf+tuned",
+     "section": "Assessment",
+     "n": 96.0,
+     "n_valid": 53.0,
+     "n_unsupported": 43.0,
+     "valid_retention": 0.9811320754716981,
+     "reject_precision": 0.9736842105263158,
+     "reject_recall": 0.8604651162790697,
+     "flag_rate": 0.3958333333333333,
+     "auc": 0.9855199648968846,
+     "sec_per_claim": 0.18489583333333334,
+     "reject_f1": 0.9135802469135803,
+     "retention_ci": "",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U1_preap_hf+tuned",
+     "section": "Plan",
+     "n": 101.0,
+     "n_valid": 66.0,
+     "n_unsupported": 35.0,
+     "valid_retention": 0.3787878787878788,
+     "reject_precision": 0.4605263157894737,
+     "reject_recall": 1.0,
+     "flag_rate": 0.7524752475247525,
+     "auc": 0.5805194805194805,
+     "sec_per_claim": 0.19975247524752476,
+     "reject_f1": 0.6306306306306306,
+     "retention_ci": "",
+     "reference_coverage": ""
+    }
+   ],
+   "recall_by_error_type": [
+    {
+     "run": "U1_preap_hf",
+     "error_type": "contradicted_inference",
+     "n": 26.0,
+     "recall": 0.9615384615384616
+    },
+    {
+     "run": "U1_preap_hf",
+     "error_type": "plan_without_evidence",
+     "n": 26.0,
+     "recall": 1.0
+    },
+    {
+     "run": "U1_preap_hf",
+     "error_type": "unsupported_diagnosis",
+     "n": 26.0,
+     "recall": 0.8461538461538461
+    },
+    {
+     "run": "U2_preap_hf",
+     "error_type": "contradicted_inference",
+     "n": 26.0,
+     "recall": 0.9230769230769231
+    },
+    {
+     "run": "U2_preap_hf",
+     "error_type": "plan_without_evidence",
+     "n": 26.0,
+     "recall": 1.0
+    },
+    {
+     "run": "U2_preap_hf",
+     "error_type": "unsupported_diagnosis",
+     "n": 26.0,
+     "recall": 1.0
+    },
+    {
+     "run": "U3_preap_link-llm_hf",
+     "error_type": "contradicted_inference",
+     "n": 26.0,
+     "recall": 0.9615384615384616
+    },
+    {
+     "run": "U3_preap_link-llm_hf",
+     "error_type": "plan_without_evidence",
+     "n": 26.0,
+     "recall": 1.0
+    },
+    {
+     "run": "U3_preap_link-llm_hf",
+     "error_type": "unsupported_diagnosis",
+     "n": 26.0,
+     "recall": 0.9615384615384616
+    },
+    {
+     "run": "U4_preap_ref3_link-llm_hf",
+     "error_type": "contradicted_inference",
+     "n": 26.0,
+     "recall": 0.9230769230769231
+    },
+    {
+     "run": "U4_preap_ref3_link-llm_hf",
+     "error_type": "plan_without_evidence",
+     "n": 26.0,
+     "recall": 1.0
+    },
+    {
+     "run": "U4_preap_ref3_link-llm_hf",
+     "error_type": "unsupported_diagnosis",
+     "n": 26.0,
+     "recall": 0.8846153846153846
+    },
+    {
+     "run": "U1_preap_hf+tuned",
+     "error_type": "contradicted_inference",
+     "n": 26.0,
+     "recall": 0.9615384615384616
+    },
+    {
+     "run": "U1_preap_hf+tuned",
+     "error_type": "plan_without_evidence",
+     "n": 26.0,
+     "recall": 1.0
+    },
+    {
+     "run": "U1_preap_hf+tuned",
+     "error_type": "unsupported_diagnosis",
+     "n": 26.0,
+     "recall": 0.8076923076923077
+    }
+   ],
+   "paired_comparisons_and_H2": {
+    "split": "va_dev",
+    "setting": "preap",
+    "primary_runs": {
+     "U1": "U1_preap_hf",
+     "U2": "U2_preap_hf",
+     "U3": "U3_preap_link-llm_hf",
+     "U4": "U4_preap_ref3_link-llm_hf"
+    },
+    "thresholds": {
+     "U2_preap_hf": 0.9771515,
+     "U3_preap_link-llm_hf": 0.307517,
+     "U4_preap_ref3_link-llm_hf": 0.2829525,
+     "U1_preap_hf+tuned": 0.4141415
+    },
+    "comparisons": [
+     {
+      "comparison": "U2 vs U1",
+      "run_a": "U1_preap_hf",
+      "run_b": "U2_preap_hf",
+      "d_retention": {
+       "diff": 0.37815126050420167,
+       "lo": 0.2631578947368421,
+       "hi": 0.49230769230769234,
+       "n": 119
+      },
+      "mcnemar_retention": {
+       "b_only": 46,
+       "a_only": 1,
+       "p": 6.821210263296962e-13
+      },
+      "d_recall": {
+       "diff": 0.038461538461538464,
+       "lo": 0.0,
+       "hi": 0.07692307692307693,
+       "n": 78
+      },
+      "mcnemar_recall": {
+       "b_only": 4,
+       "a_only": 1,
+       "p": 0.375
+      },
+      "p_holm_retention": 8.185452315956354e-12,
+      "p_holm_recall": 1.0
+     },
+     {
+      "comparison": "U3 vs U1",
+      "run_a": "U1_preap_hf",
+      "run_b": "U3_preap_link-llm_hf",
+      "d_retention": {
+       "diff": 0.31092436974789917,
+       "lo": 0.16071428571428573,
+       "hi": 0.45454545454545453,
+       "n": 119
+      },
+      "mcnemar_retention": {
+       "b_only": 43,
+       "a_only": 6,
+       "p": 5.7277652842913085e-08
+      },
+      "d_recall": {
+       "diff": 0.038461538461538464,
+       "lo": -0.02564102564102564,
+       "hi": 0.11538461538461539,
+       "n": 78
+      },
+      "mcnemar_recall": {
+       "b_only": 5,
+       "a_only": 2,
+       "p": 0.453125
+      },
+      "p_holm_retention": 5.727765284291308e-07,
+      "p_holm_recall": 1.0
+     },
+     {
+      "comparison": "U4 vs U1",
+      "run_a": "U1_preap_hf",
+      "run_b": "U4_preap_ref3_link-llm_hf",
+      "d_retention": {
+       "diff": 0.3025210084033613,
+       "lo": 0.16101694915254236,
+       "hi": 0.43478260869565216,
+       "n": 119
+      },
+      "mcnemar_retention": {
+       "b_only": 41,
+       "a_only": 5,
+       "p": 4.405936238072172e-08
+      },
+      "d_recall": {
+       "diff": 0.0,
+       "lo": -0.10256410256410256,
+       "hi": 0.08974358974358974,
+       "n": 78
+      },
+      "mcnemar_recall": {
+       "b_only": 5,
+       "a_only": 5,
+       "p": 1.0
+      },
+      "p_holm_retention": 4.84652986187939e-07,
+      "p_holm_recall": 1.0
+     },
+     {
+      "comparison": "U3 vs U2",
+      "run_a": "U2_preap_hf",
+      "run_b": "U3_preap_link-llm_hf",
+      "d_retention": {
+       "diff": -0.06722689075630252,
+       "lo": -0.14173228346456693,
+       "hi": 0.0,
+       "n": 119
+      },
+      "mcnemar_retention": {
+       "b_only": 2,
+       "a_only": 10,
+       "p": 0.03857421875
+      },
+      "d_recall": {
+       "diff": 0.0,
+       "lo": -0.05128205128205128,
+       "hi": 0.05128205128205128,
+       "n": 78
+      },
+      "mcnemar_recall": {
+       "b_only": 2,
+       "a_only": 2,
+       "p": 1.0
+      },
+      "p_holm_retention": 0.30859375,
+      "p_holm_recall": 1.0
+     },
+     {
+      "comparison": "U4 vs U2",
+      "run_a": "U2_preap_hf",
+      "run_b": "U4_preap_ref3_link-llm_hf",
+      "d_retention": {
+       "diff": -0.07563025210084033,
+       "lo": -0.144,
+       "hi": -0.016666666666666666,
+       "n": 119
+      },
+      "mcnemar_retention": {
+       "b_only": 2,
+       "a_only": 11,
+       "p": 0.0224609375
+      },
+      "d_recall": {
+       "diff": -0.038461538461538464,
+       "lo": -0.1282051282051282,
+       "hi": 0.02564102564102564,
+       "n": 78
+      },
+      "mcnemar_recall": {
+       "b_only": 2,
+       "a_only": 5,
+       "p": 0.453125
+      },
+      "p_holm_retention": 0.2021484375,
+      "p_holm_recall": 1.0
+     },
+     {
+      "comparison": "U4 vs U3",
+      "run_a": "U3_preap_link-llm_hf",
+      "run_b": "U4_preap_ref3_link-llm_hf",
+      "d_retention": {
+       "diff": -0.008403361344537815,
+       "lo": -0.046296296296296294,
+       "hi": 0.02564102564102564,
+       "n": 119
+      },
+      "mcnemar_retention": {
+       "b_only": 2,
+       "a_only": 3,
+       "p": 1.0
+      },
+      "d_recall": {
+       "diff": -0.038461538461538464,
+       "lo": -0.11538461538461539,
+       "hi": 0.01282051282051282,
+       "n": 78
+      },
+      "mcnemar_recall": {
+       "b_only": 1,
+       "a_only": 4,
+       "p": 0.375
+      },
+      "p_holm_retention": 1.0,
+      "p_holm_recall": 1.0
+     }
+    ],
+    "H2": {
+     "U3": {
+      "more_retention": false,
+      "recall_noninferior": false,
+      "supported": false,
+      "note": "retention diff CI [-0.142,0.000]; recall diff CI [-0.051,0.051] vs margin -0.05"
+     },
+     "U4": {
+      "more_retention": false,
+      "recall_noninferior": false,
+      "supported": false,
+      "note": "retention diff CI [-0.144,-0.017]; recall diff CI [-0.128,0.026] vs margin -0.05"
+     },
+     "problem_demo_U1_rejects_valid": 0.39495798319327735
+    }
+   },
+   "note": "test numbers are the results; dev numbers only chose the thresholds"
+  },
+  "va_test": {
+   "table": [
+    {
+     "run": "U1_preap_hf",
+     "section": "all",
+     "n": 800.0,
+     "n_valid": 470.0,
+     "n_unsupported": 330.0,
+     "valid_retention": 0.5787234042553191,
+     "reject_precision": 0.6177606177606177,
+     "reject_recall": 0.9696969696969697,
+     "flag_rate": 0.6475,
+     "auc": 0.7246357188910381,
+     "sec_per_claim": 0.19055624999999998,
+     "reject_f1": 0.7547169811320754,
+     "retention_ci": "(0.5306553911205074, 0.627039627039627)",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U1_preap_hf",
+     "section": "Assessment",
+     "n": 414.0,
+     "n_valid": 233.0,
+     "n_unsupported": 181.0,
+     "valid_retention": 0.944206008583691,
+     "reject_precision": 0.9301075268817204,
+     "reject_recall": 0.9558011049723757,
+     "flag_rate": 0.4492753623188406,
+     "auc": 0.9748180115239609,
+     "sec_per_claim": 0.19234057971014493,
+     "reject_f1": 0.9427792915531336,
+     "retention_ci": "",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U1_preap_hf",
+     "section": "Plan",
+     "n": 386.0,
+     "n_valid": 237.0,
+     "n_unsupported": 149.0,
+     "valid_retention": 0.21940928270042195,
+     "reject_precision": 0.4427710843373494,
+     "reject_recall": 0.9865771812080537,
+     "flag_rate": 0.8601036269430051,
+     "auc": 0.5339676606348936,
+     "sec_per_claim": 0.18864248704663214,
+     "reject_f1": 0.6112266112266113,
+     "retention_ci": "",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U2_preap_hf",
+     "section": "all",
+     "n": 800.0,
+     "n_valid": 470.0,
+     "n_unsupported": 330.0,
+     "valid_retention": 0.9468085106382979,
+     "reject_precision": 0.9260355029585798,
+     "reject_recall": 0.9484848484848485,
+     "flag_rate": 0.4225,
+     "auc": 0.985538362346873,
+     "sec_per_claim": 0.50713875,
+     "reject_f1": 0.937125748502994,
+     "retention_ci": "(0.9197396963123644, 0.9696969696969697)",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U2_preap_hf",
+     "section": "Assessment",
+     "n": 414.0,
+     "n_valid": 233.0,
+     "n_unsupported": 181.0,
+     "valid_retention": 0.9871244635193133,
+     "reject_precision": 0.9825581395348837,
+     "reject_recall": 0.9337016574585635,
+     "flag_rate": 0.41545893719806765,
+     "auc": 0.9957318663599933,
+     "sec_per_claim": 0.5079492753623188,
+     "reject_f1": 0.9575070821529744,
+     "retention_ci": "",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U2_preap_hf",
+     "section": "Plan",
+     "n": 386.0,
+     "n_valid": 237.0,
+     "n_unsupported": 149.0,
+     "valid_retention": 0.9071729957805907,
+     "reject_precision": 0.8674698795180723,
+     "reject_recall": 0.9664429530201343,
+     "flag_rate": 0.43005181347150256,
+     "auc": 0.9821595446436157,
+     "sec_per_claim": 0.5062694300518135,
+     "reject_f1": 0.9142857142857144,
+     "retention_ci": "",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U3_preap_link-llm_hf",
+     "section": "all",
+     "n": 800.0,
+     "n_valid": 470.0,
+     "n_unsupported": 330.0,
+     "valid_retention": 0.902127659574468,
+     "reject_precision": 0.8722222222222222,
+     "reject_recall": 0.9515151515151515,
+     "flag_rate": 0.45,
+     "auc": 0.978036750483559,
+     "sec_per_claim": 0.36251625,
+     "reject_f1": 0.9101449275362319,
+     "retention_ci": "(0.8687089715536105, 0.9310344827586207)",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U3_preap_link-llm_hf",
+     "section": "Assessment",
+     "n": 414.0,
+     "n_valid": 233.0,
+     "n_unsupported": 181.0,
+     "valid_retention": 0.9527896995708155,
+     "reject_precision": 0.9385474860335196,
+     "reject_recall": 0.9281767955801105,
+     "flag_rate": 0.4323671497584541,
+     "auc": 0.9845872951888649,
+     "sec_per_claim": 0.378719806763285,
+     "reject_f1": 0.9333333333333332,
+     "retention_ci": "",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U3_preap_link-llm_hf",
+     "section": "Plan",
+     "n": 386.0,
+     "n_valid": 237.0,
+     "n_unsupported": 149.0,
+     "valid_retention": 0.8523206751054853,
+     "reject_precision": 0.8066298342541437,
+     "reject_recall": 0.9798657718120806,
+     "flag_rate": 0.4689119170984456,
+     "auc": 0.9835329765242262,
+     "sec_per_claim": 0.3451373056994819,
+     "reject_f1": 0.8848484848484849,
+     "retention_ci": "",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U4_preap_ref3_link-llm_hf",
+     "section": "all",
+     "n": 800.0,
+     "n_valid": 470.0,
+     "n_unsupported": 330.0,
+     "valid_retention": 0.9063829787234042,
+     "reject_precision": 0.8764044943820225,
+     "reject_recall": 0.9454545454545454,
+     "flag_rate": 0.445,
+     "auc": 0.9780947775628627,
+     "sec_per_claim": 3.419015,
+     "reject_f1": 0.9096209912536443,
+     "retention_ci": "(0.8723404255319149, 0.935064935064935)",
+     "reference_coverage": 0.9900990099009901
+    },
+    {
+     "run": "U4_preap_ref3_link-llm_hf",
+     "section": "Assessment",
+     "n": 414.0,
+     "n_valid": 233.0,
+     "n_unsupported": 181.0,
+     "valid_retention": 0.9527896995708155,
+     "reject_precision": 0.9378531073446328,
+     "reject_recall": 0.9171270718232044,
+     "flag_rate": 0.427536231884058,
+     "auc": 0.9845991511156427,
+     "sec_per_claim": 5.613181159420289,
+     "reject_f1": 0.9273743016759776,
+     "retention_ci": "",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U4_preap_ref3_link-llm_hf",
+     "section": "Plan",
+     "n": 386.0,
+     "n_valid": 237.0,
+     "n_unsupported": 149.0,
+     "valid_retention": 0.8607594936708861,
+     "reject_precision": 0.8156424581005587,
+     "reject_recall": 0.9798657718120806,
+     "flag_rate": 0.4637305699481865,
+     "auc": 0.9839435901792541,
+     "sec_per_claim": 1.0656865284974093,
+     "reject_f1": 0.8902439024390245,
+     "retention_ci": "",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U1_preap_hf+tuned",
+     "section": "all",
+     "n": 800.0,
+     "n_valid": 470.0,
+     "n_unsupported": 330.0,
+     "valid_retention": 0.5914893617021276,
+     "reject_precision": 0.6190476190476191,
+     "reject_recall": 0.9454545454545454,
+     "flag_rate": 0.63,
+     "auc": 0.7246357188910381,
+     "sec_per_claim": 0.19055624999999998,
+     "reject_f1": 0.7482014388489209,
+     "retention_ci": "(0.5460385438972163, 0.6381322957198443)",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U1_preap_hf+tuned",
+     "section": "Assessment",
+     "n": 414.0,
+     "n_valid": 233.0,
+     "n_unsupported": 181.0,
+     "valid_retention": 0.9484978540772532,
+     "reject_precision": 0.9322033898305084,
+     "reject_recall": 0.9116022099447514,
+     "flag_rate": 0.427536231884058,
+     "auc": 0.9748180115239609,
+     "sec_per_claim": 0.19234057971014493,
+     "reject_f1": 0.9217877094972067,
+     "retention_ci": "",
+     "reference_coverage": ""
+    },
+    {
+     "run": "U1_preap_hf+tuned",
+     "section": "Plan",
+     "n": 386.0,
+     "n_valid": 237.0,
+     "n_unsupported": 149.0,
+     "valid_retention": 0.24050632911392406,
+     "reject_precision": 0.44954128440366975,
+     "reject_recall": 0.9865771812080537,
+     "flag_rate": 0.8471502590673575,
+     "auc": 0.5339676606348936,
+     "sec_per_claim": 0.18864248704663214,
+     "reject_f1": 0.6176470588235294,
+     "retention_ci": "",
+     "reference_coverage": ""
+    }
+   ],
+   "recall_by_error_type": [
+    {
+     "run": "U1_preap_hf",
+     "error_type": "contradicted_inference",
+     "n": 110.0,
+     "recall": 0.9636363636363636
+    },
+    {
+     "run": "U1_preap_hf",
+     "error_type": "plan_without_evidence",
+     "n": 110.0,
+     "recall": 0.990909090909091
+    },
+    {
+     "run": "U1_preap_hf",
+     "error_type": "unsupported_diagnosis",
+     "n": 110.0,
+     "recall": 0.9545454545454546
+    },
+    {
+     "run": "U2_preap_hf",
+     "error_type": "contradicted_inference",
+     "n": 110.0,
+     "recall": 0.9090909090909091
+    },
+    {
+     "run": "U2_preap_hf",
+     "error_type": "plan_without_evidence",
+     "n": 110.0,
+     "recall": 0.9818181818181818
+    },
+    {
+     "run": "U2_preap_hf",
+     "error_type": "unsupported_diagnosis",
+     "n": 110.0,
+     "recall": 0.9545454545454546
+    },
+    {
+     "run": "U3_preap_link-llm_hf",
+     "error_type": "contradicted_inference",
+     "n": 110.0,
+     "recall": 0.9090909090909091
+    },
+    {
+     "run": "U3_preap_link-llm_hf",
+     "error_type": "plan_without_evidence",
+     "n": 110.0,
+     "recall": 1.0
+    },
+    {
+     "run": "U3_preap_link-llm_hf",
+     "error_type": "unsupported_diagnosis",
+     "n": 110.0,
+     "recall": 0.9454545454545454
+    },
+    {
+     "run": "U4_preap_ref3_link-llm_hf",
+     "error_type": "contradicted_inference",
+     "n": 110.0,
+     "recall": 0.9090909090909091
+    },
+    {
+     "run": "U4_preap_ref3_link-llm_hf",
+     "error_type": "plan_without_evidence",
+     "n": 110.0,
+     "recall": 0.990909090909091
+    },
+    {
+     "run": "U4_preap_ref3_link-llm_hf",
+     "error_type": "unsupported_diagnosis",
+     "n": 110.0,
+     "recall": 0.9363636363636364
+    },
+    {
+     "run": "U1_preap_hf+tuned",
+     "error_type": "contradicted_inference",
+     "n": 110.0,
+     "recall": 0.9272727272727272
+    },
+    {
+     "run": "U1_preap_hf+tuned",
+     "error_type": "plan_without_evidence",
+     "n": 110.0,
+     "recall": 0.990909090909091
+    },
+    {
+     "run": "U1_preap_hf+tuned",
+     "error_type": "unsupported_diagnosis",
+     "n": 110.0,
+     "recall": 0.9181818181818182
+    }
+   ],
+   "paired_comparisons_and_H2": {
+    "split": "va_test",
+    "setting": "preap",
+    "primary_runs": {
+     "U1": "U1_preap_hf",
+     "U2": "U2_preap_hf",
+     "U3": "U3_preap_link-llm_hf",
+     "U4": "U4_preap_ref3_link-llm_hf"
+    },
+    "thresholds": {
+     "U2_preap_hf": 0.9771515,
+     "U3_preap_link-llm_hf": 0.307517,
+     "U4_preap_ref3_link-llm_hf": 0.2829525,
+     "U1_preap_hf+tuned": 0.4141415
+    },
+    "comparisons": [
+     {
+      "comparison": "U2 vs U1",
+      "run_a": "U1_preap_hf",
+      "run_b": "U2_preap_hf",
+      "d_retention": {
+       "diff": 0.3680851063829787,
+       "lo": 0.32653061224489793,
+       "hi": 0.4088983050847458,
+       "n": 470
+      },
+      "mcnemar_retention": {
+       "b_only": 174,
+       "a_only": 1,
+       "p": 7.350102952753538e-51
+      },
+      "d_recall": {
+       "diff": -0.021212121212121213,
+       "lo": -0.048484848484848485,
+       "hi": 0.0030303030303030303,
+       "n": 330
+      },
+      "mcnemar_recall": {
+       "b_only": 7,
+       "a_only": 14,
+       "p": 0.18924713134765625
+      },
+      "p_holm_retention": 8.820123543304246e-50,
+      "p_holm_recall": 1.0
+     },
+     {
+      "comparison": "U3 vs U1",
+      "run_a": "U1_preap_hf",
+      "run_b": "U3_preap_link-llm_hf",
+      "d_retention": {
+       "diff": 0.32340425531914896,
+       "lo": 0.27115384615384613,
+       "hi": 0.37448559670781895,
+       "n": 470
+      },
+      "mcnemar_retention": {
+       "b_only": 169,
+       "a_only": 17,
+       "p": 1.1432537637286568e-32
+      },
+      "d_recall": {
+       "diff": -0.01818181818181818,
+       "lo": -0.048484848484848485,
+       "hi": 0.00909090909090909,
+       "n": 330
+      },
+      "mcnemar_recall": {
+       "b_only": 7,
+       "a_only": 13,
+       "p": 0.26317596435546875
+      },
+      "p_holm_retention": 1.1432537637286568e-31,
+      "p_holm_recall": 1.0
+     },
+     {
+      "comparison": "U4 vs U1",
+      "run_a": "U1_preap_hf",
+      "run_b": "U4_preap_ref3_link-llm_hf",
+      "d_retention": {
+       "diff": 0.3276595744680851,
+       "lo": 0.2751677852348993,
+       "hi": 0.3818984547461369,
+       "n": 470
+      },
+      "mcnemar_retention": {
+       "b_only": 170,
+       "a_only": 16,
+       "p": 1.135218171778601e-33
+      },
+      "d_recall": {
+       "diff": -0.024242424242424242,
+       "lo": -0.05757575757575758,
+       "hi": 0.006060606060606061,
+       "n": 330
+      },
+      "mcnemar_recall": {
+       "b_only": 7,
+       "a_only": 15,
+       "p": 0.13380050659179688
+      },
+      "p_holm_retention": 1.2487399889564612e-32,
+      "p_holm_recall": 0.9366035461425781
+     },
+     {
+      "comparison": "U3 vs U2",
+      "run_a": "U2_preap_hf",
+      "run_b": "U3_preap_link-llm_hf",
+      "d_retention": {
+       "diff": -0.04468085106382979,
+       "lo": -0.08368200836820083,
+       "hi": -0.008333333333333333,
+       "n": 470
+      },
+      "mcnemar_retention": {
+       "b_only": 17,
+       "a_only": 38,
+       "p": 0.006455803109956637
+      },
+      "d_recall": {
+       "diff": 0.0030303030303030303,
+       "lo": -0.02727272727272727,
+       "hi": 0.03333333333333333,
+       "n": 330
+      },
+      "mcnemar_recall": {
+       "b_only": 12,
+       "a_only": 11,
+       "p": 1.0
+      },
+      "p_holm_retention": 0.058102227989609734,
+      "p_holm_recall": 1.0
+     },
+     {
+      "comparison": "U4 vs U2",
+      "run_a": "U2_preap_hf",
+      "run_b": "U4_preap_ref3_link-llm_hf",
+      "d_retention": {
+       "diff": -0.04042553191489362,
+       "lo": -0.07936507936507936,
+       "hi": -0.002207505518763797,
+       "n": 470
+      },
+      "mcnemar_retention": {
+       "b_only": 19,
+       "a_only": 38,
+       "p": 0.01634810389737615
+      },
+      "d_recall": {
+       "diff": -0.0030303030303030303,
+       "lo": -0.03636363636363636,
+       "hi": 0.030303030303030304,
+       "n": 330
+      },
+      "mcnemar_recall": {
+       "b_only": 12,
+       "a_only": 13,
+       "p": 1.0
+      },
+      "p_holm_retention": 0.1307848311790092,
+      "p_holm_recall": 1.0
+     },
+     {
+      "comparison": "U4 vs U3",
+      "run_a": "U3_preap_link-llm_hf",
+      "run_b": "U4_preap_ref3_link-llm_hf",
+      "d_retention": {
+       "diff": 0.00425531914893617,
+       "lo": -0.015184381778741865,
+       "hi": 0.022026431718061675,
+       "n": 470
+      },
+      "mcnemar_retention": {
+       "b_only": 11,
+       "a_only": 9,
+       "p": 0.8238029479980469
+      },
+      "d_recall": {
+       "diff": -0.006060606060606061,
+       "lo": -0.024242424242424242,
+       "hi": 0.00909090909090909,
+       "n": 330
+      },
+      "mcnemar_recall": {
+       "b_only": 2,
+       "a_only": 4,
+       "p": 0.6875
+      },
+      "p_holm_retention": 1.0,
+      "p_holm_recall": 1.0
+     }
+    ],
+    "H2": {
+     "U3": {
+      "more_retention": false,
+      "recall_noninferior": true,
+      "supported": false,
+      "note": "retention diff CI [-0.084,-0.008]; recall diff CI [-0.027,0.033] vs margin -0.05"
+     },
+     "U4": {
+      "more_retention": false,
+      "recall_noninferior": true,
+      "supported": false,
+      "note": "retention diff CI [-0.079,-0.002]; recall diff CI [-0.036,0.030] vs margin -0.05"
+     },
+     "problem_demo_U1_rejects_valid": 0.4212765957446809
+    }
+   },
+   "note": "test numbers are the results; dev numbers only chose the thresholds"
+  }
+ },
+ "b12_signoff": {
+  "run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "rule": "flagged = P(chain broken) >= threshold; flagged lines held back for doctor review, OK lines signed",
+  "splits": {
+   "va_dev": {
+    "encounters": 26,
+    "valid_statements": 119,
+    "planted_statements": 78,
+    "valid_held_back": 11,
+    "planted_flagged": 73,
+    "planted_reaching_signed_note": 5,
+    "planted_reaching_rate": 0.0641,
+    "flags_per_note_test_copy": 3.231,
+    "cases": 26,
+    "real_ap_lines": 119,
+    "real_flagged": 11,
+    "real_not_checked": 0,
+    "flags_per_note_real": 0.423
+   },
+   "va_test": {
+    "encounters": 110,
+    "valid_statements": 470,
+    "planted_statements": 330,
+    "valid_held_back": 44,
+    "planted_flagged": 312,
+    "planted_reaching_signed_note": 18,
+    "planted_reaching_rate": 0.0545,
+    "flags_per_note_test_copy": 3.236,
+    "cases": 110,
+    "real_ap_lines": 470,
+    "real_flagged": 44,
+    "real_not_checked": 0,
+    "flags_per_note_real": 0.4
+   }
+  }
+ },
+ "b13_b14_patient_summary_H3": {
+  "tau": 0.5,
+  "va_test": {
+   "verified (signed note + checker)": {
+    "cases": 110,
+    "unsupported_vs_signed_per_summary": 0.0,
+    "unsupported_vs_dialogue_per_summary": 0.7364,
+    "next_step_recall": 0.9142,
+    "fk_grade": 7.178,
+    "sentences_per_summary": 6.8636
+   },
+   "unverified record, no checker": {
+    "cases": 110,
+    "unsupported_vs_signed_per_summary": 0.5455,
+    "unsupported_vs_dialogue_per_summary": 1.3545,
+    "next_step_recall": 0.9034,
+    "fk_grade": 6.7188,
+    "sentences_per_summary": 7.2364
+   },
+   "checker": {
+    "draft_sentences_dropped_per_summary": 0.2727
+   }
+  },
+  "all_cases": {
+   "verified (signed note + checker)": {
+    "cases": 136,
+    "unsupported_vs_signed_per_summary": 0.0,
+    "unsupported_vs_dialogue_per_summary": 0.7647,
+    "next_step_recall": 0.9177,
+    "fk_grade": 7.0893,
+    "sentences_per_summary": 6.9853
+   },
+   "unverified record, no checker": {
+    "cases": 136,
+    "unsupported_vs_signed_per_summary": 0.5221,
+    "unsupported_vs_dialogue_per_summary": 1.3603,
+    "next_step_recall": 0.9076,
+    "fk_grade": 6.7111,
+    "sentences_per_summary": 7.4412
+   },
+   "checker": {
+    "draft_sentences_dropped_per_summary": 0.2574
+   }
+  }
+ },
+ "verifier_training": {
+  "adapter": "/content/drive/MyDrive/tokenizers/rq2_evidence_chain/work/models/verifier_qlora",
+  "base_model": "Qwen/Qwen2.5-3B-Instruct",
+  "generator": "Qwen/Qwen3-14B-AWQ",
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "chain_train_examples": 1257,
+  "so_train_examples": 1922,
+  "heldout": {
+   "train_examples": 2875,
+   "heldout_examples": 304,
+   "label_counts": {
+    "chain_broken": 394,
+    "chain_ok": 863,
+    "contradicted": 302,
+    "supported": 915,
+    "unsupported": 705
+   },
+   "heldout_accuracy": 0.9441,
+   "per_label": {
+    "chain_broken": {
+     "n": 36,
+     "accuracy": 0.75
+    },
+    "chain_ok": {
+     "n": 92,
+     "accuracy": 0.9674
+    },
+    "contradicted": {
+     "n": 24,
+     "accuracy": 0.875
+    },
+    "supported": {
+     "n": 88,
+     "accuracy": 0.9773
+    },
+    "unsupported": {
+     "n": 64,
+     "accuracy": 1.0
+    }
+   },
+   "balanced_accuracy": 0.9139
+  }
+ }
+}

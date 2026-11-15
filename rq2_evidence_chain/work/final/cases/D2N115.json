@@ -1,0 +1,317 @@
+{
+  "case_id": "D2N115",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test1",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports wearing a seatbelt and experiencing a sudden jerking motion of their head and neck when the car hit them from behind.\n* The patient reports feeling sudden pain immediately after the incident.\n* Patient is a 28-year-old male who presents with neck pain since a car accident a week ago\n* Pain is in the back of the neck, worsens with movement, and is currently a 7/10 in severity\n* Patient has had some headaches early on, but no numbness, tingling, or weakness\n* Pain is affecting daily activities, but patient can still manage most tasks\n* Patient has not undergone any imaging studies or consultations with a specialist for the neck pain\n* Patient has tried ibuprofen, which provided some relief",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [
+    {
+      "id": "q1",
+      "gap": "Results of the MRI of the cervical spine",
+      "question": "What are the results of the MRI of the cervical spine, including any signs of spinal cord injury, nerve compression, or soft tissue damage?",
+      "category": "objective",
+      "status": "unresolved",
+      "answer": null
+    }
+  ],
+  "ap_lines": [
+    {
+      "statement_id": "D2N115_V01",
+      "section": "Assessment",
+      "text": "The patient presents with neck pain since a car accident a week ago, which is worsening with movement and affecting daily activities.",
+      "status": "ok",
+      "p_chain_broken": 0.0001,
+      "components": [
+        {
+          "component": "The patient presents with neck pain since a car accident a week ago, which is worsening with movement and affecting daily activities.",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F14",
+            "F15"
+          ],
+          "p_broken": 0.00010889606553521305,
+          "passages": [
+            {
+              "pid": "339_2650",
+              "title": "Neck Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.708
+            },
+            {
+              "pid": "330_1667",
+              "title": "Head and Neck Cancer",
+              "section": "What are the symptoms of head and neck cancer?",
+              "cos": 0.529
+            },
+            {
+              "pid": "156_326",
+              "title": "Back Injuries",
+              "section": "Summary",
+              "cos": 0.442
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N115_V02",
+      "section": "Plan",
+      "text": "The patient is awaiting an MRI of the cervical spine to better understand the cause of the neck pain and determine the most appropriate next steps for care.",
+      "status": "ok",
+      "p_chain_broken": 0.0601,
+      "components": [
+        {
+          "component": "The patient is awaiting an MRI of the cervical spine to better understand the cause of the neck pain and determine the most appropriate next steps for care.",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F6",
+            "F8",
+            "F9",
+            "F11",
+            "F13"
+          ],
+          "p_broken": 0.06008635310344139,
+          "passages": [
+            {
+              "pid": "339_2650",
+              "title": "Neck Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.682
+            },
+            {
+              "pid": "330_1667",
+              "title": "Head and Neck Cancer",
+              "section": "What are the symptoms of head and neck cancer?",
+              "cos": 0.506
+            },
+            {
+              "pid": "156_326",
+              "title": "Back Injuries",
+              "section": "Summary",
+              "cos": 0.459
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N115_V03",
+      "section": "Plan",
+      "text": "The doctor will review the MRI results once they are available to assess for signs of cervical spine injuries, spinal cord involvement, or nerve compression.",
+      "status": "ok",
+      "p_chain_broken": 0.0067,
+      "components": [
+        {
+          "component": "The doctor will review the MRI results once they are available to assess for signs of cervical spine injuries, spinal cord involvement, or nerve compression.",
+          "feature_ids": [
+            "F8",
+            "F11",
+            "F12",
+            "F13",
+            "F14",
+            "F15",
+            "F16",
+            "F17"
+          ],
+          "p_broken": 0.006692789944622508,
+          "passages": [
+            {
+              "pid": "339_2650",
+              "title": "Neck Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.628
+            },
+            {
+              "pid": "410_3451",
+              "title": "Spinal Cord Diseases",
+              "section": "Summary",
+              "cos": 0.502
+            },
+            {
+              "pid": "6164_695",
+              "title": "Chiari Malformation",
+              "section": "Summary",
+              "cos": 0.512
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports wearing a seatbelt and experiencing a sudden jerking motion of their head and neck when the car hit them from behind.\n* The patient reports feeling sudden pain immediately after the incident.\n* Patient is a 28-year-old male who presents with neck pain since a car accident a week ago\n* Pain is in the back of the neck, worsens with movement, and is currently a 7/10 in severity\n* Patient has had some headaches early on, but no numbness, tingling, or weakness\n* Pain is affecting daily activities, but patient can still manage most tasks\n* Patient has not undergone any imaging studies or consultations with a specialist for the neck pain\n* Patient has tried ibuprofen, which provided some relief",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient presents with neck pain since a car accident a week ago, which is worsening with movement and affecting daily activities."
+    ],
+    "plan": [
+      "The patient is awaiting an MRI of the cervical spine to better understand the cause of the neck pain and determine the most appropriate next steps for care.",
+      "The doctor will review the MRI results once they are available to assess for signs of cervical spine injuries, spinal cord involvement, or nerve compression."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Doctor",
+      "text": "Hello. Could you tell me your age and gender, and what brings you in today?",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 28, and I'm a guy. I came in because I've been having neck pain since a car accident a week ago. It's been pretty bad, like a seven out of ten, and it hurts when I move my head around.",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm your age, gender, and describe the nature of your neck pain, including any associated symptoms such as numbness, tingling, or weakness?",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 28, and I'm a guy. The pain is in the back of my neck, and it's not constant—it gets worse when I move my head. I've had some headaches early on, but nothing else like numbness or tingling.",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies or consultations with a specialist for your neck pain since the car accident?",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging studies or gone to see a specialist for this yet. I tried some ibuprofen, and that helped a little, but I didn't go to the hospital because I didn't want the cost. The doctor just did an exam and ordered an MRI now.",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any radiation of pain to your arms, shoulders, or upper back? Have you noticed any changes in your range of motion or any difficulty with daily activities due to the neck pain?",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, the pain just stays in my neck. It's been hard to move my head around, and it hurts when I try to turn my neck from side to side or bend it back. It's been making it tough to do some things normally, but I can still manage most of my daily activities.",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of the MRI that was ordered by the doctor?",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had the MRI yet, so I don't have the results. The doctor mentioned they wanted to make sure there wasn't anything more serious, like a concussion or nerve issues, but I'm still waiting on that.",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of the MRI that was ordered by the doctor?",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had the MRI yet, so I don't have the results. The doctor mentioned they wanted to make sure there wasn't anything more serious, like a concussion or nerve issues, but I'm still waiting on that.",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the MRI results of the cervical spine once they are available? This will help us better understand the cause of your neck pain and determine the most appropriate next steps for your care.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had the MRI yet, so I don't have the results. The doctor mentioned they wanted to make sure there wasn't anything more serious, like a concussion or nerve issues, but I'm still waiting on that.",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide more details about the car accident, such as whether you were wearing a seatbelt, if there was any impact to your head or neck, and if you lost consciousness at the time?",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I was wearing a seatbelt, and my head and neck were jerked forward really quickly when the car hit me from behind. I didn’t lose consciousness, but I did feel a lot of sudden pain right after it happened.",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of the MRI once they are available?",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I was wearing a seatbelt, and my head and neck were jerked forward really quickly when the car hit me from behind. I didn’t lose consciousness, but I did feel a lot of sudden pain right after it happened.",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe any changes in the severity of your neck pain over the past week, and have you noticed any new neurological symptoms such as numbness, tingling, or weakness in your arms or legs?",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The pain has stayed about the same, just getting worse when I move my neck. I haven't had any numbness, tingling, or weakness in my arms or legs.",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of the MRI of the cervical spine that was ordered?",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had the MRI yet, so I don't have the results. The doctor mentioned they wanted to make sure there wasn't anything more serious, like a concussion or nerve issues, but I'm still waiting on that.",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Once the MRI is completed, could you please provide the results, particularly regarding the cervical spine, including any signs of spinal cord injury, nerve compression, or soft tissue damage?",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had the MRI yet, so I don't have the results. The doctor mentioned they wanted to make sure there wasn't anything more serious, like a concussion or nerve issues, but I'm still waiting on that.",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Once the MRI is completed, could you please provide the results so we can review them for any signs of cervical spine injuries, spinal cord involvement, or nerve compression?",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had the MRI yet, so I don't have the results. The doctor mentioned they wanted to make sure there wasn't anything more serious, like a concussion or nerve issues, but I'm still waiting on that.",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of the MRI of the cervical spine once they are available?",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had the MRI yet, so I don't have the results. The doctor mentioned they wanted to make sure there wasn't anything more serious, like a concussion or nerve issues, but I'm still waiting on that.",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm if you have any history of neck injuries or surgeries, and if you have been experiencing any difficulty with balance, dizziness, or changes in vision?",
+      "tid": "T29"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have any history of neck injuries or surgeries other than the car accident. I haven't had any balance issues, dizziness, or changes in vision since the accident.",
+      "tid": "T30"
+    }
+  ]
+}

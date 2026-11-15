@@ -1,0 +1,470 @@
+{
+  "case_id": "D2N177",
+  "rq2_split": "va_dev",
+  "rq1_split": "dev",
+  "aci_source_split": "test3",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* Patient is a 60-year-old male with a history of depression, diabetes, and hypertension.\n* The patient reports having taken a holiday, which was a mix of work and stress.\n* The patient reports that their diet has been inconsistent, particularly around the holidays, and they have not been as active as desired due to the cold weather.\n* He reports experiencing anxiety and stress, especially during the holidays, but has been trying to manage it through activities like walking and yard work.\n* The patient reports planning a vacation to a warm destination in the near future.\n* The patient reports eating more sweets and comfort foods than recommended and has not been consistent with meal times.\n* He has been trying to monitor his blood sugar levels more closely, especially after the holidays, but it has been challenging.\n* He is not ready for medication and is looking into alternative options like talk therapy.\n* He has been taking metformin and lisinopril as prescribed, and his blood pressure readings have been moderate.\n* He has an HbA1c result of 8, which is a bit high.\n* He has not had any recent episodes of hypoglycemia or hyperglycemia.\n* He has not had any recent weight changes and has not experienced any symptoms like fatigue, heat intolerance, or changes in bowel habits.\n* He is willing to undergo thyroid function testing to rule out any endocrine-related issues that may be contributing to his symptoms.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N177_V01",
+      "section": "Assessment",
+      "text": "The patient has a history of depression, diabetes, and hypertension, and is currently experiencing anxiety and stress.",
+      "status": "ok",
+      "p_chain_broken": 0.0005,
+      "components": [
+        {
+          "component": "The patient has a history of depression, diabetes, and hypertension, and is currently experiencing anxiety and stress.",
+          "feature_ids": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F8",
+            "F9",
+            "F10"
+          ],
+          "p_broken": 0.00048785467584707825,
+          "passages": [
+            {
+              "pid": "6308_0",
+              "title": "A1C",
+              "section": "Summary",
+              "cos": 0.414
+            },
+            {
+              "pid": "6785_1664",
+              "title": "HDL: The \"Good\" Cholesterol",
+              "section": "What else can affect my HDL level?",
+              "cos": 0.424
+            },
+            {
+              "pid": "6308_1",
+              "title": "A1C",
+              "section": "Summary",
+              "cos": 0.366
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N177_V02",
+      "section": "Assessment",
+      "text": "His blood sugar levels have been a bit out of control, and his HbA1c result is a bit high.",
+      "status": "ok",
+      "p_chain_broken": 0.0001,
+      "components": [
+        {
+          "component": "His blood sugar levels have been a bit out of control",
+          "feature_ids": [
+            "F5",
+            "F9",
+            "F15",
+            "F16"
+          ],
+          "p_broken": 8.481029328464349e-05,
+          "passages": [
+            {
+              "pid": "5784_3012",
+              "title": "Prediabetes",
+              "section": "How is prediabetes diagnosed?",
+              "cos": 0.568
+            },
+            {
+              "pid": "6308_0",
+              "title": "A1C",
+              "section": "Summary",
+              "cos": 0.611
+            },
+            {
+              "pid": "5930_1119",
+              "title": "Diabetes Type 2",
+              "section": "How is type 2 diabetes diagnosed?",
+              "cos": 0.541
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "His HbA1c result is a bit high",
+          "feature_ids": [
+            "F9"
+          ],
+          "p_broken": 2.429995106123148e-05,
+          "passages": [
+            {
+              "pid": "6308_1",
+              "title": "A1C",
+              "section": "Summary",
+              "cos": 0.435
+            },
+            {
+              "pid": "6308_0",
+              "title": "A1C",
+              "section": "Summary",
+              "cos": 0.47
+            },
+            {
+              "pid": "6907_1929",
+              "title": "High Cholesterol in Children and Teens",
+              "section": "How do I know if my child or teen has high cholesterol?",
+              "cos": 0.354
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N177_V03",
+      "section": "Assessment",
+      "text": "He is not ready for medication and is looking into alternative options like talk therapy.",
+      "status": "ok",
+      "p_chain_broken": 0.0008,
+      "components": [
+        {
+          "component": "He is not ready for medication and is looking into alternative options like talk therapy.",
+          "feature_ids": [
+            "F13",
+            "F21"
+          ],
+          "p_broken": 0.000804078572398256,
+          "passages": [
+            {
+              "pid": "6931_3608",
+              "title": "Teen Depression",
+              "section": "How is depression in teens treated?",
+              "cos": 0.435
+            },
+            {
+              "pid": "113_1065",
+              "title": "Depression",
+              "section": "What are the treatments for depression?",
+              "cos": 0.475
+            },
+            {
+              "pid": "367_2989",
+              "title": "Post-Traumatic Stress Disorder",
+              "section": "What are the treatments for post-traumatic stress disorder (PTSD)?",
+              "cos": 0.412
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N177_V04",
+      "section": "Plan",
+      "text": "The doctor will refer the patient for talk therapy to help manage his depression and anxiety.",
+      "status": "flagged",
+      "p_chain_broken": 0.4378,
+      "components": [
+        {
+          "component": "The doctor will refer the patient for talk therapy to help manage his depression and anxiety.",
+          "feature_ids": [
+            "F1",
+            "F2",
+            "F3",
+            "F12",
+            "F13",
+            "F21"
+          ],
+          "p_broken": 0.43782247216304854,
+          "passages": [
+            {
+              "pid": "6931_3608",
+              "title": "Teen Depression",
+              "section": "How is depression in teens treated?",
+              "cos": 0.541
+            },
+            {
+              "pid": "113_1065",
+              "title": "Depression",
+              "section": "What are the treatments for depression?",
+              "cos": 0.628
+            },
+            {
+              "pid": "4117_2912",
+              "title": "Personality Disorders",
+              "section": "How are personality disorders treated?",
+              "cos": 0.633
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N177_V05",
+      "section": "Plan",
+      "text": "The patient will continue to monitor his blood sugar levels and work on making lifestyle changes to improve his blood sugar control.",
+      "status": "ok",
+      "p_chain_broken": 0.026,
+      "components": [
+        {
+          "component": "The patient will continue to monitor his blood sugar levels",
+          "feature_ids": [
+            "F5",
+            "F9",
+            "F15",
+            "F16",
+            "F17"
+          ],
+          "p_broken": 0.000804081635664014,
+          "passages": [
+            {
+              "pid": "5784_3012",
+              "title": "Prediabetes",
+              "section": "How is prediabetes diagnosed?",
+              "cos": 0.566
+            },
+            {
+              "pid": "5930_1119",
+              "title": "Diabetes Type 2",
+              "section": "How is type 2 diabetes diagnosed?",
+              "cos": 0.563
+            },
+            {
+              "pid": "6308_0",
+              "title": "A1C",
+              "section": "Summary",
+              "cos": 0.601
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient will work on making lifestyle changes to improve his blood sugar control",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.02595724864560041,
+          "passages": [
+            {
+              "pid": "4_1079",
+              "title": "Diabetes",
+              "section": "What are the treatments for diabetes?",
+              "cos": 0.516
+            },
+            {
+              "pid": "6026_1097",
+              "title": "Diabetes in Children and Teens",
+              "section": "Summary",
+              "cos": 0.43
+            },
+            {
+              "pid": "4935_1101",
+              "title": "Diabetes Medicines",
+              "section": "Who needs diabetes medicines?",
+              "cos": 0.448
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N177_V06",
+      "section": "Plan",
+      "text": "The patient will be encouraged to follow up with his doctor in a few months to reassess his progress and adjust his treatment plan as needed.",
+      "status": "ok",
+      "p_chain_broken": 0.0474,
+      "components": [
+        {
+          "component": "The patient will be encouraged to follow up with his doctor in a few months to reassess his progress and adjust his treatment plan as needed.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.047425662807794866,
+          "passages": [
+            {
+              "pid": "6543_1704",
+              "title": "Health Risks of an Inactive Lifestyle",
+              "section": "How can I be more active around the house?",
+              "cos": 0.356
+            },
+            {
+              "pid": "27_933",
+              "title": "COPD",
+              "section": "What are the treatments for COPD?",
+              "cos": 0.356
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* Patient is a 60-year-old male with a history of depression, diabetes, and hypertension.\n* The patient reports having taken a holiday, which was a mix of work and stress.\n* The patient reports that their diet has been inconsistent, particularly around the holidays, and they have not been as active as desired due to the cold weather.\n* He reports experiencing anxiety and stress, especially during the holidays, but has been trying to manage it through activities like walking and yard work.\n* The patient reports planning a vacation to a warm destination in the near future.\n* The patient reports eating more sweets and comfort foods than recommended and has not been consistent with meal times.\n* He has been trying to monitor his blood sugar levels more closely, especially after the holidays, but it has been challenging.\n* He is not ready for medication and is looking into alternative options like talk therapy.\n* He has been taking metformin and lisinopril as prescribed, and his blood pressure readings have been moderate.\n* He has an HbA1c result of 8, which is a bit high.\n* He has not had any recent episodes of hypoglycemia or hyperglycemia.\n* He has not had any recent weight changes and has not experienced any symptoms like fatigue, heat intolerance, or changes in bowel habits.\n* He is willing to undergo thyroid function testing to rule out any endocrine-related issues that may be contributing to his symptoms.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient has a history of depression, diabetes, and hypertension, and is currently experiencing anxiety and stress.",
+      "His blood sugar levels have been a bit out of control, and his HbA1c result is a bit high.",
+      "He is not ready for medication and is looking into alternative options like talk therapy."
+    ],
+    "plan": [
+      "The patient will continue to monitor his blood sugar levels and work on making lifestyle changes to improve his blood sugar control.",
+      "The patient will be encouraged to follow up with his doctor in a few months to reassess his progress and adjust his treatment plan as needed."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 60 years old, male, and I'm here for a follow-up on my chronic problems—depression, diabetes, and hypertension.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide more details about your current symptoms or any changes in your condition since your last visit?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Sure. Well, I've been dealing with some anxiety and stress, especially with the holidays. It's been a tough year and a half, and the pressure of getting ready for Thanksgiving really started to wear on me. But I did have a nice holiday, though it was a lot of work and stress. I'm planning to take a vacation soon, hopefully somewhere warm. As for my depression, I've been trying to stay active by going for walks and doing some yard work, but with the cold weather, I haven't been able to keep that up. I'm not ready for medication yet, so I'm looking into alternative options. My diabetes has been a bit out of control lately, especially around the holidays, but I've been trying to monitor it better. My blood pressure has been okay, and I'm still taking my medication. I don't have any other symptoms like chest pain or shortness of breath.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide details on your current diabetes medications, including dosages and any recent changes? Additionally, have you had any recent blood sugar monitoring results or HbA1c tests?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm still taking metformin, and I haven't had any recent changes to the dosage. I did have an HbA1c test, and the result was eight, which the doctor mentioned was a bit high. I've been trying to monitor my blood sugar more closely, especially after the holidays, but it's been a bit challenging.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you share more about your current blood pressure readings and any recent changes in your hypertension medication?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm still taking lisinopril at 20 milligrams a day, and I haven't had any changes to that medication. I bought the blood pressure cuff the doctor recommended, and my readings have been pretty moderate, nothing out of the ordinary. I haven't had any issues with it.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your current blood pressure readings and the frequency with which you are monitoring your blood sugar levels?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm still taking lisinopril at 20 milligrams a day, and I haven't had any changes to that medication. I bought the blood pressure cuff the doctor recommended, and my readings have been pretty moderate, nothing out of the ordinary. I haven't had any issues with it.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide more details on the frequency and severity of your anxiety and depressive symptoms, and whether you have consulted a mental health professional for further evaluation or treatment?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I've been feeling more anxious and down, especially with the stress of the holidays, but I haven't seen a mental health professional yet. I'm not ready for medication, so I'm looking into other options like talk therapy.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any changes in the frequency or severity of your depressive or anxiety symptoms over the past few months?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't seen a mental health professional yet, but I'm open to it. I'm not ready for medication, so I'm looking into other options like talk therapy. My symptoms have been more frequent lately, especially with the stress of the holidays, but I'm trying to manage them through activities like walking and staying active when I can.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide your most recent fasting blood glucose level and share more about your diet and exercise routine in the past month?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't checked my fasting blood glucose recently, but I've been trying to monitor it more closely. My diet has been a bit inconsistent, especially around the holidays, and I haven't been as active as I'd like because of the cold weather. I used to go for walks every morning, but I haven't been able to keep that up.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide details on your current dietary habits, including any specific foods or patterns that may be affecting your blood sugar control?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I've been trying to eat healthier, but it's been tough, especially around the holidays. I've been eating more sweets and comfort foods than I should, and I haven't been as consistent with my meals. I know it's not ideal, but I'm trying to be more mindful now and monitor my blood sugar more closely.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient had any recent episodes of hypoglycemia or hyperglycemia, and if so, what were the associated symptoms and how were they managed?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any episodes of hypoglycemia or hyperglycemia recently. I've been trying to monitor my blood sugar more closely, but I know my diet hasn't been perfect, especially around the holidays. I'm working on being more consistent with my meals and checking my levels more often.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please share your current weight and whether you've experienced any recent weight changes? Additionally, have you had any thyroid function tests or other endocrine-related investigations recently?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had any recent weight changes, and I don't think I've had any thyroid function tests or other endocrine-related investigations recently. I'm just trying to focus on managing my diabetes and depression through lifestyle changes and talk therapy.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient had any recent weight changes or symptoms such as fatigue, heat intolerance, or changes in bowel habits?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any recent weight changes or symptoms like fatigue or changes in bowel habits. I've been feeling pretty steady overall, just dealing with the usual stress and trying to stay active when I can.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any recent psychiatric evaluation or been referred for talk therapy? If so, what was the outcome or recommendation?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any recent psychiatric evaluation or been referred for talk therapy yet, but the doctor mentioned referring me for some talk therapy, so I'm looking forward to that.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient had any recent thyroid function tests or other endocrine-related investigations? If not, would you be willing to undergo thyroid function testing to rule out any endocrine-related issues that may be contributing to his symptoms?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't think I've had any thyroid function tests or other endocrine-related investigations recently. I'm not sure if I need them, but I'm willing to do whatever is necessary to figure out what's going on and manage my health better.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any recent psychiatric evaluation or been referred for talk therapy?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any recent psychiatric evaluation or been referred for talk therapy yet, but the doctor mentioned referring me for some talk therapy, so I'm looking forward to that.",
+      "tid": "T29"
+    }
+  ]
+}

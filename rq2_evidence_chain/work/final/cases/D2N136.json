@@ -1,0 +1,410 @@
+{
+  "case_id": "D2N136",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test2",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient is a 33-year-old female who presents with knee pain, primarily in both knees, especially the left one, which started after she began doing stair workouts.\n* The patient reports that they have not experienced any locking, clicking, or instability in their knees during the workouts or otherwise.\n* The patient reports that the knee pain has been constant and has not improved with rest, although it has not worsened significantly over time.\n* The pain is constant, worsens with activity, and is accompanied by swelling, redness, and stiffness.\n* The patient reports that morning stiffness in the knees has been constant.\n* The patient has not experienced morning stiffness, and the pain does not improve with rest.\n* She has a history of rotator cuff repair on her right shoulder two years ago but no other joint issues.\n* The patient reports taking metformin as prescribed, twice a day, and has not made any changes to their medication regimen.\n* The patient has not experienced fatigue, weight loss, or skin rashes related to her knee pain.\n* She has not been tested for autoimmune labs, but the doctor mentioned ordering them.",
+    "objective": "* The patient's blood pressure was mentioned to be a little high, but specific readings were not provided.\n* The doctor observed redness and swelling, especially on the left knee, and noted fluid buildup.\n* The patient had x-rays of her left knee, which showed normal results."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N136_V01",
+      "section": "Assessment",
+      "text": "The patient presents with knee pain, swelling, and redness, which is likely related to her stair workouts.",
+      "status": "ok",
+      "p_chain_broken": 0.0019,
+      "components": [
+        {
+          "component": "The patient presents with knee pain, swelling, and redness, which is likely related to her stair workouts.",
+          "feature_ids": [
+            "F2",
+            "F5",
+            "F6",
+            "F9",
+            "F11",
+            "F19",
+            "F20"
+          ],
+          "p_broken": 0.0019267182672120225,
+          "passages": [
+            {
+              "pid": "304_2281",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.616
+            },
+            {
+              "pid": "1232_3263",
+              "title": "Rheumatoid Arthritis",
+              "section": "What are the symptoms of rheumatoid arthritis?",
+              "cos": 0.516
+            },
+            {
+              "pid": "264_1628",
+              "title": "Gout",
+              "section": "What are the symptoms of gout?",
+              "cos": 0.465
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N136_V02",
+      "section": "Assessment",
+      "text": "The patient has not been tested for autoimmune labs, but the doctor mentioned ordering them.",
+      "status": "ok",
+      "p_chain_broken": 0.1067,
+      "components": [
+        {
+          "component": "The patient has not been tested for autoimmune labs",
+          "feature_ids": [
+            "F27",
+            "F22"
+          ],
+          "p_broken": 0.000626330295651696,
+          "passages": [
+            {
+              "pid": "154_317",
+              "title": "Autoimmune Diseases",
+              "section": "How are autoimmune diseases diagnosed?",
+              "cos": 0.49
+            },
+            {
+              "pid": "4948_2876",
+              "title": "Pemphigus",
+              "section": "Summary",
+              "cos": 0.419
+            },
+            {
+              "pid": "154_319",
+              "title": "Autoimmune Diseases",
+              "section": "What are the treatments for autoimmune diseases?",
+              "cos": 0.468
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "the doctor mentioned ordering them",
+          "feature_ids": [
+            "F20",
+            "F22",
+            "F27"
+          ],
+          "p_broken": 0.10669021688431507,
+          "passages": [
+            {
+              "pid": "154_316",
+              "title": "Autoimmune Diseases",
+              "section": "What are the symptoms of autoimmune diseases?",
+              "cos": 0.481
+            },
+            {
+              "pid": "5668_2151",
+              "title": "Infectious Arthritis",
+              "section": "Summary",
+              "cos": 0.511
+            },
+            {
+              "pid": "1232_3260",
+              "title": "Rheumatoid Arthritis",
+              "section": "What is rheumatoid arthritis?",
+              "cos": 0.492
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N136_V03",
+      "section": "Plan",
+      "text": "The doctor will order autoimmune labs to help determine the cause of the patient's knee pain.",
+      "status": "flagged",
+      "p_chain_broken": 0.3486,
+      "components": [
+        {
+          "component": "The doctor will order autoimmune labs to help determine the cause of the patient's knee pain.",
+          "feature_ids": [
+            "F16",
+            "F27",
+            "F28",
+            "F22",
+            "F1",
+            "F4",
+            "F5",
+            "F6"
+          ],
+          "p_broken": 0.34864456006604916,
+          "passages": [
+            {
+              "pid": "154_316",
+              "title": "Autoimmune Diseases",
+              "section": "What are the symptoms of autoimmune diseases?",
+              "cos": 0.557
+            },
+            {
+              "pid": "304_2281",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.6
+            },
+            {
+              "pid": "154_317",
+              "title": "Autoimmune Diseases",
+              "section": "How are autoimmune diseases diagnosed?",
+              "cos": 0.491
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N136_V04",
+      "section": "Plan",
+      "text": "The patient will continue to monitor her blood pressure and report any changes to her doctor.",
+      "status": "ok",
+      "p_chain_broken": 0.0032,
+      "components": [
+        {
+          "component": "The patient will continue to monitor her blood pressure and report any changes to her doctor.",
+          "feature_ids": [
+            "F17",
+            "F21",
+            "F23",
+            "F25",
+            "F27",
+            "F28"
+          ],
+          "p_broken": 0.0031726638961496996,
+          "passages": [
+            {
+              "pid": "6121_433",
+              "title": "Blood Glucose",
+              "section": "When and how should I check my blood glucose?",
+              "cos": 0.52
+            },
+            {
+              "pid": "34_1909",
+              "title": "High Blood Pressure",
+              "section": "How is high blood pressure diagnosed?",
+              "cos": 0.375
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N136_V05",
+      "section": "Plan",
+      "text": "The doctor will reassess the patient's knee pain and swelling in the future to monitor for any changes or progression.",
+      "status": "ok",
+      "p_chain_broken": 0.0022,
+      "components": [
+        {
+          "component": "The doctor will reassess the patient's knee pain and swelling in the future to monitor for any changes or progression.",
+          "feature_ids": [
+            "F4",
+            "F11",
+            "F12",
+            "F19",
+            "F20",
+            "F24",
+            "F25",
+            "F27"
+          ],
+          "p_broken": 0.0021827052598940785,
+          "passages": [
+            {
+              "pid": "304_2281",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.531
+            },
+            {
+              "pid": "5668_2151",
+              "title": "Infectious Arthritis",
+              "section": "Summary",
+              "cos": 0.462
+            },
+            {
+              "pid": "304_2282",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.496
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient is a 33-year-old female who presents with knee pain, primarily in both knees, especially the left one, which started after she began doing stair workouts.\n* The patient reports that they have not experienced any locking, clicking, or instability in their knees during the workouts or otherwise.\n* The patient reports that the knee pain has been constant and has not improved with rest, although it has not worsened significantly over time.\n* The pain is constant, worsens with activity, and is accompanied by swelling, redness, and stiffness.\n* The patient reports that morning stiffness in the knees has been constant.\n* The patient has not experienced morning stiffness, and the pain does not improve with rest.\n* She has a history of rotator cuff repair on her right shoulder two years ago but no other joint issues.\n* The patient reports taking metformin as prescribed, twice a day, and has not made any changes to their medication regimen.\n* The patient has not experienced fatigue, weight loss, or skin rashes related to her knee pain.\n* She has not been tested for autoimmune labs, but the doctor mentioned ordering them.",
+    "objective": "* The patient's blood pressure was mentioned to be a little high, but specific readings were not provided.\n* The doctor observed redness and swelling, especially on the left knee, and noted fluid buildup.\n* The patient had x-rays of her left knee, which showed normal results.",
+    "assessment": [
+      "The patient presents with knee pain, swelling, and redness, which is likely related to her stair workouts.",
+      "The patient has not been tested for autoimmune labs, but the doctor mentioned ordering them."
+    ],
+    "plan": [
+      "The patient will continue to monitor her blood pressure and report any changes to her doctor.",
+      "The doctor will reassess the patient's knee pain and swelling in the future to monitor for any changes or progression."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 33 years old, and I'm a female. I'm here because I've been having joint pain, mostly in my knees. I've been doing more stair workouts, thinking it would help build muscle, but it's actually been making my knees hurt a lot.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm your age, gender, and describe the nature of your knee pain, including when it started, how long it lasts, and whether it is accompanied by any swelling, redness, or stiffness?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 33 and female. The knee pain started a while back, and it's been bothering me pretty much ever since I started doing those stair workouts. It's both knees, and they feel sore and a bit swollen, especially the left one. There's some redness too, and it's been making it hard to bend or straighten my legs fully.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any morning stiffness in your knees, and if so, how long does it last? Have you noticed any improvement or worsening of symptoms with rest or activity?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have morning stiffness in my knees. The pain seems to get worse when I'm active, especially when I'm doing those stair workouts, but it doesn't really get better with rest. It's just been pretty constant.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any locking, clicking, or instability in your knees during the workouts or otherwise?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any locking, clicking, or instability in my knees during the workouts or otherwise. It's just been a constant soreness and some difficulty with bending and straightening my legs, especially in the left knee.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the duration of the knee pain and any prior history of joint issues? Additionally, have you experienced any systemic symptoms such as fatigue or weight loss? Lastly, is there a family history of autoimmune or inflammatory conditions?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The knee pain has been going on for a while now, probably since I started doing those stair workouts. I had a rotator cuff repair on my right shoulder about two years ago, but I haven't had any other joint issues since then. I don't have any fatigue or weight loss, and I don't think there's a family history of autoimmune or inflammatory conditions — I'm not sure about that.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you clarify how long you've been experiencing the knee pain and whether it has progressively worsened over time?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The knee pain has been going on for a while now, probably since I started doing those stair workouts. It hasn't gotten much worse, but it's been pretty constant and hasn't improved with rest.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your vital signs and describe any physical examination findings you've had so far?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "My blood pressure was a little high today, which the doctor mentioned, but I’ve been monitoring it at home and it’s been okay otherwise. The doctor checked my knees and saw some redness and swelling, especially on the left one, and there was a little fluid buildup. My knees feel stiff and sore, and it’s been hard to bend or straighten them fully, but I don’t have any other physical issues or symptoms.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide the specific blood pressure readings you've been monitoring at home, and have you had any recent laboratory tests or imaging studies for your knees?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't been tracking my blood pressure with specific numbers at home, just making sure it's under control with my medication. As for tests, the doctor did some x-rays of my left knee when I came in, and there was some swelling and redness, but the x-ray looked normal. I haven't had any other tests done yet.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the swelling and redness in your left knee in more detail? For example, how long has it been present, and has it changed in size or appearance over time?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The swelling and redness in my left knee have been there for a while now, probably since the knee pain started. It hasn't really gotten bigger or changed much, just stayed the same. It's been a constant issue, especially when I'm doing my workouts or even just walking around.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any recent blood tests, such as a complete blood count, ESR, or CRP, to check for signs of inflammation or infection?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't think I've had any of those specific blood tests recently. The doctor mentioned checking my diabetes labs, and my A1C was a little high but not too bad. Other than that, I don't recall any tests for inflammation or infection.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any recent changes in your diabetes management, such as adjustments to your medication or blood sugar levels?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any recent changes in my diabetes management. I've been taking my metformin as prescribed, twice a day, and my blood sugars have been under control, so I don't think there's been any need to adjust my medication.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you been tested for inflammatory markers such as ESR, CRP, RF, or anti-CCP? If so, what were the results?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't think I've been tested for those specific inflammatory markers yet. The doctor mentioned ordering some autoimmune labs, but I haven't received the results or been told anything about them.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you been tested for inflammatory markers such as ESR or CRP, or autoimmune panels such as RF and ANA? If so, what were the results?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't think I've been tested for those specific inflammatory markers yet. The doctor mentioned ordering some autoimmune labs, but I haven't received the results or been told anything about them.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you clarify if you have been tested for autoimmune labs, and if so, what were the results? Also, have you noticed any other symptoms such as fatigue, weight loss, or skin rashes that might be related to your knee pain?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't been tested for autoimmune labs yet, but the doctor mentioned ordering them. I haven't noticed any other symptoms like fatigue, weight loss, or skin rashes related to my knee pain. It's just been the swelling, redness, and discomfort in my knees, especially when I'm active.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm if you have any family history of autoimmune or rheumatic conditions, such as rheumatoid arthritis or lupus? This information may help us better understand the potential cause of your knee symptoms.",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't think there's any family history of autoimmune or rheumatic conditions that I'm aware of. I don't have any information about my family's medical history, so I can't confirm or deny that.",
+      "tid": "T29"
+    }
+  ]
+}

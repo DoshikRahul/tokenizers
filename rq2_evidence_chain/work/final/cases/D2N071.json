@@ -1,0 +1,525 @@
+{
+  "case_id": "D2N071",
+  "rq2_split": "va_dev",
+  "rq1_split": "dev",
+  "aci_source_split": "dev",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* Patient is a 62-year-old male who is here for his annual exam.\n* The patient reports that it has been a while since their last checkup and they are seeking an update.\n* The patient doesn't think it's been discussed much with them before.\n* He has been managing his depression and hypertension, and had a lobectomy a few years back.\n* He reports feeling relatively okay overall, but had a tough spring with allergies and stress related to his daughter moving out for college.\n* He mentions that his hypertension has been a bit more of a struggle, especially on weekends when he sometimes forgets to take his medication.\n* He runs 4-5 miles a day and sometimes feels a little short of breath and gets a mild pounding in his chest, especially on humid days, but it usually goes away on its own.\n* The patient does not feel lightheaded or have any other symptoms with it.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N071_V01",
+      "section": "Assessment",
+      "text": "The patient is experiencing mild chest pounding during physical activity, especially on humid days, which is a new symptom.",
+      "status": "ok",
+      "p_chain_broken": 0.0022,
+      "components": [
+        {
+          "component": "The patient is experiencing mild chest pounding during physical activity, especially on humid days, which is a new symptom.",
+          "feature_ids": [
+            "F9",
+            "F10",
+            "F11",
+            "F12",
+            "F13",
+            "F14",
+            "F15",
+            "F20"
+          ],
+          "p_broken": 0.002182701595147468,
+          "passages": [
+            {
+              "pid": "147_229",
+              "title": "Arrhythmia",
+              "section": "What are the symptoms of an arrhythmia?",
+              "cos": 0.587
+            },
+            {
+              "pid": "5_1738",
+              "title": "Heart Attack",
+              "section": "What are the symptoms of a heart attack?",
+              "cos": 0.604
+            },
+            {
+              "pid": "4744_694",
+              "title": "Chest Pain",
+              "section": "Summary",
+              "cos": 0.568
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N071_V02",
+      "section": "Assessment",
+      "text": "He has a history of hypertension and depression, and had a lobectomy a few years back.",
+      "status": "ok",
+      "p_chain_broken": 0.0,
+      "components": [
+        {
+          "component": "He has a history of hypertension",
+          "feature_ids": [
+            "F4"
+          ],
+          "p_broken": 1.6701163025436376e-05,
+          "passages": [
+            {
+              "pid": "3634_3134",
+              "title": "Pulmonary Hypertension",
+              "section": "Who is more likely to develop pulmonary hypertension?",
+              "cos": 0.376
+            },
+            {
+              "pid": "34_1908",
+              "title": "High Blood Pressure",
+              "section": "What is blood pressure?",
+              "cos": 0.411
+            },
+            {
+              "pid": "34_1912",
+              "title": "High Blood Pressure",
+              "section": "Why do I need to worry about high blood pressure?",
+              "cos": 0.398
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "He has a history of depression",
+          "feature_ids": [
+            "F3",
+            "F6"
+          ],
+          "p_broken": 6.14407645599071e-06,
+          "passages": [
+            {
+              "pid": "113_1064",
+              "title": "Depression",
+              "section": "How is depression diagnosed?",
+              "cos": 0.5
+            },
+            {
+              "pid": "113_1058",
+              "title": "Depression",
+              "section": "What is depression?",
+              "cos": 0.431
+            },
+            {
+              "pid": "113_1062",
+              "title": "Depression",
+              "section": "What are the symptoms of depression?",
+              "cos": 0.417
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "He had a lobectomy a few years back",
+          "feature_ids": [
+            "F5"
+          ],
+          "p_broken": 1.4738692069834517e-05,
+          "passages": [
+            {
+              "pid": "1515_44",
+              "title": "Adenoids",
+              "section": "What is an adenoidectomy and why might I my child need one?",
+              "cos": 0.372
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N071_V03",
+      "section": "Assessment",
+      "text": "He is currently taking medication for hypertension and depression, and has not had any recent changes to his medication regimen.",
+      "status": "ok",
+      "p_chain_broken": 0.0,
+      "components": [
+        {
+          "component": "He is currently taking medication for hypertension and depression, and has not had any recent changes to his medication regimen.",
+          "feature_ids": [
+            "F4",
+            "F6",
+            "F16",
+            "F17"
+          ],
+          "p_broken": 1.8924936176979665e-05,
+          "passages": [
+            {
+              "pid": "34_1913",
+              "title": "High Blood Pressure",
+              "section": "What are the treatments for high blood pressure?",
+              "cos": 0.355
+            },
+            {
+              "pid": "4146_185",
+              "title": "Antidepressants",
+              "section": "What are the side effects of antidepressants?",
+              "cos": 0.385
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N071_V04",
+      "section": "Plan",
+      "text": "The doctor will review the patient's medication regimen and consider adjusting his hypertension medication to improve control.",
+      "status": "ok",
+      "p_chain_broken": 0.0032,
+      "components": [
+        {
+          "component": "The doctor will review the patient's medication regimen",
+          "feature_ids": [
+            "F4",
+            "F6",
+            "F7",
+            "F16",
+            "F17"
+          ],
+          "p_broken": 0.0015011711740438424,
+          "passages": [
+            {
+              "pid": "34_1913",
+              "title": "High Blood Pressure",
+              "section": "What are the treatments for high blood pressure?",
+              "cos": 0.425
+            },
+            {
+              "pid": "5719_2455",
+              "title": "Medication Errors",
+              "section": "Summary",
+              "cos": 0.394
+            },
+            {
+              "pid": "3634_3139",
+              "title": "Pulmonary Hypertension",
+              "section": "What are the treatments for pulmonary hypertension?",
+              "cos": 0.387
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The doctor will consider adjusting his hypertension medication to improve control",
+          "feature_ids": [
+            "F4",
+            "F7",
+            "F16",
+            "F17",
+            "F20"
+          ],
+          "p_broken": 0.0031726646663716323,
+          "passages": [
+            {
+              "pid": "34_1913",
+              "title": "High Blood Pressure",
+              "section": "What are the treatments for high blood pressure?",
+              "cos": 0.418
+            },
+            {
+              "pid": "3634_3139",
+              "title": "Pulmonary Hypertension",
+              "section": "What are the treatments for pulmonary hypertension?",
+              "cos": 0.411
+            },
+            {
+              "pid": "4939_437",
+              "title": "Blood Pressure Medicines",
+              "section": "What is high blood pressure?",
+              "cos": 0.408
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N071_V05",
+      "section": "Plan",
+      "text": "The patient will be advised to continue taking his medication as prescribed and to monitor his symptoms.",
+      "status": "ok",
+      "p_chain_broken": 0.0331,
+      "components": [
+        {
+          "component": "The patient will be advised to continue taking his medication as prescribed",
+          "feature_ids": [
+            "F4",
+            "F6",
+            "F7",
+            "F16",
+            "F17",
+            "F19",
+            "F20"
+          ],
+          "p_broken": 0.0008040791477125534,
+          "passages": [
+            {
+              "pid": "34_1913",
+              "title": "High Blood Pressure",
+              "section": "What are the treatments for high blood pressure?",
+              "cos": 0.387
+            },
+            {
+              "pid": "3634_3139",
+              "title": "Pulmonary Hypertension",
+              "section": "What are the treatments for pulmonary hypertension?",
+              "cos": 0.385
+            },
+            {
+              "pid": "4146_185",
+              "title": "Antidepressants",
+              "section": "What are the side effects of antidepressants?",
+              "cos": 0.408
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient will be advised to monitor his symptoms",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.0330858729173399,
+          "passages": [
+            {
+              "pid": "3634_3134",
+              "title": "Pulmonary Hypertension",
+              "section": "Who is more likely to develop pulmonary hypertension?",
+              "cos": 0.459
+            },
+            {
+              "pid": "3634_3138",
+              "title": "Pulmonary Hypertension",
+              "section": "How is pulmonary hypertension diagnosed?",
+              "cos": 0.448
+            },
+            {
+              "pid": "4931_205",
+              "title": "Aortic Aneurysm",
+              "section": "Who should be screened for an aortic aneurysm?",
+              "cos": 0.416
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N071_V06",
+      "section": "Plan",
+      "text": "The doctor will schedule a follow-up appointment to reassess the patient's symptoms and medication regimen.",
+      "status": "ok",
+      "p_chain_broken": 0.018,
+      "components": [
+        {
+          "component": "The doctor will schedule a follow-up appointment to reassess the patient's symptoms and medication regimen.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.017986084681779656,
+          "passages": [
+            {
+              "pid": "3634_3139",
+              "title": "Pulmonary Hypertension",
+              "section": "What are the treatments for pulmonary hypertension?",
+              "cos": 0.432
+            },
+            {
+              "pid": "3634_3138",
+              "title": "Pulmonary Hypertension",
+              "section": "How is pulmonary hypertension diagnosed?",
+              "cos": 0.399
+            },
+            {
+              "pid": "3634_3134",
+              "title": "Pulmonary Hypertension",
+              "section": "Who is more likely to develop pulmonary hypertension?",
+              "cos": 0.382
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* Patient is a 62-year-old male who is here for his annual exam.\n* The patient reports that it has been a while since their last checkup and they are seeking an update.\n* The patient doesn't think it's been discussed much with them before.\n* He has been managing his depression and hypertension, and had a lobectomy a few years back.\n* He reports feeling relatively okay overall, but had a tough spring with allergies and stress related to his daughter moving out for college.\n* He mentions that his hypertension has been a bit more of a struggle, especially on weekends when he sometimes forgets to take his medication.\n* He runs 4-5 miles a day and sometimes feels a little short of breath and gets a mild pounding in his chest, especially on humid days, but it usually goes away on its own.\n* The patient does not feel lightheaded or have any other symptoms with it.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient is experiencing mild chest pounding during physical activity, especially on humid days, which is a new symptom.",
+      "He has a history of hypertension and depression, and had a lobectomy a few years back.",
+      "He is currently taking medication for hypertension and depression, and has not had any recent changes to his medication regimen."
+    ],
+    "plan": [
+      "The doctor will review the patient's medication regimen and consider adjusting his hypertension medication to improve control.",
+      "The patient will be advised to continue taking his medication as prescribed and to monitor his symptoms.",
+      "The doctor will schedule a follow-up appointment to reassess the patient's symptoms and medication regimen."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Doctor",
+      "text": "Hello. Could you tell me your age and gender, and what brings you in today?",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 62 years old, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update.",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your age, gender, and the reason for your visit today?",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 62 years old, male, and I'm here for my annual exam. I've been managing my depression and hypertension, and I had a lobectomy a few years back. It's been a while since my last checkup, so I wanted to come in for an update.",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please tell me if you have any current symptoms or concerns you'd like to discuss during this visit?",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I've been feeling relatively okay overall, but I did have a tough spring with all the pollen and allergies. It was also a stressful time with my daughter moving out for college. I've been managing my depression pretty well with my medication, but my hypertension has been a bit more of a struggle, especially on the weekends when I sometimes forget to take my meds. I also run 4 to 5 miles a day, and sometimes when it's humid, I feel a little short of breath and get a bit of a pounding in my chest, but it usually goes away.",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any episodes of chest pain, dizziness, or syncope during or after your runs, especially in humid conditions?",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any chest pain, dizziness, or fainting during or after my runs. The pounding in my chest usually goes away on its own, and I don't feel lightheaded or anything like that. It's more of a mild sensation, and I don't worry about it too much.",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide details about your family history of cardiovascular disease, including any history of heart attacks, strokes, or hypertension in first-degree relatives?",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have specific information about my family history of cardiovascular disease. I know I have a history of hypertension, but I'm not sure about my relatives' medical histories. I don't think it's been discussed much with me before.",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide more details about your family history of cardiovascular disease, including any known conditions such as hypertension, coronary artery disease, or heart failure in first-degree relatives?",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have specific information about my family history of cardiovascular disease. I know I have a history of hypertension, but I'm not sure about my relatives' medical histories. I don't think it's been discussed much with me before.",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide more details about the duration and frequency of your shortness of breath and chest pounding during physical activity? Additionally, have you noticed any specific triggers or patterns associated with these symptoms?",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The shortness of breath and chest pounding usually happen when it's humid, especially during my morning runs. It doesn't happen every time, but when it does, it's more noticeable. It usually goes away on its own after a few minutes, and I don't really have any specific triggers other than the weather and exertion.",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient experienced any episodes of syncope, palpitations, or chest pain during or after physical activity? If so, please describe the nature, duration, and any associated symptoms.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any episodes of syncope, palpitations, or chest pain during or after physical activity. The pounding in my chest is mild and usually goes away on its own after a few minutes. I don't feel lightheaded or have any other symptoms with it.",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the exact nature of the chest pounding you feel? Does it feel like a rapid heartbeat, a fluttering sensation, or something else? Also, have you noticed any patterns in when these episodes occur, such as specific times of day or types of activity?",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The chest pounding feels like a slight, rhythmic thumping in my chest, almost like my heart is beating a little harder than usual. It doesn't feel like a flutter or anything crazy—it's more of a mild sensation. It usually happens when I'm running, especially on humid days, but it doesn't happen every time. I don't really notice it at other times of the day or with other activities.",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe if you've had any recent episodes of dizziness, faintness, or palpitations during or after these episodes? If so, how long do they last, and are they associated with any specific activities or triggers?",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any recent episodes of dizziness, faintness, or palpitations during or after those moments. The chest pounding is mild and goes away on its own after a few minutes. I don't feel lightheaded or have any other symptoms with it.",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "How long does each episode of chest pounding typically last, and how frequently do these episodes occur during physical activity?",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Each episode of chest pounding usually lasts a few minutes, maybe up to five or so, and it doesn't happen every time I run. It's more like once in a while, especially on the hotter, more humid days.",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient experienced any episodes of chest pain, dizziness, or syncope during or after the chest pounding episodes? If so, please describe the nature, duration, and any associated symptoms.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any chest pain, dizziness, or syncope during or after the chest pounding episodes. The pounding is mild and goes away on its own after a few minutes. I don't feel lightheaded or have any other symptoms with it.",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any changes in the frequency or intensity of the chest pounding episodes over the past few months? Are there any specific activities or times of day when the episodes are more likely to occur?",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any changes in the frequency or intensity of the chest pounding over the past few months. It still happens occasionally, mostly when I'm running on hot or humid days, but it doesn't happen every time. I don't really notice it at other times of day or with other activities.",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any recent changes in your medication regimen for hypertension or depression, or any new medications started recently?",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any recent changes in my medication regimen for hypertension or depression, and I haven't started any new medications recently. I've been staying on the same medications as before, and they've been working pretty well for me.",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any episodes of palpitations, lightheadedness, or syncope in the past, even if not related to the current symptoms?",
+      "tid": "T29"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't recall having any episodes of palpitations, lightheadedness, or syncope in the past, even ones not related to the current symptoms. I've been pretty stable overall, and the only thing I've noticed recently is that mild chest pounding during runs on hot days, which goes away on its own.",
+      "tid": "T30"
+    }
+  ]
+}

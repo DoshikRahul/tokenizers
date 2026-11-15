@@ -1,0 +1,378 @@
+{
+  "case_id": "D2N129",
+  "rq2_split": "va_dev",
+  "rq1_split": "dev",
+  "aci_source_split": "test2",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports that their blood pressure has been good despite fluctuations in their diabetes.\n* The patient is a 24-year-old female with a history of type 2 diabetes, currently working at a bakery, which has been challenging for her diabetes management due to increased snacking on sweets.\n* She is taking metformin twice a day as prescribed and has been checking her blood sugars, but her levels have been up and down lately.\n* She has not experienced any diabetes-related complications such as neuropathy, retinopathy, or kidney issues.\n* The patient reports being 24 years old and is present for a yearly exam.\n* The patient reports having regular check-ups and being on medication as prescribed.\n* She does not know the exact date of her diagnosis or her most recent HbA1c value.\n* The patient reports that the doctor mentioned the most recent HbA1c value was elevated, but the exact number was not provided.\n* The patient reports that the HbA1c test result is not at the desired level.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N129_V01",
+      "section": "Assessment",
+      "text": "The patient has type 2 diabetes, which is not well-controlled due to her new job at a bakery, leading to increased snacking and fluctuating blood sugar levels.",
+      "status": "ok",
+      "p_chain_broken": 0.0022,
+      "components": [
+        {
+          "component": "The patient has type 2 diabetes",
+          "feature_ids": [
+            "F2"
+          ],
+          "p_broken": 0.0009110444967252044,
+          "passages": [
+            {
+              "pid": "5930_1122",
+              "title": "Diabetes Type 2",
+              "section": "Can type 2 diabetes be prevented?",
+              "cos": 0.614
+            },
+            {
+              "pid": "5930_1116",
+              "title": "Diabetes Type 2",
+              "section": "Who is at risk for type 2 diabetes?",
+              "cos": 0.654
+            },
+            {
+              "pid": "5930_1115",
+              "title": "Diabetes Type 2",
+              "section": "What causes type 2 diabetes?",
+              "cos": 0.62
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "Type 2 diabetes is not well-controlled due to her new job at a bakery, leading to increased snacking and fluctuating blood sugar levels",
+          "feature_ids": [
+            "F2",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F10"
+          ],
+          "p_broken": 0.002182704404431023,
+          "passages": [
+            {
+              "pid": "3048_1123",
+              "title": "Diabetic Diet",
+              "section": "What is diabetes?",
+              "cos": 0.637
+            },
+            {
+              "pid": "6308_0",
+              "title": "A1C",
+              "section": "Summary",
+              "cos": 0.595
+            },
+            {
+              "pid": "5930_1114",
+              "title": "Diabetes Type 2",
+              "section": "What is type 2 diabetes?",
+              "cos": 0.671
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N129_V02",
+      "section": "Plan",
+      "text": "The doctor will need to review the patient's medication regimen and provide guidance on how to better manage her diabetes in her new work environment.",
+      "status": "ok",
+      "p_chain_broken": 0.0203,
+      "components": [
+        {
+          "component": "The doctor will need to review the patient's medication regimen",
+          "feature_ids": [
+            "F2",
+            "F4",
+            "F6",
+            "F7",
+            "F10"
+          ],
+          "p_broken": 0.005220085231290438,
+          "passages": [
+            {
+              "pid": "6308_0",
+              "title": "A1C",
+              "section": "Summary",
+              "cos": 0.548
+            },
+            {
+              "pid": "6121_433",
+              "title": "Blood Glucose",
+              "section": "When and how should I check my blood glucose?",
+              "cos": 0.507
+            },
+            {
+              "pid": "3048_1123",
+              "title": "Diabetic Diet",
+              "section": "What is diabetes?",
+              "cos": 0.492
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The doctor will need to provide guidance on how to better manage her diabetes in her new work environment",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.020332277914565426,
+          "passages": [
+            {
+              "pid": "4_1079",
+              "title": "Diabetes",
+              "section": "What are the treatments for diabetes?",
+              "cos": 0.541
+            },
+            {
+              "pid": "1408_1090",
+              "title": "Diabetes and Pregnancy",
+              "section": "How can I manage diabetes during pregnancy?",
+              "cos": 0.489
+            },
+            {
+              "pid": "3048_1124",
+              "title": "Diabetic Diet",
+              "section": "How do the foods I eat affect my blood glucose levels?",
+              "cos": 0.49
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N129_V03",
+      "section": "Plan",
+      "text": "The patient will need to keep track of her blood sugar levels and report any changes to her doctor.",
+      "status": "ok",
+      "p_chain_broken": 0.0331,
+      "components": [
+        {
+          "component": "The patient will need to keep track of her blood sugar levels and report any changes to her doctor.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.03308586946122159,
+          "passages": [
+            {
+              "pid": "6121_433",
+              "title": "Blood Glucose",
+              "section": "When and how should I check my blood glucose?",
+              "cos": 0.463
+            },
+            {
+              "pid": "3048_1124",
+              "title": "Diabetic Diet",
+              "section": "How do the foods I eat affect my blood glucose levels?",
+              "cos": 0.444
+            },
+            {
+              "pid": "6125_2083",
+              "title": "Hyperglycemia",
+              "section": "What causes hyperglycemia?",
+              "cos": 0.453
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N129_V04",
+      "section": "Plan",
+      "text": "The doctor will need to schedule a follow-up appointment to monitor the patient's progress and adjust her treatment plan as necessary.",
+      "status": "flagged",
+      "p_chain_broken": 0.33,
+      "components": [
+        {
+          "component": "The doctor will need to schedule a follow-up appointment to monitor the patient's progress and adjust her treatment plan as necessary.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.33001264082277865,
+          "passages": [
+            {
+              "pid": "6521_3194",
+              "title": "Reflux in Children",
+              "section": "What are the treatments for my child's GERD?",
+              "cos": 0.419
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports that their blood pressure has been good despite fluctuations in their diabetes.\n* The patient is a 24-year-old female with a history of type 2 diabetes, currently working at a bakery, which has been challenging for her diabetes management due to increased snacking on sweets.\n* She is taking metformin twice a day as prescribed and has been checking her blood sugars, but her levels have been up and down lately.\n* She has not experienced any diabetes-related complications such as neuropathy, retinopathy, or kidney issues.\n* The patient reports being 24 years old and is present for a yearly exam.\n* The patient reports having regular check-ups and being on medication as prescribed.\n* She does not know the exact date of her diagnosis or her most recent HbA1c value.\n* The patient reports that the doctor mentioned the most recent HbA1c value was elevated, but the exact number was not provided.\n* The patient reports that the HbA1c test result is not at the desired level.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient has type 2 diabetes, which is not well-controlled due to her new job at a bakery, leading to increased snacking and fluctuating blood sugar levels."
+    ],
+    "plan": [
+      "The doctor will need to review the patient's medication regimen and provide guidance on how to better manage her diabetes in her new work environment.",
+      "The patient will need to keep track of her blood sugar levels and report any changes to her doctor."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 24 years old, and I'm here for my yearly exam. I've been doing well overall, but I've been snacking a lot more at my new job, which has been challenging for my diabetes management.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm your gender and provide more details about your diabetes management challenges at your new job?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm a female, and I've been working at a bakery, which has made it really hard to resist snacking on the desserts available there. I've been eating a lot more sweets during my shifts, and it's been affecting my blood sugar levels even though I'm still taking my medication as prescribed.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide details about your current diabetes medications, including the names, dosages, and frequency of use? Additionally, could you share your typical blood sugar monitoring practices, such as how often you check your levels and what your usual readings are?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm on metformin, and I take it twice a day. I've been checking my blood sugars, but they've been up and down a lot lately, especially since starting this new job. It's been really hard to keep them in check with all the snacking.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide details about when you were diagnosed with diabetes and any prior evaluations or treatments you've had for it?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know the exact date I was diagnosed with diabetes, but I've been managing it for a while now. I've had regular check-ups and have been on medication as prescribed. My blood pressure has been good despite the ups and downs with my diabetes lately.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "What is your most recent HbA1c level, and have you experienced any diabetes-related complications such as neuropathy, retinopathy, or kidney issues?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know my most recent HbA1c level, but the doctor mentioned it was elevated. I haven't experienced any diabetes-related complications like neuropathy, retinopathy, or kidney issues.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please share the exact date when you were diagnosed with type 2 diabetes?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know the exact date I was diagnosed with type 2 diabetes. I've been managing it for a while now, but I don't have the specific date on hand.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "What is your most recent HbA1c value, and when was it measured?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know my most recent HbA1c value or when it was measured. The doctor mentioned it was elevated, but I didn't get the exact number or date.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you clarify when you were diagnosed with type 2 diabetes and whether you have experienced any complications such as frequent urination, blurred vision, or numbness in your hands or feet?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know the exact date I was diagnosed with type 2 diabetes. I've been managing it for a while now, and I haven't experienced any complications like frequent urination, blurred vision, or numbness in my hands or feet.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "What is your most recent HbA1c value and when was it measured?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know my most recent HbA1c value or when it was measured. The doctor mentioned it was elevated, but I didn't get the exact number or date.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the date when you were diagnosed with type 2 diabetes?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know the exact date I was diagnosed with type 2 diabetes. I've been managing it for a while now, but I don't have the specific date on hand.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide your most recent HbA1c value and the date it was measured?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know my most recent HbA1c value or when it was measured. The doctor mentioned it was elevated, but I didn't get the exact number or date.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please share the date when you were diagnosed with diabetes, and have you experienced any symptoms such as frequent urination, blurred vision, or numbness in your hands or feet?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know the exact date I was diagnosed with diabetes. I've been managing it for a while now, and I haven't experienced any complications like frequent urination, blurred vision, or numbness in my hands or feet.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the most recent HbA1c value and the date it was measured, even if you don't have the exact number?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know the exact number or date of my most recent HbA1c test. The doctor mentioned it was elevated, but I didn't get the specifics.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you tell me when you were first diagnosed with diabetes and if you've noticed any new or worsening symptoms, such as frequent urination, blurred vision, or numbness in your hands or feet?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know the exact date I was diagnosed with diabetes. I've been managing it for a while now, and I haven't experienced any new or worsening symptoms like frequent urination, blurred vision, or numbness in my hands or feet.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the date of your most recent HbA1c test and the value obtained?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know the exact date of my most recent HbA1c test, but the doctor mentioned it was elevated. I didn't get the specific number, but I know it's not where it should be.",
+      "tid": "T29"
+    }
+  ]
+}

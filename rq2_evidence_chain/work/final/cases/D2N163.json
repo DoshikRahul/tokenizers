@@ -1,0 +1,247 @@
+{
+  "case_id": "D2N163",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test2",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* Patient is a 17-year-old non-binary individual who was referred to the doctor due to elevated cholesterol levels detected during a finger prick test during their annual checkup.\n* The patient reports eating a relatively healthy diet most days and engaging in regular physical activity, specifically riding a bike on trails.\n* The patient reports that they did not have any issues with hyperlipidemia or cardiovascular disease when they were young.\n* The patient is concerned about their cholesterol levels and reports trying to eat a healthy diet and stay active.\n* The patient has no symptoms of chest pain, shortness of breath, or fatigue.\n* The patient reports having a good relationship with their grandparents, but does not have a close relationship with their parents.\n* The patient reports that their grandparents mentioned they did not have hyperlipidemia or cardiovascular disease when they were young, but the patient does not have a close relationship with their parents to confirm this information.\n* The patient's grandparents mentioned a cousin who died at around 44-45 years old and think he had a heart attack.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N163_V01",
+      "section": "Assessment",
+      "text": "The patient's cholesterol levels are elevated, as reported by the annual checkup, but the exact values are not available.",
+      "status": "ok",
+      "p_chain_broken": 0.0007,
+      "components": [
+        {
+          "component": "The patient's cholesterol levels are elevated, as reported by the annual checkup, but the exact values are not available.",
+          "feature_ids": [
+            "F2",
+            "F3"
+          ],
+          "p_broken": 0.000709666145607645,
+          "passages": [
+            {
+              "pid": "6781_766",
+              "title": "Cholesterol Levels: What You Need to Know",
+              "section": "How do you measure cholesterol levels?",
+              "cos": 0.604
+            },
+            {
+              "pid": "6907_1928",
+              "title": "High Cholesterol in Children and Teens",
+              "section": "How do I know if my child or teen has high cholesterol?",
+              "cos": 0.601
+            },
+            {
+              "pid": "6907_1929",
+              "title": "High Cholesterol in Children and Teens",
+              "section": "How do I know if my child or teen has high cholesterol?",
+              "cos": 0.615
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N163_V02",
+      "section": "Assessment",
+      "text": "The patient has no known family history of hyperlipidemia, cardiovascular disease, or early-onset heart attacks in first-degree relatives (parents, siblings).",
+      "status": "flagged",
+      "p_chain_broken": 0.3775,
+      "components": [
+        {
+          "component": "The patient has no known family history of hyperlipidemia, cardiovascular disease, or early-onset heart attacks in first-degree relatives (parents, siblings).",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.3775398563743477,
+          "passages": [
+            {
+              "pid": "4212_1749",
+              "title": "Heart Disease in Women",
+              "section": "What are the symptoms of heart disease and heart attack in women?",
+              "cos": 0.48
+            },
+            {
+              "pid": "5400_284",
+              "title": "Atherosclerosis",
+              "section": "What are the symptoms of atherosclerosis?",
+              "cos": 0.477
+            },
+            {
+              "pid": "199_1763",
+              "title": "Heart Failure",
+              "section": "Who is more likely to develop heart failure?",
+              "cos": 0.514
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* Patient is a 17-year-old non-binary individual who was referred to the doctor due to elevated cholesterol levels detected during a finger prick test during their annual checkup.\n* The patient reports eating a relatively healthy diet most days and engaging in regular physical activity, specifically riding a bike on trails.\n* The patient reports that they did not have any issues with hyperlipidemia or cardiovascular disease when they were young.\n* The patient is concerned about their cholesterol levels and reports trying to eat a healthy diet and stay active.\n* The patient has no symptoms of chest pain, shortness of breath, or fatigue.\n* The patient reports having a good relationship with their grandparents, but does not have a close relationship with their parents.\n* The patient reports that their grandparents mentioned they did not have hyperlipidemia or cardiovascular disease when they were young, but the patient does not have a close relationship with their parents to confirm this information.\n* The patient's grandparents mentioned a cousin who died at around 44-45 years old and think he had a heart attack.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient's cholesterol levels are elevated, as reported by the annual checkup, but the exact values are not available."
+    ],
+    "plan": []
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 17, and I identify as non-binary. I came in because I was told my cholesterol is high after a finger prick test during my annual checkup, and they recommended I see you. I'm a little worried about it.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you confirm your age, gender, and the specific details of your cholesterol test results, such as your LDL, HDL, and total cholesterol levels?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 17 and non-binary. The test was a finger prick during my annual checkup, and they said my cholesterol was elevated, but they didn't give me the exact numbers. I just know it's high, and that's why I came in.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide the specific LDL, HDL, and total cholesterol values from the finger prick test? Additionally, have you been experiencing any symptoms such as chest pain, shortness of breath, or fatigue?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers from the test, but they told me my cholesterol was elevated. I didn't have any symptoms like chest pain or shortness of breath, but I was just surprised because I try to eat pretty clean and stay active most of the time.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the exact LDL, HDL, and total cholesterol values from the finger prick test?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers from the test, but they told me my cholesterol was elevated. I wasn't given specific LDL, HDL, or total cholesterol values, just that it was high.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you share any family history of hyperlipidemia or cardiovascular disease? Additionally, could you tell me about your diet, physical activity, and any other potential risk factors for high cholesterol?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't really talk to my parents much, but I have a good relationship with my grandparents. They said they didn't have any issues like this when they were young. I try to eat pretty clean most days, and I stay active—I ride my bike a lot, especially on the trails. I didn't know my cholesterol was high until my annual checkup, and I was really surprised because I thought I was healthy.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the specific LDL, HDL, and total cholesterol values from the finger prick test? Additionally, have you had any prior lipid profile tests, and if so, what were the results?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers from the test, but they told me my cholesterol was elevated. I didn't have any prior lipid profile tests done before this one, just a finger prick during my annual checkup.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the specific LDL, HDL, and total cholesterol values from the finger prick test? Additionally, could you share any family history of hyperlipidemia or cardiovascular disease?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers from the test, but they told me my cholesterol was elevated. As for family history, I don't really talk to my parents much, but my grandparents said they didn't have anything like this when they were young. I do remember they mentioned a cousin who died at around forty-four or forty-five, and they think he had a heart attack.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the exact LDL, HDL, and total cholesterol values from your recent finger prick test?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers from the test, but they told me my cholesterol was elevated. I wasn't given specific LDL, HDL, or total cholesterol values, just that it was high.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the specific LDL, HDL, and total cholesterol values from the finger prick test, even if they were only briefly mentioned? Additionally, could you clarify if there is a known family history of hyperlipidemia, cardiovascular disease, or early-onset heart attacks in first-degree relatives?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers from the test, but they told me my cholesterol was elevated. As for family history, I don't really talk to my parents much, but my grandparents said they didn't have anything like this when they were young. They mentioned a cousin who died at around forty-four or forty-five, and they think he had a heart attack.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the specific LDL, HDL, and total cholesterol values from the finger prick test, as well as clarify if there is a family history of hyperlipidemia, cardiovascular disease, or early-onset heart attacks in first-degree relatives?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers from the test, but they told me my cholesterol was elevated. As for family history, I don't really talk to my parents much, but my grandparents said they didn't have anything like this when they were young. They mentioned a cousin who died at around forty-four or forty-five, and they think he had a heart attack.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the specific LDL, HDL, and total cholesterol levels from the finger prick test? Additionally, could you clarify if there is a family history of hyperlipidemia, cardiovascular disease, or early-onset heart attacks in first-degree relatives (parents, siblings)?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers from the test, but they told me my cholesterol was elevated. As for family history, I don't really talk to my parents much, but my grandparents said they didn't have anything like this when they were young. They mentioned a cousin who died at around forty-four or forty-five, and they think he had a heart attack.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the exact LDL, HDL, and total cholesterol levels from the finger prick test? Additionally, could you clarify if there is a known family history of hyperlipidemia, cardiovascular disease, or early-onset heart attacks in first-degree relatives (parents, siblings)?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers from the test, but they told me my cholesterol was elevated. As for family history, I don't really talk to my parents much, but my grandparents said they didn't have anything like this when they were young. They mentioned a cousin who died at around forty-four or forty-five, and they think he had a heart attack.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the exact LDL, HDL, and total cholesterol levels from the finger prick test? Additionally, could you clarify if any first-degree relatives (parents, siblings) have a history of hyperlipidemia, cardiovascular disease, or early-onset heart attacks?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers from the test, but they told me my cholesterol was elevated. As for family history, I don't really talk to my parents much, but my grandparents said they didn't have anything like this when they were young. They mentioned a cousin who died at around forty-four or forty-five, and they think he had a heart attack.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the specific LDL, HDL, and total cholesterol levels from the finger prick test, as well as clarify if there is a family history of hyperlipidemia, cardiovascular disease, or early-onset heart attacks in first-degree relatives (parents, siblings)?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers from the test, but they told me my cholesterol was elevated. As for family history, I don't really talk to my parents much, but my grandparents said they didn't have anything like this when they were young. They mentioned a cousin who died at around forty-four or forty-five, and they think he had a heart attack.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the exact LDL, HDL, and total cholesterol levels from the finger prick test, and clarify if there is a known family history of hyperlipidemia, cardiovascular disease, or early-onset heart attacks in first-degree relatives (parents, siblings)?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers from the test, but they told me my cholesterol was elevated. As for family history, I don't really talk to my parents much, but my grandparents said they didn't have anything like this when they were young. They mentioned a cousin who died at around forty-four or forty-five, and they think he had a heart attack.",
+      "tid": "T29"
+    }
+  ]
+}

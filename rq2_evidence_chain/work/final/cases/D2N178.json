@@ -1,0 +1,384 @@
+{
+  "case_id": "D2N178",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test3",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* Patient is a 78-year-old female with a history of diabetes mellitus, presenting for a follow-up visit due to uncontrolled blood sugar levels.\n* The patient reports that they try to eat healthier, but have not significantly reduced their carbohydrate intake.\n* The patient denies experiencing numbness, tingling, or loss of balance in their feet or legs beyond what they initially reported.\n* She reports her A1C was 9.9 in her last test, and she is currently taking 2mg of glimepiride daily.\n* The patient reports consuming two slices of an unspecified food item in the morning.\n* She experiences frequent urination, especially at night, and burning or aching pain in her legs and feet, which is constant and worsens with prolonged sitting or walking.\n* The patient reports preferring seltzer over regular water and soda.\n* She also reports reduced sensation in her toes and difficulty feeling them.\n* She has not noticed any changes in her vision or symptoms related to her eyes.\n* She has not experienced chest pain, shortness of breath, or dizziness.\n* She has not had any recent physical examination findings or results from imaging or nerve conduction studies.\n* The patient is willing to try the four milligrams of medication twice a day as previously suggested.\n* The patient hasn't been checking their fasting or postprandial levels regularly, to be honest.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N178_V01",
+      "section": "Assessment",
+      "text": "The patient has uncontrolled blood sugar levels, as evidenced by her A1C of 9.9.",
+      "status": "ok",
+      "p_chain_broken": 0.0003,
+      "components": [
+        {
+          "component": "The patient has uncontrolled blood sugar levels, as evidenced by her A1C of 9.9.",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F15",
+            "F16",
+            "F24"
+          ],
+          "p_broken": 0.00026118903316155103,
+          "passages": [
+            {
+              "pid": "5784_3012",
+              "title": "Prediabetes",
+              "section": "How is prediabetes diagnosed?",
+              "cos": 0.603
+            },
+            {
+              "pid": "6308_0",
+              "title": "A1C",
+              "section": "Summary",
+              "cos": 0.692
+            },
+            {
+              "pid": "4_1078",
+              "title": "Diabetes",
+              "section": "How is diabetes diagnosed?",
+              "cos": 0.498
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N178_V02",
+      "section": "Assessment",
+      "text": "She experiences symptoms of diabetic neuropathy, including burning or aching pain in her legs and feet, reduced sensation in her toes, and decreased ability to feel her toes.",
+      "status": "ok",
+      "p_chain_broken": 0.0474,
+      "components": [
+        {
+          "component": "She experiences symptoms of diabetic neuropathy, including burning or aching pain in her legs and feet, reduced sensation in her toes, and decreased ability to feel her toes.",
+          "feature_ids": [
+            "F8",
+            "F9",
+            "F15",
+            "F16",
+            "F19",
+            "F24"
+          ],
+          "p_broken": 0.047425673073819154,
+          "passages": [
+            {
+              "pid": "1341_1141",
+              "title": "Diabetic Foot",
+              "section": "How does diabetes cause foot problems?",
+              "cos": 0.765
+            },
+            {
+              "pid": "1465_1157",
+              "title": "Diabetic Nerve Problems",
+              "section": "Summary",
+              "cos": 0.755
+            },
+            {
+              "pid": "4083_2891",
+              "title": "Peripheral Arterial Disease",
+              "section": "Summary",
+              "cos": 0.554
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N178_V03",
+      "section": "Plan",
+      "text": "The doctor will consider increasing the patient's glimepiride dosage to 4mg twice a day to better control her blood sugar levels.",
+      "status": "flagged",
+      "p_chain_broken": 0.3208,
+      "components": [
+        {
+          "component": "The doctor will consider increasing the patient's glimepiride dosage to 4mg twice a day to better control her blood sugar levels.",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F15",
+            "F16",
+            "F24"
+          ],
+          "p_broken": 0.3208206124846505,
+          "passages": [
+            {
+              "pid": "6308_0",
+              "title": "A1C",
+              "section": "Summary",
+              "cos": 0.551
+            },
+            {
+              "pid": "5784_3012",
+              "title": "Prediabetes",
+              "section": "How is prediabetes diagnosed?",
+              "cos": 0.473
+            },
+            {
+              "pid": "6121_433",
+              "title": "Blood Glucose",
+              "section": "When and how should I check my blood glucose?",
+              "cos": 0.514
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N178_V04",
+      "section": "Plan",
+      "text": "The patient will be referred for nerve conduction studies and imaging to evaluate for diabetic neuropathy.",
+      "status": "flagged",
+      "p_chain_broken": 0.3486,
+      "components": [
+        {
+          "component": "The patient will be referred for nerve conduction studies and imaging to evaluate for diabetic neuropathy.",
+          "feature_ids": [
+            "F1",
+            "F4",
+            "F8",
+            "F9",
+            "F15",
+            "F14",
+            "F16",
+            "F24"
+          ],
+          "p_broken": 0.3486442961197501,
+          "passages": [
+            {
+              "pid": "1465_1157",
+              "title": "Diabetic Nerve Problems",
+              "section": "Summary",
+              "cos": 0.711
+            },
+            {
+              "pid": "1341_1141",
+              "title": "Diabetic Foot",
+              "section": "How does diabetes cause foot problems?",
+              "cos": 0.634
+            },
+            {
+              "pid": "1465_1158",
+              "title": "Diabetic Nerve Problems",
+              "section": "Summary",
+              "cos": 0.697
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N178_V05",
+      "section": "Plan",
+      "text": "The patient will be advised to monitor her blood sugar levels regularly and to report any changes in her symptoms.",
+      "status": "ok",
+      "p_chain_broken": 0.0019,
+      "components": [
+        {
+          "component": "The patient will be advised to monitor her blood sugar levels regularly and to report any changes in her symptoms.",
+          "feature_ids": [
+            "F2",
+            "F6",
+            "F16",
+            "F24"
+          ],
+          "p_broken": 0.0019267256441035338,
+          "passages": [
+            {
+              "pid": "6121_434",
+              "title": "Blood Glucose",
+              "section": "What happens if my blood glucose level becomes too high?",
+              "cos": 0.483
+            },
+            {
+              "pid": "5784_3012",
+              "title": "Prediabetes",
+              "section": "How is prediabetes diagnosed?",
+              "cos": 0.476
+            },
+            {
+              "pid": "5930_1119",
+              "title": "Diabetes Type 2",
+              "section": "How is type 2 diabetes diagnosed?",
+              "cos": 0.499
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* Patient is a 78-year-old female with a history of diabetes mellitus, presenting for a follow-up visit due to uncontrolled blood sugar levels.\n* The patient reports that they try to eat healthier, but have not significantly reduced their carbohydrate intake.\n* The patient denies experiencing numbness, tingling, or loss of balance in their feet or legs beyond what they initially reported.\n* She reports her A1C was 9.9 in her last test, and she is currently taking 2mg of glimepiride daily.\n* The patient reports consuming two slices of an unspecified food item in the morning.\n* She experiences frequent urination, especially at night, and burning or aching pain in her legs and feet, which is constant and worsens with prolonged sitting or walking.\n* The patient reports preferring seltzer over regular water and soda.\n* She also reports reduced sensation in her toes and difficulty feeling them.\n* She has not noticed any changes in her vision or symptoms related to her eyes.\n* She has not experienced chest pain, shortness of breath, or dizziness.\n* She has not had any recent physical examination findings or results from imaging or nerve conduction studies.\n* The patient is willing to try the four milligrams of medication twice a day as previously suggested.\n* The patient hasn't been checking their fasting or postprandial levels regularly, to be honest.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient has uncontrolled blood sugar levels, as evidenced by her A1C of 9.9.",
+      "She experiences symptoms of diabetic neuropathy, including burning or aching pain in her legs and feet, reduced sensation in her toes, and decreased ability to feel her toes."
+    ],
+    "plan": [
+      "The patient will be advised to monitor her blood sugar levels regularly and to report any changes in her symptoms."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 78 years old, and I'm a female. I'm here for a follow-up. My sugars haven't been very well controlled, and I need to talk about adjusting my medication.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide more details about your current blood sugar levels and any symptoms you're experiencing related to your diabetes?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't been feeling great with my sugars; they're not really under control. I got the results from the last time, and my A1C was 9.9. I'm still on the two milligrams of glimepiride, but I think I need to increase it. I'm open to trying the four milligrams twice a day like you suggested.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide the dates of your most recent A1C test and any other recent blood glucose measurements, including fasting and postprandial levels?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact dates of my A1C test, but I know my last one was 9.9. I haven't been tracking my fasting or postprandial levels regularly, to be honest. I just know my sugars aren't where they should be.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you share more about your current diet and physical activity levels? Also, have you experienced any symptoms such as frequent urination, excessive thirst, or unexplained weight loss recently?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I try to eat healthier, but I haven't really cut down on carbs much. I don't eat pasta or bread often, and when I do, it's wheat bread. I usually have two slices in the morning. I don't drink soda or regular water—I prefer seltzer. As for symptoms, I do pee a lot, especially at night, and my legs and feet hurt a lot, but I haven't lost any weight or had excessive thirst.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you confirm whether you have been diagnosed with diabetes mellitus and, if so, when was that diagnosis made?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Yes, I was diagnosed with diabetes mellitus some time ago. I've been managing it with medication, but my sugars haven't been very well controlled, as you've mentioned. I know my A1C was 9.9 from the last test, and I'm still on the two milligrams of glimepiride. I'm ready to try increasing it to four milligrams twice a day if that's what you recommend.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide the date of your most recent A1C test and any recent blood glucose measurements, such as fasting or postprandial levels?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact date of my most recent A1C test, but I know my last one was 9.9. I haven't been checking my fasting or postprandial levels regularly, to be honest. I just know my sugars aren't where they should be.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the exact date of your most recent A1C test and any recent fasting or postprandial blood glucose measurements you may have?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact date of my most recent A1C test, but I know my last one was 9.9. I haven't been checking my fasting or postprandial levels regularly, to be honest. I just know my sugars aren't where they should be.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the exact date of your most recent A1C test and any recent fasting or postprandial blood glucose measurements?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact date of my most recent A1C test, but I know my last one was 9.9. I haven't been checking my fasting or postprandial levels regularly, to be honest. I just know my sugars aren't where they should be.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the nature of the pain in your legs and feet? Is it tingling, burning, sharp, or dull? Have you noticed any numbness or changes in sensation in those areas?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The pain in my legs and feet is more like a burning or aching feeling, and it's been going on a lot. I can't really feel my toes very well sometimes, and it's been bothering me when I walk or even sit for too long. I don't really notice numbness, but I do feel like my feet are always uncomfortable.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe any changes in your vision or any symptoms related to your eyes, such as blurred vision or floaters? Additionally, have you experienced any chest pain, shortness of breath, or dizziness that might suggest cardiovascular involvement?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't noticed any changes in my vision or symptoms like blurred vision or floaters. As for chest pain or shortness of breath, I don't have those issues. I do feel some dizziness sometimes, but not too bad.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe any recent physical examination findings, such as the presence of neuropathy signs (e.g., decreased reflexes, loss of vibration sense, or diminished ankle reflexes), and whether you have had any imaging or nerve conduction studies to evaluate for diabetic neuropathy?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have any recent physical examination findings or results from imaging or nerve conduction studies. I was told during my last visit that I have some decreased sensation in my toes, but that's about it.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the exact date of your most recent A1C test and confirm whether you have undergone any nerve conduction studies or imaging to evaluate for diabetic neuropathy?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact date of my most recent A1C test, but I know my last one was 9.9. I was told during my last visit that I have some decreased sensation in my toes, but I don't have any results from nerve conduction studies or imaging.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the timeline and progression of your burning or aching leg and foot pain, as well as the reduced sensation in your toes? Have you noticed any changes in the severity or frequency of these symptoms over time?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The pain in my legs and feet has been going on for a while now, and it doesn't really get better. It's been getting worse, especially when I walk or sit for too long. The burning and aching feel like they're always there, and I can't really feel my toes as well as I used to. It's been pretty constant, and I don't really notice it getting better or worse, just always there.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you confirm whether you have had any nerve conduction studies or imaging for diabetic neuropathy, and if not, whether you are planning to undergo such tests in the near future?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have any results from nerve conduction studies or imaging for diabetic neuropathy. I was told during my last visit that I have some decreased sensation in my toes, but I haven't had any tests done beyond that.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any numbness, tingling, or loss of balance in your feet or legs in addition to the burning or aching pain?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any numbness or tingling beyond what I already mentioned, and I don't feel like I'm losing my balance. It's just the burning and aching in my legs and feet, and not being able to feel my toes as well as before.",
+      "tid": "T29"
+    }
+  ]
+}

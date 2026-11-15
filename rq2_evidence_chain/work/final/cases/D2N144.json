@@ -1,0 +1,490 @@
+{
+  "case_id": "D2N144",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test2",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports that they have not had any recent blood tests, including a complete blood count (CBC), C-reactive protein (CRP), or erythrocyte sedimentation rate (ESR), since they have been managing with their current medications and compression socks.\n* The patient reports that the swollen areas in their right leg are sore when pressed.\n* The patient reports that they will discuss the request for recent blood tests with their doctor.\n* The patient is a 74-year-old male with a history of rheumatoid arthritis (RA) who presents with ongoing management of his condition.\n* He reports a 2-month history of swelling and pain in his right knee, which has worsened and spread to his entire leg, particularly around the knee.\n* The patient describes the pain as usually around a 6 on a normal day, but it has decreased to a 3 lately.\n* The patient reports managing symptoms with medications and a recent steroid injection, but has not had any recent imaging studies of the right knee or leg.\n* He has not experienced any fever, weight loss, or systemic symptoms such as fatigue.\n* The patient has not had any recent imaging or blood tests to evaluate the cause of his leg swelling.\n* The patient reports managing with a cane at times.\n* He has been taking Xeljanz (11mg daily) and Celebrex (200mg daily) for about 2 months, with no changes in dose or medication recently.\n* The patient reports warmth and tenderness around the knee, but no erythema or redness.\n* He has experienced no recent trauma or immobility, but sits for long periods during the day, which may contribute to the swelling.\n* The patient has not experienced any recent episodes of shortness of breath, chest pain, or calf pain that could suggest deep vein thrombosis.\n* He has not noticed any changes in the color of his leg or new symptoms such as numbness, tingling, or difficulty walking.",
+    "objective": "* The patient is 74 years old and male."
+  },
+  "open_questions": [
+    {
+      "id": "q1",
+      "gap": "recent changes in the patient's RA medications or dose adjustments",
+      "question": "Have you made any changes to your RA medications or dose recently?",
+      "category": "subjective",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "q2",
+      "gap": "results of previous blood tests",
+      "question": "What were the results of your most recent blood tests, including CBC, CRP, and ESR?",
+      "category": "objective",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "q3",
+      "gap": "results of previous imaging studies",
+      "question": "What were the results of your most recent imaging studies, including ultrasound or MRI of the right knee or leg?",
+      "category": "objective",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "q4",
+      "gap": "patient's current weight",
+      "question": "What is your current weight?",
+      "category": "objective",
+      "status": "unresolved",
+      "answer": null
+    }
+  ],
+  "ap_lines": [
+    {
+      "statement_id": "D2N144_V01",
+      "section": "Assessment",
+      "text": "The patient's symptoms are consistent with ongoing RA, with worsening swelling and pain in his right knee and leg.",
+      "status": "ok",
+      "p_chain_broken": 0.0003,
+      "components": [
+        {
+          "component": "The patient's symptoms are consistent with ongoing RA, with worsening swelling and pain in his right knee and leg.",
+          "feature_ids": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F9",
+            "F10",
+            "F16"
+          ],
+          "p_broken": 0.0003353475921826793,
+          "passages": [
+            {
+              "pid": "1232_3267",
+              "title": "Rheumatoid Arthritis",
+              "section": "What are the treatments for rheumatoid arthritis?",
+              "cos": 0.509
+            },
+            {
+              "pid": "304_2281",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.462
+            },
+            {
+              "pid": "1232_3263",
+              "title": "Rheumatoid Arthritis",
+              "section": "What are the symptoms of rheumatoid arthritis?",
+              "cos": 0.622
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N144_V02",
+      "section": "Assessment",
+      "text": "The patient's history of RA and current symptoms suggest that the swelling and pain may be related to his underlying condition.",
+      "status": "ok",
+      "p_chain_broken": 0.0025,
+      "components": [
+        {
+          "component": "The patient's history of RA and current symptoms suggest that the swelling and pain may be related to his underlying condition.",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F10",
+            "F12",
+            "F14",
+            "F15",
+            "F16"
+          ],
+          "p_broken": 0.002472608698055922,
+          "passages": [
+            {
+              "pid": "1232_3263",
+              "title": "Rheumatoid Arthritis",
+              "section": "What are the symptoms of rheumatoid arthritis?",
+              "cos": 0.57
+            },
+            {
+              "pid": "1232_3260",
+              "title": "Rheumatoid Arthritis",
+              "section": "What is rheumatoid arthritis?",
+              "cos": 0.5
+            },
+            {
+              "pid": "1232_3267",
+              "title": "Rheumatoid Arthritis",
+              "section": "What are the treatments for rheumatoid arthritis?",
+              "cos": 0.459
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N144_V03",
+      "section": "Assessment",
+      "text": "The patient's lack of recent imaging or blood tests to evaluate the cause of his leg swelling is noted.",
+      "status": "ok",
+      "p_chain_broken": 0.0,
+      "components": [
+        {
+          "component": "The patient's lack of recent imaging or blood tests to evaluate the cause of his leg swelling is noted.",
+          "feature_ids": [
+            "F8",
+            "F20",
+            "F21"
+          ],
+          "p_broken": 1.30069935674948e-05,
+          "passages": [
+            {
+              "pid": "509_2313",
+              "title": "Leg Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.48
+            },
+            {
+              "pid": "1618_3641",
+              "title": "Tendinitis",
+              "section": "Summary",
+              "cos": 0.394
+            },
+            {
+              "pid": "6076_422",
+              "title": "Blood Clots",
+              "section": "How are blood clots diagnosed?",
+              "cos": 0.415
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N144_V04",
+      "section": "Plan",
+      "text": "The patient will be referred for further evaluation, including imaging studies such as an ultrasound or MRI of the right knee and leg, to evaluate for effusion, infection, or other structural abnormalities.",
+      "status": "ok",
+      "p_chain_broken": 0.1824,
+      "components": [
+        {
+          "component": "The patient will be referred for further evaluation, including imaging studies such as an ultrasound or MRI of the right knee and leg, to evaluate for effusion, infection, or other structural abnormalities.",
+          "feature_ids": [
+            "F3",
+            "F4",
+            "F8",
+            "F10",
+            "F11",
+            "F17",
+            "F18",
+            "F21"
+          ],
+          "p_broken": 0.1824249192992864,
+          "passages": [
+            {
+              "pid": "1618_3641",
+              "title": "Tendinitis",
+              "section": "Summary",
+              "cos": 0.457
+            },
+            {
+              "pid": "304_2281",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.479
+            },
+            {
+              "pid": "509_2313",
+              "title": "Leg Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.435
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N144_V05",
+      "section": "Plan",
+      "text": "The patient will be scheduled for blood tests, including a complete blood count (CBC), C-reactive protein (CRP), and erythrocyte sedimentation rate (ESR), to assess for signs of infection or systemic inflammation.",
+      "status": "flagged",
+      "p_chain_broken": 0.3775,
+      "components": [
+        {
+          "component": "The patient will be scheduled for blood tests, including a complete blood count (CBC), C-reactive protein (CRP), and erythrocyte sedimentation rate (ESR), to assess for signs of infection or systemic inflammation.",
+          "feature_ids": [
+            "F2",
+            "F4",
+            "F10",
+            "F12",
+            "F18",
+            "F20",
+            "F21"
+          ],
+          "p_broken": 0.3775397793341957,
+          "passages": [
+            {
+              "pid": "5668_2152",
+              "title": "Infectious Arthritis",
+              "section": "Summary",
+              "cos": 0.533
+            },
+            {
+              "pid": "1618_3641",
+              "title": "Tendinitis",
+              "section": "Summary",
+              "cos": 0.461
+            },
+            {
+              "pid": "23_240",
+              "title": "Arthritis",
+              "section": "What is arthritis?",
+              "cos": 0.462
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N144_V06",
+      "section": "Plan",
+      "text": "The patient will be advised to continue taking his current medications and to follow up with his doctor for further evaluation and management.",
+      "status": "ok",
+      "p_chain_broken": 0.0759,
+      "components": [
+        {
+          "component": "The patient will be advised to continue taking his current medications",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.07585790737410358,
+          "passages": [
+            {
+              "pid": "304_2282",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.379
+            },
+            {
+              "pid": "304_2281",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.351
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient will be advised to follow up with his doctor for further evaluation and management",
+          "feature_ids": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8"
+          ],
+          "p_broken": 0.02595723908549321,
+          "passages": [
+            {
+              "pid": "304_2281",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.506
+            },
+            {
+              "pid": "23_240",
+              "title": "Arthritis",
+              "section": "What is arthritis?",
+              "cos": 0.488
+            },
+            {
+              "pid": "5668_2151",
+              "title": "Infectious Arthritis",
+              "section": "Summary",
+              "cos": 0.535
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports that they have not had any recent blood tests, including a complete blood count (CBC), C-reactive protein (CRP), or erythrocyte sedimentation rate (ESR), since they have been managing with their current medications and compression socks.\n* The patient reports that the swollen areas in their right leg are sore when pressed.\n* The patient reports that they will discuss the request for recent blood tests with their doctor.\n* The patient is a 74-year-old male with a history of rheumatoid arthritis (RA) who presents with ongoing management of his condition.\n* He reports a 2-month history of swelling and pain in his right knee, which has worsened and spread to his entire leg, particularly around the knee.\n* The patient describes the pain as usually around a 6 on a normal day, but it has decreased to a 3 lately.\n* The patient reports managing symptoms with medications and a recent steroid injection, but has not had any recent imaging studies of the right knee or leg.\n* He has not experienced any fever, weight loss, or systemic symptoms such as fatigue.\n* The patient has not had any recent imaging or blood tests to evaluate the cause of his leg swelling.\n* The patient reports managing with a cane at times.\n* He has been taking Xeljanz (11mg daily) and Celebrex (200mg daily) for about 2 months, with no changes in dose or medication recently.\n* The patient reports warmth and tenderness around the knee, but no erythema or redness.\n* He has experienced no recent trauma or immobility, but sits for long periods during the day, which may contribute to the swelling.\n* The patient has not experienced any recent episodes of shortness of breath, chest pain, or calf pain that could suggest deep vein thrombosis.\n* He has not noticed any changes in the color of his leg or new symptoms such as numbness, tingling, or difficulty walking.",
+    "objective": "* The patient is 74 years old and male.",
+    "assessment": [
+      "The patient's symptoms are consistent with ongoing RA, with worsening swelling and pain in his right knee and leg.",
+      "The patient's history of RA and current symptoms suggest that the swelling and pain may be related to his underlying condition.",
+      "The patient's lack of recent imaging or blood tests to evaluate the cause of his leg swelling is noted."
+    ],
+    "plan": [
+      "The patient will be referred for further evaluation, including imaging studies such as an ultrasound or MRI of the right knee and leg, to evaluate for effusion, infection, or other structural abnormalities.",
+      "The patient will be advised to continue taking his current medications and to follow up with his doctor for further evaluation and management."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 74 years old, and I'm male. I'm here for ongoing management of my rheumatoid arthritis. My right knee is still swollen and painful, and now my whole leg is getting swollen too.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide more details about the duration and severity of your knee swelling and pain, any recent changes in these symptoms, and whether you have experienced any systemic symptoms such as fever, fatigue, or weight loss?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The swelling in my knee has been going on for about two months now, and it's gotten worse. It used to just be the knee, but now my whole leg is swollen, especially around the knee. The pain is usually around a 6 on a normal day, but it's been a 3 or so lately. I haven't had any fever or weight loss, but I do feel pretty tired some days.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any recent imaging or blood tests to evaluate the cause of your leg swelling, such as an ultrasound of the leg or a complete blood count?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any recent imaging or blood tests for the swelling in my leg. The last time I was here, I got a steroid injection in my right knee, but I haven't had anything else since then.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any erythema, warmth, or tenderness in your right leg, particularly in the swollen areas?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Yes, the knee feels warm to the touch, and there's some tenderness around it, like an old bruise. It doesn't really hurt too bad, but it's sore when I press on it.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient experienced any recent immobility, trauma, or prolonged sitting/standing that could contribute to the leg swelling? Additionally, has there been any redness, warmth, or tenderness in the leg that might suggest an inflammatory or infectious process?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had any recent trauma or injury to my leg, but I do sit for long periods during the day, especially when I'm feeling stiff or in pain. I don't remember any redness other than the slight warmth around the knee, and the tenderness is more like a soreness than anything else.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any recent episodes of shortness of breath, chest pain, or calf pain that could suggest a deep vein thrombosis?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any shortness of breath, chest pain, or calf pain. I haven't noticed anything like that, but I do have this swelling and soreness in my leg, especially around the knee.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any recent episodes of calf pain, swelling, or redness in the leg that could suggest deep vein thrombosis? Have you had any recent changes in your RA medications or dose adjustments?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any calf pain, swelling, or redness in my leg that would suggest deep vein thrombosis. As for my RA medications, I've been taking Xeljanz, the 11 milligram dose, every day, and also Celebrex, 200 milligrams daily, for about two months now. I haven't changed the dose or medication recently.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any changes in the color of your leg or any new symptoms such as numbness, tingling, or difficulty walking?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any changes in the color of my leg or any new symptoms like numbness or tingling. The main issue is the swelling and soreness around my knee, and it's been making it hard to get up after sitting for a while. I do manage with a cane sometimes.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any recent blood tests, such as a complete blood count (CBC), C-reactive protein (CRP), or erythrocyte sedimentation rate (ESR), to assess for inflammation or infection?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't think I've had any recent blood tests like a CBC, CRP, or ESR. I've been focusing on managing the pain and swelling with the medications I'm on and the compression socks, but I haven't had any blood work done recently. I'll make sure to talk to my doctor about that.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any changes in the color of your leg or any new symptoms such as numbness, tingling, or difficulty walking?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any changes in the color of my leg or any new symptoms like numbness or tingling. The main issue is the swelling and soreness around my knee, and it's been making it hard to get up after sitting for a while. I do manage with a cane sometimes.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any recent blood tests such as a complete blood count (CBC), C-reactive protein (CRP), or erythrocyte sedimentation rate (ESR) to assess for systemic inflammation or infection?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't think I've had any recent blood tests like a CBC, CRP, or ESR. I've been focusing on managing the pain and swelling with the medications I'm on and the compression socks, but I haven't had any blood work done recently. I'll make sure to talk to my doctor about that.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any recent imaging studies such as an ultrasound or MRI of the right knee or leg to evaluate for effusion, infection, or other structural abnormalities?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't think I've had any recent imaging studies like an ultrasound or MRI of my right knee or leg. I've been managing with the medications and the steroid injection I got earlier, but I haven't had any imaging done recently. I'll make sure to talk to my doctor about that.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any recent blood tests such as a complete blood count (CBC), C-reactive protein (CRP), or erythrocyte sedimentation rate (ESR) to assess for signs of infection or systemic inflammation?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't think I've had any recent blood tests like a CBC, CRP, or ESR. I've been managing with the medications I'm on and the compression socks, but I haven't had any blood work done recently. I'll make sure to talk to my doctor about that.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any recent imaging studies such as an ultrasound or MRI of the right knee or leg to evaluate for effusion, infection, or other structural abnormalities?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't think I've had any recent imaging studies like an ultrasound or MRI of my right knee or leg. I've been managing with the medications I'm on and the steroid injection I got earlier, but I haven't had any imaging done recently. I'll make sure to talk to my doctor about that.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any recent blood tests such as a complete blood count (CBC), C-reactive protein (CRP), or erythrocyte sedimentation rate (ESR) to assess for signs of infection or inflammation?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't think I've had any recent blood tests like a CBC, CRP, or ESR. I've been managing with the medications I'm on and the compression socks, but I haven't had any blood work done recently. I'll make sure to talk to my doctor about that.",
+      "tid": "T29"
+    }
+  ]
+}

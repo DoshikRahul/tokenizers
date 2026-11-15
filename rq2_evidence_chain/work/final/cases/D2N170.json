@@ -1,0 +1,291 @@
+{
+  "case_id": "D2N170",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test3",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports that their appetite has not changed much.\n* The patient reports that their fatigue has worsened, affecting their ability to maintain their usual exercise routine.\n* The patient reports that their skin does not appear pale, but they have not closely examined it.\n* The patient is here to discuss their recent blood tests.\n* Patient is a 50-year-old female who presented with fatigue and low hemoglobin levels.\n* She has been experiencing fatigue for the past couple of months, which has worsened over time.\n* She has not noticed any dizziness, shortness of breath, or changes in bowel habits.\n* She has had a little weight loss, but attributes it to increased exercise.\n* She has a history of COPD and congestive heart failure, and used to smoke but quit several years ago.\n* She does not have any family history of anemia or blood disorders.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N170_V01",
+      "section": "Assessment",
+      "text": "The patient's hemoglobin level was reported as low, but the exact value was not provided.",
+      "status": "flagged",
+      "p_chain_broken": 0.3775,
+      "components": [
+        {
+          "component": "The patient's hemoglobin level was reported as low, but the exact value was not provided.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.377540185545976,
+          "passages": [
+            {
+              "pid": "6121_435",
+              "title": "Blood Glucose",
+              "section": "What happens if my blood glucose level becomes low for me?",
+              "cos": 0.5
+            },
+            {
+              "pid": "6308_0",
+              "title": "A1C",
+              "section": "Summary",
+              "cos": 0.422
+            },
+            {
+              "pid": "1264_2101",
+              "title": "Hypoglycemia",
+              "section": "What is hypoglycemia?",
+              "cos": 0.487
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N170_V02",
+      "section": "Assessment",
+      "text": "The patient's fatigue, weight loss, and history of COPD and congestive heart failure may be related to her low hemoglobin level.",
+      "status": "ok",
+      "p_chain_broken": 0.0675,
+      "components": [
+        {
+          "component": "The patient's fatigue, weight loss, and history of COPD and congestive heart failure may be related to her low hemoglobin level.",
+          "feature_ids": [
+            "F1",
+            "F2",
+            "F4",
+            "F6",
+            "F12",
+            "F13"
+          ],
+          "p_broken": 0.06754646495262169,
+          "passages": [
+            {
+              "pid": "139_136",
+              "title": "Anemia",
+              "section": "Summary",
+              "cos": 0.495
+            },
+            {
+              "pid": "199_1768",
+              "title": "Heart Failure",
+              "section": "How is heart failure diagnosed?",
+              "cos": 0.46
+            },
+            {
+              "pid": "6016_3224",
+              "title": "Respiratory Failure",
+              "section": "What are the symptoms of respiratory failure?",
+              "cos": 0.497
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N170_V03",
+      "section": "Plan",
+      "text": "The doctor requested that the patient return for a follow-up appointment to discuss the results of the blood tests and to further evaluate the patient's symptoms and medical history.",
+      "status": "ok",
+      "p_chain_broken": 0.023,
+      "components": [
+        {
+          "component": "The doctor requested that the patient return for a follow-up appointment to discuss the results of the blood tests and to further evaluate the patient's symptoms and medical history.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.02297721448312328,
+          "passages": [
+            {
+              "pid": "6076_422",
+              "title": "Blood Clots",
+              "section": "How are blood clots diagnosed?",
+              "cos": 0.414
+            },
+            {
+              "pid": "4041_2665",
+              "title": "Newborn Screening",
+              "section": "Summary",
+              "cos": 0.368
+            },
+            {
+              "pid": "7807_2369",
+              "title": "Long COVID",
+              "section": "How is long COVID diagnosed?",
+              "cos": 0.39
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports that their appetite has not changed much.\n* The patient reports that their fatigue has worsened, affecting their ability to maintain their usual exercise routine.\n* The patient reports that their skin does not appear pale, but they have not closely examined it.\n* The patient is here to discuss their recent blood tests.\n* Patient is a 50-year-old female who presented with fatigue and low hemoglobin levels.\n* She has been experiencing fatigue for the past couple of months, which has worsened over time.\n* She has not noticed any dizziness, shortness of breath, or changes in bowel habits.\n* She has had a little weight loss, but attributes it to increased exercise.\n* She has a history of COPD and congestive heart failure, and used to smoke but quit several years ago.\n* She does not have any family history of anemia or blood disorders.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient's fatigue, weight loss, and history of COPD and congestive heart failure may be related to her low hemoglobin level."
+    ],
+    "plan": [
+      "The doctor requested that the patient return for a follow-up appointment to discuss the results of the blood tests and to further evaluate the patient's symptoms and medical history."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 50 years old, and I'm a female. I'm here because I had some abnormal lab results, specifically my hemoglobin was low, and I've been feeling really tired and exhausted lately.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm your age, gender, and the specific lab results you received? Also, could you describe the duration and severity of your fatigue?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 50 years old, and I'm a female. The lab results showed that my hemoglobin was low, and I've been feeling really tired and exhausted for the past couple of months. It's been getting worse, and I haven't been able to keep up with my usual exercise routine.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe any other symptoms you've been experiencing, such as dizziness, shortness of breath, pallor, or changes in bowel habits? Additionally, have you noticed any blood in your stool or urine, or have you experienced any recent weight loss?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't noticed any blood in my stool or urine, and I don't have any changes in bowel habits. I did mention that I've had a little weight loss, but I think it's because I've been exercising more, though I'm not sure if that's the real reason. I haven't had any dizziness or shortness of breath, just the fatigue.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide information about your past medical history, including any previous illnesses, surgeries, or chronic conditions, as well as any family history of anemia or blood disorders?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I have a history of COPD and congestive heart failure. I used to smoke, but I quit several years ago. I don't have any other major illnesses or surgeries, and I don't know of any family history of anemia or blood disorders.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the exact hemoglobin level from the recent lab results, as well as any other relevant blood test results such as MCV, MCH, RDW, ferritin, B12, folate, and peripheral blood smear findings?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers for my hemoglobin or the other blood tests you mentioned. I was told my hemoglobin was low, and they scheduled a follow-up with you because of that. I don't remember the other details, but I'm here to talk about it with you.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Thank you for sharing that with me. Since you mentioned that your hemoglobin was low, could you tell me if you've noticed any other symptoms such as dizziness, shortness of breath, or pale skin? These can sometimes be associated with low hemoglobin levels.",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't noticed any dizziness or shortness of breath, just the fatigue. My skin doesn't feel particularly pale, but I haven't really looked at it closely. It's mostly the exhaustion that's been affecting me.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the specific hemoglobin level, along with MCV, MCH, RDW, ferritin, B12, folate, and peripheral blood smear findings from your recent blood tests?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers for my hemoglobin or the other blood tests you mentioned. I was told my hemoglobin was low, and they scheduled a follow-up with you because of that. I don't remember the other details, but I'm here to talk about it with you.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Thank you for sharing that. Since you mentioned your hemoglobin was low but you don't have the exact numbers or other blood test results, could you let me know if you've had any other symptoms such as dizziness, shortness of breath, or changes in your usual energy levels? Also, have you noticed any changes in your appetite or weight recently?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had any dizziness or shortness of breath, just the fatigue. My energy levels have been really low over the past couple of months, and I've noticed a little weight loss, but I think it might be because I've been trying to stay active, though I'm not sure if that's the real reason. My appetite hasn't changed much.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the specific hemoglobin level, along with MCV, MCH, RDW, ferritin, B12, folate, and peripheral blood smear findings from your recent blood tests?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers for my hemoglobin or the other blood tests you mentioned. I was told my hemoglobin was low, and they scheduled a follow-up with you because of that. I don't remember the other details, but I'm here to talk about it with you.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "I understand that you don't have the exact numbers for your hemoglobin or the other blood tests. Could you let me know if you have any other symptoms you've noticed recently, such as changes in appetite, bowel habits, or any unusual bleeding, like heavy menstrual flow or nosebleeds?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have any changes in my appetite or bowel habits. I haven't noticed any unusual bleeding, and my periods haven't been heavy. I've just been really tired and exhausted, but nothing else seems off.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the exact hemoglobin value and the results of the MCV, MCH, RDW, ferritin, B12, folate, and peripheral blood smear tests?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers for my hemoglobin or the other blood tests you mentioned. I was told my hemoglobin was low, and they scheduled a follow-up with you because of that. I don't remember the other details, but I'm here to talk about it with you.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Thank you for coming in. I understand that you were told your hemoglobin is low, but we need more details to better understand what might be causing this. Could you let me know if you've noticed any changes in your urine color, appetite, or if you've been feeling more tired than usual recently?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't noticed any changes in my urine color or appetite. I've been feeling more tired than usual, and it's been really hard to keep up with my exercise routine because of it. I just feel exhausted most of the time.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the exact hemoglobin level and the results of the MCV, MCH, RDW, ferritin, B12, folate, and peripheral blood smear tests?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers for my hemoglobin or the other blood tests you mentioned. I was told my hemoglobin was low, and they scheduled a follow-up with you because of that. I don't remember the other details, but I'm here to talk about it with you.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "I understand that you don't have the exact numbers for your blood tests, but could you let me know if you've had any other symptoms related to your fatigue, such as changes in appetite, bowel habits, or unusual bleeding?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had any changes in my appetite or bowel habits, and I haven't noticed any unusual bleeding. The only thing I've been experiencing is this overwhelming tiredness that's made it really hard to keep up with my usual exercise routine. It's been going on for a couple of months now.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the exact hemoglobin value, along with the results for MCV, MCH, RDW, ferritin, B12, folate, and the findings from the peripheral blood smear?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers for my hemoglobin or the other blood tests you mentioned. I was told my hemoglobin was low, and they scheduled a follow-up with you because of that. I don't remember the other details, but I'm here to talk about it with you.",
+      "tid": "T29"
+    }
+  ]
+}

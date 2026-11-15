@@ -1,0 +1,483 @@
+{
+  "case_id": "D2N155",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test2",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports that a wound culture was not performed.\n* Patient is a 58-year-old female with a 1-year-old foot ulcer on the top of her right foot, near the fifth toe, approximately 1 inch in size, with yellow discharge and increased drainage.\n* The patient reports being unaware that vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, are typically performed to assess peripheral arterial disease in the context of wound care.\n* The patient denies having undergone any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound.\n* The ulcer is not painful, but the patient reports feeling more tired lately.\n* Patient has a history of type 2 diabetes, with an A1C of 10, and is currently taking insulin and metformin.\n* The patient reports that they try to eat better, but acknowledge that they are not doing enough.\n* The patient reports that the foot ulcer does not cause pain, but notes that they do not feel much sensation in their foot anyway.\n* Patient has not had any major infections or cardiovascular conditions.\n* The patient suggests that a wound culture may be necessary to identify any potential bacterial infection.\n* Patient has not been on any antibiotics recently, but was on some antibiotics 5 months ago.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N155_V01",
+      "section": "Assessment",
+      "text": "The patient has a non-healing foot ulcer on the top of her right foot, near the fifth toe, with yellow discharge and increased drainage.",
+      "status": "ok",
+      "p_chain_broken": 0.0,
+      "components": [
+        {
+          "component": "The patient has a non-healing foot ulcer on the top of her right foot, near the fifth toe, with yellow discharge and increased drainage.",
+          "feature_ids": [
+            "F2",
+            "F7",
+            "F8",
+            "F9",
+            "F15",
+            "F16",
+            "F21",
+            "F22"
+          ],
+          "p_broken": 1.4738829113889498e-05,
+          "passages": [
+            {
+              "pid": "1341_1142",
+              "title": "Diabetic Foot",
+              "section": "How does diabetes cause foot problems?",
+              "cos": 0.62
+            },
+            {
+              "pid": "1341_1147",
+              "title": "Diabetic Foot",
+              "section": "When should I see my health care provider about diabetic foot problems?",
+              "cos": 0.63
+            },
+            {
+              "pid": "1341_1141",
+              "title": "Diabetic Foot",
+              "section": "How does diabetes cause foot problems?",
+              "cos": 0.575
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N155_V02",
+      "section": "Assessment",
+      "text": "The patient has a history of poorly controlled type 2 diabetes, with an A1C of 10.",
+      "status": "ok",
+      "p_chain_broken": 0.0022,
+      "components": [
+        {
+          "component": "The patient has a history of poorly controlled type 2 diabetes",
+          "feature_ids": [
+            "F3",
+            "F4",
+            "F5",
+            "F21",
+            "F22"
+          ],
+          "p_broken": 0.00010889585790755487,
+          "passages": [
+            {
+              "pid": "6308_0",
+              "title": "A1C",
+              "section": "Summary",
+              "cos": 0.749
+            },
+            {
+              "pid": "5930_1119",
+              "title": "Diabetes Type 2",
+              "section": "How is type 2 diabetes diagnosed?",
+              "cos": 0.636
+            },
+            {
+              "pid": "6026_1097",
+              "title": "Diabetes in Children and Teens",
+              "section": "Summary",
+              "cos": 0.53
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "with an A1C of 10",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.002182704934341412,
+          "passages": [
+            {
+              "pid": "6308_0",
+              "title": "A1C",
+              "section": "Summary",
+              "cos": 0.692
+            },
+            {
+              "pid": "6308_1",
+              "title": "A1C",
+              "section": "Summary",
+              "cos": 0.663
+            },
+            {
+              "pid": "5784_3012",
+              "title": "Prediabetes",
+              "section": "How is prediabetes diagnosed?",
+              "cos": 0.6
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N155_V03",
+      "section": "Assessment",
+      "text": "The patient has not had any vascular studies to assess peripheral arterial disease.",
+      "status": "ok",
+      "p_chain_broken": 0.0001,
+      "components": [
+        {
+          "component": "The patient has not had any vascular studies to assess peripheral arterial disease.",
+          "feature_ids": [
+            "F19"
+          ],
+          "p_broken": 7.484528157266875e-05,
+          "passages": [
+            {
+              "pid": "533_3865",
+              "title": "Vascular Diseases",
+              "section": "How are vascular diseases diagnosed?",
+              "cos": 0.501
+            },
+            {
+              "pid": "4083_2890",
+              "title": "Peripheral Arterial Disease",
+              "section": "Summary",
+              "cos": 0.482
+            },
+            {
+              "pid": "533_3866",
+              "title": "Vascular Diseases",
+              "section": "How are vascular diseases treated?",
+              "cos": 0.384
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N155_V04",
+      "section": "Plan",
+      "text": "The patient will undergo a wound culture to check for infection.",
+      "status": "ok",
+      "p_chain_broken": 0.148,
+      "components": [
+        {
+          "component": "The patient will undergo a wound culture to check for infection.",
+          "feature_ids": [
+            "F14",
+            "F9",
+            "F16",
+            "F13",
+            "F22",
+            "F2",
+            "F20",
+            "F21"
+          ],
+          "p_broken": 0.14804674132059598,
+          "passages": [
+            {
+              "pid": "1341_1142",
+              "title": "Diabetic Foot",
+              "section": "How does diabetes cause foot problems?",
+              "cos": 0.668
+            },
+            {
+              "pid": "1341_1141",
+              "title": "Diabetic Foot",
+              "section": "How does diabetes cause foot problems?",
+              "cos": 0.587
+            },
+            {
+              "pid": "1341_1147",
+              "title": "Diabetic Foot",
+              "section": "When should I see my health care provider about diabetic foot problems?",
+              "cos": 0.64
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N155_V05",
+      "section": "Plan",
+      "text": "The patient will be referred for vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, to assess blood flow to her feet.",
+      "status": "ok",
+      "p_chain_broken": 0.0851,
+      "components": [
+        {
+          "component": "The patient will be referred for vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, to assess blood flow to her feet.",
+          "feature_ids": [
+            "F19",
+            "F22"
+          ],
+          "p_broken": 0.08509866969515335,
+          "passages": [
+            {
+              "pid": "1341_1147",
+              "title": "Diabetic Foot",
+              "section": "When should I see my health care provider about diabetic foot problems?",
+              "cos": 0.497
+            },
+            {
+              "pid": "1341_1146",
+              "title": "Diabetic Foot",
+              "section": "How can I protect my feet if I have diabetes?",
+              "cos": 0.464
+            },
+            {
+              "pid": "1341_1141",
+              "title": "Diabetic Foot",
+              "section": "How does diabetes cause foot problems?",
+              "cos": 0.391
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N155_V06",
+      "section": "Plan",
+      "text": "The patient will be advised to continue taking her current medications and to improve her foot care.",
+      "status": "ok",
+      "p_chain_broken": 0.0534,
+      "components": [
+        {
+          "component": "The patient will be advised to continue taking her current medications",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.05340311681178348,
+          "passages": [
+            {
+              "pid": "6811_779",
+              "title": "Cholesterol Medicines",
+              "section": "Who needs cholesterol medicines?",
+              "cos": 0.457
+            },
+            {
+              "pid": "7129_2737",
+              "title": "Opioid Use Disorder (OUD) Treatment",
+              "section": "Which medicines treat opioid opioid use disorder (OUD)?",
+              "cos": 0.385
+            },
+            {
+              "pid": "5930_1119",
+              "title": "Diabetes Type 2",
+              "section": "How is type 2 diabetes diagnosed?",
+              "cos": 0.37
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient will be advised to improve her foot care",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F7",
+            "F8",
+            "F9",
+            "F22"
+          ],
+          "p_broken": 0.0002959555122793341,
+          "passages": [
+            {
+              "pid": "1341_1142",
+              "title": "Diabetic Foot",
+              "section": "How does diabetes cause foot problems?",
+              "cos": 0.695
+            },
+            {
+              "pid": "1341_1141",
+              "title": "Diabetic Foot",
+              "section": "How does diabetes cause foot problems?",
+              "cos": 0.633
+            },
+            {
+              "pid": "1341_1147",
+              "title": "Diabetic Foot",
+              "section": "When should I see my health care provider about diabetic foot problems?",
+              "cos": 0.689
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports that a wound culture was not performed.\n* Patient is a 58-year-old female with a 1-year-old foot ulcer on the top of her right foot, near the fifth toe, approximately 1 inch in size, with yellow discharge and increased drainage.\n* The patient reports being unaware that vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, are typically performed to assess peripheral arterial disease in the context of wound care.\n* The patient denies having undergone any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound.\n* The ulcer is not painful, but the patient reports feeling more tired lately.\n* Patient has a history of type 2 diabetes, with an A1C of 10, and is currently taking insulin and metformin.\n* The patient reports that they try to eat better, but acknowledge that they are not doing enough.\n* The patient reports that the foot ulcer does not cause pain, but notes that they do not feel much sensation in their foot anyway.\n* Patient has not had any major infections or cardiovascular conditions.\n* The patient suggests that a wound culture may be necessary to identify any potential bacterial infection.\n* Patient has not been on any antibiotics recently, but was on some antibiotics 5 months ago.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient has a non-healing foot ulcer on the top of her right foot, near the fifth toe, with yellow discharge and increased drainage.",
+      "The patient has a history of poorly controlled type 2 diabetes, with an A1C of 10.",
+      "The patient has not had any vascular studies to assess peripheral arterial disease."
+    ],
+    "plan": [
+      "The patient will undergo a wound culture to check for infection.",
+      "The patient will be referred for vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, to assess blood flow to her feet.",
+      "The patient will be advised to continue taking her current medications and to improve her foot care."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 58 years old and female. I'm here because I have this foot ulcer that just won't heal, and I'm worried about it. It's been going on for about a year now.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide more details about your diabetes status, including whether you have been diagnosed with diabetes, the type of diabetes, and how long you have had it? Additionally, have you had any history of infections or cardiovascular conditions?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I was diagnosed with type two diabetes a few years back, and my blood sugars have been running in the two hundreds, which my doctor doesn't like. My last A1C was about ten, so I know it's not well-controlled. I haven't had any major infections or heart issues that I'm aware of.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the location, size, appearance, and any associated symptoms (e.g., pain, drainage, odor) of the foot ulcer? Have you noticed any changes in its appearance over the past year?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "It's on the top of my right foot, near the fifth toe, and it's about an inch in size. It's got some yellow stuff in it, and there's been more drainage lately. It doesn't hurt, but I don't feel much in my foot anyway. I've noticed it hasn't been getting better, and it seems to be getting more draining over time.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any recent fever, chills, or signs of systemic infection such as malaise or weight loss? Have you had any prior wound cultures or imaging of the foot ulcer?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had any fever or chills, but I have been feeling more tired lately. As for imaging, I think they did an x-ray before I came in, and it showed no bone infection, if I remember right. I don't think they did a wound culture.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the depth of the ulcer and whether there is any necrotic tissue present? Additionally, have you noticed any changes in the color or texture of the surrounding skin?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The ulcer isn't very deep as far as I can tell, and there's some yellow stuff in there, but I don't think there's any dead tissue exposed. The skin around it doesn't look red or swollen, and it doesn't feel different to the touch. It just looks kind of open and has that yellowish stuff in it.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient had any prior episodes of foot ulcers or infections, and is she currently on any antibiotics or wound care regimen?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't think I've had any other foot ulcers before, just this one. I was on some antibiotics a while back, maybe five months ago, but I don't think I'm on anything now. I've been trying to take care of it, but nothing really seems to be working.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, to assess peripheral arterial disease?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't think I've had any vascular studies done before. I wasn't really aware that was something they would check for this kind of wound. I just thought it was a regular ulcer that wasn't healing.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please share more details about your current diabetes management, including any medications you are taking, your diet, and whether you have experienced any complications related to your diabetes?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "My diabetes is still not great, my blood sugars are still running around two hundred, and my last A1c was about ten. I'm on insulin and metformin, but it's not where my doctor wants it to be. I try to eat better, but I know I'm not doing enough. I also don't take good care of my feet like I should, which is probably making this ulcer worse.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, to assess for peripheral arterial disease?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't think I've had any vascular studies done before. I wasn't really aware that was something they would check for this kind of wound. I just thought it was a regular ulcer that wasn't healing.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient had a wound culture performed on the ulcer to identify any potential bacterial infection?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't think they've done a wound culture on it. I just know that I was on some antibiotics before, but I don't know if they checked for specific bacteria or anything like that. I guess that's something they might need to do now.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any vascular studies, such as an ankle-brachial index or Doppler ultrasound, to assess blood flow to your feet?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't think I've had any vascular studies done before. I wasn't really aware that was something they would check for this kind of wound. I just thought it was a regular ulcer that wasn't healing.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient had a wound culture performed on the ulcer to check for infection?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't think they've done a wound culture on it. I just know that I was on some antibiotics before, but I don't know if they checked for specific bacteria or anything like that. I guess that's something they might need to do now.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, to assess blood flow to your feet?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't think I've had any vascular studies done before. I wasn't really aware that was something they would check for this kind of wound. I just thought it was a regular ulcer that wasn't healing.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any vascular studies, such as an ankle-brachial index (ABI) or Doppler ultrasound, to assess for peripheral arterial disease?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't think I've had any vascular studies done before. I wasn't really aware that was something they would check for this kind of wound. I just thought it was a regular ulcer that wasn't healing.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had a wound culture performed on this ulcer to check for infection?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't think they've done a wound culture on it. I just know that I was on some antibiotics before, but I don't know if they checked for specific bacteria or anything like that. I guess that's something they might need to do now.",
+      "tid": "T29"
+    }
+  ]
+}

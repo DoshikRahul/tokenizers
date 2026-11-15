@@ -1,0 +1,296 @@
+{
+  "case_id": "D2N153",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test2",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports that an MRI of the right knee might be considered if symptoms do not improve.\n* The patient expresses concern that the issue might be more serious.\n* The patient, a 35-year-old male, reports a right knee injury sustained approximately two and a half weeks ago when he stepped off a curb and twisted his ankle. He describes a clicking sensation on the outside of his right knee, especially when performing a full squat or resting his foot on his heel for an extended period. He also reports feeling the knee \"locked up\" when resting his foot on his heel, but this does not cause significant pain.\n* The patient has undergone an x-ray of the right knee, which showed no acute fracture or bony abnormality.\n* He has not had any prior knee injuries, meniscal tears, or ligament damage.\n* The patient reports no swelling, instability, or difficulty fully extending or flexing his knee.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N153_V01",
+      "section": "Assessment",
+      "text": "The patient's symptoms are consistent with a possible soft tissue injury or ligamentous strain, but further evaluation is needed to determine the exact nature of the injury.",
+      "status": "ok",
+      "p_chain_broken": 0.2451,
+      "components": [
+        {
+          "component": "The patient's symptoms are consistent with a possible soft tissue injury or ligamentous strain",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F10",
+            "F13",
+            "F14",
+            "F16"
+          ],
+          "p_broken": 0.2450843018301005,
+          "passages": [
+            {
+              "pid": "304_2281",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.545
+            },
+            {
+              "pid": "304_2282",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.585
+            },
+            {
+              "pid": "1618_3641",
+              "title": "Tendinitis",
+              "section": "Summary",
+              "cos": 0.453
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "Further evaluation is needed to determine the exact nature of the injury",
+          "feature_ids": [
+            "F4",
+            "F5",
+            "F6",
+            "F13",
+            "F14",
+            "F15",
+            "F16",
+            "F18"
+          ],
+          "p_broken": 0.00857742500895716,
+          "passages": [
+            {
+              "pid": "304_2281",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.508
+            },
+            {
+              "pid": "304_2282",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.525
+            },
+            {
+              "pid": "3953_2593",
+              "title": "MRI Scans",
+              "section": "Who needs an MRI scan?",
+              "cos": 0.406
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N153_V02",
+      "section": "Plan",
+      "text": "The doctor will consider ordering an MRI to evaluate for soft tissue abnormalities such as meniscal tears or ligamentous injuries if the patient's symptoms do not improve.",
+      "status": "ok",
+      "p_chain_broken": 0.0759,
+      "components": [
+        {
+          "component": "The doctor will consider ordering an MRI to evaluate for soft tissue abnormalities such as meniscal tears or ligamentous injuries if the patient's symptoms do not improve.",
+          "feature_ids": [
+            "F4",
+            "F5",
+            "F13",
+            "F14",
+            "F15",
+            "F7",
+            "F8",
+            "F10"
+          ],
+          "p_broken": 0.07585785984375555,
+          "passages": [
+            {
+              "pid": "304_2281",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.479
+            },
+            {
+              "pid": "304_2282",
+              "title": "Knee Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.499
+            },
+            {
+              "pid": "3953_2593",
+              "title": "MRI Scans",
+              "section": "Who needs an MRI scan?",
+              "cos": 0.518
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports that an MRI of the right knee might be considered if symptoms do not improve.\n* The patient expresses concern that the issue might be more serious.\n* The patient, a 35-year-old male, reports a right knee injury sustained approximately two and a half weeks ago when he stepped off a curb and twisted his ankle. He describes a clicking sensation on the outside of his right knee, especially when performing a full squat or resting his foot on his heel for an extended period. He also reports feeling the knee \"locked up\" when resting his foot on his heel, but this does not cause significant pain.\n* The patient has undergone an x-ray of the right knee, which showed no acute fracture or bony abnormality.\n* He has not had any prior knee injuries, meniscal tears, or ligament damage.\n* The patient reports no swelling, instability, or difficulty fully extending or flexing his knee.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient's symptoms are consistent with a possible soft tissue injury or ligamentous strain, but further evaluation is needed to determine the exact nature of the injury."
+    ],
+    "plan": [
+      "The doctor will consider ordering an MRI to evaluate for soft tissue abnormalities such as meniscal tears or ligamentous injuries if the patient's symptoms do not improve."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 35, male. I injured my right knee about two and a half weeks ago when I sort of turned my ankle stepping off a curb. It doesn't hurt much when I walk, but it clicks, and sometimes it feels locked if I rest it on my heel for too long. I'm worried it might be something more serious.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging or medical evaluations for this knee injury, and if so, what were the results?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The doctor did have me do an x-ray on my knee, and it didn't show any acute fracture or bony abnormality. I wasn't sure what to expect, but I guess that's good news. They didn't mention anything else, though.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any prior knee injuries, meniscal tears, ligament damage, or a history of knee surgery?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't think I've ever had any prior knee injuries or issues like meniscal tears or ligament damage. This is the first time anything like this has happened to my knee.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Can you describe the exact location of the clicking sensation in your knee? Have you noticed any swelling, instability, or difficulty fully extending or flexing your knee?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The clicking happens on the outside of my right knee, especially when I do a full squat, like when I used to catch in baseball. I don't really have swelling or instability, and I can bend and straighten my knee fine. It just clicks sometimes, and when I rest my foot on my heel for too long, it feels locked, but it doesn't hurt much otherwise.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe if there are any specific activities or movements that make the locking sensation worse, and have you noticed any changes in your ability to perform daily tasks due to this?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The locking sensation gets worse when I rest my foot on my heel for an extended time, like when I'm leaning against a wall. It doesn't really interfere with my daily tasks too much, except when I'm gardening or doing stuff outside where I have to move pots or bend down a lot. But it doesn't stay worse, just feels a little more uncomfortable during those times.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Can you describe the exact location of the clicking and locking sensation on the lateral aspect of your knee? Is there any specific movement or position that consistently reproduces the symptom?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The clicking and locking happen on the outside of my right knee, especially when I do a full squat or when I rest my foot on my heel for too long. It doesn't happen all the time, but when I do those movements, that's when I feel it the most. It doesn't hurt much, but it does feel a little locked up until I ease into walking again.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone an MRI of the right knee to evaluate for soft tissue abnormalities such as meniscal tears or ligamentous injuries?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had an MRI yet. The doctor mentioned looking at the x-ray results, and they didn't show any fractures or bony issues, but they didn't say anything about an MRI. I guess that might be something they’re considering if my symptoms don’t get better.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any swelling, tenderness, or instability in your right knee, especially around the lateral side where the clicking and locking occur?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't feel any swelling or tenderness specifically on the lateral side of my knee, except when the doctor pulled my foot to the outside during the exam, which did hurt a little. I don't feel unstable, but sometimes when I rest my foot on my heel, it feels locked up until I start walking again.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone an MRI of the right knee to evaluate for soft tissue abnormalities such as meniscal tears or ligamentous injuries?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had an MRI yet. The doctor looked at the x-ray results, and they didn't show any fractures or bony issues, but they didn't mention an MRI. I guess that might be something they’re considering if my symptoms don’t get better.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone an MRI of the right knee to evaluate for soft tissue abnormalities such as meniscal tears or ligamentous injuries?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had an MRI yet. The doctor looked at the x-ray results, and they didn't show any fractures or bony issues, but they didn't mention an MRI. I guess that might be something they’re considering if my symptoms don’t get better.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone an MRI of the right knee to evaluate for soft tissue abnormalities such as meniscal tears or ligamentous injuries?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had an MRI yet. The doctor looked at the x-ray results, and they didn't show any fractures or bony issues, but they didn't mention an MRI. I guess that might be something they’re considering if my symptoms don’t get better.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone an MRI of the right knee to evaluate for meniscal tears, ligamentous injuries, or other soft tissue abnormalities?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had an MRI yet. The doctor looked at the x-ray results, and they didn't show any fractures or bony issues, but they didn't mention an MRI. I guess that might be something they’re considering if my symptoms don’t get better.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any swelling, instability, or warmth around the right knee? Also, have you experienced any episodes of the knee giving way or buckling?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No swelling or warmth that I can tell, and I don't feel unstable. The only time it feels like it's giving way is when I rest my foot on my heel, and it feels locked up until I start walking again. It doesn't buckle when I'm moving normally.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone an MRI of the right knee yet, and if so, what were the findings? If not, is there a plan to proceed with an MRI to evaluate for meniscal tears, ligamentous injuries, or other soft tissue abnormalities?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had an MRI yet. The doctor looked at the x-ray results, and they didn't show any fractures or bony issues, but they didn't mention an MRI. I guess that might be something they’re considering if my symptoms don’t get better.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone an MRI of the right knee yet, and if not, when is it planned?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had an MRI yet. The doctor looked at the x-ray results, and they didn't show any fractures or bony issues, but they didn't mention an MRI. I guess that might be something they’re considering if my symptoms don’t get better.",
+      "tid": "T29"
+    }
+  ]
+}

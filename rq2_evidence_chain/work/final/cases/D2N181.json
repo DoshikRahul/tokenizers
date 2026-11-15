@@ -1,0 +1,524 @@
+{
+  "case_id": "D2N181",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test3",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient is a 38-year-old female who has been experiencing acid reflux symptoms since she was 12 years old, with worsening over the past few years.\n* The symptoms are characterized by a burning sensation in the chest and throat, triggered by spicy foods, soda, citrus or tomato-based foods, and stress at work.\n* The patient has tried omeprazole and ranitidine in the past, with some relief, but has not been on any medication recently.\n* The patient reports that their appetite has been off, which is a new development.\n* The patient has not experienced difficulty swallowing, regurgitation, or unintended weight loss.\n* The patient has had a history of surgery as a baby for a twisted intestine, but does not recall any specific findings or diagnoses from an upper endoscopy.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N181_V01",
+      "section": "Assessment",
+      "text": "The patient has a history of acid reflux symptoms, with worsening over the past few years, and has tried various treatments with some relief.",
+      "status": "ok",
+      "p_chain_broken": 0.0017,
+      "components": [
+        {
+          "component": "The patient has a history of acid reflux symptoms, with worsening over the past few years, and has tried various treatments with some relief.",
+          "feature_ids": [
+            "F1",
+            "F2",
+            "F8",
+            "F9",
+            "F16",
+            "F17",
+            "F18"
+          ],
+          "p_broken": 0.0017007133518171908,
+          "passages": [
+            {
+              "pid": "6467_3202",
+              "title": "Reflux in Infants",
+              "section": "What are the treatments for my infant's GERD?",
+              "cos": 0.588
+            },
+            {
+              "pid": "6521_3190",
+              "title": "Reflux in Children",
+              "section": "What are the symptoms of reflux and GERD in children?",
+              "cos": 0.56
+            },
+            {
+              "pid": "6521_3186",
+              "title": "Reflux in Children",
+              "section": "What is reflux (GER) and GERD?",
+              "cos": 0.545
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N181_V02",
+      "section": "Assessment",
+      "text": "The patient's symptoms are triggered by specific foods and stress, and she has not experienced any regurgitation, difficulty swallowing, or unintended weight loss.",
+      "status": "flagged",
+      "p_chain_broken": 0.8945,
+      "components": [
+        {
+          "component": "The patient's symptoms are triggered by specific foods and stress",
+          "feature_ids": [
+            "F4",
+            "F5"
+          ],
+          "p_broken": 7.484548677049532e-05,
+          "passages": [
+            {
+              "pid": "6521_3190",
+              "title": "Reflux in Children",
+              "section": "What are the symptoms of reflux and GERD in children?",
+              "cos": 0.531
+            },
+            {
+              "pid": "1653_1804",
+              "title": "Heartburn",
+              "section": "Summary",
+              "cos": 0.54
+            },
+            {
+              "pid": "6521_3186",
+              "title": "Reflux in Children",
+              "section": "What is reflux (GER) and GERD?",
+              "cos": 0.532
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "she has not experienced any regurgitation, difficulty swallowing, or unintended weight loss",
+          "feature_ids": [
+            "F6",
+            "F15"
+          ],
+          "p_broken": 0.8945027760893257,
+          "passages": [
+            {
+              "pid": "1309_3576",
+              "title": "Swallowing Disorders",
+              "section": "Summary",
+              "cos": 0.566
+            },
+            {
+              "pid": "246_1387",
+              "title": "Esophagus Disorders",
+              "section": "What are symptoms of esophagus disorders?",
+              "cos": 0.512
+            },
+            {
+              "pid": "5266_3683",
+              "title": "Tongue Disorders",
+              "section": "Summary",
+              "cos": 0.515
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N181_V03",
+      "section": "Assessment",
+      "text": "The patient has a history of surgery as a baby, but does not recall any specific findings or diagnoses from an upper endoscopy.",
+      "status": "ok",
+      "p_chain_broken": 0.0001,
+      "components": [
+        {
+          "component": "The patient has a history of surgery as a baby",
+          "feature_ids": [
+            "F12"
+          ],
+          "p_broken": 4.5397397834728376e-05,
+          "passages": [
+            {
+              "pid": "6467_3202",
+              "title": "Reflux in Infants",
+              "section": "What are the treatments for my infant's GERD?",
+              "cos": 0.696
+            },
+            {
+              "pid": "6467_3200",
+              "title": "Reflux in Infants",
+              "section": "How are reflux and GERD diagnosed in infants?",
+              "cos": 0.574
+            },
+            {
+              "pid": "6467_3196",
+              "title": "Reflux in Infants",
+              "section": "What causes reflux and GERD in infants?",
+              "cos": 0.595
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient does not recall any specific findings or diagnoses from an upper endoscopy",
+          "feature_ids": [
+            "F11"
+          ],
+          "p_broken": 8.481035393501614e-05,
+          "passages": [
+            {
+              "pid": "512_1598",
+              "title": "GERD",
+              "section": "How is GERD diagnosed?",
+              "cos": 0.469
+            },
+            {
+              "pid": "4513_1353",
+              "title": "Endoscopy",
+              "section": "Summary",
+              "cos": 0.426
+            },
+            {
+              "pid": "6967_1374",
+              "title": "Eosinophilic Esophagitis",
+              "section": "How is eosinophilic esophagitis (EoE) diagnosed?",
+              "cos": 0.43
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N181_V04",
+      "section": "Plan",
+      "text": "The patient will be referred for an upper endoscopy to evaluate her acid reflux symptoms and assess for any structural abnormalities or complications.",
+      "status": "flagged",
+      "p_chain_broken": 0.5312,
+      "components": [
+        {
+          "component": "The patient will be referred for an upper endoscopy to evaluate her acid reflux symptoms and assess for any structural abnormalities or complications.",
+          "feature_ids": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8"
+          ],
+          "p_broken": 0.5312085718460177,
+          "passages": [
+            {
+              "pid": "6521_3190",
+              "title": "Reflux in Children",
+              "section": "What are the symptoms of reflux and GERD in children?",
+              "cos": 0.655
+            },
+            {
+              "pid": "6521_3186",
+              "title": "Reflux in Children",
+              "section": "What is reflux (GER) and GERD?",
+              "cos": 0.629
+            },
+            {
+              "pid": "512_1597",
+              "title": "GERD",
+              "section": "What are common symptoms of GERD?",
+              "cos": 0.619
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N181_V05",
+      "section": "Plan",
+      "text": "The patient will be advised to keep a food diary to track her triggers and symptoms.",
+      "status": "ok",
+      "p_chain_broken": 0.0759,
+      "components": [
+        {
+          "component": "The patient will be advised to keep a food diary to track her triggers and symptoms.",
+          "feature_ids": [
+            "F4",
+            "F13",
+            "F14",
+            "F15",
+            "F16",
+            "F17"
+          ],
+          "p_broken": 0.07585789588324772,
+          "passages": [
+            {
+              "pid": "512_1595",
+              "title": "GERD",
+              "section": "What is GERD?",
+              "cos": 0.667
+            },
+            {
+              "pid": "6521_3190",
+              "title": "Reflux in Children",
+              "section": "What are the symptoms of reflux and GERD in children?",
+              "cos": 0.646
+            },
+            {
+              "pid": "6521_3186",
+              "title": "Reflux in Children",
+              "section": "What is reflux (GER) and GERD?",
+              "cos": 0.633
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N181_V06",
+      "section": "Plan",
+      "text": "The patient will be prescribed a proton pump inhibitor (PPI) to manage her acid reflux symptoms.",
+      "status": "flagged",
+      "p_chain_broken": 0.9399,
+      "components": [
+        {
+          "component": "The patient will be prescribed a proton pump inhibitor (PPI) to manage her acid reflux symptoms.",
+          "feature_ids": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F8",
+            "F9",
+            "F13"
+          ],
+          "p_broken": 0.9399131646821678,
+          "passages": [
+            {
+              "pid": "6521_3190",
+              "title": "Reflux in Children",
+              "section": "What are the symptoms of reflux and GERD in children?",
+              "cos": 0.62
+            },
+            {
+              "pid": "1653_1804",
+              "title": "Heartburn",
+              "section": "Summary",
+              "cos": 0.67
+            },
+            {
+              "pid": "6521_3186",
+              "title": "Reflux in Children",
+              "section": "What is reflux (GER) and GERD?",
+              "cos": 0.613
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N181_V07",
+      "section": "Plan",
+      "text": "The patient will be scheduled for a follow-up appointment to review her progress and adjust her treatment plan as needed.",
+      "status": "ok",
+      "p_chain_broken": 0.0059,
+      "components": [
+        {
+          "component": "The patient will be scheduled for a follow-up appointment to review her progress and adjust her treatment plan as needed.",
+          "feature_ids": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8"
+          ],
+          "p_broken": 0.005911030028480943,
+          "passages": [
+            {
+              "pid": "6521_3190",
+              "title": "Reflux in Children",
+              "section": "What are the symptoms of reflux and GERD in children?",
+              "cos": 0.673
+            },
+            {
+              "pid": "6521_3186",
+              "title": "Reflux in Children",
+              "section": "What is reflux (GER) and GERD?",
+              "cos": 0.639
+            },
+            {
+              "pid": "1653_1804",
+              "title": "Heartburn",
+              "section": "Summary",
+              "cos": 0.666
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient is a 38-year-old female who has been experiencing acid reflux symptoms since she was 12 years old, with worsening over the past few years.\n* The symptoms are characterized by a burning sensation in the chest and throat, triggered by spicy foods, soda, citrus or tomato-based foods, and stress at work.\n* The patient has tried omeprazole and ranitidine in the past, with some relief, but has not been on any medication recently.\n* The patient reports that their appetite has been off, which is a new development.\n* The patient has not experienced difficulty swallowing, regurgitation, or unintended weight loss.\n* The patient has had a history of surgery as a baby for a twisted intestine, but does not recall any specific findings or diagnoses from an upper endoscopy.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient has a history of acid reflux symptoms, with worsening over the past few years, and has tried various treatments with some relief.",
+      "The patient has a history of surgery as a baby, but does not recall any specific findings or diagnoses from an upper endoscopy."
+    ],
+    "plan": [
+      "The patient will be advised to keep a food diary to track her triggers and symptoms.",
+      "The patient will be scheduled for a follow-up appointment to review her progress and adjust her treatment plan as needed."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 38 years old, and I'm a female. I'm here because I've been having really bad acid reflux, and my primary doctor referred me.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe when your acid reflux symptoms started and what they feel like?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I've had acid reflux since I was around 12, but it's gotten worse over the past few years. It feels like a burning sensation in my chest and throat, and some days it's really bad, especially after eating certain things.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the specific foods or activities that trigger your acid reflux episodes, and have you experienced any associated symptoms such as regurgitation, difficulty swallowing, or unintended weight loss?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have any difficulty swallowing, and I haven't lost any weight unintentionally. As for triggers, spicy foods, soda, and sometimes even citrus or tomato-based foods seem to make it worse. Stress at work also seems to play a role.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you been diagnosed with GERD or any other gastrointestinal condition in the past? If so, what treatments have you received, and how effective were they?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't think I've ever been officially diagnosed with GERD, but I've been dealing with acid reflux for a long time. I was on omeprazole for about a year, and it helped some days but not others. I also tried ranitidine at one point, and that helped too, but I haven't been on anything else.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any endoscopic evaluation of the upper gastrointestinal tract, such as an esophagogastroduodenoscopy (EGD), to assess for structural abnormalities or complications of chronic acid reflux?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't think I've had an upper endoscopy in the last 10 years, maybe when I was younger, but I can't remember for sure.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient ever had an upper endoscopy at any point in her life, even if it was many years ago?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Yes, I think I had one when I was younger, but I can't remember the details. My mom said I had some kind of surgery when I was a baby because my intestines were twisted, but that was way before this.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm if you had any specific findings or diagnoses from that upper endoscopy, and if there was any treatment recommended at that time?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember any specific findings or diagnoses from that upper endoscopy because it was so long ago. I just know my mom said I had surgery when I was a baby, but that was for something else, not related to the acid reflux I've had since I was 12.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the timing and duration of your acid reflux episodes? For example, do they occur primarily after meals, at night, or at other times?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "My acid reflux episodes usually happen after meals, especially if I eat something spicy or drink soda. Sometimes it wakes me up at night, and it feels like a burning in my chest and throat. It's been like this for years, but it's gotten worse over the past few years.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient ever undergone an upper endoscopy to evaluate her acid reflux symptoms?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't think I've had an upper endoscopy in the last 10 years, maybe when I was younger, but I can't remember for sure.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient ever undergone an upper endoscopy, and if so, what were the findings?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember the findings from any upper endoscopy I might have had when I was younger, but I know I had surgery as a baby for something else, not related to this. I haven't had one in the last 10 years.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient ever had any tests such as an upper endoscopy, pH monitoring, or imaging studies like an abdominal ultrasound or CT scan to evaluate her acid reflux symptoms?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember having any tests like pH monitoring or imaging studies for my acid reflux. The only thing I remember is having surgery as a baby, but that was for something else, not related to this. I don't think I've had an upper endoscopy in the last 10 years.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient ever experienced any regurgitation of food or a sour taste in her mouth, and if so, how often does this occur?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Yes, I do get a sour taste in my mouth and sometimes feel like food comes back up, especially after eating. It doesn't happen every day, but it's pretty common, especially when I eat something that triggers it.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient ever undergone an upper endoscopy or other diagnostic tests for her acid reflux, and if so, what were the findings?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember the findings from any upper endoscopy I might have had when I was younger, but I know I had surgery as a baby for something else, not related to this. I haven't had one in the last 10 years.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you noticed any changes in the pattern or severity of your symptoms over the past few months?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Yes, my symptoms have gotten worse over the past few months. I've been under a lot of work stress, and even though I take omeprazole, some days are really bad, especially if I eat something that triggers it. My appetite has also been off, which is new.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient ever undergone an upper endoscopy or other gastrointestinal imaging studies, and if so, what were the findings?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember the findings from any upper endoscopy I might have had when I was younger, but I know I had surgery as a baby for something else, not related to this. I haven't had one in the last 10 years.",
+      "tid": "T29"
+    }
+  ]
+}

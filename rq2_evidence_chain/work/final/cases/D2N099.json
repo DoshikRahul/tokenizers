@@ -1,0 +1,220 @@
+{
+  "case_id": "D2N099",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test1",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports that symptoms started around supper time last night and have been present since then.\n* Patient is a baby, born in 2020, with symptoms of runny nose, cough, and low-grade fever for 2 days\n* Patient has been pulling on ears and rubbing nose frequently\n* Patient's older sister was sick, and patient was exposed to her and their nephew with a sinus infection\n* Patient's appetite has decreased, and they have trouble sleeping\n* Patient is irritable and has not had difficulty breathing, vomiting, or diarrhea\n* The patient denies having had any recent vaccinations.\n* The patient reports his name is Randy Gutierrez and he is a baby.",
+    "objective": "* Temperature: 100.3°F (rectal)\n* The child did not have any other issues during the physical examination."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N099_V01",
+      "section": "Assessment",
+      "text": "The patient is experiencing symptoms consistent with a viral upper respiratory tract infection, possibly related to exposure to a sick family member.",
+      "status": "ok",
+      "p_chain_broken": 0.0203,
+      "components": [
+        {
+          "component": "The patient is experiencing symptoms consistent with a viral upper respiratory tract infection, possibly related to exposure to a sick family member.",
+          "feature_ids": [
+            "F3",
+            "F4",
+            "F5",
+            "F7",
+            "F8",
+            "F10",
+            "F17",
+            "F18"
+          ],
+          "p_broken": 0.02033228637377721,
+          "passages": [
+            {
+              "pid": "404_3395",
+              "title": "Sinusitis",
+              "section": "Summary",
+              "cos": 0.621
+            },
+            {
+              "pid": "3101_3233",
+              "title": "Respiratory Syncytial Virus Infections",
+              "section": "What are the symptoms of respiratory syncytial virus (RSV) infections?",
+              "cos": 0.536
+            },
+            {
+              "pid": "363_2947",
+              "title": "Pneumonia",
+              "section": "What are the symptoms of pneumonia?",
+              "cos": 0.566
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports that symptoms started around supper time last night and have been present since then.\n* Patient is a baby, born in 2020, with symptoms of runny nose, cough, and low-grade fever for 2 days\n* Patient has been pulling on ears and rubbing nose frequently\n* Patient's older sister was sick, and patient was exposed to her and their nephew with a sinus infection\n* Patient's appetite has decreased, and they have trouble sleeping\n* Patient is irritable and has not had difficulty breathing, vomiting, or diarrhea\n* The patient denies having had any recent vaccinations.\n* The patient reports his name is Randy Gutierrez and he is a baby.",
+    "objective": "* Temperature: 100.3°F (rectal)\n* The child did not have any other issues during the physical examination.",
+    "assessment": [
+      "The patient is experiencing symptoms consistent with a viral upper respiratory tract infection, possibly related to exposure to a sick family member."
+    ],
+    "plan": []
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Doctor",
+      "text": "Hello. Could you tell me your age and gender, and what brings you in today?",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Hello. My name is Randy Gutierrez, and I'm a baby. I'm here because I've been feeling sick for a couple of days now. I have a runny nose, a cough, and I've had a low-grade fever. I've also been pulling on my ears and rubbing my nose a lot. My older sister was sick, and I think I might have caught something from her.",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm your age, gender, and the exact duration of your symptoms? Also, have you had any recent vaccinations or exposure to sick individuals besides your sister?",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm a baby, so I don't know my exact age, but I was born in 2020. My symptoms started around supper time last night, and I've been feeling sick since then. I've been exposed to my older sister who was sick, and also to my nephew who had a sinus infection. I don't know about any vaccinations.",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide information about the patient's current temperature, any changes in appetite or sleep, and whether there has been any discharge from the nose or ears?",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Patient",
+      "text": "My temperature was 100.3 when I checked it earlier. I had some appetite, ate a little bit this morning, but then didn't want much else. I've been rubbing my nose a lot and pulling on my ears, but I don't think there's any discharge from my ears. My nose has been runny with clear mucus.",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient had any recent vaccinations, and if so, which ones?",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't know about any vaccinations. I don't think we've had any recent ones.",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient experienced any difficulty breathing, vomiting, or diarrhea since the onset of symptoms?",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any difficulty breathing, vomiting, or diarrhea since I've been feeling sick. I've been mostly irritable and having trouble sleeping, but I haven't had any of those other issues.",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient had any recent ear infections or a history of recurrent otitis media?",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't think he's had any recent ear infections or a history of recurrent ear infections. He's been pulling on his ears, but I don't know if that means he has an infection right now.",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient experienced any ear pain or changes in hearing during this illness?",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't think he's had any ear pain or changes in hearing during this illness. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing.",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient had any recent ear infections or a history of recurrent ear infections?",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't think he's had any recent ear infections or a history of recurrent ear infections. He's been pulling on his ears, but I don't know if that means he has an infection right now.",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient had any changes in behavior, such as irritability, difficulty concentrating, or decreased interaction with others during this illness?",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Yes, he has been more irritable than usual and seems to have trouble sleeping. He’s not his normal self, but I haven’t noticed any changes in how he interacts with others or his ability to concentrate.",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient had any recent changes in hearing or ear pain that could suggest an ear infection?",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing.",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient had any recent changes in hearing or ear pain that would suggest an ear infection?",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing.",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide details about the child's physical examination findings, including vital signs such as temperature, heart rate, respiratory rate, and oxygen saturation, as well as any findings from a head-to-toe examination?",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the exact numbers for his vital signs, but his temperature was 100.3 when I checked it rectally. The doctor examined him and said his ears looked okay, and he was breathing well. He didn't seem to have any other issues during the exam.",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the child had any recent changes in hearing or ear pain that would suggest an ear infection?",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing.",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the child had any recent changes in hearing or ear pain that would suggest an ear infection?",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I don't think he's had any recent changes in hearing or ear pain that would suggest an ear infection. He's been pulling on his ears, but I haven't noticed any pain or trouble hearing.",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the child experienced any difficulty breathing, such as rapid breathing, wheezing, or nasal congestion that makes it hard for him to breathe?",
+      "tid": "T29"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Yes, he has had nasal congestion, and it's been making it a little harder for him to breathe through his nose, but he's been able to breathe okay overall. He hasn't had any wheezing or rapid breathing that I noticed.",
+      "tid": "T30"
+    }
+  ]
+}

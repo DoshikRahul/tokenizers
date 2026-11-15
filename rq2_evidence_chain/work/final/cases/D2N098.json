@@ -1,0 +1,382 @@
+{
+  "case_id": "D2N098",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test1",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* Patient is a 66-year-old male who has been experiencing constant pain in his left shoulder and left elbow for approximately five months.\n* The pain is described as a constant ache that can get sharper at times, especially with certain movements.\n* The patient reports experiencing decreased ability to lift weight, which has been frustrating and has occurred despite previously regular gym attendance.\n* The patient reports being unable to lift more than 15 or 20 pounds, which is a reduction from their previous ability to lift heavier weights.\n* The patient reports no swelling, redness, numbness, or tingling associated with the pain.\n* The pain is primarily located in the shoulder and elbow, with no radiation to other areas.\n* The patient has a history of falling five months ago while walking up icy stairs, which may have contributed to the pain.\n* The patient has been trying to manage the pain with ice and rest, but it has not improved.\n* The patient reports limited range of motion in his left arm, especially when raising his arm overhead or twisting it.\n* The patient has not noticed any weakness in his left arm.\n* The patient is seeking medical attention today.\n* The patient reports not knowing they needed imaging studies until today.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [
+    {
+      "id": "q1",
+      "gap": "Current medication regimen",
+      "question": "What medications are you currently taking?",
+      "category": "subjective",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "q2",
+      "gap": "Any relevant medical history",
+      "question": "Do you have any pre-existing medical conditions that may be contributing to your symptoms?",
+      "category": "subjective",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "q3",
+      "gap": "Range of motion measurements",
+      "question": "Can you show me the range of motion in your left arm, including flexion, extension, abduction, and rotation?",
+      "category": "objective",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "q4",
+      "gap": "Strength testing",
+      "question": "Can you perform a manual muscle test to assess the strength of your left arm?",
+      "category": "objective",
+      "status": "unresolved",
+      "answer": null
+    }
+  ],
+  "ap_lines": [
+    {
+      "statement_id": "D2N098_V01",
+      "section": "Assessment",
+      "text": "The patient is experiencing chronic pain in his left shoulder and elbow, which may be related to a fall five months ago.",
+      "status": "ok",
+      "p_chain_broken": 0.0004,
+      "components": [
+        {
+          "component": "The patient is experiencing chronic pain in his left shoulder and elbow, which may be related to a fall five months ago.",
+          "feature_ids": [
+            "F2",
+            "F6",
+            "F8",
+            "F10",
+            "F13",
+            "F14",
+            "F15",
+            "F20"
+          ],
+          "p_broken": 0.0004305544208238517,
+          "passages": [
+            {
+              "pid": "5932_3277",
+              "title": "Rotator Cuff Injuries",
+              "section": "How are rotator cuff injuries diagnosed?",
+              "cos": 0.507
+            },
+            {
+              "pid": "6927_1196",
+              "title": "Dislocated Shoulder",
+              "section": "What are the symptoms of a dislocated shoulder?",
+              "cos": 0.522
+            },
+            {
+              "pid": "1251_3654",
+              "title": "Thoracic Outlet Syndrome",
+              "section": "Summary",
+              "cos": 0.503
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N098_V02",
+      "section": "Assessment",
+      "text": "The patient has limited range of motion in his left arm, but no weakness or numbness.",
+      "status": "ok",
+      "p_chain_broken": 0.0,
+      "components": [
+        {
+          "component": "The patient has limited range of motion in his left arm, but no weakness or numbness.",
+          "feature_ids": [
+            "F10",
+            "F11"
+          ],
+          "p_broken": 1.3006965657860128e-05,
+          "passages": [
+            {
+              "pid": "1251_3654",
+              "title": "Thoracic Outlet Syndrome",
+              "section": "Summary",
+              "cos": 0.431
+            },
+            {
+              "pid": "179_612",
+              "title": "Carpal Tunnel Syndrome",
+              "section": "What is carpal tunnel syndrome?",
+              "cos": 0.428
+            },
+            {
+              "pid": "6927_1196",
+              "title": "Dislocated Shoulder",
+              "section": "What are the symptoms of a dislocated shoulder?",
+              "cos": 0.39
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N098_V03",
+      "section": "Plan",
+      "text": "The doctor will refer the patient to a specialist for further evaluation and management.",
+      "status": "flagged",
+      "p_chain_broken": 0.8355,
+      "components": [
+        {
+          "component": "The doctor will refer the patient to a specialist for further evaluation and management.",
+          "feature_ids": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8"
+          ],
+          "p_broken": 0.8354829820468609,
+          "passages": [
+            {
+              "pid": "1618_3641",
+              "title": "Tendinitis",
+              "section": "Summary",
+              "cos": 0.521
+            },
+            {
+              "pid": "6927_1196",
+              "title": "Dislocated Shoulder",
+              "section": "What are the symptoms of a dislocated shoulder?",
+              "cos": 0.534
+            },
+            {
+              "pid": "1251_3654",
+              "title": "Thoracic Outlet Syndrome",
+              "section": "Summary",
+              "cos": 0.508
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N098_V04",
+      "section": "Plan",
+      "text": "The patient will be advised to follow up with the specialist for further treatment and management.",
+      "status": "ok",
+      "p_chain_broken": 0.1192,
+      "components": [
+        {
+          "component": "The patient will be advised to follow up with the specialist for further treatment and management.",
+          "feature_ids": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8"
+          ],
+          "p_broken": 0.119202523068478,
+          "passages": [
+            {
+              "pid": "1618_3641",
+              "title": "Tendinitis",
+              "section": "Summary",
+              "cos": 0.519
+            },
+            {
+              "pid": "6927_1196",
+              "title": "Dislocated Shoulder",
+              "section": "What are the symptoms of a dislocated shoulder?",
+              "cos": 0.543
+            },
+            {
+              "pid": "506_1309",
+              "title": "Elbow Injuries and Disorders",
+              "section": "Summary",
+              "cos": 0.511
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* Patient is a 66-year-old male who has been experiencing constant pain in his left shoulder and left elbow for approximately five months.\n* The pain is described as a constant ache that can get sharper at times, especially with certain movements.\n* The patient reports experiencing decreased ability to lift weight, which has been frustrating and has occurred despite previously regular gym attendance.\n* The patient reports being unable to lift more than 15 or 20 pounds, which is a reduction from their previous ability to lift heavier weights.\n* The patient reports no swelling, redness, numbness, or tingling associated with the pain.\n* The pain is primarily located in the shoulder and elbow, with no radiation to other areas.\n* The patient has a history of falling five months ago while walking up icy stairs, which may have contributed to the pain.\n* The patient has been trying to manage the pain with ice and rest, but it has not improved.\n* The patient reports limited range of motion in his left arm, especially when raising his arm overhead or twisting it.\n* The patient has not noticed any weakness in his left arm.\n* The patient is seeking medical attention today.\n* The patient reports not knowing they needed imaging studies until today.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient is experiencing chronic pain in his left shoulder and elbow, which may be related to a fall five months ago.",
+      "The patient has limited range of motion in his left arm, but no weakness or numbness."
+    ],
+    "plan": [
+      "The patient will be advised to follow up with the specialist for further treatment and management."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Doctor",
+      "text": "Hello. Could you tell me your age and gender, and what brings you in today?",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 66 years old, and I'm a male. I've been having constant pain in my left shoulder and left elbow for about five months now. It's been pretty bad at times, and it's been really frustrating because I used to go to the gym regularly, but I haven't been able to lift much weight anymore.",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Can you describe the nature of the pain in your left shoulder and elbow? For example, is it sharp, dull, or throbbing? Are there any associated symptoms such as swelling, redness, numbness, or tingling? Does the pain radiate to other areas?",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The pain is more of a constant ache, but it can get sharper sometimes, especially when I move my arm certain ways. It doesn't feel like it's swelling or red, and there's no tingling or numbness. It's mostly in the shoulder and elbow, and it doesn't really go anywhere else. It's just been really persistent.",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any prior trauma, repetitive strain, or injuries to your left shoulder or elbow?",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Yes, I fell five months ago while walking up some icy stairs. I stepped wrong, my feet slipped, and I fell on my left side. It seemed like my shoulder and wrist took the brunt of the fall. The pain has been there ever since.",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies or consultations with a specialist for this condition?",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging studies or consultations with a specialist yet. I've been trying to manage it with some ice and rest, but it's still been pretty painful and limiting for me. That's why I'm here today.",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the specific movements or activities that make the pain worse, and have you noticed any weakness or limited range of motion in your left arm?",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The pain gets worse when I try to lift things, especially weights at the gym. I haven't been able to lift more than 15 or 20 pounds, which is frustrating because I used to do that regularly. I also notice that my range of motion is limited, especially when I try to raise my arm overhead or twist it. I haven't noticed any weakness, but it's definitely harder to move my arm the way I used to.",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the specific movements that exacerbate the pain and whether there is any associated clicking, popping, or locking in the shoulder or elbow?",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The pain gets worse when I lift things, especially weights at the gym. I haven't been able to lift more than 15 or 20 pounds, which is frustrating because I used to do that regularly. I also notice that my range of motion is limited, especially when I try to raise my arm overhead or twist it. I haven't noticed any weakness, but it's definitely harder to move my arm the way I used to.",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any clicking, popping, or locking sensations in your left shoulder or elbow during movement?",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any clicking, popping, or locking in my shoulder or elbow when I move them. It's just a constant pain that gets worse with certain movements, especially lifting or raising my arm.",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies such as X-rays or MRI for your left shoulder and elbow pain? If so, please provide the results.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging studies like X-rays or MRI for my shoulder or elbow pain. I haven't been to a specialist yet, and I didn't know I needed that until today. I just kept trying to manage it with ice and rest, but it hasn't gotten better.",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any recent changes in the pattern or intensity of your pain, or any new symptoms such as weakness, swelling, or tingling in your left arm or hand?",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any recent changes in the pattern or intensity of my pain, and I haven't had any new symptoms like weakness, swelling, or tingling in my left arm or hand. It's been pretty consistent—just constant pain in my shoulder and elbow, especially when I try to lift or move my arm.",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any recent trauma or repetitive strain to the left shoulder or elbow that could contribute to the pain?",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Yes, I fell five months ago on some icy stairs, and I landed on my left side. It was pretty hard, and I think that's what caused the pain in my shoulder and elbow. I've been trying to keep up with my routine at the gym, but it's been tough because the pain gets worse when I lift things.",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any recent changes in the pattern or intensity of your pain, or any new symptoms such as weakness, swelling, or tingling in your left arm or hand?",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any recent changes in the pattern or intensity of my pain, and I haven't had any new symptoms like weakness, swelling, or tingling in my left arm or hand. It's been pretty consistent—just constant pain in my shoulder and elbow, especially when I try to lift or move my arm.",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any imaging studies such as X-rays, MRI, or ultrasound for your left shoulder and elbow? If so, could you provide the results or details of those examinations?",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any imaging studies like X-rays, MRI, or ultrasound for my shoulder or elbow. I didn't know I needed that until today. I just kept trying to manage it with ice and rest, but it hasn't gotten better.",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any recent episodes of shoulder or elbow instability, such as the arm giving way or feeling loose during physical activity?",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any episodes where my shoulder or elbow felt unstable or like my arm was giving way. It's been pretty steady, just painful, especially when I try to lift or move my arm. I've been careful not to push through the pain, but it's been frustrating.",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any recent changes in the pattern or intensity of your pain, or any new symptoms such as weakness, swelling, or tingling in your left arm or hand?",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any recent changes in the pattern or intensity of my pain, and I haven't had any new symptoms like weakness, swelling, or tingling in my left arm or hand. It's been pretty consistent—just constant pain in my shoulder and elbow, especially when I try to lift or move my arm.",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any recent changes in the pattern or intensity of your pain, or any new symptoms such as weakness, swelling, or tingling in your left arm or hand?",
+      "tid": "T29"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't noticed any recent changes in the pattern or intensity of my pain, and I haven't had any new symptoms like weakness, swelling, or tingling in my left arm or hand. It's been pretty consistent—just constant pain in my shoulder and elbow, especially when I try to lift or move my arm.",
+      "tid": "T30"
+    }
+  ]
+}

@@ -1,0 +1,437 @@
+{
+  "case_id": "D2N139",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test2",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient has palpitations. The patient has high blood pressure.\n* He was in the emergency room a few months ago and has been trying to manage his blood pressure with medication and lifestyle changes.\n* He is currently taking Benicar HCT (40-25) and amlodipine (10 mg) daily.\n* He has been monitoring his blood pressure at home and reports it to be around 146-155 mmHg.\n* He has a family history of hypertension, but no specific information about heart disease or endocrine disorders.\n* He has not experienced any new or worsening symptoms since his last visit.\n* He has not changed his medication or exercise routine.\n* The patient is willing to undergo thyroid function tests or imaging studies if deemed necessary.\n* The patient reports that the provider will discuss the need for cardiac testing with them.\n* The patient agrees to discuss the need for an electrocardiogram (ECG) or Holter monitor test with the referring provider.\n* The patient reports attempting to reduce salt intake and engaging in regular treadmill walking as a form of exercise.\n* The patient reports experiencing an episode of palpitations in March, with no recurrence since then.\n* The patient states that the palpitations were triggered by being stressed, having a lot of coffee, and skipping breakfast.\n* The patient states that the palpitations were more likely a panic attack, with no other symptoms present.\n* The patient reports that the palpitations did not last long and were not accompanied by chest pain, dizziness, or shortness of breath.\n* The patient denies having undergone any cardiac testing, such as an ECG or Holter monitor, in the past.\n* The patient denies having had any recent blood tests for thyroid function or catecholamines.",
+    "objective": "* The patient did not feel any pain when the doctor pressed on the ankles or feet, and there was no swelling."
+  },
+  "open_questions": [
+    {
+      "id": "q1",
+      "gap": "Family history of heart disease",
+      "question": "What is the patient's family history of heart disease?",
+      "category": "subjective",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "q2",
+      "gap": "Duration of palpitations",
+      "question": "How long did the patient's palpitations last?",
+      "category": "subjective",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "q3",
+      "gap": "Associated symptoms with palpitations",
+      "question": "Were there any other symptoms associated with the patient's palpitations?",
+      "category": "subjective",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "q4",
+      "gap": "Cardiac testing results",
+      "question": "Have the patient had any previous cardiac testing, such as an ECG or Holter monitor?",
+      "category": "objective",
+      "status": "unresolved",
+      "answer": null
+    }
+  ],
+  "ap_lines": [
+    {
+      "statement_id": "D2N139_V01",
+      "section": "Assessment",
+      "text": "The patient has a history of palpitations, which he attributes to a panic attack, and is currently being managed with medication and lifestyle changes.",
+      "status": "ok",
+      "p_chain_broken": 0.0013,
+      "components": [
+        {
+          "component": "The patient has a history of palpitations, which he attributes to a panic attack",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F16",
+            "F18"
+          ],
+          "p_broken": 0.0002611882237733148,
+          "passages": [
+            {
+              "pid": "601_2846",
+              "title": "Panic Disorder",
+              "section": "What are the symptoms of panic disorder?",
+              "cos": 0.577
+            },
+            {
+              "pid": "5_1739",
+              "title": "Heart Attack",
+              "section": "What are the symptoms of a heart attack?",
+              "cos": 0.475
+            },
+            {
+              "pid": "147_229",
+              "title": "Arrhythmia",
+              "section": "What are the symptoms of an arrhythmia?",
+              "cos": 0.52
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient is currently being managed with medication and lifestyle changes",
+          "feature_ids": [
+            "F8",
+            "F10",
+            "F11",
+            "F13",
+            "F16",
+            "F17",
+            "F18"
+          ],
+          "p_broken": 0.001325012181960704,
+          "passages": [
+            {
+              "pid": "3634_3138",
+              "title": "Pulmonary Hypertension",
+              "section": "How is pulmonary hypertension diagnosed?",
+              "cos": 0.388
+            },
+            {
+              "pid": "147_230",
+              "title": "Arrhythmia",
+              "section": "How is an arrhythmia diagnosed?",
+              "cos": 0.4
+            },
+            {
+              "pid": "3634_3139",
+              "title": "Pulmonary Hypertension",
+              "section": "What are the treatments for pulmonary hypertension?",
+              "cos": 0.354
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N139_V02",
+      "section": "Assessment",
+      "text": "He has a family history of hypertension, but no specific information about heart disease or endocrine disorders.",
+      "status": "ok",
+      "p_chain_broken": 0.0001,
+      "components": [
+        {
+          "component": "He has a family history of hypertension, but no specific information about heart disease or endocrine disorders.",
+          "feature_ids": [
+            "F11"
+          ],
+          "p_broken": 6.605165651819389e-05,
+          "passages": [
+            {
+              "pid": "277_1758",
+              "title": "Heart Diseases",
+              "section": "How are heart diseases diagnosed?",
+              "cos": 0.443
+            },
+            {
+              "pid": "3634_3138",
+              "title": "Pulmonary Hypertension",
+              "section": "How is pulmonary hypertension diagnosed?",
+              "cos": 0.379
+            },
+            {
+              "pid": "3634_3133",
+              "title": "Pulmonary Hypertension",
+              "section": "What causes pulmonary hypertension?",
+              "cos": 0.377
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N139_V03",
+      "section": "Plan",
+      "text": "The patient will continue to monitor his blood pressure at home and report any changes to his healthcare provider.",
+      "status": "ok",
+      "p_chain_broken": 0.0759,
+      "components": [
+        {
+          "component": "The patient will continue to monitor his blood pressure at home and report any changes to his healthcare provider.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.07585779768872628,
+          "passages": [
+            {
+              "pid": "5400_284",
+              "title": "Atherosclerosis",
+              "section": "What are the symptoms of atherosclerosis?",
+              "cos": 0.368
+            },
+            {
+              "pid": "6450_2067",
+              "title": "How to Prevent High Blood Pressure",
+              "section": "How can I prevent high blood pressure?",
+              "cos": 0.355
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N139_V04",
+      "section": "Plan",
+      "text": "The patient will discuss the possibility of cardiac testing, such as an ECG or Holter monitor, with his healthcare provider.",
+      "status": "ok",
+      "p_chain_broken": 0.0041,
+      "components": [
+        {
+          "component": "The patient will discuss the possibility of cardiac testing, such as an ECG or Holter monitor, with his healthcare provider.",
+          "feature_ids": [
+            "F2",
+            "F4",
+            "F6",
+            "F14",
+            "F16",
+            "F17",
+            "F18"
+          ],
+          "p_broken": 0.004070105753435708,
+          "passages": [
+            {
+              "pid": "147_229",
+              "title": "Arrhythmia",
+              "section": "What are the symptoms of an arrhythmia?",
+              "cos": 0.519
+            },
+            {
+              "pid": "3634_3138",
+              "title": "Pulmonary Hypertension",
+              "section": "How is pulmonary hypertension diagnosed?",
+              "cos": 0.511
+            },
+            {
+              "pid": "6452_1782",
+              "title": "Heart Health Tests",
+              "section": "Electrocardiogram (EKG), (ECG)",
+              "cos": 0.51
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N139_V05",
+      "section": "Plan",
+      "text": "The patient will discuss the possibility of thyroid function tests or imaging studies with his healthcare provider.",
+      "status": "ok",
+      "p_chain_broken": 0.0331,
+      "components": [
+        {
+          "component": "The patient will discuss the possibility of thyroid function tests or imaging studies with his healthcare provider.",
+          "feature_ids": [
+            "F1",
+            "F4"
+          ],
+          "p_broken": 0.03308571429378659,
+          "passages": [
+            {
+              "pid": "6371_3668",
+              "title": "Thyroid Tests",
+              "section": "Summary",
+              "cos": 0.467
+            },
+            {
+              "pid": "6177_2096",
+              "title": "Hyperthyroidism",
+              "section": "How is hyperthyroidism diagnosed?",
+              "cos": 0.487
+            },
+            {
+              "pid": "6175_2116",
+              "title": "Hypothyroidism",
+              "section": "How is hypothyroidism diagnosed?",
+              "cos": 0.492
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient has palpitations. The patient has high blood pressure.\n* He was in the emergency room a few months ago and has been trying to manage his blood pressure with medication and lifestyle changes.\n* He is currently taking Benicar HCT (40-25) and amlodipine (10 mg) daily.\n* He has been monitoring his blood pressure at home and reports it to be around 146-155 mmHg.\n* He has a family history of hypertension, but no specific information about heart disease or endocrine disorders.\n* He has not experienced any new or worsening symptoms since his last visit.\n* He has not changed his medication or exercise routine.\n* The patient is willing to undergo thyroid function tests or imaging studies if deemed necessary.\n* The patient reports that the provider will discuss the need for cardiac testing with them.\n* The patient agrees to discuss the need for an electrocardiogram (ECG) or Holter monitor test with the referring provider.\n* The patient reports attempting to reduce salt intake and engaging in regular treadmill walking as a form of exercise.\n* The patient reports experiencing an episode of palpitations in March, with no recurrence since then.\n* The patient states that the palpitations were triggered by being stressed, having a lot of coffee, and skipping breakfast.\n* The patient states that the palpitations were more likely a panic attack, with no other symptoms present.\n* The patient reports that the palpitations did not last long and were not accompanied by chest pain, dizziness, or shortness of breath.\n* The patient denies having undergone any cardiac testing, such as an ECG or Holter monitor, in the past.\n* The patient denies having had any recent blood tests for thyroid function or catecholamines.",
+    "objective": "* The patient did not feel any pain when the doctor pressed on the ankles or feet, and there was no swelling.",
+    "assessment": [
+      "The patient has a history of palpitations, which he attributes to a panic attack, and is currently being managed with medication and lifestyle changes.",
+      "He has a family history of hypertension, but no specific information about heart disease or endocrine disorders."
+    ],
+    "plan": [
+      "The patient will continue to monitor his blood pressure at home and report any changes to his healthcare provider.",
+      "The patient will discuss the possibility of cardiac testing, such as an ECG or Holter monitor, with his healthcare provider.",
+      "The patient will discuss the possibility of thyroid function tests or imaging studies with his healthcare provider."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 49 years old, and I'm here because I've been having issues with high blood pressure and some palpitations. I was in the emergency room a few months back, and I've been trying to manage it with medication and lifestyle changes.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the duration and frequency of your palpitations, any associated symptoms such as chest pain, dizziness, or shortness of breath, and provide details about your current high blood pressure medications, dosages, and lifestyle changes you've implemented?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The palpitations happened once, back in March, and I didn't feel them again after that. I was pretty stressed that day, had a lot of coffee, and skipped breakfast, so I think it was more of a panic attack. As for my blood pressure meds, I'm on this combo pill called Benicar HCT, which is 40-25, and I also take amlodipine 10 mg daily. I check my blood pressure every morning, and it's been around 146 to 155. I'm trying to cut back on salt and I walk on the treadmill when I can.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide details about your family history, specifically if any close relatives have been diagnosed with hypertension, heart disease, or endocrine disorders such as hyperthyroidism or pheochromocytoma?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Yeah, a lot of my family has high blood pressure. I don't know about heart disease specifically, but I do know a few relatives had issues with their blood pressure too. I don't think anyone mentioned anything about thyroid problems or anything like that.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any new or worsening symptoms such as chest pain, dizziness, shortness of breath, or syncope since your last visit? Have you had any recent changes in your medication or exercise routine?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any new or worsening symptoms since my last visit. I haven't changed my medication or exercise routine either. I still walk on the treadmill when I can and keep checking my blood pressure every morning.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the physical examination findings, including your vital signs, heart sounds, and any other relevant observations?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "My blood pressure has been running around 146 to 155 every morning when I check it. The doctor listened to my heart and lungs and said they sounded good. I didn't feel any pain when he pressed on my ankles or feet, and there was no swelling. I'm still on the same medications, Benicar HCT and amlodipine, and I'm trying to cut back on salt and walk more.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the palpitations in more detail? Specifically, when they occur (e.g., at rest, during activity), how long they last, whether they are regular or irregular, and if they are associated with any other symptoms such as chest pain, dizziness, shortness of breath, or sweating?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The palpitations happened once, back in March, and I didn't feel them again after that. I was pretty stressed that day, had a lot of coffee, and skipped breakfast, so I think it was more of a panic attack. They didn't last long, and I didn't have any chest pain, dizziness, or shortness of breath with them.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any recent blood tests, such as thyroid function tests (TSH, free T4) or a 24-hour urine collection for catecholamines, to rule out hyperthyroidism or pheochromocytoma?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any recent blood tests for thyroid function or catecholamines. The last time I had a blood test was a few weeks ago, and it was just to check my potassium level, which was 4.0. I didn't get any other tests done since then.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe the nature, frequency, and any associated symptoms of your palpitations, such as chest discomfort, dizziness, or syncope? Have you noticed any specific triggers or patterns?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The palpitations happened once, back in March, and I didn't feel them again after that. I was pretty stressed that day, had a lot of coffee, and skipped breakfast, so I think it was more of a panic attack. They didn't last long, and I didn't have any chest pain, dizziness, or shortness of breath with them.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone an electrocardiogram (ECG) or Holter monitor test to evaluate for cardiac arrhythmias, especially given the history of palpitations and hypertension?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had an ECG or a Holter monitor test yet. The doctor did listen to my heart during the exam and said it sounded good, but I don't think they did any specific tests for arrhythmias. I'll talk to them about it if they think it's needed.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any episodes of chest pain, dizziness, syncope, or shortness of breath during or after the palpitations?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any chest pain, dizziness, syncope, or shortness of breath during or after the palpitations. They happened once in March, and I didn't feel them again after that. I think it was more of a panic attack, and I didn't have any other symptoms with it.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any cardiac testing, such as an ECG or Holter monitor, in the past? If so, what were the results?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any cardiac testing like an ECG or Holter monitor in the past. The doctor did listen to my heart during the exam and said it sounded good, but I don't think they did any specific tests for arrhythmias. I'll talk to them about it if they think it's needed.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any thyroid function tests or imaging studies (e.g., thyroid ultrasound) performed in the past? If so, what were the results?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember having any thyroid function tests or imaging studies like a thyroid ultrasound in the past. The only blood test I had recently was for my potassium level, which was 4.0. I wasn't told anything about my thyroid function during my last visit.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any cardiac testing, such as an ECG or Holter monitor, in the past?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any cardiac testing like an ECG or Holter monitor in the past. The doctor did listen to my heart during the exam and said it sounded good, but I don't think they did any specific tests for arrhythmias. I'll talk to them about it if they think it's needed.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any thyroid function tests or imaging studies (e.g., thyroid ultrasound) in the past? If not, should these be ordered to evaluate for thyroid dysfunction?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't remember having any thyroid function tests or imaging studies like a thyroid ultrasound in the past. The only blood test I had recently was for my potassium level, which was 4.0. I wasn't told anything about my thyroid function during my last visit. If it's needed, I'm okay with having those tests done.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any cardiac testing, such as an ECG or Holter monitor, in the past?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any cardiac testing like an ECG or Holter monitor in the past. The doctor did listen to my heart during the exam and said it sounded good, but I don't think they did any specific tests for arrhythmias. I'll talk to them about it if they think it's needed.",
+      "tid": "T29"
+    }
+  ]
+}

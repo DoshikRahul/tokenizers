@@ -1,0 +1,425 @@
+{
+  "case_id": "D2N074",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "dev",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports that the visual field testing is scheduled before surgery, but the exact date is unknown.\n* The patient reports that the doctor described the pituitary mass as significant, pressing on the optic chiasm, but does not know the exact dimensions.\n* The patient reports not knowing the exact dimensions of the pituitary mass as measured on the MRI.\n* The patient reports that the pituitary mass is significant enough to cause vision issues, but the exact size is unknown.\n* Patient is a 52-year-old male who has been experiencing headaches for a few months\n* Headaches are located behind his eyes and feel like a dull, nagging ache\n* Headaches have been getting worse over time, starting at a 3 out of 10 and now at a 6 out of 10\n* Headaches tend to be worse in the morning and last a few hours at a time\n* Patient has been bumping into door frames, which he now knows is due to vision loss\n* Patient has not experienced double vision, balance issues, or changes in sense of smell",
+    "objective": "* The MRI was reviewed, but specific measurements weren't mentioned to me.\n* The patient hasn't had any visual field testing yet, but has undergone blood tests for pituitary hormones, with a low TSH level.\n* The patient's pituitary mass is significant enough to be pressing on the optic chiasm."
+  },
+  "open_questions": [
+    {
+      "id": "q1",
+      "gap": "Exact size and dimensions of the pituitary mass as measured on the MRI",
+      "question": "What are the exact size and dimensions of the pituitary mass as measured on the MRI?",
+      "category": "objective",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "q2",
+      "gap": "Results of visual field testing",
+      "question": "Have you received the results of the visual field testing?",
+      "category": "objective",
+      "status": "unresolved",
+      "answer": null
+    },
+    {
+      "id": "q3",
+      "gap": "Any changes in visual acuity or color vision since the pituitary mass was discovered",
+      "question": "Have you noticed any changes in your visual acuity or color vision since the pituitary mass was discovered?",
+      "category": "subjective",
+      "status": "unresolved",
+      "answer": null
+    }
+  ],
+  "ap_lines": [
+    {
+      "statement_id": "D2N074_V01",
+      "section": "Assessment",
+      "text": "The patient has a pituitary mass pressing on the optic chiasm, which is causing vision loss and headaches",
+      "status": "ok",
+      "p_chain_broken": 0.0006,
+      "components": [
+        {
+          "component": "The patient has a pituitary mass pressing on the optic chiasm",
+          "feature_ids": [
+            "F3",
+            "F4"
+          ],
+          "p_broken": 0.0005527727506600333,
+          "passages": [
+            {
+              "pid": "5328_2925",
+              "title": "Pituitary Tumors",
+              "section": "Summary",
+              "cos": 0.453
+            },
+            {
+              "pid": "362_2924",
+              "title": "Pituitary Disorders",
+              "section": "Summary",
+              "cos": 0.426
+            },
+            {
+              "pid": "6427_2750",
+              "title": "Optic Nerve Disorders",
+              "section": "Summary",
+              "cos": 0.362
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "which is causing vision loss and headaches",
+          "feature_ids": [
+            "F4",
+            "F12",
+            "F13",
+            "F14",
+            "F2",
+            "F16",
+            "F1",
+            "F15"
+          ],
+          "p_broken": 0.0004305528298645719,
+          "passages": [
+            {
+              "pid": "5328_2925",
+              "title": "Pituitary Tumors",
+              "section": "Summary",
+              "cos": 0.56
+            },
+            {
+              "pid": "362_2924",
+              "title": "Pituitary Disorders",
+              "section": "Summary",
+              "cos": 0.475
+            },
+            {
+              "pid": "273_1683",
+              "title": "Headache",
+              "section": "Summary",
+              "cos": 0.406
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N074_V02",
+      "section": "Assessment",
+      "text": "The patient has bitemporal hemianopia, which was not previously known",
+      "status": "ok",
+      "p_chain_broken": 0.0012,
+      "components": [
+        {
+          "component": "The patient has bitemporal hemianopia, which was not previously known",
+          "feature_ids": [
+            "F12"
+          ],
+          "p_broken": 0.0011694956376882516,
+          "passages": [
+            {
+              "pid": "3157_2532",
+              "title": "Migraine",
+              "section": "How are migraines diagnosed?",
+              "cos": 0.404
+            },
+            {
+              "pid": "1686_1855",
+              "title": "Hepatitis A",
+              "section": "How is hepatitis A diagnosed?",
+              "cos": 0.367
+            },
+            {
+              "pid": "298_2163",
+              "title": "Infectious Mononucleosis",
+              "section": "How is infectious mononucleosis (mono) diagnosed?",
+              "cos": 0.363
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N074_V03",
+      "section": "Assessment",
+      "text": "The patient's TSH was low, but other pituitary hormone levels were normal",
+      "status": "ok",
+      "p_chain_broken": 0.0006,
+      "components": [
+        {
+          "component": "The patient's TSH was low",
+          "feature_ids": [
+            "F11"
+          ],
+          "p_broken": 2.7535195460834312e-05,
+          "passages": [
+            {
+              "pid": "6371_3668",
+              "title": "Thyroid Tests",
+              "section": "Summary",
+              "cos": 0.513
+            },
+            {
+              "pid": "6175_2116",
+              "title": "Hypothyroidism",
+              "section": "How is hypothyroidism diagnosed?",
+              "cos": 0.542
+            },
+            {
+              "pid": "6177_2096",
+              "title": "Hyperthyroidism",
+              "section": "How is hyperthyroidism diagnosed?",
+              "cos": 0.516
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "other pituitary hormone levels were normal",
+          "feature_ids": [
+            "F6",
+            "F11"
+          ],
+          "p_broken": 0.0005527724884130486,
+          "passages": [
+            {
+              "pid": "6371_3668",
+              "title": "Thyroid Tests",
+              "section": "Summary",
+              "cos": 0.505
+            },
+            {
+              "pid": "1499_2000",
+              "title": "Hormones",
+              "section": "Summary",
+              "cos": 0.495
+            },
+            {
+              "pid": "4318_1005",
+              "title": "Cushing Syndrome",
+              "section": "Causes of endogenous Cushing syndrome may include:",
+              "cos": 0.439
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N074_V04",
+      "section": "Plan",
+      "text": "Visual field testing is scheduled before surgery",
+      "status": "ok",
+      "p_chain_broken": 0.0028,
+      "components": [
+        {
+          "component": "Visual field testing is scheduled before surgery",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F7",
+            "F12",
+            "F13",
+            "F14",
+            "F16"
+          ],
+          "p_broken": 0.0028009056401206134,
+          "passages": [
+            {
+              "pid": "5328_2925",
+              "title": "Pituitary Tumors",
+              "section": "Summary",
+              "cos": 0.474
+            },
+            {
+              "pid": "273_1683",
+              "title": "Headache",
+              "section": "Summary",
+              "cos": 0.452
+            },
+            {
+              "pid": "42_1612",
+              "title": "Glaucoma",
+              "section": "How is glaucoma diagnosed?",
+              "cos": 0.399
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports that the visual field testing is scheduled before surgery, but the exact date is unknown.\n* The patient reports that the doctor described the pituitary mass as significant, pressing on the optic chiasm, but does not know the exact dimensions.\n* The patient reports not knowing the exact dimensions of the pituitary mass as measured on the MRI.\n* The patient reports that the pituitary mass is significant enough to cause vision issues, but the exact size is unknown.\n* Patient is a 52-year-old male who has been experiencing headaches for a few months\n* Headaches are located behind his eyes and feel like a dull, nagging ache\n* Headaches have been getting worse over time, starting at a 3 out of 10 and now at a 6 out of 10\n* Headaches tend to be worse in the morning and last a few hours at a time\n* Patient has been bumping into door frames, which he now knows is due to vision loss\n* Patient has not experienced double vision, balance issues, or changes in sense of smell",
+    "objective": "* The MRI was reviewed, but specific measurements weren't mentioned to me.\n* The patient hasn't had any visual field testing yet, but has undergone blood tests for pituitary hormones, with a low TSH level.\n* The patient's pituitary mass is significant enough to be pressing on the optic chiasm.",
+    "assessment": [
+      "The patient has a pituitary mass pressing on the optic chiasm, which is causing vision loss and headaches",
+      "The patient has bitemporal hemianopia, which was not previously known",
+      "The patient's TSH was low, but other pituitary hormone levels were normal"
+    ],
+    "plan": [
+      "Visual field testing is scheduled before surgery"
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Doctor",
+      "text": "Hello. Could you tell me your age and gender, and what brings you in today?",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I'm 52 years old, and I'm a male. I'm here because I've been having these headaches for a few months, and it turns out there's a mass on my pituitary gland.",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "When was the pituitary mass discovered, and what was the size of the mass? Have you experienced any vision changes, hormonal imbalances, or fatigue associated with the mass or headaches?",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The mass was discovered a few months ago when I was being checked for the headaches. I didn't know about it until my doctor told me. I haven't had any hormonal issues or fatigue, but I have been bumping into door frames, which I guess is because of my vision. I didn't realize I had a vision problem until the doctor tested me.",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide details about the size and location of the pituitary mass, as well as any prior medical evaluations or treatments related to it?",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The doctor mentioned that the mass is pressing on the optic chiasm, and it was discovered during an MRI. I don’t know the exact size, but it’s significant enough to cause vision issues. I haven’t had any other treatments for it yet, just the initial tests.",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide the exact size of the pituitary mass as measured on the MRI, and have you undergone any visual field testing or hormonal assessments such as blood tests for pituitary hormones?",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don’t know the exact size of the mass, but the doctor said it’s significant enough to be pressing on the optic chiasm. I haven’t had any visual field testing yet, but I did have blood tests for pituitary hormones, and my TSH was low, though everything else was normal.",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the nature and frequency of your headaches, and have you noticed any other neurological symptoms such as double vision, difficulty with balance, or changes in your sense of smell?",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The headaches are located behind my eyes and feel like a dull, nagging ache. They've been getting worse over the past few months, starting at about a 3 out of 10 and now around a 6 out of 10. They tend to be worse in the morning and last a few hours at a time. I haven’t had double vision or balance issues, but I have been bumping into door frames, which I now know is because of my vision loss. I didn’t notice any changes in my sense of smell, though.",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone visual field testing yet, and if not, when is it planned? Additionally, could you provide the exact size of the pituitary mass as measured on the MRI?",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven’t had the visual field testing yet, but the doctor mentioned it’s going to be scheduled soon, probably before the surgery. As for the size of the mass, I don’t know the exact measurements, but it’s significant enough to be pressing on the optic chiasm.",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm if there are any changes in your vision, such as decreased peripheral vision or difficulty seeing in certain areas? Also, have you noticed any changes in your sense of smell or experienced double vision or balance issues?",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't noticed any changes in my peripheral vision, but I have been bumping into door frames, which the doctor said is because of my vision loss. I didn’t notice any changes in my sense of smell, and I haven’t had double vision or balance issues.",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the exact size and location of the pituitary mass as measured on the MRI, and confirm whether the visual field testing has been completed and what the results were?",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don’t know the exact size of the mass, but the doctor said it’s pressing on the optic chiasm. I haven’t had the visual field testing yet, but it’s going to be scheduled before the surgery.",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm if you have experienced any changes in your peripheral vision, such as difficulty seeing to the sides, and whether you have noticed any changes in your sense of smell or experienced double vision or balance issues?",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven’t noticed any changes in my peripheral vision, but I have been bumping into door frames, which the doctor said is because of my vision loss. I didn’t notice any changes in my sense of smell, and I haven’t had double vision or balance issues.",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm the exact date when the visual field testing is scheduled, and have you noticed any changes in your visual acuity or color vision since the pituitary mass was discovered?",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don’t know the exact date when the visual field testing is scheduled, but the doctor said it would be done before the surgery. I haven’t noticed any changes in my visual acuity or color vision since the mass was discovered.",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you confirm whether the MRI report specifies the size and dimensions of the pituitary mass?",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don’t know the exact size or dimensions of the mass, but the doctor said it’s significant enough to be pressing on the optic chiasm. The MRI was reviewed, but specific measurements weren’t mentioned to me.",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you clarify if you have experienced any changes in your vision, such as difficulty seeing to the sides, or if you have noticed any changes in your sense of smell? Also, have you had any visual field testing done yet, and if so, what were the results?",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven’t noticed any changes in my vision, like difficulty seeing to the sides, and I haven’t had any changes in my sense of smell. I haven’t had the visual field testing yet, but it’s going to be scheduled before the surgery.",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the exact dimensions of the pituitary mass as measured on the MRI, such as its maximum diameter, height, and depth?",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don’t know the exact dimensions of the mass, but the doctor said it’s a significant mass pressing on the optic chiasm. Specific measurements weren’t mentioned to me during our conversation.",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe any changes in your peripheral vision, such as difficulty seeing to the sides, or any issues with visual acuity or color vision?",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven’t noticed any changes in my peripheral vision, like difficulty seeing to the sides, and I haven’t had any issues with visual acuity or color vision. The doctor mentioned I have bitemporal hemianopia, but I didn’t realize it until he tested me during the exam.",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm the exact dimensions of the pituitary mass as measured on the MRI, and let us know if you have received the results of the pending visual field testing?",
+      "tid": "T29"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don’t know the exact dimensions of the mass, and I haven’t received the results of the visual field testing yet. The doctor said it’s a significant mass pressing on the optic chiasm, but specific measurements weren’t given to me.",
+      "tid": "T30"
+    }
+  ]
+}

@@ -1,0 +1,478 @@
+{
+  "case_id": "D2N156",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test2",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports that the chest pain was frightening.\n* The patient reports that the doctors did what they needed to do.\n* The patient reports that the angiogram revealed a blockage that required attention, but the patient was not provided with detailed results about it.\n* The patient reports not being provided with detailed information regarding the blockage that required stent placement during the angiogram.\n* The patient states that their ejection fraction is reduced to thirty-five percent, and there's some moderate mitral regurgitation.\n* The patient is a 62-year-old female who had a recent heart attack and subsequent stent placement.\n* She reports experiencing chest pain approximately two weeks ago, which was intense and did not improve with rest.\n* The patient has been taking her prescribed medications as directed and has not missed any doses.\n* The patient reports that they have been walking their dog daily, indicating some level of physical activity.\n* She reports swelling in her right leg, which is pitting and does not improve with rest.\n* The patient has been experiencing leg swelling since her hospitalization and has been using pillows to sleep comfortably at night.\n* The patient reports feeling the need to be cautious and not push themselves too hard.\n* She reports no shortness of breath or dizziness with the chest pain.",
+    "objective": "* The patient states that they do not have the results of recent echocardiograms or blood tests, but were informed during their last visit that their ejection fraction is reduced to thirty-five percent, with moderate mitral regurgitation noted.\n* The patient does not have the details of any recent blood tests, including BNP or renal function tests."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N156_V01",
+      "section": "Assessment",
+      "text": "The patient has a history of heart disease, with a recent heart attack and stent placement.",
+      "status": "ok",
+      "p_chain_broken": 0.0076,
+      "components": [
+        {
+          "component": "The patient has a history of heart disease",
+          "feature_ids": [
+            "F2",
+            "F9",
+            "F10",
+            "F11"
+          ],
+          "p_broken": 0.0015011724520602799,
+          "passages": [
+            {
+              "pid": "3167_150",
+              "title": "Angioplasty",
+              "section": "What happens during angioplasty?",
+              "cos": 0.514
+            },
+            {
+              "pid": "6452_1780",
+              "title": "Heart Health Tests",
+              "section": "Coronary Angiography",
+              "cos": 0.475
+            },
+            {
+              "pid": "4063_611",
+              "title": "Carotid Artery Disease",
+              "section": "Summary",
+              "cos": 0.43
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient has a recent heart attack",
+          "feature_ids": [
+            "F2",
+            "F3",
+            "F4",
+            "F11"
+          ],
+          "p_broken": 0.007577194464386668,
+          "passages": [
+            {
+              "pid": "1276_954",
+              "title": "Coronary Artery Disease",
+              "section": "What are symptoms of coronary artery disease?",
+              "cos": 0.515
+            },
+            {
+              "pid": "4212_1748",
+              "title": "Heart Disease in Women",
+              "section": "What are the symptoms of heart disease and heart attack in women?",
+              "cos": 0.49
+            },
+            {
+              "pid": "4744_694",
+              "title": "Chest Pain",
+              "section": "Summary",
+              "cos": 0.539
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient has stent placement",
+          "feature_ids": [
+            "F2",
+            "F10",
+            "F11"
+          ],
+          "p_broken": 8.481038425805914e-05,
+          "passages": [
+            {
+              "pid": "3167_150",
+              "title": "Angioplasty",
+              "section": "What happens during angioplasty?",
+              "cos": 0.516
+            },
+            {
+              "pid": "4063_611",
+              "title": "Carotid Artery Disease",
+              "section": "Summary",
+              "cos": 0.438
+            },
+            {
+              "pid": "6452_1780",
+              "title": "Heart Health Tests",
+              "section": "Coronary Angiography",
+              "cos": 0.466
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N156_V02",
+      "section": "Assessment",
+      "text": "The patient is experiencing chest pain and leg swelling, which may be related to her heart condition.",
+      "status": "ok",
+      "p_chain_broken": 0.0067,
+      "components": [
+        {
+          "component": "The patient is experiencing chest pain and leg swelling, which may be related to her heart condition.",
+          "feature_ids": [
+            "F3",
+            "F4",
+            "F6",
+            "F7",
+            "F9",
+            "F11",
+            "F13"
+          ],
+          "p_broken": 0.006692811806594561,
+          "passages": [
+            {
+              "pid": "1276_954",
+              "title": "Coronary Artery Disease",
+              "section": "What are symptoms of coronary artery disease?",
+              "cos": 0.488
+            },
+            {
+              "pid": "4744_694",
+              "title": "Chest Pain",
+              "section": "Summary",
+              "cos": 0.46
+            },
+            {
+              "pid": "4083_2891",
+              "title": "Peripheral Arterial Disease",
+              "section": "Summary",
+              "cos": 0.448
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N156_V03",
+      "section": "Plan",
+      "text": "The patient will need to follow up with her primary care physician to obtain the results of her recent echocardiogram and blood tests, including troponin levels, BNP, and renal function tests.",
+      "status": "flagged",
+      "p_chain_broken": 0.3486,
+      "components": [
+        {
+          "component": "The patient will need to follow up with her primary care physician to obtain the results of her recent echocardiogram and blood tests, including troponin levels, BNP, and renal function tests.",
+          "feature_ids": [
+            "F12",
+            "F1",
+            "F9",
+            "F10",
+            "F11",
+            "F13",
+            "F2",
+            "F3"
+          ],
+          "p_broken": 0.34864458036961443,
+          "passages": [
+            {
+              "pid": "4063_611",
+              "title": "Carotid Artery Disease",
+              "section": "Summary",
+              "cos": 0.492
+            },
+            {
+              "pid": "6452_1780",
+              "title": "Heart Health Tests",
+              "section": "Coronary Angiography",
+              "cos": 0.489
+            },
+            {
+              "pid": "3167_150",
+              "title": "Angioplasty",
+              "section": "What happens during angioplasty?",
+              "cos": 0.472
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N156_V04",
+      "section": "Plan",
+      "text": "The patient will need to continue taking her prescribed medications as directed and will need to be monitored for any changes in her condition.",
+      "status": "ok",
+      "p_chain_broken": 0.0022,
+      "components": [
+        {
+          "component": "The patient will need to continue taking her prescribed medications as directed",
+          "feature_ids": [
+            "F8"
+          ],
+          "p_broken": 0.0011694991146342776,
+          "passages": [
+            {
+              "pid": "1706_3064",
+              "title": "Prescription Drug Misuse",
+              "section": "How can I prevent problems with taking prescription drugs?",
+              "cos": 0.456
+            },
+            {
+              "pid": "7127_3291",
+              "title": "Safe Opioid Use",
+              "section": "How can I take my opioid medicine safely?",
+              "cos": 0.393
+            },
+            {
+              "pid": "7109_2731",
+              "title": "Opioid Overdose",
+              "section": "Can an opioid overdose be prevented?",
+              "cos": 0.479
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "The patient will need to be monitored for any changes in her condition",
+          "feature_ids": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F6",
+            "F7",
+            "F9",
+            "F13"
+          ],
+          "p_broken": 0.00218270293437407,
+          "passages": [
+            {
+              "pid": "4744_694",
+              "title": "Chest Pain",
+              "section": "Summary",
+              "cos": 0.433
+            },
+            {
+              "pid": "142_146",
+              "title": "Angina",
+              "section": "Summary",
+              "cos": 0.422
+            },
+            {
+              "pid": "1276_954",
+              "title": "Coronary Artery Disease",
+              "section": "What are symptoms of coronary artery disease?",
+              "cos": 0.401
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N156_V05",
+      "section": "Plan",
+      "text": "The patient will need to be referred to a cardiologist for further evaluation and management of her heart condition.",
+      "status": "flagged",
+      "p_chain_broken": 0.9466,
+      "components": [
+        {
+          "component": "The patient will need to be referred to a cardiologist for further evaluation and management of her heart condition.",
+          "feature_ids": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F6",
+            "F7",
+            "F9",
+            "F10"
+          ],
+          "p_broken": 0.9465964186058429,
+          "passages": [
+            {
+              "pid": "4744_694",
+              "title": "Chest Pain",
+              "section": "Summary",
+              "cos": 0.525
+            },
+            {
+              "pid": "142_146",
+              "title": "Angina",
+              "section": "Summary",
+              "cos": 0.497
+            },
+            {
+              "pid": "1276_954",
+              "title": "Coronary Artery Disease",
+              "section": "What are symptoms of coronary artery disease?",
+              "cos": 0.478
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports that the chest pain was frightening.\n* The patient reports that the doctors did what they needed to do.\n* The patient reports that the angiogram revealed a blockage that required attention, but the patient was not provided with detailed results about it.\n* The patient reports not being provided with detailed information regarding the blockage that required stent placement during the angiogram.\n* The patient states that their ejection fraction is reduced to thirty-five percent, and there's some moderate mitral regurgitation.\n* The patient is a 62-year-old female who had a recent heart attack and subsequent stent placement.\n* She reports experiencing chest pain approximately two weeks ago, which was intense and did not improve with rest.\n* The patient has been taking her prescribed medications as directed and has not missed any doses.\n* The patient reports that they have been walking their dog daily, indicating some level of physical activity.\n* She reports swelling in her right leg, which is pitting and does not improve with rest.\n* The patient has been experiencing leg swelling since her hospitalization and has been using pillows to sleep comfortably at night.\n* The patient reports feeling the need to be cautious and not push themselves too hard.\n* She reports no shortness of breath or dizziness with the chest pain.",
+    "objective": "* The patient states that they do not have the results of recent echocardiograms or blood tests, but were informed during their last visit that their ejection fraction is reduced to thirty-five percent, with moderate mitral regurgitation noted.\n* The patient does not have the details of any recent blood tests, including BNP or renal function tests.",
+    "assessment": [
+      "The patient has a history of heart disease, with a recent heart attack and stent placement.",
+      "The patient is experiencing chest pain and leg swelling, which may be related to her heart condition."
+    ],
+    "plan": [
+      "The patient will need to continue taking her prescribed medications as directed and will need to be monitored for any changes in her condition."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 62 years old and female. I'm here because I had another heart attack recently and they put in another stent. It was really scary, I thought I was doing okay after my last one, but then the chest pain came back and it wouldn't go away.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please tell me when you first started experiencing the chest pain and how it has been progressing since your last stent placement?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I guess it started maybe a couple of weeks ago, and it was just like the last time—really intense, like a crushing pain in my chest. It didn’t go away, so I had to go to the ER. It was really frightening, honestly.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Can you describe any factors that make the chest pain better or worse, such as physical activity, rest, or certain foods? Also, have you been adhering to your prescribed medications since your last stent placement?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The chest pain was really bad, like the last time, and it didn’t get better with rest or anything. I’ve been taking my medications as prescribed, though. I know it’s important, so I haven’t missed any doses.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe any other symptoms you experienced along with the chest pain, such as shortness of breath, dizziness, nausea, or sweating? Also, have you noticed any changes in your activity level or any new symptoms since the chest pain began?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I didn't have any shortness of breath or dizziness with the chest pain, but I did notice my legs have been a little swollen since I came home from the hospital. I’ve been walking my dog every day, though, so I haven’t been completely inactive. I just feel like I need to be careful and not push myself too hard.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the swelling in your legs in more detail, such as when it started, whether it is worse in one leg than the other, and if you have noticed any changes in the swelling over time?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The swelling started after I came home from the hospital, and it's been pretty consistent since then. It's worse in my right leg, and I've noticed it's a bit pitting when I press on it. It doesn't really get better throughout the day, and I've had to use a couple of pillows to sleep more comfortably at night.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide the results of any recent echocardiograms, blood tests (such as troponin levels), or imaging studies (like a chest X-ray or coronary angiogram) that have been performed since the recent heart attack and stent placement?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have the results of any recent echocardiograms or blood tests, but I was told during my last visit that my ejection fraction is reduced to thirty-five percent, and there's some moderate mitral regurgitation. I wasn't given any specific numbers for my troponin levels or other blood tests, but I know I had an angiogram done when they placed the new stent.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide more details about the angiogram results, such as the number and location of stents placed, and whether there were any findings of significant blockages or complications during the procedure?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I was told that they placed another stent in my coronary artery, but I don’t remember the exact number or where it was placed. They said there was a blockage that needed attention, but I wasn’t given any detailed results about it. I just know they acted quickly because of the chest pain.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide the results of your most recent echocardiogram, including ejection fraction, and any other relevant blood tests such as troponin levels, BNP, or renal function tests?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I was told during my last visit that my ejection fraction is reduced to thirty-five percent, and there's some moderate mitral regurgitation. I wasn’t given any specific numbers for my troponin levels or other blood tests, but I know I had an angiogram done when they placed the new stent.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of your most recent echocardiogram, including any specific measurements for the mitral regurgitation and whether there are any other valvular abnormalities? Additionally, have you had any recent blood tests, such as troponin levels, BNP, or renal function tests, and if so, what were the results?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I was told during my last visit that my ejection fraction is reduced to thirty-five percent, and there's some moderate mitral regurgitation. I wasn’t given any specific numbers for my troponin levels or other blood tests, but I know I had an angiogram done when they placed the new stent. I don’t have the details of any recent blood tests like BNP or renal function tests.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide more details about the results of your recent angiogram, including the number and location of stents placed, and whether there were any significant blockages or complications during the procedure?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I was told that they placed another stent in my coronary artery, but I don’t remember the exact number or where it was placed. They said there was a blockage that needed attention, but I wasn’t given any detailed results about it. I just know they acted quickly because of the chest pain.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide the specific number and location of the stents placed during your angiogram, as well as any findings regarding the severity or extent of the blockages that required stent placement?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I was told that they placed another stent in my coronary artery, but I don’t remember the exact number or where it was placed. They said there was a blockage that needed attention, but I wasn’t given any detailed results about it. I just know they acted quickly because of the chest pain.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm if you have had any recent blood tests, such as troponin, BNP, or renal function tests, and if so, what were the results?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don’t have the details of any recent blood tests like troponin, BNP, or renal function tests. I was focused on the chest pain and the stent procedure, so I didn’t ask for the numbers. I trust the doctors did what they needed to do.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of your most recent troponin levels, BNP, and renal function tests, including the dates they were performed?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don’t have the details of any recent blood tests like troponin, BNP, or renal function tests. I was focused on the chest pain and the stent procedure, so I didn’t ask for the numbers. I trust the doctors did what they needed to do.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of your most recent blood tests, including troponin levels, BNP, and renal function tests, along with the dates they were performed?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don’t have the details of any recent blood tests like troponin, BNP, or renal function tests. I was focused on the chest pain and the stent procedure, so I didn’t ask for the numbers. I trust the doctors did what they needed to do.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the details of the angiogram findings, including the number and location of stents placed, the severity and extent of blockages, and any complications during the procedure?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don’t have the specific details about the angiogram findings or the exact number and location of the stents. I was told there was a blockage that needed attention, and they acted quickly because of the chest pain. I wasn’t given any detailed results about it.",
+      "tid": "T29"
+    }
+  ]
+}

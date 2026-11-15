@@ -1,0 +1,258 @@
+{
+  "case_id": "D2N122",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test1",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* Patient is a 38-year-old male who presented with a lung nodule identified on a chest x-ray performed for a cough diagnosed as bronchitis.\n* The nodule is described as a solitary, smooth, and approximately 2-centimeter lesion in the lateral aspect of the right upper lobe.\n* The patient expresses anxiety about the lung nodule and expresses trust in the doctor's ability to help with its evaluation.\n* Patient stopped smoking 7 years ago and has no known risk factors for lung cancer.\n* Patient's mother had breast cancer, but no other family members have had lung cancer.\n* Patient is anxious and concerned about the nodule, hoping it is benign.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation."
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N122_V01",
+      "section": "Assessment",
+      "text": "The patient has a solitary lung nodule in the lateral aspect of the right upper lobe, approximately 2 centimeters in size, described as smooth on a chest x-ray and CT scan.",
+      "status": "ok",
+      "p_chain_broken": 0.0,
+      "components": [
+        {
+          "component": "The patient has a solitary lung nodule in the lateral aspect of the right upper lobe, approximately 2 centimeters in size, described as smooth on a chest x-ray and CT scan.",
+          "feature_ids": [
+            "F4",
+            "F10",
+            "F5",
+            "F11",
+            "F12",
+            "F2",
+            "F9",
+            "F1"
+          ],
+          "p_broken": 2.7535395683962585e-05,
+          "passages": [
+            {
+              "pid": "363_2950",
+              "title": "Pneumonia",
+              "section": "How is pneumonia diagnosed?",
+              "cos": 0.53
+            },
+            {
+              "pid": "1608_790",
+              "title": "Chronic Bronchitis",
+              "section": "How is chronic bronchitis diagnosed?",
+              "cos": 0.431
+            },
+            {
+              "pid": "86_2379",
+              "title": "Lung Cancer",
+              "section": "How is lung cancer diagnosed?",
+              "cos": 0.455
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N122_V02",
+      "section": "Plan",
+      "text": "Further evaluation and imaging studies may be necessary to better characterize the nodule and determine the next steps in the patient's care.",
+      "status": "ok",
+      "p_chain_broken": 0.026,
+      "components": [
+        {
+          "component": "Further evaluation and imaging studies may be necessary to better characterize the nodule and determine the next steps in the patient's care.",
+          "feature_ids": [
+            "F4",
+            "F10",
+            "F11",
+            "F12",
+            "F13"
+          ],
+          "p_broken": 0.025957162416383125,
+          "passages": [
+            {
+              "pid": "363_2950",
+              "title": "Pneumonia",
+              "section": "How is pneumonia diagnosed?",
+              "cos": 0.474
+            },
+            {
+              "pid": "4627_2932",
+              "title": "Pleural Disorders",
+              "section": "Summary",
+              "cos": 0.461
+            },
+            {
+              "pid": "3951_1002",
+              "title": "CT Scans",
+              "section": "What should you expect after a CT scan?",
+              "cos": 0.354
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* Patient is a 38-year-old male who presented with a lung nodule identified on a chest x-ray performed for a cough diagnosed as bronchitis.\n* The nodule is described as a solitary, smooth, and approximately 2-centimeter lesion in the lateral aspect of the right upper lobe.\n* The patient expresses anxiety about the lung nodule and expresses trust in the doctor's ability to help with its evaluation.\n* Patient stopped smoking 7 years ago and has no known risk factors for lung cancer.\n* Patient's mother had breast cancer, but no other family members have had lung cancer.\n* Patient is anxious and concerned about the nodule, hoping it is benign.",
+    "objective": "* No objective clinical measurements, examination findings, or investigation results were documented in the conversation.",
+    "assessment": [
+      "The patient has a solitary lung nodule in the lateral aspect of the right upper lobe, approximately 2 centimeters in size, described as smooth on a chest x-ray and CT scan."
+    ],
+    "plan": [
+      "Further evaluation and imaging studies may be necessary to better characterize the nodule and determine the next steps in the patient's care."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 38 years old and male. I came in because I found out I have a lung nodule after having a chest x-ray for a cough that was diagnosed as bronchitis. It's been really nerve-wracking, to be honest.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide more details about the size, location, and characteristics of the lung nodule identified on your chest x-ray?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I was told it's a solitary nodule, about two centimeters in size, located in the lateral aspect of the right upper lobe. They said it looks smooth, but I don't know much more about it other than what the doctor explained.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you clarify if the chest x-ray was performed recently, and whether there are any known risk factors for lung cancer, such as a history of smoking, occupational exposures, or family history of lung cancer?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I stopped smoking about seven years ago, and I was a smoker before that, but I haven't had any recent exposure to anything else. My mom had breast cancer, but no one else in my family that I know of has had lung cancer.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you clarify if the chest x-ray mentioned any calcification within the nodule or any associated findings such as lymphadenopathy or pleural effusion?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't think they mentioned anything about calcification or other findings like lymphadenopathy or pleural effusion. They just said it was a smooth, solitary nodule in the right upper lobe.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you undergone any further imaging studies, such as a CT scan of the chest, to better characterize the lung nodule?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "Yes, I went for a CT scan that confirmed the nodule, and they referred me here to you. I'm still really nervous about it, but I trust you'll help me figure it out.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide details about the CT scan findings, such as the nodule's size, margins, density, and whether there are any associated findings like lymphadenopathy or pleural effusion?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The CT scan showed a solitary two-centimeter nodule in the lateral aspect of the right upper lobe. It was described as smooth, and there was no mention of any emphysematous disease, lymphadenopathy, or pleural effusion. I was told it looked pretty straightforward, but I’m still really worried about what it could mean.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide details about the nodule's density on the CT scan, such as whether it is solid, ground-glass, or mixed, and whether there are any features such as spiculation, vascular convergence, or pleural retraction that might suggest malignancy?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence. They just said it was smooth and didn't have any signs of emphysematous disease. I'm really hoping it's something benign, but I'm still pretty scared.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Thank you for sharing your concerns. I understand that this can be very worrying. Could you confirm if the CT scan report mentioned anything about the nodule's density (whether it was solid, ground-glass, or mixed) or any features like spiculation, vascular convergence, or pleural retraction? This information is important for further evaluation.",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence. They just said it was smooth and didn't have any signs of emphysematous disease. I'm really hoping it's something benign, but I'm still pretty scared.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Thank you for sharing that. It's understandable to feel concerned. To better assess the nodule, could you confirm if the CT scan mentioned anything about the nodule's density (such as solid, ground-glass, or mixed) or features like spiculation, vascular convergence, or pleural retraction? If not, we may need to discuss further imaging or tests to better characterize the nodule.",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence. They just said it was smooth and didn't have any signs of emphysematous disease. I'm really hoping it's something benign, but I'm still pretty scared.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you clarify the nodule's density (solid, ground-glass, or mixed) and whether it exhibits features such as spiculation, vascular convergence, or pleural retraction on the CT scan?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence. They just said it was smooth and didn't have any signs of emphysematous disease. I'm really hoping it's something benign, but I'm still pretty scared.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you clarify the nodule's density (solid, ground-glass, or mixed) and whether it exhibits features such as spiculation, vascular convergence, or pleural retraction from the CT scan?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence. They just said it was smooth and didn't have any signs of emphysematous disease. I'm really hoping it's something benign, but I'm still pretty scared.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Thank you for sharing that. It's understandable to feel concerned. Could you confirm if the CT scan report mentioned anything about the nodule's density, such as whether it was solid, ground-glass, or mixed? This information will help guide further evaluation.",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence. They just said it was smooth and didn't have any signs of emphysematous disease. I'm really hoping it's something benign, but I'm still pretty scared.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Thank you for sharing that. I understand your concern, and it's completely normal to feel anxious about a lung nodule. To help us better understand the situation, could you let me know if there were any other details mentioned in the CT scan report, such as the nodule's density (whether it was solid, ground-glass, or mixed) or any other features that might have been noted?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence. They just said it was smooth and didn't have any signs of emphysematous disease. I'm really hoping it's something benign, but I'm still pretty scared.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Thank you for sharing your concerns. I understand that this can be very worrying. Could you confirm if the CT scan report mentioned anything about the nodule's density (whether it was solid, ground-glass, or mixed) or if there were any features such as spiculation, vascular convergence, or pleural retraction? This information will help guide the next steps in your care.",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence. They just said it was smooth and didn't have any signs of emphysematous disease. I'm really hoping it's something benign, but I'm still pretty scared.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Thank you for sharing your concerns. I understand that this can be very worrying. Could you confirm if the CT scan report mentioned anything about the nodule's density, such as whether it was solid, ground-glass, or mixed? Also, were there any features like spiculation, vascular convergence, or pleural retraction noted?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't think they mentioned anything about the density or specific features like spiculation or vascular convergence. They just said it was smooth and didn't have any signs of emphysematous disease. I'm really hoping it's something benign, but I'm still pretty scared.",
+      "tid": "T29"
+    }
+  ]
+}

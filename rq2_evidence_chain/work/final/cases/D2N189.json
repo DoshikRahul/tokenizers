@@ -1,0 +1,404 @@
+{
+  "case_id": "D2N189",
+  "rq2_split": "va_test",
+  "rq1_split": "test",
+  "aci_source_split": "test3",
+  "scored": true,
+  "rq2_run": "U4_preap_ref3_link-llm_hf",
+  "threshold": 0.2829525,
+  "so": {
+    "subjective": "* The patient reports that their doctor mentioned the need for a stress test, but it has not yet been scheduled.\n* The patient states that they have not had a stress test yet, so they do not have any results to share.\n* The patient is a 68-year-old female who presented for a follow-up visit after a heart attack and stent placement.\n* The patient reports having not undergone a stress test yet, but is willing to undergo one if deemed necessary to further evaluate her cardiac function.\n* The patient reports feeling better than immediately after the heart attack, but is still taking precautions and following medical advice.\n* The patient reports no known allergies.\n* The patient expresses concern about being on the right track with their recovery and medications.\n* The patient reports taking it easy and not pushing themselves too hard.\n* The patient reports following the plan given by the healthcare provider and monitoring their symptoms.\n* She reports shortness of breath when climbing stairs, which is mild and does not last long.\n* She has not experienced any chest pain since the stent placement.\n* She has not had any dizziness, palpitations, or swelling in her legs or ankles.\n* She is taking Brilinta twice a day, baby aspirin at night, and Crestor 40 mg once a day, as well as Toprol 50 mg once a day.\n* She has not had any recent changes in her medications or dosages.\n* She has not experienced any fatigue, dizziness, or palpitations since her hospital discharge.",
+    "objective": "* Blood pressure: 120/70 mmHg\n* Neck examination: no swelling or unusual sounds\n* Heart examination: slight murmur, clear lungs\n* Wrist examination: no infection or swelling, palpable pulse"
+  },
+  "open_questions": [],
+  "ap_lines": [
+    {
+      "statement_id": "D2N189_V01",
+      "section": "Assessment",
+      "text": "The patient has a history of heart attack and stent placement, with a 50% ejection fraction on echocardiogram.",
+      "status": "ok",
+      "p_chain_broken": 0.0002,
+      "components": [
+        {
+          "component": "The patient has a history of heart attack and stent placement",
+          "feature_ids": [
+            "F2"
+          ],
+          "p_broken": 0.00023050468239859388,
+          "passages": [
+            {
+              "pid": "5_1741",
+              "title": "Heart Attack",
+              "section": "What is the treatment for a heart attack?",
+              "cos": 0.443
+            },
+            {
+              "pid": "5_1734",
+              "title": "Heart Attack",
+              "section": "What is a heart attack?",
+              "cos": 0.423
+            },
+            {
+              "pid": "5_1733",
+              "title": "Heart Attack",
+              "section": "What is a heart attack?",
+              "cos": 0.412
+            }
+          ],
+          "reference_found": true
+        },
+        {
+          "component": "with a 50% ejection fraction on echocardiogram",
+          "feature_ids": [
+            "F18"
+          ],
+          "p_broken": 7.889117755406327e-06,
+          "passages": [],
+          "reference_found": false
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N189_V02",
+      "section": "Assessment",
+      "text": "She is experiencing mild shortness of breath when climbing stairs, which is not severe and does not last long.",
+      "status": "ok",
+      "p_chain_broken": 0.0001,
+      "components": [
+        {
+          "component": "She is experiencing mild shortness of breath when climbing stairs, which is not severe and does not last long.",
+          "feature_ids": [
+            "F8",
+            "F16"
+          ],
+          "p_broken": 6.605162502535867e-05,
+          "passages": [
+            {
+              "pid": "3077_509",
+              "title": "Breathing Problems",
+              "section": "Summary",
+              "cos": 0.532
+            },
+            {
+              "pid": "199_1765",
+              "title": "Heart Failure",
+              "section": "What are the symptoms of heart failure?",
+              "cos": 0.436
+            },
+            {
+              "pid": "27_931",
+              "title": "COPD",
+              "section": "What are the symptoms of COPD?",
+              "cos": 0.446
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N189_V03",
+      "section": "Assessment",
+      "text": "She has not had any new or worsening symptoms since her hospital discharge.",
+      "status": "ok",
+      "p_chain_broken": 0.0002,
+      "components": [
+        {
+          "component": "She has not had any new or worsening symptoms since her hospital discharge.",
+          "feature_ids": [
+            "F9",
+            "F10",
+            "F16",
+            "F17",
+            "F22",
+            "F24",
+            "F25"
+          ],
+          "p_broken": 0.00023050484701582122,
+          "passages": [
+            {
+              "pid": "5400_284",
+              "title": "Atherosclerosis",
+              "section": "What are the symptoms of atherosclerosis?",
+              "cos": 0.483
+            },
+            {
+              "pid": "147_229",
+              "title": "Arrhythmia",
+              "section": "What are the symptoms of an arrhythmia?",
+              "cos": 0.457
+            },
+            {
+              "pid": "279_1799",
+              "title": "Heart Valve Diseases",
+              "section": "What are the symptoms of heart valve diseases?",
+              "cos": 0.469
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N189_V04",
+      "section": "Plan",
+      "text": "The patient will undergo a stress test to further evaluate her cardiac function and the cause of her shortness of breath.",
+      "status": "flagged",
+      "p_chain_broken": 0.4073,
+      "components": [
+        {
+          "component": "The patient will undergo a stress test to further evaluate her cardiac function and the cause of her shortness of breath.",
+          "feature_ids": [
+            "F8",
+            "F16",
+            "F17",
+            "F18",
+            "F19",
+            "F20",
+            "F22",
+            "F25"
+          ],
+          "p_broken": 0.40733247912912146,
+          "passages": [
+            {
+              "pid": "3077_509",
+              "title": "Breathing Problems",
+              "section": "Summary",
+              "cos": 0.52
+            },
+            {
+              "pid": "147_229",
+              "title": "Arrhythmia",
+              "section": "What are the symptoms of an arrhythmia?",
+              "cos": 0.451
+            },
+            {
+              "pid": "5400_284",
+              "title": "Atherosclerosis",
+              "section": "What are the symptoms of atherosclerosis?",
+              "cos": 0.445
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N189_V05",
+      "section": "Plan",
+      "text": "The patient will continue to take her medications as prescribed, including Brilinta, baby aspirin, Crestor, and Toprol.",
+      "status": "ok",
+      "p_chain_broken": 0.0001,
+      "components": [
+        {
+          "component": "The patient will continue to take her medications as prescribed, including Brilinta, baby aspirin, Crestor, and Toprol.",
+          "feature_ids": [
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F9",
+            "F21",
+            "F25"
+          ],
+          "p_broken": 5.144122640538319e-05,
+          "passages": [],
+          "reference_found": false
+        }
+      ]
+    },
+    {
+      "statement_id": "D2N189_V06",
+      "section": "Plan",
+      "text": "The patient will follow up with her doctor in six months for a repeat echocardiogram and to discuss the results of her stress test.",
+      "status": "ok",
+      "p_chain_broken": 0.0017,
+      "components": [
+        {
+          "component": "The patient will follow up with her doctor in six months for a repeat echocardiogram and to discuss the results of her stress test.",
+          "feature_ids": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F18",
+            "F20"
+          ],
+          "p_broken": 0.0017007062778535732,
+          "passages": [
+            {
+              "pid": "6452_1784",
+              "title": "Heart Health Tests",
+              "section": "Stress Testing",
+              "cos": 0.438
+            }
+          ],
+          "reference_found": true
+        }
+      ]
+    }
+  ],
+  "signed_note": {
+    "subjective": "* The patient reports that their doctor mentioned the need for a stress test, but it has not yet been scheduled.\n* The patient states that they have not had a stress test yet, so they do not have any results to share.\n* The patient is a 68-year-old female who presented for a follow-up visit after a heart attack and stent placement.\n* The patient reports having not undergone a stress test yet, but is willing to undergo one if deemed necessary to further evaluate her cardiac function.\n* The patient reports feeling better than immediately after the heart attack, but is still taking precautions and following medical advice.\n* The patient reports no known allergies.\n* The patient expresses concern about being on the right track with their recovery and medications.\n* The patient reports taking it easy and not pushing themselves too hard.\n* The patient reports following the plan given by the healthcare provider and monitoring their symptoms.\n* She reports shortness of breath when climbing stairs, which is mild and does not last long.\n* She has not experienced any chest pain since the stent placement.\n* She has not had any dizziness, palpitations, or swelling in her legs or ankles.\n* She is taking Brilinta twice a day, baby aspirin at night, and Crestor 40 mg once a day, as well as Toprol 50 mg once a day.\n* She has not had any recent changes in her medications or dosages.\n* She has not experienced any fatigue, dizziness, or palpitations since her hospital discharge.",
+    "objective": "* Blood pressure: 120/70 mmHg\n* Neck examination: no swelling or unusual sounds\n* Heart examination: slight murmur, clear lungs\n* Wrist examination: no infection or swelling, palpable pulse",
+    "assessment": [
+      "The patient has a history of heart attack and stent placement, with a 50% ejection fraction on echocardiogram.",
+      "She is experiencing mild shortness of breath when climbing stairs, which is not severe and does not last long.",
+      "She has not had any new or worsening symptoms since her hospital discharge."
+    ],
+    "plan": [
+      "The patient will continue to take her medications as prescribed, including Brilinta, baby aspirin, Crestor, and Toprol.",
+      "The patient will follow up with her doctor in six months for a repeat echocardiogram and to discuss the results of her stress test."
+    ]
+  },
+  "conversation_turns": [
+    {
+      "speaker": "Patient",
+      "text": "I'm 68 years old and female. I came in today for a follow-up after my heart attack and stent placement. I just want to make sure I'm on the right track with my recovery and medications.",
+      "tid": "T1"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please confirm if you have any known allergies or are currently taking any medications, including over-the-counter drugs or supplements?",
+      "tid": "T2"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I don't have any allergies that I'm aware of. As for medications, I'm taking Brilinta twice a day, baby aspirin at night, and I also take Crestor 40 mg once a day. I was also prescribed Toprol 50 mg once a day.",
+      "tid": "T3"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any new or worsening symptoms such as chest pain, shortness of breath, dizziness, or fatigue since your heart attack and stent placement?",
+      "tid": "T4"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I have had some shortness of breath when I go up and down stairs, but I haven't had any chest pain since the stent was placed. I feel better than I did right after the heart attack, but I'm still taking it easy and trying to follow my doctor's advice.",
+      "tid": "T5"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you experienced any dizziness, palpitations, or swelling in your legs or ankles recently?",
+      "tid": "T6"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any dizziness, palpitations, or swelling in my legs or ankles recently. I've been pretty steady since coming home from the hospital, just taking it easy and sticking to my medications. I do feel a little out of breath when I climb stairs, but nothing too bad.",
+      "tid": "T7"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you provide details about your physical examination findings, including vital signs, heart sounds, and any signs of fluid retention?",
+      "tid": "T8"
+    },
+    {
+      "speaker": "Patient",
+      "text": "My blood pressure was about 120/70 when I was in the office, which my doctor said was good. On my neck exam, there was no swelling or unusual sounds, and my heart had a slight murmur, but my lungs were clear. The site where they did the cardiac catheterization on my wrist looks good—no infection or swelling, and I can feel my pulse there. My doctor said everything else seems okay.",
+      "tid": "T9"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please describe the duration and severity of your shortness of breath when climbing stairs? Have you noticed any changes in your activity tolerance or any new or worsening symptoms recently?",
+      "tid": "T10"
+    },
+    {
+      "speaker": "Patient",
+      "text": "The shortness of breath when I climb stairs is mild, and it doesn't last too long. I just feel a little winded, but it goes away once I stop. I haven't noticed any changes in how bad it is, and I haven't had any new symptoms since I came home from the hospital. I'm still taking it easy and not pushing myself too hard.",
+      "tid": "T11"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone an echocardiogram or stress test since her stent placement? If not, would she be willing to undergo these tests to further evaluate her cardiac function and the cause of her shortness of breath?",
+      "tid": "T12"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I was told that I had an echocardiogram while I was in the hospital, and it showed that my heart's pumping function was about fifty percent, which my doctor said was low normal but not bad. I haven't had a stress test yet, but I'm open to doing one if it's needed to check on my heart further.",
+      "tid": "T13"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of the stress test once they are available?",
+      "tid": "T14"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had a stress test yet, so I don't have any results to share. My doctor mentioned that I need to get one done, but it hasn't been scheduled yet. I'm willing to do it if it's needed to check on my heart further.",
+      "tid": "T15"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you please provide the results of the stress test once it is completed?",
+      "tid": "T16"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't had a stress test yet, so I don't have any results to share. My doctor mentioned that I need to get one done, but it hasn't been scheduled yet. I'm willing to do it if it's needed to check on my heart further.",
+      "tid": "T17"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Have you had any recent changes in your medications or dosages? Have you experienced any palpitations, dizziness, or syncope recently?",
+      "tid": "T18"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any recent changes in my medications or dosages. I'm still taking Brilinta twice a day and the baby aspirin at night, just like I was told. I haven't had any palpitations, dizziness, or fainting spells since I came home from the hospital. I feel pretty stable overall.",
+      "tid": "T19"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone any recent echocardiogram or other cardiac imaging studies beyond the one mentioned (50% ejection fraction)?",
+      "tid": "T20"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had any other echocardiogram or cardiac imaging studies since the one done in the hospital. My doctor did mention that they would do another one in about six months, but that hasn't happened yet. I'm just following the plan they gave me and keeping an eye on how I feel.",
+      "tid": "T21"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Could you describe any other symptoms you've been experiencing, such as fatigue, dizziness, or palpitations, since your hospital discharge?",
+      "tid": "T22"
+    },
+    {
+      "speaker": "Patient",
+      "text": "I haven't been experiencing any fatigue, dizziness, or palpitations since I came home from the hospital. I do feel a little short of breath when I go up and down stairs, but nothing too severe. Other than that, I feel okay and am trying to take it easy as my doctor told me to.",
+      "tid": "T23"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone a stress test since her heart attack and stent placement? If not, when was the last time she was advised to have one?",
+      "tid": "T24"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had a stress test since my heart attack and stent placement. My doctor mentioned that I need to get one done, but it hasn't been scheduled yet. I'm willing to do it if it's needed to check on my heart further.",
+      "tid": "T25"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient experienced any dizziness, palpitations, or fatigue in addition to the shortness of breath when climbing stairs?",
+      "tid": "T26"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't experienced any dizziness, palpitations, or fatigue in addition to the shortness of breath when climbing stairs. I just feel a little out of breath when I do that, but nothing else has been an issue. I'm trying to stay active within my limits and take it easy like my doctor told me to.",
+      "tid": "T27"
+    },
+    {
+      "speaker": "Doctor",
+      "text": "Has the patient undergone a stress test since her heart attack and stent placement? If not, when was it last recommended or scheduled?",
+      "tid": "T28"
+    },
+    {
+      "speaker": "Patient",
+      "text": "No, I haven't had a stress test since my heart attack and stent placement. My doctor mentioned that I need to get one done, but it hasn't been scheduled yet. I'm willing to do it if it's needed to check on my heart further.",
+      "tid": "T29"
+    }
+  ]
+}
